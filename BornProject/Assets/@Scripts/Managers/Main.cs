@@ -31,6 +31,8 @@ public class Main : MonoBehaviour {
     #endregion
 
     private PoolManager _pool = new();
+    private DataManager _data = new();
 
     public static PoolManager Pool => Instance?._pool;
+    public static DataManager Data => Instance?._data;
 }
