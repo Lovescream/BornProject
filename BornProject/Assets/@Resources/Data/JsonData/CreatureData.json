@@ -1,0 +1,38 @@
+[
+  {
+    "HpMax": 1000.0,
+    "HpRegen": 10.0,
+    "Damage": 100.0,
+    "Defense": 10.0,
+    "MoveSpeed": 1.5,
+    "AttackSpeed": 1.0,
+    "Cost": 20,
+    "Range": 3.0,
+    "Sight": 10.0,
+    "Key": "Play"
+  },
+  {
+    "HpMax": 300.0,
+    "HpRegen": 5.0,
+    "Damage": 50.0,
+    "Defense": 5.0,
+    "MoveSpeed": 1.0,
+    "AttackSpeed": 1.0,
+    "Cost": 0,
+    "Range": 3.0,
+    "Sight": 5.0,
+    "Key": "Enemy1"
+  },
+  {
+    "HpMax": 200.0,
+    "HpRegen": 5.0,
+    "Damage": 30.0,
+    "Defense": 2.0,
+    "MoveSpeed": 1.0,
+    "AttackSpeed": 1.0,
+    "Cost": 0,
+    "Range": 3.0,
+    "Sight": 5.0,
+    "Key": "Enemy2"
+  }
+]

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CreatureData : Data {
@@ -15,5 +16,5 @@ public class CreatureData : Data {
     public float Range {  get; set; }
     public float Sight { get; set; }
 
-    
+
 }
