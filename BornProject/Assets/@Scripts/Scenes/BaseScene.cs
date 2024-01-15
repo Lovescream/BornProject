@@ -13,8 +13,8 @@ public class BaseScene : MonoBehaviour {
     protected virtual bool Initialize() {
         if (_initialized) return false;
         // 각종 초기화 함수.
-        Main.Resource.Initialize();
-        Main.Data.Initialize();
+        // Main.Resource.Initialize();
+        // Main.Data.Initialize();
         // DataManager 초기화
         // GameManager 초기화
 
