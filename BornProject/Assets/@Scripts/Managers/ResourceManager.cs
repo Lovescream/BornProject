@@ -12,7 +12,7 @@ public class ResourceManager : MonoBehaviour
 
     public void Initialize()
     {
-        Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites/"); // TODO: 경로 지정.
+        Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites"); // TODO: 경로 지정.
         foreach (Sprite sprite in sprites)
         {
             _sprites.Add(sprite.name, sprite);

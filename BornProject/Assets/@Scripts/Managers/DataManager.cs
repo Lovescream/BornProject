@@ -15,7 +15,6 @@ public class DataManager
     {
         Creatures = LoadJson<CreatureData>();
         Items = LoadJson<ItemData>();
-        //Debug.Log(Creatures["Player"].HpMax); // Json파일 불러오기 확인용.
 
     }
 
