@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.U2D;
 
 public class ResourceManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class ResourceManager : MonoBehaviour
     private Dictionary<string, GameObject> _prefabs = new();
     private Dictionary<string, TextAsset> _jsonData = new();
     private Dictionary<string, RuntimeAnimatorController> _animControllers = new();
+    private Dictionary<string, Dictionary<string, Tile>> _tileSets = new();
 
     public void Initialize()
     {
@@ -34,6 +36,17 @@ public class ResourceManager : MonoBehaviour
         foreach (RuntimeAnimatorController controller in controllers)
         {
             _animControllers.Add(controller.name, controller);
+        }
+
+        Tile[] tiles = Resources.LoadAll<Tile>("TileSets");
+        foreach (Tile tile in tiles) {
+            string roomName = tile.name.Split('_')[0];
+
+            if (!_tileSets.TryGetValue(roomName, out Dictionary<string, Tile> tileSet)) {
+                _tileSets.Add(roomName, new());
+                tileSet = _tileSets[roomName];
+            }
+            tileSet[tile.name] = tile;
         }
     }
 
@@ -73,6 +86,13 @@ public class ResourceManager : MonoBehaviour
             return null;
         }
         return controller;
+    }
+    public Dictionary<string, Tile> LoadTileset(string key) {
+        if (!_tileSets.TryGetValue(key, out Dictionary<string, Tile> tileSet)) {
+            Debug.LogError($"[ResourceManager] LoadTileset({key}): Failed to load Tileset.");
+            return null;
+        }
+        return tileSet;
     }
 
     // 오브젝트가 풀 안에 있는지 없는지 확인 후 생성.
