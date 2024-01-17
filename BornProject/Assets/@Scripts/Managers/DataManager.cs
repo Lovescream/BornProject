@@ -5,8 +5,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
-public class DataManager
-{
+public class DataManager{
 
     public Dictionary<string, CreatureData> Creatures = new();
     public Dictionary<string, ItemData> Items = new();
@@ -20,10 +19,7 @@ public class DataManager
 
     private Dictionary<string, T> LoadJson<T>() where T : Data
     {
-        //TextAsset textAsset = Main.Resource.LoadJsonData(typeof(T).Name);
-        TextAsset textAsset = Resources.Load<TextAsset>("JsonData/CreatureData");
-
-        Dictionary<string, T> dic = JsonConvert.DeserializeObject<List<T>>(textAsset.text).ToDictionary(data => data.Key);
-        return dic;
+        return JsonConvert.DeserializeObject<List<T>>(Main.Resource.LoadJsonData($"{typeof(T).Name}").text).ToDictionary(data => data.Key);
     }
 }
+

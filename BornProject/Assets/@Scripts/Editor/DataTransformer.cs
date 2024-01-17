@@ -18,7 +18,7 @@ public class DataTransformer : EditorWindow {
     public static void ParseExcel() {
         ParseData<CreatureData>();
         ////ParseData<CharacterData>();
-        //ParseData<ItemData>();
+        ParseData<ItemData>();
     }
 
     private static void ParseData<T>() where T : Data {

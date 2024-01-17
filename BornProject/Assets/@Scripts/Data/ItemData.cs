@@ -1,18 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ItemData : Data
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public ItemType Type { get; set; }    
+    public string Description { get; set; }
+    public float Cost { get; set; }
+    public float Modifiers { get; set; }
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public enum ItemType
+{
+    Weapon,
+    Armor,
+    COUNT,
 }

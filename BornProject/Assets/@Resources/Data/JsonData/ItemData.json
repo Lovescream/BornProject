@@ -1,0 +1,16 @@
+[
+  {
+    "Type": 0,
+    "Description": "은검입니다",
+    "Cost": 10.0,
+    "Modifiers": 50.0,
+    "Key": "Silver Sword"
+  },
+  {
+    "Type": 1,
+    "Description": "철방패입니다",
+    "Cost": 8.0,
+    "Modifiers": 10.0,
+    "Key": "Iron Shield"
+  }
+]

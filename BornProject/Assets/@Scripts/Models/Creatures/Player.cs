@@ -10,17 +10,17 @@ public class Player : Creature
 
     protected void OnMove(InputValue value)
     {
-        
+        // TODO.
     }
     protected void OnLook(InputValue value)
     {
-        
+        // TODO.
     }
     protected void OnFire()
     {
-        
+        // TODO.
     }
-    
+
     #endregion
 
 }
