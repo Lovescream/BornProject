@@ -78,55 +78,11 @@ namespace DungeonGenerator {
         public byte DoorInfo { get; set; } // 0000(0) ~ 1111(15)
     }
 
-    public struct Pair<T1, T2> {
-
-        public T1 Value1 { get; }
-        public T2 Value2 { get; }
-
-        public Pair(T1 value1, T2 value2) {
-            Value1 = value1;
-            Value2 = value2;
-        }
-
-        public override string ToString() {
-            return base.ToString();
-        }
-    }
-
     public enum RoomType {
         Start,
         Normal,
         Treasure,
         Shop,
         Boss,
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-public class ScRiPt : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
