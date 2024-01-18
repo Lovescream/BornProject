@@ -24,7 +24,7 @@ public class State<T> where T : Enum
     private T _current;
     private T _nextState;
     private float _transitionTime;
-
+    
     private readonly Dictionary<T, Action> _onEntered = new();
     private readonly Dictionary<T, Action> _onStay = new();
     private readonly Dictionary<T, Action> _onExited = new();
@@ -55,7 +55,6 @@ public class State<T> where T : Enum
         _onExited[state] += cb;
     }
 
-    //초기화 합니.
     public void Clear()
     {
         _onEntered.Clear();
