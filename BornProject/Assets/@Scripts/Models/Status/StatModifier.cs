@@ -3,26 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StatType
-{
-    HpMax,
-    HpRegen,
-    Damage,
-    Defense,
-    MoveSpeed,
-    AttackSpeed,
-    Cost,
-    Range,
-    Sight,
-}
-
-public enum StatModifierType
-{
-    Add,
-    Multiple,
-    Override,
-}
-
 public class StatModifier
 {
     public StatType Stat { get; set; }
@@ -40,7 +20,7 @@ public class StatModifier
         Value = value;
     }
 
-    // json 파일의 Modifier를 잘라서 Enum으로 변환한다. 
+    // json 파일의 Modifier를 나눠서 Enum으로 변환한다. 
     public StatModifier(string s)
     {
         string[] strings = s.Split('_');
