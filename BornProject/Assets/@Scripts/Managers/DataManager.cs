@@ -6,7 +6,6 @@ using System.Linq;
 using UnityEngine;
 
 public class DataManager{
-
     public Dictionary<string, CreatureData> Creatures = new();
     public Dictionary<string, ItemData> Items = new();
 

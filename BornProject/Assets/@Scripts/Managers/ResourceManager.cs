@@ -11,7 +11,8 @@ public class ResourceManager : MonoBehaviour
     private Dictionary<string, TextAsset> _jsonData = new();
     private Dictionary<string, RuntimeAnimatorController> _animControllers = new();
     private Dictionary<string, Dictionary<string, Tile>> _tileSets = new();
-
+    //private Dictionary<string, Object> _resources = new(); // TODO _ 선교.
+    //public bool IsExist(string key) => _resources.ContainsKey(key);
     public void Initialize()
     {
         Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites"); // TODO: 경로 지정.

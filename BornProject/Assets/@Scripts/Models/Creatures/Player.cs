@@ -10,11 +10,12 @@ public class Player : Creature
 
     protected void OnMove(InputValue value)
     {
-        // TODO.
+        Velocity = value.Get<Vector2>().normalized * Status[StatType.MoveSpeed].Value;
     }
     protected void OnLook(InputValue value)
     {
-        // TODO.
+        LookDirection = (Camera.main.ScreenToWorldPoint(value.Get<Vector2>()) - this.transform.position).normalized;
+        //AimDirection();
     }
     protected void OnFire()
     {
