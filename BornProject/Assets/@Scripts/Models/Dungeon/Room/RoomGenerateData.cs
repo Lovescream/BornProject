@@ -1,12 +1,8 @@
-using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace DungeonGenerate {
-    public class DungeonGenerateData {
-        //public 
-    }
     public class RoomGenerateData {
 
         public int X { get; private set; }
@@ -29,6 +25,4 @@ namespace DungeonGenerate {
             DistanceFromStart = distanceFromStart;
         }
     }
-
-
 }
