@@ -2,36 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : Thing
+public class Item
 {
 
     #region Properties
 
     public ItemData Data { get; protected set; }
+    public Creature Owner { get; protected set; }
 
     public string Key => Data.Key;
     public ItemType Type => Data.Type;
     public string Description => Data.Description;
     public float Cost => Data.Cost;
-    public float Modifiers => Data.Modifiers;
+    public List<StatModifier> Modifiers { get; protected set; }
 
-    
 
-    #endregion   
 
-    public override bool Initialize()
+    #endregion
+
+    public Item(ItemData data, Creature owner = null)
     {
-        if (!base.Initialize()) return false;
-
-        return true;
-    }
-    public virtual void SetInfo(ItemData data)
-    {
-        Initialize();
-
         this.Data = data;
-        
-        Debug.Log(Type+ "°ª");
+        this.Owner = owner;
 
+        Modifiers = Data.Modifiers.ConvertAll(x => x.Copy());
     }
 }
