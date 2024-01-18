@@ -4,15 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Creature : Thing
-{
-
+{    
     #region Properties
 
     public CreatureData Data { get; private set; }
-
-    //public State<CreatureState> State { get; private set; }
     public Status Status { get; protected set; }
-    //public CreatureInventory Inventory { get; private set; }
 
     public float Hp
     {
@@ -23,7 +19,6 @@ public class Creature : Thing
             if (value <= 0)
             {
                 _hp = 0;
-                //State.Current = CreatureState.Dead;
             }
             else if (value >= Status[StatType.HpMax].Value)
             {
@@ -33,25 +28,6 @@ public class Creature : Thing
             OnChangedHp?.Invoke(_hp);
         }
     }
-    //public float ExistPower
-    //{
-    //    get => _existPower;
-    //    set
-    //    {
-    //        if (_existPower == value) return;
-    //        if (value <= 0)
-    //        {
-    //            _existPower = 0;
-    //            State.Current = CreatureState.Dead;
-    //        }
-    //        else if (value >= Status[StatType.ExistPowerMax].Value)
-    //        {
-    //            _existPower = Status[StatType.ExistPowerMax].Value;
-    //        }
-    //        else _existPower = value;
-    //        OnChangedExistPower?.Invoke(_existPower);
-    //    }
-    //}
     public bool Invincibility
     {
         get { return _invincibility; }
@@ -61,7 +37,6 @@ public class Creature : Thing
     public Vector2 LookDirection { get; protected set; }
     public float LookAngle => Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg;
 
-    //public UI_HpBar HpBar { get; set; }
 
     #endregion
 
@@ -92,7 +67,6 @@ public class Creature : Thing
 
     protected virtual void FixedUpdate()
     {
-        //State.OnStay();
         _spriter.flipX = LookDirection.x < 0;
         _rigidbody.velocity = Velocity;
         _animator.SetFloat(AnimatorParameterHash_Speed, Velocity.magnitude);
@@ -119,7 +93,6 @@ public class Creature : Thing
 
         this.Data = data;
 
-        //_animator.runtimeAnimatorController = Main.Resource.Load<RuntimeAnimatorController>($"{Data.Key}.animController");
         _animator.SetBool(AnimatorParameterHash_Dead, false);
 
         _collider.enabled = true;
@@ -134,10 +107,7 @@ public class Creature : Thing
             }
         }
         _rigidbody.simulated = true;
-
-        //SetStateEvent();
-        SetStatus(isFullHp: true);
-        //SetInventory();
+        SetStatus(isFullHp: true);       
     }
     protected virtual void SetStatus(bool isFullHp = true)
     {
@@ -145,63 +115,16 @@ public class Creature : Thing
         if (isFullHp)
         {
             Hp = Status[StatType.HpMax].Value;
-            //ExistPower = Status[StatType.ExistPowerMax].Value;
         }
 
-        //OnChangedHp -= ShowHpBar;
-        //OnChangedHp += ShowHpBar;
     }
-    //protected virtual void SetStateEvent()
-    //{
-    //    State = new();
-    //    State.AddOnEntered(CreatureState.Hit, () => _animator.SetTrigger(AnimatorParameterHash_Hit));
-    //    State.AddOnEntered(CreatureState.Dead, () => {
-    //        _collider.enabled = false;
-    //        _rigidbody.simulated = false;
-    //        _animator.SetBool(AnimatorParameterHash_Dead, true);
-
-    //        DropOBJ dropSkill = GetComponent<DropOBJ>();
-    //        if (dropSkill != null)
-    //        {
-    //            dropSkill.MobDrop();
-    //        }
-    //    });
-    //}
-    //protected virtual void SetInventory()
-    //{
-    //    Inventory = new(this, 20);
-    //}
+    
 
     #endregion
 
-    #region State
+    
 
-    //public virtual void OnHit(Creature attacker, float damage = 0, KnockbackInfo knockbackInfo = default)
-    //{
-    //    if (Invincibility == false)
-    //    {
-    //        Hp -= damage;
-
-    //        if (knockbackInfo.time > 0)
-    //        {
-    //            State.Current = CreatureState.Hit;
-    //            Velocity = knockbackInfo.KnockbackVelocity;
-    //            State.SetStateAfterTime(CreatureState.Idle, knockbackInfo.time);
-    //        }
-    //    }
-    //}
-
-    #endregion
-
-    //protected void ShowHpBar(float hp)
-    //{
-    //    if (HpBar != null)
-    //    {
-    //        HpBar.ResetInfo();
-    //        return;
-    //    }
-    //    HpBar = Main.UI.ShowHpBar(this);
-    //}
+    
 }
 
 public enum CreatureState

@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-//[Serializable] // Class Á÷·ÄÈ­°¡ ÇÊ¿äÇÑ°¡??.
 public class CreatureData : Data {
 
     public float HpMax { get; set; }
-    public float HpRegen { get; set; } // 1ÃÊ´ç »ı¸í·Â È¸º¹ ¼öÄ¡ÀÔ´Ï´Ù.
+    public float HpRegen { get; set; } // 1ì´ˆë‹¹ ìƒëª…ë ¥ íšŒë³µ ìˆ˜ì¹˜ì…ë‹ˆë‹¤.
     public float Damage { get; set; }
     public float Defense { get; set; }
     public float MoveSpeed { get; set; }
     public float AttackSpeed { get; set; }
-    public int Cost { get; set; } // Å©¸®ÃÄ°¡ ÀåÂøÇÒ ¼ö ÀÖ´Â ÃÖ´ë ¾ÆÀÌÅÛ Cost ¼öÄ¡ÀÔ´Ï´Ù.
+    public int Cost { get; set; } // í¬ë¦¬ì³ê°€ ì¥ì°©í•  ìˆ˜ ìˆëŠ” ìµœëŒ€ ì•„ì´í…œ Cost ìˆ˜ì¹˜ì…ë‹ˆë‹¤.
     public float Range { get; set; }
     public float Sight { get; set; }
 
