@@ -11,11 +11,9 @@ public class ResourceManager : MonoBehaviour
     private Dictionary<string, TextAsset> _jsonData = new();
     private Dictionary<string, RuntimeAnimatorController> _animControllers = new();
     private Dictionary<string, Dictionary<string, Tile>> _tileSets = new();
-    //private Dictionary<string, Object> _resources = new(); // TODO _ ¼±±³.
-    //public bool IsExist(string key) => _resources.ContainsKey(key);
     public void Initialize()
     {
-        Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites"); // TODO: °æ·Î ÁöÁ¤.
+        Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites"); // TODO: ê²½ë¡œ ì§€ì •.
         foreach (Sprite sprite in sprites)
         {
             _sprites.Add(sprite.name, sprite);
@@ -51,7 +49,7 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
-    // ¸®¼Ò½º°¡ ÀÖ´ÂÁö È®ÀÎ.
+    // ë¦¬ì†ŒìŠ¤ê°€ ìˆëŠ”ì§€ í™•ì¸.
     public GameObject LoadPrefab(string key)
     {
         if (!_prefabs.TryGetValue(key, out GameObject prefab))
@@ -96,7 +94,7 @@ public class ResourceManager : MonoBehaviour
         return tileSet;
     }
 
-    // ¿ÀºêÁ§Æ®°¡ Ç® ¾È¿¡ ÀÖ´ÂÁö ¾ø´ÂÁö È®ÀÎ ÈÄ »ı¼º.
+    // ì˜¤ë¸Œì íŠ¸ê°€ í’€ ì•ˆì— ìˆëŠ”ì§€ ì—†ëŠ”ì§€ í™•ì¸ í›„ ìƒì„±.
     public GameObject Instantiate(string key, Transform parent = null, bool pooling = false)
     {
         GameObject prefab = LoadPrefab(key);
@@ -113,7 +111,7 @@ public class ResourceManager : MonoBehaviour
         return obj;
     }
 
-    // ÇÊ¿ä¾ø´Â ¿ÀºêÁ§Æ® ÆÄ±«.
+    // í•„ìš”ì—†ëŠ” ì˜¤ë¸Œì íŠ¸ íŒŒê´´.
     public void Destroy(GameObject obj)
     {
         if (obj == null) return;

@@ -9,7 +9,6 @@ public class GameScene : BaseScene {
     protected override bool Initialize() {
         if (!base.Initialize()) return false;
 
-        //Player = Main.Object.SpawnPlayer("Player", Vector2.zero); // TODO_¼±±³.
 
         return true;
     }
