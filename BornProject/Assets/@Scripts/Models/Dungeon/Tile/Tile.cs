@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DungeonGenerator {
+namespace DungeonGenerate {
     public class Tile {
 
         #region Properties

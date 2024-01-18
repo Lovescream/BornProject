@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace DungeonGenerator {
+namespace DungeonGenerate {
     public enum TileType {
         NONE,
         Floor,
@@ -70,19 +65,6 @@ namespace DungeonGenerator {
         Right,
         Bottom,
         Left,
-    }
-
-    public class RoomData : Data {
-        public int Width { get; set; }
-        public int Height { get; set; }
-        public byte DoorInfo { get; set; } // 0000(0) ~ 1111(15)
-    }
-
-    public enum RoomType {
-        Start,
-        Normal,
-        Treasure,
-        Shop,
-        Boss,
+        COUNT,
     }
 }
