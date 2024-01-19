@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace DungeonGenerator {
+namespace DungeonGenerate {
     public class TileMap {
         public Tilemap Map { get; private set; }
 
@@ -32,7 +32,7 @@ namespace DungeonGenerator {
             if (!_tiles.TryGetValue(tileName, out UnityEngine.Tilemaps.Tile tile)) tile = null;
 
             Map.SetTile(new(x, y), tile);
-            Debug.Log($"[TileMap : {Map.name}] SetTile({x}, {y}, {tileName}): tile = {tile}");
+            //Debug.Log($"[TileMap : {Map.name}] SetTile({x}, {y}, {tileName}): tile = {tile}");
         }
         
     }

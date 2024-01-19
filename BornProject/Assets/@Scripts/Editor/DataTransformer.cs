@@ -61,20 +61,25 @@ public class DataTransformer : EditorWindow {
     private static object ConvertValue(Type type, string value) {
         // #1. 기본 값 자료인 경우 변환.
         TypeConverter converter = TypeDescriptor.GetConverter(type);
-        if (converter != null && converter.CanConvertFrom(typeof(string))) return converter.ConvertFromString(value);
+        if (converter != null && converter.CanConvertFrom(typeof(string))) return string.IsNullOrEmpty(value) ? default : converter.ConvertFromString(value);
 
         // #2. 리스트 자료인 경우 변환.
         if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>)) {
             Type itemType = type.GetGenericArguments()[0];
             IList list = Activator.CreateInstance(type) as IList;
+            if (string.IsNullOrEmpty(value)) return list;
             TypeConverter itemConverter = TypeDescriptor.GetConverter(itemType);
             if (itemConverter != null && itemConverter.CanConvertFrom(typeof(string)))
-                foreach (var item in value.Split('|')) list.Add(itemConverter.ConvertFromString(item));
+                foreach (var item in value.Split('|'))
+                    if (string.IsNullOrEmpty(item)) continue;
+                    else list.Add(itemConverter.ConvertFromString(item));
             else
-                foreach (var item in value.Split('|')) list.Add(Activator.CreateInstance(itemType, item));
+                foreach (var item in value.Split('|'))
+                    if (string.IsNullOrEmpty(item)) continue;
+                    else list.Add(Activator.CreateInstance(itemType, item));
             return list;
         }
-        return Activator.CreateInstance(type);
+        return Activator.CreateInstance(type, value);
     }
 
 

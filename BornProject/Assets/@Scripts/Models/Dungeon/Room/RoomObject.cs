@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DungeonGenerator {
+namespace DungeonGenerate {
 
     public class RoomObject : MonoBehaviour {
 
@@ -68,7 +68,7 @@ namespace DungeonGenerator {
         public void SetInfo(Room room) {
             this.Room = room;
             room.Object = this;
-            _tiles = Main.Resource.LoadTileset(Room.Data.Key);
+            _tiles = Main.Resource.LoadTileset(Room.Data.TilemapKey);
 
             _floorTilemap.Clear();
             _floorTilemap.SetTileset(_tiles);
@@ -80,6 +80,19 @@ namespace DungeonGenerator {
             foreach (Tile tile in Room.Tiles) {
                 tile.OnTileChanged += DrawTile;
                 DrawTile(tile);
+            }
+
+            this.transform.position = new(room.X * room.Width, room.Y * room.Height);
+
+            // TODO::
+            if (Room.Type == RoomType.Start) {
+                _floorTilemap.Map.color = new Color(0.25f, 1f, 0.25f, 1);
+            }
+            else if (Room.Type == RoomType.Boss) {
+                _floorTilemap.Map.color = new Color(1f, 0.25f, 0.25f, 1);
+            }
+            else if (Room.Type == RoomType.Treasure) {
+                _floorTilemap.Map.color = new Color(1f, 1f, 0.25f, 1);
             }
         }
 

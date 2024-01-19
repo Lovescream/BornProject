@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-namespace DungeonGenerator {
+namespace DungeonGenerate {
     public class Door {
 
         #region Properties
 
         public Room Room { get; private set; }
+        public Door ConnectedDoor { get; set; }
         public Direction Direction { get; private set; }
         public DoorState State {
             get => _state;

@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateMachin : MonoBehaviour
-{
 public class State<T> where T : Enum
 {
 
@@ -84,4 +82,4 @@ public class State<T> where T : Enum
         _transitionTime = time;
     }
 }
-}
+
