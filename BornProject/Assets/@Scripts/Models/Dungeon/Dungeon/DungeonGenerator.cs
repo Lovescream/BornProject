@@ -45,6 +45,14 @@ namespace DungeonGenerate {
 
         #endregion
 
+        public void Clear() {
+            _openIndexes.Clear();
+            _closedIndexes.Clear();
+            _roomIndexes.Clear();
+            _datas.Clear();
+            Start = Vector2Int.zero;
+        }
+
         public void Generate() {
             Vector2Int index = new(Width / 2, Height / 2);
             Start = index;

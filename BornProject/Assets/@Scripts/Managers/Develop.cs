@@ -1,26 +1,27 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Main : MonoBehaviour {
+public class Develop : MonoBehaviour {
 
     #region Singleton
 
-    private static Main _instance;
+    private static Develop _instance;
+    private static bool _initialized;
 
-    public static Main Instance {
+    public static Develop Instance {
         get {
-            if (_instance == null ) {
-                GameObject obj = GameObject.Find("@Main");
+            if (!_initialized) {
+                _initialized = true;
+
+                GameObject obj = GameObject.Find("@Develop");
                 if (obj == null) {
-                    obj = new("@Main");
-                    obj.AddComponent<Main>();
+                    obj = new() { name = "@Develop" };
+                    obj.AddComponent<Develop>();
                 }
-#if !UNITY_EDITOR
-                DontDestroyOnLoad(obj);
-#endif
-                _instance = obj.GetComponent<Main>();
+                _instance = obj.GetComponent<Develop>();
+                Resource.Initialize();
+                Data.Initialize();
             }
             return _instance;
         }
@@ -28,7 +29,6 @@ public class Main : MonoBehaviour {
 
     #endregion
 
-    public static bool IsInitialized => Instance != null;
 
     private PoolManager _pool = new();
     private DataManager _data = new();
@@ -42,11 +42,4 @@ public class Main : MonoBehaviour {
     public static ObjectManager Object => Instance?._object;
     public static DungeonManager Dungeon => Instance?._dungeon;
 
-    public void ManualInitialize() {
-        _pool = new();
-        _data = new();
-        _resource = new();
-        _object = new();
-        _dungeon = new();
-    }
 }

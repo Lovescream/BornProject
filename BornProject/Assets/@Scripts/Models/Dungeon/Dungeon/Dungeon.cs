@@ -10,11 +10,13 @@ namespace DungeonGenerate {
         public Room BossRoom { get; private set; }
         public Room TreasureRoom { get; private set; }
 
+        public List<Room> Rooms => _rooms.Values.ToList();
+
         private Dictionary<Vector2Int, Room> _rooms = new();
 
         private HashSet<RoomGenerateData> _generateData;
 
-        public Dungeon(HashSet<RoomGenerateData> result) {
+        public Dungeon(HashSet<RoomGenerateData> result, Transform root) {
             _generateData = result;
             foreach (RoomGenerateData data in _generateData) {
                 Vector2Int index = new(data.X, data.Y);
@@ -42,7 +44,7 @@ namespace DungeonGenerate {
                 room.ConnectDoor();
             }
             foreach (Room room in _rooms.Values) {
-                RoomObject roomObject = Main.Resource.Instantiate("Room").GetComponent<RoomObject>();
+                RoomObject roomObject = Main.Resource.Instantiate("Room", root).GetComponent<RoomObject>();
                 roomObject.SetInfo(room);
             }
         }
