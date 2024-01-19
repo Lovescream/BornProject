@@ -28,6 +28,7 @@ public class Status
 {
     private Dictionary<StatType, Stat> _stats;
 
+    // ÇöÀç ½ºÅÈ.
     public Stat this[StatType type]
     {
         get => _stats[type];
