@@ -1,24 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+
 public class ItemObject : MonoBehaviour
 {
-    private Rigidbody2D _rigid;
-    private CircleCollider2D _collider;
-    private void Awake()
+    public Item item;
+
+    private IEnumerator Start()
     {
-        _rigid = GetComponent<Rigidbody2D>();
-        _collider = GetComponent<CircleCollider2D>();
+        // TODO : Data를 잘 받는지 확인용 임시 코드.
+        yield return new WaitForSeconds(1.0f);
+
+        // 'Silver Sword' 아이템 정보를 받아옵니다.
+        var itemData = Main.Data.Items["SilverSword"];
+        if (itemData != null)
+        {
+            item = new Item(itemData);
+            LogItemInfo();
+        }
+        else
+        {
+            Debug.Log("'SilverSword' 아이템을 찾을 수 없습니다.");
+        }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void LogItemInfo()
     {
-        if (collision.CompareTag("Player"))
+        // 아이템 정보를 Debug.Log로 확인합니다.
+        if (item != null)
         {
-            //Inventory.Instance.AddItem(item);
-            //collision.gameObject.GetComponent<Inventory>().AddItem(item);
-            //Destroy(gameObject);
+            Debug.Log($"Item Name: {item.Key}, Description: {item.Description}, Type: {item.Type}, Cost: {item.Cost}");
         }
     }
 }
-
