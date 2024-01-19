@@ -9,6 +9,7 @@ public class ItemData : Data
     public ItemType Type { get; set; }    
     public string Description { get; set; }
     public float Cost { get; set; }
+    public int MaxStack { get; set; }
     public List<StatModifier> Modifiers { get; set; }
 }
 
