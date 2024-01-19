@@ -1,0 +1,16 @@
+[
+  {
+    "Type": 0,
+    "Description": " ",
+    "Cost": 50.0,
+    "Modifiers": [],
+    "Key": "SilverSword"
+  },
+  {
+    "Type": 1,
+    "Description": " ",
+    "Cost": 8.0,
+    "Modifiers": [],
+    "Key": "IronShield"
+  }
+]

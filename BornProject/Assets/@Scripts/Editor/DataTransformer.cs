@@ -3,9 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
@@ -22,18 +20,18 @@ public class DataTransformer : EditorWindow {
     }
 
     private static void ParseData<T>() where T : Data {
-        // #1. ÆÄ½Ì ÁØºñ.
+        // #1. íŒŒì‹± ì¤€ë¹„.
         Type type = typeof(T);
         List<T> list = new();
 
-        // #2. ÆÄÀÏ ÀĞ±â.
+        // #2. íŒŒì¼ ì½ê¸°.
         string[] lines = File.ReadAllText($"{Application.dataPath}/@Resources/Data/Excel/{type.Name}.csv").Split("\n");
 
-        // #3. ÇÁ·ÎÆÛÆ¼ ÀÌ¸§ Ä³½Ì.
+        // #3. í”„ë¡œí¼í‹° ì´ë¦„ ìºì‹±.
         if (lines.Length <= 0) return;
         string[] propertyNames = lines[0].Replace("\r", "").Split(',');
 
-        // #4. µ¥ÀÌÅÍ ÆÄ½Ì.
+        // #4. ë°ì´í„° íŒŒì‹±.
         for (int y = 1; y < lines.Length; y++) {
             string[] row = lines[y].Replace("\r", "").Split(',');
             if (row.Length == 0 || string.IsNullOrEmpty(row[0])) continue;
@@ -52,18 +50,18 @@ public class DataTransformer : EditorWindow {
             list.Add(data);
         }
 
-        // #5. JsonÀ¸·Î ÀúÀå.
+        // #5. Jsonìœ¼ë¡œ ì €ì¥.
         string jsonString = JsonConvert.SerializeObject(list, Formatting.Indented);
         File.WriteAllText($"{Application.dataPath}/@Resources/Data/JsonData/{type.Name}.json", jsonString);
         AssetDatabase.Refresh();
     }
 
     private static object ConvertValue(Type type, string value) {
-        // #1. ±âº» °ª ÀÚ·áÀÎ °æ¿ì º¯È¯.
+        // #1. ê¸°ë³¸ ê°’ ìë£Œì¸ ê²½ìš° ë³€í™˜.
         TypeConverter converter = TypeDescriptor.GetConverter(type);
         if (converter != null && converter.CanConvertFrom(typeof(string))) return string.IsNullOrEmpty(value) ? default : converter.ConvertFromString(value);
 
-        // #2. ¸®½ºÆ® ÀÚ·áÀÎ °æ¿ì º¯È¯.
+        // #2. ë¦¬ìŠ¤íŠ¸ ìë£Œì¸ ê²½ìš° ë³€í™˜.
         if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>)) {
             Type itemType = type.GetGenericArguments()[0];
             IList list = Activator.CreateInstance(type) as IList;

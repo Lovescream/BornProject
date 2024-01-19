@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.U2D;
 
-public class ResourceManager : MonoBehaviour
-{
+public class ResourceManager {
+    public bool IsInitialized { get; private set; } = false;
+
     private Dictionary<string, Sprite> _sprites = new();
     private Dictionary<string, GameObject> _prefabs = new();
     private Dictionary<string, TextAsset> _jsonData = new();
     private Dictionary<string, RuntimeAnimatorController> _animControllers = new();
     private Dictionary<string, Dictionary<string, Tile>> _tileSets = new();
+
     public void Initialize()
     {
         Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites"); // TODO: 경로 지정.
@@ -47,6 +49,7 @@ public class ResourceManager : MonoBehaviour
             }
             tileSet[tile.name] = tile;
         }
+        IsInitialized = true;
     }
 
     // 리소스가 있는지 확인.
@@ -118,6 +121,10 @@ public class ResourceManager : MonoBehaviour
 
         if (Main.Pool.Push(obj)) return;
 
+#if UNITY_EDITOR
+        Object.DestroyImmediate(obj);
+#else
         Object.Destroy(obj);
+#endif
     }
 }

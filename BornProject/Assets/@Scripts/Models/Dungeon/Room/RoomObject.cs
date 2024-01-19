@@ -66,6 +66,8 @@ namespace DungeonGenerate {
         }
 
         public void SetInfo(Room room) {
+            Initialize();
+
             this.Room = room;
             room.Object = this;
             _tiles = Main.Resource.LoadTileset(Room.Data.TilemapKey);

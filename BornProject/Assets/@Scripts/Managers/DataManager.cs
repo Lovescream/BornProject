@@ -5,7 +5,9 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
-public class DataManager{
+public class DataManager {
+    public bool IsInitialized { get; private set; } = false;
+
     public Dictionary<string, CreatureData> Creatures = new();
     public Dictionary<string, ItemData> Items = new();
 
@@ -14,6 +16,7 @@ public class DataManager{
         Creatures = LoadJson<CreatureData>();
         Items = LoadJson<ItemData>();
 
+        IsInitialized = true;
     }
 
     private Dictionary<string, T> LoadJson<T>() where T : Data

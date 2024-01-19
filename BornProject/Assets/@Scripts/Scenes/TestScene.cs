@@ -15,8 +15,23 @@ public class TestScene : BaseScene {
     protected override bool Initialize() {
         if (!base.Initialize()) return false;
 
-        Main.Dungeon.Generate();
+        //Main.Dungeon.Generate();
 
         return true;
     }
+
+    #region Develop
+
+    public void Test() => Debug.Log("Test");
+    public void GenerateDungeon() {
+        Main.Resource.Initialize();
+        Main.Data.Initialize();
+        Main.Dungeon.Generate();
+    }
+    public void RegenerateDungeon() {
+        Main.Dungeon.Destroy();
+        Main.Dungeon.Generate();
+    }
+
+    #endregion
 }
