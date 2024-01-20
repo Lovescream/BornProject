@@ -14,6 +14,7 @@ public enum StatType
     //Range,
     //Sight,
     COUNT // StatType 갯수 파악을 위한 상수.
+    // Test 테스트입니다.
 }
 
 public enum StatModifierType
