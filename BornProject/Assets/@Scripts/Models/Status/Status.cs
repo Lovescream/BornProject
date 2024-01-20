@@ -13,7 +13,7 @@ public enum StatType
     //Cost,
     //Range,
     //Sight,
-    COUNT // StatType °¹¼ö ÆÄ¾ÇÀ» À§ÇÑ »ó¼ö.
+    COUNT // StatType ê°¯ìˆ˜ íŒŒì•…ì„ ìœ„í•œ ìƒìˆ˜.
 }
 
 public enum StatModifierType
@@ -28,13 +28,13 @@ public class Status
 {
     private Dictionary<StatType, Stat> _stats;
 
-    // ÇöÀç ½ºÅÈ.
+    // í˜„ì¬ ìŠ¤íƒ¯.
     public Stat this[StatType type]
     {
         get => _stats[type];
     }
 
-    // ½ºÅÈ Å¸ÀÔÀ» È®ÀÎÇÏ°í µñ¼Å³Ê¸®¿¡ Ãß°¡.
+    // ìŠ¤íƒ¯ íƒ€ì…ì„ í™•ì¸í•˜ê³  ë”•ì…”ë„ˆë¦¬ì— ì¶”ê°€.
     public Status()
     {
         _stats = new();
@@ -44,7 +44,7 @@ public class Status
         }
     }
 
-    // Å©¸®Ã³ÀÇ ±âÁ¸ µ¥ÀÌÅÍ¸¦ ¹Ş¾Æ¿Í¼­ ½ºÅÈ¿¡ ´ëÀÔ.
+    // í¬ë¦¬ì²˜ì˜ ê¸°ì¡´ ë°ì´í„°ë¥¼ ë°›ì•„ì™€ì„œ ìŠ¤íƒ¯ì— ëŒ€ì….
     public Status(CreatureData data)
     {
         _stats = new()
@@ -58,7 +58,7 @@ public class Status
         };
     }
 
-    // º¯È­µÉ ½ºÅÈÀ» ¸®½ºÆ®¿¡¼­ Ã£¾Æ ½ºÅÈ¿¡ º¯È­¸¦ ÁÖ´Â ÇÔ¼ö¸¦ Ãß°¡ / Á¦°Å.
+    // ë³€í™”ë  ìŠ¤íƒ¯ì„ ë¦¬ìŠ¤íŠ¸ì—ì„œ ì°¾ì•„ ìŠ¤íƒ¯ì— ë³€í™”ë¥¼ ì£¼ëŠ” í•¨ìˆ˜ë¥¼ ì¶”ê°€ / ì œê±°.
     public void AddModifiers(List<StatModifier> modifiers)
     {
         for (int i = 0; i < modifiers.Count; i++)
