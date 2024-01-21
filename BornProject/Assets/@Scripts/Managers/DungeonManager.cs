@@ -1,6 +1,7 @@
 using DungeonGenerate;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DungeonManager {
@@ -38,5 +39,9 @@ public class DungeonManager {
             Main.Resource.Destroy(room.Object.gameObject);
         }
         Current = null;
+    }
+
+    public Room GetRoom(Vector2 position) {
+        return Current.Rooms.Where(room => room.IsInRoom(position)).FirstOrDefault();
     }
 }

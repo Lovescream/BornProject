@@ -31,6 +31,11 @@ public static class Extension {
         if (index.y < min.y || max.y < index.y) return false;
         return true;
     }
+    public static bool IsInRange(this Vector2 v, Vector2 min, Vector2 max) {
+        if (v.x < min.x || max.x < v.x) return false;
+        if (v.x < min.y || max.y < v.y) return false;
+        return true;
+    }
     public static int Distance(this Vector2Int a, Vector2Int b) {
         return Mathf.Abs(a.x - b.x) + Mathf.Abs(a.y - b.y);
     }
