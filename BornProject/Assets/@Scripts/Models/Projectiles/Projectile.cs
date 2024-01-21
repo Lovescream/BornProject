@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : Thing
-{
+public class Projectile : Entity {
     public Creature Owner { get; protected set; } // 발사체 주인.
 
     // public new Creature.Status; // Creature의 Status에서 지속시간과 데미지 가져오는 방법 TODO.

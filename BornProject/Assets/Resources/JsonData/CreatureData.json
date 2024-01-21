@@ -9,7 +9,7 @@
     "Cost": 20,
     "Range": 3.0,
     "Sight": 10.0,
-    "Key": "Play"
+    "Key": "Player"
   },
   {
     "HpMax": 300.0,
