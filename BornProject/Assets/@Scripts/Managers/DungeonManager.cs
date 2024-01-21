@@ -1,6 +1,7 @@
 using DungeonGenerate;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DungeonManager {
@@ -12,17 +13,24 @@ public class DungeonManager {
 
     public Dungeon Current { get; private set; }
 
-    public Transform DungeonRoot { get; private set; }
+    public Transform DungeonRoot {
+        get {
+            if (_dungeonRoot == null) {
+                GameObject obj = GameObject.Find("Dungeon");
+                if (obj == null) obj = new("Dungeon");
+                _dungeonRoot = obj.transform;
+            }
+            return _dungeonRoot;
+        }
+    }
+
+    private Transform _dungeonRoot;
 
     public void Generate() {
         if (Current != null) return;
         Generator.Clear();
-        Generator.Generate();
-
-        GameObject obj = GameObject.Find("Dungeon");
-        if (obj == null) obj = new("Dungeon");
-        DungeonRoot = obj.transform;
-        Current = new Dungeon(Generator.Result, DungeonRoot);
+        if (Generator.Generate())
+            Current = new Dungeon(Generator.Result, DungeonRoot);
     }
 
     public void Destroy() {
@@ -31,5 +39,9 @@ public class DungeonManager {
             Main.Resource.Destroy(room.Object.gameObject);
         }
         Current = null;
+    }
+
+    public Room GetRoom(Vector2 position) {
+        return Current.Rooms.Where(room => room.IsInRoom(position)).FirstOrDefault();
     }
 }

@@ -12,6 +12,9 @@ public class DataTransformer : EditorWindow {
 
 #if UNITY_EDITOR
 
+    public static string csvDataPath = "@Resources/Data/Excel";
+    public static string jsonDataPath = "Resources/JsonData";
+
     [MenuItem("Tools/ParseExcel")]
     public static void ParseExcel() {
         ParseData<CreatureData>();
@@ -25,7 +28,12 @@ public class DataTransformer : EditorWindow {
         List<T> list = new();
 
         // #2. 파일 읽기.
-        string[] lines = File.ReadAllText($"{Application.dataPath}/@Resources/Data/Excel/{type.Name}.csv").Split("\n");
+        string csvPath = $"{Application.dataPath}/{csvDataPath}/{type.Name}.csv";
+        if (!File.Exists(csvPath)) {
+            Debug.LogError($"[DataTransformer] ParseData<{typeof(T)}>(): The path was not found. ({csvPath})");
+        }
+        string[] lines = File.ReadAllText(csvPath).Split("\n");
+        Debug.Log($"[DataTransformer] ParseData<{typeof(T)}>(): Read the file. ({csvPath})");
 
         // #3. 프로퍼티 이름 캐싱.
         if (lines.Length <= 0) return;
@@ -52,7 +60,9 @@ public class DataTransformer : EditorWindow {
 
         // #5. Json으로 저장.
         string jsonString = JsonConvert.SerializeObject(list, Formatting.Indented);
-        File.WriteAllText($"{Application.dataPath}/@Resources/Data/JsonData/{type.Name}.json", jsonString);
+        string jsonPath = $"{Application.dataPath}/{jsonDataPath}/{type.Name}.json";
+        File.WriteAllText(jsonPath, jsonString);
+        Debug.Log($"[DataTransformer] ParseData<{typeof(T)}>(): Save the file. ({jsonPath})");
         AssetDatabase.Refresh();
     }
 

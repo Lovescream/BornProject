@@ -7,6 +7,7 @@ namespace DungeonGenerate {
 
         public int X { get; private set; }
         public int Y { get; private set; }
+        public Vector2Int Index => new(X, Y);
         public int NeighbourInfo { get; private set; }
         public int NeighbourCount {
             get {
@@ -23,6 +24,10 @@ namespace DungeonGenerate {
             Y = index.y;
             NeighbourInfo = neighbourInfo;
             DistanceFromStart = distanceFromStart;
+        }
+        public void UpdateIndex(Vector2Int origin) {
+            X -= origin.x;
+            Y -= origin.y;
         }
     }
 }

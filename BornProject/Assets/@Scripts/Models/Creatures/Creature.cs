@@ -1,14 +1,16 @@
+using DungeonGenerate;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Creature : Thing
+public class Creature : Entity
 {    
     #region Properties
 
     public CreatureData Data { get; private set; }
     public Status Status { get; protected set; }
+    public State<CreatureState> State { get; protected set; }
 
     public float Hp
     {
@@ -37,7 +39,7 @@ public class Creature : Thing
     public Vector2 LookDirection { get; protected set; }
     public float LookAngle => Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg;
 
-
+    public Room CurrentRoom => Main.Dungeon.GetRoom(this.transform.position);
     #endregion
 
     #region Fields
@@ -67,6 +69,7 @@ public class Creature : Thing
 
     protected virtual void FixedUpdate()
     {
+        State.OnStay();
         _spriter.flipX = LookDirection.x < 0;
         _rigidbody.velocity = Velocity;
         _animator.SetFloat(AnimatorParameterHash_Speed, Velocity.magnitude);
@@ -93,6 +96,7 @@ public class Creature : Thing
 
         this.Data = data;
 
+        _animator.runtimeAnimatorController = Main.Resource.LoadAnimController($"{Data.Key}");
         _animator.SetBool(AnimatorParameterHash_Dead, false);
 
         _collider.enabled = true;
@@ -107,7 +111,8 @@ public class Creature : Thing
             }
         }
         _rigidbody.simulated = true;
-        SetStatus(isFullHp: true);       
+        SetStatus(isFullHp: true);
+        SetState();
     }
     protected virtual void SetStatus(bool isFullHp = true)
     {
@@ -118,13 +123,42 @@ public class Creature : Thing
         }
 
     }
-    
+
+    protected virtual void SetState() {
+        State = new();
+        State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
+        State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
+        
+    }
+
 
     #endregion
 
-    
+    #region State
 
-    
+    private void OnEnteredHit() {
+        _animator.SetTrigger(AnimatorParameterHash_Hit);
+    }
+    private void OnEnteredDead() {
+        _collider.enabled = false;
+        _rigidbody.simulated = false;
+        _animator.SetBool(AnimatorParameterHash_Dead, true);
+    }
+
+    public virtual void OnHit(Creature attacker, float damage, KnockbackInfo knockbackInfo = default) {
+        Hp -= damage;
+        
+        if (knockbackInfo.time > 0) {
+            State.Current = CreatureState.Hit;
+            Velocity = knockbackInfo.KnockbackVelocity;
+            State.SetStateAfterTime(CreatureState.Idle, knockbackInfo.time);
+        }
+    }
+
+    #endregion
+
+
+
 }
 
 public enum CreatureState
