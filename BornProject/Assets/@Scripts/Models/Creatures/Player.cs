@@ -10,6 +10,15 @@ public class Player : Creature
 
     #endregion
 
+    public override bool Initialize() {
+        if (!base.Initialize()) return false;
+
+        CameraController camera = FindObjectOfType<CameraController>();
+        if (camera != null) camera.SetTarget(this.transform);
+
+        return true;
+    }
+
     #region Input
 
     protected void OnMove(InputValue value)
@@ -19,30 +28,11 @@ public class Player : Creature
     protected void OnLook(InputValue value)
     {
         LookDirection = (Camera.main.ScreenToWorldPoint(value.Get<Vector2>()) - this.transform.position).normalized;
-        //AimDirection();
     }
     protected void OnFire()
     {
         // TODO.
     }
-
-
-    protected override void SetStatus(bool isFullHp = true)
-    {
-        this.Status = new(Data);
-        if (isFullHp)
-        {
-            Hp = Status[StatType.HpMax].Value;
-        }
-
-    }
-    //private void AimDirection()
-    //{
-    //    float rotZ = Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg;
-    //    _armPivot.rotation = Quaternion.Euler(0, 0, rotZ);
-    //    _weaponSprite.flipY = (Mathf.Abs(rotZ) > 90) ? true : false;
-    //    _weaponAnimation.flipY = (Mathf.Abs(rotZ) > 90) ? true : false;
-    //}
 
     #endregion
 

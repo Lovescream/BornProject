@@ -20,6 +20,9 @@ namespace DungeonGenerate {
         public RoomObject Object { get; set; }
         public int Width => Data.Width;
         public int Height => Data.Height;
+        public Vector2 OriginPosition => new(X * Width, Y * Height);
+        public Vector2 CenterPosition => OriginPosition + new Vector2(Width / 2, Height / 2);
+        public Vector2 MaxPosition => OriginPosition + new Vector2(Width, Height);
         public RoomType Type => Data.Type;
         
         // Room State.
@@ -95,7 +98,10 @@ namespace DungeonGenerate {
             OnRoomClosed += r => r.IsOpened = false;
         }
 
+        public override string ToString() => $"{Type}[{X}, {Y}]";
         #endregion
+
+        public bool IsInRoom(Vector2 position) => position.IsInRange(OriginPosition, MaxPosition);
 
         #region Neighbours
 

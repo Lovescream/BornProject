@@ -1,3 +1,4 @@
+using DungeonGenerate;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ public class Creature : Entity
     public Vector2 LookDirection { get; protected set; }
     public float LookAngle => Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg;
 
-
+    public Room CurrentRoom => Main.Dungeon.GetRoom(this.transform.position);
     #endregion
 
     #region Fields
@@ -95,6 +96,7 @@ public class Creature : Entity
 
         this.Data = data;
 
+        _animator.runtimeAnimatorController = Main.Resource.LoadAnimController($"{Data.Key}");
         _animator.SetBool(AnimatorParameterHash_Dead, false);
 
         _collider.enabled = true;
