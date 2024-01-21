@@ -27,9 +27,9 @@ public class ObjectManager {
             if (Main.Resource.LoadPrefab(prefabName) != null) break;
             type = type.BaseType;
         }
-        if (string.IsNullOrEmpty(prefabName)) prefabName = "Thing.prefab";
+        if (string.IsNullOrEmpty(prefabName)) prefabName = "Thing";
 
-        GameObject obj = Main.Resource.Instantiate($"{prefabName}.prefab", pooling: true);
+        GameObject obj = Main.Resource.Instantiate($"{prefabName}", pooling: true);
         obj.transform.position = position;
 
         return obj.GetOrAddComponent<T>();
