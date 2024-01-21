@@ -17,6 +17,9 @@ public class DevelopWindow : EditorWindow {
     public bool IsInitialized { get; private set; }
     public bool IsExpandedRoomList { get; private set; }
 
+    public string PlayerKey { get; private set; } = "Player";
+    public Vector2 PlayerSpawnPosition { get; private set; } = Vector2.zero;
+
     #endregion
 
     #region Layouts
@@ -78,6 +81,12 @@ public class DevelopWindow : EditorWindow {
             GUILayout.Label("현재 던전 정보", titleLabelStyle);
             ShowDungeonState();
         }
+
+        if (Application.isPlaying == false) return;
+
+        GUILayout.Space(20);
+        GUILayout.Label("플레이어 정보", titleLabelStyle);
+        ShowPlayerInfo();
     }
 
     #region ShowArea
@@ -180,6 +189,17 @@ public class DevelopWindow : EditorWindow {
             foreach (Room room in rooms) {
                 RoomInfo(room);
             }
+        }
+    }
+
+    private void ShowPlayerInfo() {
+        if (Main.Object.Player == null) {
+            PlayerKey = EditorGUILayout.TextField("PlayerKey", PlayerKey);
+            PlayerSpawnPosition = EditorGUILayout.Vector2Field("SpawnPosition", PlayerSpawnPosition);
+            LongButton("플레이어 생성", () => { Main.Object.SpawnPlayer(PlayerKey, PlayerSpawnPosition); });
+        }
+        else {
+
         }
     }
 

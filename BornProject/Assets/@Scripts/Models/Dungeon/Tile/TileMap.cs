@@ -11,7 +11,9 @@ namespace DungeonGenerate {
 
         public TileMap(string name, Transform parent, Dictionary<string, UnityEngine.Tilemaps.Tile> tiles, int order, bool needCollider) {
             Map = new GameObject(name).GetOrAddComponent<Tilemap>();
-            Map.gameObject.GetOrAddComponent<TilemapRenderer>().sortingOrder = order;
+            TilemapRenderer renderer = Map.gameObject.GetOrAddComponent<TilemapRenderer>();
+            renderer.sortingLayerName = "Ground";
+            renderer.sortingOrder = order;
             Map.transform.SetParent(parent);
             Map.transform.localPosition = Vector2.zero;
             if (needCollider) {
