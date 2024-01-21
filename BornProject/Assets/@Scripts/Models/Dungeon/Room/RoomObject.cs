@@ -84,7 +84,7 @@ namespace DungeonGenerate {
                 DrawTile(tile);
             }
 
-            this.transform.position = new(room.X * room.Width, room.Y * room.Height);
+            this.transform.position = room.OriginPosition;
 
             // TODO::
             if (Room.Type == RoomType.Start) {
