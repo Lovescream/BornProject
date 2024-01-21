@@ -14,7 +14,7 @@ namespace DungeonGenerate {
 
         private Dictionary<Vector2Int, Room> _rooms = new();
 
-        private HashSet<RoomGenerateData> _generateData;
+        private readonly HashSet<RoomGenerateData> _generateData;
 
         public Dungeon(HashSet<RoomGenerateData> result, Transform root) {
             _generateData = result;
@@ -26,10 +26,6 @@ namespace DungeonGenerate {
                 else if (room.Type == RoomType.Boss) BossRoom = room;
                 else if (room.Type == RoomType.Treasure) TreasureRoom = room;
             }
-            //foreach (Vector2Int index in result) {
-            //    Room newRoom = new(GetRoomData(), index);
-            //    _rooms[index] = newRoom;
-            //}
 
             foreach (Room room in _rooms.Values) {
                 Room[] neighbours = new Room[4];
