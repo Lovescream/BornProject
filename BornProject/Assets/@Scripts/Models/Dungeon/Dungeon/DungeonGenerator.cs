@@ -53,14 +53,21 @@ namespace DungeonGenerate {
             Start = Vector2Int.zero;
         }
 
-        public void Generate() {
+        public bool Generate() {
             Vector2Int index = new(Width / 2, Height / 2);
             Start = index;
             AddRoomIndex(index);
 
             for (int i = 1; i < Count; i++) {
                 UpdatePotentials(index);
-                index = SelectRandomIndex();
+
+                Vector2Int? _index = SelectRandomIndex();
+                if (_index == null) {
+                    Debug.LogError($"[DungeonGenerator] Generate(): Dungeon generation failed. The size of dungeon is too small for the count of rooms.");
+                    Clear();
+                    return false;
+                }
+                index = (Vector2Int)_index;
                 AddRoomIndex(index);
             }
 
@@ -73,9 +80,15 @@ namespace DungeonGenerate {
                     if (_roomIndexes.Contains(roomIndex.GetDirectionIndex((Direction)i)))
                         neighbourInfo |= (1 << i);
                 }
-                //_datas.Add(new(roomIndex, neighbourInfo, roomIndex.Distance(Start)));
                 _datas.Add(new(roomIndex, neighbourInfo, costs[roomIndex]));
             }
+
+            int originX = _datas.OrderBy(info => info.X).FirstOrDefault().X;
+            int originY = _datas.OrderBy(info => info.Y).FirstOrDefault().Y;
+            foreach (RoomGenerateData data in _datas) {
+                data.UpdateIndex(new(originX, originY));
+            }
+            return true;
         }
 
         private void AddRoomIndex(Vector2Int index) {
@@ -113,7 +126,11 @@ namespace DungeonGenerate {
             _openIndexes.Add(index);
         }
 
-        private Vector2Int SelectRandomIndex() {
+        private Vector2Int? SelectRandomIndex() {
+            if (_openIndexes.Count <= 0) {
+                Debug.LogError($"[DungeonGenerator] SelectRandomIndex(): _openIndexes.Count = {_openIndexes}");
+                return null;
+            }
             return _openIndexes.ElementAt(Random.Range(0, _openIndexes.Count));
         }
     }

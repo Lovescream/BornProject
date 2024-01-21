@@ -16,6 +16,7 @@ public class DevelopWindow : EditorWindow {
     public int Indent { get; private set; } = 0;
     public bool IsInitialized { get; private set; }
     public bool IsExpandedRoomList { get; private set; }
+
     #endregion
 
     #region Layouts
@@ -43,7 +44,8 @@ public class DevelopWindow : EditorWindow {
     public static void ShowWindow() {
         DevelopWindow window = GetWindow<DevelopWindow>();
         window.titleContent = new("Develop Tools");
-        window.maxSize = new Vector2(300, 800);
+        window.position = new Rect(1000, 200, 500, 800);
+        window.maxSize = new Vector2(500, 800);
         window.Show();
     }
     private void OnGUI() {
@@ -52,6 +54,12 @@ public class DevelopWindow : EditorWindow {
             fontSize = 16,
         };
 
+        GUILayout.Label("데이터 경로", titleLabelStyle);
+        ShowDataPathInfo();
+
+        if (SceneManager.GetActiveScene().name != "TestScene") return;
+
+        GUILayout.Space(20);
         GUILayout.Label("게임 초기화", titleLabelStyle);
         ShowGameInitButtons();
 
@@ -73,6 +81,12 @@ public class DevelopWindow : EditorWindow {
     }
 
     #region ShowArea
+
+    private void ShowDataPathInfo() {
+        DataTransformer.csvDataPath = EditorGUILayout.TextField("CSV Path", DataTransformer.csvDataPath);
+        DataTransformer.jsonDataPath = EditorGUILayout.TextField("JSON Path", DataTransformer.jsonDataPath);
+        DefaultButton("Parse All Data", DataTransformer.ParseExcel);
+    }
 
     private void ShowGameInitButtons() {
         GUILayout.BeginHorizontal();
@@ -141,10 +155,19 @@ public class DevelopWindow : EditorWindow {
         Main.Dungeon.Width = EditorGUILayout.IntField("던전 최대 수평 길이", Main.Dungeon.Width);
         Main.Dungeon.Height = EditorGUILayout.IntField("던전 최대 수직 길이", Main.Dungeon.Height);
         Main.Dungeon.Count = EditorGUILayout.IntField("던전 방 생성 개수", Main.Dungeon.Count);
-        if (Main.Dungeon.Current == null)
-            LongButton("던전 생성", Main.Dungeon.Generate);
-        else
+
+        if (Main.Dungeon.Current == null) {
+            if (Main.Dungeon.DungeonRoot.childCount > 0) {
+                LongButton("던전 초기화", Main.Dungeon.DungeonRoot.gameObject.DestroyChilds);
+            }
+            else {
+                LongButton("던전 생성", Main.Dungeon.Generate);
+            }
+        }
+        else {
             LongButton("던전 삭제", Main.Dungeon.Destroy);
+        }
+
     }
 
     private void ShowDungeonState() {
@@ -199,6 +222,9 @@ public class DevelopWindow : EditorWindow {
     }
     private void LongButton(string label, Action action) {
         if (GUILayout.Button(label, _longButtonLayout)) action?.Invoke();
+    }
+    private void DefaultButton(string label, Action action) {
+        if (GUILayout.Button(label)) action?.Invoke();
     }
     private void DeactivatableButton(string label, Action action, bool isActivated) {
         EditorGUI.BeginDisabledGroup(!isActivated);
