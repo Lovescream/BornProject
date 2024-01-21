@@ -10,6 +10,15 @@ public class Player : Creature
 
     #endregion
 
+    public override bool Initialize() {
+        if (!base.Initialize()) return false;
+
+        CameraController camera = FindObjectOfType<CameraController>();
+        if (camera != null) camera.SetTarget(this.transform);
+
+        return true;
+    }
+
     #region Input
 
     protected void OnMove(InputValue value)
