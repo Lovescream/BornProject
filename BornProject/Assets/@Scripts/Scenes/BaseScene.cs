@@ -12,11 +12,11 @@ public class BaseScene : MonoBehaviour {
 
     protected virtual bool Initialize() {
         if (_initialized) return false;
-        // °¢Á¾ ÃÊ±âÈ­ ÇÔ¼ö.
+        // ê°ì¢… ì´ˆê¸°í™” í•¨ìˆ˜.
         Main.Resource.Initialize();
         Main.Data.Initialize();
-        // DataManager ÃÊ±âÈ­
-        // GameManager ÃÊ±âÈ­
+        // DataManager ì´ˆê¸°í™”
+        // GameManager ì´ˆê¸°í™”
 
         _initialized = true;
         return true;

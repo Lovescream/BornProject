@@ -11,11 +11,11 @@ public class Stat
     public float Value { get; private set; }
     public float OriginValue { get; private set; }
 
-    private List<StatModifier> _modifiers = new(); // ½ºÅÈÀÌ °¡Áö°í ÀÖ´Â ¼öÁ¤Ä¡ ¸ñ·Ï.
+    private List<StatModifier> _modifiers = new(); // ìŠ¤íƒ¯ì´ ê°€ì§€ê³  ìˆëŠ” ìˆ˜ì •ì¹˜ ëª©ë¡.
 
     public event Action<Stat> OnChanged;
 
-    // »õ·Î¿î ½ºÅÈ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ°í ÃÊ±â°ªÀ» »ı¼ºÇÏ´Â »ı¼ºÀÚ.
+    // ìƒˆë¡œìš´ ìŠ¤íƒ¯ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³  ì´ˆê¸°ê°’ì„ ìƒì„±í•˜ëŠ” ìƒì„±ì.
     public Stat(StatType type, float value = 0, float min = 0, float max = float.MaxValue)
     {
         this.Type = type;
@@ -24,7 +24,7 @@ public class Stat
         SetValue(value);
     }
 
-    // °ªÀ» ¹ŞÀ¸¸é ¹Ù²ï °ªÀ» ´ëÀÔ.
+    // ê°’ì„ ë°›ìœ¼ë©´ ë°”ë€ ê°’ì„ ëŒ€ì….
     public void SetValue(float value)
     {
         OriginValue = value;
@@ -32,28 +32,28 @@ public class Stat
         OnChanged?.Invoke(this);
     }
 
-    // ¼öÁ¤Ä¡¸¦ Ãß°¡ÇÏ°Å³ª »èÁ¦ÇÏ´Â ±â´É.
+    // ìˆ˜ì •ì¹˜ë¥¼ ì¶”ê°€í•˜ê±°ë‚˜ ì‚­ì œí•˜ëŠ” ê¸°ëŠ¥.
     public void AddModifier(StatModifier modifier)
     {
         _modifiers.Add(modifier);
         Value = GetModifyValue();
-        OnChanged?.Invoke(this); // ´É·ÂÄ¡¿¡ º¯È­°¡ ÀÖ´Ù¸é È£Ãâ.
+        OnChanged?.Invoke(this); // ëŠ¥ë ¥ì¹˜ì— ë³€í™”ê°€ ìˆë‹¤ë©´ í˜¸ì¶œ.
     }
     public void RemoveModifier(StatModifier modifier)
     {
         _modifiers.Remove(modifier);
         Value = GetModifyValue();
-        OnChanged?.Invoke(this); // ´É·ÂÄ¡¿¡ º¯È­°¡ ÀÖ´Ù¸é È£Ãâ.
+        OnChanged?.Invoke(this); // ëŠ¥ë ¥ì¹˜ì— ë³€í™”ê°€ ìˆë‹¤ë©´ í˜¸ì¶œ.
     }
 
 
-    // _modifiers ¸®½ºÆ®¿¡ µé¾îÀÖ´Â °´Ã¼µéÀÇ StatModifierTypeÀ» ºñ±³ÇÏ¿© Value¸¦ ÇØ´çÇÏ´Â StatModifierTypeÀ¸·Î °è»êÇÑ´Ù.
+    // _modifiers ë¦¬ìŠ¤íŠ¸ì— ë“¤ì–´ìˆëŠ” ê°ì²´ë“¤ì˜ StatModifierTypeì„ ë¹„êµí•˜ì—¬ Valueë¥¼ í•´ë‹¹í•˜ëŠ” StatModifierTypeìœ¼ë¡œ ê³„ì‚°í•œë‹¤.
     private float GetModifyValue()
     {
         float value = OriginValue;
         for (int i = 0; i < _modifiers.Count; i++)
         {
-            // Stat °è»ê ¹æ¹ı.
+            // Stat ê³„ì‚° ë°©ë²•.
             if (_modifiers[i].Type == StatModifierType.Add) value += _modifiers[i].Value;
             else if (_modifiers[i].Type == StatModifierType.Multiple) value *= _modifiers[i].Value;
             else if (_modifiers[i].Type == StatModifierType.Override) value = _modifiers[i].Value;

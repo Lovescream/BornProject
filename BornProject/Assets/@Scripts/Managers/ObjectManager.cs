@@ -5,11 +5,19 @@ using UnityEngine;
 
 public class ObjectManager {
     public Player Player { get; private set; }
+    public List<Enemy> Enemies { get; private set; } = new();
 
     public Player SpawnPlayer(string key, Vector2 position) {
         Player = Spawn<Player>(key, position);
         Player.SetInfo(Main.Data.Creatures[key]);
         return Player;
+    }
+    public Enemy SpawnEnemy(string key, Vector2 position)
+    {
+        Enemy enemy = Spawn<Enemy>(key, position);
+        Enemies.Add(enemy);
+        enemy.SetInfo(Main.Data.Creatures[key]);
+        return enemy;
     }
     public void DespawnPlayer(Player player = null) {
         if (player == null) player = Player;

@@ -9,10 +9,10 @@ public class StatModifier
     public StatModifierType Type { get; set; }
     public float Value { get; set; }
 
-    // ±âº» »ı¼ºÀÚ.
+    // ê¸°ë³¸ ìƒì„±ì.
     public StatModifier() { }
 
-    // Modifier °ªÀ» ¹Ş¾Æ¿Â´Ù.
+    // Modifier ê°’ì„ ë°›ì•„ì˜¨ë‹¤.
     public StatModifier(StatType stat, StatModifierType type, float value)
     {
         Stat = stat;
@@ -20,7 +20,7 @@ public class StatModifier
         Value = value;
     }
 
-    // json ÆÄÀÏÀÇ Modifier¸¦ ³ª´²¼­ EnumÀ¸·Î º¯È¯ÇÑ´Ù. 
+    // json íŒŒì¼ì˜ Modifierë¥¼ ë‚˜ëˆ ì„œ Enumìœ¼ë¡œ ë³€í™˜í•œë‹¤. 
     public StatModifier(string s)
     {
         string[] strings = s.Split('_');
@@ -29,7 +29,7 @@ public class StatModifier
         Value = float.Parse(strings[2]);
     }
 
-    // ¹ŞÀº °ªµéÀ» ±íÀºº¹»çÇÑ´Ù.
+    // ë°›ì€ ê°’ë“¤ì„ ê¹Šì€ë³µì‚¬í•œë‹¤.
     public StatModifier Copy()
     {
         return new(Stat, Type, Value);

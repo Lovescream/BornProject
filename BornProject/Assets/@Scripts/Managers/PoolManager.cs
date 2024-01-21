@@ -61,20 +61,20 @@ public class PoolManager {
     private Dictionary<string, Pool> _pools = new();
 
     public GameObject Pop(GameObject prefab) {
-        // #1. Ç®ÀÌ ¾øÀ¸¸é »õ·Î ¸¸µç´Ù.
+        // #1. í’€ì´ ì—†ìœ¼ë©´ ìƒˆë¡œ ë§Œë“ ë‹¤.
         if (_pools.ContainsKey(prefab.name) == false) {
             CreatePool(prefab);
         }
 
-        // #2. ÇØ´ç Ç®¿¡¼­ ÇÏ³ª °¡Á®¿Â´Ù.
+        // #2. í•´ë‹¹ í’€ì—ì„œ í•˜ë‚˜ ê°€ì ¸ì˜¨ë‹¤.
         return _pools[prefab.name].Pop();
     }
 
     public bool Push(GameObject obj) {
-        // #1. Ç®ÀÌ ÀÖ´ÂÁö È®ÀÎÇÑ´Ù.
+        // #1. í’€ì´ ìˆëŠ”ì§€ í™•ì¸í•œë‹¤.
         if (_pools.ContainsKey(obj.name) == false) return false;
 
-        // #2. Ç®¿¡ °ÔÀÓ ¿ÀºêÁ§Æ®¸¦ ³Ö´Â´Ù.
+        // #2. í’€ì— ê²Œì„ ì˜¤ë¸Œì íŠ¸ë¥¼ ë„£ëŠ”ë‹¤.
         _pools[obj.name].Push(obj);
 
         return true;

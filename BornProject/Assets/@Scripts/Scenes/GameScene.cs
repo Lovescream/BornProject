@@ -9,6 +9,7 @@ public class GameScene : BaseScene {
     protected override bool Initialize() {
         if (!base.Initialize()) return false;
 
+        //Main.Object.SpawnEnemy("Enemy1", new(4, 0)); //애니메이션 추가 후 사용 가능.
 
         return true;
     }
