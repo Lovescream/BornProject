@@ -111,6 +111,8 @@ public class Creature : Entity
             }
         }
         _rigidbody.simulated = true;
+
+        SetStateEvent();
         SetStatus(isFullHp: true);
         SetState();
     }
@@ -130,7 +132,17 @@ public class Creature : Entity
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
         
     }
-
+    protected virtual void SetStateEvent()
+    {
+        State = new();
+        State.AddOnEntered(CreatureState.Hit, () => _animator.SetTrigger(AnimatorParameterHash_Hit));
+        State.AddOnEntered(CreatureState.Dead, () => {
+            _collider.enabled = false;
+            _rigidbody.simulated = false;
+            _animator.SetBool(AnimatorParameterHash_Dead, true);
+                        
+        });
+    }
 
     #endregion
 
