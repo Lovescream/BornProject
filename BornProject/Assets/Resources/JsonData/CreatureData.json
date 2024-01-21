@@ -4,7 +4,7 @@
     "HpRegen": 10.0,
     "Damage": 100.0,
     "Defense": 10.0,
-    "MoveSpeed": 1.5,
+    "MoveSpeed": 3.0,
     "AttackSpeed": 1.0,
     "Cost": 20,
     "Range": 3.0,

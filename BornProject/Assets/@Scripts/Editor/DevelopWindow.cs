@@ -2,6 +2,7 @@ using DungeonGenerate;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class DevelopWindow : EditorWindow {
 
     public string PlayerKey { get; private set; } = "Player";
     public Vector2 PlayerSpawnPosition { get; private set; } = Vector2.zero;
+    public int PlayerSpawnRoomIndex { get; private set; }
 
     #endregion
 
@@ -195,8 +197,12 @@ public class DevelopWindow : EditorWindow {
     private void ShowPlayerInfo() {
         if (Main.Object.Player == null) {
             PlayerKey = EditorGUILayout.TextField("PlayerKey", PlayerKey);
-            PlayerSpawnPosition = EditorGUILayout.Vector2Field("SpawnPosition", PlayerSpawnPosition);
-            LongButton("플레이어 생성", () => { Main.Object.SpawnPlayer(PlayerKey, PlayerSpawnPosition); });
+            //PlayerSpawnPosition = EditorGUILayout.Vector2Field("SpawnPosition", PlayerSpawnPosition);
+            if (Main.Dungeon.Current != null) {
+                PlayerSpawnRoomIndex = EditorGUILayout.Popup("SpawnRoom", PlayerSpawnRoomIndex, Main.Dungeon.Current.Rooms.Select(x => x.ToString()).ToArray());
+
+                LongButton("플레이어 생성", () => { Main.Object.SpawnPlayer(PlayerKey, Main.Dungeon.Current.Rooms[PlayerSpawnRoomIndex].CenterPosition); });
+            }
         }
         else {
 
