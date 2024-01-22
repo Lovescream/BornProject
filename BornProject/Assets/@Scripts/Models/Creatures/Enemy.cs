@@ -3,78 +3,95 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Creature {
-    public new CreatureData Data { get; private set; }
-    public Transform PlayerTransform;
 
-    protected override void SetStateEvent()
-    {
-        base.SetStateEvent();
-        State.AddOnStay(CreatureState.Idle, () =>
-        {
-            Velocity = Vector2.zero;
-        });
-    }
-    protected override void SetStatus(bool isFullHp = true)
-    {
-        this.Status = new(Data);
-        if (isFullHp)
-        {
-            Hp = Status[StatType.HpMax].Value;
-        }
+    #region Properties
 
-        //OnChangedHp -= ShowHpBar; // Hp바 만들때 사용예정.
-        //OnChangedHp += ShowHpBar;
-    }
-
-    void Update()
-    {
-        // 플레이어가 범위 내에 있는지 확인.
-        if (SightPlayerInRange())
-        {
-            MoveTowardsPlayer();
-        }
-        else
-        {
-            StopMoving();
+    public Creature Target {
+        get => _target;
+        set {
+            if (_target == value) return;
+            _target = value;
+            if (_target == null) State.Current = CreatureState.Idle;
+            else State.Current = CreatureState.Chase;
         }
     }
 
-    // 플레이어 쪽으로 이동.
-    private void MoveTowardsPlayer()
-    {
-        // 플레이어를 따라가기 위한 Transform이 있는지 확인.
-        if (PlayerTransform != null)
-        {
-            // 플레이어 쪽으로의 방향 계산.
-            Vector2 direction = (PlayerTransform.position - transform.position).normalized;
-            // 적을 플레이어 쪽으로 이동.
-            transform.position = Vector2.MoveTowards(transform.position, PlayerTransform.position, Data.MoveSpeed * Time.deltaTime);
-        }
+    #endregion
+
+    #region Fields
+
+    private Creature _target;
+
+    // Debugging.
+    private Transform _doubleSight;
+    private Transform _sight;
+    private Transform _range;
+
+    #endregion
+
+    #region Initialize / Set
+
+    public override void SetInfo(CreatureData data) {
+        base.SetInfo(data);
+
+        _doubleSight = this.transform.Find("[Debug] EnemySightSight");
+        _sight = this.transform.Find("[Debug] EnemySight");
+        _range = this.transform.Find("[Debug] EnemyRange");
+
+        _doubleSight.transform.localScale = new(4 * Sight, 4 * Sight, 1);
+        _sight.transform.localScale = new(2 * Sight, 2 * Sight, 1);
+        _range.transform.localScale = new(Range, Range, 1);
     }
 
-    // 적의 이동을 멈추는 메소드.
-    private void StopMoving()
-    {
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    protected override void SetState() {
+        base.SetState();
+        State.AddOnStay(CreatureState.Idle, OnStayIdle);
+        State.AddOnStay(CreatureState.Chase, OnStayChase);
     }
 
-    // 플레이어가 범위 내에 있는지 감지하고, 감지된 경우 플레이어의 Transform을 PlayerTransform에 할당
-    public bool SightPlayerInRange()
-    {
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, Data.Sight);
+    #endregion
 
-        foreach (var hitCollider in hitColliders)
-        {
-            if (hitCollider.CompareTag("Player"))
-            {
-                // 플레이어의 Transform을 PlayerTransform에 할당
-                PlayerTransform = hitCollider.transform;
-                return true;
-            }
+    #region State
+
+    private void OnStayIdle() {
+        Velocity = Vector2.zero;
+        Target = FindTarget();
+    }
+    
+    private void OnStayChase() {
+        if (Target.IsValid() && Target.IsDead) {
+            Target = null;
+            return;
         }
 
-        // 플레이어를 찾지 못한 경우, PlayerTransform을 null로 설정하고 false 반환
-        PlayerTransform = null;
+        Vector2 delta = Target.transform.position - this.transform.position;
+        if (delta.sqrMagnitude > 4 * Sight * Sight) {
+            Target = null;
+            return;
+        }
+
+        Vector2 direction = (Target.transform.position - this.transform.position).normalized;
+        Velocity = direction * Status[StatType.MoveSpeed].Value;
+        LookDirection = direction;
+    }
+
+    #endregion
+
+    // 이 Creature의 시야 내의 적을 찾습니다.
+    private Creature FindTarget() {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(this.transform.position, Sight);
+        foreach (Collider2D collider in hits) {
+            Creature creature = collider.GetComponent<Creature>();
+            if (creature == null || creature == this) continue;
+            if (IsTarget(creature)) return creature;
+        }
+        return null;
+    }
+    
+    // 해당 Creature가 이 Creature의 적인지 판별.
+    // 플레이어가 아니더라도 적끼리 서로 싸울 수 있으니 일단 만들어 두었습니다.
+    protected virtual bool IsTarget(Creature creature) {
+        if (creature is Player) return true;
         return false;
     }
 }

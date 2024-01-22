@@ -10,9 +10,9 @@ public enum StatType
     Defense,
     MoveSpeed,
     AttackSpeed,
-    //Cost,
-    //Range,
-    //Sight,
+    Cost,
+    Range,
+    Sight,
     COUNT // StatType 갯수 파악을 위한 상수.
 }
 
@@ -47,14 +47,16 @@ public class Status
     // 크리처의 기존 데이터를 받아와서 스탯에 대입.
     public Status(CreatureData data)
     {
-        _stats = new()
-        {
+        _stats = new() {
             [StatType.HpMax] = new(StatType.HpMax, data.HpMax),
             [StatType.HpRegen] = new(StatType.HpRegen, data.HpRegen),
             [StatType.Damage] = new(StatType.Damage, data.Damage),
             [StatType.Defense] = new(StatType.Defense, data.Defense),
             [StatType.MoveSpeed] = new(StatType.MoveSpeed, data.MoveSpeed),
             [StatType.AttackSpeed] = new(StatType.AttackSpeed, data.AttackSpeed),
+            [StatType.Cost] = new(StatType.Cost, data.Cost),
+            [StatType.Sight] = new(StatType.Sight, data.Sight),
+            [StatType.Range] = new(StatType.Range, data.Range),
         };
     }
 
