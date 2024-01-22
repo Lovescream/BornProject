@@ -1,14 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : Creature
+public class Player : Creature, IAttackable
 {
     #region Properties
-    public new CreatureData Data => base.Data;
+
+    public Attacker Attacker { get; protected set; }
 
     #endregion
+
+    #region Fields
+
+    
+
+    #endregion
+
+    #region MonoBehaviours
+
+    protected override void FixedUpdate() {
+        base.FixedUpdate();
+
+        Attacker.OnUpdate();
+    }
+
+    #endregion
+
+    #region Initialize / Set
 
     public override bool Initialize() {
         if (!base.Initialize()) return false;
@@ -18,6 +38,13 @@ public class Player : Creature
 
         return true;
     }
+    protected override void SetState() {
+        base.SetState();
+
+        this.Attacker = new(this);
+    }
+
+    #endregion
 
     #region Input
 
@@ -27,13 +54,32 @@ public class Player : Creature
     }
     protected void OnLook(InputValue value)
     {
-        LookDirection = (Camera.main.ScreenToWorldPoint(value.Get<Vector2>()) - this.transform.position).normalized;
+        Vector2 v = Camera.main.ScreenToWorldPoint(value.Get<Vector2>()) - this.transform.position;
+        LookDirection = v.normalized;
     }
     protected void OnFire()
     {
-        // TODO.
+        Attack();
     }
 
     #endregion
+
+    public void Attack() {
+        Attacker.Attack(GetAttackInfo());
+    }
+
+    public AttackInfo GetAttackInfo() {
+        return new() {
+            Owner = this,
+            Damage = this.Damage,
+            Duration = 5, // TODO:: NO HARDCODING.
+            Speed = 10, // TODO:: NO HARDCODING.
+            Direction = LookDirection,
+            Knockback = new() {
+                time = 0.1f,
+                speed = 10,
+            }
+        };
+    }
 
 }

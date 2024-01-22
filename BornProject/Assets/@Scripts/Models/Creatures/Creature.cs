@@ -4,8 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Creature : Entity
-{    
+public class Creature : Entity {
+
     #region Properties
 
     // Data.
@@ -15,6 +15,8 @@ public class Creature : Entity
 
     // Status.
     public float HpMax => Status[StatType.HpMax].Value;
+    public float Damage => Status[StatType.Damage].Value;
+    public float AttackSpeed => Status[StatType.AttackSpeed].Value;
     public float Sight => Status[StatType.Sight].Value;
     public float Range => Status[StatType.Range].Value;
 
@@ -152,13 +154,14 @@ public class Creature : Entity
         _animator.SetBool(AnimatorParameterHash_Dead, true);
     }
 
-    public virtual void OnHit(Creature attacker, float damage, KnockbackInfo knockbackInfo = default) {
-        Hp -= damage;
-        
-        if (knockbackInfo.time > 0) {
+    public virtual void OnHit(IHit attacker) {
+        AttackInfo attackInfo = attacker.AttackInfo;
+        Hp -= attackInfo.Damage;
+
+        if (attackInfo.Knockback.time > 0) {
             State.Current = CreatureState.Hit;
-            Velocity = knockbackInfo.KnockbackVelocity;
-            State.SetStateAfterTime(CreatureState.Idle, knockbackInfo.time);
+            Velocity = (this.transform.position - attacker.CurrentPosition).normalized * attackInfo.Knockback.speed;
+            State.SetStateAfterTime(CreatureState.Idle, attackInfo.Knockback.time);
         }
     }
 
@@ -178,9 +181,6 @@ public enum CreatureState
 
 public struct KnockbackInfo
 {
-    public Vector2 KnockbackVelocity => direction.normalized * speed;
-
     public float time;
     public float speed;
-    public Vector2 direction;
 }
