@@ -19,8 +19,8 @@ namespace DungeonGenerate {
         // Room Info.
         public RoomData Data { get; private set; }
         public RoomObject Object { get; set; }
-        public int Width => Data.Width;
-        public int Height => Data.Height;
+        public int Width { get; private set; }
+        public int Height { get; private set; }
         public Vector2 OriginPosition => new(X * Width, Y * Height);
         public Vector2 CenterPosition => OriginPosition + new Vector2(Width / 2, Height / 2);
         public Vector2 MaxPosition => OriginPosition + new Vector2(Width, Height);
@@ -70,11 +70,13 @@ namespace DungeonGenerate {
         public Tile this[int x, int y] => _tiles.TryGetValue(new(x, y), out Tile tile) ? tile : null;
         public Tile this[Vector2Int v] => _tiles.TryGetValue(v, out Tile tile) ? tile : null;
 
-        public Room(RoomData data, Vector2Int index) {
+        public Room(RoomData data, Vector2Int index, Vector2Int size) {
             // #1. Data 설정.
             this.Data = data;
             this.X = index.x;
             this.Y = index.y;
+            this.Width = size.x;
+            this.Height = size.y;
 
             // #2. 컬렉션 초기화.
             for (int i = 0; i < (int)Direction.COUNT; i++) {

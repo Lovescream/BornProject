@@ -20,7 +20,7 @@ namespace DungeonGenerate {
             _generateData = result;
             foreach (RoomGenerateData data in _generateData) {
                 Vector2Int index = new(data.X, data.Y);
-                Room room = new(GetRoomData(data), index);
+                Room room = new(GetRoomData(data), index, new(data.Width, data.Height));
                 _rooms[index] = room;
                 if (room.Type == RoomType.Start) StartRoom = room;
                 else if (room.Type == RoomType.Boss) BossRoom = room;
@@ -58,8 +58,6 @@ namespace DungeonGenerate {
                 Key = "Room00",
                 TilemapKey = "Room00",
                 Type = GetRoomType(generateData),
-                Width = 20,
-                Height = 20,
             };
         }
         private RoomType GetRoomType(RoomGenerateData generateData) {

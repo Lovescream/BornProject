@@ -170,8 +170,8 @@ public class DevelopWindow : EditorWindow {
     }
 
     private void ShowDungeonGenerateInfo() {
-        Main.Dungeon.Width = EditorGUILayout.IntField("던전 최대 수평 길이", Main.Dungeon.Width);
-        Main.Dungeon.Height = EditorGUILayout.IntField("던전 최대 수직 길이", Main.Dungeon.Height);
+        Main.Dungeon.DungeonWidth = EditorGUILayout.IntField("던전 최대 수평 길이", Main.Dungeon.DungeonWidth);
+        Main.Dungeon.DungeonHeight = EditorGUILayout.IntField("던전 최대 수직 길이", Main.Dungeon.DungeonHeight);
         Main.Dungeon.Count = EditorGUILayout.IntField("던전 방 생성 개수", Main.Dungeon.Count);
 
         if (Main.Dungeon.Current == null) {
