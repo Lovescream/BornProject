@@ -8,9 +8,15 @@ public class Creature : Entity
 {    
     #region Properties
 
+    // Data.
     public CreatureData Data { get; private set; }
     public Status Status { get; protected set; }
     public State<CreatureState> State { get; protected set; }
+
+    // Status.
+    public float HpMax => Status[StatType.HpMax].Value;
+    public float Sight => Status[StatType.Sight].Value;
+    public float Range => Status[StatType.Range].Value;
 
     public float Hp
     {
@@ -22,9 +28,9 @@ public class Creature : Entity
             {
                 _hp = 0;
             }
-            else if (value >= Status[StatType.HpMax].Value)
+            else if (value >= HpMax)
             {
-                _hp = Status[StatType.HpMax].Value;
+                _hp = HpMax;
             }
             else _hp = value;
             OnChangedHp?.Invoke(_hp);
@@ -39,6 +45,7 @@ public class Creature : Entity
     public Vector2 LookDirection { get; protected set; }
     public float LookAngle => Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg;
 
+    public bool IsDead => State.Current == CreatureState.Dead;
     public Room CurrentRoom => Main.Dungeon.GetRoom(this.transform.position);
     #endregion
 
@@ -112,7 +119,6 @@ public class Creature : Entity
         }
         _rigidbody.simulated = true;
 
-        SetStateEvent();
         SetStatus(isFullHp: true);
         SetState();
     }
@@ -121,29 +127,18 @@ public class Creature : Entity
         this.Status = new(Data);
         if (isFullHp)
         {
-            Hp = Status[StatType.HpMax].Value;
+            Hp = HpMax;
         }
 
     }
 
     protected virtual void SetState() {
-        State = new();
+        State = new() {
+            Current = CreatureState.Idle
+        };
         State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
-        
     }
-    protected virtual void SetStateEvent()
-    {
-        State = new();
-        State.AddOnEntered(CreatureState.Hit, () => _animator.SetTrigger(AnimatorParameterHash_Hit));
-        State.AddOnEntered(CreatureState.Dead, () => {
-            _collider.enabled = false;
-            _rigidbody.simulated = false;
-            _animator.SetBool(AnimatorParameterHash_Dead, true);
-                        
-        });
-    }
-
     #endregion
 
     #region State
@@ -176,6 +171,7 @@ public class Creature : Entity
 public enum CreatureState
 {
     Idle,
+    Chase,
     Hit,
     Dead,
 }

@@ -25,6 +25,10 @@ public class ObjectManager {
         Player = null;
         Despawn(player);
     }
+    public void DespawnEnemy(Enemy enemy) {
+        Enemies.Remove(enemy);
+        Despawn(enemy);
+    }
 
     private T Spawn<T>(string key, Vector2 position) where T : Entity {
         Type type = typeof(T);

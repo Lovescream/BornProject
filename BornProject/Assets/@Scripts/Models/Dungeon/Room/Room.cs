@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DungeonGenerate {
 
@@ -102,6 +103,12 @@ namespace DungeonGenerate {
         #endregion
 
         public bool IsInRoom(Vector2 position) => position.IsInRange(OriginPosition, MaxPosition);
+
+        public Vector2 GetRandomPosition() {
+            Vector2 min = OriginPosition + new Vector2(1.5f, 1.5f);
+            Vector2 max = MaxPosition - new Vector2(1.5f, 1.5f);
+            return new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
+        }
 
         #region Neighbours
 
