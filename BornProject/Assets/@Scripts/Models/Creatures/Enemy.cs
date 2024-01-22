@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Creature {
-
-    //public new EnemyData Data => base.Data as EnemyData; // 기존.
-    public new EnemyData Data; // 수정 : 확인 필요.
+    public new CreatureData Data { get; private set; }
     public Transform PlayerTransform;
-    public float Exp => Data.Exp;
 
     protected override void SetStateEvent()
     {
@@ -32,7 +29,7 @@ public class Enemy : Creature {
     void Update()
     {
         // 플레이어가 범위 내에 있는지 확인.
-        if (DetectPlayerInRange())
+        if (SightPlayerInRange())
         {
             MoveTowardsPlayer();
         }
@@ -62,9 +59,9 @@ public class Enemy : Creature {
     }
 
     // 플레이어가 범위 내에 있는지 감지하고, 감지된 경우 플레이어의 Transform을 PlayerTransform에 할당
-    public bool DetectPlayerInRange()
+    public bool SightPlayerInRange()
     {
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, Data.DetectingRange);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, Data.Sight);
 
         foreach (var hitCollider in hitColliders)
         {
