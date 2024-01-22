@@ -50,6 +50,6 @@ TagManager:
   - name: OnGround
     uniqueID: 4063239391
     locked: 0
-  - name: Creature
+  - name: Object
     uniqueID: 575706755
     locked: 0

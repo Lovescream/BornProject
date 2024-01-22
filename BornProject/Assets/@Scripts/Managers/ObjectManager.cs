@@ -6,6 +6,7 @@ using UnityEngine;
 public class ObjectManager {
     public Player Player { get; private set; }
     public List<Enemy> Enemies { get; private set; } = new();
+    public HashSet<Projectile> Projectiles { get; private set; } = new();
 
     public Player SpawnPlayer(string key, Vector2 position) {
         Player = Spawn<Player>(key, position);
@@ -28,6 +29,15 @@ public class ObjectManager {
     public void DespawnEnemy(Enemy enemy) {
         Enemies.Remove(enemy);
         Despawn(enemy);
+    }
+    public Projectile SpawnProjectile(string key, Vector2 position) {
+        Projectile projectile = Spawn<Projectile>(key, position);
+        Projectiles.Add(projectile);
+        return projectile;
+    }
+    public void DespawnProjectile(Projectile projectile) {
+        Projectiles.Remove(projectile);
+        Despawn(projectile);
     }
 
     private T Spawn<T>(string key, Vector2 position) where T : Entity {
