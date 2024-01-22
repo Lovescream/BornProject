@@ -7,6 +7,8 @@ namespace DungeonGenerate {
 
         public int X { get; private set; }
         public int Y { get; private set; }
+        public int Width { get; private set; }
+        public int Height { get; private set; }
         public Vector2Int Index => new(X, Y);
         public int NeighbourInfo { get; private set; }
         public int NeighbourCount {
@@ -19,9 +21,11 @@ namespace DungeonGenerate {
             }
         }
         public int DistanceFromStart { get; private set; }
-        public RoomGenerateData(Vector2Int index, int neighbourInfo, int distanceFromStart) {
+        public RoomGenerateData(Vector2Int index, Vector2Int size, int neighbourInfo, int distanceFromStart) {
             X = index.x;
             Y = index.y;
+            Width = size.x;
+            Height = size.y;
             NeighbourInfo = neighbourInfo;
             DistanceFromStart = distanceFromStart;
         }

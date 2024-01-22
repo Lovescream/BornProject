@@ -12,11 +12,13 @@ namespace DungeonGenerate {
         #region Properties
 
         // Generate Info.
-        public int Width { get; set; }
-        public int Height { get; set; }
+        public int DungeonWidth { get; set; }
+        public int DungeonHeight { get; set; }
+        public int RoomWidth { get; set; }
+        public int RoomHeight { get; set; }
         public int Count { get; set; }
         public Vector2Int Min => Vector2Int.zero;
-        public Vector2Int Max => new(Width - 1, Height - 1);
+        public Vector2Int Max => new(DungeonWidth - 1, DungeonHeight - 1);
 
         // Generate Result.
         public Vector2Int Start { get; private set; }
@@ -37,9 +39,11 @@ namespace DungeonGenerate {
 
         #region Constructor
 
-        public DungeonGenerator(int width, int height, int count) {
-            Width = width;
-            Height = height;
+        public DungeonGenerator(int dungeonWidth, int dungeonHeight, int roomWidth, int roomHeight, int count) {
+            DungeonWidth = dungeonWidth;
+            DungeonHeight = dungeonHeight;
+            RoomWidth = roomWidth;
+            RoomHeight = roomHeight;
             Count = count;
         }
 
@@ -54,7 +58,7 @@ namespace DungeonGenerate {
         }
 
         public bool Generate() {
-            Vector2Int index = new(Width / 2, Height / 2);
+            Vector2Int index = new(DungeonWidth / 2, DungeonHeight / 2);
             Start = index;
             AddRoomIndex(index);
 
@@ -80,7 +84,7 @@ namespace DungeonGenerate {
                     if (_roomIndexes.Contains(roomIndex.GetDirectionIndex((Direction)i)))
                         neighbourInfo |= (1 << i);
                 }
-                _datas.Add(new(roomIndex, neighbourInfo, costs[roomIndex]));
+                _datas.Add(new(roomIndex, new(RoomWidth,RoomHeight), neighbourInfo, costs[roomIndex]));
             }
 
             int originX = _datas.OrderBy(info => info.X).FirstOrDefault().X;
