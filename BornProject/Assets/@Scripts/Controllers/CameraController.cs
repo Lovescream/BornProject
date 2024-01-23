@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour {
     #endregion
 
     void Awake() {
-        Camera.main.orthographicSize = 6f;
+        Camera.main.orthographicSize = 8f;
         CamHeight = Camera.main.orthographicSize;
         CamWidth = CamHeight * ScreenRatio;
     }
@@ -44,13 +44,14 @@ public class CameraController : MonoBehaviour {
             z = -10;
         }
         else {
-            float limitX = room.Width * 0.5f - CamWidth;
-            float limitY = room.Height * 0.5f - CamHeight;
-            x = Mathf.Clamp(_target.position.x, room.CenterPosition.x - limitX - 1, room.CenterPosition.x + limitX + 1);
-            y = Mathf.Clamp(_target.position.y, room.CenterPosition.y - limitY - 1, room.CenterPosition.y + limitY + 1);
+            float limitX = room.Width * 0.5f - CamWidth + 1;
+            float limitY = room.Height * 0.5f - CamHeight + 1;
+            x = limitX >= 0 ? Mathf.Clamp(_target.position.x, room.CenterPosition.x - limitX, room.CenterPosition.x + limitX) : room.CenterPosition.x;
+            y = limitY >= 0 ? Mathf.Clamp(_target.position.y, room.CenterPosition.y - limitY, room.CenterPosition.y + limitY) : room.CenterPosition.y;
             z = -10;
         }
         Vector3 newPosition = new(x, y, z);
         this.transform.position = Vector3.Lerp(this.transform.position, newPosition, Time.deltaTime * 2f);
     }
+
 }

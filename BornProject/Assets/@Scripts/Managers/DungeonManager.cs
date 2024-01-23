@@ -6,9 +6,11 @@ using UnityEngine;
 
 public class DungeonManager {
 
-    public DungeonGenerator Generator { get; private set; } = new(20, 20, 20);
-    public int Width { get => Generator.Width; set => Generator.Width = value; }
-    public int Height { get => Generator.Height; set => Generator.Height = value; }
+    public DungeonGenerator Generator { get; private set; } = new(20, 20, 20, 20, 20);
+    public int DungeonWidth { get => Generator.DungeonWidth; set => Generator.DungeonWidth = value; }
+    public int DungeonHeight { get => Generator.DungeonHeight; set => Generator.DungeonHeight = value; }
+    public int RoomWidth { get => Generator.RoomWidth; set => Generator.RoomWidth = value; }
+    public int RoomHeight { get => Generator.RoomHeight; set => Generator.RoomHeight = value; }
     public int Count { get => Generator.Count; set => Generator.Count = value; }
 
     public Dungeon Current { get; private set; }

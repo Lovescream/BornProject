@@ -22,6 +22,9 @@ public class DevelopWindow : EditorWindow {
     public Vector2 PlayerSpawnPosition { get; private set; } = Vector2.zero;
     public int PlayerSpawnRoomIndex { get; private set; }
 
+    public string EnemyKey { get; private set; } = "Enemy1";
+    public int EnemySpawnRoomIndex { get; private set; }
+
     #endregion
 
     #region Layouts
@@ -89,6 +92,10 @@ public class DevelopWindow : EditorWindow {
         GUILayout.Space(20);
         GUILayout.Label("플레이어 정보", titleLabelStyle);
         ShowPlayerInfo();
+
+        GUILayout.Space(20);
+        GUILayout.Label("적 생성", titleLabelStyle);
+        ShowEnemyGenerateInfo();
     }
 
     #region ShowArea
@@ -163,8 +170,10 @@ public class DevelopWindow : EditorWindow {
     }
 
     private void ShowDungeonGenerateInfo() {
-        Main.Dungeon.Width = EditorGUILayout.IntField("던전 최대 수평 길이", Main.Dungeon.Width);
-        Main.Dungeon.Height = EditorGUILayout.IntField("던전 최대 수직 길이", Main.Dungeon.Height);
+        Main.Dungeon.DungeonWidth = EditorGUILayout.IntField("던전 최대 수평 길이", Main.Dungeon.DungeonWidth);
+        Main.Dungeon.DungeonHeight = EditorGUILayout.IntField("던전 최대 수직 길이", Main.Dungeon.DungeonHeight);
+        Main.Dungeon.RoomWidth = EditorGUILayout.IntField("방의 수평 길이", Main.Dungeon.RoomWidth);
+        Main.Dungeon.RoomHeight = EditorGUILayout.IntField("방의 수직 길이", Main.Dungeon.RoomHeight);
         Main.Dungeon.Count = EditorGUILayout.IntField("던전 방 생성 개수", Main.Dungeon.Count);
 
         if (Main.Dungeon.Current == null) {
@@ -206,6 +215,14 @@ public class DevelopWindow : EditorWindow {
         }
         else {
 
+        }
+    }
+
+    private void ShowEnemyGenerateInfo() {
+        EnemyKey = EditorGUILayout.TextField("EnemyKey", EnemyKey);
+        if (Main.Dungeon.Current != null) {
+            EnemySpawnRoomIndex = EditorGUILayout.Popup("SpawnRoom", EnemySpawnRoomIndex, Main.Dungeon.Current.Rooms.Select(x => x.ToString()).ToArray());
+            LongButton("적 생성", () => { Main.Object.SpawnEnemy(EnemyKey, Main.Dungeon.Current.Rooms[EnemySpawnRoomIndex].GetRandomPosition()); });
         }
     }
 

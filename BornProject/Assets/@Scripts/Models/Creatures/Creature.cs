@@ -4,13 +4,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Creature : Entity
-{    
+public class Creature : Entity {
+
     #region Properties
 
+    // Data.
     public CreatureData Data { get; private set; }
     public Status Status { get; protected set; }
     public State<CreatureState> State { get; protected set; }
+
+    // Status.
+    public float HpMax => Status[StatType.HpMax].Value;
+    public float Damage => Status[StatType.Damage].Value;
+    public float AttackSpeed => Status[StatType.AttackSpeed].Value;
+    public float Sight => Status[StatType.Sight].Value;
+    public float Range => Status[StatType.Range].Value;
 
     public float Hp
     {
@@ -22,9 +30,9 @@ public class Creature : Entity
             {
                 _hp = 0;
             }
-            else if (value >= Status[StatType.HpMax].Value)
+            else if (value >= HpMax)
             {
-                _hp = Status[StatType.HpMax].Value;
+                _hp = HpMax;
             }
             else _hp = value;
             OnChangedHp?.Invoke(_hp);
@@ -39,6 +47,7 @@ public class Creature : Entity
     public Vector2 LookDirection { get; protected set; }
     public float LookAngle => Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg;
 
+    public bool IsDead => State.Current == CreatureState.Dead;
     public Room CurrentRoom => Main.Dungeon.GetRoom(this.transform.position);
     #endregion
 
@@ -112,7 +121,6 @@ public class Creature : Entity
         }
         _rigidbody.simulated = true;
 
-        SetStateEvent();
         SetStatus(isFullHp: true);
         SetState();
     }
@@ -121,29 +129,18 @@ public class Creature : Entity
         this.Status = new(Data);
         if (isFullHp)
         {
-            Hp = Status[StatType.HpMax].Value;
+            Hp = HpMax;
         }
 
     }
 
     protected virtual void SetState() {
-        State = new();
+        State = new() {
+            Current = CreatureState.Idle
+        };
         State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
-        
     }
-    protected virtual void SetStateEvent()
-    {
-        State = new();
-        State.AddOnEntered(CreatureState.Hit, () => _animator.SetTrigger(AnimatorParameterHash_Hit));
-        State.AddOnEntered(CreatureState.Dead, () => {
-            _collider.enabled = false;
-            _rigidbody.simulated = false;
-            _animator.SetBool(AnimatorParameterHash_Dead, true);
-                        
-        });
-    }
-
     #endregion
 
     #region State
@@ -157,13 +154,14 @@ public class Creature : Entity
         _animator.SetBool(AnimatorParameterHash_Dead, true);
     }
 
-    public virtual void OnHit(Creature attacker, float damage, KnockbackInfo knockbackInfo = default) {
-        Hp -= damage;
-        
-        if (knockbackInfo.time > 0) {
+    public virtual void OnHit(IHit attacker) {
+        AttackInfo attackInfo = attacker.AttackInfo;
+        Hp -= attackInfo.Damage;
+
+        if (attackInfo.Knockback.time > 0) {
             State.Current = CreatureState.Hit;
-            Velocity = knockbackInfo.KnockbackVelocity;
-            State.SetStateAfterTime(CreatureState.Idle, knockbackInfo.time);
+            Velocity = (this.transform.position - attacker.CurrentPosition).normalized * attackInfo.Knockback.speed;
+            State.SetStateAfterTime(CreatureState.Idle, attackInfo.Knockback.time);
         }
     }
 
@@ -176,15 +174,13 @@ public class Creature : Entity
 public enum CreatureState
 {
     Idle,
+    Chase,
     Hit,
     Dead,
 }
 
 public struct KnockbackInfo
 {
-    public Vector2 KnockbackVelocity => direction.normalized * speed;
-
     public float time;
     public float speed;
-    public Vector2 direction;
 }
