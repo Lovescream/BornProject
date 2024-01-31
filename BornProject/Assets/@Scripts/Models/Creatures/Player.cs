@@ -14,7 +14,7 @@ public class Player : Creature, IAttackable
 
     #region Fields
 
-    
+    protected static readonly int AnimatorParameterHash_Attack = Animator.StringToHash("Attack");
 
     #endregion
 
@@ -42,6 +42,12 @@ public class Player : Creature, IAttackable
         base.SetState();
 
         this.Attacker = new(this);
+        this.Attacker.OnStartAttack += () => {
+            _animator.SetBool(AnimatorParameterHash_Attack, true);
+        };
+        this.Attacker.OnEndAttack += () => {
+            _animator.SetBool(AnimatorParameterHash_Attack, false);
+        };
     }
 
     #endregion
