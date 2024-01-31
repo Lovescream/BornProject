@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8e58dca7f42b2c3409350ea5721a589a
+guid: 4b458f12508493b419de50e4f1f35781
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,391 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_0
+      name: Enemy_010_A_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540ca2b1accedfd44bfc1c091192fc60
+      internalID: -1018218066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7cd22440481654bb7bae211b05673a
+      internalID: 2001924462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6743e12cddf4b41bf6795d99f80a7b
+      internalID: -889416522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9b3b7df80bb0d4e9728abea301852b
+      internalID: -480698042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0f79ba9e5196b4fac5f9303a659f9e
+      internalID: 241261968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3195c010c2ceda54c82598bb02113ae5
+      internalID: -1716547113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc32ea228941bed47a514f332ce16d1f
+      internalID: 1507922206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbba1990610dd54585bd49443535fe3
+      internalID: -1705447495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c796d679010f1c448cb49f5a72df0d3
+      internalID: -770574318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd96367334232f14ab41e078ce658bba
+      internalID: -311342167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8ef97f682716249bbf0b5b3a53be1b
+      internalID: -2104812414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20e7dabe7f01f343bf2aa1cb41487fc
+      internalID: -662726114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3216174fb230747a48def90bb587db
+      internalID: -978980914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48df23cf44209c42a0bb50f87902f95
+      internalID: -1914568023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e2a22b2f21b684689959823bd7591c
+      internalID: 1926616864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_15
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd64a39d55c039545b7819fe344560b9
+      internalID: 2019438454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a33488cad531b4f95dbb2237b0c4e0
+      internalID: -1178573091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b92661067727140aa550b35100c7e2
+      internalID: -2108198655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_18
       rect:
         serializedVersion: 2
         x: 0
         y: 96
-        width: 12
-        height: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +515,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96073ffde71abb94bb1ab3c44f784331
-      internalID: -2020788880
+      spriteID: 0fa8dce3ee44e8342ba56d8f2a41462b
+      internalID: -840120634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_1
+      name: Enemy_010_A_19
       rect:
         serializedVersion: 2
-        x: 12
+        x: 96
         y: 96
-        width: 12
-        height: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +536,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac5a13762add0245bb893fcc667ef18
-      internalID: -1471064607
+      spriteID: 3d964fd3b3fef394fb94c5e8f0e2dc6b
+      internalID: 843479112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_2
+      name: Enemy_010_A_20
       rect:
         serializedVersion: 2
-        x: 24
+        x: 192
         y: 96
-        width: 12
-        height: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +557,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a41102427d5484d85e67a649d10c2c
-      internalID: 672277149
+      spriteID: e3b5a1d80edeabb41829297c63afc615
+      internalID: -77931787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_3
+      name: Enemy_010_A_21
       rect:
         serializedVersion: 2
-        x: 36
+        x: 288
         y: 96
-        width: 12
-        height: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +578,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5848e114890b1fa41aa3facabbc34048
-      internalID: -892163217
+      spriteID: 3969eacf561321940b06a34f4cfa83f5
+      internalID: -1697778730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_4
+      name: Enemy_010_A_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 84
-        width: 12
-        height: 12
+        x: 384
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +599,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5232b1afce7a4cd4bb1f56b619ba64ea
-      internalID: -1963473797
+      spriteID: 43ec7d30b3eb243419574fd518cefac0
+      internalID: -186241381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_5
+      name: Enemy_010_A_23
       rect:
         serializedVersion: 2
-        x: 12
-        y: 84
-        width: 12
-        height: 12
+        x: 480
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,566 +620,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e81616ba3d212e4f914d258fcc26b29
-      internalID: -210179866
+      spriteID: 32518216dbbc7b44787f9be4a5b235c9
+      internalID: 113062251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_6
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 84
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9b5406fd24e54745ab52367001453b3
-      internalID: -552526425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_7
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 84
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1fcd739c1661144782f33782fc3405f
-      internalID: 1159728675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 72
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4643ed8b290e97842b70a35bbbefa302
-      internalID: -2030542857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_9
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 72
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9948a4c64538dba4bb1c7e54948cf6f4
-      internalID: 910769639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_10
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 72
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fe2ed3a7698d0b48acd4d2a6d0f55f0
-      internalID: -636149596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_11
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 72
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c428dbc99f2d5142b6225ab4adeb0b7
-      internalID: 807104858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 60
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 991a2043cdb67ec49ac77210fe687b03
-      internalID: -669463277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_13
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 60
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd9361f1364284145be37f05b1dabe69
-      internalID: 962989280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_14
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 60
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6a01813c88ca6144ab357ea5b6b4535
-      internalID: 170705201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_15
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 60
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50a60af5987f98444afb30a4b3742847
-      internalID: 988812199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dda77f0548d0fac44967928b9eeb7e10
-      internalID: 1700648896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_17
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 48
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e12d4e7a69aa434ea6af0027da9af53
-      internalID: -1120537261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_18
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 48
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fda00559132c632429f3dfb10bc3ab1d
-      internalID: -1718489224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_19
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 48
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4da89e073ae7814c9c14d2f268985dd
-      internalID: 2112531637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 36
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94d6416c9ad01c24fa6549566bae58b4
-      internalID: -2073337007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_21
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 36
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8662d5f69b5a9d4e9d615add1f9a9b7
-      internalID: -828963582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_22
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 36
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef0bb5b53080c564abab2595c8dbe689
-      internalID: -1577648173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_23
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 36
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9717a560f0820e44b62c0c08acd513a
-      internalID: 2078893290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 24
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58e00c00c5e237148856ebddd8224368
-      internalID: 290716848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_25
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 24
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a4563f12bce6fd4fbc4d7d83aebb22e
-      internalID: 2032259531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_26
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 24
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03b3ddd9a2ec52e43902eb63f2cdb828
-      internalID: -1407102046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_27
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 24
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15ac05ed107cd2e4a824a3f24b2e0d04
-      internalID: 733286298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_28
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 12
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1185c78d2d53c341b73584a8c552b04
-      internalID: -1340989564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_29
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 12
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38824b4c3052ab84586b13e90541ccf0
-      internalID: 1907699917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_30
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 12
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5389f63c4b2c52c4984ce33d4ce4ec3f
-      internalID: -2135781652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_31
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 12
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53167ca3714a06548ae62a3ec53fbb94
-      internalID: 1759642834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Slime_Shot_32
+      name: Enemy_010_A_24
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 12
-        height: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,20 +641,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e5b870c209cd7c45959b1220cf0c3e1
-      internalID: -1544647440
+      spriteID: 588153a73e8cab249b65f3215defc6ec
+      internalID: 936884466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_33
+      name: Enemy_010_A_25
       rect:
         serializedVersion: 2
-        x: 12
+        x: 96
         y: 0
-        width: 12
-        height: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -830,20 +662,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43415a3fa32e3cc45be69612459fed5a
-      internalID: 1977530307
+      spriteID: 26c951d4d0a02c84ba33d1beccf4bf5c
+      internalID: 680778988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_34
+      name: Enemy_010_A_26
       rect:
         serializedVersion: 2
-        x: 24
+        x: 192
         y: 0
-        width: 12
-        height: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,20 +683,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b203daa3d0813e40ad158e9763881a1
-      internalID: 1482045919
+      spriteID: 3f1e8ce9a5bad3445bf8409026bd4a19
+      internalID: 947660046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Slime_Shot_35
+      name: Enemy_010_A_27
       rect:
         serializedVersion: 2
-        x: 36
+        x: 288
         y: 0
-        width: 12
-        height: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,8 +704,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f95d22945ef09424190c384104984b22
-      internalID: 1984707427
+      spriteID: 25ecca4e4eabb2749a85423199f0784f
+      internalID: -1521212342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_010_A_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b44ef3d1bb57d74d8970f72ea289f04
+      internalID: 1163208002
       vertices: []
       indices: 
       edges: []
@@ -889,42 +742,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Beatle_Slime_Shot_0: -2020788880
-      Beatle_Slime_Shot_1: -1471064607
-      Beatle_Slime_Shot_10: -636149596
-      Beatle_Slime_Shot_11: 807104858
-      Beatle_Slime_Shot_12: -669463277
-      Beatle_Slime_Shot_13: 962989280
-      Beatle_Slime_Shot_14: 170705201
-      Beatle_Slime_Shot_15: 988812199
-      Beatle_Slime_Shot_16: 1700648896
-      Beatle_Slime_Shot_17: -1120537261
-      Beatle_Slime_Shot_18: -1718489224
-      Beatle_Slime_Shot_19: 2112531637
-      Beatle_Slime_Shot_2: 672277149
-      Beatle_Slime_Shot_20: -2073337007
-      Beatle_Slime_Shot_21: -828963582
-      Beatle_Slime_Shot_22: -1577648173
-      Beatle_Slime_Shot_23: 2078893290
-      Beatle_Slime_Shot_24: 290716848
-      Beatle_Slime_Shot_25: 2032259531
-      Beatle_Slime_Shot_26: -1407102046
-      Beatle_Slime_Shot_27: 733286298
-      Beatle_Slime_Shot_28: -1340989564
-      Beatle_Slime_Shot_29: 1907699917
-      Beatle_Slime_Shot_3: -892163217
-      Beatle_Slime_Shot_30: -2135781652
-      Beatle_Slime_Shot_31: 1759642834
-      Beatle_Slime_Shot_32: -1544647440
-      Beatle_Slime_Shot_33: 1977530307
-      Beatle_Slime_Shot_34: 1482045919
-      Beatle_Slime_Shot_35: 1984707427
-      Beatle_Slime_Shot_4: -1963473797
-      Beatle_Slime_Shot_5: -210179866
-      Beatle_Slime_Shot_6: -552526425
-      Beatle_Slime_Shot_7: 1159728675
-      Beatle_Slime_Shot_8: -2030542857
-      Beatle_Slime_Shot_9: 910769639
+      Enemy_010_A_0: -1018218066
+      Enemy_010_A_1: 2001924462
+      Enemy_010_A_10: -2104812414
+      Enemy_010_A_11: -662726114
+      Enemy_010_A_12: -978980914
+      Enemy_010_A_13: -1914568023
+      Enemy_010_A_14: 1926616864
+      Enemy_010_A_15: 2019438454
+      Enemy_010_A_16: -1178573091
+      Enemy_010_A_17: -2108198655
+      Enemy_010_A_18: -840120634
+      Enemy_010_A_19: 843479112
+      Enemy_010_A_2: -889416522
+      Enemy_010_A_20: -77931787
+      Enemy_010_A_21: -1697778730
+      Enemy_010_A_22: -186241381
+      Enemy_010_A_23: 113062251
+      Enemy_010_A_24: 936884466
+      Enemy_010_A_25: 680778988
+      Enemy_010_A_26: 947660046
+      Enemy_010_A_27: -1521212342
+      Enemy_010_A_28: 1163208002
+      Enemy_010_A_3: -480698042
+      Enemy_010_A_4: 241261968
+      Enemy_010_A_5: -1716547113
+      Enemy_010_A_6: 1507922206
+      Enemy_010_A_7: -1705447495
+      Enemy_010_A_8: -770574318
+      Enemy_010_A_9: -311342167
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
