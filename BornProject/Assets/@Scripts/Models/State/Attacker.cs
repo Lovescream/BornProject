@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,12 +22,30 @@ public class Attacker {
             }
         }
     }
+    public float AttackTime => 0.1f;
+    public float CurrentAttackTime {
+        get => _currentAttackTimer;
+        set {
+            if (value <= 0) {
+                if (_currentAttackTimer <= 0) return;
+                _currentAttackTimer = 0;
+                OnEndAttack?.Invoke();
+            }
+            else {
+                _currentAttackTimer = value;
+            }
+        }
+    }
 
     #endregion
 
     #region Fields
 
     private float _currentCooldown;
+    private float _currentAttackTimer;
+
+    public event Action OnStartAttack;
+    public event Action OnEndAttack;
 
     #endregion
 
@@ -40,10 +59,14 @@ public class Attacker {
 
     public void OnUpdate() {
         CurrentCooldown -= Time.deltaTime;
+        CurrentAttackTime -= Time.deltaTime;
     }
 
     public void Attack(AttackInfo attackInfo) {
         if (!CanAttack) return;
+
+        OnStartAttack?.Invoke();
+        CurrentAttackTime += AttackTime;
 
         Main.Object.SpawnProjectile("", Owner.transform.position).SetInfo(attackInfo);
 
