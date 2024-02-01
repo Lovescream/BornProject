@@ -68,7 +68,7 @@ public class Attacker {
         OnStartAttack?.Invoke();
         CurrentAttackTime += AttackTime;
 
-        Main.Object.SpawnProjectile("", Owner.transform.position).SetInfo(attackInfo);
+        HitCollider hitCollider = Main.Object.SpawnHitCollider(attackInfo.HitColliderKey, Owner.transform.position, attackInfo);
 
         CurrentCooldown = Cooldown;
     }
