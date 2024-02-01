@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : Creature, IAttackable
-{
+public class Player : Creature, IAttackable {
     #region Properties
 
     public Attacker Attacker { get; protected set; }
@@ -15,6 +14,8 @@ public class Player : Creature, IAttackable
     #region Fields
 
     protected static readonly int AnimatorParameterHash_Attack = Animator.StringToHash("Attack");
+
+    private bool _isRangeAttack_Temp = false;
 
     #endregion
 
@@ -54,38 +55,39 @@ public class Player : Creature, IAttackable
 
     #region Input
 
-    protected void OnMove(InputValue value)
-    {
+    protected void OnMove(InputValue value) {
         Velocity = value.Get<Vector2>().normalized * Status[StatType.MoveSpeed].Value;
     }
-    protected void OnLook(InputValue value)
-    {
+    protected void OnLook(InputValue value) {
         Vector2 v = Camera.main.ScreenToWorldPoint(value.Get<Vector2>()) - this.transform.position;
         LookDirection = v.normalized;
     }
-    protected void OnFire()
-    {
+    protected void OnFire() {
         Attack();
     }
 
     #endregion
 
     public void Attack() {
+        _isRangeAttack_Temp = true;
         Attacker.Attack(GetAttackInfo());
     }
 
     public AttackInfo GetAttackInfo() {
         return new() {
             Owner = this,
+            HitColliderKey = _isRangeAttack_Temp ? "BasicProjectile" : "BasicMelee",
             Damage = this.Damage,
-            Duration = 5, // TODO:: NO HARDCODING.
-            Speed = 10, // TODO:: NO HARDCODING.
+            CriticalChance = 0,
+            CriticalBonus = 1.5f,
+            Penetrate = 1,
+            Speed = 10,
             Direction = LookDirection,
+            Duration = 5,
             Knockback = new() {
                 time = 0.1f,
                 speed = 10,
             }
         };
     }
-
 }

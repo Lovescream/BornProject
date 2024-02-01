@@ -9,13 +9,27 @@ using UnityEngine;
 /// </summary>
 public struct AttackInfo {
 
+    // 기본 정보
     public IAttackable Owner { get; set; }
+    public string HitColliderKey { get; set; }
+
+    // 공격 정보
     public float Damage { get; set; }
-    public float Duration { get; set; }
+    public float CriticalChance { get; set; }
+    public float CriticalBonus { get; set; }
+    public float Penetrate { get; set; }
+
+    // 운동 정보
     public float Speed { get; set; }
     public Vector2 Direction { get; set; }
+
+    // 시간 정보
+    public float Duration { get; set; }
+
+    // 부가 효과 정보
     public KnockbackInfo Knockback { get; set; }
 
+    // 속성
     public readonly Vector2 Velocity => Direction * Speed;
 
 }
