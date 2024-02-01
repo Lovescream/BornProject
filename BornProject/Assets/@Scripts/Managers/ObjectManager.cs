@@ -6,16 +6,16 @@ using UnityEngine;
 public class ObjectManager {
     public Player Player { get; private set; }
     public List<Enemy> Enemies { get; private set; } = new();
-    public HashSet<Projectile> Projectiles { get; private set; } = new();
+    public HashSet<HitCollider> HitColliders { get; private set; } = new();
 
     public Player SpawnPlayer(string key, Vector2 position) {
-        Player = Spawn<Player>(key, position);
+        Player = Spawn<Player>(position);
         Player.SetInfo(Main.Data.Creatures[key]);
         return Player;
     }
     public Enemy SpawnEnemy(string key, Vector2 position)
     {
-        Enemy enemy = Spawn<Enemy>(key, position);
+        Enemy enemy = Spawn<Enemy>(position);
         Enemies.Add(enemy);
         enemy.SetInfo(Main.Data.Creatures[key]);
         return enemy;
@@ -30,17 +30,28 @@ public class ObjectManager {
         Enemies.Remove(enemy);
         Despawn(enemy);
     }
-    public Projectile SpawnProjectile(string key, Vector2 position) {
-        Projectile projectile = Spawn<Projectile>(key, position);
-        Projectiles.Add(projectile);
-        return projectile;
+    public HitCollider SpawnHitCollider(string key, Vector2 position, AttackInfo attackInfo) {
+        HitCollider hitCollider = Spawn<HitCollider>(key, position);
+        hitCollider.SetInfo(attackInfo);
+        HitColliders.Add(hitCollider);
+        return hitCollider;
     }
-    public void DespawnProjectile(Projectile projectile) {
-        Projectiles.Remove(projectile);
-        Despawn(projectile);
+    public void DespawnHitCollider(HitCollider hitCollider) {
+        HitColliders.Remove(hitCollider);
+        Despawn(hitCollider);
     }
 
-    private T Spawn<T>(string key, Vector2 position) where T : Entity {
+    //public Projectile SpawnProjectile(string key, Vector2 position) {
+    //    Projectile projectile = Spawn<Projectile>(key, position);
+    //    Projectiles.Add(projectile);
+    //    return projectile;
+    //}
+    //public void DespawnProjectile(Projectile projectile) {
+    //    Projectiles.Remove(projectile);
+    //    Despawn(projectile);
+    //}
+
+    private T Spawn<T>(Vector2 position) where T : Entity {
         Type type = typeof(T);
 
         string prefabName = null;
@@ -56,6 +67,21 @@ public class ObjectManager {
 
         return obj.GetOrAddComponent<T>();
     }
+    private T Spawn<T>(string key, Vector2 position) where T : Entity {
+        if (string.IsNullOrEmpty(key)) {
+            Debug.LogError($"[ObjectManager] Spawn<{typeof(T).Name}>({key}, {position}): Spawn Failed. the key is null or empty.");
+            return null;
+        }
+        GameObject obj = Main.Resource.Instantiate(key, pooling: true);
+        if (obj == null) {
+            Debug.LogError($"[ObjectManager] Spawn<{typeof(T).Name}>({key}, {position}): Spawn Failed. Failed to load prefab.");
+            return null;
+        }
+        obj.transform.position = position;
+
+        return obj.GetOrAddComponent<T>();
+    }
+
     private void Despawn<T>(T obj) where T : Entity {
         Main.Resource.Destroy(obj.gameObject);
     }

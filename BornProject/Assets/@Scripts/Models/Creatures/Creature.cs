@@ -154,7 +154,7 @@ public class Creature : Entity {
         _animator.SetBool(AnimatorParameterHash_Dead, true);
     }
 
-    public virtual void OnHit(IHit attacker) {
+    public virtual void OnHit(IHitCollider attacker) {
         AttackInfo attackInfo = attacker.AttackInfo;
         Hp -= attackInfo.Damage;
 
