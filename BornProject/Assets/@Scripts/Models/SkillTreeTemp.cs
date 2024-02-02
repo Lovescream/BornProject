@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillTree : MonoBehaviour
+public class SkillTreeTemp : MonoBehaviour
 {
-    public static SkillTree skillTree;
+    public static SkillTreeTemp skillTree;
     private void Awake() => skillTree = this;
 
     public int[] SkillLevels;
@@ -12,7 +12,7 @@ public class SkillTree : MonoBehaviour
     public string[] SkillNames;
     public string[] SkillDescriptions;
 
-    public List<Skill> SkillList;
+    public List<SkillTemp> SkillList;
     public GameObject SkillHolder;
 
     public List<GameObject> ConnectorList;
@@ -30,7 +30,7 @@ public class SkillTree : MonoBehaviour
 
         SkillNames = new[] { "1", "2", "3", "4", "5", "6", "7" };
 
-        foreach (var skill in SkillHolder.GetComponentsInChildren<Skill>()) SkillList.Add(skill);
+        foreach (var skill in SkillHolder.GetComponentsInChildren<SkillTemp>()) SkillList.Add(skill);
         foreach (var connector in ConnectorHolder.GetComponentsInChildren<RectTransform>()) ConnectorList.Add(connector.gameObject);
 
         for (var i = 0; i < SkillList.Count; i++) SkillList[i].id = i;

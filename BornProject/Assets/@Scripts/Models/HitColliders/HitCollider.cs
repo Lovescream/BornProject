@@ -8,12 +8,12 @@ public class HitCollider : Entity, IHitCollider {
 
     public AttackInfo AttackInfo { get; protected set; }
     public Vector2 Velocity { get; set; }
-    public float RemainPenetration { get; protected set; }
+    public int RemainPenetration { get; protected set; }
 
     public IAttackable Owner => AttackInfo.Owner;
     public Vector3 CurrentPosition => this.transform.position;
     public float Damage => AttackInfo.Damage;
-    public float Penetrate => AttackInfo.Penetrate;
+    public int Penetrate => AttackInfo.Penetrate;
     public float Duration => AttackInfo.Duration;
     public KnockbackInfo KnockbackInfo => AttackInfo.Knockback;
 

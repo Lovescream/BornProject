@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static SkillTree;
+using static SkillTreeTemp;
 
-public class Skill : MonoBehaviour
+public class SkillTemp : MonoBehaviour
 {
     public int id;
 

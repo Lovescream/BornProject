@@ -10,6 +10,7 @@ public class PlayerTestScene : BaseScene {
         if (!base.Initialize()) return false;
 
         Player = Main.Object.SpawnPlayer("Player", Vector2.zero);
+        Enemy enemy1 = Main.Object.SpawnEnemy("", new(25, -2));
 
         return true;
     }

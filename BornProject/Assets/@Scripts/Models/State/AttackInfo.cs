@@ -17,7 +17,7 @@ public struct AttackInfo {
     public float Damage { get; set; }
     public float CriticalChance { get; set; }
     public float CriticalBonus { get; set; }
-    public float Penetrate { get; set; }
+    public int Penetrate { get; set; }
 
     // 운동 정보
     public float Speed { get; set; }
