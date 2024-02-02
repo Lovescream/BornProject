@@ -12,6 +12,8 @@ public struct AttackInfo {
     // 기본 정보
     public IAttackable Owner { get; set; }
     public string HitColliderKey { get; set; }
+    public Vector2 Offset { get; set; }
+    public float RotationAngle { get; set; }
 
     // 공격 정보
     public float Damage { get; set; }

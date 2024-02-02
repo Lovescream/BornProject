@@ -69,6 +69,9 @@ public class Attacker {
         CurrentAttackTime += AttackTime;
 
         HitCollider hitCollider = Main.Object.SpawnHitCollider(attackInfo.HitColliderKey, Owner.transform.position, attackInfo);
+        hitCollider.transform.SetParent(Owner.transform);
+        hitCollider.transform.localRotation = Quaternion.Euler(0, 0, attackInfo.RotationAngle);
+        hitCollider.transform.localPosition = attackInfo.Offset;
 
         CurrentCooldown = Cooldown;
     }

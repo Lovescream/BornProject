@@ -49,6 +49,8 @@ public class Player : Creature, IAttackable {
             BasicRange = new() {
                 Name = "BasicProjectile",
                 Description = "",
+                Offset = Vector2.zero,
+                RotationAngle = 0,
                 Damage = 10,
                 CriticalChance = 0,
                 CriticalBonus = 1.5f,
@@ -65,6 +67,8 @@ public class Player : Creature, IAttackable {
             BasicMelee = new() {
                 Name = "BasicMelee",
                 Description = "",
+                Offset = new(0.5f, 0),
+                RotationAngle = -1,
                 Damage = 10,
                 CriticalChance = 0,
                 CriticalBonus = 1.5f,
@@ -74,7 +78,7 @@ public class Player : Creature, IAttackable {
                 HitColliderAngle = 0,
                 Speed = 0,
                 Direction = Vector2.zero,
-                Duration = 0.1f,
+                Duration = 0,
                 Range = 1,
                 HitColliderSize = 1,
             },
@@ -123,6 +127,8 @@ public class Player : Creature, IAttackable {
         return new() {
             Owner = this,
             HitColliderKey = basicSkill.Name,
+            Offset = basicSkill.Offset,
+            RotationAngle = basicSkill.RotationAngle < 0 ? this.LookAngle : basicSkill.RotationAngle,
             Damage = this.Damage,
             CriticalChance = basicSkill.CriticalChance,
             CriticalBonus = basicSkill.CriticalBonus,

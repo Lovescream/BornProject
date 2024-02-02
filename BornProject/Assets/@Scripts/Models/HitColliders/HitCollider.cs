@@ -70,8 +70,19 @@ public class HitCollider : Entity, IHitCollider {
         this.Velocity = attackInfo.Velocity;
         this.RemainPenetration = Penetrate;
 
-        if (_coDestroy != null) StopCoroutine(_coDestroy);
-        _coDestroy = StartCoroutine(CoDestroy());
+        if (Duration > 0) {
+            if (_coDestroy != null) StopCoroutine(_coDestroy);
+            _coDestroy = StartCoroutine(CoDestroy());
+        }
+    }
+
+    #endregion
+
+    #region Callbacks
+
+    protected virtual void OnExitAnimation() {
+        Debug.Log("A");
+        Destroy();
     }
 
     #endregion

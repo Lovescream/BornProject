@@ -10,6 +10,10 @@ public class Skill_Basic {
     public string Name { get; set; }
     public string Description { get; set; }
 
+    // 투사체 생성 정보
+    public Vector2 Offset { get; set; }
+    public float RotationAngle { get; set; }
+
     // 공격 정보
     public float Damage { get; set; }
     public float CriticalChance { get; set; }
