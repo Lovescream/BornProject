@@ -34,5 +34,17 @@
     "Range": 3.0,
     "Sight": 5.0,
     "Key": "Enemy2"
+  },
+  {
+    "HpMax": 200.0,
+    "HpRegen": 5.0,
+    "Damage": 30.0,
+    "Defense": 2.0,
+    "MoveSpeed": 1.0,
+    "AttackSpeed": 1.0,
+    "Cost": 0,
+    "Range": 3.0,
+    "Sight": 5.0,
+    "Key": "Bear"
   }
 ]
