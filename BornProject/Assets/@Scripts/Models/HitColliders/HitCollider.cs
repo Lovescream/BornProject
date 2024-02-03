@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class HitCollider : Entity, IHitCollider {
 
-    #region Properties
+    public HitColliderInfo Info { get; protected set; }
+    public HitInfo HitInfo { get; protected set; }
 
-    public AttackInfo AttackInfo { get; protected set; }
+    #region Properties
     public Vector2 Velocity { get; set; }
     public int RemainPenetration { get; protected set; }
 
-    public IAttackable Owner => AttackInfo.Owner;
+    public IAttackable Owner => HitInfo.Owner;
     public Vector3 CurrentPosition => this.transform.position;
-    public float Damage => AttackInfo.Damage;
-    public int Penetrate => AttackInfo.Penetrate;
-    public float Duration => AttackInfo.Duration;
-    public KnockbackInfo KnockbackInfo => AttackInfo.Knockback;
+    public float Duration => Info.Duration;
+    public KnockbackInfo KnockbackInfo => HitInfo.Knockback;
 
     #endregion
 
@@ -65,10 +64,11 @@ public class HitCollider : Entity, IHitCollider {
         return true;
     }
 
-    public virtual void SetInfo(AttackInfo attackInfo) {
-        this.AttackInfo = attackInfo;
-        this.Velocity = attackInfo.Velocity;
-        this.RemainPenetration = Penetrate;
+    public virtual void SetInfo(HitColliderInfo info, HitInfo hitInfo) {
+        this.Info = info;
+        this.HitInfo = hitInfo;
+        this.Velocity = info.Velocity;
+        this.RemainPenetration = info.Penetration;
 
         if (Duration > 0) {
             if (_coDestroy != null) StopCoroutine(_coDestroy);

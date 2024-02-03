@@ -6,7 +6,8 @@ using UnityEngine;
 /// </summary>
 public interface IHitCollider {
 
-    public AttackInfo AttackInfo { get; }
+    public HitColliderInfo Info { get; }
+    public HitInfo HitInfo { get; }
     public Vector3 CurrentPosition { get; }
 
 }

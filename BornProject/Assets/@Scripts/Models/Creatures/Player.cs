@@ -119,42 +119,119 @@ public class Player : Creature, IAttackable {
     #endregion
 
     public void Attack() {
-        Attacker.Attack(GetAttackInfo());
+        Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
     }
 
-    public AttackInfo GetAttackInfo() {
+    public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
         Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
+
         return new() {
             Owner = this,
             HitColliderKey = basicSkill.Name,
             Offset = basicSkill.Offset,
-            RotationAngle = basicSkill.RotationAngle < 0 ? this.LookAngle : basicSkill.RotationAngle,
-            Damage = this.Damage,
-            CriticalChance = basicSkill.CriticalChance,
-            CriticalBonus = basicSkill.CriticalBonus,
-            Penetrate = basicSkill.Penetration,
+            RotationAngle = basicSkill.RotationAngle < 0 ? LookAngle : basicSkill.RotationAngle,
+            Count = basicSkill.HitColliderCount,
+            SpreadAngle = basicSkill.HitColliderAngle,
+            Size = basicSkill.HitColliderSize,
+        };
+    }
+
+    public HitColliderInfo GetHitColliderInfo() {
+        Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
+
+        return new() {
+            Penetration = basicSkill.Penetration,
             Speed = basicSkill.Speed,
             Direction = basicSkill.Direction.magnitude <= float.Epsilon ? LookDirection : basicSkill.Direction,
             Duration = basicSkill.Duration,
+            Range = basicSkill.Range,
+        };
+    }
+    public HitInfo GetHitInfo() {
+        Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
+        
+        return new() {
+            Owner = this,
+            Damage = this.Damage,
+            CriticalChance = basicSkill.CriticalChance,
+            CriticalBonus = basicSkill.CriticalBonus,
             Knockback = new() {
                 time = 0.1f,
-                speed = 10,
+                speed = 10f,
             }
         };
-        //return new() {
-        //    Owner = this,
-        //    HitColliderKey = _isRangeAttack_Temp ? "BasicProjectile" : "BasicMelee",
-        //    Damage = this.Damage,
-        //    CriticalChance = 0,
-        //    CriticalBonus = 1.5f,
-        //    Penetrate = 1,
-        //    Speed = 10,
-        //    Direction = LookDirection,
-        //    Duration = 5,
-        //    Knockback = new() {
-        //        time = 0.1f,
-        //        speed = 10,
-        //    }
-        //};
     }
+    //public AttackInfo GetAttackInfo() {
+    //    Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
+
+    //    HitColliderGenerationInfo generationInfo = new() {
+    //        Owner = this,
+    //        HitColliderKey = basicSkill.Name,
+    //        Offset = basicSkill.Offset,
+    //        RotationAngle = basicSkill.RotationAngle < 0 ? LookAngle : basicSkill.RotationAngle,
+    //        Count = basicSkill.HitColliderCount,
+    //        SpreadAngle = basicSkill.HitColliderAngle,
+    //        Size = basicSkill.HitColliderSize,
+    //    };
+    //    HitColliderInfo hitColliderInfo = new() {
+    //        Penetration = basicSkill.Penetration,
+    //        Speed = basicSkill.Speed,
+    //        Direction = basicSkill.Direction.magnitude <= float.Epsilon ? LookDirection : basicSkill.Direction,
+    //        Duration = basicSkill.Duration,
+    //        Range = basicSkill.Range,
+    //    };
+    //    HitInfo hitInfo = new() {
+    //        Owner = this,
+    //        Damage = this.Damage,
+    //        CriticalChance = basicSkill.CriticalChance,
+    //        CriticalBonus = basicSkill.CriticalBonus,
+    //        Knockback = new() {
+    //            time = 0.1f,
+    //            speed = 10f,
+    //        }
+    //    };
+
+
+
+
+
+
+
+
+
+
+
+    //    return new() {
+    //        Owner = this,
+    //        HitColliderKey = basicSkill.Name,
+    //        Offset = basicSkill.Offset,
+    //        RotationAngle = basicSkill.RotationAngle < 0 ? this.LookAngle : basicSkill.RotationAngle,
+    //        Damage = this.Damage,
+    //        CriticalChance = basicSkill.CriticalChance,
+    //        CriticalBonus = basicSkill.CriticalBonus,
+    //        Penetrate = basicSkill.Penetration,
+    //        Speed = basicSkill.Speed,
+    //        Direction = basicSkill.Direction.magnitude <= float.Epsilon ? LookDirection : basicSkill.Direction,
+    //        Duration = basicSkill.Duration,
+    //        Knockback = new() {
+    //            time = 0.1f,
+    //            speed = 10,
+    //        }
+    //    };
+    //    //return new() {
+    //    //    Owner = this,
+    //    //    HitColliderKey = _isRangeAttack_Temp ? "BasicProjectile" : "BasicMelee",
+    //    //    Damage = this.Damage,
+    //    //    CriticalChance = 0,
+    //    //    CriticalBonus = 1.5f,
+    //    //    Penetrate = 1,
+    //    //    Speed = 10,
+    //    //    Direction = LookDirection,
+    //    //    Duration = 5,
+    //    //    Knockback = new() {
+    //    //        time = 0.1f,
+    //    //        speed = 10,
+    //    //    }
+    //    //};
+    //}
 }
