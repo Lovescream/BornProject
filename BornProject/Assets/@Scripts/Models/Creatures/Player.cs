@@ -49,7 +49,7 @@ public class Player : Creature, IAttackable {
             BasicRange = new() {
                 Name = "BasicProjectile",
                 Description = "",
-                Offset = Vector2.zero,
+                RadiusOffset = 0.25f,
                 RotationAngle = 0,
                 Damage = 10,
                 CriticalChance = 0,
@@ -67,7 +67,7 @@ public class Player : Creature, IAttackable {
             BasicMelee = new() {
                 Name = "BasicMelee",
                 Description = "",
-                Offset = new(0.5f, 0),
+                RadiusOffset = 0.5f,
                 RotationAngle = -1,
                 Damage = 10,
                 CriticalChance = 0,
@@ -127,8 +127,8 @@ public class Player : Creature, IAttackable {
 
         return new() {
             Owner = this,
-            HitColliderKey = basicSkill.Name,
-            Offset = basicSkill.Offset,
+            HitColliderKey = basicSkill.HitColliderKey,
+            RadiusOffset = basicSkill.RadiusOffset,
             RotationAngle = basicSkill.RotationAngle < 0 ? LookAngle : basicSkill.RotationAngle,
             Count = basicSkill.HitColliderCount,
             SpreadAngle = basicSkill.HitColliderAngle,
