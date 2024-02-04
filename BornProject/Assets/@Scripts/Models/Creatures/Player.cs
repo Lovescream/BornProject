@@ -149,7 +149,7 @@ public class Player : Creature, IAttackable {
     }
     public HitInfo GetHitInfo() {
         Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
-        
+
         return new() {
             Owner = this,
             Damage = this.Damage,
@@ -161,6 +161,7 @@ public class Player : Creature, IAttackable {
             }
         };
     }
+}
     //public AttackInfo GetAttackInfo() {
     //    Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
 
@@ -234,4 +235,4 @@ public class Player : Creature, IAttackable {
     //    //    }
     //    //};
     //}
-}
+//}
