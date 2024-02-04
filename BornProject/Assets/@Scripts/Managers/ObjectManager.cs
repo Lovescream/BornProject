@@ -30,9 +30,9 @@ public class ObjectManager {
         Enemies.Remove(enemy);
         Despawn(enemy);
     }
-    public HitCollider SpawnHitCollider(string key, Vector2 position, AttackInfo attackInfo) {
-        HitCollider hitCollider = Spawn<HitCollider>(key, position);
-        hitCollider.SetInfo(attackInfo);
+    public HitCollider SpawnHitCollider(string key, HitColliderInfo info, HitInfo hitInfo) {
+        HitCollider hitCollider = Spawn<HitCollider>(key, Vector2.zero);
+        hitCollider.SetInfo(info, hitInfo);
         HitColliders.Add(hitCollider);
         return hitCollider;
     }

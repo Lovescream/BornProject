@@ -54,6 +54,7 @@ public class State<T> where T : Enum {
         _nextState = default;
     }
 
+    // Update 또는 FixedUpdate에서 호출.
     public void OnStay() {
         if (!_onStay.ContainsKey(Current)) _onStay[Current] = default;
         _onStay[Current]?.Invoke();

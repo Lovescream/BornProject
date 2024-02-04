@@ -155,13 +155,13 @@ public class Creature : Entity {
     }
 
     public virtual void OnHit(IHitCollider attacker) {
-        AttackInfo attackInfo = attacker.AttackInfo;
-        Hp -= attackInfo.Damage;
+        HitInfo hitInfo = attacker.HitInfo;
+        Hp -= hitInfo.Damage;
 
-        if (attackInfo.Knockback.time > 0) {
+        if (hitInfo.Knockback.time > 0) {
             State.Current = CreatureState.Hit;
-            Velocity = (this.transform.position - attacker.CurrentPosition).normalized * attackInfo.Knockback.speed;
-            State.SetStateAfterTime(CreatureState.Idle, attackInfo.Knockback.time);
+            Velocity = (this.transform.position - attacker.CurrentPosition).normalized * hitInfo.Knockback.speed;
+            State.SetStateAfterTime(CreatureState.Idle, hitInfo.Knockback.time);
         }
     }
 

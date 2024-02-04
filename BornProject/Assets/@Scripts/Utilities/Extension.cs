@@ -80,4 +80,29 @@ public static class Extension {
     //    UI_Base.BindEvent(go, action, type);
     //}
 
+    #region Matrix4x4
+
+    public static Matrix4x4 Translate(this Matrix4x4 _, Vector3 delta) => Utilities.Matrix4x4Translate(delta);
+    public static Matrix4x4 RotateX(this Matrix4x4 _, float deltaRad) => Utilities.Matrix4x4RotateX(deltaRad);
+    public static Matrix4x4 RotateY(this Matrix4x4 _, float deltaRad) => Utilities.Matrix4x4RotateY(deltaRad);
+    public static Matrix4x4 RotateZ(this Matrix4x4 _, float deltaRad) => Utilities.Matrix4x4RotateZ(deltaRad);
+    public static Matrix4x4 Scale(this Matrix4x4 _, Vector3 delta) => Utilities.Matrix4x4Scale(delta);
+    public static void TRS(this Transform transform, Vector2 deltaPosition, float deltaRotation, Vector3 deltaScale) {
+        transform.position = transform.position + (Vector3)Utilities.TRS(Vector2.zero, deltaPosition, deltaRotation, deltaScale);
+    }
+    public static void RT(this Transform transform, Vector2 deltaPosition, float deltaRotationDeg) {
+        Vector3 position = transform.position;
+        position += (Vector3)(Utilities.Matrix4x4RotateZ(deltaRotationDeg * Mathf.Deg2Rad) * Utilities.Matrix4x4Translate(deltaPosition).MultiplyPoint(Vector3.zero));
+        transform.position = position;
+    }
+    public static void SRT(this Transform transform, Vector2 deltaPosition, float deltaRotationDeg, float deltaScale) {
+        Vector3 position = transform.position;
+        position += (Vector3)(Utilities.Matrix4x4Scale(Vector3.one * deltaScale) * Utilities.Matrix4x4RotateZ(deltaRotationDeg * Mathf.Deg2Rad) * Utilities.Matrix4x4Translate(deltaPosition).MultiplyPoint3x4(Vector3.zero));
+        transform.position = position;
+    }
+    public static void RotateZ(this Transform transform, Vector2 origin, float rotationDeg) {
+        Vector3 offset = transform.position - (Vector3)origin;
+        transform.position = transform.position + Utilities.Matrix4x4RotateZ(rotationDeg * Mathf.Deg2Rad).MultiplyPoint(offset);
+    }
+    #endregion
 }
