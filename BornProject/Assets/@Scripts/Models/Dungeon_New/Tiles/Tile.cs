@@ -30,6 +30,18 @@ namespace ZerolizeDungeon {
             public const int WallOrEdge = 8;
             public const int NotBorderNorEdgeNorWall = 9;
         }
+        public static readonly string[] RuleDescription = {
+            "",
+            "완전히 일치하는 타일",
+            "일치하지 않는 타일",
+            "벽의 안쪽 (까만 부분)",
+            "벽",
+            "벽의 바깥쪽 (가장자리)",
+            "빈 공간 또는 완전히 일치하는 타일",
+            "빈 공간 또는 벽의 안 쪽 (까만 부분)",
+            "벽 또는 벽의 바깥쪽 (가장자리)",
+            "벽의 안쪽도 바깥쪽도 벽도 아님",
+        };
 
         public override bool RuleMatch(int neighbour, TileBase tile) {
             Tile dTile = (tile as Tile);

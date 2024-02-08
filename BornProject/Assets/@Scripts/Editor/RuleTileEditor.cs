@@ -1,13 +1,14 @@
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.Cryptography;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
 namespace ZerolizeDungeon {
@@ -26,8 +27,19 @@ namespace ZerolizeDungeon {
         private const string s_Rotated = "iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC41ZYUyZQAAAHdJREFUOE+djssNwCAMQxmIFdgx+2S4Vj4YxWlQgcOT8nuG5u5C732Sd3lfLlmPMR4QhXgrTQaimUlA3EtD+CJlBuQ7aUAUMjEAv9gWCQNEPhHJUkYfZ1kEpcxDzioRzGIlr0Qwi0r+Q5rTgM+AAVcygHgt7+HtBZs/2QVWP8ahAAAAAElFTkSuQmCC";
         private const string s_RotatedMirror = "iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAApklEQVQoFY2SMRaAIAxDwefknVg8uIt3ckVSKdYSnjBAi/lprcaUUphZ+3WGY3u1yJcJMBdNtqAyM3BAFRgohBNmUzDEzIDCVQgGK2rL1gAxhatY3vXh+U7hIs2uOqUZ7EGfN6O1RU/wEf5VX4zgAzpTSessIhL5VDrJkrepitJtFtRHvm0YtA6MMfRSUUGcbGC+A0AdOIJx7w1w1y1WWX/FYUV1uQFvVjvOTYh+rAAAAABJRU5ErkJggg==";
         private const string s_Fixed = "iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMjHxIGmVAAAA50lEQVQ4T51Ruw6CQBCkwBYKWkIgQAs9gfgCvgb4BML/qWBM9Bdo9QPIuVOQ3JIzosVkc7Mzty9NCPE3lORaKMm1YA/LsnTXdbdhGJ6iKHoVRTEi+r4/OI6zN01Tl/XM7HneLsuyW13XU9u2ous6gYh3kiR327YPsp6ZgyDom6aZYFqiqqqJ8mdZz8xoca64BHjkZT0zY0aVcQbysp6Z4zj+Vvkp65mZttxjOSozdkEzD7KemekcxzRNHxDOHSDiQ/DIy3pmpjtuSJBThStGKMtyRKSOLnSm3DCMz3f+FUpyLZTkOgjtDSWORSDbpbmNAAAAAElFTkSuQmCC";
+        private const string s_InspectorPopupBackground = "iVBORw0KGgoAAAANSUhEUgAAAPoAAAAUCAYAAACkoiDPAAAAAXNSR0IArs4c6QAAAMNJREFUeJzt3LERAVEQgOF9RgMqoAGJQgRKUIMy1KAEgUIk1wAVKIGAMwLOBczN3X5feJts8s+bS7bEw/awvwYwKJvlqkRElIh75JP5tNuNgJ+7VOfYLFeliByG7VKdY9T1EsD/CR0SEDokIHRIQOiQwLjrBYB21rNF43x3On6cedGhJ5pCbppFCB165V3Q3yKPEDr0zmvYbSKP8I8OvdQ28JoXHRIQOiQgdEhA6JCA0CEBhydgwJ6HJ+oPTknB8NSnpG6z5i8nfo7P8QAAAABJRU5ErkJggg==";
+        private const string s_InspectorPopupBackground_Focused = "iVBORw0KGgoAAAANSUhEUgAAAPoAAAAUCAYAAACkoiDPAAAAAXNSR0IArs4c6QAAAMJJREFUeJzt3KENwlAQgOF7BEPCEOhKNkHhGYFBGAGPYhMkmiFIkCCgBAGlAtK0932yZ878eam5Eg+7zfEawKAs11WJiCgR98jPi0u3GwE/N91PYrmuShE5DNt0P4lR10sA/yd0SEDokIDQIQGhQwLjrhcA2lnN5o3z7enwceZFh55oCrlpFiF06JV3QX+LPELo0DuvYbeJPMI/OvRS28BrXnRIQOiQgNAhAaFDAkKHBByegAF7Hp6oPzglBcNTn5K6AWgKL0hKD4OQAAAAAElFTkSuQmCC";
+        private const string s_InspectorFieldBackground = "iVBORw0KGgoAAAANSUhEUgAAAPoAAAAUCAYAAACkoiDPAAAAAXNSR0IArs4c6QAAAJRJREFUeJzt3DERwlAQRdH9OEABCrCSIloiI1oosBIFURAJUEBQECYz/51TbrXNbV+rr/n5eBXQlWkYW1VVq/pEfr3fzv0IONy2rDUNY2sih75ty1qXs58A/k/oEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEMDwBHTsNzyxH0xJQX/2Kak3zs8cD+bHR18AAAAASUVORK5CYII=";
+        private const string s_InspectorFieldBackground_Focused = "iVBORw0KGgoAAAANSUhEUgAAAPoAAAAUCAYAAACkoiDPAAAAAXNSR0IArs4c6QAAAJNJREFUeJzt3LENwlAQRMH7ZJZcibshch8uxH0QuRsqQSKEAOwKQJb+zoQXXfLSbfV1W++vAroyL1OrqmpVn8gf1+e5HwE/N25DzcvUmsihb+M21OXsJ4D/EzoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEEDoEMDwBHTuGJ/aDKSnozz4l9QaC8xwwPJZJHgAAAABJRU5ErkJggg==";
 
         private static readonly string _undoName = L10n.Tr("Change RuleTile");
+
+        private static readonly Color InspectorEdgeColor = (Color)new Color32(140, 178, 174, 255);
+        private static readonly Color InspectorBoxColor = (Color)new Color32(231, 249, 231, 255);
+        private static readonly Color InspectorInnerBoxColor = (Color)new Color32(182, 232, 214, 255);
+        private static readonly Color InspectorTextColor = (Color)new Color32(132, 81, 57, 255);
+        private static readonly Color InspectorHoverTextColor = (Color)new Color32(213, 191, 249, 255);
+        private static readonly Color InspectorFocusedTextColor = (Color)new Color32(169, 142, 214, 255);
 
         #endregion
 
@@ -43,14 +55,14 @@ namespace ZerolizeDungeon {
                 EditorGUIUtility.TrTextContent(
                     "Sprite 또는 Sprite Texture 에셋을 드래그하여 Rule Tile을 생성.");
 
-            public static readonly GUIContent extendNeighbor = EditorGUIUtility.TrTextContent("Extend Neighbour"
+            public static readonly GUIContent extendNeighbor = EditorGUIUtility.TrTextContent("확장"
                 , "활성화 시, 이웃 타일의 범위를 3x3 이상으로 늘릴 수 있음.");
 
             public static readonly GUIContent numberOfTilingRules = EditorGUIUtility.TrTextContent(
                 "Number of Tiling Rules"
                 , "규칙 수를 조정하려면 이 값을 변경.");
 
-            public static readonly GUIContent tilingRules = EditorGUIUtility.TrTextContent("Tiling Rules");
+            public static readonly GUIContent tilingRules = EditorGUIUtility.TrTextContent("규칙 목록");
             public static readonly GUIContent tilingRulesGameObject = EditorGUIUtility.TrTextContent("GameObject"
                 , "이 Rule의 Tile의 GameObject.");
             public static readonly GUIContent tilingRulesCollider = EditorGUIUtility.TrTextContent("Collider"
@@ -72,21 +84,12 @@ namespace ZerolizeDungeon {
             public static readonly GUIContent tilingRulesAnimationSize = EditorGUIUtility.TrTextContent("Size"
                 , "애니메이션에 포함된 스프라이트 수.");
 
-            public static readonly GUIStyle extendNeighborsLightStyle = new() {
+            public static readonly GUIStyle extendNeighborsStyle = new() {
                 alignment = TextAnchor.MiddleLeft,
                 fontStyle = FontStyle.Bold,
                 fontSize = 10,
                 normal = new GUIStyleState() {
-                    textColor = Color.black
-                }
-            };
-
-            public static readonly GUIStyle extendNeighborsDarkStyle = new() {
-                alignment = TextAnchor.MiddleLeft,
-                fontStyle = FontStyle.Bold,
-                fontSize = 10,
-                normal = new GUIStyleState() {
-                    textColor = Color.white
+                    textColor = InspectorTextColor
                 }
             };
         }
@@ -94,6 +97,7 @@ namespace ZerolizeDungeon {
         #endregion
 
         #region Static
+
         public static List<List<Texture2D>> Icons {
             get {
                 if (_icons == null) Initialize();
@@ -110,6 +114,8 @@ namespace ZerolizeDungeon {
 
         public RuleTile Tile => target as RuleTile;
 
+        public FieldInfo[] RuleTypes { get; protected set; }
+
         private bool DragAndDropActive => _dragAndDropSprites != null && _dragAndDropSprites.Count > 0;
 
         #endregion
@@ -118,7 +124,7 @@ namespace ZerolizeDungeon {
 
         // Constants.
         public const float DefaultElementHeight = 48f;  // Default height for a Rule Element.
-        public const float PaddingBetweenRules = 8f;    // Padding between Rule Elements.
+        public const float PaddingBetweenRules = 24f;    // Padding between Rule Elements.
         public const float SingleLineHeight = 18f;      // Single line Height.
         public const float LabelWidth = 80f;            // Width for labels.
 
@@ -173,10 +179,14 @@ namespace ZerolizeDungeon {
         public virtual void OnEnable() {
             _reorderableList = new(Tile != null ? Tile.m_TilingRules : null, typeof(RuleTile.TilingRule), true, true, true, true) {
                 drawHeaderCallback = OnDrawHeader,
+                drawElementBackgroundCallback = OnDrawElementBackground,
                 drawElementCallback = OnDrawElement,
+                drawNoneElementCallback = OnDrawNoneElement,
                 elementHeightCallback = GetElementHeight,
                 onChangedCallback = ListUpdated,
-                onAddDropdownCallback = OnAddDropdownElement
+                onAddDropdownCallback = OnAddDropdownElement,
+                drawFooterCallback = OnDrawFooter,
+                showDefaultBackground = false,
             };
 
             // Required to adjust element height changes.
@@ -189,6 +199,8 @@ namespace ZerolizeDungeon {
                     _clearCacheMethod = rolType.GetMethod("ClearCache", BindingFlags.Instance | BindingFlags.NonPublic);
             }
             _tilingRules = serializedObject.FindProperty("m_TilingRules");
+
+            RuleTypes = Tile.m_NeighborType.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy);
         }
 
         public virtual void OnDisable() {
@@ -201,38 +213,37 @@ namespace ZerolizeDungeon {
 
             EditorGUI.BeginChangeCheck();
 
-            Tile.m_DefaultSprite = EditorGUILayout.ObjectField(Styles.defaultSprite, Tile.m_DefaultSprite, typeof(Sprite), false) as Sprite;
-            Tile.m_DefaultGameObject = EditorGUILayout.ObjectField(Styles.defaultGameObject, Tile.m_DefaultGameObject, typeof(GameObject), false) as GameObject;
-            Tile.m_DefaultColliderType = (UnityEngine.Tilemaps.Tile.ColliderType)EditorGUILayout.EnumPopup(Styles.defaultCollider, Tile.m_DefaultColliderType);
+            Rect background = EditorGUILayout.BeginVertical();
+            background = new(0, 0, EditorGUIUtility.currentViewWidth, background.height);
+            EditorGUI.DrawRect(background, InspectorBoxColor);
 
+            DrawDefaultProperties();
+            EditorGUILayout.Space();
             DrawCustomFields(false);
-
+            EditorGUILayout.Space();
+            DrawTypeInfo();
             EditorGUILayout.Space();
             EditorGUI.BeginChangeCheck();
-            int count = EditorGUILayout.DelayedIntField(Styles.numberOfTilingRules, Tile.m_TilingRules?.Count ?? 0);
-            if (count < 0) count = 0;
-            if (EditorGUI.EndChangeCheck())
-                ResizeRuleTileList(count);
-
-            if (count == 0) {
-                Rect rect = EditorGUILayout.GetControlRect(false, EditorGUIUtility.singleLineHeight * 5);
-                HandleDragAndDrop(rect);
-                EditorGUI.DrawRect(rect, DragAndDropActive && rect.Contains(Event.current.mousePosition) ? Color.white : Color.black);
-                Rect innerRect = new(rect.x + 1, rect.y + 1, rect.width - 2, rect.height - 2);
-                EditorGUI.DrawRect(innerRect, EditorGUIUtility.isProSkin ? (Color)new Color32(56, 56, 56, 255) : (Color)new Color32(194, 194, 194, 255));
-                DisplayClipboardText(Styles.emptyRuleTileInfo, rect);
-                GUILayout.Space(rect.height);
-                EditorGUILayout.Space();
-            }
-
-            _reorderableList?.DoLayoutList();
+            DrawRuleList();
 
             if (EditorGUI.EndChangeCheck()) SaveTile();
 
             GUILayout.Space(DefaultElementHeight);
+
+            EditorGUILayout.EndVertical();
+
         }
 
         #endregion
+
+        private string GetRuleTypeDescription(int index) {
+            foreach (FieldInfo ruleType in RuleTypes) {
+                if ((int)ruleType.GetValue(null) == index) {
+                    return $"{index}. {ruleType.Name}: {ZerolizeDungeon.Tile.RuleDescription[index]}";
+                }
+            }
+            return "";
+        }
 
         #region Callbacks
 
@@ -256,8 +267,120 @@ namespace ZerolizeDungeon {
             return Mathf.Max(inspectorHeight, matrixHeight);
         }
 
+        protected virtual void OnDrawElementBackground(Rect rect, int index, bool isActive, bool isFocused) {
+            //if (Event.current.type == EventType.Repaint) {
+            //    Rect headerRect = rect;
+            //    headerRect.xMin += 10;
+            //    headerRect.xMax -= 10;
+            //    headerRect.height += 2f;
+            //    headerRect.y += 1f;
+
+            //    GUIStyle st = new();
+            //    Texture2D t = new(1, 1);
+            //    t.SetPixel(0, 0, Color.black);
+            //    t.Apply();
+            //    st.normal.background = t;
+            //    st.Draw(rect, isHover: false, isActive: false, on: false, hasKeyboardFocus: false);
+            //}
+        }
+        protected virtual void OnDrawNoneElement(Rect rect) {
+            EditorGUI.LabelField(rect, EditorGUIUtility.TrTextContent("List is Empty"));
+        }
+
+        protected virtual void OnDrawFooter(Rect rect) {
+
+            //Rect lMotionRect = new Rect(rect.x, rect.y + 1, rect.width - 4 - 28 - 28, 16);
+            //mAttributeItemTypeIndex = EditorGUI.Popup(lMotionRect, mAttributeItemTypeIndex, EnumAttributeTypes.Names);
+
+            //Rect lAddRect = new Rect(rect.x + rect.width - 28 - 28 - 1, rect.y + 1, 28, 15);
+            //if (GUI.Button(lAddRect, new GUIContent("+", "Add Item."), EditorStyles.miniButtonLeft)) { OnAttributeItemListItemAdd(mAttributeItemList); }
+
+            //Rect lDeleteRect = new Rect(lAddRect.x + lAddRect.width, lAddRect.y, 28, 15);
+            //if (GUI.Button(lDeleteRect, new GUIContent("-", "Delete Item."), EditorStyles.miniButtonRight)) { OnAttributeItemListItemRemove(mAttributeItemList); };
+            
+            //if (Event.current.type == EventType.Repaint) {
+            //    GUIStyle st = new();
+            //    Texture2D t = new(1, 1);
+            //    t.SetPixel(0, 0, Color.black);
+            //    t.Apply();
+            //    st.normal.background = t;
+            //    st.Draw(rect, isHover: false, isActive: false, on: false, hasKeyboardFocus: false);
+            //}
+
+            float num = rect.xMax - 10f;
+            float num2 = num - 8f;
+            if (_reorderableList.displayAdd) num2 -= 25f;
+            if (_reorderableList.displayRemove) num2 -= 25f;
+            rect = new(num2, rect.y, num - num2, rect.height);
+            Rect rect2 = new Rect(num2 + 4f, rect.y, 25, 16);
+            Rect position = new Rect(num - 29, rect.y, 25, 16);
+
+            //if (Event.current.type == EventType.Repaint) {
+            //    GUIStyle st = new();
+            //    Texture2D t = new(1, 1);
+            //    t.SetPixel(0, 0, Color.white);
+            //    t.Apply();
+            //    st.normal.background = t;
+            //    st.Draw(rect, isHover: false, isActive: false, on: false, hasKeyboardFocus: false);
+            //}
+
+            if (GUI.Button(rect2, new GUIContent("+", "새 규칙 추가"), EditorStyles.miniButtonLeft)) {
+                OnAddDropdownElement(rect2, _reorderableList);
+            }
+            
+            using (new EditorGUI.DisabledScope(_reorderableList.index < 0 || _reorderableList.index >= _reorderableList.count)) {
+                if (GUI.Button(position, new GUIContent("-", "규칙 삭제"), EditorStyles.miniButtonRight)) {
+                    //_reorderableList.DoRemoveButton(_reorderableList);
+                    int[] array;
+                    if (_reorderableList.index > 0)
+                        array = _reorderableList.selectedIndices.Reverse().ToArray();
+                    else
+                        array = new int[1] { _reorderableList.index };
+                    int _num = -1;
+                    int[] array2 = array;
+                    foreach (int _num2 in array2) {
+                        if (_num2 >= _reorderableList.count) continue;
+                        if (_reorderableList.serializedProperty != null) {
+                            _reorderableList.serializedProperty.DeleteArrayElementAtIndex(_num2);
+                            if (_num2 < _reorderableList.count - 1) {
+                                SerializedProperty serializedProperty = _reorderableList.serializedProperty.GetArrayElementAtIndex(_num2);
+                                for (int j = _num2 + 1; j < _reorderableList.count; j++) {
+                                    SerializedProperty arrayElementAtIndex = _reorderableList.serializedProperty.GetArrayElementAtIndex(j);
+                                    serializedProperty.isExpanded = arrayElementAtIndex.isExpanded;
+                                    serializedProperty = arrayElementAtIndex;
+                                }
+                            }
+                        }
+                        else {
+                            _reorderableList.list.RemoveAt(_reorderableList.index);
+                        }
+                        _num = _num2;
+                    }
+                    _reorderableList.index = Mathf.Clamp(_num - 1, 0, _reorderableList.count - 1);
+                    Undo.SetCurrentGroupName("Remove Element From Array");
+
+                    _reorderableList.onChangedCallback?.Invoke(_reorderableList);
+                    GUI.changed = true;
+                }
+            }
+        }
+
         // Draws the Rule element for the Rule list.
         protected virtual void OnDrawElement(Rect rect, int index, bool isActive, bool isFocused) {
+            if (Event.current.type == EventType.Repaint) {
+                Rect headerRect = rect;
+                headerRect.xMin -= 6f;
+                headerRect.xMax += 6f;
+                headerRect.height += 2f;
+                headerRect.y += 1f;
+
+                GUIStyle st = new();
+                Texture2D t = new(1, 1);
+                t.SetPixel(0, 0, InspectorInnerBoxColor);
+                t.Apply();
+                st.normal.background = t;
+                st.Draw(rect, isHover: false, isActive: false, on: false, hasKeyboardFocus: false);
+            }
             RuleTile.TilingRule rule = Tile.m_TilingRules[index];
             BoundsInt bounds = GetRuleGUIBounds(rule.GetBounds(), rule);
 
@@ -417,15 +540,44 @@ namespace ZerolizeDungeon {
             }
             return overrideTiles;
         }
-        
-        #region Draw
 
+        #region Draw
+        
         // Draws the header for the Rule list.
         private void OnDrawHeader(Rect rect) {
-            GUI.Label(rect, Styles.tilingRules);
+            Color labelNormalColor = EditorStyles.label.normal.textColor;
+            Color labelHoverColor = EditorStyles.label.hover.textColor;
+            Color labelFocusedColor = EditorStyles.label.focused.textColor;
+            FontStyle labelFontStyle = EditorStyles.label.fontStyle;
+
+            GUIStyle headerStyle = new() { 
+                fontStyle = FontStyle.Bold,
+                alignment = TextAnchor.MiddleCenter,
+            };
+            headerStyle.normal.textColor = InspectorTextColor;
+
+            EditorStyles.label.normal.textColor = InspectorTextColor;
+            EditorStyles.label.hover.textColor = InspectorHoverTextColor;
+            EditorStyles.label.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.label.fontStyle = FontStyle.Bold;
+
+            if (Event.current.type == EventType.Repaint) {
+                Rect headerRect = rect;
+                headerRect.height += 2f;
+                headerRect.y += 1f;
+
+                GUIStyle st = new();
+                Texture2D t = new(1, 1);
+                t.SetPixel(0, 0, InspectorInnerBoxColor);
+                t.Apply();
+                st.normal.background = t;
+                st.Draw(headerRect, isHover: false, isActive: false, on: false, hasKeyboardFocus: false);
+            }
+
+            GUI.Label(rect, Styles.tilingRules, headerStyle);
 
             Rect toggleRect = new(rect.xMax - rect.height, rect.y, rect.height, rect.height);
-            GUIStyle style = EditorGUIUtility.isProSkin ? Styles.extendNeighborsDarkStyle : Styles.extendNeighborsLightStyle;
+            GUIStyle style = Styles.extendNeighborsStyle;
             Vector2 extendSize = style.CalcSize(Styles.extendNeighbor);
             float toggleWidth = toggleRect.width + extendSize.x + 5f;
             Rect toggleLabelRect = new(rect.x + rect.width - toggleWidth, rect.y, toggleWidth, rect.height);
@@ -436,10 +588,64 @@ namespace ZerolizeDungeon {
             if (EditorGUI.EndChangeCheck())
                 if (_clearCacheMethod != null)
                     _clearCacheMethod.Invoke(_reorderableList, null);
+
+            EditorStyles.label.normal.textColor = labelNormalColor;
+            EditorStyles.label.hover.textColor = labelHoverColor;
+            EditorStyles.label.focused.textColor = labelFocusedColor;
+            EditorStyles.label.fontStyle = labelFontStyle;
         }
 
         // Draw editor fields for custom properties for the RuleTile.
         private void DrawCustomFields(bool isOverrideInstance) {
+            float padding = 2;
+
+            Rect rect = EditorGUILayout.BeginVertical();
+            Rect contentRect = new(rect.x + padding, rect.y + padding, rect.width - 2 * padding, rect.height - 2 * padding);
+            EditorGUI.DrawRect(rect, InspectorEdgeColor);
+            EditorGUI.DrawRect(contentRect, InspectorBoxColor);
+            EditorGUILayout.Space(padding);
+            Color labelNormalColor = EditorStyles.label.normal.textColor;
+            Color labelHoverColor = EditorStyles.label.hover.textColor;
+            Color labelFocusedColor = EditorStyles.label.focused.textColor;
+            FontStyle labelFontStyle = EditorStyles.label.fontStyle;
+            Texture2D fieldNormalBackground = EditorStyles.objectField.normal.background;
+            Texture2D fieldFocusedBackground = EditorStyles.objectField.focused.background;
+            Color fieldNormalColor = EditorStyles.objectField.normal.textColor;
+            Color fieldFocusedColor = EditorStyles.objectField.focused.textColor;
+            FontStyle fieldFontStyle = EditorStyles.objectField.fontStyle;
+            Texture2D popupNormalBackground = EditorStyles.popup.normal.background;
+            Texture2D popupFocusedBackground = EditorStyles.popup.focused.background;
+            Color popupNormalColor = EditorStyles.popup.normal.textColor;
+            Color popupFocusedColor = EditorStyles.popup.focused.textColor;
+            FontStyle popupFontStyle = EditorStyles.popup.fontStyle;
+
+            GUIStyle titleStyle = new() {
+                fontStyle = FontStyle.Bold,
+                fontSize = 20,
+                alignment = TextAnchor.MiddleCenter,
+            };
+            titleStyle.normal.textColor = InspectorTextColor;
+            Texture2D popupBackground = Base64ToTexture(s_InspectorPopupBackground);
+            Texture2D popupBackground_Focused = Base64ToTexture(s_InspectorPopupBackground_Focused);
+
+            EditorStyles.label.normal.textColor = InspectorTextColor;
+            EditorStyles.label.hover.textColor = InspectorHoverTextColor;
+            EditorStyles.label.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.label.fontStyle = FontStyle.Bold;
+            EditorStyles.objectField.normal.background = popupBackground;
+            EditorStyles.objectField.focused.background = popupBackground_Focused;
+            EditorStyles.objectField.normal.textColor = InspectorTextColor;
+            EditorStyles.objectField.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.objectField.fontStyle = FontStyle.Bold;
+            EditorStyles.popup.normal.background = popupBackground;
+            EditorStyles.popup.focused.background = popupBackground_Focused;
+            EditorStyles.popup.normal.textColor = InspectorTextColor;
+            EditorStyles.popup.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.popup.fontStyle = FontStyle.Bold;
+
+            GUILayout.Space(8);
+            GUILayout.Label("추가 정보", titleStyle);
+
             FieldInfo[] customFields = Tile.GetCustomFields(isOverrideInstance);
 
             this.serializedObject.Update();
@@ -453,43 +659,262 @@ namespace ZerolizeDungeon {
                 DestroyPreview();
                 CreatePreview();
             }
+            GUILayout.Space(8);
 
+
+            EditorStyles.label.normal.textColor = labelNormalColor;
+            EditorStyles.label.hover.textColor = labelHoverColor;
+            EditorStyles.label.focused.textColor = labelFocusedColor;
+            EditorStyles.label.fontStyle = labelFontStyle;
+            EditorStyles.objectField.normal.background = fieldNormalBackground;
+            EditorStyles.objectField.focused.background = fieldFocusedBackground;
+            EditorStyles.objectField.normal.textColor = fieldNormalColor;
+            EditorStyles.objectField.focused.textColor = fieldFocusedColor;
+            EditorStyles.objectField.fontStyle = fieldFontStyle;
+            EditorStyles.popup.normal.background = popupNormalBackground;
+            EditorStyles.popup.focused.background = popupFocusedBackground;
+            EditorStyles.popup.normal.textColor = popupNormalColor;
+            EditorStyles.popup.focused.textColor = popupFocusedColor;
+            EditorStyles.popup.fontStyle = popupFontStyle;
+            EditorGUILayout.Space(padding);
+            EditorGUILayout.EndVertical();
+        }
+
+        private void DrawDefaultProperties() {
+            float padding = 2;
+
+            Rect rect = EditorGUILayout.BeginVertical();
+            Rect contentRect = new(rect.x + padding, rect.y + padding, rect.width - 2 * padding, rect.height - 2 * padding);
+            EditorGUI.DrawRect(rect, InspectorEdgeColor);
+            EditorGUI.DrawRect(contentRect, InspectorBoxColor);
+            EditorGUILayout.Space(padding);
+            Color labelNormalColor = EditorStyles.label.normal.textColor;
+            Color labelHoverColor = EditorStyles.label.hover.textColor;
+            Color labelFocusedColor = EditorStyles.label.focused.textColor;
+            FontStyle labelFontStyle = EditorStyles.label.fontStyle;
+            Texture2D fieldNormalBackground = EditorStyles.objectField.normal.background;
+            Texture2D fieldFocusedBackground = EditorStyles.objectField.focused.background;
+            Color fieldNormalColor = EditorStyles.objectField.normal.textColor;
+            Color fieldFocusedColor = EditorStyles.objectField.focused.textColor;
+            FontStyle fieldFontStyle = EditorStyles.objectField.fontStyle;
+            Texture2D popupNormalBackground = EditorStyles.popup.normal.background;
+            Texture2D popupFocusedBackground = EditorStyles.popup.focused.background;
+            Color popupNormalColor = EditorStyles.popup.normal.textColor;
+            Color popupFocusedColor = EditorStyles.popup.focused.textColor;
+            FontStyle popupFontStyle = EditorStyles.popup.fontStyle;
+
+            GUIStyle titleStyle = new() {
+                fontStyle = FontStyle.Bold,
+                fontSize = 20,
+                alignment = TextAnchor.MiddleCenter,
+            };
+            titleStyle.normal.textColor = InspectorTextColor;
+            Texture2D popupBackground = Base64ToTexture(s_InspectorPopupBackground);
+            Texture2D popupBackground_Focused = Base64ToTexture(s_InspectorPopupBackground_Focused);
+
+            EditorStyles.label.normal.textColor = InspectorTextColor;
+            EditorStyles.label.hover.textColor = InspectorHoverTextColor;
+            EditorStyles.label.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.label.fontStyle = FontStyle.Bold;
+            EditorStyles.objectField.normal.background = popupBackground;
+            EditorStyles.objectField.focused.background = popupBackground_Focused;
+            EditorStyles.objectField.normal.textColor = InspectorTextColor;
+            EditorStyles.objectField.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.objectField.fontStyle = FontStyle.Bold;
+            EditorStyles.popup.normal.background = popupBackground;
+            EditorStyles.popup.focused.background = popupBackground_Focused;
+            EditorStyles.popup.normal.textColor = InspectorTextColor;
+            EditorStyles.popup.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.popup.fontStyle = FontStyle.Bold;
+
+            GUILayout.Space(8);
+            GUILayout.Label("기본 정보", titleStyle);
+            Tile.m_DefaultSprite = EditorGUILayout.ObjectField(Styles.defaultSprite, Tile.m_DefaultSprite, typeof(Sprite), false) as Sprite;
+            Tile.m_DefaultGameObject = EditorGUILayout.ObjectField(Styles.defaultGameObject, Tile.m_DefaultGameObject, typeof(GameObject), false) as GameObject;
+            Tile.m_DefaultColliderType = (UnityEngine.Tilemaps.Tile.ColliderType)EditorGUILayout.EnumPopup(Styles.defaultCollider, Tile.m_DefaultColliderType);
+            GUILayout.Space(8);
+
+            EditorStyles.label.normal.textColor = labelNormalColor;
+            EditorStyles.label.hover.textColor = labelHoverColor;
+            EditorStyles.label.focused.textColor = labelFocusedColor;
+            EditorStyles.label.fontStyle = labelFontStyle;
+            EditorStyles.objectField.normal.background = fieldNormalBackground;
+            EditorStyles.objectField.focused.background = fieldFocusedBackground;
+            EditorStyles.objectField.normal.textColor = fieldNormalColor;
+            EditorStyles.objectField.focused.textColor = fieldFocusedColor;
+            EditorStyles.objectField.fontStyle = fieldFontStyle;
+            EditorStyles.popup.normal.background = popupNormalBackground;
+            EditorStyles.popup.focused.background = popupFocusedBackground;
+            EditorStyles.popup.normal.textColor = popupNormalColor;
+            EditorStyles.popup.focused.textColor = popupFocusedColor;
+            EditorStyles.popup.fontStyle = popupFontStyle;
+            EditorGUILayout.Space(padding);
+            EditorGUILayout.EndVertical();
+        }
+        private void DrawRuleList() {
+            float padding = 2;
+
+            Rect rect = EditorGUILayout.BeginVertical();
+            Rect contentRect = new(rect.x + padding, rect.y + padding, rect.width - 2 * padding, rect.height - 2 * padding);
+            EditorGUI.DrawRect(rect, InspectorEdgeColor);
+            EditorGUI.DrawRect(contentRect, InspectorBoxColor);
+            EditorGUILayout.Space(padding);
+            Texture2D numberNormalBackground = EditorStyles.numberField.normal.background;
+            Texture2D numberFocusedBackground = EditorStyles.numberField.focused.background;
+            Color numberNormalColor = EditorStyles.numberField.normal.textColor;
+            Color numberFocusedColor = EditorStyles.numberField.focused.textColor;
+            Color labelNormalColor = EditorStyles.label.normal.textColor;
+            Color labelHoverColor = EditorStyles.label.hover.textColor;
+            Color labelFocusedColor = EditorStyles.label.focused.textColor;
+            FontStyle labelFontStyle = EditorStyles.label.fontStyle;
+            Texture2D fieldNormalBackground = EditorStyles.objectField.normal.background;
+            Texture2D fieldFocusedBackground = EditorStyles.objectField.focused.background;
+            Color fieldNormalColor = EditorStyles.objectField.normal.textColor;
+            Color fieldFocusedColor = EditorStyles.objectField.focused.textColor;
+            FontStyle fieldFontStyle = EditorStyles.objectField.fontStyle;
+            Texture2D popupNormalBackground = EditorStyles.popup.normal.background;
+            Texture2D popupFocusedBackground = EditorStyles.popup.focused.background;
+            Color popupNormalColor = EditorStyles.popup.normal.textColor;
+            Color popupFocusedColor = EditorStyles.popup.focused.textColor;
+            FontStyle popupFontStyle = EditorStyles.popup.fontStyle;
+
+            GUIStyle titleStyle = new() {
+                fontStyle = FontStyle.Bold,
+                fontSize = 20,
+                alignment = TextAnchor.MiddleCenter,
+            };
+            titleStyle.normal.textColor = InspectorTextColor;
+            Texture2D fieldBackground = Base64ToTexture(s_InspectorFieldBackground);
+            Texture2D fieldBackground_Focused = Base64ToTexture(s_InspectorFieldBackground_Focused);
+            Texture2D popupBackground = Base64ToTexture(s_InspectorPopupBackground);
+            Texture2D popupBackground_Focused = Base64ToTexture(s_InspectorPopupBackground_Focused);
+
+            EditorStyles.numberField.normal.background = fieldBackground;
+            EditorStyles.numberField.focused.background = fieldBackground_Focused;
+            EditorStyles.numberField.normal.textColor = InspectorTextColor;
+            EditorStyles.numberField.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.label.normal.textColor = InspectorTextColor;
+            EditorStyles.label.hover.textColor = InspectorHoverTextColor;
+            EditorStyles.label.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.label.fontStyle = FontStyle.Bold;
+            EditorStyles.objectField.normal.background = popupBackground;
+            EditorStyles.objectField.focused.background = popupBackground_Focused;
+            EditorStyles.objectField.normal.textColor = InspectorTextColor;
+            EditorStyles.objectField.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.objectField.fontStyle = FontStyle.Bold;
+            EditorStyles.popup.normal.background = popupBackground;
+            EditorStyles.popup.focused.background = popupBackground_Focused;
+            EditorStyles.popup.normal.textColor = InspectorTextColor;
+            EditorStyles.popup.focused.textColor = InspectorFocusedTextColor;
+            EditorStyles.popup.fontStyle = FontStyle.Bold;
+
+            GUILayout.Space(8);
+            GUILayout.Label("규칙", titleStyle);
+
+
+            int count = EditorGUILayout.DelayedIntField(Styles.numberOfTilingRules, Tile.m_TilingRules?.Count ?? 0);
+            if (count < 0) count = 0;
+            if (EditorGUI.EndChangeCheck())
+                ResizeRuleTileList(count);
+
+            if (count == 0) {
+                Rect ruleRect = EditorGUILayout.GetControlRect(false, EditorGUIUtility.singleLineHeight * 5);
+                HandleDragAndDrop(ruleRect);
+                EditorGUI.DrawRect(ruleRect, DragAndDropActive && ruleRect.Contains(Event.current.mousePosition) ? InspectorFocusedTextColor : InspectorEdgeColor);
+                Rect innerRect = new(ruleRect.x + 1, ruleRect.y + 1, ruleRect.width - 2, ruleRect.height - 2);
+                EditorGUI.DrawRect(innerRect, InspectorInnerBoxColor);
+                DisplayClipboardText(Styles.emptyRuleTileInfo, ruleRect);
+                GUILayout.Space(ruleRect.height);
+                EditorGUILayout.Space();
+            }
+
+            
+            _reorderableList?.DoLayoutList();
+            GUILayout.Space(8);
+
+            EditorStyles.numberField.normal.background = numberNormalBackground;
+            EditorStyles.numberField.focused.background = numberFocusedBackground;
+            EditorStyles.numberField.normal.textColor = numberNormalColor;
+            EditorStyles.numberField.focused.textColor = numberFocusedColor;
+            EditorStyles.label.normal.textColor = labelNormalColor;
+            EditorStyles.label.hover.textColor = labelHoverColor;
+            EditorStyles.label.focused.textColor = labelFocusedColor;
+            EditorStyles.label.fontStyle = labelFontStyle;
+            EditorStyles.objectField.normal.background = fieldNormalBackground;
+            EditorStyles.objectField.focused.background = fieldFocusedBackground;
+            EditorStyles.objectField.normal.textColor = fieldNormalColor;
+            EditorStyles.objectField.focused.textColor = fieldFocusedColor;
+            EditorStyles.objectField.fontStyle = fieldFontStyle;
+            EditorStyles.popup.normal.background = popupNormalBackground;
+            EditorStyles.popup.focused.background = popupFocusedBackground;
+            EditorStyles.popup.normal.textColor = popupNormalColor;
+            EditorStyles.popup.focused.textColor = popupFocusedColor;
+            EditorStyles.popup.fontStyle = popupFontStyle;
+            EditorGUILayout.Space(padding);
+            EditorGUILayout.EndVertical();
+        }
+        private void DrawTypeInfo() {
+            int typeCount = RuleTypes.Count();
+
+            float lineHeight = EditorGUIUtility.singleLineHeight;
+            float padding = 2f;
+            float rectHeight = (lineHeight + padding) * typeCount + padding * 3;
+
+            GUIStyle ruleTypeStyle = new() { fontStyle = FontStyle.Bold };
+            ruleTypeStyle.normal.textColor = InspectorTextColor;
+
+            Rect rect = EditorGUILayout.GetControlRect(false, rectHeight);
+            rect.x -= 3;
+            rect.width += 6;
+            Rect contentRect = new(rect.x + padding, rect.y + padding, rect.width - 2 * padding, rect.height - 2 * padding);
+            EditorGUI.DrawRect(rect, InspectorEdgeColor);
+            EditorGUI.DrawRect(contentRect, InspectorBoxColor);
+            Rect textRect = new(contentRect.x + padding, contentRect.y + padding, contentRect.width - 2 * padding, lineHeight);
+            for (int i = 0; i < typeCount; i++) {
+                //EditorGUI.DrawRect(textRect, textColor);
+                GUIContent temp = EditorGUIUtility.TrTextContent(GetRuleTypeDescription(i + 1), Icons[i + 1][0]);
+                GUI.Label(textRect, temp, ruleTypeStyle);
+                textRect = new(textRect.x, textRect.y + padding + lineHeight, textRect.width, textRect.height);
+            }
         }
 
         // Draws an Inspector for the Rule.
         private void RuleInspectorOnGUI(Rect rect, RuleTile.TilingRuleOutput tilingRule) {
             float y = rect.yMin;
-            GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesGameObject);
+            GUIStyle style = new();
+            style.normal.textColor = InspectorTextColor;
+
+            GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesGameObject, style);
             tilingRule.m_GameObject = (GameObject)EditorGUI.ObjectField(new Rect(rect.xMin + LabelWidth, y, rect.width - LabelWidth, SingleLineHeight), "", tilingRule.m_GameObject, typeof(GameObject), false);
             y += SingleLineHeight;
-            GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesCollider);
+            GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesCollider, style);
             tilingRule.m_ColliderType = (UnityEngine.Tilemaps.Tile.ColliderType)EditorGUI.EnumPopup(new Rect(rect.xMin + LabelWidth, y, rect.width - LabelWidth, SingleLineHeight), tilingRule.m_ColliderType);
             y += SingleLineHeight;
-            GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesOutput);
+            GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesOutput, style);
             tilingRule.m_Output = (RuleTile.TilingRuleOutput.OutputSprite)EditorGUI.EnumPopup(new Rect(rect.xMin + LabelWidth, y, rect.width - LabelWidth, SingleLineHeight), tilingRule.m_Output);
             y += SingleLineHeight;
 
             if (tilingRule.m_Output == RuleTile.TilingRuleOutput.OutputSprite.Animation) {
-                GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesMinSpeed);
+                GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesMinSpeed, style);
                 tilingRule.m_MinAnimationSpeed = EditorGUI.FloatField(new Rect(rect.xMin + LabelWidth, y, rect.width - LabelWidth, SingleLineHeight), tilingRule.m_MinAnimationSpeed);
                 y += SingleLineHeight;
-                GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesMaxSpeed);
+                GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesMaxSpeed, style);
                 tilingRule.m_MaxAnimationSpeed = EditorGUI.FloatField(new Rect(rect.xMin + LabelWidth, y, rect.width - LabelWidth, SingleLineHeight), tilingRule.m_MaxAnimationSpeed);
                 y += SingleLineHeight;
             }
             if (tilingRule.m_Output == RuleTile.TilingRuleOutput.OutputSprite.Random) {
-                GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesNoise);
+                GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesNoise, style);
                 tilingRule.m_PerlinScale = EditorGUI.Slider(new Rect(rect.xMin + LabelWidth, y, rect.width - LabelWidth, SingleLineHeight), tilingRule.m_PerlinScale, 0.001f, 0.999f);
                 y += SingleLineHeight;
 
-                GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesShuffle);
+                GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight), Styles.tilingRulesShuffle, style);
                 tilingRule.m_RandomTransform = (RuleTile.TilingRuleOutput.Transform)EditorGUI.EnumPopup(new Rect(rect.xMin + LabelWidth, y, rect.width - LabelWidth, SingleLineHeight), tilingRule.m_RandomTransform);
                 y += SingleLineHeight;
             }
 
             if (tilingRule.m_Output != RuleTile.TilingRuleOutput.OutputSprite.Single) {
                 GUI.Label(new Rect(rect.xMin, y, LabelWidth, SingleLineHeight)
-                    , tilingRule.m_Output == RuleTile.TilingRuleOutput.OutputSprite.Animation ? Styles.tilingRulesAnimationSize : Styles.tilingRulesRandomSize);
+                    , tilingRule.m_Output == RuleTile.TilingRuleOutput.OutputSprite.Animation ? Styles.tilingRulesAnimationSize : Styles.tilingRulesRandomSize, style);
                 EditorGUI.BeginChangeCheck();
                 int newLength = EditorGUI.DelayedIntField(new Rect(rect.xMin + LabelWidth, y, rect.width - LabelWidth, SingleLineHeight), tilingRule.m_Sprites.Length);
                 if (EditorGUI.EndChangeCheck())
@@ -505,7 +930,7 @@ namespace ZerolizeDungeon {
 
         private void DisplayClipboardText(GUIContent clipboardText, Rect position) {
             Color old = GUI.color;
-            GUI.color = Color.gray;
+            GUI.color = InspectorTextColor;
             Vector2 infoSize = GUI.skin.label.CalcSize(clipboardText);
             Rect rect = new(position.center.x - infoSize.x * 0.5f,
                 position.center.y - infoSize.y * 0.5f,
@@ -517,7 +942,7 @@ namespace ZerolizeDungeon {
 
         // Draws a Rule Matrix for the given Rule for a RuleTile.
         protected virtual void RuleMatrixOnGUI(RuleTile tile, Rect rect, BoundsInt bounds, RuleTile.TilingRule tilingRule) {
-            Handles.color = EditorGUIUtility.isProSkin ? new Color(1f, 1f, 1f, 0.2f) : new Color(0, 0, 0, 0.2f);
+            Handles.color = InspectorTextColor;
             float w = rect.width / bounds.size.x;
             float h = rect.height / bounds.size.y;
 
