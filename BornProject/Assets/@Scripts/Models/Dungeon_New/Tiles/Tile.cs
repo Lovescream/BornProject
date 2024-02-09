@@ -51,19 +51,19 @@ namespace ZerolizeDungeon {
                     return dTile.type == TileType.Border;
                 case Neighbour.Wall:
                     if (dTile == null) return true;
-                    return dTile.type != TileType.Border && dTile.type != TileType.Edge && dTile.type != TileType.Wall;
+                    return dTile.type == TileType.Wall;
                 case Neighbour.Edge:
                     if (dTile == null) return false;
-                    return dTile.type == TileType.Wall;
+                    return dTile.type == TileType.Edge;
                 case Neighbour.EmptyOrThis:
-                    if (dTile == null) return false;
-                    return dTile.type == TileType.Edge || dTile.type == TileType.Wall;
-                case Neighbour.EmptyOrBorder:
-                    if (dTile == null) return false;
+                    if (dTile == null) return true;
                     return dTile.type == TileType.Empty || tile == this;
+                case Neighbour.EmptyOrBorder:
+                    if (dTile == null) return true;
+                    return dTile.type == TileType.Border || dTile.type == TileType.Empty;
                 case Neighbour.WallOrEdge:
                     if (dTile == null) return false;
-                    return dTile.type == TileType.Border || dTile.type == TileType.Empty;
+                    return dTile.type == TileType.Wall || dTile.type == TileType.Edge;
                 case Neighbour.NotBorderNorEdgeNorWall:
                     if (dTile == null) return false;
                     return dTile.type != TileType.Border && dTile.type != TileType.Edge && dTile.type != TileType.Wall;
