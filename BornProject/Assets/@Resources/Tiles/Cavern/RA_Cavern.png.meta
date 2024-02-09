@@ -186,28 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_00
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 496
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9107a97c04f3a2459b1f0bf46002e3c
-      internalID: -1646658576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cavern_Floor_00_05
+      name: Cavern_Floor_00_04
       rect:
         serializedVersion: 2
         x: 128
@@ -228,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_06
+      name: Cavern_Floor_00_05
       rect:
         serializedVersion: 2
         x: 144
@@ -249,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_07
+      name: Cavern_Floor_00_06
       rect:
         serializedVersion: 2
         x: 160
@@ -291,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_9
+      name: Cavern_Floor_01_04
       rect:
         serializedVersion: 2
         x: 208
@@ -312,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_10
+      name: Cavern_Floor_01_05
       rect:
         serializedVersion: 2
         x: 224
@@ -333,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_11
+      name: Cavern_Floor_01_06
       rect:
         serializedVersion: 2
         x: 240
@@ -816,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_01
+      name: Cavern_Floor_00_00
       rect:
         serializedVersion: 2
         x: 96
@@ -837,7 +816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_02
+      name: Cavern_Floor_00_01
       rect:
         serializedVersion: 2
         x: 112
@@ -858,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_08
+      name: Cavern_Floor_00_07
       rect:
         serializedVersion: 2
         x: 128
@@ -879,7 +858,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_09
+      name: Cavern_Floor_00_08
       rect:
         serializedVersion: 2
         x: 144
@@ -900,7 +879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_10
+      name: Cavern_Floor_00_09
       rect:
         serializedVersion: 2
         x: 160
@@ -921,7 +900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_39
+      name: Cavern_Floor_01_00
       rect:
         serializedVersion: 2
         x: 176
@@ -942,7 +921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_40
+      name: Cavern_Floor_01_01
       rect:
         serializedVersion: 2
         x: 192
@@ -963,7 +942,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_41
+      name: Cavern_Floor_01_07
       rect:
         serializedVersion: 2
         x: 208
@@ -984,7 +963,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_42
+      name: Cavern_Floor_01_08
       rect:
         serializedVersion: 2
         x: 224
@@ -1005,7 +984,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_43
+      name: Cavern_Floor_01_09
       rect:
         serializedVersion: 2
         x: 240
@@ -1425,7 +1404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_03
+      name: Cavern_Floor_00_02
       rect:
         serializedVersion: 2
         x: 96
@@ -1446,7 +1425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_04
+      name: Cavern_Floor_00_03
       rect:
         serializedVersion: 2
         x: 112
@@ -1467,7 +1446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_11
+      name: Cavern_Floor_00_10
       rect:
         serializedVersion: 2
         x: 128
@@ -1488,7 +1467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_12
+      name: Cavern_Floor_00_11
       rect:
         serializedVersion: 2
         x: 144
@@ -1509,7 +1488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern_Floor_00_13
+      name: Cavern_Floor_00_12
       rect:
         serializedVersion: 2
         x: 160
@@ -1530,7 +1509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_69
+      name: Cavern_Floor_01_02
       rect:
         serializedVersion: 2
         x: 176
@@ -1551,7 +1530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_70
+      name: Cavern_Floor_01_03
       rect:
         serializedVersion: 2
         x: 192
@@ -1572,7 +1551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_71
+      name: Cavern_Floor_01_10
       rect:
         serializedVersion: 2
         x: 208
@@ -1593,7 +1572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_72
+      name: Cavern_Floor_01_11
       rect:
         serializedVersion: 2
         x: 224
@@ -1614,7 +1593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_73
+      name: Cavern_Floor_01_12
       rect:
         serializedVersion: 2
         x: 240
@@ -2076,7 +2055,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_96
+      name: Cavern_Floor_02_04
       rect:
         serializedVersion: 2
         x: 128
@@ -2097,7 +2076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_97
+      name: Cavern_Floor_02_05
       rect:
         serializedVersion: 2
         x: 144
@@ -2118,7 +2097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_98
+      name: Cavern_Floor_02_06
       rect:
         serializedVersion: 2
         x: 160
@@ -2643,7 +2622,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_123
+      name: Cavern_Floor_02_00
       rect:
         serializedVersion: 2
         x: 96
@@ -2664,7 +2643,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_124
+      name: Cavern_Floor_02_01
       rect:
         serializedVersion: 2
         x: 112
@@ -2685,7 +2664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_125
+      name: Cavern_Floor_02_07
       rect:
         serializedVersion: 2
         x: 128
@@ -2706,7 +2685,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_126
+      name: Cavern_Floor_02_08
       rect:
         serializedVersion: 2
         x: 144
@@ -2727,7 +2706,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_127
+      name: Cavern_Floor_02_09
       rect:
         serializedVersion: 2
         x: 160
@@ -3231,7 +3210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_151
+      name: Cavern_Floor_02_02
       rect:
         serializedVersion: 2
         x: 96
@@ -3252,7 +3231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_152
+      name: Cavern_Floor_02_03
       rect:
         serializedVersion: 2
         x: 112
@@ -3273,7 +3252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_153
+      name: Cavern_Floor_02_10
       rect:
         serializedVersion: 2
         x: 128
@@ -3294,7 +3273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_154
+      name: Cavern_Floor_02_11
       rect:
         serializedVersion: 2
         x: 144
@@ -3315,7 +3294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_155
+      name: Cavern_Floor_02_12
       rect:
         serializedVersion: 2
         x: 160
@@ -17142,798 +17121,797 @@ TextureImporter:
       Cavern_Edge_16: -515415962
       Cavern_Edge_17: 265513131
       Cavern_Empty: -1771420411
-      Cavern_Floor_00_00: -1646658576
-      Cavern_Floor_00_01: -1391381500
-      Cavern_Floor_00_02: 2107600119
-      Cavern_Floor_00_03: 1138939189
-      Cavern_Floor_00_04: -1587568965
-      Cavern_Floor_00_05: 1526722053
-      Cavern_Floor_00_06: 1331635891
-      Cavern_Floor_00_07: -575763734
-      Cavern_Floor_00_08: -859135605
-      Cavern_Floor_00_09: -1491078818
-      Cavern_Floor_00_10: -90367056
-      Cavern_Floor_00_11: -1463004326
-      Cavern_Floor_00_12: 1713965088
-      Cavern_Floor_00_13: 1824743145
-      Cavern_Wall_00: -154330779
-      Cavern_Wall_01: 1881323786
-      Cavern_Wall_02: -464876373
-      Cavern_Wall_03: -1517258138
-      Cavern_Wall_04: 2134156200
-      Cavern_Wall_05: 301093620
-      Cavern_Wall_06: -315045886
-      RA_Cavern_0: 861088504
-      RA_Cavern_10: 987436595
-      RA_Cavern_100: 1295319284
-      RA_Cavern_101: 753765716
-      RA_Cavern_102: -1761287766
-      RA_Cavern_103: -1311889152
-      RA_Cavern_104: -636499923
-      RA_Cavern_105: -1410167301
-      RA_Cavern_106: -964403935
-      RA_Cavern_107: 651372079
-      RA_Cavern_108: 518595184
-      RA_Cavern_109: -464675119
-      RA_Cavern_11: -626125683
-      RA_Cavern_110: -701279845
-      RA_Cavern_111: 1701365270
-      RA_Cavern_112: 406476641
-      RA_Cavern_113: 676570575
-      RA_Cavern_114: -760619
-      RA_Cavern_115: 69872587
-      RA_Cavern_116: 1806876119
-      RA_Cavern_12: -2033474584
-      RA_Cavern_123: -169015473
-      RA_Cavern_124: 658349085
-      RA_Cavern_125: -2136031823
-      RA_Cavern_126: -1956596216
-      RA_Cavern_127: -587964504
-      RA_Cavern_128: -1461156233
-      RA_Cavern_129: -258789100
-      RA_Cavern_13: 52675998
-      RA_Cavern_130: 758763610
-      RA_Cavern_131: 1444723731
-      RA_Cavern_132: -973629408
-      RA_Cavern_133: -486589675
-      RA_Cavern_134: -1797535961
-      RA_Cavern_135: -1039356641
-      RA_Cavern_136: -822749423
-      RA_Cavern_137: 1169512788
-      RA_Cavern_138: -2003066819
-      RA_Cavern_139: -20533337
-      RA_Cavern_14: -1250250818
-      RA_Cavern_140: -2131469640
-      RA_Cavern_141: 79518116
-      RA_Cavern_142: -1400617332
-      RA_Cavern_143: -635373923
-      RA_Cavern_144: 1375095966
-      RA_Cavern_145: 234810025
-      RA_Cavern_146: -1153608296
-      RA_Cavern_148: -1667543530
-      RA_Cavern_149: -1762432831
-      RA_Cavern_15: -719713886
-      RA_Cavern_150: -897651810
-      RA_Cavern_151: 495771469
-      RA_Cavern_152: 1779044294
-      RA_Cavern_153: 1475425821
-      RA_Cavern_154: 832668446
-      RA_Cavern_155: -1443155120
-      RA_Cavern_156: -1822269705
-      RA_Cavern_157: -566638606
-      RA_Cavern_158: 1284240936
-      RA_Cavern_159: 1762640642
-      RA_Cavern_16: 383885877
-      RA_Cavern_160: 1310449063
-      RA_Cavern_161: -1131543612
-      RA_Cavern_162: 1692589899
-      RA_Cavern_163: 1142736047
-      RA_Cavern_164: 951618624
-      RA_Cavern_165: 636380468
-      RA_Cavern_166: -1512382088
-      RA_Cavern_167: 598176210
-      RA_Cavern_168: -576812923
-      RA_Cavern_169: 414303116
-      RA_Cavern_17: 351168665
-      RA_Cavern_170: 1477578129
-      RA_Cavern_171: 1945975704
-      RA_Cavern_172: 1154534891
-      RA_Cavern_173: -46876802
-      RA_Cavern_174: 1223713070
-      RA_Cavern_175: -994163537
-      RA_Cavern_176: 1147518938
-      RA_Cavern_177: -2046063024
-      RA_Cavern_178: 947376874
-      RA_Cavern_179: -908443084
-      RA_Cavern_18: 386248981
-      RA_Cavern_180: -201472979
-      RA_Cavern_181: 838509947
-      RA_Cavern_182: -434583322
-      RA_Cavern_183: -616571817
-      RA_Cavern_184: -2089355492
-      RA_Cavern_185: 557762086
-      RA_Cavern_186: 825035821
-      RA_Cavern_187: -1393865059
-      RA_Cavern_188: -240445852
-      RA_Cavern_189: 2078766687
-      RA_Cavern_19: 1409416458
-      RA_Cavern_190: 1757859049
-      RA_Cavern_191: -413201491
-      RA_Cavern_192: 1749646810
-      RA_Cavern_193: -584694328
-      RA_Cavern_194: -550350059
-      RA_Cavern_195: 388075326
-      RA_Cavern_196: 682333921
-      RA_Cavern_197: -643166250
-      RA_Cavern_198: -1936474120
-      RA_Cavern_199: -648076072
-      RA_Cavern_20: -1885341156
-      RA_Cavern_200: -1803248212
-      RA_Cavern_201: 312208767
-      RA_Cavern_202: 1443709945
-      RA_Cavern_203: -92748048
-      RA_Cavern_204: -1989159756
-      RA_Cavern_205: -1625171559
-      RA_Cavern_206: 2000530260
-      RA_Cavern_207: -1057543278
-      RA_Cavern_208: 744158158
-      RA_Cavern_209: 2127505249
-      RA_Cavern_21: 1101923597
-      RA_Cavern_210: -827107365
-      RA_Cavern_211: -551101744
-      RA_Cavern_212: -1788110987
-      RA_Cavern_213: -735939413
-      RA_Cavern_214: 1625547298
-      RA_Cavern_215: 1593851196
-      RA_Cavern_216: 1410267450
-      RA_Cavern_217: 505620642
-      RA_Cavern_218: -923317537
-      RA_Cavern_219: -530458223
-      RA_Cavern_22: 1891866063
-      RA_Cavern_220: -1872377995
-      RA_Cavern_221: 855611298
-      RA_Cavern_222: -223921860
-      RA_Cavern_223: 2104235683
-      RA_Cavern_224: 1747599830
-      RA_Cavern_225: 690216396
-      RA_Cavern_226: -2142096892
-      RA_Cavern_227: -80193533
-      RA_Cavern_228: 977048361
-      RA_Cavern_229: 1472967201
-      RA_Cavern_23: 2111622861
-      RA_Cavern_230: 1067244820
-      RA_Cavern_231: -312042850
-      RA_Cavern_232: -2021406948
-      RA_Cavern_233: -665054211
-      RA_Cavern_234: -1784110970
-      RA_Cavern_235: -490406963
-      RA_Cavern_236: 68598951
-      RA_Cavern_237: -1460249586
-      RA_Cavern_238: 1868326302
-      RA_Cavern_239: -78624942
-      RA_Cavern_24: 1209737921
-      RA_Cavern_240: 1792593843
-      RA_Cavern_241: 1626833056
-      RA_Cavern_242: -1700856485
-      RA_Cavern_243: 572381855
-      RA_Cavern_244: -1110755860
-      RA_Cavern_245: 1449731873
-      RA_Cavern_246: 2113398180
-      RA_Cavern_247: -1120502872
-      RA_Cavern_248: 1318793316
-      RA_Cavern_249: -1399723469
-      RA_Cavern_25: 119226328
-      RA_Cavern_250: 730633677
-      RA_Cavern_251: 1336607821
-      RA_Cavern_252: -1075883227
-      RA_Cavern_253: 1260645141
-      RA_Cavern_254: 235066445
-      RA_Cavern_255: 290002641
-      RA_Cavern_256: -812383399
-      RA_Cavern_257: 1416948980
-      RA_Cavern_258: 2124236210
-      RA_Cavern_259: 398101450
-      RA_Cavern_26: 1283381617
-      RA_Cavern_260: 1315251203
-      RA_Cavern_261: -1195319566
-      RA_Cavern_262: -2052942098
-      RA_Cavern_263: -1673460690
-      RA_Cavern_264: -390676987
-      RA_Cavern_265: 1662396151
-      RA_Cavern_266: 2123290137
-      RA_Cavern_267: -42015019
-      RA_Cavern_268: 1566804979
-      RA_Cavern_269: 1926362560
-      RA_Cavern_27: 632121275
-      RA_Cavern_270: 1249322305
-      RA_Cavern_271: 1040740345
-      RA_Cavern_272: -863893965
-      RA_Cavern_273: 444521706
-      RA_Cavern_274: 545014089
-      RA_Cavern_275: 163133489
-      RA_Cavern_276: 1998528760
-      RA_Cavern_277: -1049600823
-      RA_Cavern_278: -1901261813
-      RA_Cavern_279: 1748963329
-      RA_Cavern_280: -144933345
-      RA_Cavern_281: -2120340558
-      RA_Cavern_282: -1179658580
-      RA_Cavern_283: 305893179
-      RA_Cavern_284: -506657133
-      RA_Cavern_285: -269206277
-      RA_Cavern_286: -60155220
-      RA_Cavern_287: -1665119379
-      RA_Cavern_288: 489354933
-      RA_Cavern_289: -448069059
-      RA_Cavern_290: -1075989446
-      RA_Cavern_291: 1814813893
-      RA_Cavern_292: 1366358574
-      RA_Cavern_293: -304579198
-      RA_Cavern_294: -426007053
-      RA_Cavern_295: -1654560866
-      RA_Cavern_296: 1724840650
-      RA_Cavern_297: 2143111159
-      RA_Cavern_298: 247208180
-      RA_Cavern_299: 724364238
-      RA_Cavern_300: -151278611
-      RA_Cavern_301: 1689889577
-      RA_Cavern_302: 1810830580
-      RA_Cavern_303: 969248221
-      RA_Cavern_304: 273106686
-      RA_Cavern_305: -1451591391
-      RA_Cavern_306: -1934724102
-      RA_Cavern_307: -430402706
-      RA_Cavern_308: 449192410
-      RA_Cavern_309: 1768783565
-      RA_Cavern_310: -640839404
-      RA_Cavern_311: 379270772
-      RA_Cavern_312: -1785270169
-      RA_Cavern_313: -954426176
-      RA_Cavern_314: 970531986
-      RA_Cavern_315: -360486897
-      RA_Cavern_316: 360423396
-      RA_Cavern_317: 688285153
-      RA_Cavern_318: -230242359
-      RA_Cavern_319: -917983890
-      RA_Cavern_320: -106273327
-      RA_Cavern_321: 1763209455
-      RA_Cavern_322: 260539490
-      RA_Cavern_323: -433697127
-      RA_Cavern_324: -405106515
-      RA_Cavern_325: 418707629
-      RA_Cavern_326: -1148306933
-      RA_Cavern_327: -168050299
-      RA_Cavern_328: -1947252244
-      RA_Cavern_329: 572916284
-      RA_Cavern_330: -478767322
-      RA_Cavern_331: 1151160531
-      RA_Cavern_332: 964479091
-      RA_Cavern_333: 800606448
-      RA_Cavern_334: 1976763282
-      RA_Cavern_335: -1050128255
-      RA_Cavern_336: 1787663624
-      RA_Cavern_337: 1468123865
-      RA_Cavern_338: -329878308
-      RA_Cavern_339: 1331040774
-      RA_Cavern_340: -472094978
-      RA_Cavern_341: -1883843253
-      RA_Cavern_342: -1548217184
-      RA_Cavern_343: 1510501797
-      RA_Cavern_344: 1848989611
-      RA_Cavern_345: -886092261
-      RA_Cavern_346: -326282938
-      RA_Cavern_347: 2091131739
-      RA_Cavern_348: -1994162262
-      RA_Cavern_349: 1999496115
-      RA_Cavern_350: 796782294
-      RA_Cavern_351: 611748011
-      RA_Cavern_352: 1042593695
-      RA_Cavern_353: 364469121
-      RA_Cavern_354: -1379456773
-      RA_Cavern_355: -826708317
-      RA_Cavern_356: 224817870
-      RA_Cavern_357: 1959441420
-      RA_Cavern_358: -1155835938
-      RA_Cavern_359: 2126137016
-      RA_Cavern_360: 1561540814
-      RA_Cavern_361: 2054770637
-      RA_Cavern_362: -538503138
-      RA_Cavern_363: -1868971433
-      RA_Cavern_364: 1797223699
-      RA_Cavern_365: 1306096904
-      RA_Cavern_366: -1872852859
-      RA_Cavern_367: 216215683
-      RA_Cavern_368: -929900866
-      RA_Cavern_369: 1046188160
-      RA_Cavern_370: -441154584
-      RA_Cavern_371: 182418023
-      RA_Cavern_372: 1024288989
-      RA_Cavern_373: -249632598
-      RA_Cavern_374: -1377554984
-      RA_Cavern_375: 1722073479
-      RA_Cavern_376: -412542549
-      RA_Cavern_377: 1388408624
-      RA_Cavern_378: -324477991
-      RA_Cavern_379: 1981766221
-      RA_Cavern_380: -507229245
-      RA_Cavern_381: 306932924
-      RA_Cavern_382: -2119312316
-      RA_Cavern_383: -923634035
-      RA_Cavern_384: -485478081
-      RA_Cavern_385: -658249261
-      RA_Cavern_386: -446169346
-      RA_Cavern_387: -1550125185
-      RA_Cavern_388: 2112550269
-      RA_Cavern_389: 484191257
-      RA_Cavern_39: -533335995
-      RA_Cavern_390: 1050032834
-      RA_Cavern_391: 2030790606
-      RA_Cavern_392: 1584365849
-      RA_Cavern_393: -1702352314
-      RA_Cavern_394: 473206664
-      RA_Cavern_395: -1112963325
-      RA_Cavern_396: 1720536092
-      RA_Cavern_397: -789980
-      RA_Cavern_398: 1175870697
-      RA_Cavern_399: 1428430893
-      RA_Cavern_40: -418431370
-      RA_Cavern_400: 1278575349
-      RA_Cavern_401: 270815232
-      RA_Cavern_402: -1093844708
-      RA_Cavern_403: 497692405
-      RA_Cavern_404: -205125244
-      RA_Cavern_405: 1409983237
-      RA_Cavern_406: -826872483
-      RA_Cavern_407: -411907567
-      RA_Cavern_408: -260475942
-      RA_Cavern_409: 2134760369
-      RA_Cavern_41: -644848184
-      RA_Cavern_410: 94218214
-      RA_Cavern_411: 2137976315
-      RA_Cavern_412: 1509829180
-      RA_Cavern_413: -1355998323
-      RA_Cavern_414: -352006511
-      RA_Cavern_415: 1535760320
-      RA_Cavern_416: -939702309
-      RA_Cavern_417: 1428973697
-      RA_Cavern_418: 105326102
-      RA_Cavern_419: -1515627502
-      RA_Cavern_42: -947573702
-      RA_Cavern_420: -277085082
-      RA_Cavern_421: 394876736
-      RA_Cavern_422: 565915446
-      RA_Cavern_423: 1863466815
-      RA_Cavern_424: -769235659
-      RA_Cavern_425: -731011422
-      RA_Cavern_426: -2143650042
-      RA_Cavern_427: 291899831
-      RA_Cavern_428: 521916256
-      RA_Cavern_429: 1156164808
-      RA_Cavern_43: -1228012710
-      RA_Cavern_430: -310099544
-      RA_Cavern_431: 1224301807
-      RA_Cavern_432: -1131743081
-      RA_Cavern_433: -290176733
-      RA_Cavern_434: 384864833
-      RA_Cavern_435: 1236124269
-      RA_Cavern_436: -239707159
-      RA_Cavern_437: -266971446
-      RA_Cavern_438: -461382426
-      RA_Cavern_439: -1300026173
-      RA_Cavern_44: 426765230
-      RA_Cavern_440: -1902712133
-      RA_Cavern_441: -2041113130
-      RA_Cavern_442: 904869848
-      RA_Cavern_443: -1014316320
-      RA_Cavern_444: -1519011201
-      RA_Cavern_445: -273532199
-      RA_Cavern_446: -2001038325
-      RA_Cavern_447: 1097862106
-      RA_Cavern_448: 1865147000
-      RA_Cavern_449: 829940924
-      RA_Cavern_45: 323737186
-      RA_Cavern_450: 551481258
-      RA_Cavern_451: -194590363
-      RA_Cavern_452: 1977880561
-      RA_Cavern_453: -1153869061
-      RA_Cavern_454: 800238877
-      RA_Cavern_455: -1146198838
-      RA_Cavern_456: 149689245
-      RA_Cavern_457: -803725673
-      RA_Cavern_458: 1443266817
-      RA_Cavern_459: -2142535270
-      RA_Cavern_46: 1967741950
-      RA_Cavern_460: -821067531
-      RA_Cavern_461: -520525626
-      RA_Cavern_462: -31260411
-      RA_Cavern_463: -902272580
-      RA_Cavern_464: -899266187
-      RA_Cavern_465: -22488176
-      RA_Cavern_466: 174323485
-      RA_Cavern_467: -376284987
-      RA_Cavern_468: -607056995
-      RA_Cavern_469: -582869760
-      RA_Cavern_47: 884768780
-      RA_Cavern_470: 191464935
-      RA_Cavern_471: -84638289
-      RA_Cavern_472: 1516014404
-      RA_Cavern_473: 1875130349
-      RA_Cavern_474: -1398188000
-      RA_Cavern_475: 824412655
-      RA_Cavern_476: -1065802949
-      RA_Cavern_477: -1611511240
-      RA_Cavern_478: -647169849
-      RA_Cavern_479: -1394232011
-      RA_Cavern_48: 1815025861
-      RA_Cavern_480: 936840865
-      RA_Cavern_481: 1631639002
-      RA_Cavern_482: -1112110927
-      RA_Cavern_483: 825570987
-      RA_Cavern_484: -1465208375
-      RA_Cavern_485: 1967875355
-      RA_Cavern_486: 1048917346
-      RA_Cavern_487: 1464789707
-      RA_Cavern_488: -1990363870
-      RA_Cavern_489: -1965608023
-      RA_Cavern_49: 1832181816
-      RA_Cavern_490: -506799674
-      RA_Cavern_491: 1064217040
-      RA_Cavern_492: -109534149
-      RA_Cavern_493: -1511875769
-      RA_Cavern_494: 662120939
-      RA_Cavern_495: -1504274788
-      RA_Cavern_496: 272677373
-      RA_Cavern_497: -449889523
-      RA_Cavern_498: -1042750958
-      RA_Cavern_499: 610892778
-      RA_Cavern_50: 1016887905
-      RA_Cavern_500: 1310614474
-      RA_Cavern_501: 1856205035
-      RA_Cavern_502: -1859517687
-      RA_Cavern_503: -402023776
-      RA_Cavern_504: -1936420454
-      RA_Cavern_505: -548303911
-      RA_Cavern_506: -468066465
-      RA_Cavern_507: 987322867
-      RA_Cavern_508: 1381752172
-      RA_Cavern_509: 1417621560
-      RA_Cavern_51: -1055640603
-      RA_Cavern_510: 380171323
-      RA_Cavern_511: -1883548920
-      RA_Cavern_512: -1925852708
-      RA_Cavern_513: -923040500
-      RA_Cavern_514: 288472352
-      RA_Cavern_515: 1173838992
-      RA_Cavern_516: -1864176066
-      RA_Cavern_517: 1063089326
-      RA_Cavern_518: -1205218852
-      RA_Cavern_519: 1753567528
-      RA_Cavern_52: 1378488870
-      RA_Cavern_520: -308649542
-      RA_Cavern_521: -1264558624
-      RA_Cavern_522: 662081913
-      RA_Cavern_523: -1071451474
-      RA_Cavern_524: 376618896
-      RA_Cavern_525: -690848861
-      RA_Cavern_526: -25600705
-      RA_Cavern_527: -1650480874
-      RA_Cavern_528: -1759004181
-      RA_Cavern_529: 1695062096
-      RA_Cavern_53: -2142857283
-      RA_Cavern_530: -699978003
-      RA_Cavern_531: 1712370715
-      RA_Cavern_532: 1073600195
-      RA_Cavern_533: 947666898
-      RA_Cavern_534: -1119857604
-      RA_Cavern_535: 1800939465
-      RA_Cavern_536: 2143510420
-      RA_Cavern_537: -308295164
-      RA_Cavern_538: -682648344
-      RA_Cavern_539: 1900892591
-      RA_Cavern_54: -777285919
-      RA_Cavern_540: -1302617655
-      RA_Cavern_541: -660378290
-      RA_Cavern_542: 1099133505
-      RA_Cavern_543: -732374209
-      RA_Cavern_544: 634856495
-      RA_Cavern_545: -187412669
-      RA_Cavern_546: -1248012433
-      RA_Cavern_547: 1658497187
-      RA_Cavern_548: -895997844
-      RA_Cavern_549: 1189965535
-      RA_Cavern_55: 571443065
-      RA_Cavern_550: 560589330
-      RA_Cavern_551: -551723723
-      RA_Cavern_552: 953422768
-      RA_Cavern_553: -1294348147
-      RA_Cavern_554: 1804452813
-      RA_Cavern_555: 1900160831
-      RA_Cavern_556: -433873897
-      RA_Cavern_557: 1391634557
-      RA_Cavern_558: 801689501
-      RA_Cavern_559: -1671152079
-      RA_Cavern_56: -983361556
-      RA_Cavern_560: -1577030887
-      RA_Cavern_561: 1072164255
-      RA_Cavern_562: -1029204872
-      RA_Cavern_563: -908491204
-      RA_Cavern_564: -1340889579
-      RA_Cavern_565: 632843069
-      RA_Cavern_566: -1793197667
-      RA_Cavern_567: 2142874810
-      RA_Cavern_568: 202662985
-      RA_Cavern_569: -1486767246
-      RA_Cavern_57: 1317662396
-      RA_Cavern_570: 1569171780
-      RA_Cavern_571: -849828920
-      RA_Cavern_572: -580307803
-      RA_Cavern_573: -922384024
-      RA_Cavern_574: -113517480
-      RA_Cavern_575: 805738009
-      RA_Cavern_576: -3552991
-      RA_Cavern_577: 1227914069
-      RA_Cavern_578: 1570593017
-      RA_Cavern_579: 1003553809
-      RA_Cavern_580: -403261879
-      RA_Cavern_581: -1855810452
-      RA_Cavern_582: 851649038
-      RA_Cavern_583: -376096414
-      RA_Cavern_584: 1829892037
-      RA_Cavern_585: 397792024
-      RA_Cavern_586: -2021431979
-      RA_Cavern_587: 461192411
-      RA_Cavern_588: 2108643175
-      RA_Cavern_589: -1156283374
-      RA_Cavern_59: 2128699111
-      RA_Cavern_590: 870954792
-      RA_Cavern_591: 846421932
-      RA_Cavern_592: -1162181647
-      RA_Cavern_593: -1760788594
-      RA_Cavern_594: -2105307841
-      RA_Cavern_595: -795018100
-      RA_Cavern_596: -1909840307
-      RA_Cavern_597: 512239893
-      RA_Cavern_598: 1557469630
-      RA_Cavern_599: 1364484451
-      RA_Cavern_600: 1510821527
-      RA_Cavern_601: 2102265834
-      RA_Cavern_602: 802995585
-      RA_Cavern_603: 553007901
-      RA_Cavern_604: -1566964483
-      RA_Cavern_605: 319594369
-      RA_Cavern_606: -1739911734
-      RA_Cavern_607: -924874786
-      RA_Cavern_608: 599471994
-      RA_Cavern_609: 1250560824
-      RA_Cavern_610: -1483194574
-      RA_Cavern_611: -1834416959
-      RA_Cavern_612: 1771546131
-      RA_Cavern_613: -2122288172
-      RA_Cavern_614: -1315729665
-      RA_Cavern_615: -1096911568
-      RA_Cavern_616: 1805592504
-      RA_Cavern_617: 984526226
-      RA_Cavern_618: -421378098
-      RA_Cavern_619: -2105063054
-      RA_Cavern_620: -769566467
-      RA_Cavern_621: -633953559
-      RA_Cavern_622: 2134335810
-      RA_Cavern_623: 1957358307
-      RA_Cavern_624: -1880880375
-      RA_Cavern_625: 1450895860
-      RA_Cavern_626: -217896415
-      RA_Cavern_627: -1340396768
-      RA_Cavern_628: -377131209
-      RA_Cavern_629: -1463898393
-      RA_Cavern_630: -1133407299
-      RA_Cavern_631: 1606268217
-      RA_Cavern_632: -1845481893
-      RA_Cavern_633: -1632979079
-      RA_Cavern_634: 1833973172
-      RA_Cavern_635: 1542302521
-      RA_Cavern_636: -1381259211
-      RA_Cavern_637: 745966719
-      RA_Cavern_638: -1837824084
-      RA_Cavern_639: 1674208805
-      RA_Cavern_640: -1605305117
-      RA_Cavern_641: 2113271527
-      RA_Cavern_642: 1086906404
-      RA_Cavern_643: -1868252677
-      RA_Cavern_644: -1173775482
-      RA_Cavern_645: 398475328
-      RA_Cavern_646: 1545365754
-      RA_Cavern_647: -236524271
-      RA_Cavern_648: -139056924
-      RA_Cavern_649: -1203228124
-      RA_Cavern_650: 757581256
-      RA_Cavern_651: 1473916216
-      RA_Cavern_652: -1212168311
-      RA_Cavern_653: -1520528012
-      RA_Cavern_654: -1448831201
-      RA_Cavern_655: -1776093209
-      RA_Cavern_656: 1582357241
-      RA_Cavern_657: -1917584610
-      RA_Cavern_658: -1961861229
-      RA_Cavern_659: -1501021453
-      RA_Cavern_660: 1672840854
-      RA_Cavern_661: -171444706
-      RA_Cavern_662: 565602961
-      RA_Cavern_663: 200822581
-      RA_Cavern_664: -1935569970
-      RA_Cavern_665: -912956589
-      RA_Cavern_666: 1728123923
-      RA_Cavern_667: 1998864721
-      RA_Cavern_668: 536024990
-      RA_Cavern_669: -2132059646
-      RA_Cavern_670: -1221485210
-      RA_Cavern_671: -1332314266
-      RA_Cavern_672: -969484494
-      RA_Cavern_673: -429462578
-      RA_Cavern_674: 1597650160
-      RA_Cavern_675: 1491904561
-      RA_Cavern_676: 727071245
-      RA_Cavern_677: 730898024
-      RA_Cavern_678: -820116045
-      RA_Cavern_679: -1533229006
-      RA_Cavern_680: 1376863305
-      RA_Cavern_681: -1332956017
-      RA_Cavern_682: 1314129670
-      RA_Cavern_683: -248263334
-      RA_Cavern_684: -1241126292
-      RA_Cavern_685: -1103647842
-      RA_Cavern_686: 1496999299
-      RA_Cavern_687: -1961882610
-      RA_Cavern_688: -1903530680
-      RA_Cavern_689: -745289156
-      RA_Cavern_69: 2129215564
-      RA_Cavern_690: 1937471637
-      RA_Cavern_691: -1770720506
-      RA_Cavern_692: 2055933190
-      RA_Cavern_693: 1126440058
-      RA_Cavern_694: -212294414
-      RA_Cavern_695: -1296296744
-      RA_Cavern_696: -417237458
-      RA_Cavern_697: -1663149261
-      RA_Cavern_698: -1591225757
-      RA_Cavern_699: -1017324552
-      RA_Cavern_70: -1567794262
-      RA_Cavern_700: 249116714
-      RA_Cavern_701: 803372390
-      RA_Cavern_702: -948004931
-      RA_Cavern_703: -1664350741
-      RA_Cavern_704: 1029275013
-      RA_Cavern_705: -1552896152
-      RA_Cavern_706: -533478047
-      RA_Cavern_707: 1452880710
-      RA_Cavern_708: -621008449
-      RA_Cavern_709: -577904075
-      RA_Cavern_71: -1245938403
-      RA_Cavern_710: -329302532
-      RA_Cavern_711: -199391911
-      RA_Cavern_712: 1240174471
-      RA_Cavern_713: -1770185472
-      RA_Cavern_714: 1603463478
-      RA_Cavern_715: -451937655
-      RA_Cavern_716: -78165341
-      RA_Cavern_717: -1854574650
-      RA_Cavern_718: -1117457454
-      RA_Cavern_719: 712927235
-      RA_Cavern_72: -1026436087
-      RA_Cavern_720: 1158696946
-      RA_Cavern_721: -1930100484
-      RA_Cavern_722: 674214824
-      RA_Cavern_723: 1382284598
-      RA_Cavern_724: 737966016
-      RA_Cavern_725: 1342748851
-      RA_Cavern_726: 1348811979
-      RA_Cavern_727: 356661339
-      RA_Cavern_728: -800130942
-      RA_Cavern_729: 587217773
-      RA_Cavern_73: -1391984932
-      RA_Cavern_730: 909185102
-      RA_Cavern_731: -1358157376
-      RA_Cavern_732: 991014470
-      RA_Cavern_733: 1177332873
-      RA_Cavern_734: -1536192867
-      RA_Cavern_735: 732777827
-      RA_Cavern_736: -536040519
-      RA_Cavern_737: -377564492
-      RA_Cavern_738: -333888002
-      RA_Cavern_739: -1747211429
-      RA_Cavern_74: -483719426
-      RA_Cavern_740: -1004730164
-      RA_Cavern_741: 407055672
-      RA_Cavern_742: -752114169
-      RA_Cavern_743: 596222206
-      RA_Cavern_744: 518742290
-      RA_Cavern_745: -1288383929
-      RA_Cavern_746: 1447258359
-      RA_Cavern_747: -1194958686
-      RA_Cavern_748: -424664159
-      RA_Cavern_749: -396362516
-      RA_Cavern_75: 1746819422
-      RA_Cavern_750: -1877088695
-      RA_Cavern_751: -1992566874
-      RA_Cavern_752: -416483074
-      RA_Cavern_753: -523190694
-      RA_Cavern_754: 1884041374
-      RA_Cavern_755: -1740991543
-      RA_Cavern_756: 1684577409
-      RA_Cavern_757: 270055825
-      RA_Cavern_758: 1966595995
-      RA_Cavern_759: 1901184253
-      RA_Cavern_76: 1734456651
-      RA_Cavern_760: -882023097
-      RA_Cavern_761: 639850704
-      RA_Cavern_762: -1307139318
-      RA_Cavern_763: 113816511
-      RA_Cavern_764: -996553810
-      RA_Cavern_765: -232419081
-      RA_Cavern_766: -1784098718
-      RA_Cavern_767: -763098261
-      RA_Cavern_768: -2139121683
-      RA_Cavern_769: 1195103344
-      RA_Cavern_77: -2098950779
-      RA_Cavern_770: 85145585
-      RA_Cavern_771: -1421044684
-      RA_Cavern_772: 124230965
-      RA_Cavern_773: 587000490
-      RA_Cavern_774: 1983798416
-      RA_Cavern_775: -1985333840
-      RA_Cavern_776: -977878663
-      RA_Cavern_777: -336027437
-      RA_Cavern_778: 1726631522
-      RA_Cavern_779: -854823235
-      RA_Cavern_78: -154508704
-      RA_Cavern_780: 1512268731
-      RA_Cavern_781: 431835114
-      RA_Cavern_782: 1180016347
-      RA_Cavern_783: 1545609306
-      RA_Cavern_784: -958706014
-      RA_Cavern_785: 1625716689
-      RA_Cavern_786: 178699498
-      RA_Cavern_787: 1227436578
-      RA_Cavern_788: -936674639
-      RA_Cavern_789: -873439756
-      RA_Cavern_79: -796606604
-      RA_Cavern_790: 1021453551
-      RA_Cavern_791: 391680610
-      RA_Cavern_792: 66405136
-      RA_Cavern_793: 1733148234
-      RA_Cavern_794: 1416587601
-      RA_Cavern_795: -389043538
-      RA_Cavern_796: 1360582759
-      RA_Cavern_797: -121135625
-      RA_Cavern_798: -1000796074
-      RA_Cavern_799: 1043163224
-      RA_Cavern_8: -670876204
-      RA_Cavern_80: -650176008
-      RA_Cavern_800: 1942118492
-      RA_Cavern_801: 612097462
-      RA_Cavern_802: -652539938
-      RA_Cavern_803: 2061466520
-      RA_Cavern_804: -8788442
-      RA_Cavern_805: -910121580
-      RA_Cavern_806: 1422312760
-      RA_Cavern_807: -564180241
-      RA_Cavern_808: 575341228
-      RA_Cavern_809: 54049034
-      RA_Cavern_81: 1161810260
-      RA_Cavern_810: 487661263
-      RA_Cavern_82: -2140508570
-      RA_Cavern_83: -1518262874
-      RA_Cavern_84: -304477916
-      RA_Cavern_85: 230269041
-      RA_Cavern_86: -209287560
-      RA_Cavern_87: 691652846
-      RA_Cavern_88: -474550601
-      RA_Cavern_9: 1493521065
-      RA_Cavern_90: -2084318946
-      RA_Cavern_95: -926149721
-      RA_Cavern_96: 327221920
-      RA_Cavern_97: 466279530
-      RA_Cavern_98: 1721620371
-      RA_Cavern_99: -1380507648
+      Cavern_Floor_00_00: -1391381500
+      Cavern_Floor_00_01: 1138939189
+      Cavern_Floor_00_02: -1587568965
+      Cavern_Floor_00_03: 1526722053
+      Cavern_Floor_00_04: 1331635891
+      Cavern_Floor_00_05: -575763734
+      Cavern_Floor_00_06: -859135605
+      Cavern_Floor_00_07: -1491078818
+      Cavern_Floor_00_08: -1491078818
+      Cavern_Floor_00_09: -90367056
+      Cavern_Floor_00_10: -1463004326
+      Cavern_Floor_00_11: 1713965088
+      Cavern_Floor_00_12: 1824743145
+      Cavern_Floor_01_00: -533335995
+      Cavern_Floor_01_01: -418431370
+      Cavern_Floor_01_02: 2129215564
+      Cavern_Floor_01_03: -1567794262
+      Cavern_Floor_01_04: 1493521065
+      Cavern_Floor_01_05: 987436595
+      Cavern_Floor_01_06: -626125683
+      Cavern_Floor_01_07: -644848184
+      Cavern_Floor_01_08: -947573702
+      Cavern_Floor_01_09: -1228012710
+      Cavern_Floor_01_10: -1245938403
+      Cavern_Floor_01_11: -1026436087
+      Cavern_Floor_01_12: -1391984932
+      Cavern_Floor_02_00: -169015473
+      Cavern_Floor_02_01: 658349085
+      Cavern_Floor_02_02: 495771469
+      Cavern_Floor_02_03: 1779044294
+      Cavern_Floor_02_04: 327221920
+      Cavern_Floor_02_05: 466279530
+      Cavern_Floor_02_06: 1721620371
+      Cavern_Floor_02_07: -2136031823
+      Cavern_Floor_02_08: -1956596216
+      Cavern_Floor_02_09: -587964504
+      Cavern_Floor_02_10: 1475425821
+      Cavern_Floor_02_11: 832668446
+      Cavern_Floor_02_12: -1443155120
+      Cavern_Wall_00: 1881323786
+      Cavern_Wall_01: -464876373
+      Cavern_Wall_02: -1517258138
+      Cavern_Wall_03: 2134156200
+      Cavern_Wall_04: 301093620
+      Cavern_Wall_05: -315045886
+      Cavern_Wall_06: 861088504
+      RA_Cavern_0: 987436595
+      RA_Cavern_100: 753765716
+      RA_Cavern_101: -1761287766
+      RA_Cavern_102: -1311889152
+      RA_Cavern_103: -636499923
+      RA_Cavern_104: -1410167301
+      RA_Cavern_105: -964403935
+      RA_Cavern_106: 651372079
+      RA_Cavern_107: 518595184
+      RA_Cavern_108: -464675119
+      RA_Cavern_109: -626125683
+      RA_Cavern_110: 1701365270
+      RA_Cavern_111: 406476641
+      RA_Cavern_112: 676570575
+      RA_Cavern_113: -760619
+      RA_Cavern_114: 69872587
+      RA_Cavern_115: 1806876119
+      RA_Cavern_116: -2033474584
+      RA_Cavern_12: -169015473
+      RA_Cavern_128: -258789100
+      RA_Cavern_129: 52675998
+      RA_Cavern_13: 758763610
+      RA_Cavern_130: 1444723731
+      RA_Cavern_131: -973629408
+      RA_Cavern_132: -486589675
+      RA_Cavern_133: -1797535961
+      RA_Cavern_134: -1039356641
+      RA_Cavern_135: -822749423
+      RA_Cavern_136: 1169512788
+      RA_Cavern_137: -2003066819
+      RA_Cavern_138: -20533337
+      RA_Cavern_139: -1250250818
+      RA_Cavern_14: -2131469640
+      RA_Cavern_140: 79518116
+      RA_Cavern_141: -1400617332
+      RA_Cavern_142: -635373923
+      RA_Cavern_143: 1375095966
+      RA_Cavern_144: 234810025
+      RA_Cavern_145: -1153608296
+      RA_Cavern_146: -1667543530
+      RA_Cavern_148: -1762432831
+      RA_Cavern_149: -719713886
+      RA_Cavern_15: -897651810
+      RA_Cavern_150: 495771469
+      RA_Cavern_156: -566638606
+      RA_Cavern_157: 1284240936
+      RA_Cavern_158: 1762640642
+      RA_Cavern_159: 383885877
+      RA_Cavern_16: 1310449063
+      RA_Cavern_160: -1131543612
+      RA_Cavern_161: 1692589899
+      RA_Cavern_162: 1142736047
+      RA_Cavern_163: 951618624
+      RA_Cavern_164: 636380468
+      RA_Cavern_165: -1512382088
+      RA_Cavern_166: 598176210
+      RA_Cavern_167: -576812923
+      RA_Cavern_168: 414303116
+      RA_Cavern_169: 351168665
+      RA_Cavern_17: 1477578129
+      RA_Cavern_170: 1945975704
+      RA_Cavern_171: 1154534891
+      RA_Cavern_172: -46876802
+      RA_Cavern_173: 1223713070
+      RA_Cavern_174: -994163537
+      RA_Cavern_175: 1147518938
+      RA_Cavern_176: -2046063024
+      RA_Cavern_177: 947376874
+      RA_Cavern_178: -908443084
+      RA_Cavern_179: 386248981
+      RA_Cavern_18: -201472979
+      RA_Cavern_180: 838509947
+      RA_Cavern_181: -434583322
+      RA_Cavern_182: -616571817
+      RA_Cavern_183: -2089355492
+      RA_Cavern_184: 557762086
+      RA_Cavern_185: 825035821
+      RA_Cavern_186: -1393865059
+      RA_Cavern_187: -240445852
+      RA_Cavern_188: 2078766687
+      RA_Cavern_189: 1409416458
+      RA_Cavern_19: 1757859049
+      RA_Cavern_190: -413201491
+      RA_Cavern_191: 1749646810
+      RA_Cavern_192: -584694328
+      RA_Cavern_193: -550350059
+      RA_Cavern_194: 388075326
+      RA_Cavern_195: 682333921
+      RA_Cavern_196: -643166250
+      RA_Cavern_197: -1936474120
+      RA_Cavern_198: -648076072
+      RA_Cavern_199: -1885341156
+      RA_Cavern_20: -1803248212
+      RA_Cavern_200: 312208767
+      RA_Cavern_201: 1443709945
+      RA_Cavern_202: -92748048
+      RA_Cavern_203: -1989159756
+      RA_Cavern_204: -1625171559
+      RA_Cavern_205: 2000530260
+      RA_Cavern_206: -1057543278
+      RA_Cavern_207: 744158158
+      RA_Cavern_208: 2127505249
+      RA_Cavern_209: 1101923597
+      RA_Cavern_21: -827107365
+      RA_Cavern_210: -551101744
+      RA_Cavern_211: -1788110987
+      RA_Cavern_212: -735939413
+      RA_Cavern_213: 1625547298
+      RA_Cavern_214: 1593851196
+      RA_Cavern_215: 1410267450
+      RA_Cavern_216: 505620642
+      RA_Cavern_217: -923317537
+      RA_Cavern_218: -530458223
+      RA_Cavern_219: 1891866063
+      RA_Cavern_22: -1872377995
+      RA_Cavern_220: 855611298
+      RA_Cavern_221: -223921860
+      RA_Cavern_222: 2104235683
+      RA_Cavern_223: 1747599830
+      RA_Cavern_224: 690216396
+      RA_Cavern_225: -2142096892
+      RA_Cavern_226: -80193533
+      RA_Cavern_227: 977048361
+      RA_Cavern_228: 1472967201
+      RA_Cavern_229: 2111622861
+      RA_Cavern_23: 1067244820
+      RA_Cavern_230: -312042850
+      RA_Cavern_231: -2021406948
+      RA_Cavern_232: -665054211
+      RA_Cavern_233: -1784110970
+      RA_Cavern_234: -490406963
+      RA_Cavern_235: 68598951
+      RA_Cavern_236: -1460249586
+      RA_Cavern_237: 1868326302
+      RA_Cavern_238: -78624942
+      RA_Cavern_239: 1209737921
+      RA_Cavern_24: 1792593843
+      RA_Cavern_240: 1626833056
+      RA_Cavern_241: -1700856485
+      RA_Cavern_242: 572381855
+      RA_Cavern_243: -1110755860
+      RA_Cavern_244: 1449731873
+      RA_Cavern_245: 2113398180
+      RA_Cavern_246: -1120502872
+      RA_Cavern_247: 1318793316
+      RA_Cavern_248: -1399723469
+      RA_Cavern_249: 119226328
+      RA_Cavern_25: 730633677
+      RA_Cavern_250: 1336607821
+      RA_Cavern_251: -1075883227
+      RA_Cavern_252: 1260645141
+      RA_Cavern_253: 235066445
+      RA_Cavern_254: 290002641
+      RA_Cavern_255: -812383399
+      RA_Cavern_256: 1416948980
+      RA_Cavern_257: 2124236210
+      RA_Cavern_258: 398101450
+      RA_Cavern_259: 1283381617
+      RA_Cavern_26: 1315251203
+      RA_Cavern_260: -1195319566
+      RA_Cavern_261: -2052942098
+      RA_Cavern_262: -1673460690
+      RA_Cavern_263: -390676987
+      RA_Cavern_264: 1662396151
+      RA_Cavern_265: 2123290137
+      RA_Cavern_266: -42015019
+      RA_Cavern_267: 1566804979
+      RA_Cavern_268: 1926362560
+      RA_Cavern_269: 632121275
+      RA_Cavern_27: 1249322305
+      RA_Cavern_270: 1040740345
+      RA_Cavern_271: -863893965
+      RA_Cavern_272: 444521706
+      RA_Cavern_273: 545014089
+      RA_Cavern_274: 163133489
+      RA_Cavern_275: 1998528760
+      RA_Cavern_276: -1049600823
+      RA_Cavern_277: -1901261813
+      RA_Cavern_278: 1748963329
+      RA_Cavern_279: -144933345
+      RA_Cavern_280: -2120340558
+      RA_Cavern_281: -1179658580
+      RA_Cavern_282: 305893179
+      RA_Cavern_283: -506657133
+      RA_Cavern_284: -269206277
+      RA_Cavern_285: -60155220
+      RA_Cavern_286: -1665119379
+      RA_Cavern_287: 489354933
+      RA_Cavern_288: -448069059
+      RA_Cavern_289: -1075989446
+      RA_Cavern_290: 1814813893
+      RA_Cavern_291: 1366358574
+      RA_Cavern_292: -304579198
+      RA_Cavern_293: -426007053
+      RA_Cavern_294: -1654560866
+      RA_Cavern_295: 1724840650
+      RA_Cavern_296: 2143111159
+      RA_Cavern_297: 247208180
+      RA_Cavern_298: 724364238
+      RA_Cavern_299: -151278611
+      RA_Cavern_300: 1689889577
+      RA_Cavern_301: 1810830580
+      RA_Cavern_302: 969248221
+      RA_Cavern_303: 273106686
+      RA_Cavern_304: -1451591391
+      RA_Cavern_305: -1934724102
+      RA_Cavern_306: -430402706
+      RA_Cavern_307: 449192410
+      RA_Cavern_308: 1768783565
+      RA_Cavern_309: -640839404
+      RA_Cavern_310: 379270772
+      RA_Cavern_311: -1785270169
+      RA_Cavern_312: -954426176
+      RA_Cavern_313: 970531986
+      RA_Cavern_314: -360486897
+      RA_Cavern_315: 360423396
+      RA_Cavern_316: 688285153
+      RA_Cavern_317: -230242359
+      RA_Cavern_318: -917983890
+      RA_Cavern_319: -106273327
+      RA_Cavern_320: 1763209455
+      RA_Cavern_321: 260539490
+      RA_Cavern_322: -433697127
+      RA_Cavern_323: -405106515
+      RA_Cavern_324: 418707629
+      RA_Cavern_325: -1148306933
+      RA_Cavern_326: -168050299
+      RA_Cavern_327: -1947252244
+      RA_Cavern_328: 572916284
+      RA_Cavern_329: -478767322
+      RA_Cavern_330: 1151160531
+      RA_Cavern_331: 964479091
+      RA_Cavern_332: 800606448
+      RA_Cavern_333: 1976763282
+      RA_Cavern_334: -1050128255
+      RA_Cavern_335: 1787663624
+      RA_Cavern_336: 1468123865
+      RA_Cavern_337: -329878308
+      RA_Cavern_338: 1331040774
+      RA_Cavern_339: -472094978
+      RA_Cavern_340: -1883843253
+      RA_Cavern_341: -1548217184
+      RA_Cavern_342: 1510501797
+      RA_Cavern_343: 1848989611
+      RA_Cavern_344: -886092261
+      RA_Cavern_345: -326282938
+      RA_Cavern_346: 2091131739
+      RA_Cavern_347: -1994162262
+      RA_Cavern_348: 1999496115
+      RA_Cavern_349: 796782294
+      RA_Cavern_350: 611748011
+      RA_Cavern_351: 1042593695
+      RA_Cavern_352: 364469121
+      RA_Cavern_353: -1379456773
+      RA_Cavern_354: -826708317
+      RA_Cavern_355: 224817870
+      RA_Cavern_356: 1959441420
+      RA_Cavern_357: -1155835938
+      RA_Cavern_358: 2126137016
+      RA_Cavern_359: 1561540814
+      RA_Cavern_360: 2054770637
+      RA_Cavern_361: -538503138
+      RA_Cavern_362: -1868971433
+      RA_Cavern_363: 1797223699
+      RA_Cavern_364: 1306096904
+      RA_Cavern_365: -1872852859
+      RA_Cavern_366: 216215683
+      RA_Cavern_367: -929900866
+      RA_Cavern_368: 1046188160
+      RA_Cavern_369: -441154584
+      RA_Cavern_370: 182418023
+      RA_Cavern_371: 1024288989
+      RA_Cavern_372: -249632598
+      RA_Cavern_373: -1377554984
+      RA_Cavern_374: 1722073479
+      RA_Cavern_375: -412542549
+      RA_Cavern_376: 1388408624
+      RA_Cavern_377: -324477991
+      RA_Cavern_378: 1981766221
+      RA_Cavern_379: -507229245
+      RA_Cavern_380: 306932924
+      RA_Cavern_381: -2119312316
+      RA_Cavern_382: -923634035
+      RA_Cavern_383: -485478081
+      RA_Cavern_384: -658249261
+      RA_Cavern_385: -446169346
+      RA_Cavern_386: -1550125185
+      RA_Cavern_387: 2112550269
+      RA_Cavern_388: 484191257
+      RA_Cavern_389: -533335995
+      RA_Cavern_390: 2030790606
+      RA_Cavern_391: 1584365849
+      RA_Cavern_392: -1702352314
+      RA_Cavern_393: 473206664
+      RA_Cavern_394: -1112963325
+      RA_Cavern_395: 1720536092
+      RA_Cavern_396: -789980
+      RA_Cavern_397: 1175870697
+      RA_Cavern_398: 1428430893
+      RA_Cavern_399: -418431370
+      RA_Cavern_400: 270815232
+      RA_Cavern_401: -1093844708
+      RA_Cavern_402: 497692405
+      RA_Cavern_403: -205125244
+      RA_Cavern_404: 1409983237
+      RA_Cavern_405: -826872483
+      RA_Cavern_406: -411907567
+      RA_Cavern_407: -260475942
+      RA_Cavern_408: 2134760369
+      RA_Cavern_409: -644848184
+      RA_Cavern_410: 2137976315
+      RA_Cavern_411: 1509829180
+      RA_Cavern_412: -1355998323
+      RA_Cavern_413: -352006511
+      RA_Cavern_414: 1535760320
+      RA_Cavern_415: -939702309
+      RA_Cavern_416: 1428973697
+      RA_Cavern_417: 105326102
+      RA_Cavern_418: -1515627502
+      RA_Cavern_419: -947573702
+      RA_Cavern_420: 394876736
+      RA_Cavern_421: 565915446
+      RA_Cavern_422: 1863466815
+      RA_Cavern_423: -769235659
+      RA_Cavern_424: -731011422
+      RA_Cavern_425: -2143650042
+      RA_Cavern_426: 291899831
+      RA_Cavern_427: 521916256
+      RA_Cavern_428: 1156164808
+      RA_Cavern_429: -1228012710
+      RA_Cavern_430: 1224301807
+      RA_Cavern_431: -1131743081
+      RA_Cavern_432: -290176733
+      RA_Cavern_433: 384864833
+      RA_Cavern_434: 1236124269
+      RA_Cavern_435: -239707159
+      RA_Cavern_436: -266971446
+      RA_Cavern_437: -461382426
+      RA_Cavern_438: -1300026173
+      RA_Cavern_439: 426765230
+      RA_Cavern_44: -1902712133
+      RA_Cavern_440: -2041113130
+      RA_Cavern_441: 904869848
+      RA_Cavern_442: -1014316320
+      RA_Cavern_443: -1519011201
+      RA_Cavern_444: -273532199
+      RA_Cavern_445: -2001038325
+      RA_Cavern_446: 1097862106
+      RA_Cavern_447: 1865147000
+      RA_Cavern_448: 829940924
+      RA_Cavern_449: 323737186
+      RA_Cavern_45: 551481258
+      RA_Cavern_450: -194590363
+      RA_Cavern_451: 1977880561
+      RA_Cavern_452: -1153869061
+      RA_Cavern_453: 800238877
+      RA_Cavern_454: -1146198838
+      RA_Cavern_455: 149689245
+      RA_Cavern_456: -803725673
+      RA_Cavern_457: 1443266817
+      RA_Cavern_458: -2142535270
+      RA_Cavern_459: 1967741950
+      RA_Cavern_46: -821067531
+      RA_Cavern_460: -520525626
+      RA_Cavern_461: -31260411
+      RA_Cavern_462: -902272580
+      RA_Cavern_463: -899266187
+      RA_Cavern_464: -22488176
+      RA_Cavern_465: 174323485
+      RA_Cavern_466: -376284987
+      RA_Cavern_467: -607056995
+      RA_Cavern_468: -582869760
+      RA_Cavern_469: 884768780
+      RA_Cavern_47: 191464935
+      RA_Cavern_470: -84638289
+      RA_Cavern_471: 1516014404
+      RA_Cavern_472: 1875130349
+      RA_Cavern_473: -1398188000
+      RA_Cavern_474: 824412655
+      RA_Cavern_475: -1065802949
+      RA_Cavern_476: -1611511240
+      RA_Cavern_477: -647169849
+      RA_Cavern_478: -1394232011
+      RA_Cavern_479: 1815025861
+      RA_Cavern_48: 936840865
+      RA_Cavern_480: 1631639002
+      RA_Cavern_481: -1112110927
+      RA_Cavern_482: 825570987
+      RA_Cavern_483: -1465208375
+      RA_Cavern_484: 1967875355
+      RA_Cavern_485: 1048917346
+      RA_Cavern_486: 1464789707
+      RA_Cavern_487: -1990363870
+      RA_Cavern_488: -1965608023
+      RA_Cavern_489: 1832181816
+      RA_Cavern_49: -506799674
+      RA_Cavern_490: 1064217040
+      RA_Cavern_491: -109534149
+      RA_Cavern_492: -1511875769
+      RA_Cavern_493: 662120939
+      RA_Cavern_494: -1504274788
+      RA_Cavern_495: 272677373
+      RA_Cavern_496: -449889523
+      RA_Cavern_497: -1042750958
+      RA_Cavern_498: 610892778
+      RA_Cavern_499: 1016887905
+      RA_Cavern_50: 1310614474
+      RA_Cavern_500: 1856205035
+      RA_Cavern_501: -1859517687
+      RA_Cavern_502: -402023776
+      RA_Cavern_503: -1936420454
+      RA_Cavern_504: -548303911
+      RA_Cavern_505: -468066465
+      RA_Cavern_506: 987322867
+      RA_Cavern_507: 1381752172
+      RA_Cavern_508: 1417621560
+      RA_Cavern_509: -1055640603
+      RA_Cavern_51: 380171323
+      RA_Cavern_510: -1883548920
+      RA_Cavern_511: -1925852708
+      RA_Cavern_512: -923040500
+      RA_Cavern_513: 288472352
+      RA_Cavern_514: 1173838992
+      RA_Cavern_515: -1864176066
+      RA_Cavern_516: 1063089326
+      RA_Cavern_517: -1205218852
+      RA_Cavern_518: 1753567528
+      RA_Cavern_519: 1378488870
+      RA_Cavern_52: -308649542
+      RA_Cavern_520: -1264558624
+      RA_Cavern_521: 662081913
+      RA_Cavern_522: -1071451474
+      RA_Cavern_523: 376618896
+      RA_Cavern_524: -690848861
+      RA_Cavern_525: -25600705
+      RA_Cavern_526: -1650480874
+      RA_Cavern_527: -1759004181
+      RA_Cavern_528: 1695062096
+      RA_Cavern_529: -2142857283
+      RA_Cavern_53: -699978003
+      RA_Cavern_530: 1712370715
+      RA_Cavern_531: 1073600195
+      RA_Cavern_532: 947666898
+      RA_Cavern_533: -1119857604
+      RA_Cavern_534: 1800939465
+      RA_Cavern_535: 2143510420
+      RA_Cavern_536: -308295164
+      RA_Cavern_537: -682648344
+      RA_Cavern_538: 1900892591
+      RA_Cavern_539: -777285919
+      RA_Cavern_54: -1302617655
+      RA_Cavern_540: -660378290
+      RA_Cavern_541: 1099133505
+      RA_Cavern_542: -732374209
+      RA_Cavern_543: 634856495
+      RA_Cavern_544: -187412669
+      RA_Cavern_545: -1248012433
+      RA_Cavern_546: 1658497187
+      RA_Cavern_547: -895997844
+      RA_Cavern_548: 1189965535
+      RA_Cavern_549: 571443065
+      RA_Cavern_55: 560589330
+      RA_Cavern_550: -551723723
+      RA_Cavern_551: 953422768
+      RA_Cavern_552: -1294348147
+      RA_Cavern_553: 1804452813
+      RA_Cavern_554: 1900160831
+      RA_Cavern_555: -433873897
+      RA_Cavern_556: 1391634557
+      RA_Cavern_557: 801689501
+      RA_Cavern_558: -1671152079
+      RA_Cavern_559: -983361556
+      RA_Cavern_56: -1577030887
+      RA_Cavern_560: 1072164255
+      RA_Cavern_561: -1029204872
+      RA_Cavern_562: -908491204
+      RA_Cavern_563: -1340889579
+      RA_Cavern_564: 632843069
+      RA_Cavern_565: -1793197667
+      RA_Cavern_566: 2142874810
+      RA_Cavern_567: 202662985
+      RA_Cavern_568: -1486767246
+      RA_Cavern_569: 1317662396
+      RA_Cavern_57: 1569171780
+      RA_Cavern_570: -849828920
+      RA_Cavern_571: -580307803
+      RA_Cavern_572: -922384024
+      RA_Cavern_573: -113517480
+      RA_Cavern_574: 805738009
+      RA_Cavern_575: -3552991
+      RA_Cavern_576: 1227914069
+      RA_Cavern_577: 1570593017
+      RA_Cavern_578: 1003553809
+      RA_Cavern_579: -403261879
+      RA_Cavern_580: -1855810452
+      RA_Cavern_581: 851649038
+      RA_Cavern_582: -376096414
+      RA_Cavern_583: 1829892037
+      RA_Cavern_584: 397792024
+      RA_Cavern_585: -2021431979
+      RA_Cavern_586: 461192411
+      RA_Cavern_587: 2108643175
+      RA_Cavern_588: -1156283374
+      RA_Cavern_589: 2128699111
+      RA_Cavern_59: 870954792
+      RA_Cavern_590: 846421932
+      RA_Cavern_591: -1162181647
+      RA_Cavern_592: -1760788594
+      RA_Cavern_593: -2105307841
+      RA_Cavern_594: -795018100
+      RA_Cavern_595: -1909840307
+      RA_Cavern_596: 512239893
+      RA_Cavern_597: 1557469630
+      RA_Cavern_598: 1364484451
+      RA_Cavern_599: 1510821527
+      RA_Cavern_600: 2102265834
+      RA_Cavern_601: 802995585
+      RA_Cavern_602: 553007901
+      RA_Cavern_603: -1566964483
+      RA_Cavern_604: 319594369
+      RA_Cavern_605: -1739911734
+      RA_Cavern_606: -924874786
+      RA_Cavern_607: 599471994
+      RA_Cavern_608: 1250560824
+      RA_Cavern_609: -1483194574
+      RA_Cavern_610: -1834416959
+      RA_Cavern_611: 1771546131
+      RA_Cavern_612: -2122288172
+      RA_Cavern_613: -1315729665
+      RA_Cavern_614: -1096911568
+      RA_Cavern_615: 1805592504
+      RA_Cavern_616: 984526226
+      RA_Cavern_617: -421378098
+      RA_Cavern_618: -2105063054
+      RA_Cavern_619: -769566467
+      RA_Cavern_620: -633953559
+      RA_Cavern_621: 2134335810
+      RA_Cavern_622: 1957358307
+      RA_Cavern_623: -1880880375
+      RA_Cavern_624: 1450895860
+      RA_Cavern_625: -217896415
+      RA_Cavern_626: -1340396768
+      RA_Cavern_627: -377131209
+      RA_Cavern_628: -1463898393
+      RA_Cavern_629: -1133407299
+      RA_Cavern_630: 1606268217
+      RA_Cavern_631: -1845481893
+      RA_Cavern_632: -1632979079
+      RA_Cavern_633: 1833973172
+      RA_Cavern_634: 1542302521
+      RA_Cavern_635: -1381259211
+      RA_Cavern_636: 745966719
+      RA_Cavern_637: -1837824084
+      RA_Cavern_638: 1674208805
+      RA_Cavern_639: -1605305117
+      RA_Cavern_640: 2113271527
+      RA_Cavern_641: 1086906404
+      RA_Cavern_642: -1868252677
+      RA_Cavern_643: -1173775482
+      RA_Cavern_644: 398475328
+      RA_Cavern_645: 1545365754
+      RA_Cavern_646: -236524271
+      RA_Cavern_647: -139056924
+      RA_Cavern_648: -1203228124
+      RA_Cavern_649: 757581256
+      RA_Cavern_650: 1473916216
+      RA_Cavern_651: -1212168311
+      RA_Cavern_652: -1520528012
+      RA_Cavern_653: -1448831201
+      RA_Cavern_654: -1776093209
+      RA_Cavern_655: 1582357241
+      RA_Cavern_656: -1917584610
+      RA_Cavern_657: -1961861229
+      RA_Cavern_658: -1501021453
+      RA_Cavern_659: 1672840854
+      RA_Cavern_660: -171444706
+      RA_Cavern_661: 565602961
+      RA_Cavern_662: 200822581
+      RA_Cavern_663: -1935569970
+      RA_Cavern_664: -912956589
+      RA_Cavern_665: 1728123923
+      RA_Cavern_666: 1998864721
+      RA_Cavern_667: 536024990
+      RA_Cavern_668: -2132059646
+      RA_Cavern_669: -1221485210
+      RA_Cavern_670: -1332314266
+      RA_Cavern_671: -969484494
+      RA_Cavern_672: -429462578
+      RA_Cavern_673: 1597650160
+      RA_Cavern_674: 1491904561
+      RA_Cavern_675: 727071245
+      RA_Cavern_676: 730898024
+      RA_Cavern_677: -820116045
+      RA_Cavern_678: -1533229006
+      RA_Cavern_679: 1376863305
+      RA_Cavern_680: -1332956017
+      RA_Cavern_681: 1314129670
+      RA_Cavern_682: -248263334
+      RA_Cavern_683: -1241126292
+      RA_Cavern_684: -1103647842
+      RA_Cavern_685: 1496999299
+      RA_Cavern_686: -1961882610
+      RA_Cavern_687: -1903530680
+      RA_Cavern_688: -745289156
+      RA_Cavern_689: 2129215564
+      RA_Cavern_690: -1770720506
+      RA_Cavern_691: 2055933190
+      RA_Cavern_692: 1126440058
+      RA_Cavern_693: -212294414
+      RA_Cavern_694: -1296296744
+      RA_Cavern_695: -417237458
+      RA_Cavern_696: -1663149261
+      RA_Cavern_697: -1591225757
+      RA_Cavern_698: -1017324552
+      RA_Cavern_699: -1567794262
+      RA_Cavern_700: 803372390
+      RA_Cavern_701: -948004931
+      RA_Cavern_702: -1664350741
+      RA_Cavern_703: 1029275013
+      RA_Cavern_704: -1552896152
+      RA_Cavern_705: -533478047
+      RA_Cavern_706: 1452880710
+      RA_Cavern_707: -621008449
+      RA_Cavern_708: -577904075
+      RA_Cavern_709: -1245938403
+      RA_Cavern_710: -199391911
+      RA_Cavern_711: 1240174471
+      RA_Cavern_712: -1770185472
+      RA_Cavern_713: 1603463478
+      RA_Cavern_714: -451937655
+      RA_Cavern_715: -78165341
+      RA_Cavern_716: -1854574650
+      RA_Cavern_717: -1117457454
+      RA_Cavern_718: 712927235
+      RA_Cavern_719: -1026436087
+      RA_Cavern_720: -1930100484
+      RA_Cavern_721: 674214824
+      RA_Cavern_722: 1382284598
+      RA_Cavern_723: 737966016
+      RA_Cavern_724: 1342748851
+      RA_Cavern_725: 1348811979
+      RA_Cavern_726: 356661339
+      RA_Cavern_727: -800130942
+      RA_Cavern_728: 587217773
+      RA_Cavern_729: -1391984932
+      RA_Cavern_730: -1358157376
+      RA_Cavern_731: 991014470
+      RA_Cavern_732: 1177332873
+      RA_Cavern_733: -1536192867
+      RA_Cavern_734: 732777827
+      RA_Cavern_735: -536040519
+      RA_Cavern_736: -377564492
+      RA_Cavern_737: -333888002
+      RA_Cavern_738: -1747211429
+      RA_Cavern_739: -483719426
+      RA_Cavern_74: -1004730164
+      RA_Cavern_740: 407055672
+      RA_Cavern_741: -752114169
+      RA_Cavern_742: 596222206
+      RA_Cavern_743: 518742290
+      RA_Cavern_744: -1288383929
+      RA_Cavern_745: 1447258359
+      RA_Cavern_746: -1194958686
+      RA_Cavern_747: -424664159
+      RA_Cavern_748: -396362516
+      RA_Cavern_749: 1746819422
+      RA_Cavern_75: -1877088695
+      RA_Cavern_750: -1992566874
+      RA_Cavern_751: -416483074
+      RA_Cavern_752: -523190694
+      RA_Cavern_753: 1884041374
+      RA_Cavern_754: -1740991543
+      RA_Cavern_755: 1684577409
+      RA_Cavern_756: 270055825
+      RA_Cavern_757: 1966595995
+      RA_Cavern_758: 1901184253
+      RA_Cavern_759: 1734456651
+      RA_Cavern_76: -882023097
+      RA_Cavern_760: 639850704
+      RA_Cavern_761: -1307139318
+      RA_Cavern_762: 113816511
+      RA_Cavern_763: -996553810
+      RA_Cavern_764: -232419081
+      RA_Cavern_765: -1784098718
+      RA_Cavern_766: -763098261
+      RA_Cavern_767: -2139121683
+      RA_Cavern_768: 1195103344
+      RA_Cavern_769: -2098950779
+      RA_Cavern_77: 85145585
+      RA_Cavern_770: -1421044684
+      RA_Cavern_771: 124230965
+      RA_Cavern_772: 587000490
+      RA_Cavern_773: 1983798416
+      RA_Cavern_774: -1985333840
+      RA_Cavern_775: -977878663
+      RA_Cavern_776: -336027437
+      RA_Cavern_777: 1726631522
+      RA_Cavern_778: -854823235
+      RA_Cavern_779: -154508704
+      RA_Cavern_78: 1512268731
+      RA_Cavern_780: 431835114
+      RA_Cavern_781: 1180016347
+      RA_Cavern_782: 1545609306
+      RA_Cavern_783: -958706014
+      RA_Cavern_784: 1625716689
+      RA_Cavern_785: 178699498
+      RA_Cavern_786: 1227436578
+      RA_Cavern_787: -936674639
+      RA_Cavern_788: -873439756
+      RA_Cavern_789: -796606604
+      RA_Cavern_79: 1021453551
+      RA_Cavern_790: 391680610
+      RA_Cavern_791: 66405136
+      RA_Cavern_792: 1733148234
+      RA_Cavern_793: 1416587601
+      RA_Cavern_794: -389043538
+      RA_Cavern_795: 1360582759
+      RA_Cavern_796: -121135625
+      RA_Cavern_797: -1000796074
+      RA_Cavern_798: 1043163224
+      RA_Cavern_799: -670876204
+      RA_Cavern_8: -650176008
+      RA_Cavern_80: 1942118492
+      RA_Cavern_800: 612097462
+      RA_Cavern_801: -652539938
+      RA_Cavern_802: 2061466520
+      RA_Cavern_803: -8788442
+      RA_Cavern_804: -910121580
+      RA_Cavern_805: 1422312760
+      RA_Cavern_806: -564180241
+      RA_Cavern_807: 575341228
+      RA_Cavern_808: 54049034
+      RA_Cavern_809: 1161810260
+      RA_Cavern_81: 487661263
+      RA_Cavern_810: -2140508570
+      RA_Cavern_82: -1518262874
+      RA_Cavern_83: -304477916
+      RA_Cavern_84: 230269041
+      RA_Cavern_85: -209287560
+      RA_Cavern_86: 691652846
+      RA_Cavern_87: -474550601
+      RA_Cavern_88: 1493521065
+      RA_Cavern_90: -926149721
+      RA_Cavern_95: 327221920
+      RA_Cavern_99: 2107600119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,6 +9,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 using static Codice.Client.BaseCommands.Import.Commit;
 using Object = UnityEngine.Object;
 
@@ -263,7 +264,6 @@ namespace ZerolizeDungeon {
             GUILayout.Space(DefaultElementHeight);
 
             EditorGUILayout.EndVertical();
-
         }
 
         #endregion
@@ -309,7 +309,10 @@ namespace ZerolizeDungeon {
         private static Texture2D TexturePopupBackground => Base64ToTexture(s_InspectorPopupBackground);
         private static Texture2D TexturePopupBackgroundFocused => Base64ToTexture(s_InspectorPopupBackground_Focused);
 
+        private bool _backup = false;
         private void StyleBackup() {
+            if (_backup == true) Debug.LogError("??");
+
             _labelNormalColor = EditorStyles.label.normal.textColor;
             _labelHoverColor = EditorStyles.label.hover.textColor;
             _labelFocusedColor = EditorStyles.label.focused.textColor;
@@ -331,6 +334,8 @@ namespace ZerolizeDungeon {
             _popupNormalColor = EditorStyles.popup.normal.textColor;
             _popupFocusedColor = EditorStyles.popup.focused.textColor;
             _popupFontStyle = EditorStyles.popup.fontStyle;
+
+            _backup = true;
         }
         private void StyleApply() {
             EditorStyles.label.normal.textColor = InspectorTextColor;
@@ -377,6 +382,8 @@ namespace ZerolizeDungeon {
             EditorStyles.popup.normal.textColor = _popupNormalColor;
             EditorStyles.popup.focused.textColor = _popupFocusedColor;
             EditorStyles.popup.fontStyle = _popupFontStyle;
+
+            _backup = false;
         }
 
         #endregion
@@ -458,8 +465,9 @@ namespace ZerolizeDungeon {
             if (selected == false) return;
             rect.xMin += 3;
             rect.xMax -= 3;
-            if (Event.current.type == EventType.Repaint)
+            if (Event.current.type == EventType.Repaint) {
                 InnerBox.Draw(rect, isHover: false, isActive: selected, on: selected, hasKeyboardFocus: focused);
+            }
 
 
             //if (Event.current.type == EventType.Repaint)
