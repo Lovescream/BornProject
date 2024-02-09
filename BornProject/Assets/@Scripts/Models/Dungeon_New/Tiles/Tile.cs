@@ -65,7 +65,7 @@ namespace ZerolizeDungeon {
                     if (dTile == null) return false;
                     return dTile.type == TileType.Wall || dTile.type == TileType.Edge;
                 case Neighbour.NotBorderNorEdgeNorWall:
-                    if (dTile == null) return false;
+                    if (dTile == null) return true;
                     return dTile.type != TileType.Border && dTile.type != TileType.Edge && dTile.type != TileType.Wall;
             }
             return base.RuleMatch(neighbour, tile);
