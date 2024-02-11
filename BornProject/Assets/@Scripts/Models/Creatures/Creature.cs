@@ -55,6 +55,7 @@ public class Creature : Entity {
 
     protected static readonly int AnimatorParameterHash_Speed = Animator.StringToHash("Speed");
     protected static readonly int AnimatorParameterHash_Hit = Animator.StringToHash("Hit");
+    //protected static readonly int AnimatorParameterHash_Attack = Animator.StringToHash("Attack");
     protected static readonly int AnimatorParameterHash_Dead = Animator.StringToHash("Dead");
 
     // State, Status.
@@ -139,6 +140,7 @@ public class Creature : Entity {
             Current = CreatureState.Idle
         };
         State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
+        //State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
     }
     #endregion
@@ -148,6 +150,10 @@ public class Creature : Entity {
     private void OnEnteredHit() {
         _animator.SetTrigger(AnimatorParameterHash_Hit);
     }
+    //private void OnEnteredAttack()
+    //{
+    //    _animator.SetTrigger(AnimatorParameterHash_Attack);
+    //}
     private void OnEnteredDead() {
         _collider.enabled = false;
         _rigidbody.simulated = false;
@@ -176,6 +182,7 @@ public enum CreatureState
     Idle,
     Chase,
     Hit,
+    Attack,
     Dead,
 }
 
