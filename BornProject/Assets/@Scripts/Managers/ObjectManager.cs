@@ -20,6 +20,7 @@ public class ObjectManager {
         enemy.SetInfo(Main.Data.Creatures[key]);
         return enemy;
     }
+    
     public void DespawnPlayer(Player player = null) {
         if (player == null) player = Player;
         if (player == null) return;

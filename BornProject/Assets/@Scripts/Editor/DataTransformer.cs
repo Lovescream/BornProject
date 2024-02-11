@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ public class DataTransformer : EditorWindow {
 
     public static string csvDataPath = "@Resources/Data/Excel";
     public static string jsonDataPath = "Resources/JsonData";
+    public static string spriteDataPath = "@Resources/Base64/Sprites";
+    public static string base64Path = "Resources";
 
     [MenuItem("Tools/ParseExcel")]
     public static void ParseExcel() {
@@ -21,6 +24,20 @@ public class DataTransformer : EditorWindow {
         ////ParseData<CharacterData>();
         ParseData<ItemData>();
     }
+    [MenuItem("Tools/ParseSpriteToBase64")]
+    public static void ParseSpriteToBase64() {
+        DirectoryInfo directoryInfo = new DirectoryInfo($"{Application.dataPath}/{spriteDataPath}/");
+        StringBuilder stringBuilder = new();
+        foreach (FileInfo fileInfo in directoryInfo.GetFiles()) {
+            if (!fileInfo.Extension.Equals(".png")) continue;
+            byte[] bytes = File.ReadAllBytes(fileInfo.FullName);
+            stringBuilder.AppendLine(fileInfo.Name);
+            stringBuilder.AppendLine(Convert.ToBase64String(bytes));
+        }
+        File.WriteAllText($"{Application.dataPath}/{base64Path}/RuleIcon.minecraftvirusohmygod", stringBuilder.ToString());
+    }
+
+    #region Parse Data
 
     private static void ParseData<T>() where T : Data {
         // #1. 파싱 준비.
@@ -90,6 +107,36 @@ public class DataTransformer : EditorWindow {
         return Activator.CreateInstance(type, value);
     }
 
+    #endregion
+
+    #region Base64
+
+    public static string SpriteToBase64(string fileName) {
+        // Read Base64 file.
+        FileInfo fileInfo = new($"{Application.dataPath}/{spriteDataPath}/{fileName}");
+        string base64String = "";
+        try {
+            using StreamReader reader = new(fileInfo.OpenRead(), Encoding.UTF8);
+            base64String = reader.ReadToEnd();
+        }
+        catch (Exception e) {
+            Debug.LogError($"[Utilities] SpriteToBase64({fileName}): Failed to convert. {e}");
+        }
+        return base64String;
+    }
+    public static Sprite SpriteFromBase64(string base64String) {
+        // Base64 -> bytes.
+        byte[] bytes = Convert.FromBase64String(base64String.Split(',')[1]);
+
+        // bytes -> Texture2D.
+        Texture2D texture2D = new(1, 1);
+        texture2D.LoadImage(bytes);
+
+        // Texture2D -> Sprite.
+        return Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), Vector2.zero);
+    }
+
+    #endregion
 
 #endif
 

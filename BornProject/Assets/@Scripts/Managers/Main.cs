@@ -35,18 +35,20 @@ public class Main : MonoBehaviour {
     private ResourceManager _resource = new();
     private ObjectManager _object = new();
     private DungeonManager _dungeon = new();
+    private UIManager _ui = new();
 
     public static PoolManager Pool => Instance?._pool;
     public static DataManager Data => Instance?._data;
     public static ResourceManager Resource => Instance?._resource;
     public static ObjectManager Object => Instance?._object;
     public static DungeonManager Dungeon => Instance?._dungeon;
-
+    public static UIManager UIManager => Instance?._ui;
     public void ManualInitialize() {
         _pool = new();
         _data = new();
         _resource = new();
         _object = new();
         _dungeon = new();
+        _ui = new();
     }
 }

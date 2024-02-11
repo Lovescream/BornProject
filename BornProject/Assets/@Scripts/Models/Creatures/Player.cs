@@ -27,7 +27,7 @@ public class Player : Creature, IAttackable {
     protected override void FixedUpdate() {
         base.FixedUpdate();
 
-        Attacker.OnUpdate();
+        Attacker.OnUpdate(); 
     }
 
     #endregion
