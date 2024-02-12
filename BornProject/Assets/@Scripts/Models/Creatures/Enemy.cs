@@ -70,6 +70,13 @@ public class Enemy : Creature {
             return;
         }
 
+        // 공격범위에 들어왔을 때 Attack으로 현재상태 전환.
+        if (delta.sqrMagnitude < Range * Range)
+        {
+            State.Current = CreatureState.Attack;
+            Debug.Log("공격 상태 전환");
+        }
+
         Vector2 direction = (Target.transform.position - this.transform.position).normalized;
         Velocity = direction * Status[StatType.MoveSpeed].Value;
         LookDirection = direction;
