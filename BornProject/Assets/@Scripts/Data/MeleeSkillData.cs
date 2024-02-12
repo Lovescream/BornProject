@@ -21,7 +21,8 @@ public class MeleeSkillData : Data {
     // 투사체 정보
     public int Penetration { get; set; }
     public float Speed { get; set; }
-    //public Vector2 Direction { get; set; }
+    public float DirectionX { get; set; }
+    public float DirectionY { get; set; }
     public float Duration { get; set; }
     public float Range { get; set; }
     public int MultipleAttack { get; set; }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6166521402691176538}
   - component: {fileID: 8356331756285239000}
   m_Layer: 5
-  m_Name: GameStart_SceneUI
+  m_Name: UI_Scene_Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 3861154905890168592}
   - component: {fileID: 5540023773829614450}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: textNewGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3448401864867355047}
   - component: {fileID: 5457547945112038106}
   m_Layer: 5
-  m_Name: Controller_Btn
+  m_Name: btnController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 7944156526383739796}
   - component: {fileID: 3690436852644607542}
   m_Layer: 5
-  m_Name: Exit_Btn
+  m_Name: btnExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 162075844633018269}
   - component: {fileID: 8701738188615796216}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: textExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 92569546926395563}
   - component: {fileID: 9055669835398483313}
   m_Layer: 5
-  m_Name: TitleText (TMP)
+  m_Name: textTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 4062186382489307766}
   - component: {fileID: 1298462665297786783}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: textContinue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 8552583062268125672}
   - component: {fileID: 501796888681428164}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 4580188528929252812}
   - component: {fileID: 8427931096360104818}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: textController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 807945765249758494}
   - component: {fileID: 4186425053875255158}
   m_Layer: 5
-  m_Name: NewGame_Btn
+  m_Name: btnNewGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 239713390219086875}
   - component: {fileID: 1437187391545559670}
   m_Layer: 5
-  m_Name: Continue_Btn
+  m_Name: btnContinue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
