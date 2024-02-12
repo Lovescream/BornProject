@@ -17,15 +17,13 @@ namespace ZerolizeDungeon {
 
         #region Properties
 
-        public string Key => _key;
+        public string Key => this.gameObject.name;
         public RoomDirection Direction => _direction;
 
         #endregion
 
         #region Inspector
 
-        [SerializeField]
-        private string _key;
         [SerializeField]
         private RoomDirection _direction;
 
