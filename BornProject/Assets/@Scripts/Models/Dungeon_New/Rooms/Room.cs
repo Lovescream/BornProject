@@ -15,6 +15,13 @@ namespace ZerolizeDungeon {
 
     public class Room : MonoBehaviour {
 
+        #region Properties
+
+        public string Key => _key;
+        public RoomDirection Direction => _direction;
+
+        #endregion
+
         #region Inspector
 
         [SerializeField]
