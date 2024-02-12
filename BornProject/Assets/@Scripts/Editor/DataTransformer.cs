@@ -90,7 +90,17 @@ public class DataTransformer : EditorWindow {
         TypeConverter converter = TypeDescriptor.GetConverter(type);
         if (converter != null && converter.CanConvertFrom(typeof(string))) return string.IsNullOrEmpty(value) ? default : converter.ConvertFromString(value);
 
-        // #2. 리스트 자료인 경우 변환.
+        // #2. Vector형 자료인 경우 변환. "X:0 Y:0"
+        if (type == typeof(Vector2)) {
+            string[] s = value.Replace("X", "").Replace("Y", "").Replace(":", "").Split(' ');
+            return new Vector2(float.Parse(s[0]), float.Parse(s[1]));
+        }
+        else if (type == typeof(Vector3)) {
+            string[] s = value.Replace("X", "").Replace("Y", "").Replace(":", "").Split(' ');
+            return new Vector3(float.Parse(s[0]), float.Parse(s[1]), float.Parse(s[2]));
+        }
+
+        // #3. 리스트 자료인 경우 변환.
         if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>)) {
             Type itemType = type.GetGenericArguments()[0];
             IList list = Activator.CreateInstance(type) as IList;
