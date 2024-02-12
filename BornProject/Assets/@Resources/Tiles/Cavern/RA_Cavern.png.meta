@@ -249,27 +249,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_8
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 496
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 138c285cca1f93845a540223c0db1317
-      internalID: -670876204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Cavern_Floor_01_04
       rect:
         serializedVersion: 2
@@ -333,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_12
+      name: Cavern_FloorObject_Rock00_00
       rect:
         serializedVersion: 2
         x: 256
@@ -354,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_13
+      name: Cavern_FloorObject_Rock00_01
       rect:
         serializedVersion: 2
         x: 272
@@ -375,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_14
+      name: Cavern_FloorObject_Rock00_02
       rect:
         serializedVersion: 2
         x: 288
@@ -396,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_15
+      name: Cavern_FloorObject_Rock00_03
       rect:
         serializedVersion: 2
         x: 304
@@ -417,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_16
+      name: Cavern_FloorObject_Rock00_04
       rect:
         serializedVersion: 2
         x: 320
@@ -1005,7 +984,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_44
+      name: Cavern_FloorObject_Rock00_05
       rect:
         serializedVersion: 2
         x: 256
@@ -1026,7 +1005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_45
+      name: Cavern_FloorObject_Rock00_06
       rect:
         serializedVersion: 2
         x: 272
@@ -1047,7 +1026,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_46
+      name: Cavern_FloorObject_Rock00_07
       rect:
         serializedVersion: 2
         x: 288
@@ -1068,7 +1047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_47
+      name: Cavern_FloorObject_Rock00_08
       rect:
         serializedVersion: 2
         x: 304
@@ -1089,7 +1068,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_48
+      name: Cavern_FloorObject_Rock00_09
       rect:
         serializedVersion: 2
         x: 320
@@ -1614,7 +1593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_74
+      name: Cavern_FloorObject_Rock00_10
       rect:
         serializedVersion: 2
         x: 256
@@ -1635,7 +1614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_75
+      name: Cavern_FloorObject_Rock00_11
       rect:
         serializedVersion: 2
         x: 272
@@ -1656,7 +1635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_76
+      name: Cavern_FloorObject_Rock00_12
       rect:
         serializedVersion: 2
         x: 288
@@ -1677,7 +1656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_77
+      name: Cavern_FloorObject_Rock00_13
       rect:
         serializedVersion: 2
         x: 304
@@ -2034,27 +2013,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_95
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 448
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc5f96fd336d6b04ebf43c661df0c6be
-      internalID: -926149721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Cavern_Floor_02_04
       rect:
         serializedVersion: 2
@@ -2118,28 +2076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_99
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 448
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63fa3f3f46ee0a04384a5ebcdd652485
-      internalID: -1380507648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RA_Cavern_100
+      name: Cavern_Floor_03_04
       rect:
         serializedVersion: 2
         x: 208
@@ -2160,7 +2097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_101
+      name: Cavern_Floor_03_05
       rect:
         serializedVersion: 2
         x: 224
@@ -2181,7 +2118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_102
+      name: Cavern_Floor_03_06
       rect:
         serializedVersion: 2
         x: 240
@@ -2727,7 +2664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_128
+      name: Cavern_Floor_03_00
       rect:
         serializedVersion: 2
         x: 176
@@ -2748,7 +2685,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_129
+      name: Cavern_Floor_03_01
       rect:
         serializedVersion: 2
         x: 192
@@ -2769,7 +2706,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_130
+      name: Cavern_Floor_03_07
       rect:
         serializedVersion: 2
         x: 208
@@ -2790,7 +2727,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_131
+      name: Cavern_Floor_03_08
       rect:
         serializedVersion: 2
         x: 224
@@ -2811,7 +2748,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_132
+      name: Cavern_Floor_03_09
       rect:
         serializedVersion: 2
         x: 240
@@ -3315,7 +3252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_156
+      name: Cavern_Floor_03_02
       rect:
         serializedVersion: 2
         x: 176
@@ -3336,7 +3273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_157
+      name: Cavern_Floor_03_03
       rect:
         serializedVersion: 2
         x: 192
@@ -3357,7 +3294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_158
+      name: Cavern_Floor_03_10
       rect:
         serializedVersion: 2
         x: 208
@@ -3378,7 +3315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_159
+      name: Cavern_Floor_03_11
       rect:
         serializedVersion: 2
         x: 224
@@ -3399,7 +3336,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_160
+      name: Cavern_Floor_03_12
       rect:
         serializedVersion: 2
         x: 240
@@ -3798,28 +3735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_179
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 400
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f25dcad85968204fa867e69c0f64d92
-      internalID: -908443084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RA_Cavern_180
+      name: Cavern_Floor_04_04
       rect:
         serializedVersion: 2
         x: 128
@@ -3840,7 +3756,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_181
+      name: Cavern_Floor_04_05
       rect:
         serializedVersion: 2
         x: 144
@@ -3861,7 +3777,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_182
+      name: Cavern_Floor_04_06
       rect:
         serializedVersion: 2
         x: 160
@@ -3882,28 +3798,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_183
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 400
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84bdc2f255653af428d3bb9d8c03e848
-      internalID: -616571817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RA_Cavern_184
+      name: Cavern_Floor_05_04
       rect:
         serializedVersion: 2
         x: 208
@@ -3924,7 +3819,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_185
+      name: Cavern_Floor_05_05
       rect:
         serializedVersion: 2
         x: 224
@@ -3945,7 +3840,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_186
+      name: Cavern_Floor_05_06
       rect:
         serializedVersion: 2
         x: 240
@@ -4365,7 +4260,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_206
+      name: Cavern_Floor_04_00
       rect:
         serializedVersion: 2
         x: 96
@@ -4386,7 +4281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_207
+      name: Cavern_Floor_04_01
       rect:
         serializedVersion: 2
         x: 112
@@ -4407,7 +4302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_208
+      name: Cavern_Floor_04_07
       rect:
         serializedVersion: 2
         x: 128
@@ -4428,7 +4323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_209
+      name: Cavern_Floor_04_08
       rect:
         serializedVersion: 2
         x: 144
@@ -4449,7 +4344,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_210
+      name: Cavern_Floor_04_09
       rect:
         serializedVersion: 2
         x: 160
@@ -4470,7 +4365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_211
+      name: Cavern_Floor_05_00
       rect:
         serializedVersion: 2
         x: 176
@@ -4491,7 +4386,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_212
+      name: Cavern_Floor_05_01
       rect:
         serializedVersion: 2
         x: 192
@@ -4512,7 +4407,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_213
+      name: Cavern_Floor_05_07
       rect:
         serializedVersion: 2
         x: 208
@@ -4533,7 +4428,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_214
+      name: Cavern_Floor_05_08
       rect:
         serializedVersion: 2
         x: 224
@@ -4554,7 +4449,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_215
+      name: Cavern_Floor_05_09
       rect:
         serializedVersion: 2
         x: 240
@@ -4974,7 +4869,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_235
+      name: Cavern_Floor_04_02
       rect:
         serializedVersion: 2
         x: 96
@@ -4995,7 +4890,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_236
+      name: Cavern_Floor_04_03
       rect:
         serializedVersion: 2
         x: 112
@@ -5016,7 +4911,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_237
+      name: Cavern_Floor_04_10
       rect:
         serializedVersion: 2
         x: 128
@@ -5037,7 +4932,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_238
+      name: Cavern_Floor_04_11
       rect:
         serializedVersion: 2
         x: 144
@@ -5058,7 +4953,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_239
+      name: Cavern_Floor_04_12
       rect:
         serializedVersion: 2
         x: 160
@@ -5079,7 +4974,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_240
+      name: Cavern_Floor_05_02
       rect:
         serializedVersion: 2
         x: 176
@@ -5100,7 +4995,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_241
+      name: Cavern_Floor_05_03
       rect:
         serializedVersion: 2
         x: 192
@@ -5121,7 +5016,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_242
+      name: Cavern_Floor_05_10
       rect:
         serializedVersion: 2
         x: 208
@@ -5142,7 +5037,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_243
+      name: Cavern_Floor_05_11
       rect:
         serializedVersion: 2
         x: 224
@@ -5163,7 +5058,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_244
+      name: Cavern_Floor_05_12
       rect:
         serializedVersion: 2
         x: 240
@@ -5184,7 +5079,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_245
+      name: Cavern_FloorObject_Rock_01_00
       rect:
         serializedVersion: 2
         x: 256
@@ -5205,7 +5100,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_246
+      name: Cavern_FloorObject_Rock_01_01
       rect:
         serializedVersion: 2
         x: 272
@@ -5226,7 +5121,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_247
+      name: Cavern_FloorObject_Rock_01_02
       rect:
         serializedVersion: 2
         x: 288
@@ -5247,7 +5142,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_248
+      name: Cavern_FloorObject_Rock_01_03
       rect:
         serializedVersion: 2
         x: 304
@@ -5268,7 +5163,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_249
+      name: Cavern_FloorObject_Rock_01_04
       rect:
         serializedVersion: 2
         x: 320
@@ -5646,7 +5541,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_267
+      name: Cavern_FloorObject_Grass_00
       rect:
         serializedVersion: 2
         x: 192
@@ -5667,7 +5562,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_268
+      name: Cavern_FloorObject_Grass_01
       rect:
         serializedVersion: 2
         x: 208
@@ -5688,7 +5583,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_269
+      name: Cavern_FloorObject_Grass_02
       rect:
         serializedVersion: 2
         x: 224
@@ -5709,7 +5604,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_270
+      name: Cavern_FloorObject_Grass_03
       rect:
         serializedVersion: 2
         x: 240
@@ -5730,7 +5625,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_271
+      name: Cavern_FloorObject_Rock_01_05
       rect:
         serializedVersion: 2
         x: 256
@@ -5751,7 +5646,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_272
+      name: Cavern_FloorObject_Rock_01_06
       rect:
         serializedVersion: 2
         x: 272
@@ -5772,7 +5667,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_273
+      name: Cavern_FloorObject_Rock_01_07
       rect:
         serializedVersion: 2
         x: 288
@@ -5793,7 +5688,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_274
+      name: Cavern_FloorObject_Rock_01_08
       rect:
         serializedVersion: 2
         x: 304
@@ -5814,7 +5709,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_275
+      name: Cavern_FloorObject_Rock_01_09
       rect:
         serializedVersion: 2
         x: 320
@@ -6276,7 +6171,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_297
+      name: Cavern_FloorObject_Grass_04
       rect:
         serializedVersion: 2
         x: 192
@@ -6297,7 +6192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_298
+      name: Cavern_FloorObject_Grass_05
       rect:
         serializedVersion: 2
         x: 208
@@ -6318,7 +6213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_299
+      name: Cavern_FloorObject_Grass_06
       rect:
         serializedVersion: 2
         x: 224
@@ -6339,7 +6234,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_300
+      name: Cavern_FloorObject_Grass_07
       rect:
         serializedVersion: 2
         x: 240
@@ -6360,7 +6255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_301
+      name: Cavern_FloorObject_Rock_01_10
       rect:
         serializedVersion: 2
         x: 256
@@ -6381,7 +6276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_302
+      name: Cavern_FloorObject_Rock_01_11
       rect:
         serializedVersion: 2
         x: 272
@@ -6402,7 +6297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_303
+      name: Cavern_FloorObject_Rock_01_12
       rect:
         serializedVersion: 2
         x: 288
@@ -6423,7 +6318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_304
+      name: Cavern_FloorObject_Rock_01_13
       rect:
         serializedVersion: 2
         x: 304
@@ -6885,7 +6780,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_326
+      name: Cavern_FloorObject_Grass_08
       rect:
         serializedVersion: 2
         x: 192
@@ -6906,7 +6801,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_327
+      name: Cavern_FloorObject_Grass_09
       rect:
         serializedVersion: 2
         x: 208
@@ -17121,6 +17016,44 @@ TextureImporter:
       Cavern_Edge_16: -515415962
       Cavern_Edge_17: 265513131
       Cavern_Empty: -1771420411
+      Cavern_FloorObject_Grass_00: -42015019
+      Cavern_FloorObject_Grass_01: 1566804979
+      Cavern_FloorObject_Grass_02: 1926362560
+      Cavern_FloorObject_Grass_03: 1249322305
+      Cavern_FloorObject_Grass_04: 2143111159
+      Cavern_FloorObject_Grass_05: 247208180
+      Cavern_FloorObject_Grass_06: 724364238
+      Cavern_FloorObject_Grass_07: -151278611
+      Cavern_FloorObject_Grass_08: -1148306933
+      Cavern_FloorObject_Grass_09: -168050299
+      Cavern_FloorObject_Rock00_00: -2033474584
+      Cavern_FloorObject_Rock00_01: 52675998
+      Cavern_FloorObject_Rock00_02: -1250250818
+      Cavern_FloorObject_Rock00_03: -719713886
+      Cavern_FloorObject_Rock00_04: 383885877
+      Cavern_FloorObject_Rock00_05: 426765230
+      Cavern_FloorObject_Rock00_06: 323737186
+      Cavern_FloorObject_Rock00_07: 1967741950
+      Cavern_FloorObject_Rock00_08: 884768780
+      Cavern_FloorObject_Rock00_09: 1815025861
+      Cavern_FloorObject_Rock00_10: -483719426
+      Cavern_FloorObject_Rock00_11: 1746819422
+      Cavern_FloorObject_Rock00_12: 1734456651
+      Cavern_FloorObject_Rock00_13: -2098950779
+      Cavern_FloorObject_Rock_01_00: 1449731873
+      Cavern_FloorObject_Rock_01_01: 2113398180
+      Cavern_FloorObject_Rock_01_02: -1120502872
+      Cavern_FloorObject_Rock_01_03: 1318793316
+      Cavern_FloorObject_Rock_01_04: -1399723469
+      Cavern_FloorObject_Rock_01_05: 1040740345
+      Cavern_FloorObject_Rock_01_06: -863893965
+      Cavern_FloorObject_Rock_01_07: 444521706
+      Cavern_FloorObject_Rock_01_08: 545014089
+      Cavern_FloorObject_Rock_01_09: 163133489
+      Cavern_FloorObject_Rock_01_10: 1689889577
+      Cavern_FloorObject_Rock_01_11: 1810830580
+      Cavern_FloorObject_Rock_01_12: 969248221
+      Cavern_FloorObject_Rock_01_13: 273106686
       Cavern_Floor_00_00: -1391381500
       Cavern_Floor_00_01: 1138939189
       Cavern_Floor_00_02: -1587568965
@@ -17160,6 +17093,45 @@ TextureImporter:
       Cavern_Floor_02_10: 1475425821
       Cavern_Floor_02_11: 832668446
       Cavern_Floor_02_12: -1443155120
+      Cavern_Floor_03_00: -1461156233
+      Cavern_Floor_03_01: -258789100
+      Cavern_Floor_03_02: -1822269705
+      Cavern_Floor_03_03: -566638606
+      Cavern_Floor_03_04: 1295319284
+      Cavern_Floor_03_05: 753765716
+      Cavern_Floor_03_06: -1761287766
+      Cavern_Floor_03_07: 758763610
+      Cavern_Floor_03_08: 1444723731
+      Cavern_Floor_03_09: -973629408
+      Cavern_Floor_03_10: 1284240936
+      Cavern_Floor_03_11: 1762640642
+      Cavern_Floor_03_12: 1310449063
+      Cavern_Floor_04_00: 2000530260
+      Cavern_Floor_04_01: -1057543278
+      Cavern_Floor_04_02: -490406963
+      Cavern_Floor_04_03: 68598951
+      Cavern_Floor_04_04: -201472979
+      Cavern_Floor_04_05: 838509947
+      Cavern_Floor_04_06: -434583322
+      Cavern_Floor_04_07: 744158158
+      Cavern_Floor_04_08: 2127505249
+      Cavern_Floor_04_09: -827107365
+      Cavern_Floor_04_10: -1460249586
+      Cavern_Floor_04_11: 1868326302
+      Cavern_Floor_04_12: -78624942
+      Cavern_Floor_05_00: -551101744
+      Cavern_Floor_05_01: -1788110987
+      Cavern_Floor_05_02: 1792593843
+      Cavern_Floor_05_03: 1626833056
+      Cavern_Floor_05_04: -2089355492
+      Cavern_Floor_05_05: 557762086
+      Cavern_Floor_05_06: 825035821
+      Cavern_Floor_05_07: -735939413
+      Cavern_Floor_05_08: 1625547298
+      Cavern_Floor_05_09: 1593851196
+      Cavern_Floor_05_10: -1700856485
+      Cavern_Floor_05_11: 572381855
+      Cavern_Floor_05_12: -1110755860
       Cavern_Wall_00: 1881323786
       Cavern_Wall_01: -464876373
       Cavern_Wall_02: -1517258138
@@ -17168,9 +17140,6 @@ TextureImporter:
       Cavern_Wall_05: -315045886
       Cavern_Wall_06: 861088504
       RA_Cavern_0: 987436595
-      RA_Cavern_100: 753765716
-      RA_Cavern_101: -1761287766
-      RA_Cavern_102: -1311889152
       RA_Cavern_103: -636499923
       RA_Cavern_104: -1410167301
       RA_Cavern_105: -964403935
@@ -17185,13 +17154,6 @@ TextureImporter:
       RA_Cavern_114: 69872587
       RA_Cavern_115: 1806876119
       RA_Cavern_116: -2033474584
-      RA_Cavern_12: -169015473
-      RA_Cavern_128: -258789100
-      RA_Cavern_129: 52675998
-      RA_Cavern_13: 758763610
-      RA_Cavern_130: 1444723731
-      RA_Cavern_131: -973629408
-      RA_Cavern_132: -486589675
       RA_Cavern_133: -1797535961
       RA_Cavern_134: -1039356641
       RA_Cavern_135: -822749423
@@ -17199,7 +17161,6 @@ TextureImporter:
       RA_Cavern_137: -2003066819
       RA_Cavern_138: -20533337
       RA_Cavern_139: -1250250818
-      RA_Cavern_14: -2131469640
       RA_Cavern_140: 79518116
       RA_Cavern_141: -1400617332
       RA_Cavern_142: -635373923
@@ -17209,14 +17170,7 @@ TextureImporter:
       RA_Cavern_146: -1667543530
       RA_Cavern_148: -1762432831
       RA_Cavern_149: -719713886
-      RA_Cavern_15: -897651810
       RA_Cavern_150: 495771469
-      RA_Cavern_156: -566638606
-      RA_Cavern_157: 1284240936
-      RA_Cavern_158: 1762640642
-      RA_Cavern_159: 383885877
-      RA_Cavern_16: 1310449063
-      RA_Cavern_160: -1131543612
       RA_Cavern_161: 1692589899
       RA_Cavern_162: 1142736047
       RA_Cavern_163: 951618624
@@ -17238,13 +17192,7 @@ TextureImporter:
       RA_Cavern_178: -908443084
       RA_Cavern_179: 386248981
       RA_Cavern_18: -201472979
-      RA_Cavern_180: 838509947
-      RA_Cavern_181: -434583322
-      RA_Cavern_182: -616571817
       RA_Cavern_183: -2089355492
-      RA_Cavern_184: 557762086
-      RA_Cavern_185: 825035821
-      RA_Cavern_186: -1393865059
       RA_Cavern_187: -240445852
       RA_Cavern_188: 2078766687
       RA_Cavern_189: 1409416458
@@ -17266,17 +17214,7 @@ TextureImporter:
       RA_Cavern_203: -1989159756
       RA_Cavern_204: -1625171559
       RA_Cavern_205: 2000530260
-      RA_Cavern_206: -1057543278
-      RA_Cavern_207: 744158158
-      RA_Cavern_208: 2127505249
-      RA_Cavern_209: 1101923597
       RA_Cavern_21: -827107365
-      RA_Cavern_210: -551101744
-      RA_Cavern_211: -1788110987
-      RA_Cavern_212: -735939413
-      RA_Cavern_213: 1625547298
-      RA_Cavern_214: 1593851196
-      RA_Cavern_215: 1410267450
       RA_Cavern_216: 505620642
       RA_Cavern_217: -923317537
       RA_Cavern_218: -530458223
@@ -17298,22 +17236,7 @@ TextureImporter:
       RA_Cavern_232: -665054211
       RA_Cavern_233: -1784110970
       RA_Cavern_234: -490406963
-      RA_Cavern_235: 68598951
-      RA_Cavern_236: -1460249586
-      RA_Cavern_237: 1868326302
-      RA_Cavern_238: -78624942
-      RA_Cavern_239: 1209737921
       RA_Cavern_24: 1792593843
-      RA_Cavern_240: 1626833056
-      RA_Cavern_241: -1700856485
-      RA_Cavern_242: 572381855
-      RA_Cavern_243: -1110755860
-      RA_Cavern_244: 1449731873
-      RA_Cavern_245: 2113398180
-      RA_Cavern_246: -1120502872
-      RA_Cavern_247: 1318793316
-      RA_Cavern_248: -1399723469
-      RA_Cavern_249: 119226328
       RA_Cavern_25: 730633677
       RA_Cavern_250: 1336607821
       RA_Cavern_251: -1075883227
@@ -17333,16 +17256,7 @@ TextureImporter:
       RA_Cavern_264: 1662396151
       RA_Cavern_265: 2123290137
       RA_Cavern_266: -42015019
-      RA_Cavern_267: 1566804979
-      RA_Cavern_268: 1926362560
-      RA_Cavern_269: 632121275
       RA_Cavern_27: 1249322305
-      RA_Cavern_270: 1040740345
-      RA_Cavern_271: -863893965
-      RA_Cavern_272: 444521706
-      RA_Cavern_273: 545014089
-      RA_Cavern_274: 163133489
-      RA_Cavern_275: 1998528760
       RA_Cavern_276: -1049600823
       RA_Cavern_277: -1901261813
       RA_Cavern_278: 1748963329
@@ -17364,14 +17278,6 @@ TextureImporter:
       RA_Cavern_294: -1654560866
       RA_Cavern_295: 1724840650
       RA_Cavern_296: 2143111159
-      RA_Cavern_297: 247208180
-      RA_Cavern_298: 724364238
-      RA_Cavern_299: -151278611
-      RA_Cavern_300: 1689889577
-      RA_Cavern_301: 1810830580
-      RA_Cavern_302: 969248221
-      RA_Cavern_303: 273106686
-      RA_Cavern_304: -1451591391
       RA_Cavern_305: -1934724102
       RA_Cavern_306: -430402706
       RA_Cavern_307: 449192410
@@ -17393,8 +17299,6 @@ TextureImporter:
       RA_Cavern_323: -405106515
       RA_Cavern_324: 418707629
       RA_Cavern_325: -1148306933
-      RA_Cavern_326: -168050299
-      RA_Cavern_327: -1947252244
       RA_Cavern_328: 572916284
       RA_Cavern_329: -478767322
       RA_Cavern_330: 1151160531
@@ -17507,7 +17411,6 @@ TextureImporter:
       RA_Cavern_437: -461382426
       RA_Cavern_438: -1300026173
       RA_Cavern_439: 426765230
-      RA_Cavern_44: -1902712133
       RA_Cavern_440: -2041113130
       RA_Cavern_441: 904869848
       RA_Cavern_442: -1014316320
@@ -17518,7 +17421,6 @@ TextureImporter:
       RA_Cavern_447: 1865147000
       RA_Cavern_448: 829940924
       RA_Cavern_449: 323737186
-      RA_Cavern_45: 551481258
       RA_Cavern_450: -194590363
       RA_Cavern_451: 1977880561
       RA_Cavern_452: -1153869061
@@ -17529,7 +17431,6 @@ TextureImporter:
       RA_Cavern_457: 1443266817
       RA_Cavern_458: -2142535270
       RA_Cavern_459: 1967741950
-      RA_Cavern_46: -821067531
       RA_Cavern_460: -520525626
       RA_Cavern_461: -31260411
       RA_Cavern_462: -902272580
@@ -17540,7 +17441,6 @@ TextureImporter:
       RA_Cavern_467: -607056995
       RA_Cavern_468: -582869760
       RA_Cavern_469: 884768780
-      RA_Cavern_47: 191464935
       RA_Cavern_470: -84638289
       RA_Cavern_471: 1516014404
       RA_Cavern_472: 1875130349
@@ -17551,7 +17451,6 @@ TextureImporter:
       RA_Cavern_477: -647169849
       RA_Cavern_478: -1394232011
       RA_Cavern_479: 1815025861
-      RA_Cavern_48: 936840865
       RA_Cavern_480: 1631639002
       RA_Cavern_481: -1112110927
       RA_Cavern_482: 825570987
@@ -17822,7 +17721,6 @@ TextureImporter:
       RA_Cavern_737: -333888002
       RA_Cavern_738: -1747211429
       RA_Cavern_739: -483719426
-      RA_Cavern_74: -1004730164
       RA_Cavern_740: 407055672
       RA_Cavern_741: -752114169
       RA_Cavern_742: 596222206
@@ -17833,7 +17731,6 @@ TextureImporter:
       RA_Cavern_747: -424664159
       RA_Cavern_748: -396362516
       RA_Cavern_749: 1746819422
-      RA_Cavern_75: -1877088695
       RA_Cavern_750: -1992566874
       RA_Cavern_751: -416483074
       RA_Cavern_752: -523190694
@@ -17844,7 +17741,6 @@ TextureImporter:
       RA_Cavern_757: 1966595995
       RA_Cavern_758: 1901184253
       RA_Cavern_759: 1734456651
-      RA_Cavern_76: -882023097
       RA_Cavern_760: 639850704
       RA_Cavern_761: -1307139318
       RA_Cavern_762: 113816511
@@ -17855,7 +17751,6 @@ TextureImporter:
       RA_Cavern_767: -2139121683
       RA_Cavern_768: 1195103344
       RA_Cavern_769: -2098950779
-      RA_Cavern_77: 85145585
       RA_Cavern_770: -1421044684
       RA_Cavern_771: 124230965
       RA_Cavern_772: 587000490

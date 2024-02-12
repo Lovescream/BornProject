@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.U2D;
 
 public class ResourceManager {
     public bool IsInitialized { get; private set; } = false;
@@ -12,6 +12,7 @@ public class ResourceManager {
     private Dictionary<string, TextAsset> _jsonData = new();
     private Dictionary<string, RuntimeAnimatorController> _animControllers = new();
     private Dictionary<string, Dictionary<string, Tile>> _tileSets = new();
+    private Dictionary<string, ZerolizeDungeon.Room> _rooms = new();
 
     public void Initialize()
     {
@@ -49,6 +50,12 @@ public class ResourceManager {
             }
             tileSet[tile.name] = tile;
         }
+
+        ZerolizeDungeon.Room[] rooms = Resources.LoadAll<ZerolizeDungeon.Room>("Rooms");
+        foreach (ZerolizeDungeon.Room room in rooms) {
+            _rooms.Add(room.Key, room);
+        }
+
         IsInitialized = true;
     }
 
@@ -96,6 +103,15 @@ public class ResourceManager {
         }
         return tileSet;
     }
+
+    #region Load Rooms
+
+    public List<ZerolizeDungeon.Room> LoadRoom(ZerolizeDungeon.RoomDirection direction) {
+        if ((int)direction == -1) direction = (ZerolizeDungeon.RoomDirection)15;
+        return _rooms.Values.Where(r => r.Direction == direction).ToList();
+    }
+
+    #endregion
 
     // 오브젝트가 풀 안에 있는지 없는지 확인 후 생성.
     public GameObject Instantiate(string key, Transform parent = null, bool pooling = false)

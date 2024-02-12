@@ -12,6 +12,8 @@ namespace ZerolizeDungeon {
         Edge,
         Wall,
         Floor,
+        FloorObject,
+        Object,
     }
 
     [CreateAssetMenu(fileName = "DungeonTile", menuName = "Dungeon/DungeonTile")]
@@ -50,7 +52,7 @@ namespace ZerolizeDungeon {
                     if (dTile == null) return false;
                     return dTile.type == TileType.Border;
                 case Neighbour.Wall:
-                    if (dTile == null) return true;
+                    if (dTile == null) return false;
                     return dTile.type == TileType.Wall;
                 case Neighbour.Edge:
                     if (dTile == null) return false;
