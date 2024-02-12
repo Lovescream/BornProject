@@ -3372,6 +3372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _direction: 11
+  _size: {x: 30, y: 30}
 --- !u!1 &8064428310121711350
 GameObject:
   m_ObjectHideFlags: 0

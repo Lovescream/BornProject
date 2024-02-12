@@ -12602,3 +12602,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _direction: 3
+  _size: {x: 30, y: 30}

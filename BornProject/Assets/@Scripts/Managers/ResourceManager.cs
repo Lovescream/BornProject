@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -102,6 +103,15 @@ public class ResourceManager {
         }
         return tileSet;
     }
+
+    #region Load Rooms
+
+    public List<ZerolizeDungeon.Room> LoadRoom(ZerolizeDungeon.RoomDirection direction) {
+        if ((int)direction == -1) direction = (ZerolizeDungeon.RoomDirection)15;
+        return _rooms.Values.Where(r => r.Direction == direction).ToList();
+    }
+
+    #endregion
 
     // 오브젝트가 풀 안에 있는지 없는지 확인 후 생성.
     public GameObject Instantiate(string key, Transform parent = null, bool pooling = false)
