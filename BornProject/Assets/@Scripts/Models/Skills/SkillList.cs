@@ -9,7 +9,7 @@ public class SkillList {
 
     public Creature Owner { get; protected set; }
 
-    public Skill_Basic BasicRange {
+    public RangerSkillData BasicRange {
         get => _basicRange;
         set {
             if (value == _basicRange) return;
@@ -17,7 +17,7 @@ public class SkillList {
             OnChangedBasicRange?.Invoke(value);
         }
     }
-    public Skill_Basic BasicMelee {
+    public MeleeSkillData BasicMelee {
         get => _basicMelee;
         set {
             if (value == _basicMelee) return;
@@ -30,12 +30,12 @@ public class SkillList {
 
     #region Fields
 
-    private Skill_Basic _basicRange;
-    private Skill_Basic _basicMelee;
+    private RangerSkillData _basicRange;
+    private MeleeSkillData _basicMelee;
 
     // Events.
-    public event Action<Skill_Basic> OnChangedBasicRange;
-    public event Action<Skill_Basic> OnChangedBasicMelee;
+    public event Action<RangerSkillData> OnChangedBasicRange;
+    public event Action<MeleeSkillData> OnChangedBasicMelee;
 
     #endregion
 
@@ -43,13 +43,20 @@ public class SkillList {
 
     public SkillList(Creature owner) {
         Owner = owner;
-        OnChangedBasicRange += OnChangedBasicSkill;
-        OnChangedBasicMelee += OnChangedBasicSkill;
+        OnChangedBasicRange += OnChangedRangerBasicSkill;
+        OnChangedBasicMelee += OnChangedMeleeBasicSkill;
     }
 
     #endregion
 
-    private void OnChangedBasicSkill(Skill_Basic basicSkill) {
+    private void OnChangedRangerBasicSkill(RangerSkillData basicSkill) {
+        Owner.Status[StatType.Damage].SetValue(basicSkill.Damage);
+        Owner.Status[StatType.AttackSpeed].SetValue(basicSkill.AttackSpeed);
+        Owner.Status[StatType.Range].SetValue(basicSkill.Range);
+    }
+
+    private void OnChangedMeleeBasicSkill(MeleeSkillData basicSkill)
+    {
         Owner.Status[StatType.Damage].SetValue(basicSkill.Damage);
         Owner.Status[StatType.AttackSpeed].SetValue(basicSkill.AttackSpeed);
         Owner.Status[StatType.Range].SetValue(basicSkill.Range);

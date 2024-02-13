@@ -18,7 +18,7 @@ public class Player : Creature, IAttackable {
 
     protected static readonly int AnimatorParameterHash_Attack = Animator.StringToHash("Attack");
 
-    private bool _isRangeAttack_Temp = false;
+    private bool _isRangeAttack = false;
 
     #endregion
 
@@ -59,7 +59,8 @@ public class Player : Creature, IAttackable {
                 HitColliderCount = 1,
                 HitColliderAngle = 0,
                 Speed = 10,
-                Direction = Vector2.zero,
+                DirectionX = 0,
+                DirectionY = 0,
                 Duration = 5f,
                 Range = 5,
                 HitColliderSize = 1,
@@ -77,7 +78,8 @@ public class Player : Creature, IAttackable {
                 HitColliderCount = 1,
                 HitColliderAngle = 0,
                 Speed = 0,
-                Direction = Vector2.zero,
+                DirectionX = 0,
+                DirectionY = 0,
                 Duration = 0,
                 Range = 1,
                 HitColliderSize = 1,
@@ -108,24 +110,32 @@ public class Player : Creature, IAttackable {
         LookDirection = v.normalized;
     }
     protected void OnAttackMain() {
-        _isRangeAttack_Temp = true;
+        _isRangeAttack = true;
         Attack();
     }
     protected void OnAttackSub() {
-        _isRangeAttack_Temp = false;
+        _isRangeAttack = false;
         Attack();
     }
 
     #endregion
 
     public void Attack() {
-        Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
+        if (_isRangeAttack){
+            Attacker.Attack(GetRangerHitColliderGenerationInfo(), GetRangerHitColliderInfo(), GetRangerHitInfo());
+            Debug.Log("원거리 공격");
+        }
+        else if(!_isRangeAttack) {
+            Attacker.Attack(GetMeleeHitColliderGenerationInfo(), GetMeleeHitColliderInfo(), GetMeleeHitInfo());
+            Debug.Log("근거리 공격");
+            Debug.Log(this.Damage + "근접 데미지 수치입니다.");
+        }        
     }
 
-    public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
-        Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
-
-        return new() {
+    public HitColliderGenerationInfo GetRangerHitColliderGenerationInfo() {        
+        RangerSkillData basicSkill = SkillList.BasicRange;
+        return new()
+        {
             Owner = this,
             HitColliderKey = basicSkill.HitColliderKey,
             RadiusOffset = basicSkill.RadiusOffset,
@@ -135,20 +145,45 @@ public class Player : Creature, IAttackable {
             Size = basicSkill.HitColliderSize,
         };
     }
-
-    public HitColliderInfo GetHitColliderInfo() {
-        Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
-
+    public HitColliderGenerationInfo GetMeleeHitColliderGenerationInfo() {
+        MeleeSkillData basicSkill = SkillList.BasicMelee;
+        return new()
+        {
+            Owner = this,
+            HitColliderKey = basicSkill.HitColliderKey,
+            RadiusOffset = basicSkill.RadiusOffset,
+            RotationAngle = basicSkill.RotationAngle < 0 ? LookAngle : basicSkill.RotationAngle,
+            Count = basicSkill.HitColliderCount,
+            SpreadAngle = basicSkill.HitColliderAngle,
+            Size = basicSkill.HitColliderSize,
+        };
+    }
+    public HitColliderInfo GetRangerHitColliderInfo() {
+        RangerSkillData basicSkill = SkillList.BasicRange;
         return new() {
             Penetration = basicSkill.Penetration,
             Speed = basicSkill.Speed,
-            Direction = basicSkill.Direction.magnitude <= float.Epsilon ? LookDirection : basicSkill.Direction,
+            DirectionX = basicSkill.DirectionX,
+            DirectionY = basicSkill.DirectionY,
             Duration = basicSkill.Duration,
             Range = basicSkill.Range,
         };
     }
-    public HitInfo GetHitInfo() {
-        Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
+    public HitColliderInfo GetMeleeHitColliderInfo() {
+        MeleeSkillData basicSkill = SkillList.BasicMelee;
+
+        return new()
+        {
+            Penetration = basicSkill.Penetration,
+            Speed = basicSkill.Speed,
+            DirectionX = basicSkill.DirectionX,
+            DirectionY = basicSkill.DirectionY,
+            Duration = basicSkill.Duration,
+            Range = basicSkill.Range,
+        };
+    }
+    public HitInfo GetRangerHitInfo() {
+        RangerSkillData basicSkill = SkillList.BasicRange;
 
         return new() {
             Owner = this,
@@ -156,6 +191,22 @@ public class Player : Creature, IAttackable {
             CriticalChance = basicSkill.CriticalChance,
             CriticalBonus = basicSkill.CriticalBonus,
             Knockback = new() {
+                time = 0.1f,
+                speed = 10f,
+            }
+        };
+    }
+    public HitInfo GetMeleeHitInfo(){
+        MeleeSkillData basicSkill = SkillList.BasicMelee;
+
+        return new()
+        {
+            Owner = this,
+            Damage = this.Damage,            
+            CriticalChance = basicSkill.CriticalChance,
+            CriticalBonus = basicSkill.CriticalBonus,
+            Knockback = new()
+            {
                 time = 0.1f,
                 speed = 10f,
             }

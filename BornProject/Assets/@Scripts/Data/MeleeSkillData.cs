@@ -8,7 +8,7 @@ public class MeleeSkillData : Data {
 
     // 기본 정보
     public string Name { get; set; }
-    public MeleeType Type { get; private set; }
+    public MeleeSkillType Type { get; private set; }
     public string Description { get; set; }
     // 투사체 생성 정보
     public string HitColliderKey => Name;
@@ -36,11 +36,10 @@ public class MeleeSkillData : Data {
 
     #endregion   
 
-
-    public enum MeleeType
-    {
-        Slash,
-        Sting,
-        Smash
-    }
+}
+public enum MeleeSkillType
+{
+    BasicSkill,
+    StatSkill,
+    UniqueSkill,
 }
