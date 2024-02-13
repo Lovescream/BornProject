@@ -23,7 +23,8 @@ public struct AttackInfo {
 
     // 운동 정보
     public float Speed { get; set; }
-    public Vector2 Direction { get; set; }
+    public float DirectionX { get; set; }
+    public float DirectionY { get; set; }
 
     // 시간 정보
     public float Duration { get; set; }
@@ -32,7 +33,7 @@ public struct AttackInfo {
     public KnockbackInfo Knockback { get; set; }
 
     // 속성
-    public readonly Vector2 Velocity => Direction * Speed;
+    public readonly Vector2 Velocity => new Vector2(DirectionX, DirectionY) * Speed;
 
 }
 
@@ -48,10 +49,11 @@ public struct HitColliderGenerationInfo {
 public struct HitColliderInfo {
     public int Penetration { get; set; }
     public float Speed { get; set; }
-    public Vector2 Direction { get; set; }
+    public float DirectionX { get; set; }
+    public float DirectionY { get; set; }
     public float Duration { get; set; }
     public float Range { get; set; }
-    public readonly Vector2 Velocity => Direction * Speed;
+    public readonly Vector2 Velocity => new Vector2(DirectionX, DirectionY) * Speed;
 }
 public struct HitInfo {
     public IAttackable Owner { get; set; }

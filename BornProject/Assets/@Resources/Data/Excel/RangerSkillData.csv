@@ -4,5 +4,5 @@ PowerBeam1,PowerBeam1,StatSkill,데미지 증가,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0
 SizeBeam1,SizeBeam1,StatSkill,크기 증가,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
 DoubleBeam1,DoubleBeam1,StatSkill,공격속도 증가,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2
 PowerBeam2,PowerBeam2,UniqueSkill,치명타 극대화,0,0,0,0,0,0,0,0,0,0,0,0,0,20,100,0
-SizeBeam2,SizeBeam2,UniqueSkill,빔 갯수 증가,0,0,2,90,0,0,0,0,0,0,0,0,0,0,0,0
+SizeBeam2,SizeBeam2,UniqueSkill,빔 범위 증가 ,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0
 DoubleBeam2,DoubleBeam2,UniqueSkill,연속 두번 공격,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
