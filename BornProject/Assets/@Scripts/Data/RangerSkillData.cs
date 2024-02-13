@@ -8,7 +8,7 @@ public class RangerSkillData : Data
 
     // 기본 정보
     public string Name { get; set; }    
-    public RangerType Type { get; private set; }
+    public RangerSkillType Type { get; set; }
     public string Description { get; set; }
     // 투사체 생성 정보
     public string HitColliderKey => Name;
@@ -33,13 +33,12 @@ public class RangerSkillData : Data
     public float CriticalBonus { get; set; }
     public float AttackSpeed { get; set; }
 
-
     #endregion   
-
-    public enum RangerType
-    {
-        BasicSkill,
-        StatSkill,
-        UniqueSkill,
-    }
+    
+}
+public enum RangerSkillType
+{
+    BasicSkill,
+    StatSkill,
+    UniqueSkill,
 }

@@ -21,10 +21,10 @@ public class DataTransformer : EditorWindow {
     [MenuItem("Tools/ParseExcel")]
     public static void ParseExcel() {
         ParseData<CreatureData>();
-        ////ParseData<CharacterData>();
+        //ParseData<CharacterData>();
         ParseData<ItemData>();
         ParseData<RangerSkillData>();
-        //ParseData<MeleeSkillData>();
+        ParseData<MeleeSkillData>();
     }
     [MenuItem("Tools/ParseSpriteToBase64")]
     public static void ParseSpriteToBase64() {

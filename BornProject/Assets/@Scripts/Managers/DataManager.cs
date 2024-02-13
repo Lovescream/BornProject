@@ -18,7 +18,7 @@ public class DataManager {
         Creatures = LoadJson<CreatureData>();
         Items = LoadJson<ItemData>();
         RangerSkills = LoadJson<RangerSkillData>();
-        //MeleeSkills = LoadJson<MeleeSkillData>();
+        MeleeSkills = LoadJson<MeleeSkillData>();
 
         IsInitialized = true;
     }
