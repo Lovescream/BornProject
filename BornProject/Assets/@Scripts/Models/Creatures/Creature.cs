@@ -152,8 +152,7 @@ public class Creature : Entity {
     }
     private void OnEnteredAttack()
     {
-        _animator.SetTrigger(AnimatorParameterHash_Attack);
-        Debug.Log("공격 애니메이션 재생");
+        _animator.SetTrigger(AnimatorParameterHash_Attack); // TODO: 공격 애니메이션 추가!!
     }
     private void OnEnteredDead() {
         _collider.enabled = false;
@@ -166,9 +165,10 @@ public class Creature : Entity {
         Hp -= hitInfo.Damage;
 
         if (hitInfo.Knockback.time > 0) {
+            CreatureState originState = State.Current; // 원래 상태 저장.
             State.Current = CreatureState.Hit;
             Velocity = (this.transform.position - attacker.CurrentPosition).normalized * hitInfo.Knockback.speed;
-            State.SetStateAfterTime(CreatureState.Idle, hitInfo.Knockback.time);
+            State.SetStateAfterTime(originState, hitInfo.Knockback.time); // 넉백 시간이 끝나면 원래 상태로 돌아간다.
         }
     }
 
