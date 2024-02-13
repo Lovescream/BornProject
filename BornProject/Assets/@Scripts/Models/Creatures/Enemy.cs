@@ -47,6 +47,7 @@ public class Enemy : Creature {
         base.SetState();
         State.AddOnStay(CreatureState.Idle, OnStayIdle);
         State.AddOnStay(CreatureState.Chase, OnStayChase);
+        State.AddOnStay(CreatureState.Attack, OnStayAttack);
     }
 
     #endregion
@@ -75,8 +76,28 @@ public class Enemy : Creature {
         {
             State.Current = CreatureState.Attack;
             Debug.Log("공격 상태 전환");
+            return;
         }
 
+        Vector2 direction = (Target.transform.position - this.transform.position).normalized;
+        Velocity = direction * Status[StatType.MoveSpeed].Value;
+        LookDirection = direction;
+    }
+
+    private void OnStayAttack()
+    {
+        Vector2 delta = Target.transform.position - this.transform.position;
+        if (delta.sqrMagnitude > Range * Range) // 공격범위를 벗어났고
+        {
+            if (delta.sqrMagnitude < 4 * Sight * Sight) // 시야범위에 있다면
+            {
+                State.Current = CreatureState.Chase;
+                Debug.Log("공격범위 벗어남");
+                return;
+            }
+        }
+
+        // 공격할 때 플레이어의 위치를 실시간으로 체크.
         Vector2 direction = (Target.transform.position - this.transform.position).normalized;
         Velocity = direction * Status[StatType.MoveSpeed].Value;
         LookDirection = direction;
