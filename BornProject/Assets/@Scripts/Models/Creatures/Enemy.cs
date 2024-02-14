@@ -1,10 +1,13 @@
+using DG.Tweening.Core.Easing;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Creature {
+public class Enemy : Creature, IAttackable {
 
     #region Properties
+
+    public Attacker Attacker { get; protected set; }
 
     public Creature Target {
         get => _target;
@@ -51,6 +54,14 @@ public class Enemy : Creature {
         State.AddOnStay(CreatureState.Idle, OnStayIdle);
         State.AddOnStay(CreatureState.Chase, OnStayChase);
         State.AddOnStay(CreatureState.Attack, OnStayAttack);
+
+        this.Attacker = new(this);
+        this.Attacker.OnStartAttack += () => {
+            _animator.SetBool(AnimatorParameterHash_Attack, true);
+        };
+        this.Attacker.OnEndAttack += () => {
+            _animator.SetBool(AnimatorParameterHash_Attack, false);
+        };
     }
 
     #endregion
@@ -82,7 +93,6 @@ public class Enemy : Creature {
         if (delta.sqrMagnitude < Range * Range)
         {
             State.Current = CreatureState.Attack;
-            Debug.Log("공격 상태 전환");
             return;
         }
 
@@ -103,6 +113,11 @@ public class Enemy : Creature {
                 return;
             }
         }
+        else
+        {
+            Attack();
+            Debug.Log("퍽");
+        }
 
         // 공격할 때 플레이어의 위치를 실시간으로 체크.
         Vector2 direction = (Target.transform.position - this.transform.position).normalized;
@@ -110,6 +125,56 @@ public class Enemy : Creature {
         LookDirection = direction;
     }
 
+    #endregion
+
+    #region Attack
+    public void Attack()
+    {
+        Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
+    }
+
+    public HitColliderGenerationInfo GetHitColliderGenerationInfo()
+    {
+        return new()
+        {
+            Owner = this,
+            HitColliderKey = "Slash",
+            RadiusOffset = 0.5f,
+            RotationAngle = -1f,
+            Count = 1,
+            SpreadAngle = 0,
+            Size = 1,
+        };
+    }
+
+    public HitColliderInfo GetHitColliderInfo()
+    {
+        return new()
+        {
+            Penetration = 1,
+            Speed = 0,
+            DirectionX = 0,
+            DirectionY = 0,
+            Duration = 0,
+            Range = 0,
+        };
+    }
+
+    public HitInfo GetHitInfo()
+    {
+        return new()
+        {
+            Owner = this,
+            Damage = this.Damage,
+            CriticalChance = 0,
+            CriticalBonus = 0,
+            Knockback = new()
+            {
+                time = 0.1f,
+                speed = 10f,
+            }
+        };
+    }
     #endregion
 
     // 이 Creature의 시야 내의 적을 찾습니다.
