@@ -1,3 +1,4 @@
+using DungeonGenerate;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -97,12 +98,12 @@ namespace ZerolizeDungeon {
             return true;
         }
 
-        public virtual void SetInfo(Vector2Int index) {
+        public virtual void SetInfo(Dungeon dungeon, RoomGenerateData data) {
             Initialize();
 
             // #1. Room 설정.
-            this.X = index.x;
-            this.Y = index.y;
+            this.X = data.X;
+            this.Y = data.Y;
             this.transform.name = $"Room[{X}, {Y}]";
             this.transform.position = OriginPosition;
 
@@ -112,7 +113,10 @@ namespace ZerolizeDungeon {
                 _neighbours[(Direction)i] = null;
             }
 
-            // #3. 통로 설정.
+            // #3. 타입 설정.
+            SetType(dungeon, data);
+
+            // #4. 통로 설정.
             for (int i = 0; i < 4; i++) {
                 if (((int)Direction & (1 << i)) == 0) continue;
                 Debris debris = Main.Resource.Instantiate("Debris", this.transform, true).GetComponent<Debris>();
@@ -155,6 +159,26 @@ namespace ZerolizeDungeon {
         }
         public void CloseDoor() {
             for (int i = 0; i < 4; i++) CloseDoor((Direction)i);
+        }
+
+        #endregion
+
+        #region Type
+
+        private void SetType(Dungeon dungeon, RoomGenerateData data) {
+            if (dungeon.StartRoom == null && data.DistanceFromStart == 0) {
+                Type = RoomType.Start;
+                return;
+            }
+            if (dungeon.BossRoom == null && data.DistanceFromStart == dungeon.FarthestDistance) {
+                Type = RoomType.Boss;
+                return;
+            }
+            if (dungeon.TreasureRoom == null && data.NeighbourCount == 1) {
+                Type = RoomType.Treasure;
+                return;
+            }
+            Type = RoomType.Normal;
         }
 
         #endregion

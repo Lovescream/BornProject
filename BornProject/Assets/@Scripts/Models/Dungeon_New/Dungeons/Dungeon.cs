@@ -13,6 +13,8 @@ namespace ZerolizeDungeon {
         public Room StartRoom { get; private set; }
         public Room BossRoom { get; private set; }
         public Room TreasureRoom { get; private set; }
+        
+        public int FarthestDistance { get; private set; }
 
         public List<Room> Rooms => _rooms.Values.ToList();
 
@@ -28,11 +30,12 @@ namespace ZerolizeDungeon {
         public Dungeon(HashSet<RoomGenerateData> result, Transform root) {
             _generateData = result;
 
+            FarthestDistance = _generateData.Max(x => x.DistanceFromStart);
+
             foreach (RoomGenerateData data in _generateData) {
-                Vector2Int index = new(data.X, data.Y);
                 Room newRoom = GenerateRoom(data.NeighbourInfo);
-                newRoom.SetInfo(index);
-                _rooms[index] = newRoom;
+                newRoom.SetInfo(this, data);
+                _rooms[new(data.X, data.Y)] = newRoom;
                 if (newRoom.Type == RoomType.Start) StartRoom = newRoom;
                 else if (newRoom.Type == RoomType.Boss) BossRoom = newRoom;
                 else if (newRoom.Type == RoomType.Treasure) TreasureRoom = newRoom;
