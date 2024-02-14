@@ -25,7 +25,9 @@ public class MeleeSkillData : Data {
     public float DirectionY { get; set; }
     public float Duration { get; set; }
     public float Range { get; set; }
-    public int MultipleAttack { get; set; }
+    public int MultipleShotCount { get; set; }
+    public int ExtraShotCount { get; set; }
+    public int BerserkAttackCount { get; set; }
 
     // 능력치 정보
     public float Damage { get; set; }
