@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class MeleeSkill : Skill {
 
-    
+    #region Properties
+
+    #endregion
 }

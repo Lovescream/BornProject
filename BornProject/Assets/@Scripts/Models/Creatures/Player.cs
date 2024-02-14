@@ -46,44 +46,8 @@ public class Player : Creature, IAttackable {
         base.SetInfo(data);
 
         SkillList = new(this) {
-            BasicRange = new() {
-                Name = "BasicProjectile",
-                Description = "",
-                RadiusOffset = 0.25f,
-                RotationAngle = 0,
-                Damage = 10,
-                CriticalChance = 0,
-                CriticalBonus = 1.5f,
-                Penetration = 1,
-                AttackSpeed = 1,
-                HitColliderCount = 1,
-                HitColliderAngle = 0,
-                Speed = 10,
-                DirectionX = 0,
-                DirectionY = 0,
-                Duration = 5f,
-                Range = 5,
-                HitColliderSize = 1,
-            },
-            BasicMelee = new() {
-                Name = "BasicMelee",
-                Description = "",
-                RadiusOffset = 0.5f,
-                RotationAngle = -1,
-                Damage = 10,
-                CriticalChance = 0,
-                CriticalBonus = 1.5f,
-                Penetration = 1,
-                AttackSpeed = 1,
-                HitColliderCount = 1,
-                HitColliderAngle = 0,
-                Speed = 0,
-                DirectionX = 0,
-                DirectionY = 0,
-                Duration = 0,
-                Range = 1,
-                HitColliderSize = 1,
-            },
+            BasicRange = Main.Data.RangerSkills["BasicBeam"],
+            BasicMelee = Main.Data.MeleeSkills["PowerSlash1"],
         };
     }
     protected override void SetState() {
@@ -123,17 +87,16 @@ public class Player : Creature, IAttackable {
     public void Attack() {
         if (_isRangeAttack){
             Attacker.Attack(GetRangerHitColliderGenerationInfo(), GetRangerHitColliderInfo(), GetRangerHitInfo());
-            Debug.Log("원거리 공격");
+            Debug.Log("데미지 :"+ Damage + " 원거리 수치입니다.");
         }
         else if(!_isRangeAttack) {
             Attacker.Attack(GetMeleeHitColliderGenerationInfo(), GetMeleeHitColliderInfo(), GetMeleeHitInfo());
-            Debug.Log("근거리 공격");
-            Debug.Log(this.Damage + "근접 데미지 수치입니다.");
+            Debug.Log("데미지 :" + Damage + " 근접 수치입니다.");
         }        
     }
 
     public HitColliderGenerationInfo GetRangerHitColliderGenerationInfo() {        
-        RangerSkillData basicSkill = SkillList.BasicRange;
+        RangerSkillData basicSkill = SkillList.BasicRange;      
         return new()
         {
             Owner = this,
@@ -171,7 +134,6 @@ public class Player : Creature, IAttackable {
     }
     public HitColliderInfo GetMeleeHitColliderInfo() {
         MeleeSkillData basicSkill = SkillList.BasicMelee;
-
         return new()
         {
             Penetration = basicSkill.Penetration,
@@ -184,7 +146,6 @@ public class Player : Creature, IAttackable {
     }
     public HitInfo GetRangerHitInfo() {
         RangerSkillData basicSkill = SkillList.BasicRange;
-
         return new() {
             Owner = this,
             Damage = this.Damage,
@@ -198,7 +159,6 @@ public class Player : Creature, IAttackable {
     }
     public HitInfo GetMeleeHitInfo(){
         MeleeSkillData basicSkill = SkillList.BasicMelee;
-
         return new()
         {
             Owner = this,
