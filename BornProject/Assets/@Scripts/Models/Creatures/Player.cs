@@ -46,8 +46,8 @@ public class Player : Creature, IAttackable {
         base.SetInfo(data);
 
         SkillList = new(this) {
-            BasicRange = Main.Data.RangerSkills["BasicBeam"],
-            BasicMelee = Main.Data.MeleeSkills["PowerSlash1"],
+            BasicRange = Main.Data.RangerSkills["LaserBeam"],
+            BasicMelee = Main.Data.MeleeSkills["Slash"],
         };
     }
     protected override void SetState() {

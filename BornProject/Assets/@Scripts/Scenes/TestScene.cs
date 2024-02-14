@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class TestScene : BaseScene {
 
-
-    void Update() {
-
-    }
+    public Player Player { get; private set; }
 
     protected override bool Initialize() {
         if (!base.Initialize()) return false;
+
+        // #1. Map 생성.
+        Main.Dungeon.Generate();
+        Debug.Log(Main.Dungeon.Current);
+        Debug.Log(Main.Dungeon.Current.StartRoom);
+        // #2. Player 생성.
+        Player = Main.Object.SpawnPlayer("Player", Main.Dungeon.Current.StartRoom.CenterPosition);
 
         return true;
     }
