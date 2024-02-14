@@ -9,6 +9,7 @@ public class DataManager {
     public bool IsInitialized { get; private set; } = false;
 
     public Dictionary<string, CreatureData> Creatures = new();
+    public Dictionary<string, SkillData> Skills = new();
     public Dictionary<string, ItemData> Items = new();
     public Dictionary<string, RangerSkillData> RangerSkills = new();
     public Dictionary<string, MeleeSkillData> MeleeSkills = new();
@@ -17,6 +18,7 @@ public class DataManager {
     {
         Creatures = LoadJson<CreatureData>();
         Items = LoadJson<ItemData>();
+        Skills = LoadJson<SkillData>();
         RangerSkills = LoadJson<RangerSkillData>();
         MeleeSkills = LoadJson<MeleeSkillData>();
 

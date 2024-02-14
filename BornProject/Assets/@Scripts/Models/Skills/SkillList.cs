@@ -9,20 +9,12 @@ public class SkillList {
 
     public Creature Owner { get; protected set; }
 
-    public RangerSkillData BasicRange {
-        get => _basicRange;
+    public SkillData CurrentBasicSkill {
+        get => _currentBasicSkill;
         set {
-            if (value == _basicRange) return;
-            _basicRange = value;
-            OnChangedBasicRange?.Invoke(value);
-        }
-    }
-    public MeleeSkillData BasicMelee {
-        get => _basicMelee;
-        set {
-            if (value == _basicMelee) return;
-            _basicMelee = value;
-            OnChangedBasicMelee?.Invoke(value);
+            if (value == _currentBasicSkill) return;
+            _currentBasicSkill = value;
+            OnChangedBasicSkill?.Invoke(value);
         }
     }
 
@@ -30,12 +22,14 @@ public class SkillList {
 
     #region Fields
 
-    private RangerSkillData _basicRange;
-    private MeleeSkillData _basicMelee;
+    private int _currentBasicSkillIndex;
+    private SkillData _currentBasicSkill;
+
+    // Collections.
+    private List<SkillData> _basicSkills;
 
     // Events.
-    public event Action<RangerSkillData> OnChangedBasicRange;
-    public event Action<MeleeSkillData> OnChangedBasicMelee;
+    public event Action<SkillData> OnChangedBasicSkill;
 
     #endregion
 
@@ -43,22 +37,64 @@ public class SkillList {
 
     public SkillList(Creature owner) {
         Owner = owner;
-        OnChangedBasicRange += OnChangedRangerBasicSkill;
-        OnChangedBasicMelee += OnChangedMeleeBasicSkill;
+        OnChangedBasicSkill += UpdateStatus;
+
+        _basicSkills = new();
     }
 
     #endregion
 
-    private void OnChangedRangerBasicSkill(RangerSkillData basicSkill) {
-        Owner.Status[StatType.Damage].SetValue(basicSkill.Damage);
-        Owner.Status[StatType.AttackSpeed].SetValue(basicSkill.AttackSpeed);
-        Owner.Status[StatType.Range].SetValue(basicSkill.Range);
+    #region Add/Remove Basic Skill
+
+    public void AddBasicSkill(SkillData skillData) {
+        _basicSkills.Add(skillData);
+        if (_basicSkills.Count != 1) return;
+        _currentBasicSkillIndex = 0;
+        CurrentBasicSkill = _basicSkills[0];
+    }
+    public void RemoveBasicSkill(SkillData skillData) {
+        if (!_basicSkills.Contains(skillData)) return;
+        int index = _basicSkills.IndexOf(skillData);
+        if (_currentBasicSkillIndex >= index) _currentBasicSkillIndex--;
+        _basicSkills.Remove(skillData);
+        CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
     }
 
-    private void OnChangedMeleeBasicSkill(MeleeSkillData basicSkill)
-    {
-        Owner.Status[StatType.Damage].SetValue(basicSkill.Damage);
-        Owner.Status[StatType.AttackSpeed].SetValue(basicSkill.AttackSpeed);
-        Owner.Status[StatType.Range].SetValue(basicSkill.Range);
+    #endregion
+
+    #region Change Basic Skill
+
+    public void NextBasicSkill() {
+        if (_basicSkills.Count <= 0) return;
+        if (++_currentBasicSkillIndex > _basicSkills.Count) _currentBasicSkillIndex = 0;
+
+        CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
+    }
+    public void PrevBasicSkill() {
+        if (_basicSkills.Count <= 0) return;
+        if (--_currentBasicSkillIndex < 0) _currentBasicSkillIndex = _basicSkills.Count - 1;
+
+        CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
+    }
+    public void ChangeBasicSkill(int index) {
+        if (index >= _basicSkills.Count) return;
+        _currentBasicSkillIndex = index;
+
+        CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
+    }
+
+    #endregion
+
+    private void UpdateStatus(SkillData skillData) {
+        if (skillData != null) {
+            Owner.Status[StatType.Damage].SetValue(skillData.Damage);
+            Owner.Status[StatType.Damage].SetValue(skillData.AttackSpeed);
+            Owner.Status[StatType.Damage].SetValue(skillData.Range);
+        }
+        else {
+            Owner.Status[StatType.Damage].SetValue(Owner.Data.Damage);
+            Owner.Status[StatType.Damage].SetValue(Owner.Data.AttackSpeed);
+            Owner.Status[StatType.Damage].SetValue(Owner.Data.Range);
+        }
     }
 }

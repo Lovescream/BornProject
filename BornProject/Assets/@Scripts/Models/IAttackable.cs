@@ -5,12 +5,9 @@
 public interface IAttackable {
 
     public void Attack();
-    public HitColliderGenerationInfo GetRangerHitColliderGenerationInfo();
-    public HitColliderGenerationInfo GetMeleeHitColliderGenerationInfo();
-    public HitColliderInfo GetRangerHitColliderInfo();
-    public HitColliderInfo GetMeleeHitColliderInfo();
-    public HitInfo GetRangerHitInfo();
-    public HitInfo GetMeleeHitInfo();
+    public HitColliderGenerationInfo GetHitColliderGenerationInfo();
+    public HitColliderInfo GetHitColliderInfo();
+    public HitInfo GetHitInfo();
 
 }
 
