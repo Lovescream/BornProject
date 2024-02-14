@@ -46,6 +46,10 @@ public class HitCollider : Entity, IHitCollider {
     }
 
     protected virtual void FixedUpdate() {
+        if (Speed < 0) {
+            this.transform.localPosition = Vector2.zero;
+            return;
+        }
         _deltaPosition += (CurrentPosition - _prevPosition).magnitude;
         if (_deltaPosition >= Range) {
             Debug.Log($"_deltaPosition({_deltaPosition}) >= Range({Range})");
