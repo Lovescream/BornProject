@@ -34,6 +34,7 @@ namespace ZerolizeDungeon {
 
             foreach (RoomGenerateData data in _generateData) {
                 Room newRoom = GenerateRoom(data.NeighbourInfo);
+                newRoom.transform.SetParent(root);
                 newRoom.SetInfo(this, data);
                 _rooms[new(data.X, data.Y)] = newRoom;
                 if (newRoom.Type == RoomType.Start) StartRoom = newRoom;
