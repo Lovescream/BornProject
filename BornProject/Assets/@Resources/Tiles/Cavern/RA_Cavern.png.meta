@@ -2979,48 +2979,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_143
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 432
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d9eb5db20c07c34eaa8fade22ef78bc
-      internalID: -635373923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RA_Cavern_144
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 432
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e53eced330cad634385e17a848f3b0fe
-      internalID: 1375095966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: RA_Cavern_145
       rect:
         serializedVersion: 2
@@ -3546,34 +3504,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RA_Cavern_170
+      name: Cavern_Object_Debris_00
       rect:
         serializedVersion: 2
         x: 416
         y: 416
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e75a261243f9a6849802ce7265f466a8
-      internalID: 1477578129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RA_Cavern_171
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 416
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -17132,6 +17069,7 @@ TextureImporter:
       Cavern_Floor_05_10: -1700856485
       Cavern_Floor_05_11: 572381855
       Cavern_Floor_05_12: -1110755860
+      Cavern_Object_Debris_00: 1945975704
       Cavern_Wall_00: 1881323786
       Cavern_Wall_01: -464876373
       Cavern_Wall_02: -1517258138
@@ -17182,7 +17120,6 @@ TextureImporter:
       RA_Cavern_169: 351168665
       RA_Cavern_17: 1477578129
       RA_Cavern_170: 1945975704
-      RA_Cavern_171: 1154534891
       RA_Cavern_172: -46876802
       RA_Cavern_173: 1223713070
       RA_Cavern_174: -994163537

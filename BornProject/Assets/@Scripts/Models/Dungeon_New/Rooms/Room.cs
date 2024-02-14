@@ -75,7 +75,7 @@ namespace ZerolizeDungeon {
         private bool _isOpened = true;
 
         // Collections.
-        //private Dictionary<Direction, Door> _doors = new();
+        private Dictionary<Direction, Debris> _debris = new();
         private Dictionary<Direction, Room> _neighbours = new();
 
         // Callbacks.
@@ -107,15 +107,56 @@ namespace ZerolizeDungeon {
             this.transform.position = OriginPosition;
 
             // #2. 컬렉션 초기화.
-            for (int i=0;i<(int)ZerolizeDungeon.Direction.COUNT; i++) {
-                //_doors[(Direction)i] = null;
+            for (int i = 0; i < (int)ZerolizeDungeon.Direction.COUNT; i++) {
+                _debris[(Direction)i] = null;
                 _neighbours[(Direction)i] = null;
             }
+
+            // #3. 통로 설정.
+            for (int i = 0; i < 4; i++) {
+                if (((int)Direction & (1 << i)) == 0) continue;
+                Debris debris = Main.Resource.Instantiate("Debris", this.transform, true).GetComponent<Debris>();
+                debris.transform.SetParent(this.transform);
+                debris.transform.localPosition = (Direction)i switch {
+                    ZerolizeDungeon.Direction.Top => new(15, 28),
+                    ZerolizeDungeon.Direction.Right => new(28, 15),
+                    ZerolizeDungeon.Direction.Bottom => new(15, 2),
+                    ZerolizeDungeon.Direction.Left => new(2, 15),
+                    _ => new(0, 0)
+                };
+                _debris[(Direction)i] = debris;
+            }
+            OnRoomOpened += r => OpenDoor();
+            OnRoomClosed += r => CloseDoor();
+            IsOpened = false;
+            IsOpened = true;
         }
 
         #endregion
 
         public bool IsInRoom(Vector2 position) => position.IsInRange(OriginPosition, MaxPosition);
 
+        #region Door
+
+        public Debris GetDoor(Direction direction) {
+            if (!_debris.TryGetValue(direction, out Debris debris)) return null;
+            return debris;
+        }
+        public void OpenDoor(Direction direction) {
+            if (_debris[direction] == null) return;
+            _debris[direction].gameObject.SetActive(false);
+        }
+        public void CloseDoor(Direction direction) {
+            if (_debris[direction] == null) return;
+            _debris[direction].gameObject.SetActive(true);
+        }
+        public void OpenDoor() {
+            for (int i = 0; i < 4; i++) OpenDoor((Direction)i);
+        }
+        public void CloseDoor() {
+            for (int i = 0; i < 4; i++) CloseDoor((Direction)i);
+        }
+
+        #endregion
     }
 }
