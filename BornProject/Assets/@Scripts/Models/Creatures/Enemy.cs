@@ -27,6 +27,8 @@ public class Enemy : Creature {
     private Transform _sight;
     private Transform _range;
 
+    protected static readonly int AnimatorParameterHash_Chase = Animator.StringToHash("Chase");
+
     #endregion
 
     #region Initialize / Set
@@ -45,6 +47,7 @@ public class Enemy : Creature {
 
     protected override void SetState() {
         base.SetState();
+        State.AddOnEntered(CreatureState.Chase, OnEnteredChase);
         State.AddOnStay(CreatureState.Idle, OnStayIdle);
         State.AddOnStay(CreatureState.Chase, OnStayChase);
         State.AddOnStay(CreatureState.Attack, OnStayAttack);
@@ -53,6 +56,10 @@ public class Enemy : Creature {
     #endregion
 
     #region State
+    private void OnEnteredChase()
+    {
+        _animator.SetTrigger(AnimatorParameterHash_Chase);
+    }
 
     private void OnStayIdle() {
         Velocity = Vector2.zero;
