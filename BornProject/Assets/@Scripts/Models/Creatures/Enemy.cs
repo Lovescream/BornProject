@@ -60,6 +60,7 @@ public class Enemy : Creature, IAttackable {
             _animator.SetBool(AnimatorParameterHash_Attack, true);
         };
         this.Attacker.OnEndAttack += () => {
+            Debug.Log("ABC");
             _animator.SetBool(AnimatorParameterHash_Attack, false);
         };
     }
