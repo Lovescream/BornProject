@@ -45,6 +45,7 @@ public struct HitColliderGenerationInfo {
     public int Count { get; set; }
     public float SpreadAngle { get; set; }
     public float Size { get; set; }
+    public float AttackTime { get; set; }
 }
 public struct HitColliderInfo {
     public int Penetration { get; set; }

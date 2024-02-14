@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace ZerolizeDungeon {
     [Flags]
@@ -93,7 +94,9 @@ namespace ZerolizeDungeon {
             if (_isInitialized) return false;
             _isInitialized = true;
 
-
+            Tilemap[] tilemaps = this.transform.Find("Walls").GetComponentsInChildren<Tilemap>();
+            foreach (Tilemap tilemap in tilemaps)
+                tilemap.gameObject.layer = Main.WallLayer;
 
             return true;
         }

@@ -12,6 +12,7 @@ public class Creature : Entity {
     public CreatureData Data { get; private set; }
     public Status Status { get; protected set; }
     public State<CreatureState> State { get; protected set; }
+    public Transform Indicator { get; protected set; }
 
     // Status.
     public float HpMax => Status[StatType.HpMax].Value;
@@ -64,6 +65,8 @@ public class Creature : Entity {
     private bool _invincibility = false;
 
     // Components.
+    protected Transform _indicatorAxisAxis;
+    protected Transform _indicatorAxis;
     protected SpriteRenderer _spriter;
     protected Collider2D _collider;
     protected Rigidbody2D _rigidbody;
@@ -76,6 +79,16 @@ public class Creature : Entity {
     #endregion
 
     #region MonoBehaviours
+
+    protected virtual void Update() {
+        if (_indicatorAxisAxis != null) {
+            _indicatorAxisAxis.localScale = new(LookDirection.x >= 0 ? 1 : -1, 1, 1);
+            _indicatorAxis.localScale = new(LookDirection.x >= 0 ? 1 : -1, 1, 1);
+        }
+        if (_indicatorAxis != null) {
+            _indicatorAxis.localRotation = Quaternion.Euler(0, 0, (LookDirection.x >= 0 ? 1 : -1) * LookAngle);
+        }
+    }
 
     protected virtual void FixedUpdate()
     {
@@ -98,10 +111,11 @@ public class Creature : Entity {
         _rigidbody = this.GetComponent<Rigidbody2D>();
         _animator = this.GetComponent<Animator>();
 
+        this.gameObject.layer = Main.CretureLayer;
+
         return true;
     }
-    public virtual void SetInfo(CreatureData data)
-    {
+    public virtual void SetInfo(CreatureData data) {
         Initialize();
 
         this.Data = data;
@@ -110,11 +124,9 @@ public class Creature : Entity {
         _animator.SetBool(AnimatorParameterHash_Dead, false);
 
         _collider.enabled = true;
-        if (_collider is BoxCollider2D boxCollider)
-        {
+        if (_collider is BoxCollider2D boxCollider) {
             Sprite sprite = _spriter.sprite;
-            if (sprite != null)
-            {
+            if (sprite != null) {
                 float x = sprite.textureRect.width / sprite.pixelsPerUnit;
                 float y = sprite.textureRect.height / sprite.pixelsPerUnit;
                 boxCollider.size = new(x, y);
@@ -124,6 +136,14 @@ public class Creature : Entity {
 
         SetStatus(isFullHp: true);
         SetState();
+
+        _indicatorAxisAxis = this.transform.Find("Axis");
+        if (_indicatorAxisAxis != null) {
+            _indicatorAxis = _indicatorAxisAxis.Find("Indicator");
+            if (_indicatorAxis != null) {
+                Indicator = _indicatorAxis.Find("WeaponIndicator");
+            }
+        }
     }
     protected virtual void SetStatus(bool isFullHp = true)
     {

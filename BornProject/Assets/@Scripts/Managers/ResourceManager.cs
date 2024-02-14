@@ -122,9 +122,7 @@ public class ResourceManager {
             Debug.LogError($"[ResourceManager] Instantiate({key}): Failed to load prefab.");
             return null;
         }
-
         if (pooling) return Main.Pool.Pop(prefab);
-
         GameObject obj = GameObject.Instantiate(prefab, parent);
         obj.name = prefab.name;
         return obj;

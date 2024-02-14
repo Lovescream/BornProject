@@ -51,4 +51,12 @@ public class Main : MonoBehaviour {
         _dungeon = new();
         _ui = new();
     }
+
+    #region Layers
+
+    public static readonly int WallLayer = LayerMask.NameToLayer("DungeonWalls");
+    public static readonly int CretureLayer = LayerMask.NameToLayer("Creatures");
+    public static readonly int HitColliderLayer = LayerMask.NameToLayer("HitColliders");
+
+    #endregion
 }

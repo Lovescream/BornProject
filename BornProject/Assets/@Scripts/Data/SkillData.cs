@@ -15,6 +15,7 @@ public class SkillData : Data {
     public int HitColliderCount { get; set; }
     public float HitColliderAngle { get; set; }
     public float HitColliderSize { get; set; }
+    public float AttackTime { get; set; }
 
     // 투사체 정보
     public int Penetration { get; set; }

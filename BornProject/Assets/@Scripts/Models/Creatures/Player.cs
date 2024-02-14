@@ -97,6 +97,7 @@ public class Player : Creature, IAttackable {
             Count = skillData.HitColliderCount,
             SpreadAngle = skillData.HitColliderAngle,
             Size = skillData.HitColliderSize,
+            AttackTime = skillData.AttackTime,
         };
     }
     public HitColliderInfo GetHitColliderInfo() {
