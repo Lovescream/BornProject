@@ -25,7 +25,6 @@ public class ResourceManager {
         GameObject[] objs = Resources.LoadAll<GameObject>("Prefabs");
         foreach (GameObject obj in objs)
         {
-            Debug.Log(obj.name);
             _prefabs.Add(obj.name, obj);
         }
 
