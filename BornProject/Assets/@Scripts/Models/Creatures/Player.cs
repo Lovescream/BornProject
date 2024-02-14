@@ -1,4 +1,3 @@
-using Dijkstra;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -45,10 +44,9 @@ public class Player : Creature, IAttackable {
     public override void SetInfo(CreatureData data) {
         base.SetInfo(data);
 
-        SkillList = new(this) {
-            BasicRange = Main.Data.RangerSkills["LaserBeam"],
-            BasicMelee = Main.Data.MeleeSkills["Slash"],
-        };
+        SkillList = new(this);
+        SkillList.AddBasicSkill(Main.Data.Skills["LaserBeam"]);
+        SkillList.AddBasicSkill(Main.Data.Skills["Slash"]);
     }
     protected override void SetState() {
         base.SetState();
@@ -74,99 +72,52 @@ public class Player : Creature, IAttackable {
         LookDirection = v.normalized;
     }
     protected void OnAttackMain() {
-        _isRangeAttack = true;
+        SkillList.ChangeBasicSkill(0);
         Attack();
     }
     protected void OnAttackSub() {
-        _isRangeAttack = false;
+        SkillList.ChangeBasicSkill(1);
         Attack();
     }
 
     #endregion
 
     public void Attack() {
-        if (_isRangeAttack){
-            Attacker.Attack(GetRangerHitColliderGenerationInfo(), GetRangerHitColliderInfo(), GetRangerHitInfo());
-            Debug.Log("데미지 :"+ Damage + " 원거리 수치입니다.");
-        }
-        else if(!_isRangeAttack) {
-            Attacker.Attack(GetMeleeHitColliderGenerationInfo(), GetMeleeHitColliderInfo(), GetMeleeHitInfo());
-            Debug.Log("데미지 :" + Damage + " 근접 수치입니다.");
-        }        
+        Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());      
     }
 
-    public HitColliderGenerationInfo GetRangerHitColliderGenerationInfo() {        
-        RangerSkillData basicSkill = SkillList.BasicRange;      
+    public HitColliderGenerationInfo GetHitColliderGenerationInfo() {        
+        SkillData skillData = SkillList.CurrentBasicSkill;      
         return new()
         {
             Owner = this,
-            HitColliderKey = basicSkill.HitColliderKey,
-            RadiusOffset = basicSkill.RadiusOffset,
-            RotationAngle = basicSkill.RotationAngle < 0 ? LookAngle : basicSkill.RotationAngle,
-            Count = basicSkill.HitColliderCount,
-            SpreadAngle = basicSkill.HitColliderAngle,
-            Size = basicSkill.HitColliderSize,
+            HitColliderKey = skillData.HitColliderKey,
+            RadiusOffset = skillData.RadiusOffset,
+            RotationAngle = skillData.RotationAngle < 0 ? LookAngle : skillData.RotationAngle,
+            Count = skillData.HitColliderCount,
+            SpreadAngle = skillData.HitColliderAngle,
+            Size = skillData.HitColliderSize,
         };
     }
-    public HitColliderGenerationInfo GetMeleeHitColliderGenerationInfo() {
-        MeleeSkillData basicSkill = SkillList.BasicMelee;
-        return new()
-        {
-            Owner = this,
-            HitColliderKey = basicSkill.HitColliderKey,
-            RadiusOffset = basicSkill.RadiusOffset,
-            RotationAngle = basicSkill.RotationAngle < 0 ? LookAngle : basicSkill.RotationAngle,
-            Count = basicSkill.HitColliderCount,
-            SpreadAngle = basicSkill.HitColliderAngle,
-            Size = basicSkill.HitColliderSize,
-        };
-    }
-    public HitColliderInfo GetRangerHitColliderInfo() {
-        RangerSkillData basicSkill = SkillList.BasicRange;
+    public HitColliderInfo GetHitColliderInfo() {
+        SkillData skillData = SkillList.CurrentBasicSkill;
         return new() {
-            Penetration = basicSkill.Penetration,
-            Speed = basicSkill.Speed,
-            DirectionX = basicSkill.DirectionX,
-            DirectionY = basicSkill.DirectionY,
-            Duration = basicSkill.Duration,
-            Range = basicSkill.Range,
+            Penetration = skillData.Penetration,
+            Speed = skillData.Speed,
+            DirectionX = skillData.DirectionX,
+            DirectionY = skillData.DirectionY,
+            Duration = skillData.Duration,
+            Range = skillData.Range,
         };
     }
-    public HitColliderInfo GetMeleeHitColliderInfo() {
-        MeleeSkillData basicSkill = SkillList.BasicMelee;
-        return new()
-        {
-            Penetration = basicSkill.Penetration,
-            Speed = basicSkill.Speed,
-            DirectionX = basicSkill.DirectionX,
-            DirectionY = basicSkill.DirectionY,
-            Duration = basicSkill.Duration,
-            Range = basicSkill.Range,
-        };
-    }
-    public HitInfo GetRangerHitInfo() {
-        RangerSkillData basicSkill = SkillList.BasicRange;
+    public HitInfo GetHitInfo() {
+        SkillData skillData = SkillList.CurrentBasicSkill;
         return new() {
             Owner = this,
             Damage = this.Damage,
-            CriticalChance = basicSkill.CriticalChance,
-            CriticalBonus = basicSkill.CriticalBonus,
+            CriticalChance = skillData.CriticalChance,
+            CriticalBonus = skillData.CriticalBonus,
             Knockback = new() {
-                time = 0.1f,
-                speed = 10f,
-            }
-        };
-    }
-    public HitInfo GetMeleeHitInfo(){
-        MeleeSkillData basicSkill = SkillList.BasicMelee;
-        return new()
-        {
-            Owner = this,
-            Damage = this.Damage,            
-            CriticalChance = basicSkill.CriticalChance,
-            CriticalBonus = basicSkill.CriticalBonus,
-            Knockback = new()
-            {
                 time = 0.1f,
                 speed = 10f,
             }

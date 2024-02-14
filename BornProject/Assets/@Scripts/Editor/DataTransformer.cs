@@ -21,7 +21,7 @@ public class DataTransformer : EditorWindow {
     [MenuItem("Tools/ParseExcel")]
     public static void ParseExcel() {
         ParseData<CreatureData>();
-        //ParseData<CharacterData>();
+        ParseData<SkillData>();
         ParseData<ItemData>();
         ParseData<RangerSkillData>();
         ParseData<MeleeSkillData>();

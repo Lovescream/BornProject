@@ -1,9 +1,9 @@
 [
   {
-    "Name": "BasicLaserBeam",
+    "Name": "BasicRazerBeam",
     "Type": 0,
     "Description": "기본 빔 공격",
-    "HitColliderKey": "BasicLaserBeam",
+    "HitColliderKey": "BasicRazerBeam",
     "RadiusOffset": 0.0,
     "RotationAngle": 0.0,
     "HitColliderCount": 1,
@@ -22,7 +22,7 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 100.0,
     "AttackSpeed": 1.0,
-    "Key": "LaserBeam"
+    "Key": "RazerBeam"
   },
   {
     "Name": "PowerUp",
@@ -47,7 +47,7 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 100.0,
     "AttackSpeed": 1.0,
-    "Key": "LaserBeam11"
+    "Key": "RazerBeam11"
   },
   {
     "Name": "SizeUp",
@@ -72,7 +72,7 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 100.0,
     "AttackSpeed": 1.0,
-    "Key": "LaserBeam12"
+    "Key": "RazerBeam12"
   },
   {
     "Name": "FastReload",
@@ -97,7 +97,7 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 100.0,
     "AttackSpeed": 1.2,
-    "Key": "LaserBeam13"
+    "Key": "RazerBeam13"
   },
   {
     "Name": "Critical",
@@ -122,7 +122,7 @@
     "CriticalChance": 25.0,
     "CriticalBonus": 200.0,
     "AttackSpeed": 1.0,
-    "Key": "LaserBeam21"
+    "Key": "RazerBeam21"
   },
   {
     "Name": "MultipleShot",
@@ -147,7 +147,7 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 100.0,
     "AttackSpeed": 1.0,
-    "Key": "LaserBeam22"
+    "Key": "RazerBeam22"
   },
   {
     "Name": "ExtraShot",
@@ -172,6 +172,6 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 100.0,
     "AttackSpeed": 1.2,
-    "Key": "LaserBeam23"
+    "Key": "RazerBeam23"
   }
 ]
