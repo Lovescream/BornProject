@@ -25,7 +25,10 @@ public class Creature : Entity {
         get => _hp;
         set {
             if (_hp == value) return;
-            if (value <= 0) {
+            if (value <= 0)
+            {
+                if (State.Current != CreatureState.Dead)
+                    State.Current = CreatureState.Dead;
                 _hp = 0;
             }
             else if (value >= HpMax) {
@@ -160,6 +163,7 @@ public class Creature : Entity {
     private void OnEnteredHit() {
         _animator.SetTrigger(AnimatorParameterHash_Hit);
     }
+
     private void OnEnteredDead() {
         _collider.enabled = false;
         _rigidbody.simulated = false;

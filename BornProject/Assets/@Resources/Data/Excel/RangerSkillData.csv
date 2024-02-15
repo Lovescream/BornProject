@@ -1,8 +1,0 @@
-Key,Name,Type,Description,RadiusOffset,RotationAngle,HitColliderCount,HitColliderAngle,HitColliderSize,Penetration,Speed,DirectionX,DirectionY,Duration,Range,MultipleShotCount,ExtraShotCount,BerserkAttackCount,Damage,CriticalChance,CriticalBonus,AttackSpeed
-RazerBeam,BasicRazerBeam,BasicSkill,기본 빔 공격,0,0,1,0,1,5,0,0,0,1,10,1,0,0,8,5,100,1
-RazerBeam11,PowerUp,StatSkill,데미지가 증가합니다.,0,0,1,0,1,5,0,0,0,1,10,1,0,0,10,5,100,1
-RazerBeam12,SizeUp,StatSkill,빔의 크기가 증가합니다.,0,0,1,0,3,5,0,0,0,1,10,1,0,0,8,5,100,1
-RazerBeam13,FastReload,StatSkill,재장전이 빨라집니다.,0,0,1,0,1,5,0,0,0,1,10,1,0,0,8,5,100,1.2
-RazerBeam21,Critical,UniqueSkill,치명타 효율이 증가합니다.,0,0,1,0,1,5,0,0,0,1,10,1,0,0,10,25,200,1
-RazerBeam22,MultipleShot,UniqueSkill,빔의 갯수가 증가합니다. ,0,0,3,45,3,5,0,0,0,1,10,3,0,0,8,5,100,1
-RazerBeam23,ExtraShot,UniqueSkill,추가 공격을 합니다.,0,0,1,0,1,5,0,0,0,1,10,1,1,0,8,5,100,1.2
