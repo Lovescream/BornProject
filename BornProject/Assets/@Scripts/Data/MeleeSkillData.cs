@@ -42,7 +42,7 @@ public class MeleeSkillData : Data {
 }
 public enum MeleeSkillType
 {
-    BasicSkill,
-    StatSkill,
-    UniqueSkill,
+    Base,
+    Normal,
+    Rare,
 }
