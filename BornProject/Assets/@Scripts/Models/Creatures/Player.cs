@@ -45,8 +45,8 @@ public class Player : Creature, IAttackable {
         base.SetInfo(data);
 
         SkillList = new(this);
-        SkillList.AddBasicSkill(Main.Data.Skills["LaserBeam"]);
-        SkillList.AddBasicSkill(Main.Data.Skills["Slash"]);
+        SkillList.AddBasicSkill(Main.Data.Skills["Laser_Base_Basic"]);
+        SkillList.AddBasicSkill(Main.Data.Skills["Slash_Base_Basic"]);
     }
     protected override void SetState() {
         base.SetState();

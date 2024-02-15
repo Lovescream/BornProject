@@ -152,7 +152,7 @@ public class Enemy : Creature, IAttackable {
     public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
         return new() {
             Owner = this,
-            HitColliderKey = "Slash",
+            HitColliderKey = "Slash_Base_Basic",
             RadiusOffset = 0.5f,
             RotationAngle = -1f,
             Count = 1,
