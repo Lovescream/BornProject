@@ -25,13 +25,14 @@ public class RangerSkillData : Data
     public float DirectionY { get; set; }
     public float Duration { get; set; }
     public float Range { get; set; }
-    public int MultipleShotCount {  get; set; }
-    public int ExtraShotCount {  get; set; }
+    public int ExtraShotCount { get; set; }
     public int BerserkAttackCount { get; set; }
+    public int BerserkExtraShotCount { get; set; }
 
 
     // 능력치 정보
     public float Damage { get; set; }
+    public float AttackTime { get; set; }
     public float CriticalChance { get; set; }
     public float CriticalBonus { get; set; }
     public float AttackSpeed { get; set; }
