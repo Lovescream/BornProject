@@ -21,30 +21,24 @@ public class Creature : Entity {
     public float Sight => Status[StatType.Sight].Value;
     public float Range => Status[StatType.Range].Value;
 
-    public float Hp
-    {
+    public float Hp {
         get => _hp;
-        set
-        {
+        set {
             if (_hp == value) return;
             if (value <= 0)
             {
-                if(State.Current != CreatureState.Dead)
-                {
+                if (State.Current != CreatureState.Dead)
                     State.Current = CreatureState.Dead;
-                }
                 _hp = 0;
             }
-            else if (value >= HpMax)
-            {
+            else if (value >= HpMax) {
                 _hp = HpMax;
             }
             else _hp = value;
             OnChangedHp?.Invoke(_hp);
         }
     }
-    public bool Invincibility
-    {
+    public bool Invincibility {
         get { return _invincibility; }
         set { _invincibility = value; }
     }
@@ -94,8 +88,7 @@ public class Creature : Entity {
         }
     }
 
-    protected virtual void FixedUpdate()
-    {
+    protected virtual void FixedUpdate() {
         State.OnStay();
         _spriter.flipX = LookDirection.x < 0;
         _rigidbody.velocity = Velocity;
@@ -106,8 +99,7 @@ public class Creature : Entity {
 
     #region Initialize / Set
 
-    public override bool Initialize()
-    {
+    public override bool Initialize() {
         if (!base.Initialize()) return false;
 
         _spriter = this.GetComponent<SpriteRenderer>();
@@ -149,11 +141,9 @@ public class Creature : Entity {
             }
         }
     }
-    protected virtual void SetStatus(bool isFullHp = true)
-    {
+    protected virtual void SetStatus(bool isFullHp = true) {
         this.Status = new(Data);
-        if (isFullHp)
-        {
+        if (isFullHp) {
             Hp = HpMax;
         }
 
@@ -164,7 +154,6 @@ public class Creature : Entity {
             Current = CreatureState.Idle
         };
         State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
-        State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
     }
     #endregion
@@ -174,11 +163,7 @@ public class Creature : Entity {
     private void OnEnteredHit() {
         _animator.SetTrigger(AnimatorParameterHash_Hit);
     }
-    private void OnEnteredAttack()
-    {
-        _animator.SetTrigger(AnimatorParameterHash_Attack);
-        Debug.Log("공격 애니메이션 재생");
-    }
+
     private void OnEnteredDead() {
         _collider.enabled = false;
         _rigidbody.simulated = false;
@@ -189,12 +174,12 @@ public class Creature : Entity {
         HitInfo hitInfo = attacker.HitInfo;
         Hp -= hitInfo.Damage;
 
+        CreatureState originState = State.Current; // 원래 상태 저장.
+        State.Current = CreatureState.Hit;
         if (hitInfo.Knockback.time > 0) {
-            CreatureState originState = State.Current; // 원래 상태 저장.
-            State.Current = CreatureState.Hit;
             Velocity = (this.transform.position - attacker.CurrentPosition).normalized * hitInfo.Knockback.speed;
-            State.SetStateAfterTime(originState, hitInfo.Knockback.time); // 넉백 시간이 끝나면 원래 상태로 돌아간다.
         }
+        State.SetStateAfterTime(originState, hitInfo.Knockback.time); // 넉백 시간이 끝나면 원래 상태로 돌아간다.
     }
 
     #endregion
@@ -212,8 +197,7 @@ public enum CreatureState
     Dead,
 }
 
-public struct KnockbackInfo
-{
+public struct KnockbackInfo {
     public float time;
     public float speed;
 }

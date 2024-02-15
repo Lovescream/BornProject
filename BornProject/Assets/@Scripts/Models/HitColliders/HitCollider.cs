@@ -52,7 +52,6 @@ public class HitCollider : Entity, IHitCollider {
         }
         _deltaPosition += (CurrentPosition - _prevPosition).magnitude;
         if (_deltaPosition >= Range) {
-            Debug.Log($"_deltaPosition({_deltaPosition}) >= Range({Range})");
             Destroy();
         }
 

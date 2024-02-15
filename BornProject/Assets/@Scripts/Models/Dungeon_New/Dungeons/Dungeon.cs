@@ -42,6 +42,22 @@ namespace ZerolizeDungeon {
                 else if (newRoom.Type == RoomType.Treasure) TreasureRoom = newRoom;
             }
 
+            foreach (Room room in _rooms.Values) {
+                Room[] neighbours = new Room[4];
+                for (int i = 0; i < (int)Direction.COUNT; i++) {
+                    Vector2Int neighbourIndex = room.Index.GetDirectionIndex((Direction)i);
+                    neighbours[i] = this[neighbourIndex];
+                }
+                room.SetNeighbours(neighbours);
+            }
+
+        }
+
+        public Room this[Vector2Int index] {
+            get {
+                if (!_rooms.TryGetValue(index, out Room room)) return null;
+                return room;
+            }
         }
 
         private Room GenerateRoom(int direction) {
