@@ -33,7 +33,7 @@ public class ObjectManager {
     }
     public HitCollider SpawnHitCollider(string key, HitColliderInfo info, HitInfo hitInfo) {
         HitCollider hitCollider = Spawn<HitCollider>(key, Vector2.zero);
-        hitCollider.SetInfo(info, hitInfo);
+        hitCollider.SetInfo(key, info, hitInfo);
         HitColliders.Add(hitCollider);
         return hitCollider;
     }

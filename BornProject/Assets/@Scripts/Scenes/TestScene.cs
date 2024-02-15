@@ -12,8 +12,7 @@ public class TestScene : BaseScene {
 
         // #1. Map 생성.
         Main.Dungeon.Generate();
-        Debug.Log(Main.Dungeon.Current);
-        Debug.Log(Main.Dungeon.Current.StartRoom);
+
         // #2. Player 생성.
         Player = Main.Object.SpawnPlayer("Player", Main.Dungeon.Current.StartRoom.CenterPosition);
 

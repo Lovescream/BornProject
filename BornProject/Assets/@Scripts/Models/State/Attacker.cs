@@ -67,11 +67,11 @@ public class Attacker {
         if (!CanAttack) return;
 
         OnStartAttack?.Invoke();
-        CurrentAttackTime += AttackTime;
+        CurrentAttackTime += generationInfo.AttackTime;
 
         if (generationInfo.Count == 1) {
             HitCollider hitCollider = GenerateHitCollider(generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
-            SetHitCollider(hitCollider.transform, generationInfo.RadiusOffset, generationInfo.RotationAngle, generationInfo.Size);
+            SetHitCollider(hitCollider, generationInfo.RadiusOffset, generationInfo.RotationAngle, generationInfo.Size);
         }
         else if (generationInfo.Count > 1) {
             float minAngle = generationInfo.RotationAngle - generationInfo.SpreadAngle * 0.5f;
@@ -81,7 +81,7 @@ public class Attacker {
                 float angle = minAngle + deltaAngle * i;
 
                 HitCollider hitCollider = GenerateHitCollider(generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
-                SetHitCollider(hitCollider.transform, generationInfo.RadiusOffset, angle, generationInfo.Size);
+                SetHitCollider(hitCollider, generationInfo.RadiusOffset, angle, generationInfo.Size);
             }
         }
 
@@ -91,10 +91,9 @@ public class Attacker {
     private HitCollider GenerateHitCollider(string key, HitColliderInfo info, HitInfo hitInfo) {
         return Main.Object.SpawnHitCollider(key, info, hitInfo);
     }
-    private void SetHitCollider(Transform hit, float radius, float angle, float scale) {
-        hit.SetParent(Owner.transform);
-        hit.localRotation = Quaternion.Euler(0, 0, angle);
-        hit.localPosition = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius;
-        hit.localScale = Vector3.one * scale;
+    private void SetHitCollider(HitCollider hit, float radius, float angle, float scale) {
+        hit.transform.localRotation = Quaternion.Euler(0, 0, angle);
+        hit.SetPosition(new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius);
+        hit.transform.localScale = Vector3.one * scale;
     }
 }
