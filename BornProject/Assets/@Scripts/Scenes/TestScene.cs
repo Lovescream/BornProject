@@ -1,4 +1,3 @@
-using DungeonGenerate;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,9 +17,9 @@ public class TestScene : BaseScene {
         Camera.main.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
 
         // #3. Player 옆 방에 Enemy 생성.
-        Debug.Log(Main.Dungeon.Current.StartRoom.GetRandomNeighbour());
         Main.Object.SpawnEnemy("Bear", Main.Dungeon.Current.StartRoom.GetRandomNeighbour().CenterPosition);
 
         return true;
     }
+
 }

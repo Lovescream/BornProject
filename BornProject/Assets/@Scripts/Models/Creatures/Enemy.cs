@@ -14,10 +14,13 @@ public class Enemy : Creature, IAttackable {
         set {
             if (_target == value) return;
             _target = value;
+            if (State.Current == CreatureState.Hit) return;
             if (_target == null) State.Current = CreatureState.Idle;
             else State.Current = CreatureState.Chase;
         }
     }
+
+    public float DetectingRange => 2 * Sight;
 
     #endregion
 
@@ -30,7 +33,15 @@ public class Enemy : Creature, IAttackable {
     private Transform _sight;
     private Transform _range;
 
-    protected static readonly int AnimatorParameterHash_Chase = Animator.StringToHash("Chase");
+    #endregion
+
+    #region MonoBehaviours
+
+    protected override void FixedUpdate() {
+        base.FixedUpdate();
+
+        Attacker.OnUpdate();
+    }
 
     #endregion
 
@@ -43,14 +54,14 @@ public class Enemy : Creature, IAttackable {
         _sight = this.transform.Find("[Debug] EnemySight");
         _range = this.transform.Find("[Debug] EnemyRange");
 
-        _doubleSight.transform.localScale = new(4 * Sight, 4 * Sight, 1);
-        _sight.transform.localScale = new(2 * Sight, 2 * Sight, 1);
-        _range.transform.localScale = new(Range, Range, 1);
+        _doubleSight.transform.localScale = 2 * DetectingRange * Vector3.one;
+        _sight.transform.localScale = 2 * Sight * Vector3.one;
+        _range.transform.localScale = 2 * Range * Vector3.one;
     }
 
     protected override void SetState() {
         base.SetState();
-        State.AddOnEntered(CreatureState.Chase, OnEnteredChase);
+        State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
         State.AddOnStay(CreatureState.Idle, OnStayIdle);
         State.AddOnStay(CreatureState.Chase, OnStayChase);
         State.AddOnStay(CreatureState.Attack, OnStayAttack);
@@ -67,58 +78,68 @@ public class Enemy : Creature, IAttackable {
     #endregion
 
     #region State
-    private void OnEnteredChase() {
-        _animator.SetTrigger(AnimatorParameterHash_Chase);
-    }
 
+    private void OnEnteredAttack() {
+        Velocity = Vector2.zero;
+    }
     private void OnStayIdle() {
         Velocity = Vector2.zero;
         Target = FindTarget();
     }
 
     private void OnStayChase() {
+        // #1. Target이 죽거나 유효하지 않으면 Target 정보 초기화.
         if (!Target.IsValid() || Target.IsDead) {
             Target = null;
             return;
         }
 
-        Vector2 delta = Target.transform.position - this.transform.position;
-        if (delta.sqrMagnitude > 4 * Sight * Sight) {
+        // #2. Target과의 거리 구하기. (제곱근을 구하는 연산은 비용이 크므로, 제곱 형태로 비교.)
+        float sqrDistance = (Target.transform.position - this.transform.position).sqrMagnitude;
+
+        // #3. Target이 감지할 수 있는 거리 밖으로 벗어나면 Target 정보 초기화. (적 놓침 판정)
+        if (sqrDistance > DetectingRange * DetectingRange) {
             Target = null;
             return;
         }
 
-        // 공격범위에 들어왔을 때 Attack으로 현재상태 전환.
-        if (delta.sqrMagnitude < Range * Range) {
+        // #4. Target이 사정거리 내에 진입했다면, 공격 상태에 진입.
+        if (sqrDistance <= Range * Range) {
             State.Current = CreatureState.Attack;
             return;
         }
 
+        // #5. Target이 사정거리 밖에 있다면 대상을 향해 이동.
         Vector2 direction = (Target.transform.position - this.transform.position).normalized;
         Velocity = direction * Status[StatType.MoveSpeed].Value;
         LookDirection = direction;
     }
 
     private void OnStayAttack() {
-        Vector2 delta = Target.transform.position - this.transform.position;
-        if (delta.sqrMagnitude > Range * Range) // 공격범위를 벗어났고
-        {
-            if (delta.sqrMagnitude < 4 * Sight * Sight) // 시야범위에 있다면
-            {
-                State.Current = CreatureState.Chase;
-                Debug.Log("공격범위 벗어남");
-                return;
-            }
-        }
-        else {
-            Attack();
-            Debug.Log("퍽");
+        // #1. Target이 죽거나 유효하지 않으면 Target 정보 초기화.
+        if (!Target.IsValid() || Target.IsDead) {
+            Target = null;
+            return;
         }
 
-        // 공격할 때 플레이어의 위치를 실시간으로 체크.
-        Vector2 direction = (Target.transform.position - this.transform.position).normalized;
-        Velocity = direction * Status[StatType.MoveSpeed].Value;
-        LookDirection = direction;
+        // #2. Target과의 거리 구하기. (제곱근을 구하는 연산은 비용이 크므로, 제곱 형태로 비교.)
+        float sqrDistance = (Target.transform.position - this.transform.position).sqrMagnitude;
+
+        // #3. Target이 사정거리 밖으로 벗어났다면 추적 상태에 진입.
+        if (sqrDistance > Range * Range) {
+            State.Current = CreatureState.Chase;
+            return;
+        }
+
+        // #4. 공격!
+        Attack();
+    }
+
+    public override void OnHit(IHitCollider attacker) {
+        base.OnHit(attacker);
+
+        if (attacker.HitInfo.Owner is Creature attackerCreature && attackerCreature.IsValid() && !attackerCreature.IsDead && IsTarget(attackerCreature))
+            Target = attackerCreature;
     }
 
     #endregion
@@ -137,6 +158,7 @@ public class Enemy : Creature, IAttackable {
             Count = 1,
             SpreadAngle = 0,
             Size = 1,
+            AttackTime = 0.3f,
         };
     }
 

@@ -155,7 +155,7 @@ namespace ZerolizeDungeon {
         public bool IsInRoom(Vector2 position) => position.IsInRange(OriginPosition, MaxPosition);
 
         public Room GetRandomNeighbour() {
-            Room[] rooms = _neighbours.Values.ToArray();
+            Room[] rooms = _neighbours.Values.Where(x => x != null).ToArray();
             return rooms[Random.Range(0, rooms.Length - 1)];
         }
 
