@@ -40,7 +40,7 @@ public enum SkillType {
     Melee,
 }
 public enum SkillLevel {
-    Basic,
-    SimpleStat,
-    Unique,
+    Base,
+    Normal,
+    Rare,
 }

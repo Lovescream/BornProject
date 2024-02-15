@@ -42,7 +42,7 @@ public class RangerSkillData : Data
 }
 public enum RangerSkillType
 {
-    BasicSkill,
-    StatSkill,
-    UniqueSkill,
+    Base,
+    Normal,
+    Rare,
 }
