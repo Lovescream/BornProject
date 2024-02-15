@@ -7,6 +7,8 @@ public class SkillData : Data {
     // 기본 정보
     public string Name { get; set; }
     public string Description { get; set; }
+    public SkillType Type { get; set; }
+    public SkillLevel Level { get; set; }
 
     // HitCollider 생성 정보.
     public string HitColliderKey => Key;
