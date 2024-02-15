@@ -11,16 +11,12 @@ public class DataManager {
     public Dictionary<string, CreatureData> Creatures = new();
     public Dictionary<string, SkillData> Skills = new();
     public Dictionary<string, ItemData> Items = new();
-    public Dictionary<string, RangerSkillData> RangerSkills = new();
-    public Dictionary<string, MeleeSkillData> MeleeSkills = new();
 
     public void Initialize()
     {
         Creatures = LoadJson<CreatureData>();
         Items = LoadJson<ItemData>();
         Skills = LoadJson<SkillData>();
-        RangerSkills = LoadJson<RangerSkillData>();
-        MeleeSkills = LoadJson<MeleeSkillData>();
 
         IsInitialized = true;
     }
