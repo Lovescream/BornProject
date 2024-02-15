@@ -29,7 +29,6 @@ public class SkillData : Data {
     public int BerserkExtraShotCount { get; set; }
     // 능력치 정보
     public float Damage { get; set; }
-    public float AttackTime { get; set; }
     public float CriticalChance { get; set; }
     public float CriticalBonus { get; set; }
     public float AttackSpeed { get; set; }
