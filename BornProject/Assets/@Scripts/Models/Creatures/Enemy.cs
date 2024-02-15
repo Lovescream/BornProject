@@ -60,7 +60,6 @@ public class Enemy : Creature, IAttackable {
             _animator.SetBool(AnimatorParameterHash_Attack, true);
         };
         this.Attacker.OnEndAttack += () => {
-            Debug.Log("ABC");
             _animator.SetBool(AnimatorParameterHash_Attack, false);
         };
     }
@@ -68,8 +67,7 @@ public class Enemy : Creature, IAttackable {
     #endregion
 
     #region State
-    private void OnEnteredChase()
-    {
+    private void OnEnteredChase() {
         _animator.SetTrigger(AnimatorParameterHash_Chase);
     }
 
@@ -77,9 +75,9 @@ public class Enemy : Creature, IAttackable {
         Velocity = Vector2.zero;
         Target = FindTarget();
     }
-    
+
     private void OnStayChase() {
-        if (Target.IsValid() && Target.IsDead) {
+        if (!Target.IsValid() || Target.IsDead) {
             Target = null;
             return;
         }
@@ -91,8 +89,7 @@ public class Enemy : Creature, IAttackable {
         }
 
         // 공격범위에 들어왔을 때 Attack으로 현재상태 전환.
-        if (delta.sqrMagnitude < Range * Range)
-        {
+        if (delta.sqrMagnitude < Range * Range) {
             State.Current = CreatureState.Attack;
             return;
         }
@@ -102,8 +99,7 @@ public class Enemy : Creature, IAttackable {
         LookDirection = direction;
     }
 
-    private void OnStayAttack()
-    {
+    private void OnStayAttack() {
         Vector2 delta = Target.transform.position - this.transform.position;
         if (delta.sqrMagnitude > Range * Range) // 공격범위를 벗어났고
         {
@@ -114,8 +110,7 @@ public class Enemy : Creature, IAttackable {
                 return;
             }
         }
-        else
-        {
+        else {
             Attack();
             Debug.Log("퍽");
         }
@@ -129,15 +124,12 @@ public class Enemy : Creature, IAttackable {
     #endregion
 
     #region Attack
-    public void Attack()
-    {
+    public void Attack() {
         Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
     }
 
-    public HitColliderGenerationInfo GetHitColliderGenerationInfo()
-    {
-        return new()
-        {
+    public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
+        return new() {
             Owner = this,
             HitColliderKey = "Slash",
             RadiusOffset = 0.5f,
@@ -148,10 +140,8 @@ public class Enemy : Creature, IAttackable {
         };
     }
 
-    public HitColliderInfo GetHitColliderInfo()
-    {
-        return new()
-        {
+    public HitColliderInfo GetHitColliderInfo() {
+        return new() {
             Penetration = 1,
             Speed = 0,
             DirectionX = 0,
@@ -161,16 +151,13 @@ public class Enemy : Creature, IAttackable {
         };
     }
 
-    public HitInfo GetHitInfo()
-    {
-        return new()
-        {
+    public HitInfo GetHitInfo() {
+        return new() {
             Owner = this,
             Damage = this.Damage,
             CriticalChance = 0,
             CriticalBonus = 0,
-            Knockback = new()
-            {
+            Knockback = new() {
                 time = 0.1f,
                 speed = 10f,
             }
@@ -188,7 +175,7 @@ public class Enemy : Creature, IAttackable {
         }
         return null;
     }
-    
+
     // 해당 Creature가 이 Creature의 적인지 판별.
     // 플레이어가 아니더라도 적끼리 서로 싸울 수 있으니 일단 만들어 두었습니다.
     protected virtual bool IsTarget(Creature creature) {

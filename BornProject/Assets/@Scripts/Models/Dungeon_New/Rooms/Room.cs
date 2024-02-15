@@ -2,8 +2,10 @@ using DungeonGenerate;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
 namespace ZerolizeDungeon {
     [Flags]
@@ -141,7 +143,21 @@ namespace ZerolizeDungeon {
 
         #endregion
 
+        #region Neighbours
+
+        public void SetNeighbours(Room[] rooms) {
+            for (int i = 0; i < rooms.Length; i++)
+                _neighbours[(Direction)i] = rooms[i];
+        }
+
+        #endregion
+
         public bool IsInRoom(Vector2 position) => position.IsInRange(OriginPosition, MaxPosition);
+
+        public Room GetRandomNeighbour() {
+            Room[] rooms = _neighbours.Values.ToArray();
+            return rooms[Random.Range(0, rooms.Length - 1)];
+        }
 
         #region Door
 
