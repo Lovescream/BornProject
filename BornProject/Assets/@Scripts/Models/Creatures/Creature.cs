@@ -172,7 +172,7 @@ public class Creature : Entity {
     }
     private void OnEnteredAttack()
     {
-        _animator.SetTrigger(AnimatorParameterHash_Attack); // TODO: 공격 애니메이션 추가!!
+        _animator.SetTrigger(AnimatorParameterHash_Attack);
         Debug.Log("공격 애니메이션 재생");
     }
     private void OnEnteredDead() {

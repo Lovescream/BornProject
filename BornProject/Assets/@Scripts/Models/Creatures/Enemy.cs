@@ -79,7 +79,7 @@ public class Enemy : Creature, IAttackable {
     }
     
     private void OnStayChase() {
-        if (Target.IsValid() && Target.IsDead) {
+        if (Target.IsValid() || Target.IsDead) {
             Target = null;
             return;
         }
@@ -105,14 +105,15 @@ public class Enemy : Creature, IAttackable {
     private void OnStayAttack()
     {
         Vector2 delta = Target.transform.position - this.transform.position;
-        if (delta.sqrMagnitude > Range * Range) // 공격범위를 벗어났고
+        if (Range * Range < delta.sqrMagnitude && delta.sqrMagnitude <= 4 * Sight * Sight) // 공격범위를 벗어났고 시야범위에 있다면
         {
-            if (delta.sqrMagnitude < 4 * Sight * Sight) // 시야범위에 있다면
-            {
-                State.Current = CreatureState.Chase;
-                Debug.Log("공격범위 벗어남");
-                return;
-            }
+            State.Current = CreatureState.Chase;
+            Debug.Log("공격범위 벗어남");
+            return;
+        }
+        else if (delta.sqrMagnitude > 4 * Sight * Sight)
+        {
+            State.Current = CreatureState.Idle;
         }
         else
         {
