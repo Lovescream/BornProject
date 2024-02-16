@@ -24,6 +24,13 @@ public static class Extension {
 
     #endregion
 
+    #region UI
+
+    public static Canvas SetCanvas(this UI_Base ui) => Main.UI.SetCanvas(ui.gameObject);
+    public static void SetPopupToFront(this UI_Popup popup) => Main.UI.SetPopupToFront(popup);
+
+    #endregion
+
     #region Dungeons
 
     public static Vector2Int GetDirectionIndex(this Vector2Int index, DungeonDirection direction) {
@@ -84,8 +91,7 @@ public static class Extension {
     }
 
     #endregion
-    //public static void SetCanvas(this UI_Base ui) => Main.UI.SetCanvas(ui.gameObject);
-    //public static void SetPopupToFront(this UI_Popup popup) => Main.UI.SetPopupToFront(popup);
+
     //public static void BindEvent(this GameObject go, Action<PointerEventData> action = null, Define.UIEvent type = Define.UIEvent.Click) {
     //    UI_Base.BindEvent(go, action, type);
     //}

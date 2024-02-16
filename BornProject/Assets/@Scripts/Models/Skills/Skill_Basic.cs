@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill_Basic {
+public class Skill_Basic : SkillBase {
 
     #region Properties
-
-    // 기본 정보
-    public string Name { get; set; }
-    public string Description { get; set; }
 
     // 투사체 생성 정보
     public string HitColliderKey => Name;
