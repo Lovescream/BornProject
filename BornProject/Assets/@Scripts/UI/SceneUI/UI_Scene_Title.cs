@@ -47,6 +47,9 @@ public class UI_Scene_Title : UI_Scene {
 
         
         GetButton((int)Buttons.btnNewGame).onClick.AddListener(OnBtnNewGame);
+        GetButton((int)Buttons.btnContinue).onClick.AddListener(OnBtnContinue);
+        GetButton((int)Buttons.btnController).onClick.AddListener(OnBtnController);
+        GetButton((int)Buttons.btnExit).onClick.AddListener(OnBtnExit);
 
         return true;
     }
@@ -54,8 +57,18 @@ public class UI_Scene_Title : UI_Scene {
     private void OnBtnNewGame() {
 
         Main.UI.CloseAllPopup();
-        //Main.Scene.LoadScene("TestScene");
+        SceneManager.LoadScene("GameScene");
     }
 
+    private void OnBtnContinue() {
 
+    }
+
+    private void OnBtnController() {
+
+    }
+
+    private void OnBtnExit() {
+        //팝업창 어떻게  올리지 
+    }
 }
