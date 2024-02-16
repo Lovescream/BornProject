@@ -15,6 +15,7 @@ public class State<T> where T : Enum {
             _nextState = _current;
         }
     }
+    public T NextState => _nextState;
 
     private T _current;
     private T _nextState;
@@ -66,8 +67,9 @@ public class State<T> where T : Enum {
             Current = _nextState;
         }
     }
-    public void SetStateAfterTime(T nextState, float time) {
+    public void SetStateAfterTime(T nextState, float time = -1) {
         _nextState = nextState;
+        if (time < 0) return;
         _transitionTime = time;
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Creature : Entity {
 
@@ -155,13 +156,17 @@ public class Creature : Entity {
         };
         State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
+        State.AddOnExited(CreatureState.Hit, OnExitedHit);
     }
     #endregion
 
     #region State
 
     private void OnEnteredHit() {
-        _animator.SetTrigger(AnimatorParameterHash_Hit);
+        _animator.SetBool(AnimatorParameterHash_Hit, true);
+    }
+    private void OnExitedHit() {
+        _animator.SetBool(AnimatorParameterHash_Hit, false);
     }
 
     private void OnEnteredDead() {
@@ -174,7 +179,7 @@ public class Creature : Entity {
         HitInfo hitInfo = attacker.HitInfo;
         Hp -= hitInfo.Damage;
 
-        CreatureState originState = State.Current; // 원래 상태 저장.
+        CreatureState originState = State.Current == CreatureState.Hit ? State.NextState :State.Current; // 원래 상태 저장.
         State.Current = CreatureState.Hit;
         if (hitInfo.Knockback.time > 0) {
             Velocity = (this.transform.position - attacker.CurrentPosition).normalized * hitInfo.Knockback.speed;

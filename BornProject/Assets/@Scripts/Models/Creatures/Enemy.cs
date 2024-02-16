@@ -14,7 +14,10 @@ public class Enemy : Creature, IAttackable {
         set {
             if (_target == value) return;
             _target = value;
-            if (State.Current == CreatureState.Hit) return;
+            if (State.Current == CreatureState.Hit) {
+                if (_target == null) State.SetStateAfterTime(CreatureState.Idle);
+                else State.SetStateAfterTime(CreatureState.Chase);
+            }
             if (_target == null) State.Current = CreatureState.Idle;
             else State.Current = CreatureState.Chase;
         }
@@ -136,10 +139,9 @@ public class Enemy : Creature, IAttackable {
     }
 
     public override void OnHit(IHitCollider attacker) {
-        base.OnHit(attacker);
-
         if (attacker.HitInfo.Owner is Creature attackerCreature && attackerCreature.IsValid() && !attackerCreature.IsDead && IsTarget(attackerCreature))
             Target = attackerCreature;
+        base.OnHit(attacker);
     }
 
     #endregion
