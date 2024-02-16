@@ -48,7 +48,7 @@ public class Status
     public Status(CreatureData data)
     {
         _stats = new() {
-            [StatType.HpMax] = new(StatType.HpMax, data.HpMax),
+            [StatType.HpMax] = new(StatType.HpMax, data.HpMax, min: 0),
             [StatType.HpRegen] = new(StatType.HpRegen, data.HpRegen),
             [StatType.Damage] = new(StatType.Damage, data.Damage),
             [StatType.Defense] = new(StatType.Defense, data.Defense),
