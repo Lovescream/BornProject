@@ -29,6 +29,7 @@ public class Creature : Entity {
             if (value <= 0)
             {
                 if (State.Current != CreatureState.Dead)
+                    Debug.Log($"[Creature: {this.Data.Key}] 쥬금");
                     State.Current = CreatureState.Dead;
                 _hp = 0;
             }
@@ -177,6 +178,7 @@ public class Creature : Entity {
 
     public virtual void OnHit(IHitCollider attacker) {
         HitInfo hitInfo = attacker.HitInfo;
+        Debug.Log($"{hitInfo.Damage}의 피해를 입었따. 죽어라 - !");
         Hp -= hitInfo.Damage;
 
         CreatureState originState = State.Current == CreatureState.Hit ? State.NextState :State.Current; // 원래 상태 저장.

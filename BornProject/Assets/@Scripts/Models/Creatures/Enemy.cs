@@ -30,6 +30,7 @@ public class Enemy : Creature, IAttackable {
     #region Fields
 
     private Creature _target;
+    private Creature _lastAttacker;
 
     // Debugging.
     private Transform _doubleSight;
@@ -100,8 +101,8 @@ public class Enemy : Creature, IAttackable {
         // #2. Target과의 거리 구하기. (제곱근을 구하는 연산은 비용이 크므로, 제곱 형태로 비교.)
         float sqrDistance = (Target.transform.position - this.transform.position).sqrMagnitude;
 
-        // #3. Target이 감지할 수 있는 거리 밖으로 벗어나면 Target 정보 초기화. (적 놓침 판정)
-        if (sqrDistance > DetectingRange * DetectingRange) {
+        // #3. Target이 선빵친 애가 아니고 감지할 수 있는 거리 밖으로 벗어나면 Target 정보 초기화. (적 놓침 판정)
+        if (sqrDistance > DetectingRange * DetectingRange && Target != _lastAttacker) {
             Target = null;
             return;
         }
@@ -141,6 +142,7 @@ public class Enemy : Creature, IAttackable {
     public override void OnHit(IHitCollider attacker) {
         if (attacker.HitInfo.Owner is Creature attackerCreature && attackerCreature.IsValid() && !attackerCreature.IsDead && IsTarget(attackerCreature))
             Target = attackerCreature;
+            _lastAttacker = Target;
         base.OnHit(attacker);
     }
 
