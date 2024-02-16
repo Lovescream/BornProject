@@ -11,14 +11,11 @@ public class UI_Scene : UI_Base {
 
     #endregion
 
-    public override bool Initialize() {
+    public override bool Initialize()
+    {
         if (!base.Initialize()) return false;
 
-<<<<<<< HEAD
-        this.SetCanvas();
-=======
         _canvas = this.SetCanvas();
->>>>>>> Develop1.0
         SetOrder();
 
         return true;
@@ -26,17 +23,4 @@ public class UI_Scene : UI_Base {
 
     protected override void SetOrder() => _canvas.sortingOrder = 0;
 
-<<<<<<< HEAD
-   /* public override bool Init()
-    {
-        if (!base.Init()) return false;
-
-        Main.UI.SetCanvas(gameObject, false);
-
-        return true;
-    }
-  */
-=======
->>>>>>> Develop1.0
 }
-
