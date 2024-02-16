@@ -88,13 +88,13 @@ public class SkillList {
     private void UpdateStatus(SkillData skillData) {
         if (skillData != null) {
             Owner.Status[StatType.Damage].SetValue(skillData.Damage);
-            Owner.Status[StatType.Damage].SetValue(skillData.AttackSpeed);
-            Owner.Status[StatType.Damage].SetValue(skillData.Range);
+            Owner.Status[StatType.AttackSpeed].SetValue(skillData.AttackSpeed);
+            Owner.Status[StatType.Range].SetValue(skillData.Range);
         }
         else {
             Owner.Status[StatType.Damage].SetValue(Owner.Data.Damage);
-            Owner.Status[StatType.Damage].SetValue(Owner.Data.AttackSpeed);
-            Owner.Status[StatType.Damage].SetValue(Owner.Data.Range);
+            Owner.Status[StatType.AttackSpeed].SetValue(Owner.Data.AttackSpeed);
+            Owner.Status[StatType.Range].SetValue(Owner.Data.Range);
         }
     }
 }

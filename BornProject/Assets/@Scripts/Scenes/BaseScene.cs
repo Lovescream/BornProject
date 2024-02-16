@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BaseScene : MonoBehaviour {
+
+    public UI_Scene SceneUI { get; protected set; }
 
     private bool _initialized;
 
@@ -17,6 +20,8 @@ public class BaseScene : MonoBehaviour {
         Main.Data.Initialize();
         // DataManager 초기화
         // GameManager 초기화
+
+        if (FindObjectOfType<EventSystem>() == null) Main.Resource.Instantiate("@EventSystem").name = "@EventSystem";
 
         _initialized = true;
         return true;
