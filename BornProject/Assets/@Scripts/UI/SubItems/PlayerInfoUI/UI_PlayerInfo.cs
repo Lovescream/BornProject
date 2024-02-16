@@ -41,4 +41,5 @@ public class UI_PlayerInfo : UI_Base {
     }
 
     #endregion
+
 }

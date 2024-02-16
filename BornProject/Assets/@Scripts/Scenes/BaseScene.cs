@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class BaseScene : MonoBehaviour {
 
+    public UI_Scene SceneUI { get; protected set; }
+
     private bool _initialized;
 
     void Start() {
