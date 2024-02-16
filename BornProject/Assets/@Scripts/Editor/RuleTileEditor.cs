@@ -1237,41 +1237,41 @@ namespace ZerolizeDungeon {
 
         #endregion
 
-        // Wrapper for serializing a list of Rules.
-        [Serializable]
-        class RuleTileRuleWrapper {
-            [SerializeField]
-            public List<RuleTile.TilingRule> rules = new();
-        }
+    //    // Wrapper for serializing a list of Rules.
+    //    [Serializable]
+    //    class RuleTileRuleWrapper {
+    //        [SerializeField]
+    //        public List<RuleTile.TilingRule> rules = new();
+    //    }
 
-        // Copies all Rules from a RuleTile to the clipboard.
-        [MenuItem("CONTEXT/RuleTile/Copy All Rules")]
-        public static void CopyAllRules(MenuCommand item) {
-            RuleTile tile = item.context as RuleTile;
-            if (tile == null) return;
+    //    // Copies all Rules from a RuleTile to the clipboard.
+    //    [MenuItem("CONTEXT/RuleTile/Copy All Rules")]
+    //    public static void CopyAllRules(MenuCommand item) {
+    //        RuleTile tile = item.context as RuleTile;
+    //        if (tile == null) return;
 
-            RuleTileRuleWrapper rulesWrapper = new() {
-                rules = tile.m_TilingRules,
-            };
-            string rulesJson = EditorJsonUtility.ToJson(rulesWrapper);
-            EditorGUIUtility.systemCopyBuffer = rulesJson;
-        }
+    //        RuleTileRuleWrapper rulesWrapper = new() {
+    //            rules = tile.m_TilingRules,
+    //        };
+    //        string rulesJson = EditorJsonUtility.ToJson(rulesWrapper);
+    //        EditorGUIUtility.systemCopyBuffer = rulesJson;
+    //    }
 
-        // Pastes all Rules from the clipboard to a RuleTile.
-        [MenuItem("CONTEXT/RuleTile/Paste Rules")]
-        public static void PasteRules(MenuCommand item) {
-            RuleTile tile = item.context as RuleTile;
-            if (tile == null) return;
+    //    // Pastes all Rules from the clipboard to a RuleTile.
+    //    [MenuItem("CONTEXT/RuleTile/Paste Rules")]
+    //    public static void PasteRules(MenuCommand item) {
+    //        RuleTile tile = item.context as RuleTile;
+    //        if (tile == null) return;
 
-            try {
-                RuleTileRuleWrapper rulesWrapper = new();
-                EditorJsonUtility.FromJsonOverwrite(EditorGUIUtility.systemCopyBuffer, rulesWrapper);
-                tile.m_TilingRules.AddRange(rulesWrapper.rules);
-            }
-            catch (Exception) {
-                Debug.LogError("Unable to paste rules from system copy buffer");
-            }
-        }
+    //        try {
+    //            RuleTileRuleWrapper rulesWrapper = new();
+    //            EditorJsonUtility.FromJsonOverwrite(EditorGUIUtility.systemCopyBuffer, rulesWrapper);
+    //            tile.m_TilingRules.AddRange(rulesWrapper.rules);
+    //        }
+    //        catch (Exception) {
+    //            Debug.LogError("Unable to paste rules from system copy buffer");
+    //        }
+    //    }
     }
 #endif
 }

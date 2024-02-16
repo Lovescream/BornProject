@@ -15,7 +15,7 @@ public class Stat {
     public event Action<Stat> OnChanged;
 
     // 새로운 스탯 인스턴스를 생성하고 초기값을 생성하는 생성자.
-    public Stat(StatType type, float value = 0, float min = 0, float max = float.MaxValue) {
+    public Stat(StatType type, float value = 0, float min = float.MinValue, float max = float.MaxValue) {
         this.Type = type;
         this.Min = min;
         this.Max = max;
