@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_Popup : UI_Base
-{
+public class UI_Popup : UI_Base {
+
+    #region Properties
+
+    public virtual bool IsPause => false;
+
+    #endregion
 
     #region Fields
 
@@ -22,5 +27,6 @@ public class UI_Popup : UI_Base
     protected override void SetOrder() => _canvas.sortingOrder = Main.UI.OrderUpPopup();
     public void SetOrder(int order) => _canvas.sortingOrder = order;
 
+    public virtual void Close() => Main.UI.ClosePopup(this);
 
 }

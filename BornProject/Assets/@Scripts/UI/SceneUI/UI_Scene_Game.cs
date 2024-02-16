@@ -55,7 +55,7 @@ public class UI_Scene_Game : UI_Scene {
     #region OnButtons
 
     private void OnBtnMenu() {
-        // TODO:: 
+        Main.UI.OpenPopupUI<UI_Popup_Menu>();
     }
     private void OnBtnQuest() {
         // TODO:: 
