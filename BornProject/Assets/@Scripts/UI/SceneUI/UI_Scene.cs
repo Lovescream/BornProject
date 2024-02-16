@@ -4,20 +4,29 @@ using UnityEngine;
 
 
 public class UI_Scene : UI_Base {
- 
-   public override bool Initialize() {
+
+    #region Fields
+
+    protected Canvas _canvas;
+
+    #endregion
+
+    public override bool Initialize() {
         if (!base.Initialize()) return false;
 
+<<<<<<< HEAD
         this.SetCanvas();
+=======
+        _canvas = this.SetCanvas();
+>>>>>>> Develop1.0
         SetOrder();
 
         return true;
     }
 
-    protected override void SetOrder() {
-          this.GetComponent<Canvas>().sortingOrder = 0;
-    }
+    protected override void SetOrder() => _canvas.sortingOrder = 0;
 
+<<<<<<< HEAD
    /* public override bool Init()
     {
         if (!base.Init()) return false;
@@ -27,5 +36,7 @@ public class UI_Scene : UI_Base {
         return true;
     }
   */
+=======
+>>>>>>> Develop1.0
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+<<<<<<< HEAD
 
 public class UI_Popup : UI_Base
 {
@@ -19,10 +20,27 @@ public class UI_Popup : UI_Base
 
         _panel = this.transform.Find("Panel");
 
+=======
+public class UI_Popup : UI_Base {
+
+    #region Fields
+
+    protected Canvas _canvas;
+
+    #endregion
+
+    public override bool Initialize() {
+        if (!base.Initialize()) return false;
+
+        _canvas = this.SetCanvas();
+        SetOrder();
+
+>>>>>>> Develop1.0
         return true;
     }
 
     protected override void SetOrder() => _canvas.sortingOrder = Main.UI.OrderUpPopup();
+<<<<<<< HEAD
 
     public void SetOrder(int order) => _canvas.sortingOrder = order;
 
@@ -35,3 +53,9 @@ public class UI_Popup : UI_Base
         this.SetPopupToFront();
     }
 }
+=======
+    public void SetOrder(int order) => _canvas.sortingOrder = order;
+
+
+}
+>>>>>>> Develop1.0
