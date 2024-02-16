@@ -77,10 +77,18 @@ public class UIManager {
     public T OpenPopupUI<T>(string name = null) where T : UI_Popup {
         if (string.IsNullOrEmpty(name)) name = typeof(T).Name;
 
-        GameObject obj = Main.Resource.Instantiate($"{name}.prefab");
+        for (int i = 0; i < _popups.Count; i++) {
+            if (_popups[i] is not T openedPopup) continue;
+            openedPopup.SetPopupToFront();
+            return openedPopup;
+        }
+
+        GameObject obj = Main.Resource.Instantiate($"{name}");
         obj.transform.SetParent(Root);
         T popup = obj.GetOrAddComponent<T>();
         _popups.Add(popup);
+
+        if (popup.IsPause) Time.timeScale = 0f;
 
         return popup;
     }
@@ -95,6 +103,14 @@ public class UIManager {
 
         if (isLatest) _popupOrder--;
         else ReorderAllPopups();
+
+        for (int i = 0; i < _popups.Count; i++) {
+            if (_popups[i].IsPause) {
+                Time.timeScale = 0;
+                return;
+            }
+        }
+        Time.timeScale = 1;
     }
 
     public void CloseAllPopup() {
@@ -103,6 +119,8 @@ public class UIManager {
         for (int i = _popups.Count - 1; i >= 0; i--) Main.Resource.Destroy(_popups[i].gameObject);
         _popups.Clear();
         _popupOrder = InitialPopupOrder;
+
+        Time.timeScale = 1;
     }
 
     public int OrderUpPopup() => ++_popupOrder - 1;
