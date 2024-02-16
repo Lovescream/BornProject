@@ -8,7 +8,7 @@ public class UI_Scene : UI_Base {
    public override bool Initialize() {
         if (!base.Initialize()) return false;
 
-       // this.SetCanvas();
+        this.SetCanvas();
         SetOrder();
 
         return true;
@@ -18,7 +18,7 @@ public class UI_Scene : UI_Base {
           this.GetComponent<Canvas>().sortingOrder = 0;
     }
 
-  /*  public override bool Init()
+   /* public override bool Init()
     {
         if (!base.Init()) return false;
 
