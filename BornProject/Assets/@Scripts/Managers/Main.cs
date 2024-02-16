@@ -42,7 +42,7 @@ public class Main : MonoBehaviour {
     public static ResourceManager Resource => Instance?._resource;
     public static ObjectManager Object => Instance?._object;
     public static DungeonManager Dungeon => Instance?._dungeon;
-    public static UIManager UIManager => Instance?._ui;
+    public static UIManager UI => Instance?._ui;
     public void ManualInitialize() {
         _pool = new();
         _data = new();
