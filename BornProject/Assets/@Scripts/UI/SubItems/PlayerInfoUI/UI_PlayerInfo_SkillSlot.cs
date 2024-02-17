@@ -12,8 +12,9 @@ public class UI_PlayerInfo_SkillSlot : UI_SlotBase {
 
     #region Initialize / Set
 
-    public void SetInfo(SkillBase skill) {
-        SetImage(skill.Icon);
+    public void SetInfo(SkillData skill) {
+        Sprite sprite = Main.Resource.LoadSprite(skill.Key);
+        SetImage(sprite);
     }
 
     #endregion
