@@ -37,6 +37,17 @@ public class DataTransformer : EditorWindow {
         File.WriteAllText($"{Application.dataPath}/{base64Path}/RuleIcon.minecraftvirusohmygod", stringBuilder.ToString());
     }
 
+    //[MenuItem("Tools/Rename")]
+    //public static void Rename() {
+    //    DirectoryInfo directoryInfo = new DirectoryInfo($"{Application.dataPath}/Resources/Sprites/Skills/Icons");
+    //    foreach (FileInfo fileInfo in directoryInfo.GetFiles()) {
+    //        if (!fileInfo.Extension.Equals(".png")) continue;
+    //        string oldPath = fileInfo.FullName;
+    //        string newName = $"{Application.dataPath}/Resources/Sprites/Skills/Icons/Icon_{fileInfo.Name}";
+    //        File.Move(oldPath, newName);
+    //    }
+    //}
+
     #region Parse Data
 
     private static void ParseData<T>() where T : Data {

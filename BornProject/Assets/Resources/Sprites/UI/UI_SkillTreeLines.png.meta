@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_SkillTreeLines_LeftCorner
+      name: UI_SkillTreeLines_LeftCornerLine
       rect:
         serializedVersion: 2
         x: 0
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_SkillTreeLines_RightCorner
+      name: UI_SkillTreeLines_RightCornerLine
       rect:
         serializedVersion: 2
         x: 5
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_SkillTreeLines_Fill
+      name: UI_SkillTreeLines_Point_3
       rect:
         serializedVersion: 2
         x: 15
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_SkillTreeLines_FillRight
+      name: UI_SkillTreeLines_Point_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_SkillTreeLines_BlockLine
+      name: UI_SkillTreeLines_Point_2
       rect:
         serializedVersion: 2
         x: 10
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_SkillTreeLines_FillLeft
+      name: UI_SkillTreeLines_Point_Right
       rect:
         serializedVersion: 2
         x: 25
@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_SkillTreeLines_FillLeftCorner
+      name: UI_SkillTreeLines_LeftCornerFill
       rect:
         serializedVersion: 2
         x: 10
@@ -341,7 +341,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_SkillTreeLines_FillRightCorner
+      name: UI_SkillTreeLines_RightCornerFill
       rect:
         serializedVersion: 2
         x: 15
@@ -362,7 +362,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,6 +370,27 @@ TextureImporter:
       bones: []
       spriteID: c92808daabb09e64ba2735a9e8ab02b2
       internalID: -1890337665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SkillTreeLines_Point_Empty
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1b472918f876646ab61482feb1a098
+      internalID: 917642839
       vertices: []
       indices: 
       edges: []
@@ -385,16 +406,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_SkillTreeLines_BlockLine: -856149481
-      UI_SkillTreeLines_Fill: -37155315
-      UI_SkillTreeLines_FillLeft: -185164439
-      UI_SkillTreeLines_FillLeftCorner: -1638950565
-      UI_SkillTreeLines_FillRight: -1630094967
-      UI_SkillTreeLines_FillRightCorner: -1890337665
       UI_SkillTreeLines_HorizontalFill: 434424855
       UI_SkillTreeLines_HorizontalLine: 139502934
-      UI_SkillTreeLines_LeftCorner: 498625558
-      UI_SkillTreeLines_RightCorner: 2129595918
+      UI_SkillTreeLines_LeftCornerFill: -1638950565
+      UI_SkillTreeLines_LeftCornerLine: 498625558
+      UI_SkillTreeLines_Point_2: -856149481
+      UI_SkillTreeLines_Point_3: -37155315
+      UI_SkillTreeLines_Point_Empty: 917642839
+      UI_SkillTreeLines_Point_Left: -1630094967
+      UI_SkillTreeLines_Point_Right: -185164439
+      UI_SkillTreeLines_RightCornerFill: -1890337665
+      UI_SkillTreeLines_RightCornerLine: 2129595918
       UI_SkillTreeLines_VerticalFill: -932417952
       UI_SkillTreeLines_VerticalLine: -20294715
   mipmapLimitGroupName: 
