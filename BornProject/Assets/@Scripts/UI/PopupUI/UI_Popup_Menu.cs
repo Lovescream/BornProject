@@ -45,7 +45,7 @@ public class UI_Popup_Menu : UI_Popup {
         Close();
     }
     private void OnBtnExit() {
-        // TODO:: 게임 종료.
+        Main.UI.OpenPopupUI<UI_Popup_ExitGame>();
     }
 
     #endregion
