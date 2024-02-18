@@ -113,7 +113,7 @@ public class Creature : Entity {
         _rigidbody = this.GetComponent<Rigidbody2D>();
         _animator = this.GetComponent<Animator>();
 
-        this.gameObject.layer = Main.CretureLayer;
+        this.gameObject.layer = Main.CreatureLayer;
 
         return true;
     }

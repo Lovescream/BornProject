@@ -11,7 +11,8 @@ public class UI_Scene : UI_Base {
 
     #endregion
 
-    public override bool Initialize() {
+    public override bool Initialize()
+    {
         if (!base.Initialize()) return false;
 
         _canvas = this.SetCanvas();
@@ -23,4 +24,3 @@ public class UI_Scene : UI_Base {
     protected override void SetOrder() => _canvas.sortingOrder = 0;
 
 }
-

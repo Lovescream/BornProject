@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class UI_Scene_Title : UI_Scene {
 
@@ -12,7 +13,7 @@ public class UI_Scene_Title : UI_Scene {
 
     enum Images{
 
-        ImageTitle
+        imageTitle
     }
 
     enum Buttons{
@@ -26,32 +27,43 @@ public class UI_Scene_Title : UI_Scene {
 
     enum Texts{
         textTitle,
-        textNewGame,
-        textContinue,
-        textController,
-        textExit
+        
     }
 
     #endregion
 
-   /* public void Start() {
+    public override bool Initialize()
+    {
+        if (!base.Initialize()) return false;
 
-        Init();
-    }
-
-   /* public override bool Init() {
-        if (!base.Init()) return false;
-
+        BindImage(typeof(Images));
         BindButton(typeof(Buttons));
+        BindText(typeof(Texts));
 
-        GetButton((int)Buttons.btnNewGame).gameObject.BindEvent(OnButtonStart);
+        
+        GetButton((int)Buttons.btnNewGame).onClick.AddListener(OnBtnNewGame);
+        GetButton((int)Buttons.btnContinue).onClick.AddListener(OnBtnContinue);
+        GetButton((int)Buttons.btnController).onClick.AddListener(OnBtnController);
+        GetButton((int)Buttons.btnExit).onClick.AddListener(OnBtnExit);
 
         return true;
     }
 
-    private void OnButtonStart(PointerEventData data) {
-        Main.UI.CloseAllPopupUI();
-        Main.Scene.LoadScene("TestScene");
+    private void OnBtnNewGame() {
+
+        Main.UI.CloseAllPopup();
+        SceneManager.LoadScene("GameScene");
     }
-   */
+
+    private void OnBtnContinue() {
+
+    }
+
+    private void OnBtnController() {
+
+    }
+
+    private void OnBtnExit() {
+        Debug.Log("게임종료");
+    }
 }
