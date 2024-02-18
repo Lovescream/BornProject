@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6682965713593311205}
   - component: {fileID: 6647773914175145904}
   - component: {fileID: -643567111072985161}
+  - component: {fileID: 1193763359968969915}
   m_Layer: 0
   m_Name: ShotGun_Rare_DamageUp
   m_TagString: Untagged
@@ -171,3 +172,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cafd330e5111a944a78b792c82d1855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1193763359968969915
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579260380851228164}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d16d6a2c8601264ebd031c801022e47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
