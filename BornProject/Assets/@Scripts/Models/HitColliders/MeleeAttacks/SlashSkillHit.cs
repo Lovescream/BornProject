@@ -48,6 +48,8 @@ public class SlashSkillHit : HitCollider{
         base.SetInfo(key, info, hitInfo);
 
         Sprite sprite = Main.Resource.LoadSprite(key);
+        Debug.Log("Slash Load Check ;sprite' " + sprite);
+        Debug.Log("Slash Load Check 'key' " + key);
         if (sprite == null)
         {
             Debug.LogError($"[Slash] SetInfo({key}, {info}, {hitInfo}): Failed to find a sprite for this.");
