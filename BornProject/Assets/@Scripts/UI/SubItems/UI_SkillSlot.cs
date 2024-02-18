@@ -30,12 +30,17 @@ public class UI_SkillSlot : UI_Base, ISkillTreeElement {
         set => Rect.sizeDelta = value;
     }
 
+    public UI_SkillTreeLine Parent { get; set; }
+
     #endregion
 
     #region Fields
 
     [SerializeField]
     private SkillType _type;
+
+    // Collections.
+    private List<SkillData> subs;
 
     // Components.
     private RectTransform _rect;
@@ -54,13 +59,22 @@ public class UI_SkillSlot : UI_Base, ISkillTreeElement {
         Initialize();
 
         this.Data = data;
-
-
     }
 
     public void GenerateTree() {
-        Tree = Main.UI.CreateSubItem<UI_SkillTree>(this.transform);
-        Tree.Temp(this);
+        //Tree = Main.UI.CreateSubItem<UI_SkillTree>(this.transform);
+        //Tree.Temp(this);
+        UI_TreeLine newLine = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: true);
+        newLine.SetInfo();
+
+        
+    }
+
+    private void SetSubSkillData() {
+        subs = new();
+        if (Data == null) {
+
+        }
     }
 
     public void Activate(bool isActivated) {

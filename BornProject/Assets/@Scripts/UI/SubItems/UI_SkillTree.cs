@@ -17,54 +17,59 @@ public class UI_SkillTree : UI_Base {
 
     private List<UI_SkillSlot> _childrenSlots = new();
 
+    public override bool Initialize() {
+        if (!base.Initialize()) return false;
+
+        return true;
+    }
+
+    private UI_SkillTreeLine CreateLine(UI_SkillTreeLine parentLine, Vector2 position, Vector2 size) {
+        UI_SkillTreeLine newLine = Main.UI.CreateSubItem<UI_SkillTreeLine>(parentLine == null ? this.transform : parentLine.transform, pooling: true);
+        newLine.Parent = parentLine;
+        newLine.Position = position;
+        newLine.Size = size;
+        return newLine;
+    }
+    private UI_SkillSlot CreateSlot(UI_SkillTreeLine parentLine, Vector2 position, SkillData data) {
+        UI_SkillSlot newSlot = Main.UI.CreateSubItem<UI_SkillSlot>(parentLine == null ? this.transform : parentLine.transform, pooling: true);
+        newSlot.Parent = parentLine;
+        newSlot.SetInfo(data);
+        newSlot.Position = position;
+        return newSlot;
+    }
+
     public void Temp(UI_SkillSlot parent) {
+        // #1. 위치 및 컬렉션 초기화.
         this.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-        this.Parent = parent;
-        List<SkillData> dataList;
-        if (Parent.Data == null) {
-            dataList = Main.Data.Skills.Values.Where(x => x.Level == SkillLevel.Base && x.Type == Parent.Type).ToList();
-        }
-        else if (Parent.Data.Level != SkillLevel.Rare) {
-            string key = Parent.Data.Key.Split('_')[0];
-            dataList = Main.Data.Skills.Values.Where(x => x.Key.Contains(key) && x.Level == Parent.Data.Level + 1).ToList();
-        }
-        else return;
-        float parentX = Parent.X;
-        float parentY = Parent.Y;
-
-        float parentLineY = parentY - (Parent.Size.y / 2 + VerticalLineLength / 2);
-        UI_SkillTreeLine parentLine = Main.UI.CreateSubItem<UI_SkillTreeLine>(this.transform);
-        parentLine.Position = new(parentX, parentLineY);
-        parentLine.Size = new(PointSize, VerticalLineLength);
-
-        //float pointY = parentLineY - (VerticalLineLength / 2 + PointSize / 2);
-        float pointY = -(VerticalLineLength / 2 + PointSize / 2);
-        //float childLineY = pointY - (PointSize / 2 + VerticalLineLength / 2);
-        float childLineY = -(PointSize / 2 + VerticalLineLength / 2);
-        //float slotY = childLineY - (VerticalLineLength / 2 + SlotSize / 2);
-        float slotY = -(VerticalLineLength / 2 + SlotSize / 2);
-
-        int count = dataList.Count;
-        float x = -(count - 1) / 2 * (SlotSize + HorizontalSpacing);
         List<UI_SkillTreeLine> points = new();
         List<UI_SkillTreeLine> children = new();
         List<UI_SkillTreeLine> horizontals = new();
+
+        // #2. 데이터 설정.
+        this.Parent = parent;
+        List<SkillData> dataList;
+        if (Parent.Data == null) dataList = Main.Data.Skills.Values.Where(x => x.Level == SkillLevel.Base && x.Type == Parent.Type).ToList();
+        else if (Parent.Data.Level != SkillLevel.Rare) dataList = Main.Data.Skills.Values.Where(x => x.Key.Contains(Parent.Data.Key.Split('_')[0]) && x.Level == Parent.Data.Level + 1).ToList();
+        else return;
+
+        // #3. 부모 라인 생성.
+        float parentX = Parent.X;
+        float parentY = Parent.Y;
+        float parentLineY = parentY - (Parent.Size.y / 2 + VerticalLineLength / 2);
+        UI_SkillTreeLine parentLine = CreateLine(null, new(parentX, parentLineY), new(PointSize, VerticalLineLength));
+
+        // #4. 자식 라인 위치 계산.
+        float pointY = -(VerticalLineLength / 2 + PointSize / 2);
+        float childLineY = -(PointSize / 2 + VerticalLineLength / 2);
+        float slotY = -(VerticalLineLength / 2 + SlotSize / 2);
+
+        // #5. 자식 라인 생성.
+        int count = dataList.Count;
+        float x = -(count - 1) / 2 * (SlotSize + HorizontalSpacing);
         for (int i = 0; i < count; i++) {
-            UI_SkillTreeLine pointLine = Main.UI.CreateSubItem<UI_SkillTreeLine>(parentLine.transform);
-            pointLine.Position = new(x, pointY);
-            pointLine.Size = new(PointSize, PointSize);
-            points.Add(pointLine);
-
-            UI_SkillTreeLine childLine = Main.UI.CreateSubItem<UI_SkillTreeLine>(pointLine.transform);
-            childLine.Position = new(0, childLineY);
-            childLine.Size = new(PointSize, VerticalLineLength);
-            children.Add(childLine);
-
-            UI_SkillSlot newSlot = Main.UI.CreateSubItem<UI_SkillSlot>(childLine.transform, pooling: true);
-            newSlot.SetInfo(dataList[i]);
-            newSlot.Position = new Vector2(0, slotY);
-            _childrenSlots.Add(newSlot);
-
+            points.Add(CreateLine(parentLine, new(x, pointY), new(PointSize, PointSize)));
+            children.Add(CreateLine(points[^1], new(0, childLineY), new(PointSize, VerticalLineLength)));
+            _childrenSlots.Add(CreateSlot(children[^1], new(0, slotY), dataList[i]));
             x += (SlotSize + HorizontalSpacing);
         }
 

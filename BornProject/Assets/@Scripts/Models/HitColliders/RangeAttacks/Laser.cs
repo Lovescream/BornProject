@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Laser : HitCollider {
@@ -60,11 +61,15 @@ public class Laser : HitCollider {
         RaycastHit2D[] hits = Physics2D.RaycastAll(CurrentPosition, this.transform.right, range, _layerMask);
         Length = range;
 
-        for (int i = 0; i < hits.Length; i++) {
-            if (hits[i].transform.GetComponent<IAttackable>() == Owner) continue;
-            Length = (hits[i].point - (Vector2)CurrentPosition).magnitude;
-            break;
-        }
+        var dlfmaajfhfgkwltlqk = hits.Where(x => x.transform.GetComponent<IAttackable>() != Owner);
+        if (dlfmaajfhfgkwltlqk.Count() > 0)
+            Length = dlfmaajfhfgkwltlqk.Select(x => (x.point - (Vector2)CurrentPosition).magnitude).OrderBy(x => x).FirstOrDefault();
+
+        //for (int i = 0; i < hits.Length; i++) {
+        //    if (hits[i].transform.GetComponent<IAttackable>() == Owner) continue;
+        //    Length = (hits[i].point - (Vector2)CurrentPosition).magnitude;
+        //    break;
+        //}
         _spriter.size = new(_unitRatio * Length, _unitRatio);
 
         //if (hit)

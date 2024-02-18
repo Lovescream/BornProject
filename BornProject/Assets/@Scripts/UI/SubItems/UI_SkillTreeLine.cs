@@ -32,6 +32,7 @@ public class UI_SkillTreeLine : UI_Base, ISkillTreeElement {
     public ISkillTreeElement ActivatedParent { get; set; }
     public ISkillTreeElement ActivatedChild { get; set; }
 
+    public UI_SkillTreeLine Parent { get; set; }
     public UI_SkillTreeLine Left { get; set; }
     public UI_SkillTreeLine Bottom { get; set; }
     public UI_SkillTreeLine Right { get; set; }
