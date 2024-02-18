@@ -26,6 +26,10 @@ public class Creature : Entity {
         get => _hp;
         set {
             if (_hp == value) return;
+            if (this.GetComponent<Player>() != null)
+            {
+                Debug.Log($"Player의 Hp를 {value}로 설정합니다.");
+            }
             if (value <= 0)
             {
                 if (State.Current != CreatureState.Dead)
@@ -178,7 +182,8 @@ public class Creature : Entity {
 
     public virtual void OnHit(IHitCollider attacker) {
         HitInfo hitInfo = attacker.HitInfo;
-        Debug.Log($"{hitInfo.Damage}의 피해를 입었따. 죽어라 - !");
+        //if (this.GetComponent<Enemy>() != null) Debug.Log($"곰이 {hitInfo.Damage} 피해를 입엇다");
+        //Debug.Log($"{hitInfo.Damage}의 피해를 입었따. 죽어라 - !");
         Hp -= hitInfo.Damage;
 
         CreatureState originState = State.Current == CreatureState.Hit ? State.NextState :State.Current; // 원래 상태 저장.
