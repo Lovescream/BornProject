@@ -19,8 +19,9 @@ public class UI_Scene_Game : UI_Scene {
     #endregion
 
     #region Properties
-
+    
     public UI_PlayerInfo PlayerInfo { get; protected set; }
+    private bool isQuestPopupOpen = false;
 
     #endregion
 
@@ -57,10 +58,29 @@ public class UI_Scene_Game : UI_Scene {
     private void OnBtnMenu() {
         Main.UI.OpenPopupUI<UI_Popup_Menu>();
     }
-    private void OnBtnQuest() {
+
+    
+    private void OnBtnQuest()
+    {
+        if (!isQuestPopupOpen)
+        {
+            Main.UI.OpenPopupUI<UI_Popup_Quest>(); // 퀘스트 팝업을 열어줘
+            isQuestPopupOpen = true; // 퀘스트 팝업이 열렸다고 표시해줘
+        }
+        else
+        {
+            Main.UI.Clear(); // 이미 열려있는 퀘스트 팝업을 닫아줘
+            isQuestPopupOpen = false; // 퀘스트 팝업이 닫혔다고 표시해줘
+        }
+    }
+
+
+    /*private void OnBtnQuest() {
         Main.UI.OpenPopupUI<UI_Popup_Quest>();
+        Main.UI.ClosePopup<UI_Popup_Quest>();
         //이 버튼으로 닫는건 어 케 해!
     }
+    */
     private void OnBtnSkill() {
         // TODO:: 
     }

@@ -65,5 +65,6 @@ public class UI_Scene_Title : UI_Scene {
 
     private void OnBtnExit() {
         Debug.Log("게임종료");
+        Application.Quit();
     }
 }
