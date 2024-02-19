@@ -8,9 +8,11 @@ public class UI_SkillSlot : UI_SlotBase {
 
     #region Properties
 
+    public UI_Popup_Skill Panel { get; protected set; }
     public SkillData Data { get; protected set; }
     public SkillType Type => Data != null ? Data.Type : _type;
     public UI_TreeLine Line { get; protected set; } // Connected Line.
+    public bool DefaultSlot { get; protected set; }
     public bool Available {
         get => _available;
         set {
@@ -74,24 +76,50 @@ public class UI_SkillSlot : UI_SlotBase {
         return true;
     }
 
-    public void SetInfo(UI_TreeLine line, SkillData data) {
+    public void SetInfo(UI_Popup_Skill panel) {
+        Initialize();
+
+        this.Panel = panel;
+        this.DefaultSlot = true;
+
+        if (Line == null) GenerateTree();
+    }
+    public void SetInfo(UI_TreeLine line, UI_Popup_Skill panel, SkillData data, bool isDefault) {
         Initialize();
 
         Line = line;
         Rect.sizeDelta = new(UI_TreeLine.SlotSize, UI_TreeLine.SlotSize);
         Rect.anchoredPosition = new(line.X, -(line.Size.y + this.Size.y) / 2f);
+        this.DefaultSlot = isDefault;
 
-        SetInfo(data);
+        SetInfo(panel, data);
     }
 
-    public void SetInfo(SkillData data) {
+    public void SetInfo(UI_Popup_Skill panel, SkillData data) {
         Initialize();
 
+        this.Panel = panel;
         this.Data = data;
         SetImage(Main.Resource.LoadSprite($"Icon_{data.Key}"));
 
         Available = true;
         Activated = false;
+    }
+
+    public void SetInfoSkillTree(UI_Popup_Skill panel, SkillData data) {
+        Initialize();
+
+        this.Panel = panel;
+        this.Data = data;
+        SetImage(Main.Resource.LoadSprite($"Icon_{data.Key}"));
+
+        Available = true;
+        Activated = false;
+
+        if (Line != null)
+            Main.Resource.Destroy(Line.gameObject);
+        _subs = null;
+        GenerateTree();
     }
 
     #endregion
@@ -127,7 +155,7 @@ public class UI_SkillSlot : UI_SlotBase {
         if (_subs == null) SetSubSkillData();
 
         UI_TreeLine baseLine = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: true);
-        baseLine.SetInfo();
+        baseLine.SetInfo(this);
         UI_TreeLine basePoint = baseLine.CreateNewLine(TreeDirection.Bottom, TreeLineType.Point);
 
         int mid = _subs.Count / 2;
@@ -135,15 +163,15 @@ public class UI_SkillSlot : UI_SlotBase {
         UI_TreeLine rightBase = basePoint;
 
         if (_subs.Count % 2 == 1)
-            basePoint.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(_subs[0]);
+            basePoint.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(Panel, _subs[0], DefaultSlot);
         for (int i = 0; i < mid; i++) {
             TreeLineType horizontal = _subs.Count % 2 == 0 && i == 0 ? TreeLineType.HalfHorizontal : TreeLineType.Horizontal;
 
             leftBase = leftBase.CreateNewLine(TreeDirection.Left, horizontal).CreateNewLine(TreeDirection.Left, i == mid - 1 ? TreeLineType.LeftCorner : TreeLineType.Point);
-            leftBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(_subs[mid - i - 1]);
+            leftBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(Panel, _subs[mid - i - 1], DefaultSlot);
 
             rightBase = rightBase.CreateNewLine(TreeDirection.Right, TreeLineType.Horizontal).CreateNewLine(TreeDirection.Right, i == mid - 1 ? TreeLineType.RightCorner : TreeLineType.Point);
-            rightBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(_subs[mid + i + _subs.Count % 2 == 1 ? 1 : 0]);
+            rightBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(Panel, _subs[mid + i + _subs.Count % 2 == 1 ? 1 : 0], DefaultSlot);
         }
     }
 
@@ -168,8 +196,14 @@ public class UI_SkillSlot : UI_SlotBase {
 
         if (!Available) return;
 
-        if (!Activated) Activate();
-        else Deactivate();
+        if (!Activated) {
+            Activate();
+            if (DefaultSlot && Data != null && Data.Level == SkillLevel.Base)
+                Panel.SelectSkill(Data);
+        }
+        else {
+            Deactivate();
+        }
     }
 
     #endregion

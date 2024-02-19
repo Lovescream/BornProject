@@ -15,7 +15,7 @@ public class UI_TreeLine : UI_Base {
     public static readonly Color ActivatedColor = (Color)new Color32(12, 241, 221, 255);
     public static readonly float SlotSize = 125f;
     public static readonly float HorizontalSpacing = 25f;
-    public static readonly float VerticalLineLength = 75f;
+    public static readonly float VerticalLineLength = 50f;
     public static readonly float HorizontalLineLength = 137.5f;
     public static readonly float HalfHorizontalLineLength = 62.5f;
     public static readonly float PointSize = 12.5f;
@@ -89,9 +89,9 @@ public class UI_TreeLine : UI_Base {
         return true;
     }
 
-    public void SetInfo() {
+    public void SetInfo(UI_SkillSlot slot) {
         this.Type = TreeLineType.Vertical;
-        Rect.anchoredPosition = new(0, -(SlotSize + VerticalLineLength) / 2f);
+        Rect.anchoredPosition = new(0, -(slot.Size.y + VerticalLineLength) / 2f);
         Rect.sizeDelta = new(PointSize, VerticalLineLength);
         RefreshImage();
     }
@@ -138,9 +138,9 @@ public class UI_TreeLine : UI_Base {
         return line;
     }
 
-    public UI_SkillSlot ConnectSlot(SkillData data) {
+    public UI_SkillSlot ConnectSlot(UI_Popup_Skill panel, SkillData data, bool isDefault) {
         if (Slot == null) Slot = Main.UI.CreateSubItem<UI_SkillSlot>(this.transform, pooling: true);
-        Slot.SetInfo(this, data);
+        Slot.SetInfo(this, panel, data, isDefault);
         return Slot;
     }
 
