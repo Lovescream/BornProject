@@ -14,6 +14,8 @@ public class SkillList {
         set {
             if (value == _currentBasicSkill) return;
             _currentBasicSkill = value;
+            Debug.Log("현재 스킬의 이름" + CurrentBasicSkill.Name);
+            Debug.Log("현재 SkillData의 List 수" + _basicSkills.Count);
             OnChangedBasicSkill?.Invoke(value);
         }
     }

@@ -54,7 +54,6 @@ public class HitCollider : Entity, IHitCollider {
         if (_deltaPosition >= Range) {
             Destroy();
         }
-
         _rigidbody.velocity = Velocity;
         _prevPosition = CurrentPosition;
     }
@@ -87,12 +86,11 @@ public class HitCollider : Entity, IHitCollider {
 
     public virtual void SetInfo(string key, HitColliderInfo info, HitInfo hitInfo) {
         Initialize();
-
         this.Info = info;
         this.HitInfo = hitInfo;
         this.Velocity = info.Velocity;
         this.RemainPenetration = info.Penetration;
-
+        
         this.transform.SetParent(Owner.Indicator);
         this.transform.localPosition = Vector3.zero;
 

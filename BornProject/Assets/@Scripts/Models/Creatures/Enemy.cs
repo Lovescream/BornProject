@@ -137,6 +137,11 @@ public class Enemy : Creature, IAttackable {
 
         // #4. 공격!
         Attack();
+
+        // #5. Target이 공격거리 밖에 있다면 대상을 향해 이동.
+        Vector2 direction = (Target.transform.position - this.transform.position).normalized;
+        Velocity = direction * Status[StatType.MoveSpeed].Value;
+        LookDirection = direction;
     }
 
     public override void OnHit(IHitCollider attacker) {
@@ -161,7 +166,7 @@ public class Enemy : Creature, IAttackable {
             RotationAngle = -1f,
             Count = 1,
             SpreadAngle = 0,
-            Size = 1,
+            Size = 0.75f,
             AttackTime = 0.3f,
         };
     }
@@ -173,7 +178,7 @@ public class Enemy : Creature, IAttackable {
             DirectionX = 0,
             DirectionY = 0,
             Duration = 0,
-            Range = 0,
+            Range = this.Range,
         };
     }
 

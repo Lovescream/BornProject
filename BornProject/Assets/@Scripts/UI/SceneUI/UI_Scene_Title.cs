@@ -27,15 +27,10 @@ public class UI_Scene_Title : UI_Scene {
 
     enum Texts{
         textTitle,
-        textxit
+        
     }
 
     #endregion
-
-    void Start()
-    {
-        Initialize();
-    }
 
     public override bool Initialize()
     {
@@ -69,6 +64,6 @@ public class UI_Scene_Title : UI_Scene {
     }
 
     private void OnBtnExit() {
-        //팝업창 어떻게  올리지 
+        Debug.Log("게임종료");
     }
 }
