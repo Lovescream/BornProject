@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LaserSkillHit : HitCollider {
@@ -49,22 +50,27 @@ public class LaserSkillHit : HitCollider {
             return;
         }
         _spriter.sprite = sprite;
-        _unitRatio = sprite.textureRect.size.x / sprite.pixelsPerUnit;
+        _unitRatio = 1;
         _layerMask = 1 << Main.CreatureLayer | 1 << Main.WallLayer;
     }
 
     #endregion
 
-    private void ShotLaser() {
+    private void ShotLaser()
+    {
         float range = Mathf.Clamp(Range, 0, 1000);
         RaycastHit2D[] hits = Physics2D.RaycastAll(CurrentPosition, this.transform.right, range, _layerMask);
         Length = range;
 
-        for (int i = 0; i < hits.Length; i++) {
-            if (hits[i].transform.GetComponent<IAttackable>() == Owner) continue;
-            Length = (hits[i].point - (Vector2)CurrentPosition).magnitude;
-            break;
-        }
+        var dlfmaajfhfgkwltlqkdlrjdhodlfo = hits.Where(x => x.transform.GetComponent<IAttackable>() != Owner);
+        if (dlfmaajfhfgkwltlqkdlrjdhodlfo.Count() > 0)
+            Length = dlfmaajfhfgkwltlqkdlrjdhodlfo.Select(x => (x.point - (Vector2)CurrentPosition).magnitude).OrderBy(x => x).FirstOrDefault();
+
+        //for (int i = 0; i < hits.Length; i++) {
+        //    if (hits[i].transform.GetComponent<IAttackable>() == Owner) continue;
+        //    Length = (hits[i].point - (Vector2)CurrentPosition).magnitude;
+        //    break;
+        //}
         _spriter.size = new(_unitRatio * Length, _unitRatio);
 
         //if (hit)
