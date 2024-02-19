@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TitleScene : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class TitleScene : BaseScene {
+    public UI_Scene_Title UI => SceneUI as UI_Scene_Title;
 
-    // Update is called once per frame
-    void Update()
+    protected override bool Initialize()
     {
-        
+        if (!base.Initialize()) return false;
+
+        SceneUI = Main.UI.OpenSceneUI<UI_Scene_Title>();
+
+        return true;
     }
 }
