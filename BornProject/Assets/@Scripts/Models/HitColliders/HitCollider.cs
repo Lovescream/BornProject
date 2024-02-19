@@ -88,7 +88,10 @@ public class HitCollider : Entity, IHitCollider {
         Initialize();
         this.Info = info;
         this.HitInfo = hitInfo;
-        this.Velocity = info.Velocity;
+        Vector2 direction = new Vector2(info.DirectionX, info.DirectionY).normalized;
+        if (direction.magnitude <= 0.001)
+            direction = hitInfo.Owner.LookDirection;
+        this.Velocity = direction * info.Speed;
         this.RemainPenetration = info.Penetration;
         
         this.transform.SetParent(Owner.Indicator);
