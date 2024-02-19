@@ -53,6 +53,7 @@ public class UI_BarBase : UI_Base {
         _txtTitle = this.gameObject.FindChild<TextMeshProUGUI>("txtTitle");
         _txtValue = this.gameObject.FindChild<TextMeshProUGUI>("txtValue");
 
+        _slider.interactable = false;
         return true;
     }
 

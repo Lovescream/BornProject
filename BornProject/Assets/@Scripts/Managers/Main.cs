@@ -36,6 +36,7 @@ public class Main : MonoBehaviour {
     private ObjectManager _object = new();
     private DungeonManager _dungeon = new();
     private UIManager _ui = new();
+    private SkillManager _skill = new();
 
     public static PoolManager Pool => Instance?._pool;
     public static DataManager Data => Instance?._data;
@@ -43,6 +44,7 @@ public class Main : MonoBehaviour {
     public static ObjectManager Object => Instance?._object;
     public static DungeonManager Dungeon => Instance?._dungeon;
     public static UIManager UI => Instance?._ui;
+    public static SkillManager Skill => Instance?._skill;
     public void ManualInitialize() {
         _pool = new();
         _data = new();
@@ -50,6 +52,7 @@ public class Main : MonoBehaviour {
         _object = new();
         _dungeon = new();
         _ui = new();
+        _skill = new();
     }
 
     #region Layers

@@ -6,6 +6,7 @@ using UnityEngine;
 public interface IAttackable {
 
     public Transform Indicator { get; }
+    public Vector2 LookDirection { get; }
 
     public void Attack();
     public HitColliderGenerationInfo GetHitColliderGenerationInfo();

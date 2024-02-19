@@ -14,7 +14,7 @@ public class UI_Popup_Quest : UI_Popup {
 
     #region Properties
 
-    public override bool IsPause => true;
+    public override bool IsPause => false;
 
     #endregion
 
