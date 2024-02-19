@@ -38,13 +38,61 @@
   {
     "HpMax": 200.0,
     "HpRegen": 5.0,
-    "Damage": 30.0,
-    "Defense": 2.0,
+    "Damage": 50.0,
+    "Defense": 10.0,
     "MoveSpeed": 1.0,
     "AttackSpeed": 1.0,
     "Cost": 0,
     "Range": 3.0,
     "Sight": 5.0,
     "Key": "Bear"
+  },
+  {
+    "HpMax": 50.0,
+    "HpRegen": 3.0,
+    "Damage": 10.0,
+    "Defense": 3.0,
+    "MoveSpeed": 2.0,
+    "AttackSpeed": 2.0,
+    "Cost": 0,
+    "Range": 1.5,
+    "Sight": 5.0,
+    "Key": "Snake"
+  },
+  {
+    "HpMax": 30.0,
+    "HpRegen": 3.0,
+    "Damage": 5.0,
+    "Defense": 1.0,
+    "MoveSpeed": 1.0,
+    "AttackSpeed": 1.0,
+    "Cost": 0,
+    "Range": 3.0,
+    "Sight": 5.0,
+    "Key": "Beetle"
+  },
+  {
+    "HpMax": 100.0,
+    "HpRegen": 5.0,
+    "Damage": 30.0,
+    "Defense": 5.0,
+    "MoveSpeed": 1.5,
+    "AttackSpeed": 1.5,
+    "Cost": 0,
+    "Range": 5.0,
+    "Sight": 10.0,
+    "Key": "Wolf"
+  },
+  {
+    "HpMax": 1500.0,
+    "HpRegen": 10.0,
+    "Damage": 70.0,
+    "Defense": 50.0,
+    "MoveSpeed": 1.0,
+    "AttackSpeed": 1.0,
+    "Cost": 0,
+    "Range": 7.0,
+    "Sight": 20.0,
+    "Key": "Boss"
   }
 ]

@@ -58,6 +58,8 @@ public class LaserSkillHit : HitCollider {
 
     private void ShotLaser()
     {
+        
+
         float range = Mathf.Clamp(Range, 0, 1000);
         RaycastHit2D[] hits = Physics2D.RaycastAll(CurrentPosition, this.transform.right, range, _layerMask);
         Length = range;
@@ -66,14 +68,7 @@ public class LaserSkillHit : HitCollider {
         if (dlfmaajfhfgkwltlqkdlrjdhodlfo.Count() > 0)
             Length = dlfmaajfhfgkwltlqkdlrjdhodlfo.Select(x => (x.point - (Vector2)CurrentPosition).magnitude).OrderBy(x => x).FirstOrDefault();
 
-        //for (int i = 0; i < hits.Length; i++) {
-        //    if (hits[i].transform.GetComponent<IAttackable>() == Owner) continue;
-        //    Length = (hits[i].point - (Vector2)CurrentPosition).magnitude;
-        //    break;
-        //}
         _spriter.size = new(_unitRatio * Length, _unitRatio);
 
-        //if (hit)
-        //    Length = (hit.point - (Vector2)CurrentPosition).magnitude;
     }
 }

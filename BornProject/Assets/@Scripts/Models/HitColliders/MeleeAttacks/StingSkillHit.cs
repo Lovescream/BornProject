@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class StingSkillHit : HitCollider
-{
+public class StingSkillHit : HitCollider{
     #region Properties
 
     public float AttackRadius { get; private set; }
@@ -54,7 +53,6 @@ public class StingSkillHit : HitCollider
             _unitRatio = 1f;
             return;
         }
-        //_spriter.sprite = sprite;
         _unitRatio = sprite.textureRect.size.x / sprite.pixelsPerUnit;
         // 공격 범위 설정
         AttackRadius = info.Range;
