@@ -5,7 +5,10 @@ using UnityEngine;
 public class UI_Popup_Skill : UI_Popup {
 
     #region Enum
-    
+
+    enum Buttons {
+        btnClose,
+    }
     enum Objects {
         RangeSlots,
         MeleeSlots,
@@ -28,6 +31,7 @@ public class UI_Popup_Skill : UI_Popup {
         if (!base.Initialize()) return false;
 
         BindObject(typeof(Objects));
+        BindButton(typeof(Buttons));
 
         GameObject rangeSlots = GetObject((int)Objects.RangeSlots);
         Destroy(rangeSlots.transform.Find("Sample").gameObject);
@@ -43,12 +47,37 @@ public class UI_Popup_Skill : UI_Popup {
         mainSlots.SetActive(false);
         MainSlots = mainSlots.GetComponent<UI_SkillSlot>();
 
+        GetButton((int)Buttons.btnClose).onClick.AddListener(OnBtnClose);
+
         return true;
     }
 
+    public void SetInfo() {
+        SkillData range = Main.Skill.BaseRange;
+        if (range != null) {
+            UI_SkillSlot rangeSlot = RangeSlots[range];
+            if (rangeSlot != null) rangeSlot.Activate();
+        }
+        SkillData melee = Main.Skill.BaseMelee;
+        if (melee != null) {
+            UI_SkillSlot meleeSlot = MeleeSlots[melee];
+            if (meleeSlot != null) meleeSlot.Activate();
+        }
+    }
+
     public void SelectSkill(SkillData skill) {
+        Initialize();
+
         MainSlots.gameObject.SetActive(true);
         MainSlots.SetInfoSkillTree(this, skill);
+    }
+
+    #endregion
+
+    #region OnButtons
+
+    private void OnBtnClose() {
+        Close();
     }
 
     #endregion

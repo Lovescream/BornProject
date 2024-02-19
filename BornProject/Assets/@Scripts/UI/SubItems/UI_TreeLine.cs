@@ -129,7 +129,7 @@ public class UI_TreeLine : UI_Base {
         if (directionIndex > 3) directionIndex -= 4;
         TreeDirection offDirection = (TreeDirection)directionIndex;
 
-        line = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: true);
+        line = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: false);
         _neighbours[direction] = line;
         line.SetInfo(this, offDirection, type);
 
@@ -138,9 +138,9 @@ public class UI_TreeLine : UI_Base {
         return line;
     }
 
-    public UI_SkillSlot ConnectSlot(UI_Popup_Skill panel, SkillData data, bool isDefault) {
-        if (Slot == null) Slot = Main.UI.CreateSubItem<UI_SkillSlot>(this.transform, pooling: true);
-        Slot.SetInfo(this, panel, data, isDefault);
+    public UI_SkillSlot ConnectSlot(UI_SkillSlot parent, SkillData data) {
+        if (Slot == null) Slot = Main.UI.CreateSubItem<UI_SkillSlot>(this.transform, pooling: false);
+        Slot.SetInfo(this, parent, data);
         return Slot;
     }
 

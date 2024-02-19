@@ -62,7 +62,7 @@ public class UI_Scene_Game : UI_Scene {
         //이 버튼으로 닫는건 어 케 해!
     }
     private void OnBtnSkill() {
-        // TODO:: 
+        Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
     }
 
     #endregion

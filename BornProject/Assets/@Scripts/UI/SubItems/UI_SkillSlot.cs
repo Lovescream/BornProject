@@ -9,6 +9,7 @@ public class UI_SkillSlot : UI_SlotBase {
     #region Properties
 
     public UI_Popup_Skill Panel { get; protected set; }
+    public UI_SkillSlot Parent { get; protected set; }
     public SkillData Data { get; protected set; }
     public SkillType Type => Data != null ? Data.Type : _type;
     public UI_TreeLine Line { get; protected set; } // Connected Line.
@@ -60,9 +61,21 @@ public class UI_SkillSlot : UI_SlotBase {
 
     // Collections.
     private List<SkillData> _subs;
+    private List<UI_SkillSlot> _slots = new();
 
     // Components.
     private RectTransform _rect;
+
+    #endregion
+
+    #region Indexer
+
+    public UI_SkillSlot this[SkillData data] {
+        get {
+            if (_slots.Count == 0) return null;
+            return _slots.Where(x => x.Data == data).FirstOrDefault();
+        }
+    }
 
     #endregion
 
@@ -84,15 +97,16 @@ public class UI_SkillSlot : UI_SlotBase {
 
         if (Line == null) GenerateTree();
     }
-    public void SetInfo(UI_TreeLine line, UI_Popup_Skill panel, SkillData data, bool isDefault) {
+    public void SetInfo(UI_TreeLine line, UI_SkillSlot parent, SkillData data) {
         Initialize();
 
         Line = line;
+        Parent = parent;
         Rect.sizeDelta = new(UI_TreeLine.SlotSize, UI_TreeLine.SlotSize);
         Rect.anchoredPosition = new(line.X, -(line.Size.y + this.Size.y) / 2f);
-        this.DefaultSlot = isDefault;
+        this.DefaultSlot = Parent.DefaultSlot;
 
-        SetInfo(panel, data);
+        SetInfo(Parent.Panel, data);
     }
 
     public void SetInfo(UI_Popup_Skill panel, SkillData data) {
@@ -101,6 +115,7 @@ public class UI_SkillSlot : UI_SlotBase {
         this.Panel = panel;
         this.Data = data;
         SetImage(Main.Resource.LoadSprite($"Icon_{data.Key}"));
+        SetText(data.Name);
 
         Available = true;
         Activated = false;
@@ -112,13 +127,12 @@ public class UI_SkillSlot : UI_SlotBase {
         this.Panel = panel;
         this.Data = data;
         SetImage(Main.Resource.LoadSprite($"Icon_{data.Key}"));
+        SetText(data.Name);
 
         Available = true;
         Activated = false;
 
-        if (Line != null)
-            Main.Resource.Destroy(Line.gameObject);
-        _subs = null;
+        RemoveTree();
         GenerateTree();
     }
 
@@ -130,6 +144,8 @@ public class UI_SkillSlot : UI_SlotBase {
         Available = true;
         Activated = true;
 
+        if (Parent != null) Parent.DeactivateChildren();
+
         UI_TreeLine subLine = null;
         UI_TreeLine parentLine = Line;
         while (parentLine != null) {
@@ -137,6 +153,8 @@ public class UI_SkillSlot : UI_SlotBase {
             subLine = parentLine;
             parentLine = parentLine.Parent;
         }
+
+        Main.Skill.GetSkill(Data);
     }
     public void Deactivate() {
         Activated = false;
@@ -148,30 +166,38 @@ public class UI_SkillSlot : UI_SlotBase {
             line = line.Parent;
         }
     }
+    public void DeactivateChildren() {
+        _slots.ForEach(x => x.Deactivate());
+    }
 
     #endregion
+
+    public void RemoveTree() {
+        if (Line != null) Main.Resource.Destroy(Line.gameObject);
+        _subs = null;
+        _slots.Clear();
+    }
 
     public void GenerateTree() {
         if (_subs == null) SetSubSkillData();
 
-        UI_TreeLine baseLine = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: true);
-        baseLine.SetInfo(this);
-        UI_TreeLine basePoint = baseLine.CreateNewLine(TreeDirection.Bottom, TreeLineType.Point);
+        Line = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: false);
+        Line.SetInfo(this);
+        UI_TreeLine basePoint = Line.CreateNewLine(TreeDirection.Bottom, TreeLineType.Point);
 
         int mid = _subs.Count / 2;
         UI_TreeLine leftBase = basePoint;
         UI_TreeLine rightBase = basePoint;
-
         if (_subs.Count % 2 == 1)
-            basePoint.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(Panel, _subs[0], DefaultSlot);
+            _slots.Add(basePoint.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(this, _subs[mid]));
         for (int i = 0; i < mid; i++) {
             TreeLineType horizontal = _subs.Count % 2 == 0 && i == 0 ? TreeLineType.HalfHorizontal : TreeLineType.Horizontal;
 
             leftBase = leftBase.CreateNewLine(TreeDirection.Left, horizontal).CreateNewLine(TreeDirection.Left, i == mid - 1 ? TreeLineType.LeftCorner : TreeLineType.Point);
-            leftBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(Panel, _subs[mid - i - 1], DefaultSlot);
+            _slots.Add(leftBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(this, _subs[mid - i - 1]));
 
-            rightBase = rightBase.CreateNewLine(TreeDirection.Right, TreeLineType.Horizontal).CreateNewLine(TreeDirection.Right, i == mid - 1 ? TreeLineType.RightCorner : TreeLineType.Point);
-            rightBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(Panel, _subs[mid + i + _subs.Count % 2 == 1 ? 1 : 0], DefaultSlot);
+            rightBase = rightBase.CreateNewLine(TreeDirection.Right, horizontal).CreateNewLine(TreeDirection.Right, i == mid - 1 ? TreeLineType.RightCorner : TreeLineType.Point);
+            _slots.Add(rightBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(this, _subs[mid + i + (_subs.Count % 2 == 1 ? 1 : 0)]));
         }
     }
 
@@ -180,13 +206,9 @@ public class UI_SkillSlot : UI_SlotBase {
         if (Data == null)
             _subs = Main.Data.Skills.Values.Where(x => x.Level == SkillLevel.Base && x.Type == Type).ToList();
         else if (Data.Level != SkillLevel.Rare)
-            _subs = Main.Data.Skills.Values.Where(x => x.Key.Contains(Data.Key.Split('_')[0]) && x.Level == Data.Level + 1).ToList();
+            _subs = Main.Data.Skills.Values.Where(x => x.Key.Split('_')[0] == Data.Key.Split('_')[0] && x.Level == Data.Level + 1).ToList();
         else
             _subs = new();
-        //subs.RemoveAt(2);
-        //subs.RemoveAt(1);
-        //subs.Add(Main.Data.Skills.Values.First());
-        //subs.Add(Main.Data.Skills.Values.First());
     }
 
     #region OnButtons
