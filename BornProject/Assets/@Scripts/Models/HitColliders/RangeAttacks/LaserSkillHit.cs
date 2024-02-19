@@ -50,7 +50,7 @@ public class LaserSkillHit : HitCollider {
             return;
         }
         _spriter.sprite = sprite;
-        _unitRatio = sprite.textureRect.size.x / sprite.pixelsPerUnit;
+        _unitRatio = 1;
         _layerMask = 1 << Main.CreatureLayer | 1 << Main.WallLayer;
     }
 
