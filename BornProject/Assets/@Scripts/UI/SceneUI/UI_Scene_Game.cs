@@ -82,7 +82,7 @@ public class UI_Scene_Game : UI_Scene {
     }
     */
     private void OnBtnSkill() {
-        // TODO:: 
+        Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
     }
 
     #endregion

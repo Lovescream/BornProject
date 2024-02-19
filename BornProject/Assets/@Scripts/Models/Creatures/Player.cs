@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using static UnityEngine.GraphicsBuffer;
 
 public class Player : Creature, IAttackable {
 
@@ -69,8 +70,11 @@ public class Player : Creature, IAttackable {
         Velocity = value.Get<Vector2>().normalized * Status[StatType.MoveSpeed].Value;
     }
     protected void OnLook(InputValue value) {
-        Vector2 v = Camera.main.ScreenToWorldPoint(value.Get<Vector2>()) - this.transform.position;
-        LookDirection = v.normalized;
+        if (!this.IsDead) // 안죽었다면
+        {
+            Vector2 v = Camera.main.ScreenToWorldPoint(value.Get<Vector2>()) - this.transform.position;
+            LookDirection = v.normalized;
+        }
     }
     protected void OnAttackMain() {
         if (EventSystem.current.IsPointerOverGameObject()) return;
@@ -86,6 +90,7 @@ public class Player : Creature, IAttackable {
     #endregion
 
     public void Attack() {
+        if(!this.IsDead)
         Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());      
     }
 
