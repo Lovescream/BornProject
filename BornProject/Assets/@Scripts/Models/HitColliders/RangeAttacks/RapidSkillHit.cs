@@ -26,7 +26,13 @@ public class RapidSkillHit : HitCollider
 
         ShotRapid();
     }
+    protected override void FixedUpdate() // Add
+    {
+        base.FixedUpdate();
 
+        // Rigidbody2D를 사용해 오브젝트 이동
+        _rigidbody.velocity = Velocity;
+    }
     #endregion
 
     #region Initialize / Set
@@ -48,6 +54,9 @@ public class RapidSkillHit : HitCollider
             _unitRatio = 1f;
             return;
         }
+        // 플레이어가 바라보는 방향을 Velocity로 설정
+        Velocity = this.transform.right * info.Speed;
+
         _spriter.sprite = sprite;
         _unitRatio = sprite.textureRect.size.x / sprite.pixelsPerUnit;
         _layerMask = 1 << Main.CreatureLayer | 1 << Main.WallLayer; ; // 타겟 레이어 설정
