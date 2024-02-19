@@ -1,17 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UI_SkillSlot : UI_Base, ISkillTreeElement {
+public class UI_SkillSlot : UI_SlotBase {
 
     #region Properties
 
-    public ISkillTreeElement ActivatedParent { get; set; }
-    public ISkillTreeElement ActivatedChild { get; set; }
-
     public SkillData Data { get; protected set; }
     public SkillType Type => Data != null ? Data.Type : _type;
-    public UI_SkillTree Tree { get; protected set; }
+    public UI_TreeLine Line { get; protected set; } // Connected Line.
+    public bool Available {
+        get => _available;
+        set {
+            _available = value;
+            SetSlotImage(Main.Resource.LoadSprite($"UI_SkillSlot_{(value ? "Available" : "Unavailable")}"));
+        }
+    }
+    public bool Activated {
+        get => _activated;
+        set {
+            _activated = value;
+            SetSlotImage(Main.Resource.LoadSprite($"UI_SkillSlot_{(value ? "Selected" : "Available")}"));
+        }
+    }
+
+    #region Rect Info
 
     public RectTransform Rect {
         get {
@@ -30,7 +45,7 @@ public class UI_SkillSlot : UI_Base, ISkillTreeElement {
         set => Rect.sizeDelta = value;
     }
 
-    public UI_SkillTreeLine Parent { get; set; }
+    #endregion
 
     #endregion
 
@@ -38,14 +53,18 @@ public class UI_SkillSlot : UI_Base, ISkillTreeElement {
 
     [SerializeField]
     private SkillType _type;
+    private bool _activated;
+    private bool _available;
 
     // Collections.
-    private List<SkillData> subs;
+    private List<SkillData> _subs;
 
     // Components.
     private RectTransform _rect;
 
     #endregion
+
+    #region Initialize / Set
 
     public override bool Initialize() {
         if (!base.Initialize()) return false;
@@ -55,29 +74,104 @@ public class UI_SkillSlot : UI_Base, ISkillTreeElement {
         return true;
     }
 
+    public void SetInfo(UI_TreeLine line, SkillData data) {
+        Initialize();
+
+        Line = line;
+        Rect.sizeDelta = new(UI_TreeLine.SlotSize, UI_TreeLine.SlotSize);
+        Rect.anchoredPosition = new(line.X, -(line.Size.y + this.Size.y) / 2f);
+
+        SetInfo(data);
+    }
+
     public void SetInfo(SkillData data) {
         Initialize();
 
         this.Data = data;
+        SetImage(Main.Resource.LoadSprite($"Icon_{data.Key}"));
+
+        Available = true;
+        Activated = false;
     }
 
-    public void GenerateTree() {
-        //Tree = Main.UI.CreateSubItem<UI_SkillTree>(this.transform);
-        //Tree.Temp(this);
-        UI_TreeLine newLine = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: true);
-        newLine.SetInfo();
+    #endregion
 
-        
+    #region Activate / Deactivate
+
+    public void Activate() {
+        Available = true;
+        Activated = true;
+
+        UI_TreeLine subLine = null;
+        UI_TreeLine parentLine = Line;
+        while (parentLine != null) {
+            parentLine.Activate(subLine);
+            subLine = parentLine;
+            parentLine = parentLine.Parent;
+        }
     }
+    public void Deactivate() {
+        Activated = false;
+        Available = true;
 
-    private void SetSubSkillData() {
-        subs = new();
-        if (Data == null) {
-
+        UI_TreeLine line = Line;
+        while (line != null) {
+            line.Deactivate();
+            line = line.Parent;
         }
     }
 
-    public void Activate(bool isActivated) {
+    #endregion
 
+    public void GenerateTree() {
+        if (_subs == null) SetSubSkillData();
+
+        UI_TreeLine baseLine = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: true);
+        baseLine.SetInfo();
+        UI_TreeLine basePoint = baseLine.CreateNewLine(TreeDirection.Bottom, TreeLineType.Point);
+
+        int mid = _subs.Count / 2;
+        UI_TreeLine leftBase = basePoint;
+        UI_TreeLine rightBase = basePoint;
+
+        if (_subs.Count % 2 == 1)
+            basePoint.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(_subs[0]);
+        for (int i = 0; i < mid; i++) {
+            TreeLineType horizontal = _subs.Count % 2 == 0 && i == 0 ? TreeLineType.HalfHorizontal : TreeLineType.Horizontal;
+
+            leftBase = leftBase.CreateNewLine(TreeDirection.Left, horizontal).CreateNewLine(TreeDirection.Left, i == mid - 1 ? TreeLineType.LeftCorner : TreeLineType.Point);
+            leftBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(_subs[mid - i - 1]);
+
+            rightBase = rightBase.CreateNewLine(TreeDirection.Right, TreeLineType.Horizontal).CreateNewLine(TreeDirection.Right, i == mid - 1 ? TreeLineType.RightCorner : TreeLineType.Point);
+            rightBase.CreateNewLine(TreeDirection.Bottom, TreeLineType.Vertical).ConnectSlot(_subs[mid + i + _subs.Count % 2 == 1 ? 1 : 0]);
+        }
     }
+
+
+    private void SetSubSkillData() {
+        if (Data == null)
+            _subs = Main.Data.Skills.Values.Where(x => x.Level == SkillLevel.Base && x.Type == Type).ToList();
+        else if (Data.Level != SkillLevel.Rare)
+            _subs = Main.Data.Skills.Values.Where(x => x.Key.Contains(Data.Key.Split('_')[0]) && x.Level == Data.Level + 1).ToList();
+        else
+            _subs = new();
+        //subs.RemoveAt(2);
+        //subs.RemoveAt(1);
+        //subs.Add(Main.Data.Skills.Values.First());
+        //subs.Add(Main.Data.Skills.Values.First());
+    }
+
+    #region OnButtons
+
+    public override void OnClickSlot() {
+        base.OnClickSlot();
+
+        if (!Available) return;
+
+        if (!Activated) Activate();
+        else Deactivate();
+    }
+
+    #endregion
+
 }

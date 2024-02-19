@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class UI_TreeLine : UI_Base {
+
+    #region Const
 
     public static readonly Color DefaultColor = Color.white;
     public static readonly Color DeactivatedColor = (Color)new Color32(39, 65, 98, 255);
@@ -15,16 +20,26 @@ public class UI_TreeLine : UI_Base {
     public static readonly float HalfHorizontalLineLength = 62.5f;
     public static readonly float PointSize = 12.5f;
 
+    #endregion
+
     #region Properties
 
-    public TreeLineType Type {
-        get => _type;
-        set {
-            _type = value;
-        }
-    }
+    public TreeLineType Type { get; set; }
+
+    public UI_SkillSlot Slot { get; protected set; } // Connected Slot.
+
+    #region Neighbours Info
 
     public UI_TreeLine Parent { get; protected set; }
+    public UI_TreeLine Top => this[TreeDirection.Top];
+    public UI_TreeLine Right => this[TreeDirection.Right];
+    public UI_TreeLine Bottom => this[TreeDirection.Bottom];
+    public UI_TreeLine Left => this[TreeDirection.Left];
+    private UI_TreeLine this[TreeDirection direction] => _neighbours.TryGetValue(direction, out var line) ? line : null;
+
+    #endregion
+
+    #region Rect Info
 
     public RectTransform Rect {
         get {
@@ -43,36 +58,11 @@ public class UI_TreeLine : UI_Base {
         set => Rect.sizeDelta = value;
     }
 
-    public UI_TreeLine Top {
-        get {
-            if (!_neighbours.TryGetValue(TreeDirection.Top, out var line)) return null;
-            return line;
-        }
-    }
-    public UI_TreeLine Right {
-        get {
-            if (!_neighbours.TryGetValue(TreeDirection.Right, out var line)) return null;
-            return line;
-        }
-    }
-    public UI_TreeLine Bottom {
-        get {
-            if (!_neighbours.TryGetValue(TreeDirection.Bottom, out var line)) return null;
-            return line;
-        }
-    }
-    public UI_TreeLine Left {
-        get {
-            if (!_neighbours.TryGetValue(TreeDirection.Left, out var line)) return null;
-            return line;
-        }
-    }
+    #endregion
 
     #endregion
 
     #region Fields
-
-    private TreeLineType _type;
 
     // Collections.
     private Dictionary<TreeDirection, UI_TreeLine> _neighbours = new();
@@ -81,6 +71,8 @@ public class UI_TreeLine : UI_Base {
     private RectTransform _rect;
     private Image _line;
     private Image _fill;
+    private GameObject _block;
+    private RectTransform _blockRect;
 
     #endregion
 
@@ -92,7 +84,8 @@ public class UI_TreeLine : UI_Base {
         _rect = this.GetComponent<RectTransform>();
         _line = this.GetComponent<Image>();
         _fill = this.transform.GetChild(0).GetComponent<Image>();
-
+        _block = this.transform.GetChild(1).gameObject;
+        _blockRect = _block.GetComponent<RectTransform>();
         return true;
     }
 
@@ -102,10 +95,11 @@ public class UI_TreeLine : UI_Base {
         Rect.sizeDelta = new(PointSize, VerticalLineLength);
         RefreshImage();
     }
+
     public void SetInfo(UI_TreeLine parent, TreeDirection parentDirection, TreeLineType type) {
         this.Parent = parent;
         this.Type = type;
-        _neighbours[parentDirection] = this;
+        _neighbours[parentDirection] = parent;
 
         Vector2 size = type switch {
             TreeLineType.Horizontal => new(HorizontalLineLength, PointSize),
@@ -113,52 +107,116 @@ public class UI_TreeLine : UI_Base {
             TreeLineType.Vertical => new(PointSize, VerticalLineLength),
             _ => new(PointSize, PointSize),
         };
-        Vector2 position = parent.Position;
-        switch (parentDirection) {
-            case TreeDirection.Top: position.y -= (size.y + parent.Size.y) / 2f; break;
-            case TreeDirection.Right: position.x -= (size.x + parent.Size.x) / 2f; break;
-            case TreeDirection.Left: position.x += (size.x + parent.Size.x) / 2f; break;
-        }
-        Rect.anchoredPosition = position;
         Rect.sizeDelta = size;
+        Rect.anchoredPosition = parentDirection switch {
+            TreeDirection.Top => new(0, -(size.y + parent.Size.y) / 2f),
+            TreeDirection.Right => new(-(size.x + parent.Size.x) / 2f, 0),
+            TreeDirection.Left => new((size.x + parent.Size.x) / 2f, 0),
+            _ => Vector2.zero
+        };
 
         RefreshImage();
     }
 
     #endregion
 
-    private void CreateNewLine(TreeDirection direction, TreeLineType type) {
-        if (_neighbours.ContainsKey(direction)) return;
-        TreeDirection offDirection = direction switch {
-            TreeDirection.Top => TreeDirection.Bottom,
-            TreeDirection.Left => TreeDirection.Right,
-            TreeDirection.Bottom => TreeDirection.Top,
-            TreeDirection.Right => TreeDirection.Left,
-            _ => TreeDirection.Top
-        };
+    #region Line / Slot
 
-        UI_TreeLine newLine = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: true);
-        _neighbours[direction] = newLine;
-        newLine.SetInfo(this, offDirection, type);
+    public UI_TreeLine CreateNewLine(TreeDirection direction, TreeLineType type) {
+        if (_neighbours.TryGetValue(direction, out UI_TreeLine line)) return line;
 
+        int directionIndex = (int)direction + 2;
+        if (directionIndex > 3) directionIndex -= 4;
+        TreeDirection offDirection = (TreeDirection)directionIndex;
+
+        line = Main.UI.CreateSubItem<UI_TreeLine>(this.transform, pooling: true);
+        _neighbours[direction] = line;
+        line.SetInfo(this, offDirection, type);
+
+        RefreshImage();
+
+        return line;
+    }
+
+    public UI_SkillSlot ConnectSlot(SkillData data) {
+        if (Slot == null) Slot = Main.UI.CreateSubItem<UI_SkillSlot>(this.transform, pooling: true);
+        Slot.SetInfo(this, data);
+        return Slot;
+    }
+
+    #endregion
+
+    #region Activate / Deactivate
+
+    public void Activate(UI_TreeLine subLine) {
+        Initialize();
+        if (Type == TreeLineType.Point) {
+            int index = 0b0000;
+            _neighbours.Where(x => x.Value == subLine || x.Value == Parent).Select(x => (int)x.Key).ToList().ForEach(x => index |= 1 << x);
+            string endKey = index switch {
+                3 => "Point_Left",
+                5 => "VerticalFill",
+                6 => "RightCornerFill",
+                9 => "Point_Right",
+                10 => "HorizontalFill",
+                12 => "LeftCornerFill",
+                _ => ""
+            };
+            _fill.sprite = Main.Resource.LoadSprite($"UI_SkillTreeLines_{endKey}");
+        }
+        _fill.color = ActivatedColor;
+        _line.color = Type == TreeLineType.Point && !(Left == null && Right == null) ? DeactivatedColor : DefaultColor;
+    }
+    public void Deactivate() {
+        Initialize();
         RefreshImage();
     }
 
-    private void RefreshImage() {
-        string key = $"UI_SkillTreeLines_{Type}";
-        if (Type == TreeLineType.Point) {
-            _line.sprite = Main.Resource.LoadSprite(Bottom == null ? $"{key}_2" : $"{key}_3");
-            _fill.sprite = Main.Resource.LoadSprite($"{key}_Empty");
-            _line.color = UI_SkillTree.DeactivatedColor;
-            _fill.color = UI_SkillTree.DeactivatedColor;
+    #endregion
+
+    private string GetSpriteKey(bool isLine = true) {
+        string key = $"UI_SkillTreeLines_";
+        string mid;
+        string end = isLine ? "Line" : "Fill";
+        if (Type == TreeLineType.HalfHorizontal) return $"{key}Horizontal{end}";
+        else if (Type == TreeLineType.Point) {
+            if (Left != null && Right != null) return $"{key}{(isLine ? "Point_3" : "Point_Empty")}";
+            else if (Left != null) mid = "RightCorner";
+            else if (Right != null) mid = "LeftCorner";
+            else mid = "Vertical";
         }
         else {
-            _line.sprite = Main.Resource.LoadSprite($"{key}Line");
-            _fill.sprite = Main.Resource.LoadSprite($"{key}Fill");
-            _line.color = UI_SkillTree.DefaultColor;
-            _fill.color = UI_SkillTree.DeactivatedColor;
+            mid = $"{Type}";
+        }
+        return $"{key}{mid}{end}";
+    }
+
+    private void SetBlock(bool active) {
+        if (!active) {
+            _block.SetActive(false);
+            return;
+        }
+        float blockAnchor = Top == null ? 1 : 0;
+        if ((Top == null && Bottom == null) || (Top != null && Bottom != null)) {
+            _block.SetActive(false);
+        }
+        else {
+            _block.SetActive(true);
+            _blockRect.anchorMax = new(1, blockAnchor);
+            _blockRect.anchorMin = new(0, blockAnchor);
+            _blockRect.pivot = new(0.5f, blockAnchor);
+            _blockRect.sizeDelta = new(0, 3.125f);
         }
     }
+
+    private void RefreshImage() {
+        _line.sprite = Main.Resource.LoadSprite(GetSpriteKey(true));
+        _fill.sprite = Main.Resource.LoadSprite(GetSpriteKey(false));
+        SetBlock(Type == TreeLineType.Point);
+        _line.color = Type == TreeLineType.Point && Left != null && Right != null ? DeactivatedColor : DefaultColor;
+        _fill.color = DeactivatedColor;
+    }
+
 }
 
 public enum TreeDirection {

@@ -7,7 +7,9 @@ public class UI_SlotBase : UI_Base {
 
     #region Fields
 
-    private Image _image;
+    private Image _imgSlot;
+    private Image _imgContent;
+    private Button _button;
 
     #endregion
 
@@ -16,18 +18,30 @@ public class UI_SlotBase : UI_Base {
     public override bool Initialize() {
         if (!base.Initialize()) return false;
 
-        _image = this.gameObject.FindChild<Image>("imgContent");
+        _imgSlot = this.GetComponent<Image>();
+        _imgContent = this.gameObject.FindChild<Image>("imgContent");
+        _button = this.GetComponent<Button>();
+        if (_button != null) _button.onClick.AddListener(OnClickSlot);
 
         return true;
     }
 
+    public void SetSlotImage(Sprite sprite) {
+        Initialize();
+
+        _imgSlot.sprite = sprite;
+    }
     public void SetImage(Sprite sprite) {
         Initialize();
 
-        _image.sprite = sprite;
-        _image.color = new(1, 1, 1, sprite != null ? 1 : 0);
+        _imgContent.sprite = sprite;
+        _imgContent.color = new(1, 1, 1, sprite != null ? 1 : 0);
     }
 
     #endregion
+
+    public virtual void OnClickSlot() {
+        if (_button == null) return;
+    }
 
 }
