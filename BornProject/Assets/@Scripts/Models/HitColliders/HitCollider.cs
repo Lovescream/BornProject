@@ -85,14 +85,13 @@ public class HitCollider : Entity, IHitCollider {
     }
 
     public virtual void SetInfo(string key, HitColliderInfo info, HitInfo hitInfo) {
-        Initialize();
+        Initialize(); 
         this.Info = info;
         this.HitInfo = hitInfo;
         this.Velocity = info.Velocity;
         this.RemainPenetration = info.Penetration;
         
-        this.transform.SetParent(Owner.Indicator);
-        this.transform.localPosition = Vector3.zero;
+        this.transform.position = Owner.Indicator.position;
 
         _deltaPosition = 0;
         _prevPosition = this.CurrentPosition;
@@ -115,8 +114,11 @@ public class HitCollider : Entity, IHitCollider {
     #endregion
 
     public void SetPosition(Vector3 position) {
+        Transform prevParent = this.transform.parent;
+        this.transform.SetParent(Owner.Indicator);
         this.transform.localPosition = position;
         _prevPosition = this.CurrentPosition;
+        this.transform.SetParent(prevParent);
     }
 
     private void HandlePenetrate() {
