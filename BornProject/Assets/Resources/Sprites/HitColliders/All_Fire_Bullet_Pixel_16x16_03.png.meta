@@ -210,10 +210,10 @@ TextureImporter:
       name: Melee_Smash_01
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 16
-        height: 40
+        x: 479
+        y: 80
+        width: 32
+        height: 32
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: Smash_Base_Basic
       rect:
         serializedVersion: 2
-        x: 176
-        y: 0
-        width: 16
-        height: 40
+        x: 447
+        y: 80
+        width: 32
+        height: 32
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,6 +311,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Melee_Smash_02
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 80
+        width: 32
+        height: 32
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553b1cf0ed343564eac2a91a0a4a3b03
+      internalID: -879199447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melee_Smash_03
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 80
+        width: 32
+        height: 32
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3992ac516af994585a862fe5cc8779
+      internalID: 2042958660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -326,6 +368,8 @@ TextureImporter:
       Melee_Slash_02: 361339594
       Melee_Slash_03: 1540021633
       Melee_Smash_01: 1509072559
+      Melee_Smash_02: -879199447
+      Melee_Smash_03: 2042958660
       Melee_Sting_00: -1908984959
       Melee_Sting_01: 1406918413
       Slash_Base_Basic: -890565880

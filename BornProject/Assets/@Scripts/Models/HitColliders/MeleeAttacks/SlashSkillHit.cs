@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class SlashSkillHit : HitCollider{
-
     #region Properties
 
     public float AttackRadius { get; private set; }
@@ -48,15 +47,12 @@ public class SlashSkillHit : HitCollider{
         base.SetInfo(key, info, hitInfo);
 
         Sprite sprite = Main.Resource.LoadSprite(key);
-        Debug.Log("Slash Load Check ;sprite' " + sprite);
-        Debug.Log("Slash Load Check 'key' " + key);
         if (sprite == null)
         {
             Debug.LogError($"[Slash] SetInfo({key}, {info}, {hitInfo}): Failed to find a sprite for this.");
             _unitRatio = 1f;
             return;
         }
-        //_spriter.sprite = sprite;
         _unitRatio = sprite.textureRect.size.x / sprite.pixelsPerUnit;
         // 공격 범위 설정
         AttackRadius = info.Range;
