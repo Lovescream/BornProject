@@ -15,8 +15,6 @@ public class UIManager {
 
     #region Properties
 
-    public SkillTreeMaker SkillTreeMaker { get; private set; }
-
     public Transform Root {
         get {
             if (_rootTransform == null) _rootTransform = new GameObject("@UI_Root").transform;
@@ -29,17 +27,19 @@ public class UIManager {
     #region Fields
 
     private int _popupOrder = InitialPopupOrder;
+    private int _toastOrder = 500;
 
     private Transform _rootTransform;
 
     // Collections.
     private List<UI_Popup> _popups = new();
+    private List<UI_Toast> _toasts = new();
 
     #endregion
 
     #region Generals
 
-    public Canvas SetCanvas(GameObject obj) {
+    public Canvas SetCanvas(GameObject obj, bool isToast = false) {
         // #1. Canvas 설정.
         Canvas canvas = obj.GetOrAddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -49,6 +49,11 @@ public class UIManager {
         CanvasScaler scaler = obj.GetOrAddComponent<CanvasScaler>();
         scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
         scaler.referenceResolution = DefaultResolution;
+
+        if (isToast) {
+            _toastOrder++;
+            canvas.sortingOrder = _toastOrder;
+        }
 
         return canvas;
     }
@@ -138,6 +143,24 @@ public class UIManager {
 
     #endregion
 
+    #region ToastUI
+
+    public UI_Toast ShowToast(string message) {
+        UI_Toast toast = Main.Resource.Instantiate($"UI_Toast", pooling: true).GetComponent<UI_Toast>();
+        toast.SetInfo(message);
+        _toasts.Add(toast);
+        toast.transform.SetParent(Root.transform);
+        return toast;
+    }
+    public void CloseToast(UI_Toast toast) {
+        if (_toasts.Count == 0) return;
+        _toasts.Remove(toast);
+        Main.Resource.Destroy(toast.gameObject);
+        _toastOrder--;
+    }
+
+    #endregion
+
     #region SubItem
 
     public T CreateSubItem<T>(Transform parent = null, string name = null, bool pooling = true) where T : UI_Base {
@@ -151,43 +174,4 @@ public class UIManager {
 
     #endregion
 
-    #region Temp
-
-    public SkillTreeMaker SpawnSkillTreeMaker(string key, Vector2 position) // TODO.
-    {
-        SkillTreeMaker = Spawn<SkillTreeMaker>(position);
-
-        return SkillTreeMaker;
-    }
-
-
-    public void DespawnSkillTreeMaker(SkillTreeMaker skillTreeMaker) // TODO.
-    {
-        if (skillTreeMaker == null) skillTreeMaker = SkillTreeMaker;
-        if (skillTreeMaker == null) return;
-        SkillTreeMaker = null;
-        Despawn(skillTreeMaker);
-    }
-
-    private T Spawn<T>(Vector2 position) where T : UI_Base {
-        Type type = typeof(T);
-
-        string prefabName = null;
-        while (type != null) {
-            prefabName = type.Name;
-            if (Main.Resource.LoadPrefab(prefabName) != null) break;
-            type = type.BaseType;
-        }
-        if (string.IsNullOrEmpty(prefabName)) prefabName = "Thing";
-
-        GameObject obj = Main.Resource.Instantiate($"{prefabName}", pooling: true);
-        obj.transform.position = position;
-
-        return obj.GetOrAddComponent<T>();
-    }
-    private void Despawn<T>(T obj) where T : UI_Base {
-        Main.Resource.Destroy(obj.gameObject); // Destroy가 아닌 비활성화로 해야하는거 아닌가?.
-    }
-
-    #endregion
 }

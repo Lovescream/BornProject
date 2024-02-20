@@ -16,7 +16,6 @@ public class DataManager {
     public void Initialize()
     {
         Creatures = LoadJson<CreatureData>();
-        Items = LoadJson<ItemData>();
         Skills = LoadJson<SkillData>();
         EnemySkills = LoadJson<EnemySkillData>();
 

@@ -28,6 +28,7 @@ public class SkillList {
     private SkillData _currentBasicSkill;
 
     // Collections.
+    private Dictionary<SkillType, SkillData> _skills = new();
     private List<SkillData> _basicSkills;
 
     // Events.
@@ -61,6 +62,10 @@ public class SkillList {
         _basicSkills.Remove(skillData);
         CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
     }
+    public void SetSkill(SkillData skillData) {
+        Debug.Log($"Player set skill {skillData.Key}");
+        _skills[skillData.Type] = skillData;
+    }
 
     #endregion
 
@@ -83,6 +88,12 @@ public class SkillList {
         _currentBasicSkillIndex = index;
 
         CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
+    }
+    public void SetRangeSkill() {
+        CurrentBasicSkill = _skills[SkillType.Range];
+    }
+    public void SetMeleeSkill() {
+        CurrentBasicSkill = _skills[SkillType.Melee];
     }
 
     #endregion

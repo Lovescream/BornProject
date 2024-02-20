@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using ZerolizeDungeonDirection = ZerolizeDungeon.Direction;
-using DungeonDirection = DungeonGenerate.Direction;
 using DijkstraDirection = Dijkstra.Direction;
 public static class Extension {
 
@@ -33,15 +32,6 @@ public static class Extension {
 
     #region Dungeons
 
-    public static Vector2Int GetDirectionIndex(this Vector2Int index, DungeonDirection direction) {
-        return direction switch {
-            DungeonDirection.Top => new(index.x + 0, index.y + 1),
-            DungeonDirection.Right => new(index.x + 1, index.y + 0),
-            DungeonDirection.Bottom => new(index.x + 0, index.y - 1),
-            DungeonDirection.Left => new(index.x - 1, index.y + 0),
-            _ => index
-        };
-    }
     public static Vector2Int GetDirectionIndex(this Vector2Int index, ZerolizeDungeonDirection direction) {
         return direction switch {
             ZerolizeDungeonDirection.Top => new(index.x + 0, index.y + 1),
