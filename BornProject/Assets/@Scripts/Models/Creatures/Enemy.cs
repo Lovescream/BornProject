@@ -8,6 +8,7 @@ public class Enemy : Creature, IAttackable {
     #region Properties
 
     public Attacker Attacker { get; protected set; }
+    //public SkillList SkillList { get; protected set; }
 
     public Creature Target {
         get => _target;
@@ -159,7 +160,8 @@ public class Enemy : Creature, IAttackable {
     }
 
     public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
-        return new() {
+        return new()
+        {
             Owner = this,
             HitColliderKey = "Slash_Base_Basic",
             RadiusOffset = 0.5f,
@@ -177,7 +179,7 @@ public class Enemy : Creature, IAttackable {
             Speed = 0,
             DirectionX = 0,
             DirectionY = 0,
-            Duration = 0,
+            Duration = 0.4f,
             Range = this.Range,
         };
     }
