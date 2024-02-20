@@ -90,10 +90,12 @@ public class SkillList {
         CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
     }
     public void SetRangeSkill() {
-        CurrentBasicSkill = _skills[SkillType.Range];
+        if (!_skills.TryGetValue(SkillType.Range, out SkillData skill)) return;
+        CurrentBasicSkill = skill;
     }
     public void SetMeleeSkill() {
-        CurrentBasicSkill = _skills[SkillType.Melee];
+        if (!_skills.TryGetValue(SkillType.Melee, out SkillData skill)) return;
+        CurrentBasicSkill = skill;
     }
 
     #endregion

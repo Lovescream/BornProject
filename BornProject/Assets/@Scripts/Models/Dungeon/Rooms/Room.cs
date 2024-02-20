@@ -81,6 +81,9 @@ namespace ZerolizeDungeon {
         private Dictionary<Direction, Debris> _debris = new();
         private Dictionary<Direction, Room> _neighbours = new();
 
+        // Components.
+        private Transform _objects;
+
         // Callbacks.
         public event Action<Room> OnRoomOpened;
         public event Action<Room> OnRoomClosed;
@@ -98,6 +101,8 @@ namespace ZerolizeDungeon {
             Tilemap[] tilemaps = this.transform.Find("Walls").GetComponentsInChildren<Tilemap>();
             foreach (Tilemap tilemap in tilemaps)
                 tilemap.gameObject.layer = Main.WallLayer;
+
+            _objects = this.transform.Find("Objects");
 
             return true;
         }
@@ -138,6 +143,9 @@ namespace ZerolizeDungeon {
             OnRoomClosed += r => CloseDoor();
             IsOpened = false;
             IsOpened = true;
+
+            // #5. 적 소환.
+            SpawnEnemy();
         }
 
         #endregion
@@ -177,6 +185,19 @@ namespace ZerolizeDungeon {
         }
         public void CloseDoor() {
             for (int i = 0; i < 4; i++) CloseDoor((Direction)i);
+        }
+
+        #endregion
+
+        #region Spawn Objects
+
+        private void SpawnEnemy() {
+            if (_objects == null) return;
+            EnemySpawner[] spawners = _objects.GetComponentsInChildren<EnemySpawner>();
+            for (int i = spawners.Length - 1; i >= 0; i--) {
+                Main.Object.SpawnEnemy(spawners[i].Key, spawners[i].Position);
+                Destroy(spawners[i].gameObject);
+            }
         }
 
         #endregion
