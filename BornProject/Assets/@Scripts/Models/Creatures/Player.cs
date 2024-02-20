@@ -90,12 +90,19 @@ public class Player : Creature, IAttackable {
     }
 
     #endregion
-
+    public override void OnHit(IHitCollider attacker)
+    {        
+        base.OnHit(attacker);
+        AudioController.Instance.SFXPlay(SFX.PlayerHit);
+    }
     public void Attack() {
         if (this.IsDead) return;
         if (SkillList.CurrentBasicSkill == null) return;
+        SkillFireAudioSource();
         Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
     }
+
+    
 
     public HitColliderGenerationInfo GetHitColliderGenerationInfo() {        
         SkillData skillData = SkillList.CurrentBasicSkill;      
@@ -134,6 +141,15 @@ public class Player : Creature, IAttackable {
                 speed = 10f,
             }
         };
+    }
+    private void SkillFireAudioSource()
+    {
+        if (SkillList.CurrentBasicSkill.Name == "BasicLaserBeam") AudioController.Instance.SFXPlay(SFX.Range_Laser_Fire);
+        if (SkillList.CurrentBasicSkill.Name == "BasicRapidFire") AudioController.Instance.SFXPlay(SFX.Range_Rapid_Fire);
+        if (SkillList.CurrentBasicSkill.Name == "BasicShotGun") AudioController.Instance.SFXPlay(SFX.Range_ShotGun_Fire);
+        if (SkillList.CurrentBasicSkill.Name == "BasicSlash") AudioController.Instance.SFXPlay(SFX.Melee_Slash_Fire);
+        if (SkillList.CurrentBasicSkill.Name == "BasicSting") AudioController.Instance.SFXPlay(SFX.Melee_Sting_Fire);
+        if (SkillList.CurrentBasicSkill.Name == "BasicSmash") AudioController.Instance.SFXPlay(SFX.Melee_Smash_Fire);
     }
 }
     //public AttackInfo GetAttackInfo() {

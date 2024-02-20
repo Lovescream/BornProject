@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7434003389838635461}
   - component: {fileID: 4284631691097993870}
   - component: {fileID: 6941498937388433012}
-  - component: {fileID: 6720776639268772470}
   - component: {fileID: 4733608277957159836}
   m_Layer: 0
   m_Name: Bear_Attack
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 575706755
   m_SortingLayer: 4
   m_SortingOrder: 6
-  m_Sprite: {fileID: -890565880, guid: d57071c3687ea15428fffe213cc28ace, type: 3}
+  m_Sprite: {fileID: 308192695, guid: ad9261e008c111346a10ce0409310c26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,8 +122,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 1, y: 0.875}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.875}
     newSize: {x: 0.32, y: 0.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -160,18 +159,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6720776639268772470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8401310912962007266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436dd735c33cd0242b370a6c1f6b5e1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &4733608277957159836
 Animator:
   serializedVersion: 5
