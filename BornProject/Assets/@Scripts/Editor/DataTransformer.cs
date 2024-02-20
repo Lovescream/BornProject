@@ -23,7 +23,6 @@ public class DataTransformer : EditorWindow {
         ParseData<CreatureData>();
         ParseData<SkillData>();
         ParseData<EnemySkillData>();
-        ParseData<ItemData>();
     }
     [MenuItem("Tools/ParseSpriteToBase64")]
     public static void ParseSpriteToBase64() {
