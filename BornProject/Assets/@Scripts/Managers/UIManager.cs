@@ -15,8 +15,6 @@ public class UIManager {
 
     #region Properties
 
-    public SkillTreeMaker SkillTreeMaker { get; private set; }
-
     public Transform Root {
         get {
             if (_rootTransform == null) _rootTransform = new GameObject("@UI_Root").transform;
@@ -176,43 +174,4 @@ public class UIManager {
 
     #endregion
 
-    #region Temp
-
-    public SkillTreeMaker SpawnSkillTreeMaker(string key, Vector2 position) // TODO.
-    {
-        SkillTreeMaker = Spawn<SkillTreeMaker>(position);
-
-        return SkillTreeMaker;
-    }
-
-
-    public void DespawnSkillTreeMaker(SkillTreeMaker skillTreeMaker) // TODO.
-    {
-        if (skillTreeMaker == null) skillTreeMaker = SkillTreeMaker;
-        if (skillTreeMaker == null) return;
-        SkillTreeMaker = null;
-        Despawn(skillTreeMaker);
-    }
-
-    private T Spawn<T>(Vector2 position) where T : UI_Base {
-        Type type = typeof(T);
-
-        string prefabName = null;
-        while (type != null) {
-            prefabName = type.Name;
-            if (Main.Resource.LoadPrefab(prefabName) != null) break;
-            type = type.BaseType;
-        }
-        if (string.IsNullOrEmpty(prefabName)) prefabName = "Thing";
-
-        GameObject obj = Main.Resource.Instantiate($"{prefabName}", pooling: true);
-        obj.transform.position = position;
-
-        return obj.GetOrAddComponent<T>();
-    }
-    private void Despawn<T>(T obj) where T : UI_Base {
-        Main.Resource.Destroy(obj.gameObject); // Destroy가 아닌 비활성화로 해야하는거 아닌가?.
-    }
-
-    #endregion
 }

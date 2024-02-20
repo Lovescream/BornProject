@@ -10,13 +10,13 @@ public class DataManager {
 
     public Dictionary<string, CreatureData> Creatures = new();
     public Dictionary<string, SkillData> Skills = new();
-    public Dictionary<string, ItemData> Items = new();
+    public Dictionary<string, EnemySkillData> EnemySkills = new();
 
     public void Initialize()
     {
         Creatures = LoadJson<CreatureData>();
-        Items = LoadJson<ItemData>();
         Skills = LoadJson<SkillData>();
+        EnemySkills = LoadJson<EnemySkillData>();
 
         IsInitialized = true;
     }
