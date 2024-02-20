@@ -38,13 +38,16 @@ public class UI_Popup_Menu : UI_Popup {
 
     #region OnButtons
 
-    private void OnBtnInfo() {
+    private void OnBtnInfo() {        
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         // 정보 창 띄우기.
     }
     private void OnBtnResume() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         Close();
     }
     private void OnBtnExit() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         Main.UI.OpenPopupUI<UI_Popup_ExitGame>();
     }
 
