@@ -47,8 +47,8 @@ public class Player : Creature, IAttackable {
         base.SetInfo(data);
 
         SkillList = new(this);
-        SkillList.AddBasicSkill(Main.Data.Skills["Laser_Base_Basic"]);
-        SkillList.AddBasicSkill(Main.Data.Skills["Slash_Base_Basic"]);
+        //SkillList.AddBasicSkill(Main.Data.Skills["Laser_Base_Basic"]);
+        //SkillList.AddBasicSkill(Main.Data.Skills["Slash_Base_Basic"]);
     }
     protected override void SetState() {
         base.SetState();
@@ -92,8 +92,9 @@ public class Player : Creature, IAttackable {
     #endregion
 
     public void Attack() {
-        if(!this.IsDead)
-        Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());      
+        if (this.IsDead) return;
+        if (SkillList.CurrentBasicSkill == null) return;
+        Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
     }
 
     public HitColliderGenerationInfo GetHitColliderGenerationInfo() {        

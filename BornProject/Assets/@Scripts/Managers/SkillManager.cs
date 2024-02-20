@@ -36,6 +36,7 @@ public class SkillManager {
                 list.Add(GetNormalSkill(baseName, advancedName));
                 list.Add(skill);
             }
+            OnGetSkill?.Invoke(skill);
         }
         else {
             if (GetSkillBaseName(list[0]) != baseName) {

@@ -63,8 +63,7 @@ public class Enemy : Creature, IAttackable {
         _sight.transform.localScale = 2 * Sight * Vector3.one;
         _range.transform.localScale = 2 * Range * Vector3.one;
 
-        string enemySkillKey = $"{Data.Key}_Attack";
-        //EnemySkillData enemySkillData = Main.Data.EnemySkills[enemySkillKey];
+        EnemySkill = Main.Data.EnemySkills[$"{Data.Key}"];
     }
 
     protected override void SetState() {
