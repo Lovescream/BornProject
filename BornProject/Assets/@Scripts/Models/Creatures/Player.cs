@@ -78,12 +78,14 @@ public class Player : Creature, IAttackable {
     }
     protected void OnAttackMain() {
         if (EventSystem.current.IsPointerOverGameObject()) return;
-        SkillList.ChangeBasicSkill(0);
+        //SkillList.ChangeBasicSkill(0);
+        SkillList.SetRangeSkill();
         Attack();
     }
     protected void OnAttackSub() {
         if (EventSystem.current.IsPointerOverGameObject()) return;
-        SkillList.ChangeBasicSkill(1);
+        //SkillList.ChangeBasicSkill(1);
+        SkillList.SetMeleeSkill();
         Attack();
     }
 
