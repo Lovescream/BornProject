@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class SkillManager {
@@ -15,8 +17,10 @@ public class SkillManager {
     private List<SkillData> _rangeSkills = new();
     private List<SkillData> _meleeSkills = new();
 
-    public void Initialize() {
+    public event Action<SkillData> OnGetSkill;
 
+    public void Initialize() {
+        OnGetSkill += s => GameObject.FindObjectOfType<Player>().SkillList.SetSkill(s.Type == SkillType.Range ? RangeSkill : MeleeSkill);
     }
 
     public void GetSkill(SkillData skill) {
@@ -38,14 +42,22 @@ public class SkillManager {
                 list.Clear();
                 list.Add(baseSkill);
             }
-            if (skill.Level == SkillLevel.Base) return;
+            if (skill.Level == SkillLevel.Base) {
+                OnGetSkill?.Invoke(skill);
+                return;
+            }
             if (list.Count > 1) {
-                if (GetSkillAdvancedName(list[1]) == advancedName) return;
+                if (GetSkillAdvancedName(list[1]) == advancedName) {
+                    OnGetSkill?.Invoke(skill);
+                    return;
+                }
                 for (int i = list.Count - 1; i >= 1; i--) list.RemoveAt(i);
             }
             if (skill.Level == SkillLevel.Rare) list.Add(GetNormalSkill(baseName, advancedName));
             list.Add(skill);
         }
+
+        
     }
 
     public string GetSkillBaseName(SkillData skill) {

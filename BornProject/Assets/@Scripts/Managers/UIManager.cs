@@ -29,17 +29,19 @@ public class UIManager {
     #region Fields
 
     private int _popupOrder = InitialPopupOrder;
+    private int _toastOrder = 500;
 
     private Transform _rootTransform;
 
     // Collections.
     private List<UI_Popup> _popups = new();
+    private List<UI_Toast> _toasts = new();
 
     #endregion
 
     #region Generals
 
-    public Canvas SetCanvas(GameObject obj) {
+    public Canvas SetCanvas(GameObject obj, bool isToast = false) {
         // #1. Canvas 설정.
         Canvas canvas = obj.GetOrAddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -49,6 +51,11 @@ public class UIManager {
         CanvasScaler scaler = obj.GetOrAddComponent<CanvasScaler>();
         scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
         scaler.referenceResolution = DefaultResolution;
+
+        if (isToast) {
+            _toastOrder++;
+            canvas.sortingOrder = _toastOrder;
+        }
 
         return canvas;
     }
@@ -134,6 +141,24 @@ public class UIManager {
         if (!_popups.Remove(popup)) return;
         _popups.Add(popup);
         ReorderAllPopups();
+    }
+
+    #endregion
+
+    #region ToastUI
+
+    public UI_Toast ShowToast(string message) {
+        UI_Toast toast = Main.Resource.Instantiate($"UI_Toast", pooling: true).GetComponent<UI_Toast>();
+        toast.SetInfo(message);
+        _toasts.Add(toast);
+        toast.transform.SetParent(Root.transform);
+        return toast;
+    }
+    public void CloseToast(UI_Toast toast) {
+        if (_toasts.Count == 0) return;
+        _toasts.Remove(toast);
+        Main.Resource.Destroy(toast.gameObject);
+        _toastOrder--;
     }
 
     #endregion

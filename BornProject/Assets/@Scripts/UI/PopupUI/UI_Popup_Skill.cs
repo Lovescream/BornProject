@@ -77,6 +77,10 @@ public class UI_Popup_Skill : UI_Popup {
     #region OnButtons
 
     private void OnBtnClose() {
+        if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null) {
+            Main.UI.ShowToast("기본 스킬을 찍어주세요.");
+            return;
+        }
         Close();
     }
 
