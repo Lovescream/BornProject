@@ -41,3 +41,10 @@ public enum Stage {
     Stage2,
     Stage3,
 }
+
+public enum Phase
+{
+    Phase1,
+    Phase2,
+    Phase3,
+}
