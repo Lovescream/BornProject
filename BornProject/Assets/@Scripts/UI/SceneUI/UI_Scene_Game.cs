@@ -75,12 +75,6 @@ public class UI_Scene_Game : UI_Scene {
     }
 
 
-    /*private void OnBtnQuest() {
-        Main.UI.OpenPopupUI<UI_Popup_Quest>();
-        Main.UI.ClosePopup<UI_Popup_Quest>();
-        //이 버튼으로 닫는건 어 케 해!
-    }
-    */
     private void OnBtnSkill() {
         Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
     }
