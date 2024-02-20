@@ -1,9 +1,9 @@
 [
   {
-    "Name": "Bear",
-    "Description": "?�발 ?�두르기",
+    "Name": "Bear_Attack",
+    "Description": "앞발 휘두르기",
     "Stage": 0,
-    "HitColliderKey": "Bear",
+    "HitColliderKey": "Bear_Attack",
     "RadiusOffset": 0.0,
     "RotationAngle": 0.0,
     "HitColliderCount": 1,
@@ -23,13 +23,13 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 100.0,
     "AttackSpeed": 1.0,
-    "Key": "Bear"
+    "Key": "Bear_Attack"
   },
   {
-    "Name": "Snake",
-    "Description": "(??발사)/물기",
+    "Name": "Snake_Attack",
+    "Description": "(독 발사)/물기",
     "Stage": 0,
-    "HitColliderKey": "Snake",
+    "HitColliderKey": "Snake_Attack",
     "RadiusOffset": 0.0,
     "RotationAngle": 0.0,
     "HitColliderCount": 2,
@@ -49,13 +49,13 @@
     "CriticalChance": 3.0,
     "CriticalBonus": 20.0,
     "AttackSpeed": 2.0,
-    "Key": "Snake"
+    "Key": "Snake_Attack"
   },
   {
-    "Name": "Beetle",
-    "Description": "??발사",
+    "Name": "Beetle_Attack",
+    "Description": "독 발사",
     "Stage": 0,
-    "HitColliderKey": "Beetle",
+    "HitColliderKey": "Beetle_Attack",
     "RadiusOffset": 0.0,
     "RotationAngle": 0.0,
     "HitColliderCount": 1,
@@ -75,6 +75,6 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 30.0,
     "AttackSpeed": 1.5,
-    "Key": "Beetle"
+    "Key": "Beetle_Attack"
   }
 ]

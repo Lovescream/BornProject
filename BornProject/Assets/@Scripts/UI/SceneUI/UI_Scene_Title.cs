@@ -50,7 +50,7 @@ public class UI_Scene_Title : UI_Scene {
     }
 
     private void OnBtnNewGame() {
-
+        AudioController.Instance.SFXPlay(SFX.NewGameEnterButton);
         Main.UI.CloseAllPopup();
         SceneManager.LoadScene("GameScene");
     }
