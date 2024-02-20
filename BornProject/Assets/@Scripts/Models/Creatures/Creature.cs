@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+using UnityEngine.InputSystem;
 
 public class Creature : Entity {
 
@@ -29,6 +30,7 @@ public class Creature : Entity {
             if (this.GetComponent<Player>() != null)
             {
                 Debug.Log($"Player의 Hp를 {value}로 설정합니다.");
+                
             }
             if (value <= 0)
             {
@@ -36,6 +38,8 @@ public class Creature : Entity {
                     Debug.Log($"[Creature: {this.Data.Key}] 쥬금");
                     State.Current = CreatureState.Dead;
                 _hp = 0;
+
+                EnemyDieAudioSource();
             }
             else if (value >= HpMax) {
                 _hp = HpMax;
@@ -44,6 +48,9 @@ public class Creature : Entity {
             OnChangedHp?.Invoke(_hp);
         }
     }
+
+    
+
     public bool Invincibility {
         get { return _invincibility; }
         set { _invincibility = value; }
@@ -196,7 +203,13 @@ public class Creature : Entity {
     }
 
     #endregion
-
+    private void EnemyDieAudioSource()
+    {
+        if (this.gameObject.name == "Bear") AudioController.Instance.SFXPlay(SFX.EnemyBearDie);
+        if (this.gameObject.name == "Wolf") AudioController.Instance.SFXPlay(SFX.EnemyWolfDie);
+        if (this.gameObject.name == "Beatle") AudioController.Instance.SFXPlay(SFX.EnemyBeatleDie);
+        if (this.gameObject.name == "Snake") AudioController.Instance.SFXPlay(SFX.EnemySnakeDie);
+    }
 
 
 }

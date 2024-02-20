@@ -67,7 +67,7 @@ public class UI_Popup_Skill : UI_Popup {
 
     public void SelectSkill(SkillData skill) {
         Initialize();
-
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         MainSlots.gameObject.SetActive(true);
         MainSlots.SetInfoSkillTree(this, skill);
     }
@@ -77,6 +77,7 @@ public class UI_Popup_Skill : UI_Popup {
     #region OnButtons
 
     private void OnBtnClose() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null) {
             Main.UI.ShowToast("기본 스킬을 찍어주세요.");
             return;

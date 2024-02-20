@@ -56,12 +56,13 @@ public class UI_Scene_Game : UI_Scene {
     #region OnButtons
 
     private void OnBtnMenu() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         Main.UI.OpenPopupUI<UI_Popup_Menu>();
     }
 
     
-    private void OnBtnQuest()
-    {
+    private void OnBtnQuest() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         if (!isQuestPopupOpen)
         {
             Main.UI.OpenPopupUI<UI_Popup_Quest>(); // 퀘스트 팝업을 열어줘
@@ -76,6 +77,7 @@ public class UI_Scene_Game : UI_Scene {
 
 
     private void OnBtnSkill() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
     }
 
