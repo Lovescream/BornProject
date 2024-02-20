@@ -8,6 +8,7 @@ public class Enemy : Creature, IAttackable {
     #region Properties
 
     public Attacker Attacker { get; protected set; }
+    public EnemySkillData EnemySkill { get; protected set; }
 
     public Creature Target {
         get => _target;
@@ -61,6 +62,9 @@ public class Enemy : Creature, IAttackable {
         _doubleSight.transform.localScale = 2 * DetectingRange * Vector3.one;
         _sight.transform.localScale = 2 * Sight * Vector3.one;
         _range.transform.localScale = 2 * Range * Vector3.one;
+
+        string enemySkillKey = $"{Data.Key}_Attack";
+        //EnemySkillData enemySkillData = Main.Data.EnemySkills[enemySkillKey];
     }
 
     protected override void SetState() {
@@ -159,36 +163,40 @@ public class Enemy : Creature, IAttackable {
     }
 
     public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
-        return new() {
+        return new()
+        {
             Owner = this,
-            HitColliderKey = "Slash_Base_Basic",
-            RadiusOffset = 0.5f,
-            RotationAngle = -1f,
-            Count = 1,
-            SpreadAngle = 0,
-            Size = 0.75f,
-            AttackTime = 0.3f,
+            HitColliderKey = EnemySkill.HitColliderKey,
+            RadiusOffset = EnemySkill.RadiusOffset,
+            RotationAngle = EnemySkill.RotationAngle < 0 ? LookAngle : EnemySkill.RotationAngle,
+            Count = EnemySkill.HitColliderCount,
+            SpreadAngle = EnemySkill.HitColliderAngle,
+            Size = EnemySkill.HitColliderSize,
+            AttackTime = EnemySkill.AttackTime,
         };
     }
 
     public HitColliderInfo GetHitColliderInfo() {
-        return new() {
-            Penetration = 1,
-            Speed = 0,
-            DirectionX = 0,
-            DirectionY = 0,
-            Duration = 0,
-            Range = this.Range,
+        return new()
+        {
+            Penetration = EnemySkill.Penetration,
+            Speed = EnemySkill.Speed,
+            DirectionX = EnemySkill.DirectionX,
+            DirectionY = EnemySkill.DirectionY,
+            Duration = EnemySkill.Duration,
+            Range = EnemySkill.Range,
         };
     }
 
     public HitInfo GetHitInfo() {
-        return new() {
+        return new()
+        {
             Owner = this,
             Damage = this.Damage,
-            CriticalChance = 0,
-            CriticalBonus = 0,
-            Knockback = new() {
+            CriticalChance = EnemySkill.CriticalChance,
+            CriticalBonus = EnemySkill.CriticalBonus,
+            Knockback = new()
+            {
                 time = 0.1f,
                 speed = 10f,
             }
