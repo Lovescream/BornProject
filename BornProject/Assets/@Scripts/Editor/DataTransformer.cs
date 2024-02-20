@@ -15,14 +15,13 @@ public class DataTransformer : EditorWindow {
 
     public static string csvDataPath = "@Resources/Data/Excel";
     public static string jsonDataPath = "Resources/JsonData";
-    public static string spriteDataPath = "@Resources/Base64/Sprites";
+    public static string spriteDataPath = "@Resources/Data/Base64/Sprites";
     public static string base64Path = "Resources";
 
     [MenuItem("Tools/ParseExcel")]
     public static void ParseExcel() {
         ParseData<CreatureData>();
         ParseData<SkillData>();
-        ParseData<ItemData>();
     }
     [MenuItem("Tools/ParseSpriteToBase64")]
     public static void ParseSpriteToBase64() {
