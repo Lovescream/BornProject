@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 575706755
   m_SortingLayer: 4
   m_SortingOrder: 1049
-  m_Sprite: {fileID: 1431208038, guid: bc4b0f64de72ab84bbdf2ae303dd52ee, type: 3}
+  m_Sprite: {fileID: -744424756, guid: b836eacc95f9c06438d7ccd5834a1a08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6745f879819a4040b2b35d398b2ecec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyKey: Wolf
+  enemyKey: Beatle

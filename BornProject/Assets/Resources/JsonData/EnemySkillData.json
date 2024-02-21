@@ -52,10 +52,10 @@
     "Key": "Snake_Attack"
   },
   {
-    "Name": "Beetle_Attack",
+    "Name": "Beatle_Attack",
     "Description": "독 발사",
     "Stage": 0,
-    "HitColliderKey": "Beetle_Attack",
+    "HitColliderKey": "Beatle_Attack",
     "RadiusOffset": 0.0,
     "RotationAngle": 0.0,
     "HitColliderCount": 1,
@@ -75,7 +75,7 @@
     "CriticalChance": 5.0,
     "CriticalBonus": 30.0,
     "AttackSpeed": 2.0,
-    "Key": "Beetle_Attack"
+    "Key": "Beatle_Attack"
   },
   {
     "Name": "Wolf_Attack",
