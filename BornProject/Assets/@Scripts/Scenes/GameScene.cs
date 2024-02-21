@@ -28,6 +28,9 @@ public class GameScene : BaseScene {
             Main.UI.OpenPopupUI<UI_Popup_Skill>();
         }
 
+        // #5. 튜토리얼 창 띄우기
+        Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
+
         return true;
     }
 
