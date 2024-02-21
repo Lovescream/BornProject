@@ -18,7 +18,10 @@ public class SkillManager {
 
     public event Action<SkillData> OnGetSkill;
 
+    private bool _isInitialized;
     public void Initialize() {
+        if (_isInitialized) return;
+        _isInitialized = true;
         OnGetSkill += s => GameObject.FindObjectOfType<Player>().SkillList.SetSkill(s.Type == SkillType.Range ? RangeSkill : MeleeSkill);
     }
 
