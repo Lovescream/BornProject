@@ -67,7 +67,7 @@ public class UI_Scene_Game : UI_Scene {
         AudioController.Instance.SFXPlay(SFX.OnClickButton);
         if (!isQuestPopupOpen)
         {
-            Main.UI.OpenPopupUI<UI_Popup_Quest>(); // 퀘스트 팝업을 열어줘
+            Main.UI.OpenPopupUI<UI_Popup_Quest>().SetInfo(); // 퀘스트 팝업을 열어줘
             isQuestPopupOpen = true; // 퀘스트 팝업이 열렸다고 표시해줘
         }
         else

@@ -130,6 +130,7 @@ public class Creature : Entity {
         this.Data = data;
 
         _animator.runtimeAnimatorController = Main.Resource.LoadAnimController($"{Data.Key}");
+        Debug.Log("애니메이션 Key값 " + Data.Key);
         _animator.SetBool(AnimatorParameterHash_Dead, false);
 
         _collider.enabled = true;
