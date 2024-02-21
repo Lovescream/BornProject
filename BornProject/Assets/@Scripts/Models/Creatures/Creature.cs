@@ -192,6 +192,7 @@ public class Creature : Entity {
         //if (this.GetComponent<Enemy>() != null) Debug.Log($"곰이 {hitInfo.Damage} 피해를 입엇다");
         //Debug.Log($"{hitInfo.Damage}의 피해를 입었따. 죽어라 - !");
         Hp -= hitInfo.Damage;
+        Main.Object.ShowDamageText(this.transform.position, hitInfo.Damage);
 
         CreatureState originState = State.Current == CreatureState.Hit ? State.NextState :State.Current; // 원래 상태 저장.
         State.Current = CreatureState.Hit;

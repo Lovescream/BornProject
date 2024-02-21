@@ -47,8 +47,8 @@ public class Player : Creature, IAttackable {
         base.SetInfo(data);
 
         SkillList = new(this);
-        //SkillList.AddBasicSkill(Main.Data.Skills["Laser_Base_Basic"]);
-        //SkillList.AddBasicSkill(Main.Data.Skills["Slash_Base_Basic"]);
+        if (Main.Skill.RangeSkill != null) SkillList.SetSkill(Main.Skill.RangeSkill);
+        if (Main.Skill.MeleeSkill != null) SkillList.SetSkill(Main.Skill.MeleeSkill);
     }
     protected override void SetState() {
         base.SetState();

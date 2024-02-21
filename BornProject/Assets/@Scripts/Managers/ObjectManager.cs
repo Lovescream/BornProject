@@ -42,15 +42,11 @@ public class ObjectManager {
         Despawn(hitCollider);
     }
 
-    //public Projectile SpawnProjectile(string key, Vector2 position) {
-    //    Projectile projectile = Spawn<Projectile>(key, position);
-    //    Projectiles.Add(projectile);
-    //    return projectile;
-    //}
-    //public void DespawnProjectile(Projectile projectile) {
-    //    Projectiles.Remove(projectile);
-    //    Despawn(projectile);
-    //}
+    public void ShowDamageText(Vector2 position, float damage) {
+        GameObject obj = Main.Resource.Instantiate("DamageText", pooling: true);
+        DamageText text = obj.GetOrAddComponent<DamageText>();
+        text.SetInfo(position, damage);
+    }
 
     private T Spawn<T>(Vector2 position) where T : Entity {
         Type type = typeof(T);
