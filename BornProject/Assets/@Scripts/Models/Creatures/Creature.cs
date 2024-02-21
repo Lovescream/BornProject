@@ -185,6 +185,7 @@ public class Creature : Entity {
         _collider.enabled = false;
         _rigidbody.simulated = false;
         _animator.SetBool(AnimatorParameterHash_Dead, true);
+        Main.UI.OpenPopupUI<UI_Popup_GameOver>();
     }
 
     public virtual void OnHit(IHitCollider attacker) {

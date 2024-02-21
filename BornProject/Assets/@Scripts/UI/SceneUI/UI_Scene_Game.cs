@@ -10,6 +10,7 @@ public class UI_Scene_Game : UI_Scene {
         btnMenu,
         btnQuest,
         btnSkill,
+        btnTutorial,
     }
     enum Objects {
         PlayerInfo,
@@ -36,6 +37,7 @@ public class UI_Scene_Game : UI_Scene {
         GetButton((int)Buttons.btnMenu).onClick.AddListener(OnBtnMenu);
         GetButton((int)Buttons.btnQuest).onClick.AddListener(OnBtnQuest);
         GetButton((int)Buttons.btnSkill).onClick.AddListener(OnBtnSkill);
+        GetButton((int)Buttons.btnTutorial).onClick.AddListener(OnBtnTutorial);
 
         PlayerInfo = GetObject((int)Objects.PlayerInfo).GetComponent<UI_PlayerInfo>();
 
@@ -76,15 +78,13 @@ public class UI_Scene_Game : UI_Scene {
     }
 
 
-    /*private void OnBtnQuest() {
-        Main.UI.OpenPopupUI<UI_Popup_Quest>();
-        Main.UI.ClosePopup<UI_Popup_Quest>();
-        //이 버튼으로 닫는건 어 케 해!
-    }
-    */
     private void OnBtnSkill() {
         AudioController.Instance.SFXPlay(SFX.OnClickButton);
         Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
+    }
+
+    private void OnBtnTutorial() {
+        Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
     }
 
     #endregion
