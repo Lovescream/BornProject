@@ -28,6 +28,16 @@ public class LaserSkillHit : HitCollider {
         ShotLaser();
     }
 
+    protected override void FixedUpdate()
+    {
+        // 레이저의 컨셉에 따라 삭제할 수 있음.
+        if (_enabled == false && gameObject.activeSelf)
+        {
+            this.transform.SetParent(null);
+            _enabled = true;
+        }
+    }
+
     #endregion
 
     #region Initialize / Set
@@ -58,17 +68,21 @@ public class LaserSkillHit : HitCollider {
 
     private void ShotLaser()
     {
-        
-
         float range = Mathf.Clamp(Range, 0, 1000);
         RaycastHit2D[] hits = Physics2D.RaycastAll(CurrentPosition, this.transform.right, range, _layerMask);
         Length = range;
 
-        var dlfmaajfhfgkwltlqkdlrjdhodlfo = hits.Where(x => x.transform.GetComponent<IAttackable>() != Owner);
-        if (dlfmaajfhfgkwltlqkdlrjdhodlfo.Count() > 0)
-            Length = dlfmaajfhfgkwltlqkdlrjdhodlfo.Select(x => (x.point - (Vector2)CurrentPosition).magnitude).OrderBy(x => x).FirstOrDefault();
+        // Assuming 'creaturesLayerNumber' is the layer number for "Creatures"
+        int creaturesLayerNumber = LayerMask.NameToLayer("Creatures");
 
-        _spriter.size = new(_unitRatio * Length, _unitRatio);
+        var relevantHits = hits.Where(hit => hit.transform.gameObject.layer != creaturesLayerNumber &&
+                                             hit.transform.GetComponent<IAttackable>() != Owner);
 
+        if (relevantHits.Any())
+            Length = relevantHits.Select(hit => (hit.point - (Vector2)CurrentPosition).magnitude)
+                                  .OrderBy(distance => distance)
+                                  .FirstOrDefault();
+
+        _spriter.size = new Vector2(_unitRatio * Length, _spriter.size.y);
     }
 }

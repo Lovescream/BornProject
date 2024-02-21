@@ -64,7 +64,7 @@ public class RapidSkillHit : HitCollider
 
     private void ShotRapid()
     {
-        Collider2D hitCollider = Physics2D.OverlapCircle(CurrentPosition, Range, _layerMask);        
+             
     }
 
 }

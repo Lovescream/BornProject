@@ -63,7 +63,6 @@ public class SlashSkillHit : HitCollider{
 
     private void AttackSlash()
     {
-        // 공격 범위 내의 타겟을 검출하기 위한 처리
-        Collider2D[] hitTargets = Physics2D.OverlapCircleAll(CurrentPosition, AttackRadius, _LayerMask);
+        
     }    
 }

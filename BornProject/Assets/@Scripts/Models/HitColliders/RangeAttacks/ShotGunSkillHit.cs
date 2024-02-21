@@ -60,7 +60,7 @@ public class ShotGunSkillHit : HitCollider
 
     private void ShotShotGun()
     {
-        Collider2D hitCollider = Physics2D.OverlapCircle(CurrentPosition, Range, _layerMask);
+        
     }
 
 }
