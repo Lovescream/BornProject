@@ -76,12 +76,12 @@ public class Attacker {
         else if (generationInfo.Count > 1) {
             float minAngle = generationInfo.RotationAngle - generationInfo.SpreadAngle * 0.5f;
             float maxAngle = generationInfo.RotationAngle + generationInfo.SpreadAngle * 0.5f;
-            float deltaAngle = maxAngle - minAngle / (generationInfo.Count - 1);
+            float deltaAngle = (maxAngle - minAngle) / (generationInfo.Count - 1);
             for (int i = 0; i < generationInfo.Count; i++) {
                 float angle = minAngle + deltaAngle * i;
-
                 HitCollider hitCollider = GenerateHitCollider(generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
                 SetHitCollider(hitCollider, generationInfo.RadiusOffset, angle, generationInfo.Size);
+                SetDirectionManually(hitCollider, (hitCollider.transform.position - hitInfo.Owner.Indicator.position).normalized);
             }
         }
 
@@ -95,5 +95,8 @@ public class Attacker {
         hit.transform.localRotation = Quaternion.Euler(0, 0, angle);
         hit.SetPosition(new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius);
         hit.transform.localScale = Vector3.one * scale;
+    }
+    private void SetDirectionManually(HitCollider hitCollider, Vector2 direction) {
+        hitCollider.SetDirection(direction);
     }
 }
