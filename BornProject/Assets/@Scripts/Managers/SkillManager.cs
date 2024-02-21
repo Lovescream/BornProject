@@ -24,14 +24,10 @@ public class SkillManager {
         _isInitialized = true;
         OnGetSkill += s => GameObject.FindObjectOfType<Player>().SkillList.SetSkill(s.Type == SkillType.Range ? RangeSkill : MeleeSkill);
     }
-    public void Reinitialize() {
-        if (_isInitialized) {
-            _rangeSkills.Clear();
-            _meleeSkills.Clear();
-            OnGetSkill = null;
-        }
-        _isInitialized = false;
-        Initialize();
+    public void Clear() {
+        _rangeSkills.Clear();
+        _meleeSkills.Clear();
+        OnGetSkill = null;
     }
 
     public void GetSkill(SkillData skill) {

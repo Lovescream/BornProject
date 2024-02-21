@@ -102,8 +102,9 @@ public class HitCollider : Entity, IHitCollider
         this.Info = info;
         this.HitInfo = hitInfo;
         Vector2 direction = new Vector2(info.DirectionX, info.DirectionY).normalized;
-        if (direction.magnitude <= 0.001)
+        if (direction.magnitude <= float.Epsilon)
             direction = hitInfo.Owner.LookDirection;
+
         this.Velocity = direction * info.Speed;
         this.RemainPenetration = info.Penetration;
 
@@ -121,6 +122,10 @@ public class HitCollider : Entity, IHitCollider
     }
 
     #endregion
+
+    public void SetDirection(Vector2 direction) {
+        Velocity = direction * Info.Speed;
+    }
 
     #region Callbacks
 

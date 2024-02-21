@@ -8,7 +8,7 @@ public class UI_Popup_Tutorial : UI_Popup
     #region Enums
 
     enum Buttons {
-        btnBackground
+        btnClose
     }
     
     #endregion
@@ -26,14 +26,14 @@ public class UI_Popup_Tutorial : UI_Popup
 
         BindButton(typeof(Buttons));
 
-        GetButton((int)Buttons.btnBackground).onClick.AddListener(OnBtnBackground);
+        GetButton((int)Buttons.btnClose).onClick.AddListener(OnBtnClose);
 
         return true;
     }
 
-    private void OnBtnBackground()
+    private void OnBtnClose()
     {
-        Main.UI.Clear();
+        Close();
     }
 
     #endregion
