@@ -11,6 +11,8 @@ public class GameScene : BaseScene {
     protected override bool Initialize() {
         if (!base.Initialize()) return false;
 
+        Main.Pool.Clear();
+
         // #1. Map 생성.
         Main.Dungeon.Generate();
 
@@ -23,7 +25,6 @@ public class GameScene : BaseScene {
         Main.UI.Clear();
 
         // #4. Skill 체크.
-        Main.Skill.Reinitialize();
         if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null) {
             Main.UI.OpenPopupUI<UI_Popup_Skill>();
         }

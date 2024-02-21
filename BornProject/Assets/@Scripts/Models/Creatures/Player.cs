@@ -47,8 +47,8 @@ public class Player : Creature, IAttackable {
         base.SetInfo(data);
 
         SkillList = new(this);
-        //SkillList.AddBasicSkill(Main.Data.Skills["Laser_Base_Basic"]);
-        //SkillList.AddBasicSkill(Main.Data.Skills["Slash_Base_Basic"]);
+        if (Main.Skill.RangeSkill != null) SkillList.SetSkill(Main.Skill.RangeSkill);
+        if (Main.Skill.MeleeSkill != null) SkillList.SetSkill(Main.Skill.MeleeSkill);
     }
     protected override void SetState() {
         base.SetState();
@@ -56,6 +56,7 @@ public class Player : Creature, IAttackable {
         this.Attacker = new(this);
         this.Attacker.OnStartAttack += () => {
             _animator.SetBool(AnimatorParameterHash_Attack, true);
+            SkillFireAudioSource();
         };
         this.Attacker.OnEndAttack += () => {
             _animator.SetBool(AnimatorParameterHash_Attack, false);
@@ -67,6 +68,7 @@ public class Player : Creature, IAttackable {
     #endregion
 
     private void OnEnteredDead() {
+        Main.Skill.Clear();
         Main.UI.OpenPopupUI<UI_Popup_GameOver>();
     }
 
@@ -105,7 +107,6 @@ public class Player : Creature, IAttackable {
     public void Attack() {
         if (this.IsDead) return;
         if (SkillList.CurrentBasicSkill == null) return;
-        SkillFireAudioSource();
         Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
     }
 
@@ -149,87 +150,15 @@ public class Player : Creature, IAttackable {
             }
         };
     }
-    private void SkillFireAudioSource()
-    {
-        if (SkillList.CurrentBasicSkill.Name == "BasicLaserBeam") AudioController.Instance.SFXPlay(SFX.Range_Laser_Fire);
-        if (SkillList.CurrentBasicSkill.Name == "BasicRapidFire") AudioController.Instance.SFXPlay(SFX.Range_Rapid_Fire);
-        if (SkillList.CurrentBasicSkill.Name == "BasicShotGun") AudioController.Instance.SFXPlay(SFX.Range_ShotGun_Fire);
-        if (SkillList.CurrentBasicSkill.Name == "BasicSlash") AudioController.Instance.SFXPlay(SFX.Melee_Slash_Fire);
-        if (SkillList.CurrentBasicSkill.Name == "BasicSting") AudioController.Instance.SFXPlay(SFX.Melee_Sting_Fire);
-        if (SkillList.CurrentBasicSkill.Name == "BasicSmash") AudioController.Instance.SFXPlay(SFX.Melee_Smash_Fire);
+    private void SkillFireAudioSource() {
+        AudioController.Instance.SFXPlay(SkillList.CurrentBasicSkill.Name switch {
+            "BasicLaserBeam" => SFX.Range_Laser_Fire,
+            "BasicRapidFire" => SFX.Range_Rapid_Fire,
+            "BasicShotGun" => SFX.Range_ShotGun_Fire,
+            "BasicSlash" => SFX.Melee_Slash_Fire,
+            "BasicSting" => SFX.Melee_Sting_Fire,
+            "BasicSmash" => SFX.Melee_Smash_Fire,
+            _ => SFX.Range_Rapid_Fire,
+        });
     }
 }
-    //public AttackInfo GetAttackInfo() {
-    //    Skill_Basic basicSkill = _isRangeAttack_Temp ? SkillList.BasicRange : SkillList.BasicMelee;
-
-    //    HitColliderGenerationInfo generationInfo = new() {
-    //        Owner = this,
-    //        HitColliderKey = basicSkill.Name,
-    //        Offset = basicSkill.Offset,
-    //        RotationAngle = basicSkill.RotationAngle < 0 ? LookAngle : basicSkill.RotationAngle,
-    //        Count = basicSkill.HitColliderCount,
-    //        SpreadAngle = basicSkill.HitColliderAngle,
-    //        Size = basicSkill.HitColliderSize,
-    //    };
-    //    HitColliderInfo hitColliderInfo = new() {
-    //        Penetration = basicSkill.Penetration,
-    //        Speed = basicSkill.Speed,
-    //        Direction = basicSkill.Direction.magnitude <= float.Epsilon ? LookDirection : basicSkill.Direction,
-    //        Duration = basicSkill.Duration,
-    //        Range = basicSkill.Range,
-    //    };
-    //    HitInfo hitInfo = new() {
-    //        Owner = this,
-    //        Damage = this.Damage,
-    //        CriticalChance = basicSkill.CriticalChance,
-    //        CriticalBonus = basicSkill.CriticalBonus,
-    //        Knockback = new() {
-    //            time = 0.1f,
-    //            speed = 10f,
-    //        }
-    //    };
-
-
-
-
-
-
-
-
-
-
-
-    //    return new() {
-    //        Owner = this,
-    //        HitColliderKey = basicSkill.Name,
-    //        Offset = basicSkill.Offset,
-    //        RotationAngle = basicSkill.RotationAngle < 0 ? this.LookAngle : basicSkill.RotationAngle,
-    //        Damage = this.Damage,
-    //        CriticalChance = basicSkill.CriticalChance,
-    //        CriticalBonus = basicSkill.CriticalBonus,
-    //        Penetrate = basicSkill.Penetration,
-    //        Speed = basicSkill.Speed,
-    //        Direction = basicSkill.Direction.magnitude <= float.Epsilon ? LookDirection : basicSkill.Direction,
-    //        Duration = basicSkill.Duration,
-    //        Knockback = new() {
-    //            time = 0.1f,
-    //            speed = 10,
-    //        }
-    //    };
-    //    //return new() {
-    //    //    Owner = this,
-    //    //    HitColliderKey = _isRangeAttack_Temp ? "BasicProjectile" : "BasicMelee",
-    //    //    Damage = this.Damage,
-    //    //    CriticalChance = 0,
-    //    //    CriticalBonus = 1.5f,
-    //    //    Penetrate = 1,
-    //    //    Speed = 10,
-    //    //    Direction = LookDirection,
-    //    //    Duration = 5,
-    //    //    Knockback = new() {
-    //    //        time = 0.1f,
-    //    //        speed = 10,
-    //    //    }
-    //    //};
-    //}
-//}
