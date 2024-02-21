@@ -11,6 +11,9 @@ public class TitleScene : BaseScene {
 
         SceneUI = Main.UI.OpenSceneUI<UI_Scene_Title>();
 
+        Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
+       
+
         return true;
     }
 }
