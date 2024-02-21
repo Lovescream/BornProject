@@ -61,8 +61,22 @@ namespace ZerolizeDungeon {
                 else OnRoomClosed?.Invoke(this);
             }
         }
-        public bool IsActivated { get; private set; }
-        public bool IsClear { get; private set; }
+        public bool IsActivated {
+            get => _isActivated;
+            set {
+                _isActivated = value;
+                if (!IsClear) IsOpened = false;
+                CheckClear();
+            }
+        }
+        public bool IsClear {
+            get => _isClear;
+            set {
+                _isClear = value;
+                IsOpened = value;
+            }
+        }
+        public bool ExistEnemy => _enemies.Count > 0;
 
         // Neighbours Info.
         public Room Top => _neighbours[ZerolizeDungeon.Direction.Top];
@@ -76,13 +90,17 @@ namespace ZerolizeDungeon {
 
         // State.
         private bool _isOpened = true;
+        private bool _isClear = false;
+        private bool _isActivated = false;
 
         // Collections.
         private Dictionary<Direction, Debris> _debris = new();
         private Dictionary<Direction, Room> _neighbours = new();
+        private List<Enemy> _enemies = new();
 
         // Components.
         private Transform _objects;
+        private Rpdlagkrhtlvek _rpdlatlzuwnjwpqkf;
 
         // Callbacks.
         public event Action<Room> OnRoomOpened;
@@ -115,6 +133,11 @@ namespace ZerolizeDungeon {
             this.Y = data.Y;
             this.transform.name = $"Room[{X}, {Y}]";
             this.transform.position = OriginPosition;
+            _rpdlatlzuwnjwpqkf = Main.Resource.Instantiate("Rpdlagkrhtlvek", this.transform, false).GetComponent<Rpdlagkrhtlvek>();
+            _rpdlatlzuwnjwpqkf.transform.localPosition = new(15, 15);
+            _rpdlatlzuwnjwpqkf.OnEnteredPlayer += () => {
+                IsActivated = true;
+            };
 
             // #2. 컬렉션 초기화.
             for (int i = 0; i < (int)ZerolizeDungeon.Direction.COUNT; i++) {
@@ -195,7 +218,12 @@ namespace ZerolizeDungeon {
             if (_objects == null) return;
             EnemySpawner[] spawners = _objects.GetComponentsInChildren<EnemySpawner>();
             for (int i = spawners.Length - 1; i >= 0; i--) {
-                Main.Object.SpawnEnemy(spawners[i].Key, spawners[i].Position);
+                Enemy enemy = Main.Object.SpawnEnemy(spawners[i].Key, spawners[i].Position);
+                _enemies.Add(enemy);
+                enemy.OnDead += () => {
+                    _enemies.Remove(enemy);
+                    CheckClear();
+                };
                 Destroy(spawners[i].gameObject);
             }
         }
@@ -221,5 +249,11 @@ namespace ZerolizeDungeon {
         }
 
         #endregion
+
+        private void CheckClear() {
+            if (IsClear) return;
+            if (_enemies.Count <= 0) IsClear = true;
+            Main.Dungeon.CheckClear();
+        }
     }
 }

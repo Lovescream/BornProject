@@ -60,9 +60,15 @@ public class Player : Creature, IAttackable {
         this.Attacker.OnEndAttack += () => {
             _animator.SetBool(AnimatorParameterHash_Attack, false);
         };
+
+        this.State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
     }
 
     #endregion
+
+    private void OnEnteredDead() {
+        Main.UI.OpenPopupUI<UI_Popup_GameOver>();
+    }
 
     #region Input
 
@@ -90,6 +96,7 @@ public class Player : Creature, IAttackable {
     }
 
     #endregion
+
     public override void OnHit(IHitCollider attacker)
     {        
         base.OnHit(attacker);

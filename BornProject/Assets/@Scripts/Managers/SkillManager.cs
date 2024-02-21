@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class SkillManager {
@@ -19,8 +18,20 @@ public class SkillManager {
 
     public event Action<SkillData> OnGetSkill;
 
+    private bool _isInitialized;
     public void Initialize() {
+        if (_isInitialized) return;
+        _isInitialized = true;
         OnGetSkill += s => GameObject.FindObjectOfType<Player>().SkillList.SetSkill(s.Type == SkillType.Range ? RangeSkill : MeleeSkill);
+    }
+    public void Reinitialize() {
+        if (_isInitialized) {
+            _rangeSkills.Clear();
+            _meleeSkills.Clear();
+            OnGetSkill = null;
+        }
+        _isInitialized = false;
+        Initialize();
     }
 
     public void GetSkill(SkillData skill) {

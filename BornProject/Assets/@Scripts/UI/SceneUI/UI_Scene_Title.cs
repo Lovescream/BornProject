@@ -56,11 +56,13 @@ public class UI_Scene_Title : UI_Scene {
     }
 
     private void OnBtnContinue() {
-
+        
+        
     }
 
     private void OnBtnController() {
-
+        
+       // Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
     }
 
     private void OnBtnExit() {

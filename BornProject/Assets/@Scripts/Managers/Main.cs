@@ -16,10 +16,9 @@ public class Main : MonoBehaviour {
                 if (obj == null) {
                     obj = new("@Main");
                     obj.AddComponent<Main>();
+                    Debug.Log("Main");
                 }
-#if !UNITY_EDITOR
                 DontDestroyOnLoad(obj);
-#endif
                 _instance = obj.GetComponent<Main>();
             }
             return _instance;
@@ -37,6 +36,7 @@ public class Main : MonoBehaviour {
     private DungeonManager _dungeon = new();
     private UIManager _ui = new();
     private SkillManager _skill = new();
+    private QuestManager _quest = new();
 
     public static PoolManager Pool => Instance?._pool;
     public static DataManager Data => Instance?._data;
@@ -45,6 +45,7 @@ public class Main : MonoBehaviour {
     public static DungeonManager Dungeon => Instance?._dungeon;
     public static UIManager UI => Instance?._ui;
     public static SkillManager Skill => Instance?._skill;
+    public static QuestManager Quest => Instance?._quest;
     public void ManualInitialize() {
         _pool = new();
         _data = new();

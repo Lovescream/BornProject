@@ -1,4 +1,4 @@
-using DG.Tweening.Core.Easing;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,6 +38,12 @@ public class Enemy : Creature, IAttackable {
     private Transform _sight;
     private Transform _range;
 
+    // Coroutines.
+    private Coroutine _coDead;
+
+    // Callbacks.
+    public event Action OnDead;
+
     #endregion
 
     #region MonoBehaviours
@@ -69,6 +75,7 @@ public class Enemy : Creature, IAttackable {
     protected override void SetState() {
         base.SetState();
         State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
+        State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
         State.AddOnStay(CreatureState.Idle, OnStayIdle);
         State.AddOnStay(CreatureState.Chase, OnStayChase);
         State.AddOnStay(CreatureState.Attack, OnStayAttack);
@@ -80,6 +87,8 @@ public class Enemy : Creature, IAttackable {
         this.Attacker.OnEndAttack += () => {
             _animator.SetBool(AnimatorParameterHash_Attack, false);
         };
+
+        OnDead = null;
     }
 
     #endregion
@@ -89,6 +98,12 @@ public class Enemy : Creature, IAttackable {
     private void OnEnteredAttack() {
         Velocity = Vector2.zero;
     }
+    private void OnEnteredDead() {
+        OnDead?.Invoke();
+        if (_coDead != null) StopCoroutine(_coDead);
+        _coDead = StartCoroutine(CoDead());
+    }
+
     private void OnStayIdle() {
         Velocity = Vector2.zero;
         Target = FindTarget();
@@ -219,6 +234,14 @@ public class Enemy : Creature, IAttackable {
     protected virtual bool IsTarget(Creature creature) {
         if (creature is Player) return true;
         return false;
+    }
+
+    private IEnumerator CoDead() {
+        yield return new WaitForSeconds(2f);
+        Main.Object.DespawnEnemy(this);
+        _coDead = null;
+        StopAllCoroutines();
+        yield break;
     }
 
 }

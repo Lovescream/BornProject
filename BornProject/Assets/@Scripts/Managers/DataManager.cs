@@ -12,8 +12,11 @@ public class DataManager {
     public Dictionary<string, SkillData> Skills = new();
     public Dictionary<string, EnemySkillData> EnemySkills = new();
 
-    public void Initialize()
-    {
+    private bool _isInitialized;
+    public void Initialize() {
+        if (_isInitialized) return;
+        _isInitialized = true;
+
         Creatures = LoadJson<CreatureData>();
         Skills = LoadJson<SkillData>();
         EnemySkills = LoadJson<EnemySkillData>();

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DungeonManager {
 
@@ -29,22 +30,29 @@ public class DungeonManager {
     private Transform _dungeonRoot;
 
     public void Generate() {
-        if (Current != null) return;
+        if (Current != null) Destroy();
         Generator.Clear();
         if (Generator.Generate())
             Current = new Dungeon(Generator.Result, DungeonRoot);
     }
 
-    //public void Destroy() {
-    //    foreach (Room room in Current.Rooms) {
-    //        room.Object.transform.SetParent(null);
-    //        Main.Resource.Destroy(room.Object.gameObject);
-    //    }
-    //    Current = null;
-    //}
+    public void Destroy() {
+        Main.Resource.Destroy(DungeonRoot.gameObject);
+        Current = null;
+    }
 
     public Room GetRoom(Vector2 position) {
         return Current.Rooms.Where(room => room.IsInRoom(position)).FirstOrDefault();
     }
 
+    public void CheckClear() {
+        if (Current.Rooms.Where(x => x.ExistEnemy).Count() > 0) return;
+        Main.Quest.ClearStageCount++;
+        NextStage();
+    }
+
+    public void NextStage() {
+        Main.UI.Clear();
+        SceneManager.LoadScene("GameScene");
+    }
 }
