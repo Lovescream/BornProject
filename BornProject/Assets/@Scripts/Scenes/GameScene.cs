@@ -20,6 +20,7 @@ public class GameScene : BaseScene {
 
         // #3. UI 생성.
         SceneUI = Main.UI.OpenSceneUI<UI_Scene_Game>();
+        Main.UI.Clear();
 
         // #4. Skill 체크.
         Main.Skill.Reinitialize();
