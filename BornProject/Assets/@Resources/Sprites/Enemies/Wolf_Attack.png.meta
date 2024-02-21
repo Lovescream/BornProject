@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c3b706b430601c4f86b260ef269e2ab
+guid: 72db6113ebe75fd4eaee09aa614bde97
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Snake_Attack_0
+      name: Wolf_Attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0048534066f46c4ca1bb3e5d79b3341
-      internalID: 2121810622
+      spriteID: 95dbdb08c53243b4eacf2ff57f4b1927
+      internalID: 1139553240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_1
+      name: Wolf_Attack_1
       rect:
         serializedVersion: 2
         x: 24
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e5126c1d37395641b5ac57627fa80c6
-      internalID: -1379136516
+      spriteID: eca301c0fc3563e499efba00ef5d9256
+      internalID: -1327252558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_2
+      name: Wolf_Attack_2
       rect:
         serializedVersion: 2
         x: 48
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8430bbf06a4f834da25828b587097d3
-      internalID: 627467880
+      spriteID: 3c38f0f55853079488908a1a2d70564e
+      internalID: -1645820520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_3
+      name: Wolf_Attack_3
       rect:
         serializedVersion: 2
         x: 72
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eda75ab0966689c4b8276c33d40e8a44
-      internalID: -624967931
+      spriteID: 10426b28848ee8544beb7a74bc3a9735
+      internalID: 1231066618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_4
+      name: Wolf_Attack_4
       rect:
         serializedVersion: 2
         x: 0
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adcb0a4f75f047840a5be9dd93c32de1
-      internalID: -799822188
+      spriteID: b2434609d512df04fa2d2e756437ccd3
+      internalID: -1917038489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_5
+      name: Wolf_Attack_5
       rect:
         serializedVersion: 2
         x: 24
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4be2aa152f0479b4bb42fb3b8bbd9194
-      internalID: -1647847655
+      spriteID: a9bf6881feb02b84ea8ed761e33fce99
+      internalID: -126985611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_6
+      name: Wolf_Attack_6
       rect:
         serializedVersion: 2
         x: 48
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6773cdabff92ea64d87e4e861cb392e4
-      internalID: 358493633
+      spriteID: c4e06d5c54d17ed4fa813be3c3d8cdd4
+      internalID: -218919714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_7
+      name: Wolf_Attack_7
       rect:
         serializedVersion: 2
         x: 72
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecc2e14f7d4fd284c9ae4975978fe433
-      internalID: -151826044
+      spriteID: f1d0e1ea3ff278e4f97dcaeda2d7829f
+      internalID: -738280359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_8
+      name: Wolf_Attack_8
       rect:
         serializedVersion: 2
         x: 0
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d0d988970b4e4848bfb18fb077cf159
-      internalID: 209836766
+      spriteID: b300b00a4b8a9c842abf6ef67a2d61f9
+      internalID: 1964464558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_9
+      name: Wolf_Attack_9
       rect:
         serializedVersion: 2
         x: 24
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43e4661647e572b41857d38d2f962c44
-      internalID: 1924412591
+      spriteID: 43717c13b48876e4382f74c35c1a464c
+      internalID: 422187365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_10
+      name: Wolf_Attack_10
       rect:
         serializedVersion: 2
         x: 48
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b08df34f5f64ac4abf41b7297937022
-      internalID: 1749391697
+      spriteID: 5763a121275577e4da5ba0c3d98db12b
+      internalID: 1589441055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_11
+      name: Wolf_Attack_11
       rect:
         serializedVersion: 2
         x: 72
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8405e0194be5c0f4fb4f4f4317b84d7d
-      internalID: -763262906
+      spriteID: 5b8669f505003054eac14780ba9d5a18
+      internalID: 1317199436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_12
+      name: Wolf_Attack_12
       rect:
         serializedVersion: 2
         x: 0
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f57b239fd7c4eb46a9e758903097c0a
-      internalID: 1051596544
+      spriteID: 27a9682d9788a67459b6ddc5d395be39
+      internalID: -417360345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_13
+      name: Wolf_Attack_13
       rect:
         serializedVersion: 2
         x: 24
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 237d38f3582a17146995f3983f2d5d13
-      internalID: -1845729118
+      spriteID: 2aa8c4c00ddcbd9488cabd59c72d5f0d
+      internalID: -1610387426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_14
+      name: Wolf_Attack_14
       rect:
         serializedVersion: 2
         x: 48
@@ -431,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dd7de0a855011b40b9781d64fc733bd
-      internalID: -713000814
+      spriteID: efbe470ed21f34e40b678234ff663213
+      internalID: -662393076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_Attack_15
+      name: Wolf_Attack_15
       rect:
         serializedVersion: 2
         x: 72
@@ -452,8 +452,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5114ba6b1c360c4b9b85b221f134e46
-      internalID: 1883691495
+      spriteID: 9be777d266c6a8e4fa323f3e7137a256
+      internalID: 1464447487
       vertices: []
       indices: 
       edges: []
@@ -469,22 +469,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Snake_Attack_0: 2121810622
-      Snake_Attack_1: -1379136516
-      Snake_Attack_10: 1749391697
-      Snake_Attack_11: -763262906
-      Snake_Attack_12: 1051596544
-      Snake_Attack_13: -1845729118
-      Snake_Attack_14: -713000814
-      Snake_Attack_15: 1883691495
-      Snake_Attack_2: 627467880
-      Snake_Attack_3: -624967931
-      Snake_Attack_4: -799822188
-      Snake_Attack_5: -1647847655
-      Snake_Attack_6: 358493633
-      Snake_Attack_7: -151826044
-      Snake_Attack_8: 209836766
-      Snake_Attack_9: 1924412591
+      Wolf_Attack_0: 1139553240
+      Wolf_Attack_1: -1327252558
+      Wolf_Attack_10: 1589441055
+      Wolf_Attack_11: 1317199436
+      Wolf_Attack_12: -417360345
+      Wolf_Attack_13: -1610387426
+      Wolf_Attack_14: -662393076
+      Wolf_Attack_15: 1464447487
+      Wolf_Attack_2: -1645820520
+      Wolf_Attack_3: 1231066618
+      Wolf_Attack_4: -1917038489
+      Wolf_Attack_5: -126985611
+      Wolf_Attack_6: -218919714
+      Wolf_Attack_7: -738280359
+      Wolf_Attack_8: 1964464558
+      Wolf_Attack_9: 422187365
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

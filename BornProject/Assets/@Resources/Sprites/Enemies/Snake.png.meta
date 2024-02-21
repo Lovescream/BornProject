@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b836eacc95f9c06438d7ccd5834a1a08
+guid: dbb956607673a0044b15aeffa18c8181
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Beatle_Attack_0
+      name: Snake_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 18
-        height: 22
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f04371864a6674280b4216251248bc
-      internalID: -744424756
+      spriteID: 584a00880fa70ed458d9a4ef0b7d74ae
+      internalID: 88407080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_1
+      name: Snake_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 66
-        width: 18
-        height: 22
+        x: 16
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b218dc19687984b499f691f7f85fc1c3
-      internalID: -1718780141
+      spriteID: e1f52ac985932514fa1efc05b89ba604
+      internalID: -1265647650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_2
+      name: Snake_2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 66
-        width: 18
-        height: 22
+        x: 32
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60291223080fed14bb695f320c0b0074
-      internalID: -136192727
+      spriteID: 59d2b1e2269e3b641b4e831d73c45954
+      internalID: 1120360345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_3
+      name: Snake_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 66
-        width: 18
-        height: 22
+        x: 48
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,167 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73e41c304667b2a42968456d8915e02b
-      internalID: 1631140773
+      spriteID: 9604834dc1560ee43a915ac3ba62926e
+      internalID: -390948939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: caa9e5be07cc59546ba28f61b7cd4a1e
-      internalID: 473072793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_5
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f91baf183c0b0a478e594a4fe5d4dd5
-      internalID: -15872998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_6
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fa9d7e73441db64fb908f40ae47490b
-      internalID: 1816017950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_7
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a626a9a5376fb914ab25340370d2d38a
-      internalID: -746980548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_8
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c727cc990e1facc42a40e05aef2a1527
-      internalID: 1272165752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_9
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e9ed06516152c441ae23ccff9f9121f
-      internalID: 513796517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_10
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcef34bab6ddf01448cf39313532177b
-      internalID: -386417649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_11
+      name: Snake_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 44
-        width: 18
-        height: 22
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 424d4f14b506efa4188670dba7c30254
-      internalID: -473000416
+      spriteID: 422f0c7dc0f45584c8ea57efae61b286
+      internalID: -1073544434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_12
+      name: Snake_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 44
-        width: 18
-        height: 22
+        x: 16
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d86b8e801ec79e4f8f007923727e01c
-      internalID: -505772541
+      spriteID: 5fe502184fa95ad4f9352a1c0aaa3946
+      internalID: 681584742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_13
+      name: Snake_6
       rect:
         serializedVersion: 2
-        x: 36
-        y: 44
-        width: 18
-        height: 22
+        x: 32
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6305eacfa11fb24ab390a9208138218
-      internalID: -1012795598
+      spriteID: c81ae3c4a07d8a549b8b23fb6aa06a02
+      internalID: -363800739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_14
+      name: Snake_7
       rect:
         serializedVersion: 2
-        x: 54
-        y: 44
-        width: 18
-        height: 22
+        x: 48
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,167 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 606ad5c750c948f42ac71f9b3ed22761
-      internalID: 428683114
+      spriteID: 2cad4fa6e1e5aeb49a3d33713094300a
+      internalID: 1294136634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_15
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70301b068c1f12d4a9a27aadea5c1805
-      internalID: -1525924057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_16
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 674de917934615744b440ab76c4ca016
-      internalID: -1777210843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_17
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f868f605392c3a841b18bb56ac421389
-      internalID: -694506137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_18
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d66480761d7b5274b855a2ccdba87d89
-      internalID: -1216504854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_19
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68a4d64b71175144c9e0863a40a9d927
-      internalID: -1883875647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_20
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce08e028b5d61a446afb229887a40e80
-      internalID: -1130601663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_21
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13192ca5e351ac0408585f51e2e71e27
-      internalID: -1663189483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_22
+      name: Snake_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 22
-        width: 18
-        height: 22
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0eddc674e84fc247869e199d10340cd
-      internalID: -955544363
+      spriteID: f773b20d4e9d0a245b46058ce4cd4e80
+      internalID: -393145400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_23
+      name: Snake_9
       rect:
         serializedVersion: 2
-        x: 18
-        y: 22
-        width: 18
-        height: 22
+        x: 16
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -620,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 808a276410cd1be429a3a2a0c43b97e8
-      internalID: 1469754711
+      spriteID: 18dda9a7ea86560498bc58184f298d69
+      internalID: -913385470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_24
+      name: Snake_10
       rect:
         serializedVersion: 2
-        x: 36
-        y: 22
-        width: 18
-        height: 22
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -641,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c23e1134ad66c8746a13fd99e1132c84
-      internalID: -62371466
+      spriteID: c98801c110420fd4884902c5eacb50b9
+      internalID: -2006249181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_25
+      name: Snake_11
       rect:
         serializedVersion: 2
-        x: 54
-        y: 22
-        width: 18
-        height: 22
+        x: 48
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19dc3ec3ae0ecbb4face2101d8a860e6
-      internalID: -116513511
+      spriteID: a587430578e80994f9e6bc49eb958353
+      internalID: -793171704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_26
+      name: Snake_12
       rect:
         serializedVersion: 2
-        x: 72
-        y: 22
-        width: 18
-        height: 22
+        x: 0
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -683,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90db3c55ae451e44581e515a2fbcd546
-      internalID: 112921708
+      spriteID: 8d0554633eaa8204aab927da3fa8055a
+      internalID: 546593154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_27
+      name: Snake_13
       rect:
         serializedVersion: 2
-        x: 90
-        y: 22
-        width: 18
-        height: 22
+        x: 16
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9318d38a1a83bda4da927c34bbcc9a93
-      internalID: -51340354
+      spriteID: a2e29867f0a30d642bf0dceaf0bd8188
+      internalID: -1915678544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_28
+      name: Snake_14
       rect:
         serializedVersion: 2
-        x: 108
-        y: 22
-        width: 18
-        height: 22
+        x: 32
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -725,20 +431,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44df8574455c0084dae14632f58abaa3
-      internalID: 1955944054
+      spriteID: 004855b4f91e1be4a851a849b92f7835
+      internalID: 1518346846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_29
+      name: Snake_15
       rect:
         serializedVersion: 2
-        x: 126
-        y: 22
-        width: 18
-        height: 22
+        x: 48
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -746,20 +452,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71ec3e045f58a9843a4dfa97dcc444eb
-      internalID: 161250668
+      spriteID: 4c71485e8f8a9e94690be31b855e9378
+      internalID: -962105638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_30
+      name: Snake_16
       rect:
         serializedVersion: 2
-        x: 144
-        y: 22
-        width: 18
-        height: 22
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -767,20 +473,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 530efdaf7e425804e8d816a250934df3
-      internalID: -23811819
+      spriteID: 997d35c970938ed458a7da9ae74d241a
+      internalID: 978565805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_31
+      name: Snake_17
       rect:
         serializedVersion: 2
-        x: 162
-        y: 22
-        width: 18
-        height: 22
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -788,20 +494,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf7918a8c09953044a49cce2570c8ed8
-      internalID: 1971108961
+      spriteID: 53af8493ca25cbb43a049258ea931301
+      internalID: 1421842108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_32
+      name: Snake_18
       rect:
         serializedVersion: 2
-        x: 180
-        y: 22
-        width: 18
-        height: 22
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,20 +515,209 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d79e078a1d556d42a3d00bb505f3b42
-      internalID: -2037068035
+      spriteID: ef6630a43c968e348893f720126ae3ab
+      internalID: 1899254132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_33
+      name: Snake_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2114cb1e3d1b3154e865155957ae0b9e
+      internalID: -1805479654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39b9a985dd7fc440b26eee39c2856e2
+      internalID: -753451528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd83cf4baa8bfae44be5f7fd2ee63706
+      internalID: 1622349731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a646566ba34a84797278d7f8a485b7
+      internalID: -109880004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c2d8b0b8b045248bedcb7b92542623
+      internalID: -1732712117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe54d31f3298eb84a9019b187d74fc5b
+      internalID: -1118029947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6193c00a15cd9d45ab4fe7a2a8ff5c2
+      internalID: 2103821286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2735751347f0c489b1001fb70be660
+      internalID: -208170393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b132420015f3ffa498598ad7af11fe6d
+      internalID: 1723956169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_28
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 18
-        height: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -830,20 +725,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f91223f608596ac48bcfcca57d4ae828
-      internalID: -1132160812
+      spriteID: be8118608b1b1e6428ffb6b4a1f87dec
+      internalID: -1333585585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_34
+      name: Snake_29
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 18
-        height: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,20 +746,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7345d1573058c3a409eafb8307a11698
-      internalID: -1917067864
+      spriteID: 211564225f5fc4b428c792642a42f830
+      internalID: -588503681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_35
+      name: Snake_30
       rect:
         serializedVersion: 2
-        x: 36
+        x: 32
         y: 0
-        width: 18
-        height: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,20 +767,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 967019540a6f92c4485b4dfa481a5fb9
-      internalID: 314677621
+      spriteID: 377bd88181616de418ac2a3ae228060e
+      internalID: 1833912372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_36
+      name: Snake_31
       rect:
         serializedVersion: 2
-        x: 54
+        x: 48
         y: 0
-        width: 18
-        height: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -893,155 +788,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b10f7a60041509b4bb20c84dbf22c193
-      internalID: -29964045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_37
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8806e541d93d79a4b945732341ac99a2
-      internalID: -399138058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_38
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57e3b810e74dad34ba03b4f20cd0dd2d
-      internalID: -1382956024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_39
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d764d3a71ee50547a3a67356e722acd
-      internalID: -245050838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_40
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d412cf18b5a9af84c8e498a4ea7f9772
-      internalID: -1432398368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_41
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 823163d30f3accd438d3f7e951dd0724
-      internalID: 1258892746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_42
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5e8d9cc970ada74c97947ebffe5b8ff
-      internalID: 804257235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_43
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e563182e1c944f6468a1e25bf3ccc0ec
-      internalID: -385473018
+      spriteID: 3aa70e23c9ee4454f9dc6d0f1f754f7e
+      internalID: -1948446351
       vertices: []
       indices: 
       edges: []
@@ -1057,50 +805,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Beatle_Attack_0: -744424756
-      Beatle_Attack_1: -1718780141
-      Beatle_Attack_10: -386417649
-      Beatle_Attack_11: -473000416
-      Beatle_Attack_12: -505772541
-      Beatle_Attack_13: -1012795598
-      Beatle_Attack_14: 428683114
-      Beatle_Attack_15: -1525924057
-      Beatle_Attack_16: -1777210843
-      Beatle_Attack_17: -694506137
-      Beatle_Attack_18: -1216504854
-      Beatle_Attack_19: -1883875647
-      Beatle_Attack_2: -136192727
-      Beatle_Attack_20: -1130601663
-      Beatle_Attack_21: -1663189483
-      Beatle_Attack_22: -955544363
-      Beatle_Attack_23: 1469754711
-      Beatle_Attack_24: -62371466
-      Beatle_Attack_25: -116513511
-      Beatle_Attack_26: 112921708
-      Beatle_Attack_27: -51340354
-      Beatle_Attack_28: 1955944054
-      Beatle_Attack_29: 161250668
-      Beatle_Attack_3: 1631140773
-      Beatle_Attack_30: -23811819
-      Beatle_Attack_31: 1971108961
-      Beatle_Attack_32: -2037068035
-      Beatle_Attack_33: -1132160812
-      Beatle_Attack_34: -1917067864
-      Beatle_Attack_35: 314677621
-      Beatle_Attack_36: -29964045
-      Beatle_Attack_37: -399138058
-      Beatle_Attack_38: -1382956024
-      Beatle_Attack_39: -245050838
-      Beatle_Attack_4: 473072793
-      Beatle_Attack_40: -1432398368
-      Beatle_Attack_41: 1258892746
-      Beatle_Attack_42: 804257235
-      Beatle_Attack_43: -385473018
-      Beatle_Attack_5: -15872998
-      Beatle_Attack_6: 1816017950
-      Beatle_Attack_7: -746980548
-      Beatle_Attack_8: 1272165752
-      Beatle_Attack_9: 513796517
+      Snake_0: 88407080
+      Snake_1: -1265647650
+      Snake_10: -2006249181
+      Snake_11: -793171704
+      Snake_12: 546593154
+      Snake_13: -1915678544
+      Snake_14: 1518346846
+      Snake_15: -962105638
+      Snake_16: 978565805
+      Snake_17: 1421842108
+      Snake_18: 1899254132
+      Snake_19: -1805479654
+      Snake_2: 1120360345
+      Snake_20: -753451528
+      Snake_21: 1622349731
+      Snake_22: -109880004
+      Snake_23: -1732712117
+      Snake_24: -1118029947
+      Snake_25: 2103821286
+      Snake_26: -208170393
+      Snake_27: 1723956169
+      Snake_28: -1333585585
+      Snake_29: -588503681
+      Snake_3: -390948939
+      Snake_30: 1833912372
+      Snake_31: -1948446351
+      Snake_4: -1073544434
+      Snake_5: 681584742
+      Snake_6: -363800739
+      Snake_7: 1294136634
+      Snake_8: -393145400
+      Snake_9: -913385470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

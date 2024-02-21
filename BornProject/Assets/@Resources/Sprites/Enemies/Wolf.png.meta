@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b836eacc95f9c06438d7ccd5834a1a08
+guid: 349b8ae74f533bf41b6af43b18837825
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Beatle_Attack_0
+      name: Wolf_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 18
-        height: 22
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f04371864a6674280b4216251248bc
-      internalID: -744424756
+      spriteID: fb8af914d276a7147912b565a93639cd
+      internalID: -1382411833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_1
+      name: Wolf_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 66
-        width: 18
-        height: 22
+        x: 16
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b218dc19687984b499f691f7f85fc1c3
-      internalID: -1718780141
+      spriteID: 4aa5e5584a70fd648ac16d3fccd95ac5
+      internalID: 646156148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_2
+      name: Wolf_2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 66
-        width: 18
-        height: 22
+        x: 32
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60291223080fed14bb695f320c0b0074
-      internalID: -136192727
+      spriteID: d9257402b7f767b43a6f759ba75bc4aa
+      internalID: 1255250079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_3
+      name: Wolf_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 66
-        width: 18
-        height: 22
+        x: 48
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,167 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73e41c304667b2a42968456d8915e02b
-      internalID: 1631140773
+      spriteID: 86ac74f0b07cba648b9eb5c86c2fb3f3
+      internalID: -1018310763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: caa9e5be07cc59546ba28f61b7cd4a1e
-      internalID: 473072793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_5
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f91baf183c0b0a478e594a4fe5d4dd5
-      internalID: -15872998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_6
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fa9d7e73441db64fb908f40ae47490b
-      internalID: 1816017950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_7
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a626a9a5376fb914ab25340370d2d38a
-      internalID: -746980548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_8
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c727cc990e1facc42a40e05aef2a1527
-      internalID: 1272165752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_9
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e9ed06516152c441ae23ccff9f9121f
-      internalID: 513796517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_10
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 66
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcef34bab6ddf01448cf39313532177b
-      internalID: -386417649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_11
+      name: Wolf_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 44
-        width: 18
-        height: 22
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 424d4f14b506efa4188670dba7c30254
-      internalID: -473000416
+      spriteID: 05ddaf76c12a77949891b90605b28049
+      internalID: 1410260929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_12
+      name: Wolf_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 44
-        width: 18
-        height: 22
+        x: 16
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d86b8e801ec79e4f8f007923727e01c
-      internalID: -505772541
+      spriteID: 86638c8b5d8faa94b8d3cc72befb5807
+      internalID: 2006192545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_13
+      name: Wolf_6
       rect:
         serializedVersion: 2
-        x: 36
-        y: 44
-        width: 18
-        height: 22
+        x: 32
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6305eacfa11fb24ab390a9208138218
-      internalID: -1012795598
+      spriteID: b8a5250e467728c488cf3d6779cc57ff
+      internalID: 40030380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_14
+      name: Wolf_7
       rect:
         serializedVersion: 2
-        x: 54
-        y: 44
-        width: 18
-        height: 22
+        x: 48
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,167 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 606ad5c750c948f42ac71f9b3ed22761
-      internalID: 428683114
+      spriteID: a3975b55d5720154dbcf6dca664ebbee
+      internalID: -1303755744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_15
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70301b068c1f12d4a9a27aadea5c1805
-      internalID: -1525924057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_16
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 674de917934615744b440ab76c4ca016
-      internalID: -1777210843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_17
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f868f605392c3a841b18bb56ac421389
-      internalID: -694506137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_18
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d66480761d7b5274b855a2ccdba87d89
-      internalID: -1216504854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_19
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68a4d64b71175144c9e0863a40a9d927
-      internalID: -1883875647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_20
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce08e028b5d61a446afb229887a40e80
-      internalID: -1130601663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_21
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 44
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13192ca5e351ac0408585f51e2e71e27
-      internalID: -1663189483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_22
+      name: Wolf_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 22
-        width: 18
-        height: 22
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0eddc674e84fc247869e199d10340cd
-      internalID: -955544363
+      spriteID: cd94dbdc4e8a0e84b972b15054afaa0c
+      internalID: -1599374638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_23
+      name: Wolf_9
       rect:
         serializedVersion: 2
-        x: 18
-        y: 22
-        width: 18
-        height: 22
+        x: 16
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -620,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 808a276410cd1be429a3a2a0c43b97e8
-      internalID: 1469754711
+      spriteID: 7be2b234050b2414c929adc3b5482190
+      internalID: 1308169532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_24
+      name: Wolf_10
       rect:
         serializedVersion: 2
-        x: 36
-        y: 22
-        width: 18
-        height: 22
+        x: 32
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -641,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c23e1134ad66c8746a13fd99e1132c84
-      internalID: -62371466
+      spriteID: e8605dc322b71fb43bf28c291b1b5f66
+      internalID: 598057850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_25
+      name: Wolf_11
       rect:
         serializedVersion: 2
-        x: 54
-        y: 22
-        width: 18
-        height: 22
+        x: 48
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19dc3ec3ae0ecbb4face2101d8a860e6
-      internalID: -116513511
+      spriteID: 01a80a5f5d19ab1448df0c71e68d0be1
+      internalID: 424510063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_26
+      name: Wolf_12
       rect:
         serializedVersion: 2
-        x: 72
-        y: 22
-        width: 18
-        height: 22
+        x: 0
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -683,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90db3c55ae451e44581e515a2fbcd546
-      internalID: 112921708
+      spriteID: dd6df33451be1e246a1a91b2e17662a7
+      internalID: 1637880652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_27
+      name: Wolf_13
       rect:
         serializedVersion: 2
-        x: 90
-        y: 22
-        width: 18
-        height: 22
+        x: 16
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9318d38a1a83bda4da927c34bbcc9a93
-      internalID: -51340354
+      spriteID: a20599539be4f504684185820ab33bee
+      internalID: 1307885605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_28
+      name: Wolf_14
       rect:
         serializedVersion: 2
-        x: 108
-        y: 22
-        width: 18
-        height: 22
+        x: 32
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -725,20 +431,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44df8574455c0084dae14632f58abaa3
-      internalID: 1955944054
+      spriteID: 1f64ea6a3421eb340b0c17aa88925edb
+      internalID: -1306371370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_29
+      name: Wolf_15
       rect:
         serializedVersion: 2
-        x: 126
-        y: 22
-        width: 18
-        height: 22
+        x: 48
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -746,20 +452,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71ec3e045f58a9843a4dfa97dcc444eb
-      internalID: 161250668
+      spriteID: 0d4d1ffe66aa83d4dbbc22eb384fce2f
+      internalID: 958237924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_30
+      name: Wolf_16
       rect:
         serializedVersion: 2
-        x: 144
-        y: 22
-        width: 18
-        height: 22
+        x: 0
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -767,20 +473,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 530efdaf7e425804e8d816a250934df3
-      internalID: -23811819
+      spriteID: 603f9f81a0dd5f94ebda9e91649ca2c3
+      internalID: -131312380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_31
+      name: Wolf_17
       rect:
         serializedVersion: 2
-        x: 162
-        y: 22
-        width: 18
-        height: 22
+        x: 16
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -788,20 +494,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf7918a8c09953044a49cce2570c8ed8
-      internalID: 1971108961
+      spriteID: fcda0f19cad34234e87c478fcc914348
+      internalID: -1223986875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_32
+      name: Wolf_18
       rect:
         serializedVersion: 2
-        x: 180
-        y: 22
-        width: 18
-        height: 22
+        x: 32
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,20 +515,713 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d79e078a1d556d42a3d00bb505f3b42
-      internalID: -2037068035
+      spriteID: bfb5ff97e2bc1a448b42309c41349e50
+      internalID: 1690463029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_33
+      name: Wolf_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330e245a20e72ca40a7f459e60741133
+      internalID: -796275973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f16a5aeff92ff4dbf8037690b1c4fb
+      internalID: 1741760501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df2fa0aa3fa8364589566483cb9a4fc
+      internalID: -548552197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1f6a559a4d9f340b29b7c064a2e297
+      internalID: -476701290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee80a30d2efcf0a4d9b8fc63a11e0d77
+      internalID: 1826232383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e5fb4961d0a3a4e8017614ba4deb15
+      internalID: -908514263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d810d8b670c1c7409ceaba277b55993
+      internalID: -1382497000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1159a273104f93c40bc5109ef2fc6b2f
+      internalID: -1969550525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43871719f4ac6a243af011da113fb385
+      internalID: -2133548467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e015a77c673c9de4891f826a5b5b4a97
+      internalID: 1578895053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_29
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aea76d2214fcb143b654bc2dbe3c5e2
+      internalID: 585295938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ca7daa8a5a89c4b9ff2f08faf58128
+      internalID: -1590265230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be12708ab811a6147af2336e9e71d994
+      internalID: 1404136190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4326b514f4302f468171832c44d622c
+      internalID: 1325601658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_33
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e476c58e9655880479857a8a22c009b2
+      internalID: -2081137130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_34
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064971de1576ba542886cb44ccda69c6
+      internalID: 1481128383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1272cba1a29efb54487d8e1e8cbd9caa
+      internalID: 2048722587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73d0ad3c844e3c46977b1f0d00ead66
+      internalID: 1072191357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_37
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52a2bb2c867b084bb6b9e8f904dcd61
+      internalID: -1690475711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_38
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8f8ad5b81a3c1459fde09fdd77a284
+      internalID: 1799698709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e48edc3d3042b14aad80df132fa7bfd
+      internalID: 1097761745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c1a57abf902074a9092729254dfce4
+      internalID: -1752983665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_41
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbce2772600fdd94590f666b580653a9
+      internalID: 2035403985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_42
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1557e3eae5d11d04f8ddc2aa48fae563
+      internalID: -1581322164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ee51d3be9db08478bbb86fa84fdcba
+      internalID: 1962826298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f179ba37997a0d84383925fa5f1d32bf
+      internalID: -322890504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afdabfa066f1fd746a9dd0a818d83fd2
+      internalID: -444626821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7313f3edfff712249b8cb7bba0fa717e
+      internalID: -1101114253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2628a79eb45c4a340b33e2653284f81f
+      internalID: -156600630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e410acdee748664695fd6ef5bbc4734
+      internalID: 794175851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4df016e29c03040907b73b38d671bc
+      internalID: 1284781665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d3284c7f192e34c9a304c611ac0d17
+      internalID: -70952547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_51
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e110b148fb4ba448f4f16eded96666
+      internalID: 922312044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_52
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 18
-        height: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -830,20 +1229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f91223f608596ac48bcfcca57d4ae828
-      internalID: -1132160812
+      spriteID: d13672c279ec3a84a95edc3111053f15
+      internalID: -1272115059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_34
+      name: Wolf_53
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 18
-        height: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,20 +1250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7345d1573058c3a409eafb8307a11698
-      internalID: -1917067864
+      spriteID: fa68fc5bc83b7344d9dd2bfec0cf5a3c
+      internalID: 942755114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_35
+      name: Wolf_54
       rect:
         serializedVersion: 2
-        x: 36
+        x: 32
         y: 0
-        width: 18
-        height: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,20 +1271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 967019540a6f92c4485b4dfa481a5fb9
-      internalID: 314677621
+      spriteID: 109a18152d6cb73449758ad94c856b3e
+      internalID: -548781985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beatle_Attack_36
+      name: Wolf_55
       rect:
         serializedVersion: 2
-        x: 54
+        x: 48
         y: 0
-        width: 18
-        height: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -893,155 +1292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b10f7a60041509b4bb20c84dbf22c193
-      internalID: -29964045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_37
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8806e541d93d79a4b945732341ac99a2
-      internalID: -399138058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_38
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57e3b810e74dad34ba03b4f20cd0dd2d
-      internalID: -1382956024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_39
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d764d3a71ee50547a3a67356e722acd
-      internalID: -245050838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_40
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d412cf18b5a9af84c8e498a4ea7f9772
-      internalID: -1432398368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_41
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 823163d30f3accd438d3f7e951dd0724
-      internalID: 1258892746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_42
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5e8d9cc970ada74c97947ebffe5b8ff
-      internalID: 804257235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beatle_Attack_43
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e563182e1c944f6468a1e25bf3ccc0ec
-      internalID: -385473018
+      spriteID: e268fe3d832f34142b4ef76e93b68a09
+      internalID: 582922221
       vertices: []
       indices: 
       edges: []
@@ -1057,50 +1309,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Beatle_Attack_0: -744424756
-      Beatle_Attack_1: -1718780141
-      Beatle_Attack_10: -386417649
-      Beatle_Attack_11: -473000416
-      Beatle_Attack_12: -505772541
-      Beatle_Attack_13: -1012795598
-      Beatle_Attack_14: 428683114
-      Beatle_Attack_15: -1525924057
-      Beatle_Attack_16: -1777210843
-      Beatle_Attack_17: -694506137
-      Beatle_Attack_18: -1216504854
-      Beatle_Attack_19: -1883875647
-      Beatle_Attack_2: -136192727
-      Beatle_Attack_20: -1130601663
-      Beatle_Attack_21: -1663189483
-      Beatle_Attack_22: -955544363
-      Beatle_Attack_23: 1469754711
-      Beatle_Attack_24: -62371466
-      Beatle_Attack_25: -116513511
-      Beatle_Attack_26: 112921708
-      Beatle_Attack_27: -51340354
-      Beatle_Attack_28: 1955944054
-      Beatle_Attack_29: 161250668
-      Beatle_Attack_3: 1631140773
-      Beatle_Attack_30: -23811819
-      Beatle_Attack_31: 1971108961
-      Beatle_Attack_32: -2037068035
-      Beatle_Attack_33: -1132160812
-      Beatle_Attack_34: -1917067864
-      Beatle_Attack_35: 314677621
-      Beatle_Attack_36: -29964045
-      Beatle_Attack_37: -399138058
-      Beatle_Attack_38: -1382956024
-      Beatle_Attack_39: -245050838
-      Beatle_Attack_4: 473072793
-      Beatle_Attack_40: -1432398368
-      Beatle_Attack_41: 1258892746
-      Beatle_Attack_42: 804257235
-      Beatle_Attack_43: -385473018
-      Beatle_Attack_5: -15872998
-      Beatle_Attack_6: 1816017950
-      Beatle_Attack_7: -746980548
-      Beatle_Attack_8: 1272165752
-      Beatle_Attack_9: 513796517
+      Wolf_0: -1382411833
+      Wolf_1: 646156148
+      Wolf_10: 598057850
+      Wolf_11: 424510063
+      Wolf_12: 1637880652
+      Wolf_13: 1307885605
+      Wolf_14: -1306371370
+      Wolf_15: 958237924
+      Wolf_16: -131312380
+      Wolf_17: -1223986875
+      Wolf_18: 1690463029
+      Wolf_19: -796275973
+      Wolf_2: 1255250079
+      Wolf_20: 1741760501
+      Wolf_21: -548552197
+      Wolf_22: -476701290
+      Wolf_23: 1826232383
+      Wolf_24: -908514263
+      Wolf_25: -1382497000
+      Wolf_26: -1969550525
+      Wolf_27: -2133548467
+      Wolf_28: 1578895053
+      Wolf_29: 585295938
+      Wolf_3: -1018310763
+      Wolf_30: -1590265230
+      Wolf_31: 1404136190
+      Wolf_32: 1325601658
+      Wolf_33: -2081137130
+      Wolf_34: 1481128383
+      Wolf_35: 2048722587
+      Wolf_36: 1072191357
+      Wolf_37: -1690475711
+      Wolf_38: 1799698709
+      Wolf_39: 1097761745
+      Wolf_4: 1410260929
+      Wolf_40: -1752983665
+      Wolf_41: 2035403985
+      Wolf_42: -1581322164
+      Wolf_43: 1962826298
+      Wolf_44: -322890504
+      Wolf_45: -444626821
+      Wolf_46: -1101114253
+      Wolf_47: -156600630
+      Wolf_48: 794175851
+      Wolf_49: 1284781665
+      Wolf_5: 2006192545
+      Wolf_50: -70952547
+      Wolf_51: 922312044
+      Wolf_52: -1272115059
+      Wolf_53: 942755114
+      Wolf_54: -548781985
+      Wolf_55: 582922221
+      Wolf_6: 40030380
+      Wolf_7: -1303755744
+      Wolf_8: -1599374638
+      Wolf_9: 1308169532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
