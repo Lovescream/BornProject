@@ -14,11 +14,16 @@ public class ResourceManager {
     private Dictionary<string, Dictionary<string, Tile>> _tileSets = new();
     private Dictionary<string, ZerolizeDungeon.Room> _rooms = new();
 
+    private bool _isInitialized;
     public void Initialize()
     {
+        if (_isInitialized) return;
+        _isInitialized = true;
+        Debug.Log("ResoIni");
         Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites"); // TODO: 경로 지정.
         foreach (Sprite sprite in sprites)
         {
+            Debug.Log(sprite.name);
             _sprites.Add(sprite.name, sprite);
         }
 

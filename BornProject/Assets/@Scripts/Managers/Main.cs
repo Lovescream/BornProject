@@ -16,10 +16,9 @@ public class Main : MonoBehaviour {
                 if (obj == null) {
                     obj = new("@Main");
                     obj.AddComponent<Main>();
+                    Debug.Log("Main");
                 }
-#if !UNITY_EDITOR
                 DontDestroyOnLoad(obj);
-#endif
                 _instance = obj.GetComponent<Main>();
             }
             return _instance;
