@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b9b210c3dbf82cc4b83af4ebf23be676
+guid: 349b8ae74f533bf41b6af43b18837825
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bear_0
+      name: Wolf_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 312
-        width: 24
-        height: 24
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20ddcd9bf516f854caf695b9d1d899a0
-      internalID: -1167862188
+      spriteID: fb8af914d276a7147912b565a93639cd
+      internalID: -1382411833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_1
+      name: Wolf_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 312
-        width: 24
-        height: 24
+        x: 16
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00675c1ebb3705647bdfd178a75818f3
-      internalID: -1369096238
+      spriteID: 4aa5e5584a70fd648ac16d3fccd95ac5
+      internalID: 646156148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_2
+      name: Wolf_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 312
-        width: 24
-        height: 24
+        x: 32
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,83 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc9cea62674f8a140a4b80d317259bb6
-      internalID: -549956117
+      spriteID: d9257402b7f767b43a6f759ba75bc4aa
+      internalID: 1255250079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 312
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ba15bef16ae34e489f6729d2dabff8f
-      internalID: 479890102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 288
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b48ef2fefd2c1446a237a9f1e78f710
-      internalID: -537575473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_5
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 288
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee8cad1b11e33e7439544371018638de
-      internalID: 1489225656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_6
+      name: Wolf_3
       rect:
         serializedVersion: 2
         x: 48
-        y: 288
-        width: 24
-        height: 24
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,293 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ca0306ae95f46240b03bf21fab4d11f
-      internalID: -2026408497
+      spriteID: 86ac74f0b07cba648b9eb5c86c2fb3f3
+      internalID: -1018310763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_7
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 288
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4aecc4708bf2134883ef0d55373eab7
-      internalID: -644546101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 264
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fc222ae7406d5e41a8e04d68717f0e2
-      internalID: 641124530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_9
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 264
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9f845ed6db81304fa9d6089016ce3f0
-      internalID: -1590876253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_10
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 264
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4de9ec3d72f33784b877b1340cf65ce5
-      internalID: 782685404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_11
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 264
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3821b10936088c844bf69a64756e354f
-      internalID: 1500445847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 240
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f07e25fd1b131f74c8a88af6d184086c
-      internalID: -1298637037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_13
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 240
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35d8592ad1e2d3947832c23cdada6e57
-      internalID: -4641844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_14
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 240
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8579d091c993e8040b99751d82210cf1
-      internalID: -1465975812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_15
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 240
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e45d1a3040d8fd40bb8d1d5502c1a0e
-      internalID: 299436501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e3c2e1c0e7a19841bdbc75ab823ad6e
-      internalID: 289643997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_17
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efda19162ccd3e944aa7c18c263fa896
-      internalID: 964832210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_18
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d6ca72607a964b408e70bece4a9caf7
-      internalID: 531602704
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_19
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87e98bc708348a4458500ddc325b355f
-      internalID: -1209090886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_20
+      name: Wolf_4
       rect:
         serializedVersion: 2
         x: 0
         y: 192
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad376b4802d603e45acd2b1689413854
-      internalID: 1869993339
+      spriteID: 05ddaf76c12a77949891b90605b28049
+      internalID: 1410260929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_21
+      name: Wolf_5
       rect:
         serializedVersion: 2
-        x: 24
+        x: 16
         y: 192
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -578,20 +242,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da00104c5908d49409bc52de373e314f
-      internalID: 237401855
+      spriteID: 86638c8b5d8faa94b8d3cc72befb5807
+      internalID: 2006192545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_22
+      name: Wolf_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a5250e467728c488cf3d6779cc57ff
+      internalID: 40030380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_7
       rect:
         serializedVersion: 2
         x: 48
         y: 192
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,41 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fc1cc50e9caa0942acb4028f2ef9a9f
-      internalID: 1646361291
+      spriteID: a3975b55d5720154dbcf6dca664ebbee
+      internalID: -1303755744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_23
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b4c4da06dc2c2140be61ef47f86271e
-      internalID: 1707934402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_24
+      name: Wolf_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 168
-        width: 24
-        height: 24
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -641,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc8292e8412581246aaa97e0b15cb7e2
-      internalID: -1368631891
+      spriteID: cd94dbdc4e8a0e84b972b15054afaa0c
+      internalID: -1599374638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_25
+      name: Wolf_9
       rect:
         serializedVersion: 2
-        x: 24
-        y: 168
-        width: 24
-        height: 24
+        x: 16
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,20 +326,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8b5d13e58e361743994204efb367bd9
-      internalID: 1639779398
+      spriteID: 7be2b234050b2414c929adc3b5482190
+      internalID: 1308169532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_26
+      name: Wolf_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8605dc322b71fb43bf28c291b1b5f66
+      internalID: 598057850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_11
       rect:
         serializedVersion: 2
         x: 48
-        y: 168
-        width: 24
-        height: 24
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -683,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67559e1b065bad64cbfdb9e0d6a01b45
-      internalID: -1723971041
+      spriteID: 01a80a5f5d19ab1448df0c71e68d0be1
+      internalID: 424510063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_27
+      name: Wolf_12
       rect:
         serializedVersion: 2
-        x: 72
-        y: 168
-        width: 24
-        height: 24
+        x: 0
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,20 +389,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 245328a0fc6554e49bcc2223e2e50b25
-      internalID: 532202150
+      spriteID: dd6df33451be1e246a1a91b2e17662a7
+      internalID: 1637880652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_28
+      name: Wolf_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20599539be4f504684185820ab33bee
+      internalID: 1307885605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f64ea6a3421eb340b0c17aa88925edb
+      internalID: -1306371370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4d1ffe66aa83d4dbbc22eb384fce2f
+      internalID: 958237924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_16
       rect:
         serializedVersion: 2
         x: 0
         y: 144
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -725,20 +473,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be61b3d4925fc6f4893d8c82ba875783
-      internalID: -1933228363
+      spriteID: 603f9f81a0dd5f94ebda9e91649ca2c3
+      internalID: -131312380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_29
+      name: Wolf_17
       rect:
         serializedVersion: 2
-        x: 24
+        x: 16
         y: 144
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -746,20 +494,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8731e347e6d24c44d80c057d965dec60
-      internalID: -471467714
+      spriteID: fcda0f19cad34234e87c478fcc914348
+      internalID: -1223986875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_30
+      name: Wolf_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb5ff97e2bc1a448b42309c41349e50
+      internalID: 1690463029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_19
       rect:
         serializedVersion: 2
         x: 48
         y: 144
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -767,41 +536,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bd8e164c56741040b88576eaf7c0ab5
-      internalID: -1953958578
+      spriteID: 330e245a20e72ca40a7f459e60741133
+      internalID: -796275973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_31
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ca8b25c268f0e74bbecf32c719dc071
-      internalID: -1035051342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_32
+      name: Wolf_20
       rect:
         serializedVersion: 2
         x: 0
-        y: 120
-        width: 24
-        height: 24
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,20 +557,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89102bb0c9a93ee4d8eabe492512ac7c
-      internalID: 131644503
+      spriteID: 79f16a5aeff92ff4dbf8037690b1c4fb
+      internalID: 1741760501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_33
+      name: Wolf_21
       rect:
         serializedVersion: 2
-        x: 24
-        y: 120
-        width: 24
-        height: 24
+        x: 16
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -830,20 +578,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01f9fa736e6b83548bf035ed5a91f5be
-      internalID: -112989717
+      spriteID: 7df2fa0aa3fa8364589566483cb9a4fc
+      internalID: -548552197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_34
+      name: Wolf_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1f6a559a4d9f340b29b7c064a2e297
+      internalID: -476701290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_23
       rect:
         serializedVersion: 2
         x: 48
-        y: 120
-        width: 24
-        height: 24
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,20 +620,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77fb5202408b58d49a302d0c02dfe7e6
-      internalID: 1234383426
+      spriteID: ee80a30d2efcf0a4d9b8fc63a11e0d77
+      internalID: 1826232383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_35
+      name: Wolf_24
       rect:
         serializedVersion: 2
-        x: 72
-        y: 120
-        width: 24
-        height: 24
+        x: 0
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,20 +641,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34081e02f48aa6047a5b6d9d3c4f367f
-      internalID: 340272672
+      spriteID: a0e5fb4961d0a3a4e8017614ba4deb15
+      internalID: -908514263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_36
+      name: Wolf_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d810d8b670c1c7409ceaba277b55993
+      internalID: -1382497000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1159a273104f93c40bc5109ef2fc6b2f
+      internalID: -1969550525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43871719f4ac6a243af011da113fb385
+      internalID: -2133548467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_28
       rect:
         serializedVersion: 2
         x: 0
         y: 96
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -893,20 +725,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a3e2f42613fab346842d365f7f62d58
-      internalID: 31214247
+      spriteID: e015a77c673c9de4891f826a5b5b4a97
+      internalID: 1578895053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_37
+      name: Wolf_29
       rect:
         serializedVersion: 2
-        x: 24
+        x: 16
         y: 96
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -914,20 +746,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd85b57766c64514c85f5e3bc6179c45
-      internalID: -2095963147
+      spriteID: 2aea76d2214fcb143b654bc2dbe3c5e2
+      internalID: 585295938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_38
+      name: Wolf_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ca7daa8a5a89c4b9ff2f08faf58128
+      internalID: -1590265230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_31
       rect:
         serializedVersion: 2
         x: 48
         y: 96
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -935,41 +788,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3109d0c0ea17aa84089ca38db5b9efdc
-      internalID: -358620262
+      spriteID: be12708ab811a6147af2336e9e71d994
+      internalID: 1404136190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_39
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b846a3a904b71ae4bbb973a330ee3611
-      internalID: 316436827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_40
+      name: Wolf_32
       rect:
         serializedVersion: 2
         x: 0
-        y: 72
-        width: 24
-        height: 24
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -977,20 +809,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94ff006dce4198a4f92804b4be91c7c9
-      internalID: -1686479943
+      spriteID: c4326b514f4302f468171832c44d622c
+      internalID: 1325601658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_41
+      name: Wolf_33
       rect:
         serializedVersion: 2
-        x: 24
-        y: 72
-        width: 24
-        height: 24
+        x: 16
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -998,20 +830,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbf1e974c7b56094785c204a8c9df5f6
-      internalID: -1792180504
+      spriteID: e476c58e9655880479857a8a22c009b2
+      internalID: -2081137130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_42
+      name: Wolf_34
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064971de1576ba542886cb44ccda69c6
+      internalID: 1481128383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_35
       rect:
         serializedVersion: 2
         x: 48
-        y: 72
-        width: 24
-        height: 24
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1019,20 +872,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d099e34008b11f40b34b69ba25409db
-      internalID: 963821662
+      spriteID: 1272cba1a29efb54487d8e1e8cbd9caa
+      internalID: 2048722587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_43
+      name: Wolf_36
       rect:
         serializedVersion: 2
-        x: 72
-        y: 72
-        width: 24
-        height: 24
+        x: 0
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1040,20 +893,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d858b8c18a28cd143861ebefdfedf16a
-      internalID: 1878981451
+      spriteID: a73d0ad3c844e3c46977b1f0d00ead66
+      internalID: 1072191357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_44
+      name: Wolf_37
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52a2bb2c867b084bb6b9e8f904dcd61
+      internalID: -1690475711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_38
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8f8ad5b81a3c1459fde09fdd77a284
+      internalID: 1799698709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e48edc3d3042b14aad80df132fa7bfd
+      internalID: 1097761745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_40
       rect:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1061,20 +977,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a1f649d837c7824c918c0df79bf9ef7
-      internalID: 1745082676
+      spriteID: c3c1a57abf902074a9092729254dfce4
+      internalID: -1752983665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_45
+      name: Wolf_41
       rect:
         serializedVersion: 2
-        x: 24
+        x: 16
         y: 48
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1082,20 +998,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71ff9e6f08e682144aa818a881238770
-      internalID: 1231622935
+      spriteID: fbce2772600fdd94590f666b580653a9
+      internalID: 2035403985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_46
+      name: Wolf_42
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1557e3eae5d11d04f8ddc2aa48fae563
+      internalID: -1581322164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_43
       rect:
         serializedVersion: 2
         x: 48
         y: 48
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1103,41 +1040,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f75023aacf8bf9f42b2bbd948d15bfdd
-      internalID: -1169432987
+      spriteID: 85ee51d3be9db08478bbb86fa84fdcba
+      internalID: 1962826298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_47
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99e7e758ece311d46b63aad710defd20
-      internalID: 1832508260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_48
+      name: Wolf_44
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
-        width: 24
-        height: 24
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1145,20 +1061,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f67fd86319391e64686020a8e68aca25
-      internalID: -1682421902
+      spriteID: f179ba37997a0d84383925fa5f1d32bf
+      internalID: -322890504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_49
+      name: Wolf_45
       rect:
         serializedVersion: 2
-        x: 24
-        y: 24
-        width: 24
-        height: 24
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1166,20 +1082,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dd21b5a4013703469cf841fb76d79de
-      internalID: -36330007
+      spriteID: afdabfa066f1fd746a9dd0a818d83fd2
+      internalID: -444626821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_50
+      name: Wolf_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7313f3edfff712249b8cb7bba0fa717e
+      internalID: -1101114253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_47
       rect:
         serializedVersion: 2
         x: 48
-        y: 24
-        width: 24
-        height: 24
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1187,20 +1124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52b979abe6359f44db093bd381e05c87
-      internalID: -1470723586
+      spriteID: 2628a79eb45c4a340b33e2653284f81f
+      internalID: -156600630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_51
+      name: Wolf_48
       rect:
         serializedVersion: 2
-        x: 72
-        y: 24
-        width: 24
-        height: 24
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1208,20 +1145,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 508c3c6e75763db4cb592ea489a5c159
-      internalID: -1868058846
+      spriteID: 6e410acdee748664695fd6ef5bbc4734
+      internalID: 794175851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_52
+      name: Wolf_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4df016e29c03040907b73b38d671bc
+      internalID: 1284781665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d3284c7f192e34c9a304c611ac0d17
+      internalID: -70952547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_51
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e110b148fb4ba448f4f16eded96666
+      internalID: 922312044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_52
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1229,20 +1229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b5401a9bcbc3194582b7316c8b7ba51
-      internalID: 1564345670
+      spriteID: d13672c279ec3a84a95edc3111053f15
+      internalID: -1272115059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_53
+      name: Wolf_53
       rect:
         serializedVersion: 2
-        x: 24
+        x: 16
         y: 0
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1250,20 +1250,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e40c19389e7439642bdd5f8dcc739bfa
-      internalID: 229632097
+      spriteID: fa68fc5bc83b7344d9dd2bfec0cf5a3c
+      internalID: 942755114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear_54
+      name: Wolf_54
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109a18152d6cb73449758ad94c856b3e
+      internalID: -548781985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_55
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 24
-        height: 24
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1271,29 +1292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67525598ae9128b49bf3df437dc0cbd6
-      internalID: -162853938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bear_55
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b84beb5e30e638d4e8bf3d79951df1a5
-      internalID: 1400827443
+      spriteID: e268fe3d832f34142b4ef76e93b68a09
+      internalID: 582922221
       vertices: []
       indices: 
       edges: []
@@ -1309,62 +1309,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bear_0: -1167862188
-      Bear_1: -1369096238
-      Bear_10: 782685404
-      Bear_11: 1500445847
-      Bear_12: -1298637037
-      Bear_13: -4641844
-      Bear_14: -1465975812
-      Bear_15: 299436501
-      Bear_16: 289643997
-      Bear_17: 964832210
-      Bear_18: 531602704
-      Bear_19: -1209090886
-      Bear_2: -549956117
-      Bear_20: 1869993339
-      Bear_21: 237401855
-      Bear_22: 1646361291
-      Bear_23: 1707934402
-      Bear_24: -1368631891
-      Bear_25: 1639779398
-      Bear_26: -1723971041
-      Bear_27: 532202150
-      Bear_28: -1933228363
-      Bear_29: -471467714
-      Bear_3: 479890102
-      Bear_30: -1953958578
-      Bear_31: -1035051342
-      Bear_32: 131644503
-      Bear_33: -112989717
-      Bear_34: 1234383426
-      Bear_35: 340272672
-      Bear_36: 31214247
-      Bear_37: -2095963147
-      Bear_38: -358620262
-      Bear_39: 316436827
-      Bear_4: -537575473
-      Bear_40: -1686479943
-      Bear_41: -1792180504
-      Bear_42: 963821662
-      Bear_43: 1878981451
-      Bear_44: 1745082676
-      Bear_45: 1231622935
-      Bear_46: -1169432987
-      Bear_47: 1832508260
-      Bear_48: -1682421902
-      Bear_49: -36330007
-      Bear_5: 1489225656
-      Bear_50: -1470723586
-      Bear_51: -1868058846
-      Bear_52: 1564345670
-      Bear_53: 229632097
-      Bear_54: -162853938
-      Bear_55: 1400827443
-      Bear_6: -2026408497
-      Bear_7: -644546101
-      Bear_8: 641124530
-      Bear_9: -1590876253
+      Wolf_0: -1382411833
+      Wolf_1: 646156148
+      Wolf_10: 598057850
+      Wolf_11: 424510063
+      Wolf_12: 1637880652
+      Wolf_13: 1307885605
+      Wolf_14: -1306371370
+      Wolf_15: 958237924
+      Wolf_16: -131312380
+      Wolf_17: -1223986875
+      Wolf_18: 1690463029
+      Wolf_19: -796275973
+      Wolf_2: 1255250079
+      Wolf_20: 1741760501
+      Wolf_21: -548552197
+      Wolf_22: -476701290
+      Wolf_23: 1826232383
+      Wolf_24: -908514263
+      Wolf_25: -1382497000
+      Wolf_26: -1969550525
+      Wolf_27: -2133548467
+      Wolf_28: 1578895053
+      Wolf_29: 585295938
+      Wolf_3: -1018310763
+      Wolf_30: -1590265230
+      Wolf_31: 1404136190
+      Wolf_32: 1325601658
+      Wolf_33: -2081137130
+      Wolf_34: 1481128383
+      Wolf_35: 2048722587
+      Wolf_36: 1072191357
+      Wolf_37: -1690475711
+      Wolf_38: 1799698709
+      Wolf_39: 1097761745
+      Wolf_4: 1410260929
+      Wolf_40: -1752983665
+      Wolf_41: 2035403985
+      Wolf_42: -1581322164
+      Wolf_43: 1962826298
+      Wolf_44: -322890504
+      Wolf_45: -444626821
+      Wolf_46: -1101114253
+      Wolf_47: -156600630
+      Wolf_48: 794175851
+      Wolf_49: 1284781665
+      Wolf_5: 2006192545
+      Wolf_50: -70952547
+      Wolf_51: 922312044
+      Wolf_52: -1272115059
+      Wolf_53: 942755114
+      Wolf_54: -548781985
+      Wolf_55: 582922221
+      Wolf_6: 40030380
+      Wolf_7: -1303755744
+      Wolf_8: -1599374638
+      Wolf_9: 1308169532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
