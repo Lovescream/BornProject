@@ -22,6 +22,7 @@ public class GameScene : BaseScene {
         SceneUI = Main.UI.OpenSceneUI<UI_Scene_Game>();
 
         // #4. Skill 체크.
+        Main.Skill.Reinitialize();
         if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null) {
             Main.UI.OpenPopupUI<UI_Popup_Skill>();
         }
