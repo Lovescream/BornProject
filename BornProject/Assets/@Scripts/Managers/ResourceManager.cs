@@ -19,11 +19,9 @@ public class ResourceManager {
     {
         if (_isInitialized) return;
         _isInitialized = true;
-        Debug.Log("ResoIni");
         Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites"); // TODO: 경로 지정.
         foreach (Sprite sprite in sprites)
         {
-            Debug.Log(sprite.name);
             _sprites.Add(sprite.name, sprite);
         }
 
@@ -140,10 +138,6 @@ public class ResourceManager {
 
         if (Main.Pool.Push(obj)) return;
 
-#if UNITY_EDITOR
-        Object.DestroyImmediate(obj);
-#else
         Object.Destroy(obj);
-#endif
     }
 }

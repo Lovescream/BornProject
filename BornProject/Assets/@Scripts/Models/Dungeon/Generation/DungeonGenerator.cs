@@ -63,6 +63,7 @@ namespace ZerolizeDungeon {
         }
 
         public bool Generate() {
+            Debug.Log("Generate");
             Vector2Int index = new(DungeonWidth / 2, DungeonHeight / 2);
             Start = index;
             AddRoomIndex(index);

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class DungeonManager {
 
-    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 20);
+    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 5);
     public int DungeonWidth { get => Generator.DungeonWidth; set => Generator.DungeonWidth = value; }
     public int DungeonHeight { get => Generator.DungeonHeight; set => Generator.DungeonHeight = value; }
     public int RoomWidth { get => Generator.RoomWidth; set => Generator.RoomWidth = value; }
@@ -30,6 +30,7 @@ public class DungeonManager {
     private Transform _dungeonRoot;
 
     public void Generate() {
+        Debug.Log("[DungeonManager] Dungeon Generate Start.");
         if (Current != null) Destroy();
         Generator.Clear();
         if (Generator.Generate())
@@ -37,7 +38,9 @@ public class DungeonManager {
     }
 
     public void Destroy() {
-        Main.Resource.Destroy(DungeonRoot.gameObject);
+        for (int i = DungeonRoot.childCount; i > 0; i--) {
+            Main.Resource.Destroy(DungeonRoot.transform.GetChild(i).gameObject);
+        }
         Current = null;
     }
 

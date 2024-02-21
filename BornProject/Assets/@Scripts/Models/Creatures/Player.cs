@@ -67,6 +67,7 @@ public class Player : Creature, IAttackable {
     #endregion
 
     private void OnEnteredDead() {
+        Main.Skill.Clear();
         Main.UI.OpenPopupUI<UI_Popup_GameOver>();
     }
 
