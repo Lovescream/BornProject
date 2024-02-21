@@ -76,6 +76,7 @@ namespace ZerolizeDungeon {
                 IsOpened = value;
             }
         }
+        public bool ExistEnemy => _enemies.Count > 0;
 
         // Neighbours Info.
         public Room Top => _neighbours[ZerolizeDungeon.Direction.Top];
@@ -252,6 +253,7 @@ namespace ZerolizeDungeon {
         private void CheckClear() {
             if (IsClear) return;
             if (_enemies.Count <= 0) IsClear = true;
+            Main.Dungeon.CheckClear();
         }
     }
 }

@@ -6,8 +6,8 @@ public class UI_Popup_Quest : UI_Popup {
 
     #region Enums
 
-    enum Objects {
-        QuestInfo,
+    enum Texts {
+        Text,
     }
 
     #endregion
@@ -20,12 +20,16 @@ public class UI_Popup_Quest : UI_Popup {
 
     #region Initialize / Set
 
-    public override bool Initialize()
-    {
+    public override bool Initialize() {
         if (!base.Initialize()) return false;
 
-      
+        BindText(typeof(Texts));
+
         return true;
+    }
+
+    public void SetInfo() {
+        GetText((int)Texts.Text).text = $"던전 클리어 {Main.Quest.ClearStageCount} / {QuestManager.RequiredClearCount}";
     }
 
     #endregion
