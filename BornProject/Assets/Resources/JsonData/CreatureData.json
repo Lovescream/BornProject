@@ -48,9 +48,9 @@
     "Key": "Bear"
   },
   {
-    "HpMax": 50.0,
+    "HpMax": 100.0,
     "HpRegen": 3.0,
-    "Damage": 10.0,
+    "Damage": 15.0,
     "Defense": 3.0,
     "MoveSpeed": 2.0,
     "AttackSpeed": 2.0,
@@ -60,9 +60,9 @@
     "Key": "Snake"
   },
   {
-    "HpMax": 30.0,
+    "HpMax": 90.0,
     "HpRegen": 3.0,
-    "Damage": 5.0,
+    "Damage": 10.0,
     "Defense": 1.0,
     "MoveSpeed": 1.0,
     "AttackSpeed": 1.0,
@@ -72,7 +72,7 @@
     "Key": "Beatle"
   },
   {
-    "HpMax": 100.0,
+    "HpMax": 150.0,
     "HpRegen": 5.0,
     "Damage": 30.0,
     "Defense": 5.0,
