@@ -40,6 +40,7 @@ public class UI_Scene_Game : UI_Scene {
         
 
         PlayerInfo = GetObject((int)Objects.PlayerInfo).GetComponent<UI_PlayerInfo>();
+        PlayerInfo.SetInfo(Main.Object.Player);
 
         GetObject((int)Objects.BossHp).SetActive(false);
 
