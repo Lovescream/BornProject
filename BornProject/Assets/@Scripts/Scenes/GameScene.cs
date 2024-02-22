@@ -27,8 +27,8 @@ public class GameScene : BaseScene {
         Camera.main.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
 
         // #3. UI 생성.
-        SceneUI = Main.UI.OpenSceneUI<UI_Scene_Game>();
         Main.UI.Clear();
+        SceneUI = Main.UI.OpenSceneUI<UI_Scene_Game>();
 
         // #4. Skill 체크.
         if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null)

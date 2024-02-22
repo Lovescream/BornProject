@@ -70,7 +70,7 @@ public class CameraController : MonoBehaviour {
             z = -10;
         }
         Vector3 newPosition = new(x, y, z);
-        this.transform.position = Vector3.Lerp(this.transform.position, newPosition, Time.deltaTime * 2f);
+        this.transform.position = Vector3.Lerp(this.transform.position, newPosition, Time.deltaTime * 8f);
     }
 
 }
