@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:BornProject/Assets/Resources/Prefabs/HitColliders/EnemySkill/Beatle_Attack.prefab.meta
+<<<<<<< HEAD
+
+guid: 4241d0c0d559a4678ac68d294f1e7c77
+
+=======
+guid: 4579b90fecb21db4abf614cc4e96bd65
+>>>>>>> Develop1.0
+========
+guid: 2390a369072664d10a6b5ec863ec65ff
+>>>>>>>> Develop1.0:BornProject/Assets/Resources/Prefabs/UI/PopupUI/UI_Popup_GameOver.prefab.meta
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

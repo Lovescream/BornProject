@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69dc4825e46e8cc4e8df709109acbb48, type: 3}
+  m_Name: Cavern_FloorObject_Rock00
+  m_EditorClassIdentifier: 
+  m_DefaultSprite: {fileID: 426765230, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+  m_DefaultGameObject: {fileID: 0}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Id: 0
+    m_Sprites:
+    - {fileID: -2033474584, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 52675998, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: -1250250818, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: -719713886, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 383885877, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 426765230, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 323737186, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 1967741950, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 884768780, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 1815025861, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: -483719426, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 1746819422, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: 1734456651, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    - {fileID: -2098950779, guid: a818b0b92c02a5a4792d90b3a0913d13, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 
+    m_NeighborPositions:
+    - {x: -1, y: 1, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: -1, z: 0}
+    - {x: 0, y: -1, z: 0}
+    - {x: 1, y: -1, z: 0}
+    m_RuleTransform: 0
+  type: 5
