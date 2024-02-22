@@ -32,7 +32,7 @@ namespace ZerolizeDungeon {
             FarthestDistance = _generateData.Max(x => x.DistanceFromStart);
 
             foreach (RoomGenerateData data in _generateData) {
-                Room newRoom = GenerateRoom(data.NeighbourInfo);
+                Room newRoom = GenerateRoom(data.NeighbourInfo, data.DistanceFromStart == 0);
                 newRoom.transform.SetParent(root);
                 newRoom.SetInfo(this, data);
                 _rooms[new(data.X, data.Y)] = newRoom;
@@ -59,9 +59,14 @@ namespace ZerolizeDungeon {
             }
         }
 
-        private Room GenerateRoom(int direction) {
+        private Room GenerateRoom(int direction, bool isStartRoom = false) {
             List<Room> rooms = Main.Resource.LoadRoom((RoomDirection)direction);
-            Room room = rooms[Random.Range(0, rooms.Count)];
+            Room room = isStartRoom ? rooms.Where(x => {
+                string[] s = x.Key.Split('_');
+                if (s.Length != 3) return false;
+                if (s[1] != "Basic") return false;
+                return true;
+            }).FirstOrDefault() : rooms[Random.Range(0, rooms.Count)];
             return GameObject.Instantiate(room);
         }
     }
