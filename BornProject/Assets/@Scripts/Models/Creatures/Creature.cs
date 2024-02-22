@@ -55,6 +55,7 @@ public class Creature : Entity {
         get { return _invincibility; }
         set { _invincibility = value; }
     }
+    public Vector2 KnockbackVelocity { get; protected set; }
     public Vector2 Velocity { get; protected set; }
     public Vector2 LookDirection { get; protected set; }
     public float LookAngle => Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg;
@@ -104,7 +105,10 @@ public class Creature : Entity {
     protected virtual void FixedUpdate() {
         State.OnStay();
         _spriter.flipX = LookDirection.x < 0;
-        _rigidbody.velocity = Velocity;
+        if (KnockbackVelocity.magnitude <= float.Epsilon)
+            _rigidbody.velocity = Velocity;
+        else
+            _rigidbody.velocity = KnockbackVelocity;
         _animator.SetFloat(AnimatorParameterHash_Speed, Velocity.magnitude);
     }
 
@@ -179,6 +183,7 @@ public class Creature : Entity {
     }
     private void OnExitedHit() {
         _animator.SetBool(AnimatorParameterHash_Hit, false);
+        KnockbackVelocity = Vector2.zero;
     }
 
     private void OnEnteredDead() {
@@ -197,7 +202,7 @@ public class Creature : Entity {
         CreatureState originState = State.Current == CreatureState.Hit ? State.NextState :State.Current; // 원래 상태 저장.
         State.Current = CreatureState.Hit;
         if (hitInfo.Knockback.time > 0) {
-            Velocity = (this.transform.position - attacker.CurrentPosition).normalized * hitInfo.Knockback.speed;
+            KnockbackVelocity = (this.transform.position - attacker.CurrentPosition).normalized * hitInfo.Knockback.speed;
         }
         State.SetStateAfterTime(originState, hitInfo.Knockback.time); // 넉백 시간이 끝나면 원래 상태로 돌아간다.
     }

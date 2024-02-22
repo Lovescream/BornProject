@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using static UnityEngine.GraphicsBuffer;
 
 public class Player : Creature, IAttackable {
 
@@ -71,6 +70,7 @@ public class Player : Creature, IAttackable {
         Main.Skill.Clear();
         Main.UI.OpenPopupUI<UI_Popup_GameOver>();
     }
+
 
     #region Input
 
@@ -161,4 +161,6 @@ public class Player : Creature, IAttackable {
             _ => SFX.Range_Rapid_Fire,
         });
     }
+
+    public bool IsTarget(Creature creature) => true;
 }

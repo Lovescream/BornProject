@@ -27,10 +27,9 @@ public class GameScene : BaseScene {
         // #4. Skill 체크.
         if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null) {
             Main.UI.OpenPopupUI<UI_Popup_Skill>();
+            Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
         }
 
-        // #5. 튜토리얼 창 띄우기
-        Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
 
         return true;
     }

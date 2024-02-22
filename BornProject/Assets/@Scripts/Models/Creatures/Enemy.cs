@@ -231,7 +231,7 @@ public class Enemy : Creature, IAttackable {
 
     // 해당 Creature가 이 Creature의 적인지 판별.
     // 플레이어가 아니더라도 적끼리 서로 싸울 수 있으니 일단 만들어 두었습니다.
-    protected virtual bool IsTarget(Creature creature) {
+    public virtual bool IsTarget(Creature creature) {
         if (creature is Player) return true;
         return false;
     }
