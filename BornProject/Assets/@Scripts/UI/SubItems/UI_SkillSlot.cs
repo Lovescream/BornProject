@@ -158,7 +158,6 @@ public class UI_SkillSlot : UI_SlotBase {
         Main.Skill.GetSkill(Data);
     }
     public void Deactivate() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
         Activated = false;
         Available = true;
 
