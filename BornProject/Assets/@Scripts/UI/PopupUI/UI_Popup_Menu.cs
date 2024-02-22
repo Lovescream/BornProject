@@ -48,7 +48,6 @@ public class UI_Popup_Menu : UI_Popup {
     }
     private void OnBtnExit() {
         AudioController.Instance.SFXPlay(SFX.OnClickButton);
-        Main.Quest.ClearStageCount = 0;
         Main.UI.OpenPopupUI<UI_Popup_ExitGame>();
     }
 
