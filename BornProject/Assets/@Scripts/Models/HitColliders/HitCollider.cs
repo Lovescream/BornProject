@@ -74,6 +74,7 @@ public class HitCollider : Entity, IHitCollider
         Creature creature = collision.GetComponent<Creature>();
         if (!creature.IsValid() || !this.IsValid()) return;
         if (creature is IAttackable attackable && attackable == this.Owner) return;
+        if (!this.Owner.IsTarget(creature)) return;
         if (creature.State.Current == CreatureState.Dead) return;
         
         creature.OnHit(this);

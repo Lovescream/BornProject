@@ -13,5 +13,6 @@ public interface IAttackable {
     public HitColliderInfo GetHitColliderInfo();
     public HitInfo GetHitInfo();
 
+    public bool IsTarget(Creature creature);
 }
 

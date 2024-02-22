@@ -161,4 +161,6 @@ public class Player : Creature, IAttackable {
             _ => SFX.Range_Rapid_Fire,
         });
     }
+
+    public bool IsTarget(Creature creature) => true;
 }
