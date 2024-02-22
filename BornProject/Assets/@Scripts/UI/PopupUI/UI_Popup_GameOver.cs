@@ -46,6 +46,7 @@ public override bool Initialize() {
         //AudioController.Instance.SFXPlay(SFX.Button);
         //
         Main.UI.Clear();
+        Main.Quest.ClearStageCount = 0;
         SceneManager.LoadScene("GameScene");
     }
 
@@ -54,6 +55,7 @@ public override bool Initialize() {
         //AudioController.Instance.SFXPlay(SFX.Button);
         
         Main.UI.Clear();
+        Main.Quest.ClearStageCount = 0;
         SceneManager.LoadScene("TitleScene");
     }
 
