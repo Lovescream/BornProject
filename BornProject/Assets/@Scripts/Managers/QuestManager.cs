@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QuestManager {
 
-    public static readonly int RequiredClearCount = 5;
+    public static readonly int RequiredClearCount = 3;
 
     public int ClearStageCount {
         get => _clearStageCount;

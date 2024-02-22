@@ -11,7 +11,7 @@ public class GameScene : BaseScene {
     public bool IsPlaying { get; protected set; }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Z)) Player.Hp -= 9999;
+        //if (Input.GetKeyDown(KeyCode.Z)) Player.Hp -= 9999;
     }
 
     protected override bool Initialize() {
