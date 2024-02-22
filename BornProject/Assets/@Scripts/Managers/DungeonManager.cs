@@ -30,7 +30,6 @@ public class DungeonManager {
     private Transform _dungeonRoot;
 
     public void Generate() {
-        Debug.Log("[DungeonManager] Dungeon Generate Start.");
         if (Current != null) Destroy();
         Generator.Clear();
         if (Generator.Generate())
@@ -49,6 +48,7 @@ public class DungeonManager {
     }
 
     public void CheckClear() {
+        if (GameObject.FindObjectOfType<GameScene>().IsPlaying == false) return;
         if (Current.Rooms.Where(x => x.ExistEnemy).Count() > 0) return;
         Main.Quest.ClearStageCount++;
         NextStage();

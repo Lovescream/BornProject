@@ -16,7 +16,6 @@ public class Main : MonoBehaviour {
                 if (obj == null) {
                     obj = new("@Main");
                     obj.AddComponent<Main>();
-                    Debug.Log("Main");
                 }
                 DontDestroyOnLoad(obj);
                 _instance = obj.GetComponent<Main>();

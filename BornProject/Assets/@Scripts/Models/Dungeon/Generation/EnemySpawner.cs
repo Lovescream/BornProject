@@ -29,7 +29,6 @@ public class EnemySpawner : MonoBehaviour {
     }
     public void SpawnEnemyType(int stage)
     {
-        Debug.Log("지금은 " + stage + "번째 스테이지 입니다.");
 
         System.Random random = new System.Random();
         double randomNumber;

@@ -8,6 +8,8 @@ public class GameScene : BaseScene {
 
     public Player Player { get; private set; }
 
+    public bool IsPlaying { get; protected set; }
+
     void Update() {
         if (Input.GetKeyDown(KeyCode.Z)) Player.Hp -= 9999;
     }
@@ -34,6 +36,8 @@ public class GameScene : BaseScene {
             Main.UI.OpenPopupUI<UI_Popup_Skill>();
             Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
         }
+
+        IsPlaying = true;
 
         return true;
     }

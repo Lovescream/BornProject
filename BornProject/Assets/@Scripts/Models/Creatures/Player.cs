@@ -18,7 +18,7 @@ public class Player : Creature, IAttackable {
 
     protected static readonly int AnimatorParameterHash_Attack = Animator.StringToHash("Attack");
 
-    private bool _isRangeAttack = false;
+    private bool _isAttacking;
 
     #endregion
 
@@ -30,6 +30,12 @@ public class Player : Creature, IAttackable {
         Attacker.OnUpdate(); 
     }
 
+    protected override void Update() {
+        base.Update();
+
+        if (_isAttacking) Attack();
+    }
+
     #endregion
 
     #region Initialize / Set
@@ -39,6 +45,21 @@ public class Player : Creature, IAttackable {
 
         CameraController camera = FindObjectOfType<CameraController>();
         if (camera != null) camera.SetTarget(this.transform);
+
+        this.GetComponent<PlayerInput>().actions.FindAction("AttackMain").started += a => {
+            if (!EventSystem.current.IsPointerOverGameObject()) {
+                SkillList.SetRangeSkill();
+                _isAttacking = true;
+            }
+        };
+        this.GetComponent<PlayerInput>().actions.FindAction("AttackMain").canceled += a => _isAttacking = false;
+        this.GetComponent<PlayerInput>().actions.FindAction("AttackSub").started += a => {
+            if (!EventSystem.current.IsPointerOverGameObject()) {
+                SkillList.SetMeleeSkill();
+                _isAttacking = true;
+            }
+        };
+        this.GetComponent<PlayerInput>().actions.FindAction("AttackSub").canceled += a => _isAttacking = false;
 
         return true;
     }
@@ -85,16 +106,16 @@ public class Player : Creature, IAttackable {
         }
     }
     protected void OnAttackMain() {
-        if (EventSystem.current.IsPointerOverGameObject()) return;
-        //SkillList.ChangeBasicSkill(0);
-        SkillList.SetRangeSkill();
-        Attack();
+        //if (EventSystem.current.IsPointerOverGameObject()) return;
+        ////SkillList.ChangeBasicSkill(0);
+        //SkillList.SetRangeSkill();
+        //Attack();
     }
     protected void OnAttackSub() {
-        if (EventSystem.current.IsPointerOverGameObject()) return;
-        //SkillList.ChangeBasicSkill(1);
-        SkillList.SetMeleeSkill();
-        Attack();
+        //if (EventSystem.current.IsPointerOverGameObject()) return;
+        ////SkillList.ChangeBasicSkill(1);
+        //SkillList.SetMeleeSkill();
+        //Attack();
     }
 
     #endregion
