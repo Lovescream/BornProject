@@ -16,7 +16,7 @@ public class UI_Popup_Clear : UI_Popup {
 
     #region Properties
 
-    public override bool IsPause => false;
+    public override bool IsPause => true;
     private DungeonManager dungeonManager;
     
     #endregion
