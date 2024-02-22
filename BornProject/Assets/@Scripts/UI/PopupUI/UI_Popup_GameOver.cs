@@ -47,6 +47,7 @@ public override bool Initialize() {
         //
         Main.UI.Clear();
         Main.Quest.ClearStageCount = 0;
+        Main.Skill.Clear();
         SceneManager.LoadScene("GameScene");
     }
 
@@ -56,6 +57,7 @@ public override bool Initialize() {
         
         Main.UI.Clear();
         Main.Quest.ClearStageCount = 0;
+        Main.Skill.Clear();
         SceneManager.LoadScene("TitleScene");
     }
 
