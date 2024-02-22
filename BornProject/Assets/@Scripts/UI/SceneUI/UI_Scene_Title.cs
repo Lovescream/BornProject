@@ -66,7 +66,12 @@ public class UI_Scene_Title : UI_Scene {
     }
 
     private void OnBtnExit() {
-        Debug.Log("게임종료");
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+
+    #else
         Application.Quit();
+
+    #endif
     }
 }
