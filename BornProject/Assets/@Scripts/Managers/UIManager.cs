@@ -121,7 +121,10 @@ public class UIManager {
     public void CloseAllPopup() {
         if (_popups.Count == 0) return;
 
-        for (int i = _popups.Count - 1; i >= 0; i--) Main.Resource.Destroy(_popups[i].gameObject);
+        for (int i = _popups.Count - 1; i >= 0; i--) {
+            if (_popups[i] == null) continue;
+            Main.Resource.Destroy(_popups[i].gameObject);
+        }
         _popups.Clear();
         _popupOrder = InitialPopupOrder;
 
