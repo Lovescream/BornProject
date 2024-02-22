@@ -29,11 +29,11 @@ public class GameScene : BaseScene {
         Main.UI.Clear();
 
         // #4. Skill 체크.
-        if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null) {
+        if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null)
+        {
             Main.UI.OpenPopupUI<UI_Popup_Skill>();
             Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
         }
-
 
         return true;
     }

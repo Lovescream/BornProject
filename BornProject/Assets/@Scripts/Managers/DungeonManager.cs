@@ -57,5 +57,6 @@ public class DungeonManager {
     public void NextStage() {
         Main.UI.Clear();
         SceneManager.LoadScene("GameScene");
+        Main.UI.OpenPopupUI<UI_Popup_Clear>();
     }
 }

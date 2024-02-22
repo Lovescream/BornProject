@@ -16,8 +16,9 @@ public class UI_Popup_Clear : UI_Popup {
 
     #region Properties
 
-    public override bool IsPause => true;
-
+    public override bool IsPause => false;
+    private DungeonManager dungeonManager;
+    
     #endregion
 
     #region Initialize / Set
@@ -40,7 +41,8 @@ public class UI_Popup_Clear : UI_Popup {
     private void OnBtnNextStage(){
 
         AudioController.Instance.SFXPlay(SFX.OnClickButton);
-       // DungeonManager.NextStage.();
+        dungeonManager.NextStage();
+        
     }
     
     private void OnBtnExit()
