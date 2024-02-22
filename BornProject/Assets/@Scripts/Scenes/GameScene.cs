@@ -8,6 +8,10 @@ public class GameScene : BaseScene {
 
     public Player Player { get; private set; }
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Z)) Player.Hp -= 9999;
+    }
+
     protected override bool Initialize() {
         if (!base.Initialize()) return false;
 

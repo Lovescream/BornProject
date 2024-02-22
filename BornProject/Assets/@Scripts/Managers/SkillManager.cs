@@ -27,7 +27,6 @@ public class SkillManager {
     public void Clear() {
         _rangeSkills.Clear();
         _meleeSkills.Clear();
-        OnGetSkill = null;
     }
 
     public void GetSkill(SkillData skill) {
