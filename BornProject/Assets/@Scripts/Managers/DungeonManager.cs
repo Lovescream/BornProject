@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class DungeonManager {
 
-    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 4);
+    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 10);
     public int DungeonWidth { get => Generator.DungeonWidth; set => Generator.DungeonWidth = value; }
     public int DungeonHeight { get => Generator.DungeonHeight; set => Generator.DungeonHeight = value; }
     public int RoomWidth { get => Generator.RoomWidth; set => Generator.RoomWidth = value; }
