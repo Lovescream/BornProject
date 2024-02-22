@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class DungeonManager {
 
-    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 5);
+    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 4);
     public int DungeonWidth { get => Generator.DungeonWidth; set => Generator.DungeonWidth = value; }
     public int DungeonHeight { get => Generator.DungeonHeight; set => Generator.DungeonHeight = value; }
     public int RoomWidth { get => Generator.RoomWidth; set => Generator.RoomWidth = value; }
@@ -51,12 +51,11 @@ public class DungeonManager {
         if (GameObject.FindObjectOfType<GameScene>().IsPlaying == false) return;
         if (Current.Rooms.Where(x => x.ExistEnemy).Count() > 0) return;
         Main.Quest.ClearStageCount++;
-        NextStage();
+        Main.UI.OpenPopupUI<UI_Popup_Clear>();
     }
 
     public void NextStage() {
         Main.UI.Clear();
         SceneManager.LoadScene("GameScene");
-        Main.UI.OpenPopupUI<UI_Popup_Clear>();
     }
 }
