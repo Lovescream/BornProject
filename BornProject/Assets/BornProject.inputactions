@@ -25,18 +25,18 @@
                 },
                 {
                     "name": "AttackMain",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "1fabdb58-966e-4ce8-8dbe-e4682a211bbe",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Key",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
                     "name": "AttackSub",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "87d2e2e5-c9b0-4919-b88f-91fe5c071cc1",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Key",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
