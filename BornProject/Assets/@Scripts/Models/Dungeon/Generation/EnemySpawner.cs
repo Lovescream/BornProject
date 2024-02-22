@@ -40,22 +40,25 @@ public class EnemySpawner : MonoBehaviour {
                 Key = randomNumber < 0.67 ? "Beatle" : "Snake";
                 break;
             case 1:
-                if (case1Counter == 0 || case1Counter == 1) Key = "Beatle";
-                else if (case1Counter == 2) Key = "Wolf";
-                case1Counter = (case1Counter + 1) % 3;
+                Key = random.Next(2) == 0 ? "Snake" : "Wolf";
                 break;
             case 2:
-                if (case2Selection == null)
-                {
-                    case2Selection = random.Next(2) == 0 ? "Snake" : "Wolf";
-                }
-                Key = case2Selection;
-                break;
-            default:
-                case2Selection = null;
+                randomNumber = random.NextDouble();
+                if (randomNumber < 0.20)
+                    Key = "Snake";
+                else if (randomNumber < 0.50)
+                    Key = "Wolf";
+                else
+                    Key = "Bear";
                 break;
             case 3:
-                Key = random.Next(2) == 0 ? "Snake" : "Bear";
+                randomNumber = random.NextDouble();
+                if (randomNumber < 0.20)
+                    Key = "Snake";
+                else if (randomNumber < 0.50)
+                    Key = "Wolf";
+                else
+                    Key = "Bear";
                 break;
             case 4:
                 randomNumber = random.NextDouble();
@@ -66,6 +69,7 @@ public class EnemySpawner : MonoBehaviour {
                 else
                     Key = "Bear";
                 break;
+
         }
     }
 
