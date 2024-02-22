@@ -71,6 +71,8 @@ public class HitCollider : Entity, IHitCollider
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.layer == Main.WallLayer) Destroy();
+
         Creature creature = collision.GetComponent<Creature>();
         if (!creature.IsValid() || !this.IsValid()) return;
         if (creature is IAttackable attackable && attackable == this.Owner) return;
