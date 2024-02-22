@@ -1,22 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
-
 public class UI_Scene_Title : UI_Scene {
-
-   
 
     #region Enums 
 
-    enum Images{
+    enum Images {
 
         imageTitle
     }
 
-    enum Buttons{
+    enum Buttons {
 
         btnNewGame,
         btnContinue,
@@ -25,22 +16,21 @@ public class UI_Scene_Title : UI_Scene {
 
     }
 
-    enum Texts{
+    enum Texts {
         textTitle,
-        
+
     }
 
     #endregion
 
-    public override bool Initialize()
-    {
+    public override bool Initialize() {
         if (!base.Initialize()) return false;
 
         BindImage(typeof(Images));
         BindButton(typeof(Buttons));
         BindText(typeof(Texts));
 
-        
+
         GetButton((int)Buttons.btnNewGame).onClick.AddListener(OnBtnNewGame);
         GetButton((int)Buttons.btnContinue).onClick.AddListener(OnBtnContinue);
         GetButton((int)Buttons.btnController).onClick.AddListener(OnBtnController);
@@ -51,27 +41,26 @@ public class UI_Scene_Title : UI_Scene {
 
     private void OnBtnNewGame() {
         AudioController.Instance.SFXPlay(SFX.NewGameEnterButton);
-        Main.UI.CloseAllPopup();
-        SceneManager.LoadScene("GameScene");
+        Main.Scene.LoadScene("GameScene");
     }
 
     private void OnBtnContinue() {
-        
-        
+
+
     }
 
     private void OnBtnController() {
-        
-       // Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
+
+        // Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
     }
 
     private void OnBtnExit() {
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 
-    #else
+#else
         Application.Quit();
 
-    #endif
+#endif
     }
 }

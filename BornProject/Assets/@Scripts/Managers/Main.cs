@@ -36,6 +36,7 @@ public class Main : MonoBehaviour {
     private UIManager _ui = new();
     private SkillManager _skill = new();
     private QuestManager _quest = new();
+    private SceneManagerEx _scene = new();
 
     public static PoolManager Pool => Instance?._pool;
     public static DataManager Data => Instance?._data;
@@ -45,6 +46,15 @@ public class Main : MonoBehaviour {
     public static UIManager UI => Instance?._ui;
     public static SkillManager Skill => Instance?._skill;
     public static QuestManager Quest => Instance?._quest;
+    public static SceneManagerEx Scene => Instance?._scene;
+
+    public static void Clear() {
+        // Audio.Clear();
+        UI.Clear();
+        Pool.Clear();
+        Object.Clear();
+    }
+
     public void ManualInitialize() {
         _pool = new();
         _data = new();

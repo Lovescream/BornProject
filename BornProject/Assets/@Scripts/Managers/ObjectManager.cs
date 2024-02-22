@@ -8,6 +8,12 @@ public class ObjectManager {
     public List<Enemy> Enemies { get; private set; } = new();
     public HashSet<HitCollider> HitColliders { get; private set; } = new();
 
+    public void Clear() {
+        Player = null;
+        Enemies.Clear();
+        HitColliders.Clear();
+    }
+
     public Player SpawnPlayer(string key, Vector2 position) {
         Player = Spawn<Player>(position);
         Player.SetInfo(Main.Data.Creatures[key]);
