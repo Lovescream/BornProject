@@ -30,7 +30,7 @@ public class SkillSet {
     #region Constructor
 
     public SkillSet(string baseName) {
-        Debug.Log($"[SkillList: {baseName}] Create new SkillSet.");
+        //Debug.Log($"[SkillList: {baseName}] Create new SkillSet.");
         // #1. 데이터 설정 및 컬렉션 초기화.
         this.BaseName = baseName;
         int count = Enum.GetNames(typeof(SkillLevel)).Length;
@@ -48,7 +48,7 @@ public class SkillSet {
             Skill newSkill = new(x);
             _skills[x.Level].Add(newSkill);
             newSkill.SkillSet = this;
-            Debug.Log($"[SkillList: {baseName}] Add new skill({newSkill.Data.Key}) to SkillSet.");
+            //Debug.Log($"[SkillList: {baseName}] Add new skill({newSkill.Data.Key}) to SkillSet.");
 
             // #2-2. 해당 Skill의 상위 스킬을 설정.
             int levelIndex = (int)newSkill.Level;
@@ -59,7 +59,7 @@ public class SkillSet {
                 if (parentSkill == null) Debug.LogError($"Not found parent skill: {newSkill.Data.Key}");
                 else newSkill.Parent = parentSkill;
 
-                if (parentSkill != null) Debug.Log($"[SkillList: {baseName}] Set Skill({parentSkill.Data.Key}) to the Parent of This Skill({newSkill.Data.Key}).");
+                //if (parentSkill != null) Debug.Log($"[SkillList: {baseName}] Set Skill({parentSkill.Data.Key}) to the Parent of This Skill({newSkill.Data.Key}).");
             }
         });
     }

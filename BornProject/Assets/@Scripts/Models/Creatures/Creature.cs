@@ -126,6 +126,8 @@ public class Creature : Entity {
 
         this.gameObject.layer = Main.CreatureLayer;
 
+        _spriter.RegisterSpriteChangeCallback(FitCollider);
+
         return true;
     }
     public virtual void SetInfo(CreatureData data) {
@@ -216,6 +218,15 @@ public class Creature : Entity {
         if (this.gameObject.name == "Snake") AudioController.Instance.SFXPlay(SFX.EnemySnakeDie);
     }
 
+
+    private void FitCollider(SpriteRenderer spriter) {
+        if (spriter.sprite == null) return;
+        Vector2 size = spriter.sprite.bounds.size;
+        Vector2 offset = (Vector2)(spriter.bounds.center - this.transform.position);
+        BoxCollider2D boxCollider = _collider as BoxCollider2D;
+        boxCollider.size = size;
+        boxCollider.offset = offset;
+    }
 
 }
 
