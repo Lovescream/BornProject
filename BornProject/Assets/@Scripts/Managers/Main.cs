@@ -34,7 +34,6 @@ public class Main : MonoBehaviour {
     private ObjectManager _object = new();
     private DungeonManager _dungeon = new();
     private UIManager _ui = new();
-    private SkillManager _skill = new();
     private QuestManager _quest = new();
     private SceneManagerEx _scene = new();
     private GameManager _game = new();
@@ -45,7 +44,6 @@ public class Main : MonoBehaviour {
     public static ObjectManager Object => Instance?._object;
     public static DungeonManager Dungeon => Instance?._dungeon;
     public static UIManager UI => Instance?._ui;
-    public static SkillManager Skill => Instance?._skill;
     public static QuestManager Quest => Instance?._quest;
     public static SceneManagerEx Scene => Instance?._scene;
     public static GameManager Game => Instance?._game;
@@ -64,7 +62,6 @@ public class Main : MonoBehaviour {
         _object = new();
         _dungeon = new();
         _ui = new();
-        _skill = new();
         _quest = new();
         _scene = new();
         _game = new();
