@@ -6,34 +6,11 @@
     "Defense": 10.0,
     "MoveSpeed": 5.0,
     "AttackSpeed": 1.0,
-    "Cost": 20,
     "Range": 3.0,
     "Sight": 10.0,
+    "Skills": "Laser|Rapid|ShotGun|Slash|Sting|Smash",
+    "DefaultSkills": null,
     "Key": "Player"
-  },
-  {
-    "HpMax": 300.0,
-    "HpRegen": 5.0,
-    "Damage": 50.0,
-    "Defense": 5.0,
-    "MoveSpeed": 1.0,
-    "AttackSpeed": 1.0,
-    "Cost": 0,
-    "Range": 3.0,
-    "Sight": 5.0,
-    "Key": "Enemy1"
-  },
-  {
-    "HpMax": 200.0,
-    "HpRegen": 5.0,
-    "Damage": 30.0,
-    "Defense": 2.0,
-    "MoveSpeed": 1.0,
-    "AttackSpeed": 1.0,
-    "Cost": 0,
-    "Range": 3.0,
-    "Sight": 5.0,
-    "Key": "Enemy2"
   },
   {
     "HpMax": 200.0,
@@ -42,9 +19,10 @@
     "Defense": 10.0,
     "MoveSpeed": 1.0,
     "AttackSpeed": 1.0,
-    "Cost": 0,
     "Range": 3.0,
     "Sight": 5.0,
+    "Skills": "Bear",
+    "DefaultSkills": "Bear_Base_Attack",
     "Key": "Bear"
   },
   {
@@ -54,9 +32,10 @@
     "Defense": 3.0,
     "MoveSpeed": 2.0,
     "AttackSpeed": 2.0,
-    "Cost": 0,
     "Range": 1.5,
     "Sight": 5.0,
+    "Skills": "Snake",
+    "DefaultSkills": "Snake_Base_Attack",
     "Key": "Snake"
   },
   {
@@ -66,9 +45,10 @@
     "Defense": 1.0,
     "MoveSpeed": 1.0,
     "AttackSpeed": 1.0,
-    "Cost": 0,
     "Range": 3.0,
     "Sight": 5.0,
+    "Skills": "Beatle",
+    "DefaultSkills": "Beatle_Base_Attack",
     "Key": "Beatle"
   },
   {
@@ -78,9 +58,10 @@
     "Defense": 5.0,
     "MoveSpeed": 1.5,
     "AttackSpeed": 1.5,
-    "Cost": 0,
     "Range": 5.0,
     "Sight": 10.0,
+    "Skills": "Wolf",
+    "DefaultSkills": "Wolf_Base_Attack",
     "Key": "Wolf"
   },
   {
@@ -90,9 +71,10 @@
     "Defense": 50.0,
     "MoveSpeed": 1.0,
     "AttackSpeed": 1.0,
-    "Cost": 0,
     "Range": 7.0,
     "Sight": 20.0,
+    "Skills": null,
+    "DefaultSkills": null,
     "Key": "Boss"
   }
 ]

@@ -10,8 +10,8 @@ public class UI_SkillSlot : UI_SlotBase {
 
     public UI_Popup_Skill Panel { get; protected set; }
     public UI_SkillSlot Parent { get; protected set; }
-    public SkillData Data { get; protected set; }
-    public SkillType Type => Data != null ? Data.Type : _type;
+    public Skill Skill { get; protected set; }
+    public SkillType Type => Skill != null ? Skill.Type : _type;
     public UI_TreeLine Line { get; protected set; } // Connected Line.
     public bool DefaultSlot { get; protected set; }
     public bool Available {
@@ -60,7 +60,7 @@ public class UI_SkillSlot : UI_SlotBase {
     private bool _available;
 
     // Collections.
-    private List<SkillData> _subs;
+    private List<Skill> _subs;
     private List<UI_SkillSlot> _slots = new();
 
     // Components.
@@ -70,10 +70,10 @@ public class UI_SkillSlot : UI_SlotBase {
 
     #region Indexer
 
-    public UI_SkillSlot this[SkillData data] {
+    public UI_SkillSlot this[Skill skill] {
         get {
             if (_slots.Count == 0) return null;
-            return _slots.Where(x => x.Data == data).FirstOrDefault();
+            return _slots.Where(x => x.Skill == skill).FirstOrDefault();
         }
     }
 
@@ -97,7 +97,7 @@ public class UI_SkillSlot : UI_SlotBase {
 
         if (Line == null) GenerateTree();
     }
-    public void SetInfo(UI_TreeLine line, UI_SkillSlot parent, SkillData data) {
+    public void SetInfo(UI_TreeLine line, UI_SkillSlot parent, Skill skill) {
         Initialize();
 
         Line = line;
@@ -106,28 +106,28 @@ public class UI_SkillSlot : UI_SlotBase {
         Rect.anchoredPosition = new(line.X, -(line.Size.y + this.Size.y) / 2f);
         this.DefaultSlot = Parent.DefaultSlot;
 
-        SetInfo(Parent.Panel, data);
+        SetInfo(Parent.Panel, skill);
     }
 
-    public void SetInfo(UI_Popup_Skill panel, SkillData data) {
+    public void SetInfo(UI_Popup_Skill panel, Skill skill) {
         Initialize();
 
         this.Panel = panel;
-        this.Data = data;
-        SetImage(Main.Resource.LoadSprite($"Icon_{data.Key}"));
-        SetText(data.Name);
+        this.Skill = skill;
+        SetImage(Main.Resource.LoadSprite($"Icon_{Skill.Data.Key}"));
+        SetText(Skill.Data.Name);
 
         Available = true;
         Activated = false;
     }
 
-    public void SetInfoSkillTree(UI_Popup_Skill panel, SkillData data) {
+    public void SetInfoSkillTree(UI_Popup_Skill panel, Skill skill) {
         Initialize();
 
         this.Panel = panel;
-        this.Data = data;
-        SetImage(Main.Resource.LoadSprite($"Icon_{data.Key}"));
-        SetText(data.Name);
+        this.Skill = skill;
+        SetImage(Main.Resource.LoadSprite($"Icon_{Skill.Data.Key}"));
+        SetText(Skill.Data.Name);
 
         Available = true;
         Activated = false;
@@ -155,7 +155,8 @@ public class UI_SkillSlot : UI_SlotBase {
             parentLine = parentLine.Parent;
         }
 
-        Main.Skill.GetSkill(Data);
+        Skill skill = Main.Game.Player.SkillList.Set(Skill.Data.Key);
+        Main.Game.Current[skill.Type] = skill.Data.Key;
     }
     public void Deactivate() {
         
@@ -205,12 +206,7 @@ public class UI_SkillSlot : UI_SlotBase {
 
 
     private void SetSubSkillData() {
-        if (Data == null)
-            _subs = Main.Data.Skills.Values.Where(x => x.Level == SkillLevel.Base && x.Type == Type).ToList();
-        else if (Data.Level != SkillLevel.Rare)
-            _subs = Main.Data.Skills.Values.Where(x => x.Key.Split('_')[0] == Data.Key.Split('_')[0] && x.Level == Data.Level + 1).ToList();
-        else
-            _subs = new();
+        _subs = Skill == null ? Main.Game.Player.SkillList.GetBaseSkills(Type) : Skill.GetSubs();
     }
 
     #region OnButtons
@@ -222,8 +218,8 @@ public class UI_SkillSlot : UI_SlotBase {
 
         if (!Activated) {
             Activate();
-            if (DefaultSlot && Data != null && Data.Level == SkillLevel.Base)
-                Panel.SelectSkill(Data);
+            if (DefaultSlot && Skill != null && Skill.Level == SkillLevel.Base)
+                Panel.SelectSkill(Skill);
         }
         else {
             Deactivate();

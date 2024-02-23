@@ -53,19 +53,26 @@ public class UI_Popup_Skill : UI_Popup {
     }
 
     public void SetInfo() {
-        SkillData range = Main.Skill.BaseRange;
-        if (range != null) {
-            UI_SkillSlot rangeSlot = RangeSlots[range];
-            if (rangeSlot != null) rangeSlot.Activate();
+        SkillList skillList = Main.Game.Player.SkillList;
+        SkillSet rangeSet = skillList[SkillType.Range];
+        if (rangeSet != null) {
+            Skill rangeBase = rangeSet[SkillLevel.Base];
+            if (rangeBase != null) {
+                UI_SkillSlot rangeSlot = RangeSlots[rangeBase];
+                if (rangeSlot != null) rangeSlot.Activate();
+            }
         }
-        SkillData melee = Main.Skill.BaseMelee;
-        if (melee != null) {
-            UI_SkillSlot meleeSlot = MeleeSlots[melee];
-            if (meleeSlot != null) meleeSlot.Activate();
+        SkillSet meleeSet = skillList[SkillType.Melee];
+        if (meleeSet != null) {
+            Skill meleeBase = meleeSet[SkillLevel.Base];
+            if (meleeBase != null) {
+                UI_SkillSlot meleeSlot = MeleeSlots[meleeBase];
+                if (meleeSlot != null) meleeSlot.Activate();
+            }
         }
     }
 
-    public void SelectSkill(SkillData skill) {
+    public void SelectSkill(Skill skill) {
         Initialize();
         MainSlots.gameObject.SetActive(true);
         MainSlots.SetInfoSkillTree(this, skill);
@@ -77,7 +84,9 @@ public class UI_Popup_Skill : UI_Popup {
 
     private void OnBtnClose() {
         AudioController.Instance.SFXPlay(SFX.OnClickButton);
-        if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null) {
+
+        SkillList skillList = Main.Game.Player.SkillList;
+        if (skillList[SkillType.Range] == null || skillList[SkillType.Melee] == null) {
             Main.UI.ShowToast("기본 스킬을 찍어주세요.");
             return;
         }

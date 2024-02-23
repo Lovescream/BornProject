@@ -22,7 +22,7 @@ public class DataTransformer : EditorWindow {
     public static void ParseExcel() {
         ParseData<CreatureData>();
         ParseData<SkillData>();
-        ParseData<EnemySkillData>();
+        //ParseData<EnemySkillData>();
     }
     [MenuItem("Tools/ParseSpriteToBase64")]
     public static void ParseSpriteToBase64() {

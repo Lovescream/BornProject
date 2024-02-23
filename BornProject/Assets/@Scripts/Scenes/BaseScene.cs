@@ -21,7 +21,6 @@ public class BaseScene : MonoBehaviour {
         // 각종 초기화 함수.
         Main.Resource.Initialize();
         Main.Data.Initialize();
-        Main.Skill.Initialize();
 
         if (FindObjectOfType<EventSystem>() == null) Main.Resource.Instantiate("@EventSystem").name = "@EventSystem";
 

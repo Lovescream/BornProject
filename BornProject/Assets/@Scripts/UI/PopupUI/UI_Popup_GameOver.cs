@@ -46,7 +46,6 @@ public class UI_Popup_GameOver : UI_Popup {
         //AudioController.Instance.SFXPlay(SFX.Button);
         
         Main.Quest.ClearStageCount = 0;
-        Main.Skill.Clear();
         Main.Scene.LoadScene("GameScene");
     }
 
@@ -54,7 +53,6 @@ public class UI_Popup_GameOver : UI_Popup {
         //AudioController.Instance.SFXPlay(SFX.Button);
 
         Main.Quest.ClearStageCount = 0;
-        Main.Skill.Clear();
         Main.Scene.LoadScene("TitleScene");
     }
 

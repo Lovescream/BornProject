@@ -138,9 +138,9 @@ public class UI_TreeLine : UI_Base {
         return line;
     }
 
-    public UI_SkillSlot ConnectSlot(UI_SkillSlot parent, SkillData data) {
+    public UI_SkillSlot ConnectSlot(UI_SkillSlot parent, Skill skill) {
         if (Slot == null) Slot = Main.UI.CreateSubItem<UI_SkillSlot>(this.transform, pooling: false);
-        Slot.SetInfo(this, parent, data);
+        Slot.SetInfo(this, parent, skill);
         return Slot;
     }
 

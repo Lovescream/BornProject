@@ -5,18 +5,19 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class Player : Creature, IAttackable {
+public class Player : Creature, ISkillMan, IAttackable {
 
     #region Properties
 
     public Attacker Attacker { get; protected set; }
     public SkillList SkillList { get; protected set; }
+    public SkillStatus DefaultStatus { get; protected set; }
+
+    public string SkillSetList => Data.Skills;
 
     #endregion
 
     #region Fields
-
-    protected static readonly int AnimatorParameterHash_Attack = Animator.StringToHash("Attack");
 
     private bool _isAttacking;
 
@@ -27,7 +28,7 @@ public class Player : Creature, IAttackable {
     protected override void FixedUpdate() {
         base.FixedUpdate();
 
-        Attacker.OnUpdate(); 
+        Attacker.OnUpdate();
     }
 
     protected override void Update() {
@@ -48,14 +49,14 @@ public class Player : Creature, IAttackable {
 
         this.GetComponent<PlayerInput>().actions.FindAction("AttackMain").started += a => {
             if (!EventSystem.current.IsPointerOverGameObject()) {
-                SkillList.SetRangeSkill();
+                SkillList.Set(SkillType.Range);
                 _isAttacking = true;
             }
         };
         this.GetComponent<PlayerInput>().actions.FindAction("AttackMain").canceled += a => _isAttacking = false;
         this.GetComponent<PlayerInput>().actions.FindAction("AttackSub").started += a => {
             if (!EventSystem.current.IsPointerOverGameObject()) {
-                SkillList.SetMeleeSkill();
+                SkillList.Set(SkillType.Melee);
                 _isAttacking = true;
             }
         };
@@ -67,8 +68,20 @@ public class Player : Creature, IAttackable {
         base.SetInfo(data);
 
         SkillList = new(this);
-        if (Main.Skill.RangeSkill != null) SkillList.SetSkill(Main.Skill.RangeSkill);
-        if (Main.Skill.MeleeSkill != null) SkillList.SetSkill(Main.Skill.MeleeSkill);
+        for (int i = 0; i < Enum.GetNames(typeof(SkillType)).Length; i++) {
+            string skillKey = Main.Game.Current[(SkillType)i];
+            if (string.IsNullOrEmpty(skillKey)) continue;
+            SkillList.Set(skillKey);
+            if (i == 0) SkillList.Set((SkillType)i);
+        }
+    }
+    protected override void SetStatus(bool isFullHp = true) {
+        base.SetStatus(isFullHp);
+        DefaultStatus = new() {
+            Damage = Status[StatType.Damage],
+            AttackSpeed = Status[StatType.AttackSpeed],
+            Range = Status[StatType.Range],
+        };
     }
     protected override void SetState() {
         base.SetState();
@@ -88,7 +101,6 @@ public class Player : Creature, IAttackable {
     #endregion
 
     private void OnEnteredDead() {
-        Main.Skill.Clear();
         Main.UI.OpenPopupUI<UI_Popup_GameOver>();
     }
 
@@ -120,51 +132,49 @@ public class Player : Creature, IAttackable {
 
     #endregion
 
-    public override void OnHit(IHitCollider attacker)
-    {        
+    public override void OnHit(IHitCollider attacker) {
         base.OnHit(attacker);
         AudioController.Instance.SFXPlay(SFX.PlayerHit);
     }
     public void Attack() {
         if (this.IsDead) return;
-        if (SkillList.CurrentBasicSkill == null) return;
+        if (SkillList.Current == null) return;
         Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
     }
 
-    
 
-    public HitColliderGenerationInfo GetHitColliderGenerationInfo() {        
-        SkillData skillData = SkillList.CurrentBasicSkill;      
-        return new()
-        {
+
+    public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
+        Skill skill = SkillList.Current;
+        return new() {
             Owner = this,
-            HitColliderKey = skillData.HitColliderKey,
-            RadiusOffset = skillData.RadiusOffset,
-            RotationAngle = skillData.RotationAngle < 0 ? LookAngle : skillData.RotationAngle,
-            Count = skillData.HitColliderCount,
-            SpreadAngle = skillData.HitColliderAngle,
-            Size = skillData.HitColliderSize,
-            AttackTime = skillData.AttackTime,
+            HitColliderKey = skill.Data.HitColliderKey,
+            RadiusOffset = skill.Data.RadiusOffset,
+            RotationAngle = skill.Data.RotationAngle < 0 ? LookAngle : skill.Data.RotationAngle,
+            Count = skill.Data.HitColliderCount,
+            SpreadAngle = skill.Data.HitColliderAngle,
+            Size = skill.Data.HitColliderSize,
+            AttackTime = skill.Data.AttackTime,
         };
     }
     public HitColliderInfo GetHitColliderInfo() {
-        SkillData skillData = SkillList.CurrentBasicSkill;
+        Skill skill = SkillList.Current;
         return new() {
-            Penetration = skillData.Penetration,
-            Speed = skillData.Speed,
-            DirectionX = skillData.DirectionX,
-            DirectionY = skillData.DirectionY,
-            Duration = skillData.Duration,
-            Range = skillData.Range,
+            Penetration = skill.Data.Penetration,
+            Speed = skill.Data.Speed,
+            DirectionX = skill.Data.DirectionX,
+            DirectionY = skill.Data.DirectionY,
+            Duration = skill.Data.Duration,
+            Range = skill.Data.Range,
         };
     }
     public HitInfo GetHitInfo() {
-        SkillData skillData = SkillList.CurrentBasicSkill;
+        Skill skill = SkillList.Current;
         return new() {
             Owner = this,
             Damage = this.Damage,
-            CriticalChance = skillData.CriticalChance,
-            CriticalBonus = skillData.CriticalBonus,
+            CriticalChance = skill.Data.CriticalChance,
+            CriticalBonus = skill.Data.CriticalBonus,
             Knockback = new() {
                 time = 0.1f,
                 speed = 10f,
@@ -172,7 +182,7 @@ public class Player : Creature, IAttackable {
         };
     }
     private void SkillFireAudioSource() {
-        AudioController.Instance.SFXPlay(SkillList.CurrentBasicSkill.Name switch {
+        AudioController.Instance.SFXPlay(SkillList.Current.Data.Name switch {
             "BasicLaserBeam" => SFX.Range_Laser_Fire,
             "BasicRapidFire" => SFX.Range_Rapid_Fire,
             "BasicShotGun" => SFX.Range_ShotGun_Fire,

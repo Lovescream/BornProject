@@ -12,8 +12,9 @@ public class CreatureData : Data {
     public float Defense { get; set; }
     public float MoveSpeed { get; set; }
     public float AttackSpeed { get; set; }
-    public int Cost { get; set; } // 크리쳐가 장착할 수 있는 최대 아이템 Cost 수치입니다.
     public float Range { get; set; }
     public float Sight { get; set; }
+    public string Skills { get; set; } // Ex) Laser|Rapid|ShotGun
+    public string DefaultSkills { get; set; } // Ex) Laser_Base_Basic|Rapid_Rare_DamageUp
 
 }

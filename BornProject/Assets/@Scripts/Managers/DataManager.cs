@@ -10,7 +10,7 @@ public class DataManager {
 
     public Dictionary<string, CreatureData> Creatures = new();
     public Dictionary<string, SkillData> Skills = new();
-    public Dictionary<string, EnemySkillData> EnemySkills = new();
+    //public Dictionary<string, EnemySkillData> EnemySkills = new();
 
     private bool _isInitialized;
     public void Initialize() {
@@ -19,7 +19,7 @@ public class DataManager {
 
         Creatures = LoadJson<CreatureData>();
         Skills = LoadJson<SkillData>();
-        EnemySkills = LoadJson<EnemySkillData>();
+        //EnemySkills = LoadJson<EnemySkillData>();
 
         IsInitialized = true;
     }

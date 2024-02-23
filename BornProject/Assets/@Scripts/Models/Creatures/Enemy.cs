@@ -1,14 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class Enemy : Creature, IAttackable {
+public class Enemy : Creature, ISkillMan, IAttackable {
 
     #region Properties
 
     public Attacker Attacker { get; protected set; }
-    public EnemySkillData EnemySkill { get; protected set; }
+    public SkillList SkillList { get; protected set; }
+    public SkillStatus DefaultStatus { get; protected set; }
+
+    public string SkillSetList => Data.Skills;
 
     public Creature Target {
         get => _target;
@@ -69,9 +73,16 @@ public class Enemy : Creature, IAttackable {
         _sight.transform.localScale = 2 * Sight * Vector3.one;
         _range.transform.localScale = 2 * Range * Vector3.one;
 
-        EnemySkill = Main.Data.EnemySkills[$"{Data.Key}_Attack"];
+        SkillList = new(this, Data.DefaultSkills);
     }
-
+    protected override void SetStatus(bool isFullHp = true) {
+        base.SetStatus(isFullHp);
+        DefaultStatus = new() {
+            Damage = Status[StatType.Damage],
+            AttackSpeed = Status[StatType.AttackSpeed],
+            Range = Status[StatType.Range],
+        };
+    }
     protected override void SetState() {
         base.SetState();
         State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
@@ -177,38 +188,41 @@ public class Enemy : Creature, IAttackable {
     }
 
     public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
+        Skill skill = SkillList.Current;
         return new()
         {
             Owner = this,
-            HitColliderKey = EnemySkill.HitColliderKey,
-            RadiusOffset = EnemySkill.RadiusOffset,
-            RotationAngle = EnemySkill.RotationAngle < 0 ? LookAngle : EnemySkill.RotationAngle,
-            Count = EnemySkill.HitColliderCount,
-            SpreadAngle = EnemySkill.HitColliderAngle,
-            Size = EnemySkill.HitColliderSize,
-            AttackTime = EnemySkill.AttackTime,
+            HitColliderKey = skill.Data.HitColliderKey,
+            RadiusOffset = skill.Data.RadiusOffset,
+            RotationAngle = skill.Data.RotationAngle < 0 ? LookAngle : skill.Data.RotationAngle,
+            Count = skill.Data.HitColliderCount,
+            SpreadAngle = skill.Data.HitColliderAngle,
+            Size = skill.Data.HitColliderSize,
+            AttackTime = skill.Data.AttackTime,
         };
     }
 
     public HitColliderInfo GetHitColliderInfo() {
+        Skill skill = SkillList.Current;
         return new()
         {
-            Penetration = EnemySkill.Penetration,
-            Speed = EnemySkill.Speed,
-            DirectionX = EnemySkill.DirectionX,
-            DirectionY = EnemySkill.DirectionY,
-            Duration = EnemySkill.Duration,
-            Range = EnemySkill.Range,
+            Penetration = skill.Data.Penetration,
+            Speed = skill.Data.Speed,
+            DirectionX = skill.Data.DirectionX,
+            DirectionY = skill.Data.DirectionY,
+            Duration = skill.Data.Duration,
+            Range = skill.Data.Range,
         };
     }
 
     public HitInfo GetHitInfo() {
+        Skill skill = SkillList.Current;
         return new()
         {
             Owner = this,
             Damage = this.Damage,
-            CriticalChance = EnemySkill.CriticalChance,
-            CriticalBonus = EnemySkill.CriticalBonus,
+            CriticalChance = skill.Data.CriticalChance,
+            CriticalBonus = skill.Data.CriticalBonus,
             Knockback = new()
             {
                 time = 0.1f,

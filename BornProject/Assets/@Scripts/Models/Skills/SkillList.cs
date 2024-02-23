@@ -1,115 +1,119 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SkillList {
 
     #region Properties
 
-    public Creature Owner { get; protected set; }
+    public ISkillMan Owner { get; protected set; }
 
-    public SkillData CurrentBasicSkill {
-        get => _currentBasicSkill;
+    public Skill Current {
+        get => _current;
         set {
-            if (value == _currentBasicSkill) return;
-            _currentBasicSkill = value;
-            Debug.Log("현재 스킬의 이름" + CurrentBasicSkill.Name);
-            Debug.Log("현재 SkillData의 List 수" + _basicSkills.Count);
-            OnChangedBasicSkill?.Invoke(value);
+            if (value == _current) return;
+            _current = value;
+            OnChangedSkill?.Invoke(value);
         }
+    }
+    public SkillSet CurrentSkillSet {
+        get => _currentSkillSet;
+        set => _currentSkillSet = value;
     }
 
     #endregion
 
     #region Fields
 
-    private int _currentBasicSkillIndex;
-    private SkillData _currentBasicSkill;
+    private Skill _current;
+    private SkillSet _currentSkillSet;
 
     // Collections.
-    private Dictionary<SkillType, SkillData> _skills = new();
-    private List<SkillData> _basicSkills;
+    private Dictionary<SkillType, SkillSet> _currentSkillSets;
+    private List<SkillSet> _skillSets = new();
 
     // Events.
-    public event Action<SkillData> OnChangedBasicSkill;
+    public event Action<Skill> OnChangedSkill;
+
+    #endregion
+
+    #region Indexer
+
+    public SkillSet this[SkillType type] => _currentSkillSets[type];
 
     #endregion
 
     #region Constructor
 
-    public SkillList(Creature owner) {
+    public SkillList(ISkillMan owner, string defaultSkills = "") {
+        // #1. 기본 데이터 설정 및 컬렉션 초기화.
         Owner = owner;
-        OnChangedBasicSkill += UpdateStatus;
+        _currentSkillSets = new();
+        for (int i = 0; i < Enum.GetNames(typeof(SkillType)).Length; i++) {
+            _currentSkillSets[(SkillType)i] = null;
+        }
 
-        _basicSkills = new();
+        // #2. Owner가 가진 SkillSet 생성.
+        _skillSets = Owner.SkillSetList.Split('|').Select(x => new SkillSet(x)).ToList();
+
+        // #3. 콜백 등록.
+        OnChangedSkill += UpdateStatus;
+
+        // #4. 기본으로 가지고 있는 스킬 설정.
+        if (!string.IsNullOrEmpty(defaultSkills)) {
+            foreach (string s in defaultSkills.Split('|')) {
+                Set(Set(s).Type);
+            }
+        }
     }
 
     #endregion
 
-    #region Add/Remove Basic Skill
+    // 해당 스킬 타입의 트리와 스킬을 설정.
+    public Skill Set(string key) {
+        // #1. 해당 스킬 정보가 있는지 검사.
+        if (!Main.Data.Skills.TryGetValue(key, out SkillData data)) {
+            Debug.LogError($"Not found skill: {key}");
+            return null;
+        }
 
-    public void AddBasicSkill(SkillData skillData) {
-        _basicSkills.Add(skillData);
-        if (_basicSkills.Count != 1) return;
-        _currentBasicSkillIndex = 0;
-        CurrentBasicSkill = _basicSkills[0];
-    }
-    public void RemoveBasicSkill(SkillData skillData) {
-        if (!_basicSkills.Contains(skillData)) return;
-        int index = _basicSkills.IndexOf(skillData);
-        if (_currentBasicSkillIndex >= index) _currentBasicSkillIndex--;
-        _basicSkills.Remove(skillData);
-        CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
-    }
-    public void SetSkill(SkillData skillData) {
-        Debug.Log($"Player set skill {skillData.Key}");
-        _skills[skillData.Type] = skillData;
-    }
+        // #2. 해당 스킬 타입의 트리와 스킬을 설정.
+        Skill skill = _skillSets.Where(x => x.Type == data.Type).ToList().Where(x => x.BaseName.Equals(key.Split('_')[0])).FirstOrDefault().Set(key);
+        if (skill != null)
+            _currentSkillSets[skill.Type] = skill.SkillSet;
 
-    #endregion
-
-    #region Change Basic Skill
-
-    public void NextBasicSkill() {
-        if (_basicSkills.Count <= 0) return;
-        if (++_currentBasicSkillIndex > _basicSkills.Count) _currentBasicSkillIndex = 0;
-
-        CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
-    }
-    public void PrevBasicSkill() {
-        if (_basicSkills.Count <= 0) return;
-        if (--_currentBasicSkillIndex < 0) _currentBasicSkillIndex = _basicSkills.Count - 1;
-
-        CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
-    }
-    public void ChangeBasicSkill(int index) {
-        if (index >= _basicSkills.Count) return;
-        _currentBasicSkillIndex = index;
-
-        CurrentBasicSkill = _basicSkills[_currentBasicSkillIndex];
-    }
-    public void SetRangeSkill() {
-        if (!_skills.TryGetValue(SkillType.Range, out SkillData skill)) return;
-        CurrentBasicSkill = skill;
-    }
-    public void SetMeleeSkill() {
-        if (!_skills.TryGetValue(SkillType.Melee, out SkillData skill)) return;
-        CurrentBasicSkill = skill;
+        //_skillSets.Where(x => x.Type == data.Type).ToList().ForEach(x => {
+        //    Skill skill = x.Set(key);
+        //    if (skill != null) {
+        //        _currentSkillSets[skill.Type] = skill.SkillSet;
+        //        if (skill.Data.Key.Equals(key)) thisSkill = skill;
+        //    }
+        //});
+        return skill;
     }
 
-    #endregion
+    // 현재 스킬 트리를 변경.
+    public void Set(SkillType type) {
+        CurrentSkillSet = _currentSkillSets[type];
+        if (CurrentSkillSet != null) Current = CurrentSkillSet.Current;
+    }
 
-    private void UpdateStatus(SkillData skillData) {
-        if (skillData != null) {
-            Owner.Status[StatType.Damage].SetValue(skillData.Damage);
-            Owner.Status[StatType.AttackSpeed].SetValue(skillData.AttackSpeed);
-            Owner.Status[StatType.Range].SetValue(skillData.Range);
+    // 
+    public List<Skill> GetBaseSkills(SkillType type) => _skillSets.Where(x => x.Type == type).Select(x => x.GetSubs(null)[0]).ToList();
+
+    private void UpdateStatus(Skill skill) {
+        if (skill != null) {
+            Owner.Status[StatType.Damage].SetValue(skill.Data.Damage);
+            Owner.Status[StatType.AttackSpeed].SetValue(skill.Data.AttackSpeed);
+            Owner.Status[StatType.Range].SetValue(skill.Data.Range);
         }
         else {
-            Owner.Status[StatType.Damage].SetValue(Owner.Data.Damage);
-            Owner.Status[StatType.AttackSpeed].SetValue(Owner.Data.AttackSpeed);
-            Owner.Status[StatType.Range].SetValue(Owner.Data.Range);
+            Owner.Status[StatType.Damage].SetValue(Owner.DefaultStatus.Damage.Value);
+            Owner.Status[StatType.AttackSpeed].SetValue(Owner.DefaultStatus.AttackSpeed.Value);
+            Owner.Status[StatType.Range].SetValue(Owner.DefaultStatus.Range.Value);
         }
     }
+
 }

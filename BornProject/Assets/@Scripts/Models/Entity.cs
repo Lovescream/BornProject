@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour {
 
+    [SerializeField]
+    private bool _autoInitialize = true;
+    [SerializeField]
+    [ConditionalInspector("_autoInitialize", false)]
+    private string _key;
+
+    public string Key { get; protected set; }
+
     private bool _initialized;
 
     protected virtual void Awake() {
-        Initialize();
+        if (_autoInitialize)
+            Initialize();
     }
 
     public virtual bool Initialize() {

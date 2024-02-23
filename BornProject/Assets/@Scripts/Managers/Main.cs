@@ -37,6 +37,7 @@ public class Main : MonoBehaviour {
     private SkillManager _skill = new();
     private QuestManager _quest = new();
     private SceneManagerEx _scene = new();
+    private GameManager _game = new();
 
     public static PoolManager Pool => Instance?._pool;
     public static DataManager Data => Instance?._data;
@@ -47,6 +48,7 @@ public class Main : MonoBehaviour {
     public static SkillManager Skill => Instance?._skill;
     public static QuestManager Quest => Instance?._quest;
     public static SceneManagerEx Scene => Instance?._scene;
+    public static GameManager Game => Instance?._game;
 
     public static void Clear() {
         // Audio.Clear();
@@ -63,6 +65,9 @@ public class Main : MonoBehaviour {
         _dungeon = new();
         _ui = new();
         _skill = new();
+        _quest = new();
+        _scene = new();
+        _game = new();
     }
 
     #region Layers

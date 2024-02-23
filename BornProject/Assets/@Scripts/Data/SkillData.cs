@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Laser_Base_Basic
+//Laser_Normal_DamageUp
+//Laser_Normal_RangeUp
+//Laser_Normal_SpeedUp
+//Laser_Rare_DamageUp
+//Laser_Rare_RangeUp
+//Laser_Rare_SpeedUp
+
 public class SkillData : Data {
 
     // 기본 정보

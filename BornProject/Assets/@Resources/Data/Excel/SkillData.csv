@@ -1,43 +1,47 @@
 Key,Name,Type,Level,Description,RadiusOffset,RotationAngle,HitColliderCount,HitColliderAngle,HitColliderSize,Penetration,Speed,DirectionX,DirectionY,Duration,Range,ExtraShotCount,BerserkAttackCount,BerserkExtraShotCount,Damage,AttackTime,CriticalChance,CriticalBonus,AttackSpeed
-Laser_Base_Basic,BasicLaserBeam,Range,Base,ê¸°ë³¸ ë¹” ê³µê²©ì…ë‹ˆë‹¤.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Normal_DamageUp,PowerUp,Range,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,5,100,1
-Laser_Normal_RangeUp,SizeUp,Range,Normal,ë¹”ì˜ í¬ê¸°ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Normal_SpeedUp,AttackSpeedUp,Range,Normal,ê³µê²©ì†ë„ê°€ ë¹¨ë¼ì§‘ë‹ˆë‹¤.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1.2
-Laser_Rare_DamageUp,Critical,Range,Rare,ì¹˜ëª…íƒ€ íš¨ìœ¨ì´ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,25,200,1
-Laser_Rare_RangeUp,MultipleShot,Range,Rare,ë¹”ì˜ ê°¯ìˆ˜ê°€ ì¦ê°€í•©ë‹ˆë‹¤. ,0,0,3,90,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Rare_SpeedUp,ExtraShot,Range,Rare,ì¶”ê°€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,0,0,1,0,1,-1,-1,0,0,0.5,-1,1,0,0,8,0.5,5,100,1.2
-Rapid_Base_Basic,BasicRapidFire,Range,Base,ê¸°ë³¸ ë¹ ë¥¸ ì‚¬ê²©ì…ë‹ˆë‹¤.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,10
-Rapid_Normal_DamageUp,PowerUp,Range,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,10
-Rapid_Normal_Penetrate,Penetrate,Range,Normal,ê´€í†µì‚¬ê²©ì„ í•©ë‹ˆë‹¤.,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,10
-Rapid_Normal_SpeedUp,AttackSpeedUp,Range,Normal,ë” ë¹ ë¥¸ ê³µê²©ì„ í•©ë‹ˆë‹¤.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,10
-Rapid_Rare_DamageUp,RandomDamage,Range,Rare,ëœë¤ë°ë¯¸ì§€ê°€ ì¶”ê°€ ë©ë‹ˆë‹¤.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,10
-Rapid_Rare_Penetrate,LastPang,Range,Rare,ê´€í†µëœ ë§ˆì§€ë§‰ ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,10
-Rapid_Rare_SpeedUp,Berserk,Range,Rare,në²ˆì§¸ë§ˆë‹¤ 3ë²ˆ ì¶”ê°€ ê³µê²©í•©ë‹ˆë‹¤.,0,0,1,0,1,0,10,0,0,3,10,0,3,3,3,0.5,5,100,10
-ShotGun_Base_Basic,BasicShotGun,Range,Base,ê¸°ë³¸ ì‚°íƒ„ ê³µê²©ì…ë‹ˆë‹¤.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Normal_DamageUp,PowerUp,Range,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
-ShotGun_Normal_Multiple,MultipleShot,Range,Normal,ì‚°íƒ„ì´ì•Œì˜ ê°¯ìˆ˜ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0.01,0,8,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Normal_SpeedUp,AttackSpeedUp,Range,Normal,ê³µê²©ì†ë„ê°€ ë¹¨ë¼ì§‘ë‹ˆë‹¤.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1.5
-ShotGun_Rare_DamageUp,OppositeCopy,Range,Rare,ê³µê²©ë°©í–¥ ë°˜ëŒ€í¸ì— ë˜‘ê°™ì€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
-ShotGun_Rare_Multiple,SizeUp,Range,Rare,íƒ„í™˜ì˜ í¬ê¸°ê°€ ì»¤ì§‘ë‹ˆë‹¤.,0.01,0,8,40,2,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Rare_SpeedUp,ExtraShot,Range,Rare,ì¶”ê°€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,0.01,0,5,30,1,0,10,0,0,3,6,1,0,0,5,0.5,5,100,1.5
-Slash_Base_Basic,BasicSlash,Melee,Base,ê¸°ë³¸ ë² ê¸° ê³µê²©ì…ë‹ˆë‹¤.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,2
-Slash_Normal_DamageUp,PowerUp,Melee,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,2
-Slash_Normal_RapidUp,AttackSpeedUp,Melee,Normal,ê³µê²©ì†ë„ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,3
-Slash_Normal_RangeUp,AttackLengthUp,Melee,Normal,ê³µê²©ì‚¬ê±°ë¦¬ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,90,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,2
-Slash_Rare_DamageUp,Berserk,Melee,Rare,në²ˆì§¸ë§ˆë‹¤ 3ë²ˆ ì¶”ê°€ ê³µê²©í•©ë‹ˆë‹¤.,0,0,1,90,1,5,0,0,0,0.4,4,0,3,3,14,0.5,5,100,2
-Slash_Rare_RapidUp,ExtraAttack,Melee,Rare,ì¶”ê°€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,0,0,1,90,1,5,0,0,0,0.4,4,1,0,0,12,0.5,5,100,3
-Slash_Rare_RangeUp,AroundAttack,Melee,Rare,ì£¼ë³€ ì „ì²´ë¥¼ ê³µê²©í•©ë‹ˆë‹¤.,0,0,1,360,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,2
-Sting_Base_Basic,BasicSting,Melee,Base,ê¸°ë³¸ ì°Œë¥´ê¸° ê³µê²©ì…ë‹ˆë‹¤.,0,0,1,0,1,0,0,0,0,0.4,5,0,0,0,18,0.5,5,100,3
-Sting_Normal_DamageUp,PowerUp,Melee,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,20,0.5,5,100,3
-Sting_Normal_CriticalUp,CriticalUp,Melee,Normal,ì¹˜ëª…íƒ€ìœ¨ì´ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,25,100,3
-Sting_Normal_RangeUp,RangeUp,Melee,Normal,ê³µê²© ì‚¬ê±°ë¦¬ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,5,100,3
-Sting_Rare_DamageUp,Dash,Melee,Rare,ê³µê²© ë°©í–¥ìœ¼ë¡œ ë¹ ë¥´ê²Œ 5ë§Œí¼ ì´ë™.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,20,0.5,5,100,3
-Sting_Rare_CriticalUp,Random CriticalDamage,Melee,Rare,ì¹˜ëª…íƒ€ë°ë¯¸ì§€ê°€ ëœë¤í•˜ê²Œ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,25,100,3
-Sting_Rare_RangeUp,Concentration,Melee,Rare,ì§‘ì¤‘í•˜ì—¬ í° ë°ë¯¸ì§€ë¡œ ê³µê²©í•©ë‹ˆë‹¤.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,5,100,3
-Smash_Base_Basic,BasicSmash,Melee,Base,ê¸°ë³¸ ë‚´ë ¤ì¹˜ê¸° ê³µê²©ì…ë‹ˆë‹¤.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,3
-Smash_Normal_DamageUp,PowerUp,Melee,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,3
-Smash_Normal_RangeUp,RangeUp,Melee,Normal,ê³µê²©ì‚¬ê±°ë¦¬ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,60,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,3
-Smash_Normal_SpeedUp,AttackSpeedUp,Melee,Normal,ê³µê²©ì†ë„ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,4
-Smash_Rare_DamageUp,CriticalUp,Melee,Rare,ì¹˜ëª…íƒ€ìœ¨ì´ ì¦ê°€í•©ë‹ˆë‹¤.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,3
-Smash_Rare_RangeUp,AttackAngleUp,Melee,Rare,ê³µê²© ë²”ìœ„ ê°ë„ ì¦ê°€,0,0,1,120,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,3
-Smash_Rare_SpeedUp,ExtraShot,Melee,Rare,ì¶”ê°€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,0,0,1,60,1,5,0,0,0,0.4,4,1,0,0,12,0.5,5,100,4
+Laser_Base_Basic,BasicLaserBeam,Range,Base,±âº» ºö °ø°İÀÔ´Ï´Ù.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Normal_DamageUp,PowerUp,Range,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,5,100,1
+Laser_Normal_RangeUp,SizeUp,Range,Normal,ºöÀÇ Å©±â°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Normal_SpeedUp,AttackSpeedUp,Range,Normal,°ø°İ¼Óµµ°¡ »¡¶óÁı´Ï´Ù.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1.2
+Laser_Rare_DamageUp,Critical,Range,Rare,Ä¡¸íÅ¸ È¿À²ÀÌ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,25,200,1
+Laser_Rare_RangeUp,MultipleShot,Range,Rare,ºöÀÇ °¹¼ö°¡ Áõ°¡ÇÕ´Ï´Ù. ,0,0,3,90,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Rare_SpeedUp,ExtraShot,Range,Rare,Ãß°¡ °ø°İÀ» ÇÕ´Ï´Ù.,0,0,1,0,1,-1,-1,0,0,0.5,-1,1,0,0,8,0.5,5,100,1.2
+Rapid_Base_Basic,BasicRapidFire,Range,Base,±âº» ºü¸¥ »ç°İÀÔ´Ï´Ù.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,10
+Rapid_Normal_DamageUp,PowerUp,Range,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,10
+Rapid_Normal_Penetrate,Penetrate,Range,Normal,°üÅë»ç°İÀ» ÇÕ´Ï´Ù.,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,10
+Rapid_Normal_SpeedUp,AttackSpeedUp,Range,Normal,´õ ºü¸¥ °ø°İÀ» ÇÕ´Ï´Ù.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,10
+Rapid_Rare_DamageUp,RandomDamage,Range,Rare,·£´ıµ¥¹ÌÁö°¡ Ãß°¡ µË´Ï´Ù.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,10
+Rapid_Rare_Penetrate,LastPang,Range,Rare,°üÅëµÈ ¸¶Áö¸· µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,10
+Rapid_Rare_SpeedUp,Berserk,Range,Rare,n¹øÂ°¸¶´Ù 3¹ø Ãß°¡ °ø°İÇÕ´Ï´Ù.,0,0,1,0,1,0,10,0,0,3,10,0,3,3,3,0.5,5,100,10
+ShotGun_Base_Basic,BasicShotGun,Range,Base,±âº» »êÅº °ø°İÀÔ´Ï´Ù.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Normal_DamageUp,PowerUp,Range,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
+ShotGun_Normal_Multiple,MultipleShot,Range,Normal,»êÅºÃÑ¾ËÀÇ °¹¼ö°¡ Áõ°¡ÇÕ´Ï´Ù.,0.01,0,8,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Normal_SpeedUp,AttackSpeedUp,Range,Normal,°ø°İ¼Óµµ°¡ »¡¶óÁı´Ï´Ù.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1.5
+ShotGun_Rare_DamageUp,OppositeCopy,Range,Rare,°ø°İ¹æÇâ ¹İ´ëÆí¿¡ ¶È°°Àº °ø°İÀ» ÇÕ´Ï´Ù.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
+ShotGun_Rare_Multiple,SizeUp,Range,Rare,ÅºÈ¯ÀÇ Å©±â°¡ Ä¿Áı´Ï´Ù.,0.01,0,8,40,2,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Rare_SpeedUp,ExtraShot,Range,Rare,Ãß°¡ °ø°İÀ» ÇÕ´Ï´Ù.,0.01,0,5,30,1,0,10,0,0,3,6,1,0,0,5,0.5,5,100,1.5
+Slash_Base_Basic,BasicSlash,Melee,Base,±âº» º£±â °ø°İÀÔ´Ï´Ù.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,2
+Slash_Normal_DamageUp,PowerUp,Melee,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,2
+Slash_Normal_RapidUp,AttackSpeedUp,Melee,Normal,°ø°İ¼Óµµ°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,3
+Slash_Normal_RangeUp,AttackLengthUp,Melee,Normal,°ø°İ»ç°Å¸®°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,90,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,2
+Slash_Rare_DamageUp,Berserk,Melee,Rare,n¹øÂ°¸¶´Ù 3¹ø Ãß°¡ °ø°İÇÕ´Ï´Ù.,0,0,1,90,1,5,0,0,0,0.4,4,0,3,3,14,0.5,5,100,2
+Slash_Rare_RapidUp,ExtraAttack,Melee,Rare,Ãß°¡ °ø°İÀ» ÇÕ´Ï´Ù.,0,0,1,90,1,5,0,0,0,0.4,4,1,0,0,12,0.5,5,100,3
+Slash_Rare_RangeUp,AroundAttack,Melee,Rare,ÁÖº¯ ÀüÃ¼¸¦ °ø°İÇÕ´Ï´Ù.,0,0,1,360,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,2
+Sting_Base_Basic,BasicSting,Melee,Base,±âº» Âî¸£±â °ø°İÀÔ´Ï´Ù.,0,0,1,0,1,0,0,0,0,0.4,5,0,0,0,18,0.5,5,100,3
+Sting_Normal_DamageUp,PowerUp,Melee,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,20,0.5,5,100,3
+Sting_Normal_CriticalUp,CriticalUp,Melee,Normal,Ä¡¸íÅ¸À²ÀÌ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,25,100,3
+Sting_Normal_RangeUp,RangeUp,Melee,Normal,°ø°İ »ç°Å¸®°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,5,100,3
+Sting_Rare_DamageUp,Dash,Melee,Rare,°ø°İ ¹æÇâÀ¸·Î ºü¸£°Ô 5¸¸Å­ ÀÌµ¿.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,20,0.5,5,100,3
+Sting_Rare_CriticalUp,Random CriticalDamage,Melee,Rare,Ä¡¸íÅ¸µ¥¹ÌÁö°¡ ·£´ıÇÏ°Ô Áõ°¡ÇÕ´Ï´Ù.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,25,100,3
+Sting_Rare_RangeUp,Concentration,Melee,Rare,ÁıÁßÇÏ¿© Å« µ¥¹ÌÁö·Î °ø°İÇÕ´Ï´Ù.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,5,100,3
+Smash_Base_Basic,BasicSmash,Melee,Base,±âº» ³»·ÁÄ¡±â °ø°İÀÔ´Ï´Ù.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,3
+Smash_Normal_DamageUp,PowerUp,Melee,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,3
+Smash_Normal_RangeUp,RangeUp,Melee,Normal,°ø°İ»ç°Å¸®°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,60,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,3
+Smash_Normal_SpeedUp,AttackSpeedUp,Melee,Normal,°ø°İ¼Óµµ°¡ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,4
+Smash_Rare_DamageUp,CriticalUp,Melee,Rare,Ä¡¸íÅ¸À²ÀÌ Áõ°¡ÇÕ´Ï´Ù.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,3
+Smash_Rare_RangeUp,AttackAngleUp,Melee,Rare,°ø°İ ¹üÀ§ °¢µµ Áõ°¡,0,0,1,120,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,3
+Smash_Rare_SpeedUp,ExtraShot,Melee,Rare,Ãß°¡ °ø°İÀ» ÇÕ´Ï´Ù.,0,0,1,60,1,5,0,0,0,0.4,4,1,0,0,12,0.5,5,100,4
+Bear_Base_Attack,Bear_Base_Attack,Melee,Base,¾Õ¹ß ÈÖµÎ¸£±â,0,0,1,180,1.5,5,0,0,0,0.4,2,0,0,0,8,0.5,5,100,1
+Snake_Base_Attack,Snake_Base_Attack,Melee,Base,(µ¶¹ß»ç)¹°±â,0,0,2,180,0.8,5,0,0,0,0.1,0.5,0,0,0,2,0.5,3,20,3
+Beatle_Base_Attack,Beatle_Base_Attack,Melee,Base,µ¶ ¹ß»ç,0,0,1,180,1,5,0,0,0,0.5,3,0,0,0,3,0.5,5,30,2
+Wolf_Base_Attack,Wolf_Base_Attack,Melee,Base,¹°±â,0,0,1,180,1,5,0,0,0,0.4,1,0,0,0,3,0.5,5,30,1.5
