@@ -19,9 +19,11 @@ public class ObjectManager {
         Player.SetInfo(Main.Data.Creatures[key]);
         return Player;
     }
-    public Enemy SpawnEnemy(string key, Vector2 position)
-    {
-        Enemy enemy = Spawn<Enemy>(position);
+    public Enemy SpawnEnemy(string key, Vector2 position) {
+        if (string.IsNullOrEmpty(key)) return null;
+        GameObject obj = Main.Resource.IsExistPrefab(key) ? Main.Resource.Instantiate($"{key}", pooling: true) : Main.Resource.Instantiate("Enemy", pooling: true);
+        obj.transform.position = position;
+        Enemy enemy = obj.GetComponent<Enemy>();
         Enemies.Add(enemy);
         enemy.SetInfo(Main.Data.Creatures[key]);
         return enemy;

@@ -63,6 +63,7 @@ public class ResourceManager {
     }
 
     // 리소스가 있는지 확인.
+    public bool IsExistPrefab(string key) => _prefabs.ContainsKey(key);
     public GameObject LoadPrefab(string key)
     {
         if (!_prefabs.TryGetValue(key, out GameObject prefab))

@@ -139,14 +139,6 @@ public class Creature : Entity {
         _animator.SetBool(AnimatorParameterHash_Dead, false);
 
         _collider.enabled = true;
-        if (_collider is BoxCollider2D boxCollider) {
-            Sprite sprite = _spriter.sprite;
-            if (sprite != null) {
-                float x = sprite.textureRect.width / sprite.pixelsPerUnit;
-                float y = sprite.textureRect.height / sprite.pixelsPerUnit;
-                boxCollider.size = new(x, y);
-            }
-        }
         _rigidbody.simulated = true;
 
         SetStatus(isFullHp: true);
@@ -165,7 +157,6 @@ public class Creature : Entity {
         if (isFullHp) {
             Hp = HpMax;
         }
-
     }
 
     protected virtual void SetState() {
@@ -183,21 +174,20 @@ public class Creature : Entity {
     private void OnEnteredHit() {
         _animator.SetBool(AnimatorParameterHash_Hit, true);
     }
+    private void OnEnteredDead() {
+        _collider.enabled = false;
+        _rigidbody.simulated = false;
+        _animator.SetBool(AnimatorParameterHash_Hit, false);
+        _animator.SetBool(AnimatorParameterHash_Attack, false);
+        _animator.SetBool(AnimatorParameterHash_Dead, true);
+    }
     private void OnExitedHit() {
         _animator.SetBool(AnimatorParameterHash_Hit, false);
         KnockbackVelocity = Vector2.zero;
     }
-
-    private void OnEnteredDead() {
-        _collider.enabled = false;
-        _rigidbody.simulated = false;
-        _animator.SetBool(AnimatorParameterHash_Dead, true);
-    }
-
+    
     public virtual void OnHit(IHitCollider attacker) {
         HitInfo hitInfo = attacker.HitInfo;
-        //if (this.GetComponent<Enemy>() != null) Debug.Log($"곰이 {hitInfo.Damage} 피해를 입엇다");
-        //Debug.Log($"{hitInfo.Damage}의 피해를 입었따. 죽어라 - !");
         Hp -= hitInfo.Damage;
         Main.Object.ShowDamageText(this.transform.position, hitInfo.Damage);
 
@@ -210,6 +200,7 @@ public class Creature : Entity {
     }
 
     #endregion
+
     private void EnemyDieAudioSource()
     {
         if (this.gameObject.name == "Enemy") AudioController.Instance.SFXPlay(SFX.EnemyBearDie); // TODO.
