@@ -212,7 +212,7 @@ public class Creature : Entity {
 
     private void FitCollider(SpriteRenderer spriter) {
         if (spriter.sprite == null) return;
-        Vector2 size = spriter.sprite.bounds.size;
+        Vector2 size = spriter.sprite.bounds.size * 0.8f;
         Vector2 offset = (Vector2)(spriter.bounds.center - this.transform.position);
         BoxCollider2D boxCollider = _collider as BoxCollider2D;
         boxCollider.size = size;

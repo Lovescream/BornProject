@@ -8,9 +8,9 @@ public class Entity : MonoBehaviour {
     private bool _autoInitialize = true;
     [SerializeField]
     [ConditionalInspector("_autoInitialize", false)]
-    private string _key;
+    private string _key = "";
 
-    public string Key { get; protected set; }
+    public string Key => _key;
 
     private bool _initialized;
 
