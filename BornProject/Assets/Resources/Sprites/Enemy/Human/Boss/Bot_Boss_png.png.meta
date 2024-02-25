@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,7 +121,910 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BotBoss_Idle_00
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 672
+        width: 71
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed2c19d3e5cbe643a3409fc0e07814d
+      internalID: 40498594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Idle_01
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 672
+        width: 71
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fcb7a220049c5045baed1ef080df6ff
+      internalID: -1044538967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dash_00
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 576
+        width: 71
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7527c727b039c2e479da54a1f33f4bbb
+      internalID: -300527308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dash_01
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 576
+        width: 71
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea72c446747071e4da9e616089ef7587
+      internalID: 509251880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dash_02
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 577
+        width: 71
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f5e5c10448c2749a8f53df1880d31d
+      internalID: 1853579880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dash_03
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 577
+        width: 71
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4754c5c193c1e47a6db374029642e5
+      internalID: -2123667976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_00
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 384
+        width: 71
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00ab12b8cf591541905d3c08913c527
+      internalID: 22206665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_01
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 384
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7b2ddf7c61ed54dbddd18c6f358b2b
+      internalID: 216357249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_02
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 384
+        width: 65
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a2d8e66eee5cd49b15432d7974454e
+      internalID: -1867160155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_03
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 384
+        width: 64
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f233b102f662c04aae03e520893a135
+      internalID: -1759627965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_04
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 384
+        width: 80
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4693eae7113acd2428aef91bc998dc8c
+      internalID: -1931890053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_05
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 384
+        width: 80
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e77fd4373dbb448a908b17a25e8711
+      internalID: 1612452003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_06
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 384
+        width: 64
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4557a698905efb04582604841e34ccbc
+      internalID: 2041461533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_07
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 384
+        width: 79
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e99d5e9649e3564a868d2097c74c944
+      internalID: 683523696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_08
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 384
+        width: 80
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1aeff3f0921704791fce686b882af5
+      internalID: 401683057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Defence_09
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 384
+        width: 80
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e679756d4a92f45aa54fe54f3c2367
+      internalID: 242187466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack1_00
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 288
+        width: 71
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0512a5d8cea373c409ba82c5b1e54f84
+      internalID: 550711991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack1_01
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 288
+        width: 65
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d4ecd61025c1e47a958174c3d963e9
+      internalID: 1363568804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack1_02
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 288
+        width: 68
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36313a8ddd4279b4394c8b6450153090
+      internalID: 825237896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack1_03
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 288
+        width: 67
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40dd28e0d6f44b74f8f16362b52f1454
+      internalID: -452508327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack1_04
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 288
+        width: 69
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6caf93d5138424c98f6c51a9f73f17
+      internalID: 1576067616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack1_05
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 288
+        width: 67
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0fde1d6ea4e0d4cb29d3fa60aa1c55
+      internalID: -1436267357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack1_06
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 288
+        width: 69
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c627480eb12434786454068670e9cd
+      internalID: -1565612427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Hit_00
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 192
+        width: 71
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc09d85e63c1d70439496796f7a632c3
+      internalID: -723238974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Hit_01
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 192
+        width: 78
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f28ccef999cddd4ebaabcbd4192bf69
+      internalID: 129315131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Hit_02
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 192
+        width: 78
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c8cda10d557e048a1d33a69f204106
+      internalID: -1722833434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Hit_03
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 192
+        width: 78
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5ea8a33063bf545ae8ba9769fddf42
+      internalID: -1838586600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Hit_04
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 192
+        width: 71
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5444d78a4d5e0c44a99b17ea7798a11d
+      internalID: 999944888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bot_Boss_png_36
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 96
+        width: 71
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9305e1b2ad53f0b4ab5fd72cf2f94ee5
+      internalID: 778422106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_01
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 96
+        width: 77
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46b7e9f1c993bc419b8f18d2448ecc2
+      internalID: 1840031242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_02
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 96
+        width: 78
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff0df07a93aeb6458d0e6b668eb6144
+      internalID: -861277389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_03
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 96
+        width: 82
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d44406f647b5b645a51014117d3b7cb
+      internalID: 285161485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_04
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 96
+        width: 89
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb96d254c9a193d4e981049ff7751a6f
+      internalID: 1446634790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_05
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 96
+        width: 94
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1456ba680d3fb948b50b9cc8e15506c
+      internalID: -1703240876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_06
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 96
+        width: 103
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39dee414136e494e985619f6a08b354
+      internalID: -699598073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_07
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 96
+        width: 103
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb29e523f293af45aa9d222fe36c402
+      internalID: 1529853852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_08
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 96
+        width: 103
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c6d1ba9974d664b876928a841c9165
+      internalID: 2035767222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Dead_09
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 96
+        width: 103
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1912ba01ff7b2a640bc2e39e12dcbfd0
+      internalID: -763962205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack2_00
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 0
+        width: 71
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e3f1f73087f6446af509e28f17c637
+      internalID: -1566809227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack2_01
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 65
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b70be3912215ef439f2ecc05ee364aa
+      internalID: -1993424919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack2_02
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 0
+        width: 68
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fee4a051725ff4587dd5ab50131d7e
+      internalID: -2006966831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack2_03
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 0
+        width: 67
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd756884c14edbe46b38f65437ed0dd2
+      internalID: -1265044867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotBoss_Attack2_04
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 0
+        width: 67
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef1bd180e54fe04db7b858b108dbca1
+      internalID: -288825192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +1035,58 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BotBoss_Attack1_00: 550711991
+      BotBoss_Attack1_01: 1363568804
+      BotBoss_Attack1_02: 825237896
+      BotBoss_Attack1_03: -452508327
+      BotBoss_Attack1_04: 1576067616
+      BotBoss_Attack1_05: -1436267357
+      BotBoss_Attack1_06: -1565612427
+      BotBoss_Attack2_00: 999944888
+      BotBoss_Attack2_01: -1993424919
+      BotBoss_Attack2_02: -2006966831
+      BotBoss_Attack2_03: -1265044867
+      BotBoss_Attack2_04: -288825192
+      BotBoss_Dash_00: -300527308
+      BotBoss_Dash_01: 509251880
+      BotBoss_Dash_02: 1853579880
+      BotBoss_Dash_03: -2123667976
+      BotBoss_Dead_01: 1840031242
+      BotBoss_Dead_02: -861277389
+      BotBoss_Dead_03: 285161485
+      BotBoss_Dead_04: 1446634790
+      BotBoss_Dead_05: -1703240876
+      BotBoss_Dead_06: -699598073
+      BotBoss_Dead_07: 1529853852
+      BotBoss_Dead_08: 2035767222
+      BotBoss_Dead_09: -763962205
+      BotBoss_Defence_00: 22206665
+      BotBoss_Defence_01: 216357249
+      BotBoss_Defence_02: -1867160155
+      BotBoss_Defence_03: -1759627965
+      BotBoss_Defence_04: -1931890053
+      BotBoss_Defence_05: 1612452003
+      BotBoss_Defence_06: 2041461533
+      BotBoss_Defence_07: 683523696
+      BotBoss_Defence_08: 401683057
+      BotBoss_Defence_09: 242187466
+      BotBoss_Hit_00: -723238974
+      BotBoss_Hit_01: 129315131
+      BotBoss_Hit_02: -1722833434
+      BotBoss_Hit_03: -1838586600
+      BotBoss_Hit_04: 999944888
+      BotBoss_Idle_00: 40498594
+      BotBoss_Idle_01: -1044538967
+      Bot_Boss_png_10: 324233172
+      Bot_Boss_png_11: 590682375
+      Bot_Boss_png_12: 1613922282
+      Bot_Boss_png_13: 1710543332
+      Bot_Boss_png_36: 778422106
+      Bot_Boss_png_6: -1559136282
+      Bot_Boss_png_7: 1723388707
+      Bot_Boss_png_8: 1927798974
+      Bot_Boss_png_9: -849116671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
