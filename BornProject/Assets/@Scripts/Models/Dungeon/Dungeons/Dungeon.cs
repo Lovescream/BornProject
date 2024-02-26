@@ -59,15 +59,25 @@ namespace ZerolizeDungeon {
             }
         }
 
-        private Room GenerateRoom(int direction, bool isStartRoom = false) {
+        private Room GenerateRoom(int direction, bool isStartRoom = false)
+        {
             List<Room> rooms = Main.Resource.LoadRoom((RoomDirection)direction);
-            Room room = isStartRoom ? rooms.Where(x => {
-                string[] s = x.Key.Split('_');
-                if (s.Length != 3) return false;
-                if (s[1] != "Basic") return false;
-                return true;
-            }).FirstOrDefault() : rooms[Random.Range(0, rooms.Count)];
-            return GameObject.Instantiate(room);
+
+            Room room;
+            if (isStartRoom) {
+                room = rooms.Where(x => {
+                    string[] s = x.Key.Split('_');
+                    if (s.Length != 3) return false;
+                    if (s[1] != "Basic") return false;
+                    return true;
+                }).FirstOrDefault();
+            }
+            else {
+                var nonBasicRooms = rooms.Where(x => !x.Key.Contains("Basic")).ToList();
+                room = nonBasicRooms.Count > 0 ? nonBasicRooms[Random.Range(0, nonBasicRooms.Count)] : null;
+            }
+
+            return room != null ? GameObject.Instantiate(room) : null;
         }
     }
 
