@@ -1,0 +1,1064 @@
+fileFormatVersion: 2
+guid: 792445b8ff26d4b9186505493ce30a8b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlingblingDady_Idle_00
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 288
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0286ada6f55014e45ba3bc58e1a2131d
+      internalID: 1593939472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Idle_01
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 288
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d63520605d5842e1b1b13e7fbb7231a
+      internalID: -271035430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Idle_02
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 288
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9feed276e7ea4eea8fd87552558d7e5
+      internalID: -1616481222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Idle_03
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 288
+        width: 21
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f828ec3c4cfb64e7b9c6ed4763e2a863
+      internalID: -38926474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Idle_04
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 288
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df6dfe9f24d94e258727fda6c960c68
+      internalID: 1391806687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Idle_05
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 288
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214bc4d24a3314bd6ad8c0ad8549c3ed
+      internalID: 997610824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_00
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 240
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee77e668aa61b4494bf527ad8d786148
+      internalID: -1943834880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_01
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 243
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9364886924124424c9d475bec72b6109
+      internalID: 61966919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_02
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 242
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44bbe4d8599542a9bfb0ba8bc5ecfe2
+      internalID: -1128992219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_03
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 240
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864951b91820646a7987457ca06167f2
+      internalID: 733569200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_04
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 242
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cb65a92b6bf4e5695d429c930636ae
+      internalID: 1558400720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_05
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 241
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18276e33a7e3b42ddb0ef989a297edf9
+      internalID: -370430316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_06
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 194
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6f99afdbee74d569e6bcc30392ea8d
+      internalID: 973247133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_07
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 194
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275efa5be12e5499890b732066d6f6e2
+      internalID: 534535370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_08
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 194
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c4efacfbabe4717b3edef82da4abd1
+      internalID: -1037590734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_09
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 194
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515e31095f2d542609de20ba240840ba
+      internalID: 624050166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_10
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 194
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d448cd64e0d47d5a7e0043d6811165
+      internalID: -1403412209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_11
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 194
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b29aa1b93c64adfa9f57bc008e59de
+      internalID: -831751555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_12
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 147
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13128f2687f6415ea58ffdc766d6ec5
+      internalID: 535359326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 147
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b291b5b5fa2f492fa522df724087762
+      internalID: 1147104403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_14
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 147
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1781a9339d984ba0a9b8c427c838906
+      internalID: 2015165498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_15
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 147
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135f8d00a7f004915a232a8e07c1ddff
+      internalID: 2016249750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_16
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 147
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af8d47c7ccac414f8d9eb2da6a5d737
+      internalID: 519471032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Run_17
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 147
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307b26b462ca94df3bebb958abe00ed4
+      internalID: 1959783708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Attack_00
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 96
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21d32dc28dfc403aa62bbb3d79c5450
+      internalID: -2031372826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Attack_01
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6100f282508942a59c84722a3d35312
+      internalID: 771555762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Attack_02
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 96
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdc25ceb8ce54cc38850d76448bf32a
+      internalID: 1909615085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Attack_03
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 96
+        width: 30
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b646582f34414bd4bbc634ba6b410b3
+      internalID: -1518381820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Attack_04
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 96
+        width: 27
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4bf4942f3a348cf8a1ba2a5ec379bf
+      internalID: -2106387585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Attack_05
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 96
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8522fea89b11474cac6ee8e4d33b82c
+      internalID: 1803905807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Hit_00
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 48
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5556c780c70304619ba83a5521cb8f25
+      internalID: -596182494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Hit_01
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 48
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab99f7618370546118e101d4433d0729
+      internalID: 1393418963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Hit_02
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 48
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec780f88803bc4965b2510f006d364f8
+      internalID: -1340214185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Hit_03
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 48
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdf4bb850b16491399a950acbb476b9
+      internalID: -1974127764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Hit_04
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 48
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e87b1b07f62d4b45a6d31a2b7692c4b
+      internalID: 1259792990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Hit_05
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 48
+        width: 21
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4383fc0fdc4c64042a6321285a752fdd
+      internalID: -1143007442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Dead_00
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 23
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7704af90e484a978f4b2a9811c4fa5
+      internalID: 1454046485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Dead_01
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1
+        width: 25
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ba564bd480341398e9e236af2db331
+      internalID: -755921719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Dead_02
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 27
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15374d9db98b64636bfcf5e29a39206f
+      internalID: -1356934863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Dead_03
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 0
+        width: 17
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac52caf10de95467db1388af47ac9677
+      internalID: 2133983775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Dead_04
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 0
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4169a2936355244fbb06043a993cff0c
+      internalID: -885358748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlingblingDady_Dead_05
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab01ac8fde49e4b66bc338eaaa27f2d8
+      internalID: 705070539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BlingblingDady_Attack_00: -2031372826
+      BlingblingDady_Attack_01: 771555762
+      BlingblingDady_Attack_02: 1909615085
+      BlingblingDady_Attack_03: -1518381820
+      BlingblingDady_Attack_04: -2106387585
+      BlingblingDady_Attack_05: 1803905807
+      BlingblingDady_Dead_00: 1454046485
+      BlingblingDady_Dead_01: -755921719
+      BlingblingDady_Dead_02: -1356934863
+      BlingblingDady_Dead_03: 2133983775
+      BlingblingDady_Dead_04: -885358748
+      BlingblingDady_Dead_05: 705070539
+      BlingblingDady_Hit_00: -596182494
+      BlingblingDady_Hit_01: 1393418963
+      BlingblingDady_Hit_02: -1340214185
+      BlingblingDady_Hit_03: -1974127764
+      BlingblingDady_Hit_04: 1259792990
+      BlingblingDady_Hit_05: -1143007442
+      BlingblingDady_Idle_00: 1593939472
+      BlingblingDady_Idle_01: -271035430
+      BlingblingDady_Idle_02: -1616481222
+      BlingblingDady_Idle_03: -38926474
+      BlingblingDady_Idle_04: 1391806687
+      BlingblingDady_Idle_05: 997610824
+      BlingblingDady_Run_00: -1943834880
+      BlingblingDady_Run_01: 61966919
+      BlingblingDady_Run_02: -1128992219
+      BlingblingDady_Run_03: 733569200
+      BlingblingDady_Run_04: 1558400720
+      BlingblingDady_Run_05: -370430316
+      BlingblingDady_Run_06: 973247133
+      BlingblingDady_Run_07: 534535370
+      BlingblingDady_Run_08: -1037590734
+      BlingblingDady_Run_09: 624050166
+      BlingblingDady_Run_10: -1403412209
+      BlingblingDady_Run_11: -831751555
+      BlingblingDady_Run_12: 535359326
+      BlingblingDady_Run_13: 1147104403
+      BlingblingDady_Run_14: 2015165498
+      BlingblingDady_Run_15: 2016249750
+      BlingblingDady_Run_16: 519471032
+      BlingblingDady_Run_17: 1959783708
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
