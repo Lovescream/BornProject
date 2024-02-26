@@ -9,6 +9,7 @@ public class Player : Creature, ISkillMan, IAttackable {
 
     #region Properties
 
+    public Entity Entity => this;
     public Attacker Attacker { get; protected set; }
     public SkillList SkillList { get; protected set; }
     public SkillStatus DefaultStatus { get; protected set; }
@@ -149,6 +150,7 @@ public class Player : Creature, ISkillMan, IAttackable {
         Skill skill = SkillList.Current;
         return new() {
             Owner = this,
+            SkillKey = skill.Data.Key,
             HitColliderKey = skill.Data.HitColliderKey,
             RadiusOffset = skill.Data.RadiusOffset,
             RotationAngle = skill.Data.RotationAngle < 0 ? LookAngle : skill.Data.RotationAngle,

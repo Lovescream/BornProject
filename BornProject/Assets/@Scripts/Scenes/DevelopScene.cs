@@ -13,7 +13,7 @@ public class DevelopScene : BaseScene {
                 player.SetInfo(Main.Data.Creatures["Player"]);
             }
             else if (entity is Enemy enemy) {
-                enemy.SetInfo(Main.Data.Creatures[$"{enemy.Key}"]);
+                enemy.SetInfo(Main.Data.Creatures[$"{enemy.ManualInitializingKey}"]);
             }
         }
         return true;

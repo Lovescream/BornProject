@@ -1,10 +1,6 @@
 using ZerolizeDungeon;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-using UnityEngine.InputSystem;
 
 public class Creature : Entity {
 
@@ -79,10 +75,7 @@ public class Creature : Entity {
     // Components.
     protected Transform _indicatorAxisAxis;
     protected Transform _indicatorAxis;
-    protected SpriteRenderer _spriter;
-    protected Collider2D _collider;
     protected Rigidbody2D _rigidbody;
-    protected Animator _animator;
 
     // Callbacks.
     public event Action<float> OnChangedHp;
@@ -119,14 +112,9 @@ public class Creature : Entity {
     public override bool Initialize() {
         if (!base.Initialize()) return false;
 
-        _spriter = this.GetComponent<SpriteRenderer>();
-        _collider = this.GetComponent<Collider2D>();
         _rigidbody = this.GetComponent<Rigidbody2D>();
-        _animator = this.GetComponent<Animator>();
 
         this.gameObject.layer = Main.CreatureLayer;
-
-        _spriter.RegisterSpriteChangeCallback(FitCollider);
 
         return true;
     }
@@ -210,14 +198,6 @@ public class Creature : Entity {
     }
 
 
-    private void FitCollider(SpriteRenderer spriter) {
-        if (spriter.sprite == null) return;
-        Vector2 size = spriter.sprite.bounds.size * 0.8f;
-        Vector2 offset = (Vector2)(spriter.bounds.center - this.transform.position);
-        BoxCollider2D boxCollider = _collider as BoxCollider2D;
-        boxCollider.size = size;
-        boxCollider.offset = offset;
-    }
 
 }
 
