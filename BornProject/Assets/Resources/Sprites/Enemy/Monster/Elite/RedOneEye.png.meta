@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4d661a14f19ae4f48aef1be1f1009976
+guid: acb3d7fa820844dbda5b6c1cfbf2c140
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,327 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Groot_Idle_00
+      name: RedOneEye_Idle_00
       rect:
         serializedVersion: 2
-        x: 8
-        y: 128
-        width: 16
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59dbe902f4b6a42ac9d001da43791203
-      internalID: -470899802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Idle_01
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 128
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d729a714a7964686b0997c00606b1bc
-      internalID: 2108751739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Idle_02
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 128
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 929a41cb7ba34478d97ca9ebfa7c4f76
-      internalID: -1611488556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Idle_03
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 128
-        width: 16
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a24c6b7bdbe44ad8b3715ea3cbabf73
-      internalID: -528323822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Run_00
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 96
-        width: 16
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d1b8ef9be449454dbc6d35f97079a3a
-      internalID: -1070430529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Run_01
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 98
-        width: 16
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f910d2ee047114a20929d3c732b26669
-      internalID: -71684904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Run_02
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 100
-        width: 17
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a9aed02b35ba41ec812b259b9c1ff2a
-      internalID: -1446559095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Run_03
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 98
-        width: 16
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c989dd8feb8d44299f71b83fa119bd4
-      internalID: 2082954344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Run_04
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 96
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a60268fdbfe7342468e84b67e553e99c
-      internalID: 183631417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Run_05
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 100
-        width: 11
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36426f81486664fa7a59be70d55bdae9
-      internalID: -874742947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Run_06
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 102
-        width: 11
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 743542de3f01a42b68527199531251ec
-      internalID: -126373693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Run_07
-      rect:
-        serializedVersion: 2
-        x: 234
-        y: 100
-        width: 11
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c467825d7a704495fa2552456ac0a5f5
-      internalID: -955759498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Attack_00
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 64
-        width: 16
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 659d1b481d81a49639b572db6435ea10
-      internalID: -1823261866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Attack_01
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 64
-        width: 15
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3005a0df414114b46bbe9f6499bae751
-      internalID: -1056066892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Attack_02
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 64
-        width: 16
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9312567c4c274fbf87f55ca93cdb30f
-      internalID: 824932245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groot_Attack_03
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 64
-        width: 16
+        x: 15
+        y: 192
+        width: 18
         height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -452,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95358d8985da44a528f19cfb7f607d22
-      internalID: 210509320
+      spriteID: ff0e2bbcead344e32986511fd5d13c7a
+      internalID: -1497631758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Attack_04
+      name: RedOneEye_Idle_01
       rect:
         serializedVersion: 2
-        x: 136
-        y: 64
-        width: 23
-        height: 14
+        x: 63
+        y: 192
+        width: 18
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2b1423c3b8e5436eb1e0106c830fdda
-      internalID: 1155076186
+      spriteID: 865d1cc76f1884fca8598fdd0c6ecb10
+      internalID: 1567812348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Attack_05
+      name: RedOneEye_Idle_02
       rect:
         serializedVersion: 2
-        x: 168
-        y: 64
-        width: 19
-        height: 15
+        x: 111
+        y: 192
+        width: 18
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0054aeeb8a40e40cb964f1820c38c1b8
-      internalID: -1918384201
+      spriteID: 66bc17361e5d64f8396b787b159fecba
+      internalID: 1333672705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Hit_00
+      name: RedOneEye_Idle_03
       rect:
         serializedVersion: 2
-        x: 8
-        y: 32
-        width: 16
-        height: 15
+        x: 159
+        y: 192
+        width: 18
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6094fe0422cf041779eb2e421d46d2d9
-      internalID: 343374782
+      spriteID: 63688f1b9894647659f195c9d08c19d9
+      internalID: 1127299659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Hit_01
+      name: RedOneEye_Idle_04
       rect:
         serializedVersion: 2
-        x: 40
-        y: 33
-        width: 16
-        height: 15
+        x: 207
+        y: 192
+        width: 18
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -536,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c795d20c9db443ac80e15f2870027d0
-      internalID: -35202856
+      spriteID: 09774f9e03d924dbd961141f398c46df
+      internalID: -1649869238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Hit_02
+      name: RedOneEye_Idle_05
       rect:
         serializedVersion: 2
-        x: 72
-        y: 36
-        width: 16
-        height: 13
+        x: 255
+        y: 192
+        width: 18
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc4fdb482a158450a8431eb47c29e815
-      internalID: 237179718
+      spriteID: b83334f909a174da688d36c4a1595c42
+      internalID: -2013309429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Hit_03
+      name: RedOneEye_Run_00
       rect:
         serializedVersion: 2
-        x: 104
-        y: 33
-        width: 16
-        height: 15
+        x: 15
+        y: 144
+        width: 18
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -578,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a91f06e88374458398be20737b99649
-      internalID: 585930924
+      spriteID: 164776303a6c74560bd0563690125356
+      internalID: 559702023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Hit_04
+      name: RedOneEye_Run_01
       rect:
         serializedVersion: 2
-        x: 136
-        y: 32
-        width: 16
-        height: 14
+        x: 63
+        y: 147
+        width: 18
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d73b5f91d81104c13b2438c2ed752ba9
-      internalID: -898488363
+      spriteID: c3e843a8b41ce430c8f042abb02e5d8f
+      internalID: -824314080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Dead_00
+      name: RedOneEye_Run_02
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 16
-        height: 15
+        x: 111
+        y: 145
+        width: 18
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -620,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 229b8a582eeaa4bddb040aa788fca4fa
-      internalID: 1368745737
+      spriteID: 9aa217c77ec3d488b835409964767298
+      internalID: 775050251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Dead_01
+      name: RedOneEye_Run_03
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 16
-        height: 15
+        x: 159
+        y: 144
+        width: 18
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -641,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9403e4b44fb6046a693f4a26594c034d
-      internalID: -1014997750
+      spriteID: f8b8db91f39664079b3484fc779df9c7
+      internalID: -680710138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Dead_02
+      name: RedOneEye_Run_04
       rect:
         serializedVersion: 2
-        x: 72
-        y: 2
-        width: 16
-        height: 13
+        x: 205
+        y: 148
+        width: 25
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f8ea81bac42445d0a22ef188d40337a
-      internalID: -2029625382
+      spriteID: dbe4cd83606d7455c9a5a0be66936260
+      internalID: -1431044699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Dead_03
+      name: RedOneEye_Run_05
       rect:
         serializedVersion: 2
-        x: 102
-        y: 2
-        width: 23
-        height: 19
+        x: 253
+        y: 146
+        width: 25
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -683,19 +368,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8231976ded754ab299ef5af1f025e71
-      internalID: 1313529695
+      spriteID: 844bd67b3ae424595adea0dcee85cba2
+      internalID: 91478604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Groot_Dead_04
+      name: RedOneEye_Attack_00
       rect:
         serializedVersion: 2
-        x: 130
-        y: 0
-        width: 29
+        x: 15
+        y: 96
+        width: 20
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f254c042a48274824875712542d82706
+      internalID: -1383450119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Attack_01
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 98
+        width: 27
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc5e2721137e4570a9e726dcb7e279e
+      internalID: 1496646024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Attack_02
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 96
+        width: 26
         height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -704,8 +431,302 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc272c9d3477c4f4eb7216d15a8b2a03
-      internalID: 780190665
+      spriteID: 21f6074065f574797903a1c8c74b06fb
+      internalID: -334168669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Attack_03
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 96
+        width: 26
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0aa151b73aa4d9a8ff3f9ca6f38a4d
+      internalID: -1423656561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Attack_04
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 96
+        width: 26
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953b4ad3405d64669adcf0ff660ecd6d
+      internalID: 892690354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Attack_05
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 96
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0f4eb96f0b04cb086706d292fcedb7
+      internalID: 1179807606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Hit_00
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 49
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f04ad50abc47491cba24a45b2421893
+      internalID: -2082837607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Hit_01
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 49
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885eed8b82ba1443d940f080a364423b
+      internalID: -1931331837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Hit_02
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 48
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852bb2f141e3143db9ef29eca442f0bf
+      internalID: 741407601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Hit_03
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 48
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9a8ca7f45394e3ca872e4f13c070c6
+      internalID: -95314001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Hit_04
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 48
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e815fcd8b46cc4d478e51d84963936ba
+      internalID: 1605083311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Hit_05
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 48
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e36b6b1c9f14007a18dabacb271bb9
+      internalID: 575604603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Dead_00
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c5e06fc042b4a4d91896a5b064d847
+      internalID: -1403627639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Dead_01
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 3
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a9d4d57c95140ef958209a1f9763d1
+      internalID: 162300339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Dead_02
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 5
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb7eb9808c3d4ee2aa9dfedfea64742
+      internalID: 862547344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Dead_03
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 7
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c805d35d5baf745e18ebad4de596ca3e
+      internalID: 1949640154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedOneEye_Dead_04
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 9
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32c19657f857459a9d2b59226fcef73
+      internalID: -757341315
       vertices: []
       indices: 
       edges: []
@@ -721,34 +742,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Groot_Attack_00: -1823261866
-      Groot_Attack_01: -1056066892
-      Groot_Attack_02: 824932245
-      Groot_Attack_03: 210509320
-      Groot_Attack_04: 1155076186
-      Groot_Attack_05: -1918384201
-      Groot_Dead_00: 1368745737
-      Groot_Dead_01: -1014997750
-      Groot_Dead_02: -2029625382
-      Groot_Dead_03: 1313529695
-      Groot_Dead_04: 780190665
-      Groot_Hit_00: 343374782
-      Groot_Hit_01: -35202856
-      Groot_Hit_02: 237179718
-      Groot_Hit_03: 585930924
-      Groot_Hit_04: -898488363
-      Groot_Idle_00: -470899802
-      Groot_Idle_01: 2108751739
-      Groot_Idle_02: -1611488556
-      Groot_Idle_03: -528323822
-      Groot_Run_00: -1070430529
-      Groot_Run_01: -71684904
-      Groot_Run_02: -1446559095
-      Groot_Run_03: 2082954344
-      Groot_Run_04: 183631417
-      Groot_Run_05: -874742947
-      Groot_Run_06: -126373693
-      Groot_Run_07: -955759498
+      RedOneEye_Attack_00: -1383450119
+      RedOneEye_Attack_01: 1496646024
+      RedOneEye_Attack_02: -334168669
+      RedOneEye_Attack_03: -1423656561
+      RedOneEye_Attack_04: 892690354
+      RedOneEye_Attack_05: 1179807606
+      RedOneEye_Dead_00: -1403627639
+      RedOneEye_Dead_01: 162300339
+      RedOneEye_Dead_02: 862547344
+      RedOneEye_Dead_03: 1949640154
+      RedOneEye_Dead_04: -757341315
+      RedOneEye_Hit_00: -2082837607
+      RedOneEye_Hit_01: -1931331837
+      RedOneEye_Hit_02: 741407601
+      RedOneEye_Hit_03: -95314001
+      RedOneEye_Hit_04: 1605083311
+      RedOneEye_Hit_05: 575604603
+      RedOneEye_Idle_00: -1497631758
+      RedOneEye_Idle_01: 1567812348
+      RedOneEye_Idle_02: 1333672705
+      RedOneEye_Idle_03: 1127299659
+      RedOneEye_Idle_04: -1649869238
+      RedOneEye_Idle_05: -2013309429
+      RedOneEye_Run_00: 559702023
+      RedOneEye_Run_01: -824314080
+      RedOneEye_Run_02: 775050251
+      RedOneEye_Run_03: -680710138
+      RedOneEye_Run_04: -1431044699
+      RedOneEye_Run_05: 91478604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

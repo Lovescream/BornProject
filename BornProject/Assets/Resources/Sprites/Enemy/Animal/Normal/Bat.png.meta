@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 49186ccd9f6fc491d9a277ed0c99b601
+guid: debcce7b1fa834cc9bfc335a84bde6dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_0
+      name: Bat_Idle_00
       rect:
         serializedVersion: 2
-        x: 7
-        y: 135
-        width: 17
-        height: 17
+        x: 1
+        y: 61
+        width: 13
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 310e7c30fa4d344ca95001406b31acf5
-      internalID: -1980967348
+      spriteID: 018f5285672e0426aa8153dd92aff845
+      internalID: 1141357789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_1
+      name: Bat_Idle_01
       rect:
         serializedVersion: 2
-        x: 39
-        y: 138
-        width: 20
-        height: 14
+        x: 18
+        y: 60
+        width: 12
+        height: 9
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99e5a308b6da54de68ae5bc086836f03
-      internalID: 1095075320
+      spriteID: 06700f632447c419fba7ef079fb07c1c
+      internalID: 2038490552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_2
+      name: Bat_Idle_02
       rect:
         serializedVersion: 2
-        x: 70
-        y: 137
-        width: 22
-        height: 14
+        x: 35
+        y: 58
+        width: 10
+        height: 10
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e9a7cb33ec074c6ea8669b35addeafa
-      internalID: 991768221
+      spriteID: dcc8bbf98e5f541218eb3e9cd07ed307
+      internalID: 598236817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_3
+      name: Bat_Idle_03
       rect:
         serializedVersion: 2
-        x: 102
-        y: 137
-        width: 21
-        height: 13
+        x: 51
+        y: 59
+        width: 10
+        height: 10
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8aa86b14ed754cc7b41161d973bc46c
-      internalID: 821084673
+      spriteID: 4965a51cb13d24f5d925a6b1858abff7
+      internalID: -1918062098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_4
+      name: Bat_Idle_04
       rect:
         serializedVersion: 2
-        x: 7
-        y: 103
-        width: 17
-        height: 17
+        x: 64
+        y: 62
+        width: 16
+        height: 6
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,209 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c05e4a91b99184301b96ae0d57705215
-      internalID: 1091871255
+      spriteID: 8c6f35ca15f5743c5aeec9c2e8535371
+      internalID: -1838431858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_5
+      name: Bat_Run_00
       rect:
         serializedVersion: 2
-        x: 38
-        y: 105
-        width: 21
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9aa051784d9a7447fbd11915c59eb2c4
-      internalID: 2095616278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 101
-        width: 22
-        height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80152f16369b14a99aa0ac50f71670f1
-      internalID: -1431432943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 102
-        width: 21
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e604a7811cd9043ce8cd2a988451bf07
-      internalID: -180514583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 71
-        width: 17
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb0206d34f2634bf49e90d56e9133696
-      internalID: 2059489217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 74
-        width: 17
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a672b1ee7733047f5948cb8d14dc90b9
-      internalID: 522400629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 73
-        width: 22
-        height: 20
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7bdcfcb962e24187941784b171e1d5b
-      internalID: 824783428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 73
-        width: 21
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06db44c16363742c9ad12f9fabd3da86
-      internalID: -298795471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 39
-        width: 17
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66c142b0decf24855aaad009d57dbf77
-      internalID: 1537256839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 41
-        width: 21
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 071ffabda3eba44b380e52b5cb004605
-      internalID: 1614478001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 69
+        x: 1
         y: 37
-        width: 23
-        height: 22
+        width: 13
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,62 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d488c62028ce842c3bdda3de3d24bb02
-      internalID: -985998849
+      spriteID: d39e3881c6706470985c6e1980f3b643
+      internalID: 657945360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_15
+      name: Bat_Run_01
       rect:
         serializedVersion: 2
-        x: 99
-        y: 37
-        width: 23
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3688d20508f2b4dafb2dc5d55cbef62e
-      internalID: 709742289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 33
-        width: 28
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c374531cd90964c019d42cb729e72b23
-      internalID: 1408559182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 163
+        x: 18
         y: 36
-        width: 25
-        height: 27
+        width: 12
+        height: 9
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,19 +263,166 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1bf7dde313cf483581fcd141cba4dc6
-      internalID: 1949175657
+      spriteID: 09a2988cea7194f558975ab22a9ebcde
+      internalID: -740346331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_18
+      name: Bat_Run_02
       rect:
         serializedVersion: 2
-        x: 13
-        y: 14
-        width: 5
+        x: 34
+        y: 34
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ededd90f491e42d5949e0ed9f2bd35c
+      internalID: -520488049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Run_03
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 35
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22da6851be6846758b7dc4216e63643
+      internalID: -1527705320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Run_04
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 38
+        width: 16
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acccd50d6bf244cd6889a529a361ffda
+      internalID: 177034304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Dead_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 16
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbd6be9fd60d4f509ffc5bea8283ef7
+      internalID: 2036794831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Dead_01
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 9
+        width: 10
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c44aaa95d5574c30af3550c377e9301
+      internalID: -255950029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Dead_02
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 6
+        width: 8
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13090126988b743caa2738b166f787a4
+      internalID: -187424880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Dead_03
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 2
+        width: 9
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac50e145d229a4049bf93206e391c9ad
+      internalID: -159857428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Dead_04
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 15
         height: 5
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -515,29 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ef8b9bed9b87475db1cb72ac01f83dd
-      internalID: -374470597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 14
-        width: 4
-        height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64682c3ba98e34e4d99cac4430f42d04
-      internalID: -993877434
+      spriteID: 5b0090b7195ff4201b198ee48982ca0d
+      internalID: -882712123
       vertices: []
       indices: 
       edges: []
@@ -553,26 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Giant Fly Sprite Sheet_0: -1980967348
-      Giant Fly Sprite Sheet_1: 1095075320
-      Giant Fly Sprite Sheet_10: 824783428
-      Giant Fly Sprite Sheet_11: -298795471
-      Giant Fly Sprite Sheet_12: 1537256839
-      Giant Fly Sprite Sheet_13: 1614478001
-      Giant Fly Sprite Sheet_14: -985998849
-      Giant Fly Sprite Sheet_15: 709742289
-      Giant Fly Sprite Sheet_16: 1408559182
-      Giant Fly Sprite Sheet_17: 1949175657
-      Giant Fly Sprite Sheet_18: -374470597
-      Giant Fly Sprite Sheet_19: -993877434
-      Giant Fly Sprite Sheet_2: 991768221
-      Giant Fly Sprite Sheet_3: 821084673
-      Giant Fly Sprite Sheet_4: 1091871255
-      Giant Fly Sprite Sheet_5: 2095616278
-      Giant Fly Sprite Sheet_6: -1431432943
-      Giant Fly Sprite Sheet_7: -180514583
-      Giant Fly Sprite Sheet_8: 2059489217
-      Giant Fly Sprite Sheet_9: 522400629
+      Bat_Dead_00: 2036794831
+      Bat_Dead_01: -255950029
+      Bat_Dead_02: -187424880
+      Bat_Dead_03: -159857428
+      Bat_Dead_04: -882712123
+      Bat_Idle_00: 1141357789
+      Bat_Idle_01: 2038490552
+      Bat_Idle_02: 598236817
+      Bat_Idle_03: -1918062098
+      Bat_Idle_04: -1838431858
+      Bat_Run_00: 657945360
+      Bat_Run_01: -740346331
+      Bat_Run_02: -520488049
+      Bat_Run_03: -1527705320
+      Bat_Run_04: 177034304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
