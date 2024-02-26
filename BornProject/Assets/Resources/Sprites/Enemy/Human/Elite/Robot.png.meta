@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d5c9dcaf83dfb448eafe80e14f2e2d97
+guid: f507cfdb207f048a09f213d6084449d6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shoot_Hit_0
+      name: Robot_Idle_00
       rect:
         serializedVersion: 2
-        x: 1665
-        y: 66
-        width: 5
-        height: 5
+        x: 11
+        y: 109
+        width: 12
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,398 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf40cad95dbf4ef4492f14ce1e8cf1ad
-      internalID: 51888764
+      spriteID: 366f61ed5605614499ea4ded92d72be1
+      internalID: -794970578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Attack_00
+      name: Robot_Idle_01
       rect:
         serializedVersion: 2
-        x: 33
-        y: 26
+        x: 43
+        y: 108
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1fb0e6d168bae46ae1e1396c2a6d9b
+      internalID: 748220274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Idle_02
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 107
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d6df39ac8fe0e40a2e25bcf559ecb0
+      internalID: -1981682785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Idle_03
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 108
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ad0fb87b3ab0b4fa825632e2476691
+      internalID: 2118490057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Run_00
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 77
+        width: 13
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25521ee237649214987b80c53e213527
+      internalID: -301707521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Run_01
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 76
+        width: 13
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ad52400984e1b4c9bb6513a606db8a
+      internalID: -1089418058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Run_0
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 75
+        width: 13
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cf24d07870e1f4c80a551eb3e22c8f
+      internalID: 878647436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Run_03
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 76
+        width: 13
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171a1943066ac2e448099bc795d586e6
+      internalID: 1024496192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Shoot_00
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 42
+        width: 17
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc57a5ebb9c40140841390183fcb845
+      internalID: -1706937366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Shoot_01
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 43
+        width: 16
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a488b75e6eb2c84284a8eba7ba6311d
+      internalID: 102254748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Shoot_02
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 42
+        width: 13
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd12c8ca614556b40b0b20b4e6caea43
+      internalID: 1533701428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Shoot_03
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 43
+        width: 12
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da112afd132a22041aeccd2631ea3941
+      internalID: -984442890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Dead_00
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 13
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dbc08e1963019429f30e93ec56ba3b
+      internalID: 354440546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Dead_01
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 13
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b836663a129fe9f4584a5e5dafd3f8a3
+      internalID: -1847000755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Dead_02
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 13
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e783cff261ff8428152e6a2d4db053
+      internalID: 1406883739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Dead_03
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 11
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f75a956e9b64cd41811c065a5e0d6ae
+      internalID: 1492539725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Dead_04
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 9
+        width: 20
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763187ca3ca82ed43a592fffd3a2c6a7
+      internalID: -827845950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Dead_05
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2
+        width: 29
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8775770fa669d31448f33cb2b3f235ee
+      internalID: -949141555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Dead_06
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2
+        width: 32
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afcf2b034bc0a44c9a637ca46556a73
+      internalID: 693625190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Dead_07
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 3
         width: 30
-        height: 37
+        height: 27
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,428 +536,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fef13d9ba6fb4c42bfe72316c16eb6d
-      internalID: -1536629829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_player_6
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67b1deadda788e445875e85831de4c11
-      internalID: -1177875559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Attack_02
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 26
-        width: 42
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d603e64154061fc49b19417ab03d5ead
-      internalID: 1249245354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Attack_03
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 26
-        width: 47
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c197f230c0988f74094df1c6a8e9062a
-      internalID: 1712556090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Idle_00
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98b43c3e368784d4ca9278ade867f3a4
-      internalID: -142660988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Idle_01
-      rect:
-        serializedVersion: 2
-        x: 483
-        y: 26
-        width: 30
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12d36ddcb0bb3654a961ed38dab50232
-      internalID: -977751735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Idle_02
-      rect:
-        serializedVersion: 2
-        x: 573
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b997eab806152b44a917221ebbbb529
-      internalID: 1310459802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Idle_03
-      rect:
-        serializedVersion: 2
-        x: 663
-        y: 26
-        width: 30
-        height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a51e10a44bc14a542bbc13fdaf0ebbf7
-      internalID: -2108346538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Walk_00
-      rect:
-        serializedVersion: 2
-        x: 753
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86a05a95a78cd0e4281d211dd51fc8e7
-      internalID: -565713867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Walk_01
-      rect:
-        serializedVersion: 2
-        x: 843
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28902064d76e4d2438d3b164ffa3a4be
-      internalID: -115532121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Walk_02
-      rect:
-        serializedVersion: 2
-        x: 932
-        y: 31
-        width: 31
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a1565a8db51438419e602c0368e70b6
-      internalID: -1173165650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Walk_03
-      rect:
-        serializedVersion: 2
-        x: 1023
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b534e600bae112408412782f5be7813
-      internalID: -1024362399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Walk_04
-      rect:
-        serializedVersion: 2
-        x: 1113
-        y: 27
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7b2f5dafa91b9549a31cd77e1880b58
-      internalID: -758917445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Walk_05
-      rect:
-        serializedVersion: 2
-        x: 1203
-        y: 31
-        width: 30
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6c64d6754164a44595fb7d412359856
-      internalID: -561738220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Walk_06
-      rect:
-        serializedVersion: 2
-        x: 1293
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a56750b8b58f9743829c98bbb3594de
-      internalID: -2070075531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_player_24
-      rect:
-        serializedVersion: 2
-        x: 1643
-        y: 53
-        width: 5
-        height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55ff28469d3ea0b46bda2a38832166a2
-      internalID: -979445122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Hit_00
-      rect:
-        serializedVersion: 2
-        x: 1833
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bc2432e5e1f1b14897825e7057360ba
-      internalID: -920706001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_player_26
-      rect:
-        serializedVersion: 2
-        x: 1923
-        y: 26
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac24143a8299fc94ea190992837fdae1
-      internalID: -2090995612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Hit_02
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 26
-        width: 42
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57ac95ae872c4e14cb3adfd8eff3c76c
-      internalID: 1397020107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_player_30
-      rect:
-        serializedVersion: 2
-        x: 1683
-        y: 48
-        width: 5
-        height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a49d0519cca8ce341b5f36fe8f274b47
-      internalID: 393976611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot_Dead_03
-      rect:
-        serializedVersion: 2
-        x: 2073
-        y: 21
-        width: 83
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ef8978afce5415458359b9e3043ebb7
-      internalID: -1451572760
+      spriteID: 5764443e433f53c4b97240ae570891c2
+      internalID: 1539816103
       vertices: []
       indices: 
       edges: []
@@ -595,38 +553,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shoot_Attack_00: 1712556090
-      Shoot_Attack_02: -142660988
-      Shoot_Attack_03: -977751735
-      Shoot_Dead_03: -1451572760
-      Shoot_Hit_0: -2090995612
-      Shoot_Hit_00: 51888764
-      Shoot_Hit_02: 1397020107
-      Shoot_Idle_00: 1310459802
-      Shoot_Idle_01: -2108346538
-      Shoot_Idle_02: -565713867
-      Shoot_Idle_03: -115532121
-      Shoot_Walk_00: -1173165650
-      Shoot_Walk_01: -1024362399
-      Shoot_Walk_02: -758917445
-      Shoot_Walk_03: -561738220
-      Shoot_Walk_04: -2070075531
-      Shoot_Walk_05: -1894557148
-      Shoot_Walk_06: -920706001
-      Shoot_player_2: -885270529
-      Shoot_player_21: -1004593836
-      Shoot_player_22: -345461773
-      Shoot_player_24: -920706001
-      Shoot_player_26: 1332332535
-      Shoot_player_28: 393976611
-      Shoot_player_29: -1848981643
-      Shoot_player_3: 101495883
-      Shoot_player_30: -162658838
-      Shoot_player_31: -1536629829
-      Shoot_player_32: 1249245354
-      Shoot_player_4: 1786088430
-      Shoot_player_6: -1177875559
-      Shoot_player_9: 1686334995
+      Robot_14: -1179685318
+      Robot_23: -802172644
+      Robot_4: 73160071
+      Robot_9: 1124674671
+      Robot_Dead_00: 354440546
+      Robot_Dead_01: -1847000755
+      Robot_Dead_02: 1406883739
+      Robot_Dead_03: 1492539725
+      Robot_Dead_04: -827845950
+      Robot_Dead_05: -949141555
+      Robot_Dead_06: 693625190
+      Robot_Dead_07: 1539816103
+      Robot_Idle_00: -794970578
+      Robot_Idle_01: 748220274
+      Robot_Idle_02: -1981682785
+      Robot_Idle_03: 2118490057
+      Robot_Run_0: 878647436
+      Robot_Run_00: -301707521
+      Robot_Run_01: -1089418058
+      Robot_Run_03: 1024496192
+      Robot_Shoot_00: -1706937366
+      Robot_Shoot_01: 102254748
+      Robot_Shoot_02: 1533701428
+      Robot_Shoot_03: -984442890
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
