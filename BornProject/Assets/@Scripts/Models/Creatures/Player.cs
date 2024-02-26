@@ -134,7 +134,8 @@ public class Player : Creature, ISkillMan, IAttackable {
 
     public override void OnHit(IHitCollider attacker) {
         base.OnHit(attacker);
-        AudioController.Instance.SFXPlay(SFX.PlayerHit);
+        if (AudioController.Instance != null)
+            AudioController.Instance.SFXPlay(SFX.PlayerHit);
     }
     public void Attack() {
         if (this.IsDead) return;

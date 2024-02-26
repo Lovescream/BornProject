@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4284631691097993870}
   - component: {fileID: 6941498937388433012}
   - component: {fileID: 4733608277957159836}
+  - component: {fileID: 2196299988765198375}
   m_Layer: 0
   m_Name: Snake_Base_Attack
   m_TagString: Untagged
@@ -180,3 +181,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2196299988765198375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401310912962007266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00392501a7f8b1c4b82b6bdbda480ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoInitialize: 1
+  _key: 
