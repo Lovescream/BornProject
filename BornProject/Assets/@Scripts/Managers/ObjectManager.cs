@@ -84,7 +84,7 @@ public class ObjectManager {
         }
         obj.transform.position = position;
 
-        return obj.GetOrAddComponent<T>();
+        return obj.GetComponent<T>();
     }
 
     private void Despawn<T>(T obj) where T : Entity {

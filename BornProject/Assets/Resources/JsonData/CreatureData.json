@@ -44,11 +44,11 @@
     "Damage": 10.0,
     "Defense": 1.0,
     "MoveSpeed": 1.0,
-    "AttackSpeed": 1.0,
-    "Range": 3.0,
+    "AttackSpeed": 0.8,
+    "Range": 5.0,
     "Sight": 5.0,
     "Skills": "Beatle",
-    "DefaultSkills": "Beatle_Base_Attack",
+    "DefaultSkills": "Beatle_Base_Acid",
     "Key": "Beatle"
   },
   {
