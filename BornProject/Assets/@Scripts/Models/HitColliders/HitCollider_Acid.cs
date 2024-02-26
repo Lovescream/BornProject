@@ -4,55 +4,49 @@ using UnityEngine;
 
 public class HitCollider_Acid : HitCollider {
 
-    #region Fields
+    //#region Initialize / Set
 
-    protected static readonly int AnimatorParameterHash_Initialize = Animator.StringToHash("Initialize");
-    protected static readonly int AnimatorParameterHash_Hit = Animator.StringToHash("Hit");
-    protected static readonly int AnimatorParameterHash_Disappear = Animator.StringToHash("Disappear");
+    //public override void SetInfo(string key, HitColliderInfo info, HitInfo hitInfo) {
+    //    base.SetInfo(key, info, hitInfo);
 
-    private bool _activated = false;
+    //    this.RemainPenetration = 0;
+    //    _animator.SetTrigger(AnimatorParameterHash_Initialize);
 
-    #endregion
+    //    _activated = true;
+    //}
 
-    #region Initialize / Set
+    //#endregion
 
-    public override void SetInfo(string key, HitColliderInfo info, HitInfo hitInfo) {
-        base.SetInfo(key, info, hitInfo);
+    //protected override void Update() {
+    //    base.Update();
+    //}
 
-        this.RemainPenetration = 0;
-        _animator.SetTrigger(AnimatorParameterHash_Initialize);
+    //#region Callbacks
 
-        _activated = true;
-    }
+    //protected override void OnHit(bool destroy = false) {
+    //    if (!_activated) return;
+    //    _collider.enabled = false;
+    //    _rigidbody.simulated = false;
 
-    #endregion
+    //    _animator.SetTrigger(AnimatorParameterHash_Hit);
+    //    _activated = false;
+    //}
 
-    #region Callbacks
+    //protected override void OnEndDuration() {
+    //    if (!_activated) return;
+    //    _animator.SetTrigger(AnimatorParameterHash_Disappear);
+    //    _activated = false;
+    //}
 
-    protected override void OnHit(bool destroy = false) {
-        if (!_activated) return;
-        _collider.enabled = false;
-        _rigidbody.simulated = false;
+    //protected override void OnEndRange() {
+    //    if (!_activated) return;
+    //    _animator.SetTrigger(AnimatorParameterHash_Disappear);
+    //    _activated = false;
+    //}
 
-        _animator.SetTrigger(AnimatorParameterHash_Hit);
-        _activated = false;
-    }
+    //protected override void OnExitAnimation() {
+    //    base.OnExitAnimation();
+    //}
 
-    protected override void OnEndDuration() {
-        if (!_activated) return;
-        _animator.SetTrigger(AnimatorParameterHash_Disappear);
-        _activated = false;
-    }
-
-    protected override void OnEndRange() {
-        if (!_activated) return;
-        _animator.SetTrigger(AnimatorParameterHash_Disappear);
-        _activated = false;
-    }
-
-    protected override void OnExitAnimation() {
-        base.OnExitAnimation();
-    }
-
-    #endregion
+    //#endregion
 }

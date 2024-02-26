@@ -19,20 +19,35 @@ public class HitCollider : Entity, IHitCollider {
     public float Duration => Info.Duration;
     public KnockbackInfo KnockbackInfo => HitInfo.Knockback;
 
+    public bool Activated {     // True: 물리적 상호작용 O,  False: 애니메이션만
+        get => _activated;
+        set {
+            _activated = value;
+            _collider.enabled = value;
+            _rigidbody.simulated = value;
+        }
+    }
+
     #endregion
 
     #region Fields
 
+    protected static readonly int AnimatorParameterHash_Immediately = Animator.StringToHash("Immediately");
+    protected static readonly int AnimatorParameterHash_Initialize = Animator.StringToHash("Initialize");
+    protected static readonly int AnimatorParameterHash_Hit = Animator.StringToHash("Hit");
+    protected static readonly int AnimatorParameterHash_Disappear = Animator.StringToHash("Disappear");
+
     private float _deltaPosition;
     private Vector3 _prevPosition;
+
+    private bool _activated;
+
     // Components.
-    protected Collider2D _collider;
     protected Rigidbody2D _rigidbody;
-    protected Animator _animator;
-    protected bool _enabled = false;
 
     // Coroutines.
     private Coroutine _coDestroy;
+
     #endregion
 
     #region MonoBehaviours
@@ -43,7 +58,8 @@ public class HitCollider : Entity, IHitCollider {
     }
 
     protected virtual void Update() {
-
+        if (!Activated && _animator.GetCurrentAnimatorClipInfo(0)[0].clip.empty)
+            Destroy();
     }
 
     protected virtual void FixedUpdate() {
@@ -55,16 +71,12 @@ public class HitCollider : Entity, IHitCollider {
         if (_deltaPosition >= Range) {
             OnEndRange();
         }
-        if (_enabled == false && gameObject.activeSelf) {
-            this.transform.SetParent(null);
-            _enabled = true;
-        }
         _rigidbody.velocity = Velocity;
         _prevPosition = CurrentPosition;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision) {
-        if (this is not LaserSkillHit && collision.gameObject.layer == Main.WallLayer) {
+        if (this is not HitCollider_Laser && collision.gameObject.layer == Main.WallLayer) {
             OnHit(destroy: true);
             return;
         }
@@ -76,7 +88,7 @@ public class HitCollider : Entity, IHitCollider {
         if (creature.State.Current == CreatureState.Dead) return;
 
         creature.OnHit(this);
-        OnHit();
+        OnHit(destroy: false);
     }
 
     #endregion
@@ -86,9 +98,7 @@ public class HitCollider : Entity, IHitCollider {
     public override bool Initialize() {
         if (!base.Initialize()) return false;
 
-        _collider = this.GetComponent<Collider2D>();
         _rigidbody = this.GetComponent<Rigidbody2D>();
-        _animator = this.GetComponent<Animator>();
 
         this.gameObject.layer = Main.HitColliderLayer;
 
@@ -97,11 +107,18 @@ public class HitCollider : Entity, IHitCollider {
 
     public virtual void SetInfo(string key, HitColliderInfo info, HitInfo hitInfo) {
         Initialize();
+
+        // #1. 기본 정보 설정.
         this.Info = info;
         this.HitInfo = hitInfo;
 
-        _collider.enabled = true;
-        _rigidbody.simulated = true;
+        // #2. Animator 설정.
+        _animator.runtimeAnimatorController = Main.Resource.LoadAnimController($"{key}");
+        _animator.ResetTrigger(AnimatorParameterHash_Initialize);
+        _animator.SetTrigger(AnimatorParameterHash_Initialize);
+        _animator.SetBool(AnimatorParameterHash_Immediately, _animator.GetCurrentAnimatorClipInfo(0)[0].clip.empty);
+
+        Activated = true;
 
         Vector2 direction = new Vector2(info.DirectionX, info.DirectionY).normalized;
         if (direction.magnitude <= float.Epsilon)
@@ -109,9 +126,6 @@ public class HitCollider : Entity, IHitCollider {
 
         this.Velocity = direction * info.Speed;
         this.RemainPenetration = info.Penetration;
-
-        this.transform.SetParent(Owner.Indicator);
-        this.transform.localPosition = Vector3.zero;
 
         _deltaPosition = 0;
         _prevPosition = this.CurrentPosition;
@@ -131,22 +145,27 @@ public class HitCollider : Entity, IHitCollider {
     #region Callbacks
 
     protected virtual void OnHit(bool destroy = false) {
-        if (destroy) {
-            Destroy();
-            return;
-        }
+        if (destroy) { Destroy(); return; }
 
         if (RemainPenetration >= 0) {
-            if (--RemainPenetration <= 0) Destroy();
+            if (--RemainPenetration <= 0) {
+                if (!Activated) return;
+                Activated = false;
+                _animator.SetTrigger(AnimatorParameterHash_Hit);
+            }
         }
     }
 
     protected virtual void OnEndDuration() {
-        Destroy();
+        if (!Activated) return;
+        Activated = false;
+        _animator.SetTrigger(AnimatorParameterHash_Disappear);
     }
 
     protected virtual void OnEndRange() {
-        Destroy();
+        if (!Activated) return;
+        Activated = false;
+        _animator.SetTrigger(AnimatorParameterHash_Disappear);
     }
 
     protected virtual void OnExitAnimation() {
@@ -155,9 +174,15 @@ public class HitCollider : Entity, IHitCollider {
 
     #endregion
 
-    public void SetPosition(Vector3 position) {
-        this.transform.localPosition = position;
+    public void SetTransform(float radius, float angle, float scale) {
+        Transform prevParent = this.transform.parent;
+        this.transform.SetParent(Owner.Indicator);
+
+        this.transform.SetLocalPositionAndRotation(new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius, Quaternion.Euler(0, 0, angle));
         _prevPosition = this.CurrentPosition;
+        this.transform.localScale = Vector3.one * scale;
+
+        this.transform.SetParent(prevParent);
     }
 
     private IEnumerator CoDestroy() {
@@ -167,10 +192,10 @@ public class HitCollider : Entity, IHitCollider {
     }
 
     private void Destroy() {
+        Activated = false;
         _rigidbody.velocity = Vector2.zero;
         Velocity = Vector2.zero;
         if (this.IsValid()) Main.Object.DespawnHitCollider(this);
-        _enabled = false;
     }
 
 }

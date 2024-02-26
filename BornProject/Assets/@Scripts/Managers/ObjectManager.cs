@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ObjectManager {
     public Player Player { get; private set; }
@@ -39,8 +40,15 @@ public class ObjectManager {
         Enemies.Remove(enemy);
         Despawn(enemy);
     }
-    public HitCollider SpawnHitCollider(string key, HitColliderInfo info, HitInfo hitInfo) {
-        HitCollider hitCollider = Spawn<HitCollider>(key, Vector2.zero);
+    public HitCollider SpawnHitCollider(string key, string prefabKey, HitColliderInfo info, HitInfo hitInfo) {
+        if (string.IsNullOrEmpty(prefabKey)) {
+            Debug.LogError($"[ObjectManager] SpawnHitCollider({prefabKey}): Spawn Failed. the key is null or empty.");
+            return null;
+        }
+        GameObject obj = Main.Resource.Instantiate(Main.Resource.IsExistPrefab(prefabKey) ? prefabKey : "HitCollider_Base", pooling: true);
+        obj.transform.position = Vector2.zero;
+
+        HitCollider hitCollider = obj.GetComponent<HitCollider>();
         hitCollider.SetInfo(key, info, hitInfo);
         HitColliders.Add(hitCollider);
         return hitCollider;
