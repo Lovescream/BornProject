@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,7 +121,532 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Archaeologist_Idle_00
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 192
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d00fefacdcbe742b5798d5ce9c988c
+      internalID: 542541603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Idle_01
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 192
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3abe15ba352d05478336eb9eeefe53f
+      internalID: -610314322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Idle_02
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 192
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec4fec5043937e4a912f1e2624d2768
+      internalID: 1428715988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Idle_03
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 192
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e078c9bbd890e41a78b8c8e8ee41d3
+      internalID: -1033731519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Idle_04
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 192
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e6d47743389e34fb5947eb878d5d26
+      internalID: -608270256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Idle_05
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 192
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4801932a15875144958f6739883632b
+      internalID: -1884223295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Idle_06
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 192
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2190934e5c803e04f9971003ccc86d61
+      internalID: -223319680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Idle_07
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 192
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04397aceab24a8d4283934d3b056c36e
+      internalID: -513919109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Walk_00
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 160
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8b3205eddb18d4a86dbf8638a6a552
+      internalID: -1027896191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Walk_01
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 163
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a049b0de5989545bb5f1ef6330360e
+      internalID: -1958882899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Walk_02
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 165
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d70ed7c718a7b14ea3e24537b8f8645
+      internalID: 689109150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Walk_03
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 163
+        width: 14
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aefe62eeeee99a4aa64dfe3360188d2
+      internalID: 1241369296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Walk_04
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 160
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496dadc6912343f488fe48ed36359253
+      internalID: -76964898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Walk_05
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 163
+        width: 17
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f963088520eb4f4a9883e680e887d85
+      internalID: -576619174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Walk_06
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 164
+        width: 17
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b211af09aef3e264499fb4b0d422037c
+      internalID: -551120036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Walk_07
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 163
+        width: 17
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668dc5039e879aa4e93405bdb13ec53a
+      internalID: -1120591910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Attack_00
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680de847bdb4b884b9b873f6f1fd1021
+      internalID: -1412125283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Attack_01
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 32
+        width: 22
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f73de0df902ecc4c860878a19d2585d
+      internalID: -1501117501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Attack_02
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 32
+        width: 20
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49077d1949541b845b79030523ae43d4
+      internalID: -48192109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Attack_03
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 32
+        width: 22
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe976d8ea691a8d4792df8caceaab5ea
+      internalID: -1334424234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Dead_00
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 0
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f677bc788a91d1748846fbd8318567d3
+      internalID: -412522552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Dead_01
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 0
+        width: 21
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a50a99e0c7f1a4fb7ff7ee3cc6dc7a
+      internalID: -465214502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Dead_02
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 25
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a02a3722a5b5c9408662146f709c27a
+      internalID: -1566883417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Dead_03
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 25
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9176a16338ec53544bcb8f1cd77018e7
+      internalID: -1904527473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologist_Dead_04
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 25
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da20f7ca5b99aeb4780366eb850d17c9
+      internalID: -851887849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +657,52 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Archaeologist_Attack_00: -1412125283
+      Archaeologist_Attack_01: -1501117501
+      Archaeologist_Attack_02: -48192109
+      Archaeologist_Attack_03: -1334424234
+      Archaeologist_Dead_00: -412522552
+      Archaeologist_Dead_01: -465214502
+      Archaeologist_Dead_02: -1566883417
+      Archaeologist_Dead_03: -1904527473
+      Archaeologist_Dead_04: -851887849
+      Archaeologist_Idle_00: 542541603
+      Archaeologist_Idle_01: -610314322
+      Archaeologist_Idle_02: 1428715988
+      Archaeologist_Idle_03: -1033731519
+      Archaeologist_Idle_04: -608270256
+      Archaeologist_Idle_05: -1884223295
+      Archaeologist_Idle_06: -223319680
+      Archaeologist_Idle_07: -513919109
+      Archaeologist_Sprite_Sheet_16: -84845278
+      Archaeologist_Sprite_Sheet_17: -709139620
+      Archaeologist_Sprite_Sheet_18: 519121295
+      Archaeologist_Sprite_Sheet_19: -154182688
+      Archaeologist_Sprite_Sheet_20: -361996143
+      Archaeologist_Sprite_Sheet_21: -1682562284
+      Archaeologist_Sprite_Sheet_22: -965310838
+      Archaeologist_Sprite_Sheet_23: -15866216
+      Archaeologist_Sprite_Sheet_24: 746549182
+      Archaeologist_Sprite_Sheet_25: -858355780
+      Archaeologist_Sprite_Sheet_26: -928931688
+      Archaeologist_Sprite_Sheet_27: 1311774560
+      Archaeologist_Sprite_Sheet_28: 2136972750
+      Archaeologist_Sprite_Sheet_29: 1268347661
+      Archaeologist_Sprite_Sheet_30: 452766475
+      Archaeologist_Sprite_Sheet_31: -1244252388
+      Archaeologist_Sprite_Sheet_32: -509061280
+      Archaeologist_Sprite_Sheet_33: 394153843
+      Archaeologist_Sprite_Sheet_34: -791277686
+      Archaeologist_Sprite_Sheet_35: -1564682746
+      Archaeologist_Walk_00: -1027896191
+      Archaeologist_Walk_01: -1958882899
+      Archaeologist_Walk_02: 689109150
+      Archaeologist_Walk_03: 1241369296
+      Archaeologist_Walk_04: -76964898
+      Archaeologist_Walk_05: -576619174
+      Archaeologist_Walk_06: -551120036
+      Archaeologist_Walk_07: -1120591910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -711,7 +711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bot_Boss_png_36
+      name: BotBoss_Dead_00
       rect:
         serializedVersion: 2
         x: 43
@@ -1052,6 +1052,7 @@ TextureImporter:
       BotBoss_Dash_01: 509251880
       BotBoss_Dash_02: 1853579880
       BotBoss_Dash_03: -2123667976
+      BotBoss_Dead_00: 778422106
       BotBoss_Dead_01: 1840031242
       BotBoss_Dead_02: -861277389
       BotBoss_Dead_03: 285161485
@@ -1082,7 +1083,6 @@ TextureImporter:
       Bot_Boss_png_11: 590682375
       Bot_Boss_png_12: 1613922282
       Bot_Boss_png_13: 1710543332
-      Bot_Boss_png_36: 778422106
       Bot_Boss_png_6: -1559136282
       Bot_Boss_png_7: 1723388707
       Bot_Boss_png_8: 1927798974
