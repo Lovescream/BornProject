@@ -39,6 +39,7 @@ public struct AttackInfo {
 
 public struct HitColliderGenerationInfo {
     public IAttackable Owner { get; set; }
+    public string SkillKey { get; set; }
     public string HitColliderKey { get; set; }
     public float RadiusOffset { get; set; }
     public float RotationAngle { get; set; }

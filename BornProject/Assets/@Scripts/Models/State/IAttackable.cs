@@ -5,6 +5,7 @@ using UnityEngine;
 /// </summary>
 public interface IAttackable {
 
+    public Entity Entity { get; }
     public Transform Indicator { get; }
     public Vector2 LookDirection { get; }
 

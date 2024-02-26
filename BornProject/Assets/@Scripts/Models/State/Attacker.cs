@@ -70,8 +70,8 @@ public class Attacker {
         CurrentAttackTime += generationInfo.AttackTime;
 
         if (generationInfo.Count == 1) {
-            HitCollider hitCollider = GenerateHitCollider(generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
-            SetHitCollider(hitCollider, generationInfo.RadiusOffset, generationInfo.RotationAngle, generationInfo.Size);
+            HitCollider hitCollider = GenerateHitCollider(generationInfo.SkillKey, generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
+            hitCollider.SetTransform(generationInfo.RadiusOffset, generationInfo.RotationAngle, generationInfo.Size);
         }
         else if (generationInfo.Count > 1) {
             float minAngle = generationInfo.RotationAngle - generationInfo.SpreadAngle * 0.5f;
@@ -79,24 +79,17 @@ public class Attacker {
             float deltaAngle = (maxAngle - minAngle) / (generationInfo.Count - 1);
             for (int i = 0; i < generationInfo.Count; i++) {
                 float angle = minAngle + deltaAngle * i;
-                HitCollider hitCollider = GenerateHitCollider(generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
-                SetHitCollider(hitCollider, generationInfo.RadiusOffset, angle, generationInfo.Size);
-                SetDirectionManually(hitCollider, (hitCollider.transform.position - hitInfo.Owner.Indicator.position).normalized);
+                HitCollider hitCollider = GenerateHitCollider(generationInfo.SkillKey, generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
+
+                hitCollider.SetTransform(generationInfo.RadiusOffset, angle, generationInfo.Size);
+                hitCollider.SetDirection((hitCollider.transform.position - hitInfo.Owner.Indicator.position).normalized);
             }
         }
 
         CurrentCooldown = Cooldown;
     }
 
-    private HitCollider GenerateHitCollider(string key, HitColliderInfo info, HitInfo hitInfo) {
-        return Main.Object.SpawnHitCollider(key, info, hitInfo);
-    }
-    private void SetHitCollider(HitCollider hit, float radius, float angle, float scale) {
-        hit.transform.localRotation = Quaternion.Euler(0, 0, angle);
-        hit.SetPosition(new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius);
-        hit.transform.localScale = Vector3.one * scale;
-    }
-    private void SetDirectionManually(HitCollider hitCollider, Vector2 direction) {
-        hitCollider.SetDirection(direction);
+    private HitCollider GenerateHitCollider(string key, string prefabKey, HitColliderInfo info, HitInfo hitInfo) {
+        return Main.Object.SpawnHitCollider(key, prefabKey, info, hitInfo);
     }
 }
