@@ -67,22 +67,31 @@ public class Attacker {
         if (!CanAttack) return;
 
         OnStartAttack?.Invoke();
-        CurrentAttackTime += generationInfo.AttackTime;
+        CurrentAttackTime = generationInfo.AttackTime;
+
+        float offsetRadius = generationInfo.RadiusOffset;
+        float offsetAngle = generationInfo.RotationAngle;
+        bool worldRotate = Mathf.Abs(offsetAngle) >= 360;
+        while (offsetAngle > 180) offsetAngle -= 360;
+        while (offsetAngle < -180) offsetAngle += 360;
+
+
 
         if (generationInfo.Count == 1) {
             HitCollider hitCollider = GenerateHitCollider(generationInfo.SkillKey, generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
-            hitCollider.SetTransform(generationInfo.RadiusOffset, generationInfo.RotationAngle, generationInfo.Size);
+            hitCollider.SetTransform(offsetRadius, offsetAngle, generationInfo.Size, worldRotate);
         }
         else if (generationInfo.Count > 1) {
-            float minAngle = generationInfo.RotationAngle - generationInfo.SpreadAngle * 0.5f;
-            float maxAngle = generationInfo.RotationAngle + generationInfo.SpreadAngle * 0.5f;
+            float minAngle = offsetAngle - generationInfo.SpreadAngle * 0.5f;
+            float maxAngle = offsetAngle + generationInfo.SpreadAngle * 0.5f;
             float deltaAngle = (maxAngle - minAngle) / (generationInfo.Count - 1);
             for (int i = 0; i < generationInfo.Count; i++) {
                 float angle = minAngle + deltaAngle * i;
                 HitCollider hitCollider = GenerateHitCollider(generationInfo.SkillKey, generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
 
-                hitCollider.SetTransform(generationInfo.RadiusOffset, angle, generationInfo.Size);
-                hitCollider.SetDirection((hitCollider.transform.position - hitInfo.Owner.Indicator.position).normalized);
+                hitCollider.SetTransform(offsetRadius, angle, generationInfo.Size, worldRotate);
+                //hitCollider.SetDirection(hitInfo.Owner.Indicator.ShotDirection);
+                hitCollider.SetDirection((hitCollider.transform.position - hitInfo.Owner.Indicator.Point.position).normalized);
             }
         }
 
