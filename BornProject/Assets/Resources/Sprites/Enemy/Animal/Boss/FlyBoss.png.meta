@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4b58047f40fd543a486c0d6389f834c0
+guid: 2dce2b09623d8486991992dfdbb4101b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RedCat_Idle_00
+      name: FlyBoss_Idle_00
       rect:
         serializedVersion: 2
-        x: 8
-        y: 128
-        width: 16
+        x: 7
+        y: 135
+        width: 17
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df3f70427b1e4bb8969d50bf2b5d62c
+      internalID: -960481174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyBoss_Idle_01
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 138
+        width: 20
         height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -137,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3308022312948451783ef50de2330c53
-      internalID: 1343357259
+      spriteID: d4ea2952bb1af4ada8c69911433a4ca6
+      internalID: -179807852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Idle_01
+      name: FlyBoss_Idle_02
       rect:
         serializedVersion: 2
-        x: 40
-        y: 128
-        width: 16
+        x: 70
+        y: 137
+        width: 22
         height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -158,19 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aab65896dc0354c6d8f891a183f63e6a
-      internalID: 1943294446
+      spriteID: 9b9eb75503a8849d0a10582bb13407c2
+      internalID: 1936541862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Idle_02
+      name: FlyBoss_Idle_03
       rect:
         serializedVersion: 2
-        x: 72
-        y: 128
-        width: 16
+        x: 102
+        y: 137
+        width: 21
         height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -179,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1981fd3cdf0345a1876b564a9cc44a5
-      internalID: 1084867700
+      spriteID: fc2ac5bd6206d4b9e86044c1af549db6
+      internalID: 346799449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Idle_03
+      name: FlyBoss_Run_00
       rect:
         serializedVersion: 2
-        x: 103
-        y: 128
+        x: 7
+        y: 103
         width: 17
-        height: 14
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,83 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 481aa23b0bc7d418b8e3c1b8853eca4c
-      internalID: 1081585259
+      spriteID: 6b06f2583867f4600aaf17a401967d02
+      internalID: 2075161845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Idle_04
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 128
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1fca9eb0081949f9b563a645064fc34
-      internalID: 1892513668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Idle_05
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 128
-        width: 15
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af9a8dd812508460cac9b488ef788ee0
-      internalID: 1936116449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Run_00
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 96
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99919d1f03fd74787a827f441faec433
-      internalID: 297796399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Run_01
+      name: FlyBoss_Run_01
       rect:
         serializedVersion: 2
         x: 38
-        y: 98
-        width: 18
-        height: 14
+        y: 105
+        width: 21
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68d4c34a7eed742a5af8f955bdd9cba4
-      internalID: 325114283
+      spriteID: 5535d6531f94a45729e9f409ba76c874
+      internalID: 272043041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Run_02
+      name: FlyBoss_Run_02
       rect:
         serializedVersion: 2
-        x: 71
-        y: 97
-        width: 17
-        height: 14
+        x: 70
+        y: 101
+        width: 22
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,103 +263,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de4eaddaaa0cb43e780f5cd1696dd3bb
-      internalID: -1380260778
+      spriteID: 246a2037a9927455fb82e733d1e9c067
+      internalID: -1873020690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Run_03
+      name: FlyBoss_Run_03
       rect:
         serializedVersion: 2
-        x: 104
-        y: 96
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 019dd50aebcfd47fb9dcb618dca80c4a
-      internalID: -1418547996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Run_04
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 98
-        width: 18
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fa93b6355ff64531bffe94643d465f3
-      internalID: 1666225422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Run_05
-      rect:
-        serializedVersion: 2
-        x: 167
-        y: 97
-        width: 17
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc78be59c16564d1f84025953c4363fb
-      internalID: 2053788096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Attack_00
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 64
-        width: 16
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fac7bdc0f18ca43a485fadf538e1007a
-      internalID: 1687391915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Attack_01
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 64
-        width: 16
+        x: 102
+        y: 102
+        width: 21
         height: 19
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -410,103 +284,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9051b397fbea94a76a1bf2fc026b2d31
-      internalID: -1685134284
+      spriteID: 7203ae4d6dd9c4486b94831d84e5b214
+      internalID: -253848261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Attack_02
+      name: FlyBoss_Attack_00
       rect:
         serializedVersion: 2
-        x: 70
-        y: 68
-        width: 18
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b21ee409c862d41daade350625d6c89b
-      internalID: -2025647909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Attack_03
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 65
+        x: 7
+        y: 71
         width: 17
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c742bb5c218364bcaba051f8743ff62c
-      internalID: -641193973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Attack_04
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 64
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e4170b40dba545b79a18948f2ff1d12
-      internalID: 1399134866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Attack_05
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 64
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce2281bf2ae2d4eb38ca46af7ff9679a
-      internalID: -12053770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Hit_00
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 32
-        width: 15
         height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -515,146 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9dc358695c7447e0ac4d58a49c163e0
-      internalID: -1894136958
+      spriteID: f263f7835043f4d37b73f4cf919ab0e4
+      internalID: 1568539356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Hit_01
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 32
-        width: 15
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43372ea59cc944a5fa868b4917a1db75
-      internalID: -932357345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Hit_02
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 32
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e54f4995ec6041ceb0abf3c923ac32a
-      internalID: -2088264030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Hit_03
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 32
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 783e3a121d3cf4ecda79a13296a914bc
-      internalID: 1161581322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Hit_04
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 32
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a3c8ad8e3c1b4f1090f2542a43a25e9
-      internalID: -1580998572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Hit_05
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 32
-        width: 16
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37c98b599879340228011bc69d449c07
-      internalID: -1031066579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Dead_00
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 0
-        width: 15
-        height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c55bcd0136f75415197ce625d006871e
-      internalID: 1972834407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedCat_Dead_01
+      name: FlyBoss_Attack_01
       rect:
         serializedVersion: 2
         x: 38
-        y: 2
-        width: 15
-        height: 21
+        y: 74
+        width: 17
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c9f882b26b5446eb9a6bb392b4ca269
-      internalID: -1887368574
+      spriteID: 48b1272b3cca94179a8a67807e00f025
+      internalID: 428520285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Dead_02
+      name: FlyBoss_Attack_02
       rect:
         serializedVersion: 2
         x: 68
-        y: 4
-        width: 15
-        height: 21
+        y: 73
+        width: 22
+        height: 20
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -683,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 574401eac7f894d10be5c91ffca36e3c
-      internalID: 246162314
+      spriteID: cac877aaa4cc146c68392cd726ad6491
+      internalID: -728692998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Dead_03
+      name: FlyBoss_Attack_03
       rect:
         serializedVersion: 2
-        x: 98
-        y: 6
-        width: 15
-        height: 21
+        x: 102
+        y: 73
+        width: 21
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc6875b07a4604c38a24371b0e1b8748
-      internalID: 1055217708
+      spriteID: 9526e7547f297442a8f1c28628b536e4
+      internalID: -1379372990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCat_Dead_04
+      name: FlyBoss_Dead_00
       rect:
         serializedVersion: 2
-        x: 128
-        y: 8
-        width: 15
-        height: 21
+        x: 7
+        y: 39
+        width: 17
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -725,8 +389,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 170cd4d914d3a4e7fb5aa028198dfe52
-      internalID: -1847712954
+      spriteID: 4407f39f1e18b49f4aa3c5a3bf894cef
+      internalID: 351166794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyBoss_Dead_01
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 40
+        width: 21
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e6f0c34a8274675b18e387e6f15df7
+      internalID: -42405884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyBoss_Dead_02
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 37
+        width: 22
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2dbd2fc2ae9e4cde8ad04cdedd19b45
+      internalID: -1545738136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyBoss_Dead_03
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 37
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f76000e443340f08f3695dd1c63d6b
+      internalID: 1699148050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyBoss_Dead_04
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 33
+        width: 28
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3745048e65bde42e6b2a15c1be8dd786
+      internalID: -580093036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyBoss_Dead_05
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 37
+        width: 25
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0faf05e434f42fd98759a51f06ef9a
+      internalID: -920211159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyBoss_HitCollider_00
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 14
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af75c696f3a264da0a47c30a425ebc45
+      internalID: -1975903535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyBoss_HitCollider_01
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 14
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861e9802b97da4a639c8a09f76065381
+      internalID: -664084941
       vertices: []
       indices: 
       edges: []
@@ -742,35 +553,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedCat_Attack_00: 1687391915
-      RedCat_Attack_01: -1685134284
-      RedCat_Attack_02: -2025647909
-      RedCat_Attack_03: -641193973
-      RedCat_Attack_04: 1399134866
-      RedCat_Attack_05: -12053770
-      RedCat_Dead_00: 1972834407
-      RedCat_Dead_01: -1887368574
-      RedCat_Dead_02: 246162314
-      RedCat_Dead_03: 1055217708
-      RedCat_Dead_04: -1847712954
-      RedCat_Hit_00: -1894136958
-      RedCat_Hit_01: -932357345
-      RedCat_Hit_02: -2088264030
-      RedCat_Hit_03: 1161581322
-      RedCat_Hit_04: -1580998572
-      RedCat_Hit_05: -1031066579
-      RedCat_Idle_00: 1343357259
-      RedCat_Idle_01: 1943294446
-      RedCat_Idle_02: 1084867700
-      RedCat_Idle_03: 1081585259
-      RedCat_Idle_04: 1892513668
-      RedCat_Idle_05: 1936116449
-      RedCat_Run_00: 297796399
-      RedCat_Run_01: 325114283
-      RedCat_Run_02: -1380260778
-      RedCat_Run_03: -1418547996
-      RedCat_Run_04: 1666225422
-      RedCat_Run_05: 2053788096
+      FlyBoss_Attack_00: 428520285
+      FlyBoss_Attack_01: -728692998
+      FlyBoss_Attack_02: -1379372990
+      FlyBoss_Attack_03: 351166794
+      FlyBoss_Dead_00: 351166794
+      FlyBoss_Dead_01: -42405884
+      FlyBoss_Dead_02: -1545738136
+      FlyBoss_Dead_03: 1699148050
+      FlyBoss_Dead_04: -580093036
+      FlyBoss_Dead_05: -920211159
+      FlyBoss_HitCollider_00: -1975903535
+      FlyBoss_HitCollider_01: -664084941
+      FlyBoss_Idle_00: -179807852
+      FlyBoss_Idle_01: 1936541862
+      FlyBoss_Idle_02: 346799449
+      FlyBoss_Idle_03: 2075161845
+      FlyBoss_Run_00: 272043041
+      FlyBoss_Run_01: -1873020690
+      FlyBoss_Run_02: -253848261
+      FlyBoss_Run_03: 1568539356
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

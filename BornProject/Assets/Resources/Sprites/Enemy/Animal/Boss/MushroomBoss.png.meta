@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PurpleMushroom_Idle_00
+      name: MushroomBoss_Idle_00
       rect:
         serializedVersion: 2
         x: 16
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Idle_01
+      name: MushroomBoss_Idle_01
       rect:
         serializedVersion: 2
         x: 64
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Idle_02
+      name: MushroomBoss_Idle_02
       rect:
         serializedVersion: 2
         x: 112
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Idle_03
+      name: MushroomBoss_Idle_03
       rect:
         serializedVersion: 2
         x: 160
@@ -207,11 +207,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Idle_04
+      name: MushroomBoss_Idle_04
       rect:
         serializedVersion: 2
         x: 208
-        y: 289
+        y: 290
         width: 15
         height: 19
       alignment: 7
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Idle_05
+      name: MushroomBoss_Idle_05
       rect:
         serializedVersion: 2
         x: 256
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_00
+      name: MushroomBoss_Run_00
       rect:
         serializedVersion: 2
         x: 16
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_01
+      name: MushroomBoss_Run_01
       rect:
         serializedVersion: 2
         x: 64
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_02
+      name: MushroomBoss_Run_02
       rect:
         serializedVersion: 2
         x: 112
@@ -312,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_03
+      name: MushroomBoss_Run_03
       rect:
         serializedVersion: 2
         x: 160
@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_04
+      name: MushroomBoss_Run_04
       rect:
         serializedVersion: 2
         x: 208
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_05
+      name: MushroomBoss_Run_05
       rect:
         serializedVersion: 2
         x: 256
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_06
+      name: MushroomBoss_Run_06
       rect:
         serializedVersion: 2
         x: 16
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_07
+      name: MushroomBoss_Run_07
       rect:
         serializedVersion: 2
         x: 64
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_08
+      name: MushroomBoss_Run_08
       rect:
         serializedVersion: 2
         x: 112
@@ -438,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_09
+      name: MushroomBoss_Run_09
       rect:
         serializedVersion: 2
         x: 160
@@ -459,7 +459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_10
+      name: MushroomBoss_Run_10
       rect:
         serializedVersion: 2
         x: 208
@@ -480,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_11
+      name: MushroomBoss_Run_11
       rect:
         serializedVersion: 2
         x: 256
@@ -501,7 +501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_12
+      name: MushroomBoss_Run_12
       rect:
         serializedVersion: 2
         x: 16
@@ -522,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_13
+      name: MushroomBoss_Run_13
       rect:
         serializedVersion: 2
         x: 64
@@ -543,7 +543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_14
+      name: MushroomBoss_Run_14
       rect:
         serializedVersion: 2
         x: 112
@@ -564,11 +564,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_15
+      name: MushroomBoss_Run_15
       rect:
         serializedVersion: 2
-        x: 160
-        y: 146
+        x: 159
+        y: 145
         width: 15
         height: 19
       alignment: 7
@@ -585,7 +585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_16
+      name: MushroomBoss_Run_16
       rect:
         serializedVersion: 2
         x: 208
@@ -606,7 +606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Run_17
+      name: MushroomBoss_Run_17
       rect:
         serializedVersion: 2
         x: 256
@@ -627,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Attack_00
+      name: MushroomBoss_Attack_00
       rect:
         serializedVersion: 2
         x: 14
@@ -648,11 +648,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Attack_01
+      name: MushroomBoss_Attack_01
       rect:
         serializedVersion: 2
-        x: 62
-        y: 96
+        x: 63
+        y: 97
         width: 18
         height: 20
       alignment: 7
@@ -669,7 +669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Attack_02
+      name: MushroomBoss_Attack_02
       rect:
         serializedVersion: 2
         x: 113
@@ -690,7 +690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Attack_03
+      name: MushroomBoss_Attack_03
       rect:
         serializedVersion: 2
         x: 158
@@ -711,7 +711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Attack_04
+      name: MushroomBoss_Attack_04
       rect:
         serializedVersion: 2
         x: 206
@@ -732,7 +732,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Attack_05
+      name: MushroomBoss_Attack_05
       rect:
         serializedVersion: 2
         x: 256
@@ -753,7 +753,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Hit_00
+      name: MushroomBoss_Hit_00
       rect:
         serializedVersion: 2
         x: 16
@@ -774,7 +774,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Hit_01
+      name: MushroomBoss_Hit_01
       rect:
         serializedVersion: 2
         x: 64
@@ -795,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Hit_02
+      name: MushroomBoss_Hit_02
       rect:
         serializedVersion: 2
         x: 113
@@ -816,7 +816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Hit_03
+      name: MushroomBoss_Hit_03
       rect:
         serializedVersion: 2
         x: 160
@@ -837,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Hit_04
+      name: MushroomBoss_Hit_04
       rect:
         serializedVersion: 2
         x: 208
@@ -858,7 +858,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Hit_05
+      name: MushroomBoss_Hit_05
       rect:
         serializedVersion: 2
         x: 256
@@ -879,7 +879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Dead_00
+      name: MushroomBoss_Dead_00
       rect:
         serializedVersion: 2
         x: 17
@@ -900,7 +900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Dead_01
+      name: MushroomBoss_Dead_01
       rect:
         serializedVersion: 2
         x: 64
@@ -921,7 +921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Dead_02
+      name: MushroomBoss_Dead_02
       rect:
         serializedVersion: 2
         x: 111
@@ -942,7 +942,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Dead_03
+      name: MushroomBoss_Dead_03
       rect:
         serializedVersion: 2
         x: 161
@@ -963,7 +963,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Dead_04
+      name: MushroomBoss_Dead_04
       rect:
         serializedVersion: 2
         x: 208
@@ -984,7 +984,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PurpleMushroom_Dead_05
+      name: MushroomBoss_Dead_05
       rect:
         serializedVersion: 2
         x: 256
@@ -1015,48 +1015,48 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PurpleMushroom_Attack_00: -1618582966
-      PurpleMushroom_Attack_01: 1368795287
-      PurpleMushroom_Attack_02: -393758054
-      PurpleMushroom_Attack_03: -331072312
-      PurpleMushroom_Attack_04: -1573477106
-      PurpleMushroom_Attack_05: -1336221906
-      PurpleMushroom_Dead_00: 1377351388
-      PurpleMushroom_Dead_01: -285541189
-      PurpleMushroom_Dead_02: -2081427732
-      PurpleMushroom_Dead_03: 910749267
-      PurpleMushroom_Dead_04: -2040596970
-      PurpleMushroom_Dead_05: -1128081607
-      PurpleMushroom_Hit_00: -2055645276
-      PurpleMushroom_Hit_01: -739032843
-      PurpleMushroom_Hit_02: 1243961947
-      PurpleMushroom_Hit_03: 435052028
-      PurpleMushroom_Hit_04: 1042998542
-      PurpleMushroom_Hit_05: -36587221
-      PurpleMushroom_Idle_00: 2129862799
-      PurpleMushroom_Idle_01: 1240680892
-      PurpleMushroom_Idle_02: -1641384874
-      PurpleMushroom_Idle_03: 130260208
-      PurpleMushroom_Idle_04: -1026795175
-      PurpleMushroom_Idle_05: -1434802273
-      PurpleMushroom_Run_00: -257773451
-      PurpleMushroom_Run_01: -1328213899
-      PurpleMushroom_Run_02: -1708113214
-      PurpleMushroom_Run_03: -907785503
-      PurpleMushroom_Run_04: -918954292
-      PurpleMushroom_Run_05: -623710837
-      PurpleMushroom_Run_06: 35514663
-      PurpleMushroom_Run_07: 966562296
-      PurpleMushroom_Run_08: -422995299
-      PurpleMushroom_Run_09: 1496666797
-      PurpleMushroom_Run_10: 250892537
-      PurpleMushroom_Run_11: -2096881448
-      PurpleMushroom_Run_12: -577399441
-      PurpleMushroom_Run_13: -927045526
-      PurpleMushroom_Run_14: 1190342219
-      PurpleMushroom_Run_15: -599333385
-      PurpleMushroom_Run_16: 725933261
-      PurpleMushroom_Run_17: 1936143456
+      MushroomBoss_Attack_00: -1618582966
+      MushroomBoss_Attack_01: 1368795287
+      MushroomBoss_Attack_02: -393758054
+      MushroomBoss_Attack_03: -331072312
+      MushroomBoss_Attack_04: -1573477106
+      MushroomBoss_Attack_05: -1336221906
+      MushroomBoss_Dead_00: 1377351388
+      MushroomBoss_Dead_01: -285541189
+      MushroomBoss_Dead_02: -2081427732
+      MushroomBoss_Dead_03: 910749267
+      MushroomBoss_Dead_04: -2040596970
+      MushroomBoss_Dead_05: -1128081607
+      MushroomBoss_Hit_00: -2055645276
+      MushroomBoss_Hit_01: -739032843
+      MushroomBoss_Hit_02: 1243961947
+      MushroomBoss_Hit_03: 435052028
+      MushroomBoss_Hit_04: 1042998542
+      MushroomBoss_Hit_05: -36587221
+      MushroomBoss_Idle_00: 2129862799
+      MushroomBoss_Idle_01: 1240680892
+      MushroomBoss_Idle_02: -1641384874
+      MushroomBoss_Idle_03: 130260208
+      MushroomBoss_Idle_04: -1026795175
+      MushroomBoss_Idle_05: -1434802273
+      MushroomBoss_Run_00: -257773451
+      MushroomBoss_Run_01: -1328213899
+      MushroomBoss_Run_02: -1708113214
+      MushroomBoss_Run_03: -907785503
+      MushroomBoss_Run_04: -918954292
+      MushroomBoss_Run_05: -623710837
+      MushroomBoss_Run_06: 35514663
+      MushroomBoss_Run_07: 966562296
+      MushroomBoss_Run_08: -422995299
+      MushroomBoss_Run_09: 1496666797
+      MushroomBoss_Run_10: 250892537
+      MushroomBoss_Run_11: -2096881448
+      MushroomBoss_Run_12: -577399441
+      MushroomBoss_Run_13: -927045526
+      MushroomBoss_Run_14: 1190342219
+      MushroomBoss_Run_15: -599333385
+      MushroomBoss_Run_16: 725933261
+      MushroomBoss_Run_17: 1936143456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

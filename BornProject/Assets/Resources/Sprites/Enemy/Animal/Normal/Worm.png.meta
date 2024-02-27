@@ -459,7 +459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_16
+      name: Worm_Attack_00
       rect:
         serializedVersion: 2
         x: 11
@@ -480,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_17
+      name: Worm_Attack_01
       rect:
         serializedVersion: 2
         x: 43
@@ -501,7 +501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_18
+      name: Worm_Attack_02
       rect:
         serializedVersion: 2
         x: 75
@@ -522,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_19
+      name: Worm_Attack_03
       rect:
         serializedVersion: 2
         x: 107
@@ -543,7 +543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_20
+      name: Worm_Dead_00
       rect:
         serializedVersion: 2
         x: 11
@@ -564,7 +564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_21
+      name: Worm_Dead_01
       rect:
         serializedVersion: 2
         x: 43
@@ -585,7 +585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_22
+      name: Worm_Dead_02
       rect:
         serializedVersion: 2
         x: 77
@@ -606,7 +606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_23
+      name: Worm_Dead_03
       rect:
         serializedVersion: 2
         x: 109
@@ -627,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_24
+      name: Worm_Dead_04
       rect:
         serializedVersion: 2
         x: 141
@@ -648,7 +648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Worm_Sprite_Sheet_25
+      name: Worm_Dead_05
       rect:
         serializedVersion: 2
         x: 173
@@ -1204,6 +1204,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Worm_Attack_00: 238593450
+      Worm_Attack_01: -906728099
+      Worm_Attack_02: 1554577042
+      Worm_Attack_03: 247755029
+      Worm_Dead_00: -723860526
+      Worm_Dead_01: -1037398304
+      Worm_Dead_02: 867568036
+      Worm_Dead_03: 724384370
+      Worm_Dead_04: 392034353
+      Worm_Dead_05: 2004722704
       Worm_Idle_00: 312435368
       Worm_Idle_01: -1095554598
       Worm_Idle_02: -669994302
@@ -1218,16 +1228,6 @@ TextureImporter:
       Worm_Sprite_Sheet_13: 1310916919
       Worm_Sprite_Sheet_14: 1283070881
       Worm_Sprite_Sheet_15: -1012107547
-      Worm_Sprite_Sheet_16: 238593450
-      Worm_Sprite_Sheet_17: -906728099
-      Worm_Sprite_Sheet_18: 1554577042
-      Worm_Sprite_Sheet_19: 247755029
-      Worm_Sprite_Sheet_20: -723860526
-      Worm_Sprite_Sheet_21: -1037398304
-      Worm_Sprite_Sheet_22: 867568036
-      Worm_Sprite_Sheet_23: 724384370
-      Worm_Sprite_Sheet_24: 392034353
-      Worm_Sprite_Sheet_25: 2004722704
       Worm_Sprite_Sheet_26: -1894536940
       Worm_Sprite_Sheet_27: 119492305
       Worm_Sprite_Sheet_28: 1259105306

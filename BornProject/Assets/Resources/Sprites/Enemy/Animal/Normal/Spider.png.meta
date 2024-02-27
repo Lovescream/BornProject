@@ -1005,7 +1005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_42
+      name: Spider_Idle_00
       rect:
         serializedVersion: 2
         x: 10
@@ -1026,7 +1026,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_43
+      name: Spider_Idle_01
       rect:
         serializedVersion: 2
         x: 41
@@ -1047,7 +1047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_44
+      name: Spider_Idle_02
       rect:
         serializedVersion: 2
         x: 73
@@ -1068,7 +1068,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_45
+      name: Spider_Idle_03
       rect:
         serializedVersion: 2
         x: 106
@@ -1089,7 +1089,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_46
+      name: Spider_Idle_04
       rect:
         serializedVersion: 2
         x: 138
@@ -1110,7 +1110,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_47
+      name: Spider_Walk_00
       rect:
         serializedVersion: 2
         x: 11
@@ -1131,7 +1131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_48
+      name: Spider_Walk_01
       rect:
         serializedVersion: 2
         x: 42
@@ -1152,7 +1152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_49
+      name: Spider_Walk_02
       rect:
         serializedVersion: 2
         x: 73
@@ -1173,11 +1173,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_50
+      name: Spider_Walk_3
       rect:
         serializedVersion: 2
         x: 107
-        y: 193
+        y: 192
         width: 11
         height: 7
       alignment: 7
@@ -1194,7 +1194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_51
+      name: Spider_Walk_04
       rect:
         serializedVersion: 2
         x: 140
@@ -1215,7 +1215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_52
+      name: Spider_Walk_05
       rect:
         serializedVersion: 2
         x: 172
@@ -1236,7 +1236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_53
+      name: Spider_Run_00
       rect:
         serializedVersion: 2
         x: 10
@@ -1257,10 +1257,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_54
+      name: Spider_Run_01
       rect:
         serializedVersion: 2
-        x: 42
+        x: 43
         y: 160
         width: 12
         height: 7
@@ -1278,7 +1278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_55
+      name: Spider_Run_02
       rect:
         serializedVersion: 2
         x: 74
@@ -1299,7 +1299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_56
+      name: Spider_Run_03
       rect:
         serializedVersion: 2
         x: 107
@@ -1320,10 +1320,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_57
+      name: Spider_Run_04
       rect:
         serializedVersion: 2
-        x: 139
+        x: 138
         y: 164
         width: 13
         height: 9
@@ -1341,10 +1341,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_58
+      name: Spider_Run_05
       rect:
         serializedVersion: 2
-        x: 173
+        x: 172
         y: 164
         width: 12
         height: 9
@@ -1362,7 +1362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_59
+      name: Spider_Run_06
       rect:
         serializedVersion: 2
         x: 204
@@ -1383,7 +1383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_60
+      name: Spider_Run_07
       rect:
         serializedVersion: 2
         x: 236
@@ -1404,7 +1404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_61
+      name: Spider_Run_08
       rect:
         serializedVersion: 2
         x: 268
@@ -1446,7 +1446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_63
+      name: Spider_Attack_00
       rect:
         serializedVersion: 2
         x: 10
@@ -1467,7 +1467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_64
+      name: Spider_Attack_01
       rect:
         serializedVersion: 2
         x: 41
@@ -1488,7 +1488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_65
+      name: Spider_Attack_02
       rect:
         serializedVersion: 2
         x: 74
@@ -1509,7 +1509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_66
+      name: Spider_Attack_03
       rect:
         serializedVersion: 2
         x: 106
@@ -1530,7 +1530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_67
+      name: Spider_Hit_00
       rect:
         serializedVersion: 2
         x: 10
@@ -1551,7 +1551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_68
+      name: Spider_Hit_01
       rect:
         serializedVersion: 2
         x: 40
@@ -1572,7 +1572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_69
+      name: Spider_Hit_02
       rect:
         serializedVersion: 2
         x: 73
@@ -1593,7 +1593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_70
+      name: Spider_Dead_00
       rect:
         serializedVersion: 2
         x: 10
@@ -1614,7 +1614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_71
+      name: Spider_Dead_01
       rect:
         serializedVersion: 2
         x: 40
@@ -1635,7 +1635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_72
+      name: Spider_Dead_02
       rect:
         serializedVersion: 2
         x: 75
@@ -1656,7 +1656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_73
+      name: Spider_Dead_03
       rect:
         serializedVersion: 2
         x: 105
@@ -1677,7 +1677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_74
+      name: Spider_Dead_04
       rect:
         serializedVersion: 2
         x: 138
@@ -1698,7 +1698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_75
+      name: Spider_Dead_05
       rect:
         serializedVersion: 2
         x: 169
@@ -1719,7 +1719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_76
+      name: Spider_Dead_06
       rect:
         serializedVersion: 2
         x: 201
@@ -1740,7 +1740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_77
+      name: Spider_Dead_07
       rect:
         serializedVersion: 2
         x: 234
@@ -1761,7 +1761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_78
+      name: Spider_Dead_08
       rect:
         serializedVersion: 2
         x: 265
@@ -1782,7 +1782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_79
+      name: Spider_Base_Web_01
       rect:
         serializedVersion: 2
         x: 45
@@ -1803,7 +1803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_80
+      name: Spider_Base_Web_02
       rect:
         serializedVersion: 2
         x: 76
@@ -1824,7 +1824,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_81
+      name: Spider_Base_Web_03
       rect:
         serializedVersion: 2
         x: 105
@@ -1845,7 +1845,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_82
+      name: Spider_Base_Web_04
       rect:
         serializedVersion: 2
         x: 133
@@ -1866,7 +1866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_83
+      name: Spider_Base_Web_05
       rect:
         serializedVersion: 2
         x: 167
@@ -1895,7 +1895,7 @@ TextureImporter:
         width: 4
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1908,7 +1908,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spider Tile Set_85
+      name: Spider_Base_Web_00
       rect:
         serializedVersion: 2
         x: 13
@@ -1916,7 +1916,7 @@ TextureImporter:
         width: 4
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1976,55 +1976,55 @@ TextureImporter:
       Spider Tile Set_4: -1056915820
       Spider Tile Set_40: -214892564
       Spider Tile Set_41: -1667730542
-      Spider Tile Set_42: -1131909078
-      Spider Tile Set_43: -6719687
-      Spider Tile Set_44: 586041598
-      Spider Tile Set_45: 1832353556
-      Spider Tile Set_46: -1906156940
-      Spider Tile Set_47: -143492325
-      Spider Tile Set_48: 1455001181
-      Spider Tile Set_49: 1711382598
-      Spider Tile Set_5: -1288480807
-      Spider Tile Set_50: 315456021
-      Spider Tile Set_51: 132987037
-      Spider Tile Set_52: 220044597
-      Spider Tile Set_53: 202483776
-      Spider Tile Set_54: -765163789
-      Spider Tile Set_55: 2112834115
-      Spider Tile Set_56: -1950301980
-      Spider Tile Set_57: 1178465395
-      Spider Tile Set_58: -186850586
-      Spider Tile Set_59: -1903759710
-      Spider Tile Set_6: -1260831510
-      Spider Tile Set_60: -35997850
-      Spider Tile Set_61: 1332435057
-      Spider Tile Set_62: -297052411
-      Spider Tile Set_63: -1881334980
-      Spider Tile Set_64: 629761038
-      Spider Tile Set_65: 886876240
-      Spider Tile Set_66: -226993343
-      Spider Tile Set_67: 1233524873
-      Spider Tile Set_68: 1601043488
-      Spider Tile Set_69: 367909639
-      Spider Tile Set_7: 2069720968
-      Spider Tile Set_70: -1890710507
-      Spider Tile Set_71: 859766254
-      Spider Tile Set_72: 2079971418
-      Spider Tile Set_73: 509619128
-      Spider Tile Set_74: -2049418002
-      Spider Tile Set_75: 357598759
-      Spider Tile Set_76: 14472591
-      Spider Tile Set_77: -2006644747
-      Spider Tile Set_78: -1475715573
-      Spider Tile Set_79: 884043204
-      Spider Tile Set_8: 248371017
-      Spider Tile Set_80: 1182557173
-      Spider Tile Set_81: -667389419
-      Spider Tile Set_82: -1903617445
-      Spider Tile Set_83: 618147371
-      Spider Tile Set_84: -232266460
-      Spider Tile Set_85: 804299728
-      Spider Tile Set_9: -1944459373
+      Spider Tile Set_5: 315456021
+      Spider Tile Set_6: -35997850
+      Spider Tile Set_62: -1881334980
+      Spider Tile Set_7: -1890710507
+      Spider Tile Set_8: 1182557173
+      Spider Tile Set_84: 804299728
+      Spider Tile Set_9: -1131909078
+      Spider_Attack_00: -1881334980
+      Spider_Attack_01: 629761038
+      Spider_Attack_02: 886876240
+      Spider_Attack_03: -226993343
+      Spider_Base_Web_00: 804299728
+      Spider_Base_Web_01: 884043204
+      Spider_Base_Web_02: 1182557173
+      Spider_Base_Web_03: -667389419
+      Spider_Base_Web_04: -1903617445
+      Spider_Base_Web_05: 618147371
+      Spider_Dead_00: -1890710507
+      Spider_Dead_01: 859766254
+      Spider_Dead_02: 2079971418
+      Spider_Dead_03: 509619128
+      Spider_Dead_04: -2049418002
+      Spider_Dead_05: 357598759
+      Spider_Dead_06: 14472591
+      Spider_Dead_07: -2006644747
+      Spider_Dead_08: -1475715573
+      Spider_Hit_00: 1233524873
+      Spider_Hit_01: 1601043488
+      Spider_Hit_02: 367909639
+      Spider_Idle_00: -6719687
+      Spider_Idle_01: 586041598
+      Spider_Idle_02: 1832353556
+      Spider_Idle_03: -1906156940
+      Spider_Idle_04: -143492325
+      Spider_Run_00: 202483776
+      Spider_Run_01: -765163789
+      Spider_Run_02: 2112834115
+      Spider_Run_03: -1950301980
+      Spider_Run_04: 1178465395
+      Spider_Run_05: -186850586
+      Spider_Run_06: -1903759710
+      Spider_Run_07: -35997850
+      Spider_Run_08: 1332435057
+      Spider_Walk_00: 1455001181
+      Spider_Walk_01: 1455001181
+      Spider_Walk_02: 1711382598
+      Spider_Walk_04: 132987037
+      Spider_Walk_05: 220044597
+      Spider_Walk_3: 315456021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
