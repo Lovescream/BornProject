@@ -11,10 +11,17 @@ public class Player : Creature, ISkillMan, IAttackable {
 
     public Entity Entity => this;
     public Attacker Attacker { get; protected set; }
+    public AttackIndicator Indicator { get; protected set; }
     public SkillList SkillList { get; protected set; }
     public SkillStatus DefaultStatus { get; protected set; }
 
     public string SkillSetList => Data.Skills;
+
+    public Vector2 MousePosition { get; protected set; }
+    //public override Vector2 LookDirection {
+    //    get => _lookDirection;
+    //    set => _lookDirection = value;
+    //}
 
     #endregion
 
@@ -68,6 +75,9 @@ public class Player : Creature, ISkillMan, IAttackable {
     public override void SetInfo(CreatureData data) {
         base.SetInfo(data);
 
+        Indicator = this.gameObject.FindChild<AttackIndicator>();
+        Indicator.SetInfo(this);
+
         SkillList = new(this);
         for (int i = 0; i < Enum.GetNames(typeof(SkillType)).Length; i++) {
             string skillKey = Main.Game.Current[(SkillType)i];
@@ -112,11 +122,11 @@ public class Player : Creature, ISkillMan, IAttackable {
         Velocity = value.Get<Vector2>().normalized * Status[StatType.MoveSpeed].Value;
     }
     protected void OnLook(InputValue value) {
-        if (!this.IsDead) // 안죽었다면
-        {
-            Vector2 v = Camera.main.ScreenToWorldPoint(value.Get<Vector2>()) - this.transform.position;
-            LookDirection = v.normalized;
-        }
+        if (this.IsDead) return;
+
+        MousePosition = Camera.main.ScreenToWorldPoint(value.Get<Vector2>());
+        LookDirection = (MousePosition - (Vector2)this.transform.position).normalized;
+        Indicator.IndicatorDirection = LookDirection;
     }
     protected void OnAttackMain() {
         //if (EventSystem.current.IsPointerOverGameObject()) return;
@@ -153,7 +163,7 @@ public class Player : Creature, ISkillMan, IAttackable {
             SkillKey = skill.Data.Key,
             HitColliderKey = skill.Data.HitColliderKey,
             RadiusOffset = skill.Data.RadiusOffset,
-            RotationAngle = skill.Data.RotationAngle < 0 ? LookAngle : skill.Data.RotationAngle,
+            RotationAngle = skill.Data.RotationAngle,
             Count = skill.Data.HitColliderCount,
             SpreadAngle = skill.Data.HitColliderAngle,
             Size = skill.Data.HitColliderSize,

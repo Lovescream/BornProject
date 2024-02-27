@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class HitCollider : Entity, IHitCollider {
@@ -139,6 +140,7 @@ public class HitCollider : Entity, IHitCollider {
     #endregion
 
     public void SetDirection(Vector2 direction) {
+        Debug.Log($"{direction.x},{direction.y}");
         Velocity = direction * Info.Speed;
     }
 
@@ -174,15 +176,25 @@ public class HitCollider : Entity, IHitCollider {
 
     #endregion
 
-    public void SetTransform(float radius, float angle, float scale) {
+    public void SetTransform(float radius, float angle, float scale, bool worldRotate = false) {
         Transform prevParent = this.transform.parent;
-        this.transform.SetParent(Owner.Indicator);
-
-        this.transform.SetLocalPositionAndRotation(new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius, Quaternion.Euler(0, 0, angle));
+        this.transform.SetParent(Owner.Indicator.Point);
+        this.transform.localPosition = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius;
+        
+        if (worldRotate) {
+            this.transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
+        else {
+            if (this.Owner.Indicator.OriginDirection)
+                this.transform.localRotation = Quaternion.Euler(0, 0, angle);
+            else {
+                this.transform.localRotation = Quaternion.Euler(0, 0, angle + 180);
+            }
+        }
+        //this.transform.SetLocalPositionAndRotation(new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius, Quaternion.Euler(0, 0, angle));
         _prevPosition = this.CurrentPosition;
-        this.transform.localScale = Vector3.one * scale;
-
         this.transform.SetParent(prevParent);
+        this.transform.localScale = Vector3.one * scale;
     }
 
     private IEnumerator CoDestroy() {

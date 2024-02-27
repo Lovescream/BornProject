@@ -10,7 +10,6 @@ public class Creature : Entity {
     public CreatureData Data { get; private set; }
     public Status Status { get; protected set; }
     public State<CreatureState> State { get; protected set; }
-    public Transform Indicator { get; protected set; }
 
     // Status.
     public float HpMax => Status[StatType.HpMax].Value;
@@ -45,15 +44,19 @@ public class Creature : Entity {
         }
     }
 
-    
-
     public bool Invincibility {
         get { return _invincibility; }
         set { _invincibility = value; }
     }
     public Vector2 KnockbackVelocity { get; protected set; }
     public Vector2 Velocity { get; protected set; }
-    public Vector2 LookDirection { get; protected set; }
+    public virtual Vector2 LookDirection {
+        get => _lookDirection;
+        set {
+            _lookDirection = value;
+            Flip = value.x < 0;
+        }
+    }
     public float LookAngle => Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg;
 
     public bool IsDead => State.Current == CreatureState.Dead;
@@ -69,12 +72,10 @@ public class Creature : Entity {
 
     // State, Status.
     private float _hp;
-    private float _existPower;
     private bool _invincibility = false;
+    protected Vector2 _lookDirection;
 
     // Components.
-    protected Transform _indicatorAxisAxis;
-    protected Transform _indicatorAxis;
     protected Rigidbody2D _rigidbody;
 
     // Callbacks.
@@ -85,19 +86,10 @@ public class Creature : Entity {
 
     #region MonoBehaviours
 
-    protected virtual void Update() {
-        if (_indicatorAxisAxis != null) {
-            _indicatorAxisAxis.localScale = new(LookDirection.x >= 0 ? 1 : -1, 1, 1);
-            _indicatorAxis.localScale = new(LookDirection.x >= 0 ? 1 : -1, 1, 1);
-        }
-        if (_indicatorAxis != null) {
-            _indicatorAxis.localRotation = Quaternion.Euler(0, 0, (LookDirection.x >= 0 ? 1 : -1) * LookAngle);
-        }
-    }
+    protected virtual void Update() { }
 
     protected virtual void FixedUpdate() {
         State.OnStay();
-        _spriter.flipX = LookDirection.x < 0;
         if (KnockbackVelocity.magnitude <= float.Epsilon)
             _rigidbody.velocity = Velocity;
         else
@@ -131,15 +123,8 @@ public class Creature : Entity {
 
         SetStatus(isFullHp: true);
         SetState();
-
-        _indicatorAxisAxis = this.transform.Find("Axis");
-        if (_indicatorAxisAxis != null) {
-            _indicatorAxis = _indicatorAxisAxis.Find("Indicator");
-            if (_indicatorAxis != null) {
-                Indicator = _indicatorAxis.Find("WeaponIndicator");
-            }
-        }
     }
+
     protected virtual void SetStatus(bool isFullHp = true) {
         this.Status = new(Data);
         if (isFullHp) {
