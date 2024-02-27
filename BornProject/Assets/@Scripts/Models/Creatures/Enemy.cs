@@ -82,6 +82,10 @@ public class Enemy : Creature, ISkillMan, IAttackable {
             AttackSpeed = Status[StatType.AttackSpeed],
             Range = Status[StatType.Range],
         };
+        // ======= Test용 Hp ========
+        this.Status[StatType.HpMax].SetValue(20);
+        this.Hp = HpMax;
+        // ======= 나중에 수정 ========
     }
     protected override void SetState() {
         base.SetState();
