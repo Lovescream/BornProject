@@ -6,7 +6,7 @@ using UnityEngine;
 public interface IAttackable {
 
     public Entity Entity { get; }
-    public Transform Indicator { get; }
+    public AttackIndicator Indicator { get; }
     public Vector2 LookDirection { get; }
 
     public void Attack();

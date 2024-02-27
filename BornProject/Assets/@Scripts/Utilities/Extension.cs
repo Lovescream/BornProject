@@ -9,7 +9,7 @@ public static class Extension {
     #region Generals
 
     public static GameObject FindChild(this GameObject obj, string name) => Utilities.FindChild(obj, name);
-    public static T FindChild<T>(this GameObject obj, string name) where T : UnityEngine.Object => Utilities.FindChild<T>(obj, name);
+    public static T FindChild<T>(this GameObject obj, string name = null) where T : UnityEngine.Object => Utilities.FindChild<T>(obj, name);
     public static T GetOrAddComponent<T>(this GameObject obj) where T : Component => Utilities.GetOrAddComponent<T>(obj);
     public static void DestroyChilds(this GameObject obj) {
         Transform[] children = new Transform[obj.transform.childCount];

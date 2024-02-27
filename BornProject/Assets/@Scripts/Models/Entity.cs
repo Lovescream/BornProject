@@ -18,14 +18,24 @@ public class Entity : MonoBehaviour {
     #region Properties
 
     public virtual float ColliderRatio => 0.8f;
+    public bool Flip {
+        get => _flip;
+        set {
+            _flip = value;
+            if (_spriter != null) _spriter.flipX = value;
+            if (_horizontalAxis != null) _horizontalAxis.localScale = new(value ? -1 : 1, 1, 1);
+        }
+    }
 
     #endregion
 
     #region Fields
 
+    private bool _flip;
     private bool _initialized;
 
     // Components.
+    protected Transform _horizontalAxis;
     protected SpriteRenderer _spriter;
     protected Collider2D _collider;
     protected Animator _animator;
@@ -43,6 +53,7 @@ public class Entity : MonoBehaviour {
     public virtual bool Initialize() {
         if (_initialized) return false;
 
+        _horizontalAxis = this.transform.Find("HorizontalAxis");
         _spriter = this.GetComponent<SpriteRenderer>();
         _collider = this.GetComponent<Collider2D>();
         _animator = this.GetComponent<Animator>();

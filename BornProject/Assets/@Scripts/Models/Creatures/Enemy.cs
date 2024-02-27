@@ -9,6 +9,7 @@ public class Enemy : Creature, ISkillMan, IAttackable {
 
     public Entity Entity => this;
     public Attacker Attacker { get; protected set; }
+    public AttackIndicator Indicator { get; protected set; }
     public SkillList SkillList { get; protected set; }
     public SkillStatus DefaultStatus { get; protected set; }
 
@@ -37,11 +38,6 @@ public class Enemy : Creature, ISkillMan, IAttackable {
     private Creature _target;
     private Creature _lastAttacker;
 
-    // Debugging.
-    private Transform _doubleSight;
-    private Transform _sight;
-    private Transform _range;
-
     // Coroutines.
     private Coroutine _coDead;
 
@@ -65,13 +61,8 @@ public class Enemy : Creature, ISkillMan, IAttackable {
     public override void SetInfo(CreatureData data) {
         base.SetInfo(data);
 
-        _doubleSight = this.transform.Find("[Debug] EnemySightSight");
-        _sight = this.transform.Find("[Debug] EnemySight");
-        _range = this.transform.Find("[Debug] EnemyRange");
-
-        _doubleSight.transform.localScale = 2 * DetectingRange * Vector3.one;
-        _sight.transform.localScale = 2 * Sight * Vector3.one;
-        _range.transform.localScale = 2 * Range * Vector3.one;
+        Indicator = this.gameObject.FindChild<AttackIndicator>();
+        Indicator.SetInfo(this);
 
         SkillList = new(this, Data.DefaultSkills);
     }
@@ -146,6 +137,7 @@ public class Enemy : Creature, ISkillMan, IAttackable {
         Vector2 direction = (Target.transform.position - this.transform.position).normalized;
         Velocity = direction * Status[StatType.MoveSpeed].Value;
         LookDirection = direction;
+        Indicator.IndicatorDirection = LookDirection;
     }
 
     private void OnStayAttack() {
@@ -171,6 +163,7 @@ public class Enemy : Creature, ISkillMan, IAttackable {
         Vector2 direction = (Target.transform.position - this.transform.position).normalized;
         Velocity = direction * Status[StatType.MoveSpeed].Value;
         LookDirection = direction;
+        Indicator.IndicatorDirection = LookDirection;
     }
 
     public override void OnHit(IHitCollider attacker) {
@@ -195,7 +188,7 @@ public class Enemy : Creature, ISkillMan, IAttackable {
             SkillKey = skill.Data.Key,
             HitColliderKey = skill.Data.HitColliderKey,
             RadiusOffset = skill.Data.RadiusOffset,
-            RotationAngle = skill.Data.RotationAngle < 0 ? LookAngle : skill.Data.RotationAngle,
+            RotationAngle = skill.Data.RotationAngle,
             Count = skill.Data.HitColliderCount,
             SpreadAngle = skill.Data.HitColliderAngle,
             Size = skill.Data.HitColliderSize,
