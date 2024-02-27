@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Attack_00
+      name: Shooter_Attack_00
       rect:
         serializedVersion: 2
         x: 33
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_player_6
+      name: Shooter_player_6
       rect:
         serializedVersion: 2
         x: 121
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Attack_02
+      name: Shooter_Attack_02
       rect:
         serializedVersion: 2
         x: 211
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Attack_03
+      name: Shooter_Attack_03
       rect:
         serializedVersion: 2
         x: 302
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Idle_00
+      name: Shooter_Idle_00
       rect:
         serializedVersion: 2
         x: 393
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Idle_01
+      name: Shooter_Idle_01
       rect:
         serializedVersion: 2
         x: 483
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Idle_02
+      name: Shooter_Idle_02
       rect:
         serializedVersion: 2
         x: 573
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Idle_03
+      name: Shooter_Idle_03
       rect:
         serializedVersion: 2
         x: 663
@@ -312,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Walk_00
+      name: Shooter_Walk_00
       rect:
         serializedVersion: 2
         x: 753
@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Walk_01
+      name: Shooter_Walk_01
       rect:
         serializedVersion: 2
         x: 843
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Walk_02
+      name: Shooter_Walk_02
       rect:
         serializedVersion: 2
         x: 932
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Walk_03
+      name: Shooter_Walk_03
       rect:
         serializedVersion: 2
         x: 1023
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Walk_04
+      name: Shooter_Walk_04
       rect:
         serializedVersion: 2
         x: 1113
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Walk_05
+      name: Shooter_Walk_05
       rect:
         serializedVersion: 2
         x: 1203
@@ -438,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Walk_06
+      name: Shooter_Walk_06
       rect:
         serializedVersion: 2
         x: 1293
@@ -480,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Hit_00
+      name: Shooter_Hit_00
       rect:
         serializedVersion: 2
         x: 1833
@@ -501,7 +501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_player_26
+      name: Shooter_Dead_00
       rect:
         serializedVersion: 2
         x: 1923
@@ -522,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Hit_02
+      name: Shooter_HitAndDead_01
       rect:
         serializedVersion: 2
         x: 2000
@@ -564,7 +564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot_Dead_03
+      name: Shoot_Dead_02
       rect:
         serializedVersion: 2
         x: 2073
@@ -572,7 +572,7 @@ TextureImporter:
         width: 83
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -595,29 +595,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shoot_Attack_00: 1712556090
-      Shoot_Attack_02: -142660988
-      Shoot_Attack_03: -977751735
-      Shoot_Dead_03: -1451572760
+      Shoot_Dead_02: -1451572760
       Shoot_Hit_0: -2090995612
-      Shoot_Hit_00: 51888764
-      Shoot_Hit_02: 1397020107
-      Shoot_Idle_00: 1310459802
-      Shoot_Idle_01: -2108346538
-      Shoot_Idle_02: -565713867
-      Shoot_Idle_03: -115532121
-      Shoot_Walk_00: -1173165650
-      Shoot_Walk_01: -1024362399
-      Shoot_Walk_02: -758917445
-      Shoot_Walk_03: -561738220
-      Shoot_Walk_04: -2070075531
-      Shoot_Walk_05: -1894557148
-      Shoot_Walk_06: -920706001
       Shoot_player_2: -885270529
       Shoot_player_21: -1004593836
       Shoot_player_22: -345461773
       Shoot_player_24: -920706001
-      Shoot_player_26: 1332332535
       Shoot_player_28: 393976611
       Shoot_player_29: -1848981643
       Shoot_player_3: 101495883
@@ -625,8 +608,25 @@ TextureImporter:
       Shoot_player_31: -1536629829
       Shoot_player_32: 1249245354
       Shoot_player_4: 1786088430
-      Shoot_player_6: -1177875559
       Shoot_player_9: 1686334995
+      Shooter_Attack_00: -1536629829
+      Shooter_Attack_02: 1249245354
+      Shooter_Attack_03: 1712556090
+      Shooter_Dead_00: -2090995612
+      Shooter_HitAndDead_01: 1397020107
+      Shooter_Hit_00: -920706001
+      Shooter_Idle_00: -142660988
+      Shooter_Idle_01: -977751735
+      Shooter_Idle_02: 1310459802
+      Shooter_Idle_03: -2108346538
+      Shooter_Walk_00: -565713867
+      Shooter_Walk_01: -115532121
+      Shooter_Walk_02: -1173165650
+      Shooter_Walk_03: -1024362399
+      Shooter_Walk_04: -758917445
+      Shooter_Walk_05: -561738220
+      Shooter_Walk_06: -2070075531
+      Shooter_player_6: -1177875559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
