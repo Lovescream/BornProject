@@ -140,7 +140,6 @@ public class HitCollider : Entity, IHitCollider {
     #endregion
 
     public void SetDirection(Vector2 direction) {
-        Debug.Log($"{direction.x},{direction.y}");
         Velocity = direction * Info.Speed;
     }
 

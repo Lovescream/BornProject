@@ -76,7 +76,8 @@ public class Entity : MonoBehaviour {
     private void FitColliderOnChangedSprite(SpriteRenderer spriter) {
         if (spriter.sprite == null) return;
         if (_collider is not BoxCollider2D box) return;
-        box.size = spriter.sprite.bounds.size * ColliderRatio;
-        box.offset = spriter.sprite.bounds.center;
+        Bounds b = spriter.sprite.bounds;
+        box.size = b.size * ColliderRatio;
+        box.offset = new((Flip ? -1 : 1) * b.center.x, b.center.y);
     }
 }
