@@ -63,6 +63,12 @@ public class ObjectManager {
         DamageText text = obj.GetOrAddComponent<DamageText>();
         text.SetInfo(position, damage);
     }
+    public void ShowHpBar(Creature creature, float hp, float from = -1) {
+        UI_HpBar bar = creature.GetComponentInChildren<UI_HpBar>(false);
+        if (bar == null)
+            bar = Main.Resource.Instantiate("UI_HpBar", pooling: true).GetOrAddComponent<UI_HpBar>();
+        bar.SetInfo(creature, hp, from);
+    }
 
     private T Spawn<T>(Vector2 position) where T : Entity {
         Type type = typeof(T);

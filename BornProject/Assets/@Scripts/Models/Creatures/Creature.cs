@@ -1,6 +1,7 @@
 using ZerolizeDungeon;
 using System;
 using UnityEngine;
+using UnityEditor.PackageManager;
 
 public class Creature : Entity {
 
@@ -22,16 +23,11 @@ public class Creature : Entity {
         get => _hp;
         set {
             if (_hp == value) return;
-            if (this.GetComponent<Player>() != null)
-            {
-                Debug.Log($"Player의 Hp를 {value}로 설정합니다.");
-                
-            }
-            if (value <= 0)
-            {
+            float origin = _hp;
+            if (value <= 0) {
                 if (State.Current != CreatureState.Dead)
                     Debug.Log($"[Creature: {this.Data.Key}] 쥬금");
-                    State.Current = CreatureState.Dead;
+                State.Current = CreatureState.Dead;
                 _hp = 0;
 
                 EnemyDieAudioSource();
@@ -161,7 +157,9 @@ public class Creature : Entity {
     
     public virtual void OnHit(IHitCollider attacker) {
         HitInfo hitInfo = attacker.HitInfo;
+        float prevHp = Hp;
         Hp -= hitInfo.Damage;
+        Main.Object.ShowHpBar(this, Hp, prevHp);
         Main.Object.ShowDamageText(this.transform.position, hitInfo.Damage);
 
         CreatureState originState = State.Current == CreatureState.Hit ? State.NextState :State.Current; // 원래 상태 저장.

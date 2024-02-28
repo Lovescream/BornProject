@@ -21,9 +21,9 @@
     "AttackSpeed": 1.5,
     "Range": 1.5,
     "Sight": 5.0,
-    "Skills": "Cobra",
-    "DefaultSkills": "Cobra_Base_Attack",
-    "Key": "Cobra"
+    "Skills": "Snake",
+    "DefaultSkills": "Snake_Base_Attack",
+    "Key": "Snake"
   },
   {
     "HpMax": 50.0,

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class Entity : MonoBehaviour {
     #region Properties
 
     public virtual float ColliderRatio => 0.8f;
+    public float SpriteWidthRatio => _spriter == null ? 0 : (_spriter.sprite.textureRect.width / _spriter.sprite.pixelsPerUnit);
     public bool Flip {
         get => _flip;
         set {
@@ -40,6 +42,8 @@ public class Entity : MonoBehaviour {
     protected Collider2D _collider;
     protected Animator _animator;
 
+    public event Action OnDisabled;
+
     #endregion
 
     #region MonoBehaviours
@@ -47,11 +51,16 @@ public class Entity : MonoBehaviour {
     protected virtual void Awake() {
         if (_autoInitialize) Initialize();
     }
+    protected virtual void OnDisble() {
+        OnDisabled?.Invoke();
+    }
 
     #endregion
 
     public virtual bool Initialize() {
         if (_initialized) return false;
+
+        OnDisabled = null;
 
         _horizontalAxis = this.transform.Find("HorizontalAxis");
         _spriter = this.GetComponent<SpriteRenderer>();
