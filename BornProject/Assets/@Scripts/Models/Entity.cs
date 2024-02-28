@@ -77,6 +77,6 @@ public class Entity : MonoBehaviour {
         if (spriter.sprite == null) return;
         if (_collider is not BoxCollider2D box) return;
         box.size = spriter.sprite.bounds.size * ColliderRatio;
-        box.offset = (Vector2)(spriter.bounds.center - this.transform.position);
+        box.offset = spriter.sprite.bounds.center;
     }
 }
