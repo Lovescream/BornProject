@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -37,12 +39,24 @@ public class HitCollider_Laser : HitCollider {
 
     #endregion
 
-    private float GetLaserLength() => Physics2D.RaycastAll(CurrentPosition, this.transform.right, Mathf.Clamp(Range, 0, 1000), _layerMask)
-            .Where(x => x.transform.GetComponent<IAttackable>() != Owner)
+    private float GetLaserLength() {
+        IEnumerable<RaycastHit2D> hits = Physics2D.RaycastAll(CurrentPosition, this.transform.right, Mathf.Clamp(Range, 0, 1000), _layerMask).Where(x => x.transform.GetComponent<IAttackable>() != Owner);
+
+        if (RemainPenetration < 0)
+            return hits.Where(x => x.transform.gameObject.layer != Main.CreatureLayer)
             .Select(x => ((Vector3)x.point - CurrentPosition).magnitude)
             .OrderBy(x => x)
             .DefaultIfEmpty(-1)
             .FirstOrDefault();
+
+        IEnumerator<RaycastHit2D> enumerator = hits.OrderBy(x => ((Vector3)x.point - CurrentPosition).sqrMagnitude).GetEnumerator();
+        while (enumerator.MoveNext()) {
+            if (RemainPenetration == 0 || enumerator.Current.transform.gameObject.layer == Main.WallLayer)
+                return ((Vector3)enumerator.Current.point - CurrentPosition).magnitude;
+            RemainPenetration--;
+        }
+        return -1;
+    }
     
     private void SetSpriteWidth() {
         float length = GetLaserLength();

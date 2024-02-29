@@ -6,10 +6,11 @@ using UnityEngine;
 
 public class HitCollider : Entity, IHitCollider {
 
+    #region Properties
+    public override float ColliderRatio => 1f;
     public HitColliderInfo Info { get; protected set; }
     public HitInfo HitInfo { get; protected set; }
 
-    #region Properties
     public Vector2 Velocity { get; set; }
     public int RemainPenetration { get; protected set; }
 
