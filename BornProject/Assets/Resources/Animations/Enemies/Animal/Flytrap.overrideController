@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Flytrap
+  m_Controller: {fileID: 9100000, guid: b9e31fea2a8129a4fad97c96eb26de33, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3fb8076d00f3eef41aa1d84b29f46c1e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 498fe0595fa494439ba1b2dc529a807a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7ad0f4143a2ac264c98ffed5c9c2ffee, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 61ecda3d0218e4340824ae69163395ab, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4d6474cc09d2c974ca173c521f7e110a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9f52ff7e24491497f80880f132b2c195, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 158f0ef45ed223d40bb53079f18cfaf9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5d76d6ad4bde84a97b390720361cb395, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 12053e21f53683a4b804f16ac0b071ff, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5d76d6ad4bde84a97b390720361cb395, type: 2}
