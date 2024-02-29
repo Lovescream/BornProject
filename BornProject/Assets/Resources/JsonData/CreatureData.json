@@ -151,7 +151,7 @@
     "AttackSpeed": 1.0,
     "Range": 5.0,
     "Sight": 10.0,
-    "Skills": "MushroomBomb|SporeShot|SporeSpread|MushroomMine",
+    "Skills": "MushroomBomb|SporeShot|SporeSpread|MushroomMine|Boss",
     "DefaultSkills": null,
     "Key": "MushroomBoss"
   },
@@ -164,7 +164,7 @@
     "AttackSpeed": 1.0,
     "Range": 5.0,
     "Sight": 10.0,
-    "Skills": "GermsShot|FlySummons|FlyBomb|FlySelfDestruct",
+    "Skills": "GermsShot|FlySummons|FlyBomb|FlySelfDestruct|Boss",
     "DefaultSkills": null,
     "Key": "FlyBoss"
   },
@@ -190,8 +190,8 @@
     "AttackSpeed": 0.8,
     "Range": 5.0,
     "Sight": 5.0,
-    "Skills": "BlueSkull|SkullRush",
-    "DefaultSkills": "BlueSkull_Base_Attack",
+    "Skills": "BlueSkull_Base_Attack|Skull_Base_Attack",
+    "DefaultSkills": null,
     "Key": "BlueSkull"
   },
   {
@@ -203,8 +203,8 @@
     "AttackSpeed": 1.0,
     "Range": 3.0,
     "Sight": 5.0,
-    "Skills": "RedSkull|SkullRush",
-    "DefaultSkills": "RedSkull_Base_Attack",
+    "Skills": "RedSkull_Base_Attack|Skull_Base_Attack",
+    "DefaultSkills": null,
     "Key": "RedSkull"
   },
   {
@@ -229,9 +229,9 @@
     "AttackSpeed": 1.0,
     "Range": 3.0,
     "Sight": 5.0,
-    "Skills": "KingPeaMan",
-    "DefaultSkills": "KingPeaMan_Base_Attack",
-    "Key": "KingPeaMan"
+    "Skills": "RollingMan",
+    "DefaultSkills": "RollingMan_Base_Attack",
+    "Key": "RollingMan"
   },
   {
     "HpMax": 500.0,
@@ -255,7 +255,7 @@
     "AttackSpeed": 1.5,
     "Range": 5.0,
     "Sight": 10.0,
-    "Skills": "JumpingDaddy|DaddysCall|DaddyJap",
+    "Skills": "JumpingDaddy|DaddysCall|DaddyJap|Boss",
     "DefaultSkills": null,
     "Key": "BaldDaddyBoss"
   },
@@ -268,7 +268,7 @@
     "AttackSpeed": 1.0,
     "Range": 5.0,
     "Sight": 10.0,
-    "Skills": "SonRush|SonLaser",
+    "Skills": "SonLaser|Boss",
     "DefaultSkills": null,
     "Key": "SonBoss"
   },
@@ -328,7 +328,7 @@
     "HpMax": 350.0,
     "HpRegen": 5.0,
     "Damage": 50.0,
-    "Defense": 7.0,
+    "Defense": 10.0,
     "MoveSpeed": 2.0,
     "AttackSpeed": 1.0,
     "Range": 5.0,
@@ -341,7 +341,7 @@
     "HpMax": 300.0,
     "HpRegen": 5.0,
     "Damage": 40.0,
-    "Defense": 7.0,
+    "Defense": 10.0,
     "MoveSpeed": 2.0,
     "AttackSpeed": 1.0,
     "Range": 5.0,
