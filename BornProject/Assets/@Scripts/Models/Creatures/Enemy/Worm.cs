@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Worm : Enemy {
 
-    protected static readonly int AnimatorParameterHash_Worm = Animator.StringToHash("Worm");
+    protected static readonly int AnimatorParameterHash_Attack = Animator.StringToHash("Attack");
 
     #region Initialize / Set
 
@@ -29,19 +29,19 @@ public class Worm : Enemy {
     #region State
 
     private void OnEnteredChase() {
-        _animator.SetBool(AnimatorParameterHash_Worm, true);
+        _animator.SetBool(AnimatorParameterHash_Attack, true);
     }
     private void OnEnteredAttack() {
         Velocity = Vector2.zero;
     }
     private void OnEnteredDead() {
-        _animator.SetBool(AnimatorParameterHash_Worm, false);
+        _animator.SetBool(AnimatorParameterHash_Attack, false);
     }
     private void OnExitedChase() {
-        if (Target == null) _animator.SetBool(AnimatorParameterHash_Worm, false);
+        if (Target == null) _animator.SetBool(AnimatorParameterHash_Attack, false);
     }
     private void OnExitedAttack() {
-        if (Target == null) _animator.SetBool(AnimatorParameterHash_Worm, false);
+        if (Target == null) _animator.SetBool(AnimatorParameterHash_Attack, false);
     }
 
     #endregion
