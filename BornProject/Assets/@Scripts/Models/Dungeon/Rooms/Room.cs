@@ -23,6 +23,12 @@ namespace ZerolizeDungeon {
         Shop,
         Boss,
     }
+    public enum RoomExploreType {
+        Current,
+        Explored,
+        NotExplored,
+        Hide,
+    }
 
     public class Room : MonoBehaviour {
 
@@ -50,6 +56,7 @@ namespace ZerolizeDungeon {
         public Vector2 CenterPosition => OriginPosition + new Vector2(Width / 2, Height / 2);
         public Vector2 MaxPosition => OriginPosition + new Vector2(Width, Height);
         public RoomType Type { get; private set; }
+        public Room[] Neighbours => _neighbours.Values.ToArray();
 
         // Room State.
         public bool IsOpened {
@@ -61,7 +68,7 @@ namespace ZerolizeDungeon {
                 else OnRoomClosed?.Invoke(this);
             }
         }
-        public bool IsActivated {
+        public bool IsExplored {
             get => _isActivated;
             set {
                 _isActivated = value;
@@ -74,6 +81,13 @@ namespace ZerolizeDungeon {
             set {
                 _isClear = value;
                 IsOpened = value;
+            }
+        }
+        public RoomExploreType ExploreType {
+            get => _exploreType;
+            set {
+                _exploreType = value;
+                OnChangeExploreType?.Invoke(value);
             }
         }
         public bool ExistEnemy => _enemies.Count > 0;
@@ -92,6 +106,7 @@ namespace ZerolizeDungeon {
         private bool _isOpened = true;
         private bool _isClear = false;
         private bool _isActivated = false;
+        private RoomExploreType _exploreType;
 
         // Collections.
         private Dictionary<Direction, Debris> _debris = new();
@@ -103,8 +118,11 @@ namespace ZerolizeDungeon {
         private Rpdlagkrhtlvek _rpdlatlzuwnjwpqkf;
 
         // Callbacks.
+        public Action<Room> cbOnEnteredRoom;
+        public Action<Room> cbOnExitedRoom;
         public event Action<Room> OnRoomOpened;
         public event Action<Room> OnRoomClosed;
+        public event Action<RoomExploreType> OnChangeExploreType;
 
         private bool _isInitialized;
 
@@ -136,11 +154,6 @@ namespace ZerolizeDungeon {
             this.Y = data.Y;
             this.transform.name = $"Room[{X}, {Y}]";
             this.transform.position = OriginPosition;
-            _rpdlatlzuwnjwpqkf = Main.Resource.Instantiate("Rpdlagkrhtlvek", this.transform, false).GetComponent<Rpdlagkrhtlvek>();
-            _rpdlatlzuwnjwpqkf.transform.localPosition = new(15, 15);
-            _rpdlatlzuwnjwpqkf.OnEnteredPlayer += () => {
-                IsActivated = true;
-            };
 
             // #2. 컬렉션 초기화.
             for (int i = 0; i < (int)ZerolizeDungeon.Direction.COUNT; i++) {
@@ -150,6 +163,7 @@ namespace ZerolizeDungeon {
 
             // #3. 타입 설정.
             SetType(dungeon, data);
+            ExploreType = RoomExploreType.Hide;
 
             // #4. 통로 설정.
             for (int i = 0; i < 4; i++) {
@@ -170,7 +184,22 @@ namespace ZerolizeDungeon {
             IsOpened = false;
             IsOpened = true;
 
-            // #5. 적 소환.
+            // #5. 진입 콜라이더 생성.
+            _rpdlatlzuwnjwpqkf = Main.Resource.Instantiate("Rpdlagkrhtlvek", this.transform, false).GetComponent<Rpdlagkrhtlvek>();
+            _rpdlatlzuwnjwpqkf.SetInfo(this);
+
+            // #6. 콜백 등록.
+            cbOnEnteredRoom = null;
+            cbOnEnteredRoom += r => {
+                IsExplored = true;
+                ExploredThisRooom(r, true);
+            };
+            cbOnExitedRoom = null;
+            cbOnExitedRoom += r => {
+                ExploredThisRooom(r, false);
+            };
+
+            // #7. 적 소환.
             SpawnEnemy();
         }
 
@@ -249,6 +278,20 @@ namespace ZerolizeDungeon {
                 return;
             }
             Type = RoomType.Normal;
+        }
+
+        private void ExploredThisRooom(Room room, bool isEntered) {
+            if (isEntered) {
+                room.ExploreType = RoomExploreType.Current;
+                foreach (Room neighbour in room.Neighbours) {
+                    if (neighbour == null) continue;
+                    if (neighbour.ExploreType == RoomExploreType.Hide)
+                        neighbour.ExploreType = RoomExploreType.NotExplored;
+                }
+            }
+            else {
+                room.ExploreType = RoomExploreType.Explored;
+            }
         }
 
         #endregion
