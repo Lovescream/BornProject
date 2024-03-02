@@ -14,12 +14,6 @@ public class UI_Popup_Menu : UI_Popup {
 
     #endregion
 
-    #region Properties
-
-    public override bool IsPause => true;
-
-    #endregion
-
     #region Initialize / Set
 
     public override bool Initialize() {

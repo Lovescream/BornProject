@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -96,6 +97,21 @@ public class UIManager {
         if (popup.IsPause) Time.timeScale = 0f;
 
         return popup;
+    }
+
+    public T GetLatestPopup<T>() where T : UI_Popup {
+        for (int i = _popups.Count - 1; i>=0; i--) {
+            if (_popups[i] is T popup) return popup;
+        }
+        return null;
+    }
+
+    public void ClosePopupUI<T>() where T : UI_Popup {
+        if (_popups.Count == 0) return;
+
+        foreach (var popup in _popups.Where(x => x is T)) {
+            ClosePopup(popup);
+        }
     }
 
     public void ClosePopup(UI_Popup popup) {

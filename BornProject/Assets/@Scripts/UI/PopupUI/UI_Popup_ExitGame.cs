@@ -13,12 +13,6 @@ public class UI_Popup_ExitGame : UI_Popup {
 
     #endregion
 
-    #region Properties
-
-    public override bool IsPause => true;
-
-    #endregion
-
     #region Initialize / Set
 
     public override bool Initialize() {

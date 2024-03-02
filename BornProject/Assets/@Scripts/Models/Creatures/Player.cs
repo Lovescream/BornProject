@@ -140,6 +140,20 @@ public class Player : Creature, ISkillMan, IAttackable {
         //SkillList.SetMeleeSkill();
         //Attack();
     }
+    protected void OnButtonTab() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Dungeon.ToggleMap();
+    }
+    protected void OnButtonQ() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        UI_Popup_Quest popup = Main.UI.GetLatestPopup<UI_Popup_Quest>();
+        if (popup == null) Main.UI.OpenPopupUI<UI_Popup_Quest>().SetInfo();
+        else Main.UI.ClosePopup(popup);
+    }
+    protected void OnButtonK() {
+        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
+    }
 
     #endregion
 

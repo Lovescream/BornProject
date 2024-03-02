@@ -22,7 +22,6 @@ public class UI_Scene_Game : UI_Scene {
     #region Properties
     
     public UI_PlayerInfo PlayerInfo { get; protected set; }
-    private bool isQuestPopupOpen = false;
 
     #endregion
 
@@ -66,18 +65,10 @@ public class UI_Scene_Game : UI_Scene {
     
     private void OnBtnQuest() {
         AudioController.Instance.SFXPlay(SFX.OnClickButton);
-        if (!isQuestPopupOpen)
-        {
-            Main.UI.OpenPopupUI<UI_Popup_Quest>().SetInfo(); // 퀘스트 팝업을 열어줘
-            isQuestPopupOpen = true; // 퀘스트 팝업이 열렸다고 표시해줘
-        }
-        else
-        {
-            Main.UI.Clear(); // 이미 열려있는 퀘스트 팝업을 닫아줘
-            isQuestPopupOpen = false; // 퀘스트 팝업이 닫혔다고 표시해줘
-        }
+        UI_Popup_Quest popup = Main.UI.GetLatestPopup<UI_Popup_Quest>();
+        if (popup == null) Main.UI.OpenPopupUI<UI_Popup_Quest>().SetInfo();
+        else Main.UI.ClosePopup(popup);
     }
-
 
     private void OnBtnSkill() {
         AudioController.Instance.SFXPlay(SFX.OnClickButton);
