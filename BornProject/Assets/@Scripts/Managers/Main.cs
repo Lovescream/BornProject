@@ -66,12 +66,9 @@ public class Main : MonoBehaviour {
         _scene = new();
         _game = new();
     }
-
-    #region Layers
-
+}
+public static class Layers {
     public static readonly int WallLayer = LayerMask.NameToLayer("DungeonWalls");
     public static readonly int CreatureLayer = LayerMask.NameToLayer("Creatures");
     public static readonly int HitColliderLayer = LayerMask.NameToLayer("HitColliders");
-
-    #endregion
 }

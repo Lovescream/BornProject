@@ -157,7 +157,7 @@ namespace ZerolizeDungeon {
             Tilemap[] tilemaps = this.transform.Find("Walls").GetComponentsInChildren<Tilemap>();
             foreach (Tilemap tilemap in tilemaps)
             {
-                tilemap.gameObject.layer = Main.WallLayer;
+                tilemap.gameObject.layer = Layers.WallLayer;
                 tilemap.GetComponent<CompositeCollider2D>().geometryType = CompositeCollider2D.GeometryType.Polygons;
             }
 

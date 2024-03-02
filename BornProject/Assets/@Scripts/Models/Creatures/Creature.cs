@@ -102,7 +102,7 @@ public class Creature : Entity {
 
         _rigidbody = this.GetComponent<Rigidbody2D>();
 
-        this.gameObject.layer = Main.CreatureLayer;
+        this.gameObject.layer = Layers.CreatureLayer;
 
         return true;
     }

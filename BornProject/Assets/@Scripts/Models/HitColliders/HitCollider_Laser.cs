@@ -34,7 +34,7 @@ public class HitCollider_Laser : HitCollider {
         if (_collider is BoxCollider2D box) box.autoTiling = true;
         _spriter.RegisterSpriteChangeCallback(SetSpriteHeight);
 
-        _layerMask = 1 << Main.CreatureLayer | 1 << Main.WallLayer;
+        _layerMask = 1 << Layers.CreatureLayer | 1 << Layers.WallLayer;
     }
 
     #endregion
@@ -43,7 +43,7 @@ public class HitCollider_Laser : HitCollider {
         IEnumerable<RaycastHit2D> hits = Physics2D.RaycastAll(CurrentPosition, this.transform.right, Mathf.Clamp(Range, 0, 1000), _layerMask).Where(x => x.transform.GetComponent<IAttackable>() != Owner);
 
         if (RemainPenetration < 0)
-            return hits.Where(x => x.transform.gameObject.layer != Main.CreatureLayer)
+            return hits.Where(x => x.transform.gameObject.layer != Layers.CreatureLayer)
             .Select(x => ((Vector3)x.point - CurrentPosition).magnitude)
             .OrderBy(x => x)
             .DefaultIfEmpty(-1)
@@ -51,7 +51,7 @@ public class HitCollider_Laser : HitCollider {
 
         IEnumerator<RaycastHit2D> enumerator = hits.OrderBy(x => ((Vector3)x.point - CurrentPosition).sqrMagnitude).GetEnumerator();
         while (enumerator.MoveNext()) {
-            if (RemainPenetration == 0 || enumerator.Current.transform.gameObject.layer == Main.WallLayer)
+            if (RemainPenetration == 0 || enumerator.Current.transform.gameObject.layer == Layers.WallLayer)
                 return ((Vector3)enumerator.Current.point - CurrentPosition).magnitude;
             RemainPenetration--;
         }
