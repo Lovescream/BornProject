@@ -17,6 +17,7 @@ public class RoomInsideCollider : MonoBehaviour {
     }
 
     protected void OnTriggerExit2D(Collider2D collision) {
+        if (Main.Instance == null) return;
         if (collision.GetComponent<Player>() == null) return;
         OnExitedRoom?.Invoke(Room);
     }
