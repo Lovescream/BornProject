@@ -12,7 +12,7 @@ namespace ZerolizeDungeon {
         public Room StartRoom { get; private set; }
         public Room BossRoom { get; private set; }
         public Room TreasureRoom { get; private set; }
-        
+
         public int FarthestDistance { get; private set; }
 
         public List<Room> Rooms => _rooms.Values.ToList();
@@ -59,8 +59,7 @@ namespace ZerolizeDungeon {
             }
         }
 
-        private Room GenerateRoom(int direction, bool isStartRoom = false)
-        {
+        private Room GenerateRoom(int direction, bool isStartRoom = false) {
             List<Room> rooms = Main.Resource.LoadRoom((RoomDirection)direction);
 
             Room room;
@@ -79,6 +78,15 @@ namespace ZerolizeDungeon {
 
             return room != null ? GameObject.Instantiate(room) : null;
         }
+
+        public Vector2Int GetRelativeIndex(Room room) {
+            if (StartRoom == null) {
+                Debug.LogError($"[Dungeon] GetReleativeIndex({room}): Not found start room.");
+                return Vector2Int.zero;
+            }
+            return room.Index - StartRoom.Index;
+        }
     }
+
 
 }
