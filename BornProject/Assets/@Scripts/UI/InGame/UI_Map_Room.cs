@@ -47,7 +47,7 @@ public class UI_Map_Room : UI_Base {
     }
 
     private void Refresh(RoomExploreType type) {
-        if (this.gameObject == null) return;
+        if (this == null || this.gameObject == null) return;
         if (type == RoomExploreType.Hide) {
             _image.enabled = false;
             return;

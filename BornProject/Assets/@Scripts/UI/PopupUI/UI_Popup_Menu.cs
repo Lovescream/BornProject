@@ -6,6 +6,10 @@ public class UI_Popup_Menu : UI_Popup {
 
     #region Enums
 
+    enum Objects {
+        VolumeController_BGM,
+        VolumeController_SFX,
+    }
     enum Buttons {
         btnInfo,
         btnResume,
@@ -20,12 +24,19 @@ public class UI_Popup_Menu : UI_Popup {
         if (!base.Initialize()) return false;
 
         BindButton(typeof(Buttons));
+        BindObject(typeof(Objects));
 
         GetButton((int)Buttons.btnInfo).onClick.AddListener(OnBtnInfo);
         GetButton((int)Buttons.btnResume).onClick.AddListener(OnBtnResume);
         GetButton((int)Buttons.btnExit).onClick.AddListener(OnBtnExit);
 
+
         return true;
+    }
+
+    public void SetInfo() {
+        GetObject((int)Objects.VolumeController_BGM).GetComponent<UI_VolumeController>().SetInfo(AudioType.BGM);
+        GetObject((int)Objects.VolumeController_SFX).GetComponent<UI_VolumeController>().SetInfo(AudioType.SFX);
     }
 
     #endregion

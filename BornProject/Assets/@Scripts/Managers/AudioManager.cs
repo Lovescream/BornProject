@@ -36,6 +36,7 @@ public class AudioManager {
 
     public void Initialize() {
         if (_isInitialized) return;
+        _isInitialized = true;
 
         for (int i = 0; i < (int)AudioType.COUNT; i++)
             _audioSources[(AudioType)i] = new();

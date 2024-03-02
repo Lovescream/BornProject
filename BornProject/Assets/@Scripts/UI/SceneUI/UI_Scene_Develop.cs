@@ -58,7 +58,7 @@ public class UI_Scene_Develop : UI_Scene {
 
     private void OnBtnMenu() {
         Main.Audio.PlayOnButton();
-        Main.UI.OpenPopupUI<UI_Popup_Menu>();
+        Main.UI.OpenPopupUI<UI_Popup_Menu>().SetInfo();
     }
 
 
