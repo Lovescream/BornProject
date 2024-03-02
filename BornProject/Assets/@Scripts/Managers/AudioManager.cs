@@ -42,7 +42,7 @@ public class AudioManager {
     }
 
     #region Play
-    
+
     // BGM을 재생합니다. audioSourceKey를 지정하면 해당 AudioSource가 재생하도록 합니다.
     public bool PlayBGM(string key, string audioSourceKey = "") {
         // #1. 음소거 설정 시 재생하지 않음.
@@ -68,7 +68,7 @@ public class AudioManager {
         source.Play();
         return true;
     }
-    
+
     // SFX를 재생합니다.
     public void PlaySFX(string key) {
         // #1. 음소거 설정 시 재생하지 않음.
@@ -89,10 +89,14 @@ public class AudioManager {
         source.Play();
     }
 
+    // Creature의 상태 SFX를 재생합니다.
     public void Play(Creature creature, CreatureState state) {
         if (creature is Player) PlaySFX($"SFX_Player_{state}");
         else PlaySFX($"SFX_Enemy_{creature.Data.Key}_{state}");
     }
+    // Skill의 상태 SFX를 재생합니다.
+    // Skill의 전체 Key를 기준으로 클립을 찾고, 찾지 못하면 BaseName을 기준으로 클립을 찾습니다.
+    // Ex) Laser 스킬을 하나의 효과음으로 돌려 쓸 수 있고, 특정 스킬은 특정 효과음을 사용하도록 할 수 있습니다.
     public void Play(Skill skill, string state = "") {
         if (string.IsNullOrEmpty(state)) state = "Shot";
         if (Main.Resource.IsExistAudioClip($"SFX_Skill_{skill.Data.Name}_{state}"))
