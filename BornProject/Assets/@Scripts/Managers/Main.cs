@@ -37,6 +37,7 @@ public class Main : MonoBehaviour {
     private QuestManager _quest = new();
     private SceneManagerEx _scene = new();
     private GameManager _game = new();
+    private AudioManager _audio = new();
 
     public static PoolManager Pool => Instance?._pool;
     public static DataManager Data => Instance?._data;
@@ -47,6 +48,7 @@ public class Main : MonoBehaviour {
     public static QuestManager Quest => Instance?._quest;
     public static SceneManagerEx Scene => Instance?._scene;
     public static GameManager Game => Instance?._game;
+    public static AudioManager Audio => Instance?._audio;
 
     public static void Clear() {
         // Audio.Clear();
@@ -65,6 +67,7 @@ public class Main : MonoBehaviour {
         _quest = new();
         _scene = new();
         _game = new();
+        _audio = new();
     }
 }
 public static class Layers {
