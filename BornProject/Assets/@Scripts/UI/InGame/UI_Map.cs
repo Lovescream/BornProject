@@ -38,7 +38,7 @@ public class UI_Map : MonoBehaviour {
             UI_Map_Room roomMap = Main.UI.CreateSubItem<UI_Map_Room>(_parent, pooling: false);
             roomMap.SetInfo(room);
             _mapSlots.Add(roomMap);
-            room.cbOnEnteredRoom += Refresh;
+            room.FullCollider.OnEnteredRoom += Refresh;
         }
     }
 

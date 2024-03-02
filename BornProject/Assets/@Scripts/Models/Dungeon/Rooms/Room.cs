@@ -43,22 +43,49 @@ namespace ZerolizeDungeon {
 
         #region Properties
 
-        // Room Info.
+        #region Room Info
+
         public int X { get; private set; }
         public int Y { get; private set; }
         public Vector2Int Index => new(X, Y);
         public string Key => this.gameObject.name;
-        public RoomDirection Direction => (int)_direction == -1 ? (RoomDirection)15 : _direction;
+        public RoomType Type { get; private set; }
+
+        #endregion
+
+        #region Transform Info
+
         public Vector2Int Size => _size;
         public int Width => Size.x;
         public int Height => Size.y;
         public Vector2 OriginPosition => new(X * Width, Y * Height);
         public Vector2 CenterPosition => OriginPosition + new Vector2(Width / 2, Height / 2);
         public Vector2 MaxPosition => OriginPosition + new Vector2(Width, Height);
-        public RoomType Type { get; private set; }
-        public Room[] Neighbours => _neighbours.Values.ToArray();
+        public RoomFullCollider FullCollider { get; protected set; }
+        public RoomInsideCollider InsideCollider { get; protected set; }
+        #endregion
 
-        // Room State.
+        #region Neighbours Info
+
+        public Room[] Neighbours => _neighbours.Values.ToArray();
+        public RoomDirection Direction => (int)_direction == -1 ? (RoomDirection)15 : _direction;
+        public Room Top => _neighbours[ZerolizeDungeon.Direction.Top];
+        public Room Right => _neighbours[ZerolizeDungeon.Direction.Right];
+        public Room Bottom => _neighbours[ZerolizeDungeon.Direction.Bottom];
+        public Room Left => _neighbours[ZerolizeDungeon.Direction.Left];
+
+        #endregion
+
+        #region State Info
+
+        public bool IsActivated {
+            get => _isActivated;
+            set {
+                _isActivated = value;
+                if (value == false) return;
+                SpawnEnemy();
+            }
+        }
         public bool IsOpened {
             get => _isOpened;
             set {
@@ -69,10 +96,9 @@ namespace ZerolizeDungeon {
             }
         }
         public bool IsExplored {
-            get => _isActivated;
+            get => _isExplored;
             set {
-                _isActivated = value;
-                if (!IsClear) IsOpened = false;
+                _isExplored = value;
                 CheckClear();
             }
         }
@@ -92,20 +118,17 @@ namespace ZerolizeDungeon {
         }
         public bool ExistEnemy => _enemies.Count > 0;
 
-        // Neighbours Info.
-        public Room Top => _neighbours[ZerolizeDungeon.Direction.Top];
-        public Room Right => _neighbours[ZerolizeDungeon.Direction.Right];
-        public Room Bottom => _neighbours[ZerolizeDungeon.Direction.Bottom];
-        public Room Left => _neighbours[ZerolizeDungeon.Direction.Left];
+        #endregion
 
         #endregion
 
         #region Fields
 
         // State.
+        private bool _isActivated = false;
         private bool _isOpened = true;
         private bool _isClear = false;
-        private bool _isActivated = false;
+        private bool _isExplored = false;
         private RoomExploreType _exploreType;
 
         // Collections.
@@ -115,11 +138,8 @@ namespace ZerolizeDungeon {
 
         // Components.
         private Transform _objects;
-        private Rpdlagkrhtlvek _rpdlatlzuwnjwpqkf;
 
         // Callbacks.
-        public Action<Room> cbOnEnteredRoom;
-        public Action<Room> cbOnExitedRoom;
         public event Action<Room> OnRoomOpened;
         public event Action<Room> OnRoomClosed;
         public event Action<RoomExploreType> OnChangeExploreType;
@@ -169,14 +189,7 @@ namespace ZerolizeDungeon {
             for (int i = 0; i < 4; i++) {
                 if (((int)Direction & (1 << i)) == 0) continue;
                 Debris debris = Main.Resource.Instantiate("Debris", this.transform, true).GetComponent<Debris>();
-                debris.transform.SetParent(this.transform);
-                debris.transform.localPosition = (Direction)i switch {
-                    ZerolizeDungeon.Direction.Top => new(15, 28),
-                    ZerolizeDungeon.Direction.Right => new(28, 15),
-                    ZerolizeDungeon.Direction.Bottom => new(15, 2),
-                    ZerolizeDungeon.Direction.Left => new(2, 15),
-                    _ => new(0, 0)
-                };
+                debris.SetInfo(this, (Direction)i);
                 _debris[(Direction)i] = debris;
             }
             OnRoomOpened += r => OpenDoor();
@@ -185,22 +198,33 @@ namespace ZerolizeDungeon {
             IsOpened = true;
 
             // #5. 진입 콜라이더 생성.
-            _rpdlatlzuwnjwpqkf = Main.Resource.Instantiate("Rpdlagkrhtlvek", this.transform, false).GetComponent<Rpdlagkrhtlvek>();
-            _rpdlatlzuwnjwpqkf.SetInfo(this);
+            FullCollider = new GameObject().AddComponent<RoomFullCollider>();
+            FullCollider.SetInfo(this);
+            InsideCollider = new GameObject().AddComponent<RoomInsideCollider>();
+            InsideCollider.SetInfo(this);
 
             // #6. 콜백 등록.
-            cbOnEnteredRoom = null;
-            cbOnEnteredRoom += r => {
+            FullCollider.OnEnteredRoom += room => {
+                if (!room.IsActivated) room.IsActivated = true;
                 IsExplored = true;
-                ExploredThisRooom(r, true);
+                room.ExploreType = RoomExploreType.Current;
+                foreach (Room neighbour in room.Neighbours) {
+                    if (neighbour == null) continue;
+                    if (neighbour.ExploreType == RoomExploreType.Hide) neighbour.ExploreType = RoomExploreType.NotExplored;
+                    if (!neighbour.IsActivated) neighbour.IsActivated = true;
+                    foreach (Room neighbourneighbour in neighbour.Neighbours) {
+                        if (neighbourneighbour == null) continue;
+                        if (!neighbourneighbour.IsActivated) neighbourneighbour.IsActivated = true;
+                    }
+                }
             };
-            cbOnExitedRoom = null;
-            cbOnExitedRoom += r => {
-                ExploredThisRooom(r, false);
+            FullCollider.OnExitedRoom += room => {
+                room.ExploreType = RoomExploreType.Explored;
             };
-
-            // #7. 적 소환.
-            SpawnEnemy();
+            InsideCollider.OnEnteredRoom += room => {
+                if (!room.IsActivated) room.IsActivated = true;
+                if (room.ExistEnemy) room.IsOpened = false;
+            };
         }
 
         #endregion
@@ -278,20 +302,6 @@ namespace ZerolizeDungeon {
                 return;
             }
             Type = RoomType.Normal;
-        }
-
-        private void ExploredThisRooom(Room room, bool isEntered) {
-            if (isEntered) {
-                room.ExploreType = RoomExploreType.Current;
-                foreach (Room neighbour in room.Neighbours) {
-                    if (neighbour == null) continue;
-                    if (neighbour.ExploreType == RoomExploreType.Hide)
-                        neighbour.ExploreType = RoomExploreType.NotExplored;
-                }
-            }
-            else {
-                room.ExploreType = RoomExploreType.Explored;
-            }
         }
 
         #endregion
