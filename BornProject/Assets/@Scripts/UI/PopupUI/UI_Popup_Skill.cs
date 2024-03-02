@@ -83,7 +83,7 @@ public class UI_Popup_Skill : UI_Popup {
     #region OnButtons
 
     private void OnBtnClose() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
 
         SkillList skillList = Main.Game.Player.SkillList;
         if (skillList[SkillType.Range] == null || skillList[SkillType.Melee] == null) {

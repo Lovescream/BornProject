@@ -10,6 +10,8 @@ public class SceneManagerEx {
     public void LoadScene(string sceneName) {
         Main.Clear();
         SceneManager.LoadScene(sceneName);
+        if (!Main.Audio.PlayBGM($"BGM_{sceneName}", "MainBGM"))
+            Main.Audio.Stop(AudioType.BGM);
     }
 
 }

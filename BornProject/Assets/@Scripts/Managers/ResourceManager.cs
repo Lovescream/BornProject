@@ -51,6 +51,7 @@ public class ResourceManager {
 
     // 리소스가 있는지 확인.
     public bool IsExistPrefab(string key) => _prefabs.ContainsKey(key);
+    public bool IsExistAudioClip(string key) => _clips.ContainsKey(key);
     public GameObject LoadPrefab(string key) {
         if (!_prefabs.TryGetValue(key, out GameObject prefab)) {
             Debug.LogError($"[ResourceManager] LoadPrefab({key}): Failed to load prefab.");

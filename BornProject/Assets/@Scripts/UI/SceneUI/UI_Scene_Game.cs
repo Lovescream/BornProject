@@ -37,7 +37,6 @@ public class UI_Scene_Game : UI_Scene {
         GetButton((int)Buttons.btnQuest).onClick.AddListener(OnBtnQuest);
         GetButton((int)Buttons.btnSkill).onClick.AddListener(OnBtnSkill);
         
-
         PlayerInfo = GetObject((int)Objects.PlayerInfo).GetComponent<UI_PlayerInfo>();
         PlayerInfo.SetInfo(Main.Object.Player);
 
@@ -58,24 +57,22 @@ public class UI_Scene_Game : UI_Scene {
     #region OnButtons
 
     private void OnBtnMenu() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
         Main.UI.OpenPopupUI<UI_Popup_Menu>();
     }
 
     
     private void OnBtnQuest() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
         UI_Popup_Quest popup = Main.UI.GetLatestPopup<UI_Popup_Quest>();
         if (popup == null) Main.UI.OpenPopupUI<UI_Popup_Quest>().SetInfo();
         else Main.UI.ClosePopup(popup);
     }
 
     private void OnBtnSkill() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
         Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
     }
-
-    
 
     #endregion
 }

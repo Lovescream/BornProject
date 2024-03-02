@@ -16,7 +16,6 @@ public class AudioManager {
         get {
             if (_root == null) {
                 _root = new GameObject("@AudioPlayer").transform;
-                for (int i = 0; i < (int)AudioType.COUNT; i++) _audioSources[(AudioType)i] = new();
                 Object.DontDestroyOnLoad(_root);
             }
             return _root;
@@ -31,14 +30,23 @@ public class AudioManager {
 
     private Dictionary<AudioType, List<AudioSource>> _audioSources = new();
 
+    private bool _isInitialized;
+
     #endregion
+
+    public void Initialize() {
+        if (_isInitialized) return;
+
+        for (int i = 0; i < (int)AudioType.COUNT; i++)
+            _audioSources[(AudioType)i] = new();
+    }
 
     #region Play
     
     // BGM을 재생합니다. audioSourceKey를 지정하면 해당 AudioSource가 재생하도록 합니다.
-    public void PlayBGM(string key, string audioSourceKey = "") {
+    public bool PlayBGM(string key, string audioSourceKey = "") {
         // #1. 음소거 설정 시 재생하지 않음.
-        if (Main.Game.Current[AudioType.BGM, isMuteInfo: false]) return;
+        if (Main.Game.Current[AudioType.BGM, isMuteInfo: false]) return false;
 
         // #2. 오디오 소스 찾기.
         AudioSource source;
@@ -52,12 +60,13 @@ public class AudioManager {
         AudioClip clip = Main.Resource.LoadAudioClip(key);
         if (clip == null) {
             Debug.LogError($"[AudioManager] PlaySFX({key}): Not found AudioClip.");
-            return;
+            return false;
         }
 
         // #4. 클립 재생.
         source.clip = clip;
         source.Play();
+        return true;
     }
     
     // SFX를 재생합니다.
@@ -79,6 +88,19 @@ public class AudioManager {
         source.clip = clip;
         source.Play();
     }
+
+    public void Play(Creature creature, CreatureState state) {
+        if (creature is Player) PlaySFX($"SFX_Player_{state}");
+        else PlaySFX($"SFX_Enemy_{creature.Data.Key}_{state}");
+    }
+    public void Play(Skill skill, string state = "") {
+        if (string.IsNullOrEmpty(state)) state = "Shot";
+        if (Main.Resource.IsExistAudioClip($"SFX_Skill_{skill.Data.Name}_{state}"))
+            PlaySFX($"SFX_Skill_{skill.Data.Name}_{state}");
+        else if (Main.Resource.IsExistAudioClip($"SFX_Skill_{skill.BaseKey}_{state}"))
+            PlaySFX($"SFX_Skill_{skill.BaseKey}_{state}");
+    }
+    public void PlayOnButton() => PlaySFX("SFX_OnButton");
 
     // 모든 AudioSource의 재생을 멈춥니다.
     // type을 지정하면, 해당 type의 AudioSource의 재생을 멈춥니다.

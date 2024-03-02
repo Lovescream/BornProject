@@ -27,12 +27,12 @@ public class UI_Popup_Clear : UI_Popup {
     #region OnButtons
 
     private void OnBtnNextStage() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
         Main.Dungeon.NextStage();
     }
 
     private void OnBtnExit() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
         Main.UI.OpenPopupUI<UI_Popup_ExitGame>();
     }
 
