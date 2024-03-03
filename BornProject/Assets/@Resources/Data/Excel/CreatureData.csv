@@ -5,7 +5,7 @@ Beatle,50,3,5,1,1.2,0.8,5,5,Beatle,Beatle_Base_Acid
 Wolf,150,5,15,5,2,1.5,5,10,Wolf,Wolf_Base_Attack
 Cat,120,5,10,5,2,2,3,7,Cat,Cat_Base_Attack
 Bat,100,3,5,3,1,0.8,3,7,Bat,Bat_Base_Attack
-Worm,70,3,10,1,1,0.5,5,5,Worm,Worm_Base_Attack
+Worm,70,3,10,1,0,0.5,5,5,Worm,Worm_Base_Attack
 Spider,90,3,3,3,3,0.5,5,5,Spider,Spider_Base_Attack
 Flytrap,400,5,20,7,1.5,1,5,5,Flytrap,Flytrap_Base_Attack
 Groot,300,5,30,7,1.5,1.2,4,5,Groot,Groot_Base_Attack

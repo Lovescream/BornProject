@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Spider : Enemy {
 
-    protected static readonly int AnimatorParameterHash_Walk = Animator.StringToHash("Walk");
+    protected static readonly int AnimatorParameterHash_Run = Animator.StringToHash("Run");
 
     #region Initialize / Set
 
@@ -29,19 +29,19 @@ public class Spider : Enemy {
     #region State
 
     private void OnEnteredChase() {
-        _animator.SetBool(AnimatorParameterHash_Walk, true);
+        _animator.SetBool(AnimatorParameterHash_Run, true);
     }
     private void OnEnteredAttack() {
         Velocity = Vector2.zero;
     }
     private void OnEnteredDead() {
-        _animator.SetBool(AnimatorParameterHash_Walk, false);
+        _animator.SetBool(AnimatorParameterHash_Run, false);
     }
     private void OnExitedChase() {
-        if (Target == null) _animator.SetBool(AnimatorParameterHash_Walk, false);
+        if (Target == null) _animator.SetBool(AnimatorParameterHash_Run, false);
     }
     private void OnExitedAttack() {
-        if (Target == null) _animator.SetBool(AnimatorParameterHash_Walk, false);
+        if (Target == null) _animator.SetBool(AnimatorParameterHash_Run, false);
     }
 
     #endregion

@@ -82,7 +82,7 @@
     "HpRegen": 3.0,
     "Damage": 10.0,
     "Defense": 1.0,
-    "MoveSpeed": 1.0,
+    "MoveSpeed": 0.0,
     "AttackSpeed": 0.5,
     "Range": 5.0,
     "Sight": 5.0,
