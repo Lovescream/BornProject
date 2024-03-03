@@ -9,12 +9,6 @@ public class UI_Popup_Clear : UI_Popup {
 
     #endregion
 
-    #region Properties
-
-    public override bool IsPause => true;
-
-    #endregion
-
     #region Initialize / Set
 
     public override bool Initialize() {
@@ -33,12 +27,12 @@ public class UI_Popup_Clear : UI_Popup {
     #region OnButtons
 
     private void OnBtnNextStage() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
         Main.Dungeon.NextStage();
     }
 
     private void OnBtnExit() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
         Main.UI.OpenPopupUI<UI_Popup_ExitGame>();
     }
 

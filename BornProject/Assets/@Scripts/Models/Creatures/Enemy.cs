@@ -105,11 +105,11 @@ public class Enemy : Creature, ISkillMan, IAttackable {
         Velocity = Vector2.zero;
     }
     private void OnEnteredDead() {
+        Main.Audio.Play(this, CreatureState.Dead);
         OnDead?.Invoke();
         if (_coDead != null) StopCoroutine(_coDead);
         _coDead = StartCoroutine(CoDead());
     }
-
     private void OnStayIdle() {
         Velocity = Vector2.zero;
         Target = FindTarget();

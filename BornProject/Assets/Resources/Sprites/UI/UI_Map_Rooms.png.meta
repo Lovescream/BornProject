@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: daed1851feb2344eca9b1b702e290145
+guid: a31abfad0c0809b4d90a9602e6ae74a9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,169 +136,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DeathBeam00
+      name: UI_Map_Room_Boss_00
       rect:
         serializedVersion: 2
-        x: 0
-        y: 478
+        x: 64
+        y: 64
         width: 32
-        height: 3
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 3, z: 3, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 924ed4fdb239fc2429498bd85cd1d9dd
-      internalID: 2037221217
+      spriteID: 126db517e5ca0b642b91886be9c3a8e4
+      internalID: -2002177601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathBeam01
+      name: UI_Map_Room_Normal_01
       rect:
         serializedVersion: 2
         x: 0
-        y: 409
+        y: 32
         width: 32
-        height: 13
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 3, z: 3, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45f5585ae449dc04db0da5ddd5c7f75c
-      internalID: -1743355410
+      spriteID: 69ecbd9de8164a447bf9c36f97e7ac5f
+      internalID: 1411685826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathBeam02
+      name: UI_Map_Room_Normal_00
       rect:
         serializedVersion: 2
         x: 0
-        y: 334
+        y: 64
         width: 32
-        height: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 3, z: 3, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c18d889c9aa178f4cb1326ac4583d2c0
-      internalID: -1734385203
+      spriteID: e88d5567390e40944b39ce92b0d5216d
+      internalID: 955100890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathBeam03
+      name: UI_Map_Room_Treasure_00
       rect:
         serializedVersion: 2
-        x: 0
-        y: 268
+        x: 32
+        y: 64
         width: 32
-        height: 39
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 3, z: 3, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12d35d7d23f272146877cf6c613a6b3f
-      internalID: 238978055
+      spriteID: b4ce4b1ad0cfca748abbdaf1ceef9f9d
+      internalID: 2038047398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathBeam04
+      name: UI_Map_Room_Treasure_01
       rect:
         serializedVersion: 2
-        x: 0
-        y: 206
+        x: 33
+        y: 32
         width: 32
-        height: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 3, z: 3, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3ae1c782f2f40a4f890694cc7cbf1b1
-      internalID: -626275021
+      spriteID: a12a6d4950a092a44ba60472d19edea6
+      internalID: 607522382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathBeam05
+      name: UI_Map_Room_Boss_01
       rect:
         serializedVersion: 2
-        x: 0
-        y: 155
+        x: 64
+        y: 32
         width: 32
-        height: 9
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 3, z: 3, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf1300f39ee1b84ea81d7693fa6b745
-      internalID: 996946221
+      spriteID: da82744f99ba4cb40a89080768436c19
+      internalID: -837490698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathBeam06
+      name: UI_Map_Room_Normal_02
       rect:
         serializedVersion: 2
         x: 0
-        y: 93
+        y: 0
         width: 32
-        height: 5
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 3, y: 3, z: 3, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa042ffa9e29dde48bffb6de20bf9587
-      internalID: 868518409
+      spriteID: c80037eaa233420489ebfbb2b70c9331
+      internalID: -511112811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathBeam07
+      name: UI_Map_Room_Treasure_02
       rect:
         serializedVersion: 2
-        x: 0
-        y: 30
+        x: 32
+        y: 0
         width: 32
-        height: 3
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 3, y: 3, z: 3, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd1c250371f6acd4ea5d53579f8b2ea9
-      internalID: 1326946788
+      spriteID: eb50884faae32984ca3e397d4d080901
+      internalID: 1235857060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Map_Room_Boss_02
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 3, y: 3, z: 3, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d893894f2f0a44991aaf7f2910b690
+      internalID: -639288532
       vertices: []
       indices: 
       edges: []
@@ -314,14 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DeathBeam00: 2037221217
-      DeathBeam01: -1743355410
-      DeathBeam02: -1734385203
-      DeathBeam03: 238978055
-      DeathBeam04: -626275021
-      DeathBeam05: 996946221
-      DeathBeam06: 868518409
-      DeathBeam07: 1326946788
+      UI_Map_Room_Boss_00: -2002177601
+      UI_Map_Room_Boss_01: -837490698
+      UI_Map_Room_Boss_02: -639288532
+      UI_Map_Room_Normal_00: 955100890
+      UI_Map_Room_Normal_01: 1411685826
+      UI_Map_Room_Normal_02: -511112811
+      UI_Map_Room_Treasure_00: 2038047398
+      UI_Map_Room_Treasure_01: 607522382
+      UI_Map_Room_Treasure_02: 1235857060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -29,8 +29,6 @@ public class Creature : Entity {
                     Debug.Log($"[Creature: {this.Data.Key}] 쥬금");
                 State.Current = CreatureState.Dead;
                 _hp = 0;
-
-                EnemyDieAudioSource();
             }
             else if (value >= HpMax) {
                 _hp = HpMax;
@@ -102,7 +100,7 @@ public class Creature : Entity {
 
         _rigidbody = this.GetComponent<Rigidbody2D>();
 
-        this.gameObject.layer = Main.CreatureLayer;
+        this.gameObject.layer = Layers.CreatureLayer;
 
         return true;
     }
@@ -171,17 +169,6 @@ public class Creature : Entity {
     }
 
     #endregion
-
-    private void EnemyDieAudioSource()
-    {
-        if (this.gameObject.name == "Enemy") AudioController.Instance.SFXPlay(SFX.EnemyBearDie); // TODO.
-        if (this.gameObject.name == "Wolf") AudioController.Instance.SFXPlay(SFX.EnemyWolfDie);
-        if (this.gameObject.name == "Beatle") AudioController.Instance.SFXPlay(SFX.EnemyBeatleDie);
-        if (this.gameObject.name == "Snake") AudioController.Instance.SFXPlay(SFX.EnemySnakeDie);
-    }
-
-
-
 }
 
 public enum CreatureState

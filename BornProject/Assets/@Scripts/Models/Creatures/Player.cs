@@ -100,7 +100,7 @@ public class Player : Creature, ISkillMan, IAttackable {
         this.Attacker = new(this);
         this.Attacker.OnStartAttack += () => {
             _animator.SetBool(AnimatorParameterHash_Attack, true);
-            SkillFireAudioSource();
+            Main.Audio.Play(SkillList.Current);
         };
         this.Attacker.OnEndAttack += () => {
             _animator.SetBool(AnimatorParameterHash_Attack, false);
@@ -140,13 +140,26 @@ public class Player : Creature, ISkillMan, IAttackable {
         //SkillList.SetMeleeSkill();
         //Attack();
     }
+    protected void OnButtonTab() {
+        Main.Audio.PlayOnButton();
+        Main.Dungeon.ToggleMap();
+    }
+    protected void OnButtonQ() {
+        Main.Audio.PlayOnButton();
+        UI_Popup_Quest popup = Main.UI.GetLatestPopup<UI_Popup_Quest>();
+        if (popup == null) Main.UI.OpenPopupUI<UI_Popup_Quest>().SetInfo();
+        else Main.UI.ClosePopup(popup);
+    }
+    protected void OnButtonK() {
+        Main.Audio.PlayOnButton();
+        Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
+    }
 
     #endregion
 
     public override void OnHit(IHitCollider attacker) {
         base.OnHit(attacker);
-        if (AudioController.Instance != null)
-            AudioController.Instance.SFXPlay(SFX.PlayerHit);
+        Main.Audio.Play(this, CreatureState.Hit);
     }
     public void Attack() {
         if (this.IsDead) return;
@@ -193,17 +206,6 @@ public class Player : Creature, ISkillMan, IAttackable {
                 speed = 10f,
             }
         };
-    }
-    private void SkillFireAudioSource() {
-        AudioController.Instance.SFXPlay(SkillList.Current.Data.Name switch {
-            "BasicLaserBeam" => SFX.Range_Laser_Fire,
-            "BasicRapidFire" => SFX.Range_Rapid_Fire,
-            "BasicShotGun" => SFX.Range_ShotGun_Fire,
-            "BasicSlash" => SFX.Melee_Slash_Fire,
-            "BasicSting" => SFX.Melee_Sting_Fire,
-            "BasicSmash" => SFX.Melee_Smash_Fire,
-            _ => SFX.Range_Rapid_Fire,
-        });
     }
 
     public bool IsTarget(Creature creature) => true;

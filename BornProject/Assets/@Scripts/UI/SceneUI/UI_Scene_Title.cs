@@ -40,7 +40,7 @@ public class UI_Scene_Title : UI_Scene {
     }
 
     private void OnBtnNewGame() {
-        AudioController.Instance.SFXPlay(SFX.NewGameEnterButton);
+        Main.Audio.PlaySFX("SFX_OnButton_NewGame");
         Main.Scene.LoadScene("GameScene");
     }
 

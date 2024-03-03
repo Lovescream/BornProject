@@ -25,6 +25,7 @@ public class GameScene : BaseScene {
 
         // #3. UI 생성.
         SceneUI = Main.UI.OpenSceneUI<UI_Scene_Game>();
+        Main.Dungeon.ToggleMap();
 
         // #4. Skill 체크.
         if (player.SkillList[SkillType.Range] == null || player.SkillList[SkillType.Melee] == null)

@@ -22,7 +22,6 @@ public class UI_Scene_Game : UI_Scene {
     #region Properties
     
     public UI_PlayerInfo PlayerInfo { get; protected set; }
-    private bool isQuestPopupOpen = false;
 
     #endregion
 
@@ -38,7 +37,6 @@ public class UI_Scene_Game : UI_Scene {
         GetButton((int)Buttons.btnQuest).onClick.AddListener(OnBtnQuest);
         GetButton((int)Buttons.btnSkill).onClick.AddListener(OnBtnSkill);
         
-
         PlayerInfo = GetObject((int)Objects.PlayerInfo).GetComponent<UI_PlayerInfo>();
         PlayerInfo.SetInfo(Main.Object.Player);
 
@@ -59,32 +57,22 @@ public class UI_Scene_Game : UI_Scene {
     #region OnButtons
 
     private void OnBtnMenu() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
-        Main.UI.OpenPopupUI<UI_Popup_Menu>();
+        Main.Audio.PlayOnButton();
+        Main.UI.OpenPopupUI<UI_Popup_Menu>().SetInfo();
     }
 
     
     private void OnBtnQuest() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
-        if (!isQuestPopupOpen)
-        {
-            Main.UI.OpenPopupUI<UI_Popup_Quest>().SetInfo(); // 퀘스트 팝업을 열어줘
-            isQuestPopupOpen = true; // 퀘스트 팝업이 열렸다고 표시해줘
-        }
-        else
-        {
-            Main.UI.Clear(); // 이미 열려있는 퀘스트 팝업을 닫아줘
-            isQuestPopupOpen = false; // 퀘스트 팝업이 닫혔다고 표시해줘
-        }
+        Main.Audio.PlayOnButton();
+        UI_Popup_Quest popup = Main.UI.GetLatestPopup<UI_Popup_Quest>();
+        if (popup == null) Main.UI.OpenPopupUI<UI_Popup_Quest>().SetInfo();
+        else Main.UI.ClosePopup(popup);
     }
-
 
     private void OnBtnSkill() {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+        Main.Audio.PlayOnButton();
         Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
     }
-
-    
 
     #endregion
 }

@@ -78,7 +78,7 @@ public class HitCollider : Entity, IHitCollider {
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision) {
-        if (this is not HitCollider_Laser && collision.gameObject.layer == Main.WallLayer) {
+        if (this is not HitCollider_Laser && collision.gameObject.layer == Layers.WallLayer) {
             OnHit(destroy: true);
             return;
         }
@@ -102,7 +102,7 @@ public class HitCollider : Entity, IHitCollider {
 
         _rigidbody = this.GetComponent<Rigidbody2D>();
 
-        this.gameObject.layer = Main.HitColliderLayer;
+        this.gameObject.layer = Layers.HitColliderLayer;
 
         return true;
     }
