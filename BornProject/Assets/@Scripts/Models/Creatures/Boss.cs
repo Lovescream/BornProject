@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Boss : Enemy, IAttackable { // 아직 Enemy와 차이를 모르겠음. 일단 CSV에 Boss 추가.
@@ -92,6 +93,7 @@ public class Boss : Enemy, IAttackable { // 아직 Enemy와 차이를 모르겠�
     {
         Velocity = Vector2.zero;
     }
+
     private void OnStayIdle()
     {
         Velocity = Vector2.zero;
@@ -169,36 +171,39 @@ public class Boss : Enemy, IAttackable { // 아직 Enemy와 차이를 모르겠�
     #endregion
 
     #region Attack
-    public void Attack()
+    public virtual void Attack()
     {
         Attacker.Attack(GetHitColliderGenerationInfo(), GetHitColliderInfo(), GetHitInfo());
     }
 
     public HitColliderGenerationInfo GetHitColliderGenerationInfo()
     {
+        Skill skill = SkillList.Current;
         return new()
         {
             Owner = this,
-            HitColliderKey = "Slash_Base_Basic",
-            RadiusOffset = 0.5f,
-            RotationAngle = -1f,
-            Count = 1,
-            SpreadAngle = 0,
-            Size = 0.75f,
-            AttackTime = 0.3f,
+            SkillKey = skill.Data.Key,
+            HitColliderKey = skill.Data.HitColliderKey,
+            RadiusOffset = skill.Data.RadiusOffset,
+            RotationAngle = skill.Data.RotationAngle,
+            Count = skill.Data.HitColliderCount,
+            SpreadAngle = skill.Data.HitColliderAngle,
+            Size = skill.Data.HitColliderSize,
+            AttackTime = skill.Data.AttackTime,
         };
     }
 
     public HitColliderInfo GetHitColliderInfo()
     {
+        Skill skill = SkillList.Current;
         return new()
         {
-            Penetration = 1,
-            Speed = 0,
-            DirectionX = 0,
-            DirectionY = 0,
-            Duration = 0,
-            Range = this.Range,
+            Penetration = skill.Data.Penetration,
+            Speed = skill.Data.Speed,
+            DirectionX = skill.Data.DirectionX,
+            DirectionY = skill.Data.DirectionY,
+            Duration = skill.Data.Duration,
+            Range = skill.Data.Range,
         };
     }
 
