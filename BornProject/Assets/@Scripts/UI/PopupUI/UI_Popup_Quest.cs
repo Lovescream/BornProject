@@ -29,7 +29,8 @@ public class UI_Popup_Quest : UI_Popup {
     }
 
     public void SetInfo() {
-        GetText((int)Texts.Text).text = $"던전 클리어 {Main.Quest.ClearStageCount} / {QuestManager.RequiredClearCount}";
+        //GetText((int)Texts.Text).text = $"던전 클리어 {Main.Quest.ClearStageCount} / {QuestManager.RequiredClearCount}";
+        GetText((int)Texts.Text).text = $"보스 잡기 0/1"; // TODO
     }
 
     #endregion
