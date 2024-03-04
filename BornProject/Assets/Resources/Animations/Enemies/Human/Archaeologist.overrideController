@@ -9,15 +9,15 @@ AnimatorOverrideController:
   m_Name: Archaeologist
   m_Controller: {fileID: 9100000, guid: b9e31fea2a8129a4fad97c96eb26de33, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 19601a4b5d37971489d5b603f1086fd4, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 55d782d6797bc4ce0b5e52dfc9ecf8e3, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 3fb8076d00f3eef41aa1d84b29f46c1e, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 23daf7b7469f246d2807dd4165c34926, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 4d6474cc09d2c974ca173c521f7e110a, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: a2d647a0a27dd4a4a9280fb3f7ed4456, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 158f0ef45ed223d40bb53079f18cfaf9, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: e55f717ce25e64c549680eb566dc31a2, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 12053e21f53683a4b804f16ac0b071ff, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: e55f717ce25e64c549680eb566dc31a2, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 7ad0f4143a2ac264c98ffed5c9c2ffee, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 151e761cf6ded42978a92821fb247bab, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b33d1d5f5846b944c9ed393013d40a56, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e55f717ce25e64c549680eb566dc31a2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0d4971bea7dc99742a03358716f21517, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 55d782d6797bc4ce0b5e52dfc9ecf8e3, type: 2}
