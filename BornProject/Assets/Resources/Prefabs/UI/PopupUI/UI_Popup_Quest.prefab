@@ -282,6 +282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestInfo
       objectReference: {fileID: 0}
+    - target: {fileID: 911200820585010616, guid: a6c8e2f0ac6484e10a34964c0d870f42, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3558344683173277729, guid: a6c8e2f0ac6484e10a34964c0d870f42, type: 3}
       propertyPath: m_RootOrder
       value: -1
