@@ -28,6 +28,10 @@ public class Boss : Enemy, IAttackable { // 아직 Enemy와 차이를 모르겠�
 
     public float DetectingRange => 2 * Sight;
 
+    public SkillList SkillList { get; protected set; }
+    public SkillStatus DefaultStatus { get; protected set; }
+
+    public string SkillSetList => Data.Skills;
     #endregion
 
     #region Fields

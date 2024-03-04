@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 53bb9f6f76bf2d34f94e0f0a79417871
+guid: 03a91fdb44c9f41e2b22a3c0f6b807da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -119,333 +119,236 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShotGun_Base_Basic
+      name: Bear_Base_Acid_shot_00
       rect:
         serializedVersion: 2
-        x: 96
-        y: 303
+        x: 69
+        y: 404
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6115e56d78b400c956bd214a7cbe5e
+      internalID: 497668017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear_Base_Acid_shot_01
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 405
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c14a10be82f14b39ba27b83fdd02a6b
+      internalID: -626456623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear_Base_Acid_shot_02
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 404
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f3857354cdb43a698092328bb16bcc
+      internalID: -1497922224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DronBot_Base_Acid_shot_00
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 8
         width: 16
         height: 16
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ded060ab13534a540aead08fa8815a9e
-      internalID: 566079506
+      spriteID: e9d64cf1ae4a54229ae4d104270795c8
+      internalID: 906064035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Range_ShotGun_01
+      name: DronBot_Base_Acid_shot_01
       rect:
         serializedVersion: 2
-        x: 112
-        y: 303
-        width: 16
-        height: 16
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 233
+        y: 9
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d07331959b26004ba9e473af925122c
-      internalID: -972377418
+      spriteID: 3505e86fc81124b43923a03594fb816c
+      internalID: -674348875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Range_ShotGun_02
+      name: DronBot_Base_Acid_shot_02
       rect:
         serializedVersion: 2
-        x: 128
-        y: 303
-        width: 16
-        height: 16
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 257
+        y: 2
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605981090291fbf4281709ec2120fd25
-      internalID: -201748095
+      spriteID: 7cd9b3549cb404554b2194a4c5a91056
+      internalID: -107859366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Range_ShotGun_03
+      name: DronBot_Base_Acid_shot_03
       rect:
         serializedVersion: 2
-        x: 144
-        y: 303
-        width: 16
-        height: 16
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 293
+        y: 3
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afc97384e0f88fe4c9ede14a49ac52f8
-      internalID: -732783995
+      spriteID: ef29b91b8aecb44f49139c8f72b8957b
+      internalID: -1661813539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rapid_Base_Basic_Shot_00
+      name: Bot_Base_Acid_shot_01
       rect:
         serializedVersion: 2
-        x: 97
-        y: 227
-        width: 14
-        height: 7
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 384
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 519c14251caebcf44a0caeb5644e29ee
-      internalID: -96556457
+      spriteID: 24a18ec4c1156454db51d02a1296b479
+      internalID: 1084258870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rapid_Base_Basic_Shot_01
+      name: Bot_Base_Acid_shot_00
       rect:
         serializedVersion: 2
-        x: 113
-        y: 227
-        width: 14
-        height: 7
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 352
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1751de32d6e92c94c8baef16f0719b8e
-      internalID: 786162808
+      spriteID: 103ae8dea25444f4598d0d443f4b4769
+      internalID: -522406555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rapid_Base_Basic_Shot_02
+      name: Bot_Base_Acid_shot_02
       rect:
         serializedVersion: 2
-        x: 129
-        y: 227
-        width: 14
-        height: 7
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 416
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8b659c1b642f464891ee5827bec507f
-      internalID: -1255428166
+      spriteID: e5ae72373306548d29403a028449f4ec
+      internalID: -935099441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rapid_Base_Basic_Shot_03
+      name: Bot_Base_Acid_shot_03
       rect:
         serializedVersion: 2
-        x: 145
-        y: 227
-        width: 14
-        height: 7
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 448
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab2d1efb311f9f942a3383c06a9e2f87
-      internalID: -1248614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Laser_Base_Basic_Shot_00
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 115
-        width: 44
-        height: 10
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 5, y: 0, z: 1, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4060b6f97982c6f45a2edc85abfdb753
-      internalID: 1866396982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Laser_Base_Basic_Shot_01
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 117
-        width: 44
-        height: 6
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 12, y: 0, z: 1, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 011e31905c2439b438813166b444c5de
-      internalID: -1615340676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Laser_Base_Basic_Shot_02
-      rect:
-        serializedVersion: 2
-        x: 356
-        y: 119
-        width: 44
-        height: 2
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 5, y: 0, z: 1, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adaf3344cb2e3d6409ee53220b55ece2
-      internalID: -819642385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Archaeologis_Base_Attack_00
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 390
-        width: 4
-        height: 3
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6786e4e6971d4e82a536c257a8ab64b
-      internalID: 962553501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Archaeologis_Base_Attack_01
-      rect:
-        serializedVersion: 2
-        x: 358
-        y: 390
-        width: 5
-        height: 3
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 133a3f17d83874f88a5c971e1fb42cb2
-      internalID: -1444551735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Archaeologis_Base_Attack_02
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 390
-        width: 4
-        height: 3
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7851d34e2e4e42708b3012f1bf07932
-      internalID: 516674233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Archaeologis_Base_Attack_03
-      rect:
-        serializedVersion: 2
-        x: 389
-        y: 390
-        width: 5
-        height: 3
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b331fed81f5944cb8306d4435d9bb98
-      internalID: -858501390
+      spriteID: 3554635bdaf8b4a36a443c046bb90816
+      internalID: 768399314
       vertices: []
       indices: 
       edges: []
@@ -461,21 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Archaeologis_Base_Attack_00: 962553501
-      Archaeologis_Base_Attack_01: -1444551735
-      Archaeologis_Base_Attack_02: 516674233
-      Archaeologis_Base_Attack_03: -858501390
-      Laser_Base_Basic_Shot_00: 1866396982
-      Laser_Base_Basic_Shot_01: -1615340676
-      Laser_Base_Basic_Shot_02: -819642385
-      Range_ShotGun_01: -972377418
-      Range_ShotGun_02: -201748095
-      Range_ShotGun_03: -732783995
-      Rapid_Base_Basic_Shot_00: -96556457
-      Rapid_Base_Basic_Shot_01: 786162808
-      Rapid_Base_Basic_Shot_02: -1255428166
-      Rapid_Base_Basic_Shot_03: -1248614
-      ShotGun_Base_Basic: 566079506
+      Bear_Base_Acid_shot_00: 497668017
+      Bear_Base_Acid_shot_01: -626456623
+      Bear_Base_Acid_shot_02: -1497922224
+      Bot_Base_Acid_shot_00: -522406555
+      Bot_Base_Acid_shot_01: 1084258870
+      Bot_Base_Acid_shot_02: -935099441
+      Bot_Base_Acid_shot_03: 768399314
+      DronBot_Base_Acid_shot_00: 906064035
+      DronBot_Base_Acid_shot_01: -674348875
+      DronBot_Base_Acid_shot_02: -107859366
+      DronBot_Base_Acid_shot_03: -1661813539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
