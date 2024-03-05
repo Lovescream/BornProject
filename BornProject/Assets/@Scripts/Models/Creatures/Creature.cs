@@ -63,6 +63,7 @@ public class Creature : Entity {
     protected static readonly int AnimatorParameterHash_Hit = Animator.StringToHash("Hit");
     protected static readonly int AnimatorParameterHash_Attack = Animator.StringToHash("Attack");
     protected static readonly int AnimatorParameterHash_Dead = Animator.StringToHash("Dead");
+    protected static readonly int AnimatorParameterHash_Dash = Animator.StringToHash("Dash");
 
     // State, Status.
     private float _hp;
@@ -133,12 +134,16 @@ public class Creature : Entity {
         State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
         State.AddOnExited(CreatureState.Hit, OnExitedHit);
+        State.AddOnEntered(CreatureState.Dash, OnEnteredDash);
+        State.AddOnExited(CreatureState.Dash, OnExitedDash);
+
     }
     #endregion
 
     #region State
 
     private void OnEnteredHit() {
+        Debug.Log("ddddd");
         _animator.SetBool(AnimatorParameterHash_Hit, true);
     }
     private void OnEnteredDead() {
@@ -148,11 +153,18 @@ public class Creature : Entity {
         _animator.SetBool(AnimatorParameterHash_Attack, false);
         _animator.SetBool(AnimatorParameterHash_Dead, true);
     }
+    private void OnEnteredDash() {
+        Debug.Log("나와");
+        _animator.SetBool(AnimatorParameterHash_Dash, true);
+    }
     private void OnExitedHit() {
         _animator.SetBool(AnimatorParameterHash_Hit, false);
         KnockbackVelocity = Vector2.zero;
     }
-    
+    private void OnExitedDash() {
+        _animator.SetBool(AnimatorParameterHash_Dash, false);
+    }
+
     public virtual void OnHit(IHitCollider attacker) {
         HitInfo hitInfo = attacker.HitInfo;
         float prevHp = Hp;
@@ -178,6 +190,7 @@ public enum CreatureState
     Hit,
     Attack,
     Dead,
+    Dash,
 }
 
 public struct KnockbackInfo {

@@ -155,6 +155,50 @@ public class Player : Creature, ISkillMan, IAttackable {
         Main.UI.OpenPopupUI<UI_Popup_Skill>().SetInfo();
     }
 
+    // 대쉬 임시로 넣어놨습니다.
+    private bool isDashing = false;
+
+    protected void OnDash()
+    {
+        if (this.IsDead) return;
+
+        if (!isDashing)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+    private IEnumerator Dash()
+    {
+        isDashing = true;
+        CreatureState OriginState = State.Current;
+        State.Current = CreatureState.Dash;
+
+        // 대쉬에 사용할 힘의 크기를 설정합니다.
+        float dashPower = 10f; // 대쉬에 사용할 힘의 크기 (원하는 값으로 설정)
+
+        // 대쉬 방향을 설정합니다.
+        Vector2 dashDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+
+        // 만약 움직이지 않은 상태에서 스페이스바를 누르면, 플레이어의 시선 방향으로 대쉬합니다.
+        if (dashDirection == Vector2.zero)
+        {
+            dashDirection = LookDirection;
+        }
+
+        // 대쉬할 때의 속도를 설정합니다.
+        Vector2 dashVelocity = dashDirection * dashPower;
+
+        // 현재 속도에 대쉬 속도를 더해줍니다.
+        Velocity += dashVelocity;
+
+        // 대쉬가 끝날 때까지 대기합니다.
+        yield return new WaitForSeconds(0.5f); // 대쉬 지속시간 (원하는 값으로 설정)
+
+        isDashing = false;
+        State.Current = OriginState;
+    }
+
     #endregion
 
     public override void OnHit(IHitCollider attacker) {
