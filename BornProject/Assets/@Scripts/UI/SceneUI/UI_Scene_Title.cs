@@ -55,12 +55,14 @@ public class UI_Scene_Title : UI_Scene {
     }
 
     private void OnBtnExit() {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
 
-#else
-        Application.Quit();
+    #if     UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
 
-#endif
+    #else
+            Application.Quit();
+
+    #endif
+
     }
 }
