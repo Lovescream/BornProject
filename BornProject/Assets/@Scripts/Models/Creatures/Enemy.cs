@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Enemy : Creature, ISkillMan, IAttackable {
@@ -35,6 +36,12 @@ public class Enemy : Creature, ISkillMan, IAttackable {
 
     #region Fields
 
+    protected static readonly int AnimatorParameterHash_Sleep = Animator.StringToHash("Sleep");
+    protected static readonly int AnimatorParameterHash_AttackInit = Animator.StringToHash("AttackInit");
+    protected static readonly int AnimatorParameterHash_Fly = Animator.StringToHash("Fly");
+    protected AnimationClip _animAttack;
+    protected AnimationClip _animAttackInit;
+
     private Creature _target;
     private Creature _lastAttacker;
 
@@ -65,6 +72,11 @@ public class Enemy : Creature, ISkillMan, IAttackable {
         Indicator.SetInfo(this);
 
         SkillList = new(this, Data.DefaultSkills);
+
+        IEnumerable<AnimationClip> list = _animator.runtimeAnimatorController.animationClips;
+        _animAttack = list.FirstOrDefault(x => x.name.Split('_')[1].Equals("Attack"));
+        _animAttackInit = list.FirstOrDefault(x => x.name.Split('_')[1].Equals("AttackInit"));
+        
     }
     protected override void SetStatus(bool isFullHp = true) {
         base.SetStatus(isFullHp);
@@ -78,7 +90,7 @@ public class Enemy : Creature, ISkillMan, IAttackable {
         this.Hp = HpMax;
         // ======= 나중에 수정 ========
     }
-    protected override void SetState() {
+    protected override void SetState(CreatureState defaultState = CreatureState.Idle) {
         base.SetState();
         State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
@@ -87,12 +99,14 @@ public class Enemy : Creature, ISkillMan, IAttackable {
         State.AddOnStay(CreatureState.Attack, OnStayAttack);
 
         this.Attacker = new(this);
-        this.Attacker.OnStartAttack += () => {
-            _animator.SetBool(AnimatorParameterHash_Attack, true);
-        };
-        this.Attacker.OnEndAttack += () => {
-            _animator.SetBool(AnimatorParameterHash_Attack, false);
-        };
+        if (_animAttackInit == null || _animAttackInit.empty) {
+            this.Attacker.OnStartAttack += () => _animator.SetBool(AnimatorParameterHash_Attack, true);
+            this.Attacker.OnEndAttack += () => _animator.SetBool(AnimatorParameterHash_Attack, false);
+        }
+        else {
+            this.Attacker.OnStartAttack += () => _animator.SetBool(AnimatorParameterHash_AttackInit, true);
+            this.Attacker.OnEndAttack += () => _animator.SetBool(AnimatorParameterHash_AttackInit, false);
+        }
 
         OnDead = null;
     }
@@ -101,21 +115,22 @@ public class Enemy : Creature, ISkillMan, IAttackable {
 
     #region State
 
-    private void OnEnteredAttack() {
+    protected virtual void OnEnteredAttack() {
         Velocity = Vector2.zero;
     }
-    private void OnEnteredDead() {
+    protected override void OnEnteredDead() {
+        base.OnEnteredDead();
         Main.Audio.Play(this, CreatureState.Dead);
         OnDead?.Invoke();
         if (_coDead != null) StopCoroutine(_coDead);
         _coDead = StartCoroutine(CoDead());
     }
-    private void OnStayIdle() {
+    protected virtual void OnStayIdle() {
         Velocity = Vector2.zero;
         Target = FindTarget();
     }
 
-    private void OnStayChase() {
+    protected virtual void OnStayChase() {
         // #1. Target이 죽거나 유효하지 않으면 Target 정보 초기화.
         if (!Target.IsValid() || Target.IsDead) {
             Target = null;
@@ -144,7 +159,7 @@ public class Enemy : Creature, ISkillMan, IAttackable {
         Indicator.IndicatorDirection = LookDirection;
     }
 
-    private void OnStayAttack() {
+    protected virtual void OnStayAttack() {
         // #1. Target이 죽거나 유효하지 않으면 Target 정보 초기화.
         if (!Target.IsValid() || Target.IsDead) {
             Target = null;
@@ -196,7 +211,7 @@ public class Enemy : Creature, ISkillMan, IAttackable {
             Count = skill.Data.HitColliderCount,
             SpreadAngle = skill.Data.HitColliderAngle,
             Size = skill.Data.HitColliderSize,
-            AttackTime = skill.Data.AttackTime,
+            AttackTime = skill.Data.AttackTime == 0 ? _animAttack.length : skill.Data.AttackTime,
         };
     }
 
@@ -231,7 +246,7 @@ public class Enemy : Creature, ISkillMan, IAttackable {
     #endregion
 
     // 이 Creature의 시야 내의 적을 찾습니다.
-    private Creature FindTarget() {
+    protected virtual Creature FindTarget() {
         Collider2D[] hits = Physics2D.OverlapCircleAll(this.transform.position, Sight);
         foreach (Collider2D collider in hits) {
             Creature creature = collider.GetComponent<Creature>();

@@ -127,9 +127,9 @@ public class Creature : Entity {
         }
     }
 
-    protected virtual void SetState() {
+    protected virtual void SetState(CreatureState defaultState = CreatureState.Idle) {
         State = new() {
-            Current = CreatureState.Idle
+            Current = defaultState,
         };
         State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
@@ -142,22 +142,25 @@ public class Creature : Entity {
 
     #region State
 
-    private void OnEnteredHit() {
-        Debug.Log("ddddd");
+    protected virtual void OnEnteredHit() {
+
         _animator.SetBool(AnimatorParameterHash_Hit, true);
     }
-    private void OnEnteredDead() {
+    protected virtual void OnEnteredDead() {
         _collider.enabled = false;
         _rigidbody.simulated = false;
         _animator.SetBool(AnimatorParameterHash_Hit, false);
         _animator.SetBool(AnimatorParameterHash_Attack, false);
         _animator.SetBool(AnimatorParameterHash_Dead, true);
     }
+
     private void OnEnteredDash() {
         Debug.Log("나와");
         _animator.SetBool(AnimatorParameterHash_Dash, true);
     }
-    private void OnExitedHit() {
+
+    protected virtual void OnExitedHit() {
+
         _animator.SetBool(AnimatorParameterHash_Hit, false);
         KnockbackVelocity = Vector2.zero;
     }
@@ -185,6 +188,8 @@ public class Creature : Entity {
 
 public enum CreatureState
 {
+    Sleep,
+    WakeUp,
     Idle,
     Chase,
     Hit,

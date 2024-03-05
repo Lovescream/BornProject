@@ -32,9 +32,9 @@ namespace ZerolizeDungeon {
             FarthestDistance = _generateData.Max(x => x.DistanceFromStart);
 
             foreach (RoomGenerateData data in _generateData) {
-                Room newRoom = GenerateRoom(data.NeighbourInfo, data.DistanceFromStart == 0);
+                Room newRoom = GenerateRoom(data.NeighbourInfo, GetType(data));
                 newRoom.transform.SetParent(root);
-                newRoom.SetInfo(this, data);
+                newRoom.SetInfo(this, data, GetType(data));
                 _rooms[new(data.X, data.Y)] = newRoom;
                 if (newRoom.Type == RoomType.Start) StartRoom = newRoom;
                 else if (newRoom.Type == RoomType.Boss) BossRoom = newRoom;
@@ -59,11 +59,11 @@ namespace ZerolizeDungeon {
             }
         }
 
-        private Room GenerateRoom(int direction, bool isStartRoom = false) {
+        private Room GenerateRoom(int direction, RoomType type) {
             List<Room> rooms = Main.Resource.LoadRoom((RoomDirection)direction);
 
             Room room;
-            if (isStartRoom) {
+            if (type == RoomType.Start) {
                 room = rooms.Where(x => {
                     string[] s = x.Key.Split('_');
                     if (s.Length != 3) return false;
@@ -71,12 +71,31 @@ namespace ZerolizeDungeon {
                     return true;
                 }).FirstOrDefault();
             }
+            else if (type == RoomType.Boss) {
+                room = rooms.Where(x => {
+                    string[] s = x.Key.Split('_');
+                    if (s.Length < 4) return false;
+                    if (s[3] != "Boss") return false;
+                    return true;
+                }).FirstOrDefault();
+            }
             else {
-                var nonBasicRooms = rooms.Where(x => !x.Key.Contains("Basic")).ToList();
-                room = nonBasicRooms.Count > 0 ? nonBasicRooms[Random.Range(0, nonBasicRooms.Count)] : null;
+                rooms = rooms.Where(x => {
+                    string[] s = x.Key.Split('_');
+                    if (s.Length > 3 && s[3] == "Boss") return false;
+                    if (s[1] == "Basic") return false;
+                    return true;
+                }).ToList();
+                room = rooms.Count > 0 ? rooms[Random.Range(0, rooms.Count)] : null;
             }
 
             return room != null ? GameObject.Instantiate(room) : null;
+        }
+
+        private RoomType GetType(RoomGenerateData data) {
+            if (StartRoom == null && data.DistanceFromStart == 0) return RoomType.Start;
+            if (BossRoom == null && data.DistanceFromStart == FarthestDistance) return RoomType.Boss;
+            return RoomType.Normal;
         }
 
         public Vector2Int GetRelativeIndex(Room room) {

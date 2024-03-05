@@ -47,12 +47,13 @@ public class UI_Scene_Game : UI_Scene {
 
     #endregion
 
-    //public void SetBossHpBar(Boss boss) {
-    //    GameObject barObject = GetObject((int)Objects.BossHp);
-    //    barObject.SetActive(boss != null);
-    //    if (boss != null)
-    //        barObject.GetComponent<UI_BossHpBar>().SetInfo(boss);
-    //}
+    public void SetBossHpBar(Enemy enemy) {
+        GameObject barObject = GetObject((int)Objects.BossHp);
+        barObject.SetActive(enemy != null);
+        if (enemy != null) {
+            barObject.GetComponent<UI_BossHpBar>().SetInfo(enemy);
+        }
+    }
 
     #region OnButtons
 

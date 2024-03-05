@@ -7,7 +7,6 @@ public class UI_PlayerInfo : UI_Base {
     #region Enum
 
     enum Objects {
-        PlayerImageSlot,
         SkillSlot_Main,
         SkillSlot_Sub,
         PlayerMemoryBar,
@@ -32,7 +31,6 @@ public class UI_PlayerInfo : UI_Base {
 
     public void SetInfo(Player player) {
         Initialize();
-
 
         //GetObject((int)Objects.SkillSlot_Main).GetComponent<>().SetInfo(player); // TODO::
         //GetObject((int)Objects.SkillSlot_Sub).GetComponent<>().SetInfo(player); // TODO::

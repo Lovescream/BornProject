@@ -72,7 +72,7 @@ public class Boss : Enemy, IAttackable { // 아직 Enemy와 차이를 모르겠�
         _range.transform.localScale = 2 * Range * Vector3.one;
     }
 
-    protected override void SetState()
+    protected override void SetState(CreatureState defaultState = CreatureState.Idle)
     {
         base.SetState();
         State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
