@@ -1979,7 +1979,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.972549, g: 0.9019608, b: 1, a: 1}
+  m_Color: {r: 0.95686275, g: 0.88235295, b: 1, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 30, y: 30, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -12600,7 +12600,7 @@ Transform:
   - {fileID: 1790397085028403517}
   - {fileID: 4260485090516163552}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &1838816985471860699
 Grid:
