@@ -33,7 +33,7 @@ public class UI_PlayerInfo : UI_Base {
     public void SetInfo(Player player) {
         Initialize();
 
-        GetObject((int)Objects.PlayerImageSlot).GetComponent<UI_PlayerInfo_ImageSlot>().SetInfo(player);
+
         //GetObject((int)Objects.SkillSlot_Main).GetComponent<>().SetInfo(player); // TODO::
         //GetObject((int)Objects.SkillSlot_Sub).GetComponent<>().SetInfo(player); // TODO::
         GetObject((int)Objects.PlayerMemoryBar).GetComponent<UI_PlayerInfo_MemoryBar>().SetInfo(player);
