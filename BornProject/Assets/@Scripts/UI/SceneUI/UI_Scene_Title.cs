@@ -11,7 +11,7 @@ public class UI_Scene_Title : UI_Scene {
 
         btnNewGame,
         btnContinue,
-        btnController,
+        //btnController,
         btnExit
 
     }
@@ -33,7 +33,7 @@ public class UI_Scene_Title : UI_Scene {
 
         GetButton((int)Buttons.btnNewGame).onClick.AddListener(OnBtnNewGame);
         GetButton((int)Buttons.btnContinue).onClick.AddListener(OnBtnContinue);
-        GetButton((int)Buttons.btnController).onClick.AddListener(OnBtnController);
+        //GetButton((int)Buttons.btnController).onClick.AddListener(OnBtnController);
         GetButton((int)Buttons.btnExit).onClick.AddListener(OnBtnExit);
 
         return true;

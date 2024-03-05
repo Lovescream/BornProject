@@ -15,7 +15,7 @@ public class Spider : Enemy {
     protected override void SetStatus(bool isFullHp = true) {
         base.SetStatus(isFullHp);
     }
-    protected override void SetState() {
+    protected override void SetState(CreatureState defaultState = CreatureState.Idle) {
         base.SetState();
         State.AddOnEntered(CreatureState.Chase, OnEnteredChase);
         State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);

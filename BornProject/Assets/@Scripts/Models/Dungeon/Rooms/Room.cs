@@ -166,7 +166,7 @@ namespace ZerolizeDungeon {
             return true;
         }
 
-        public virtual void SetInfo(Dungeon dungeon, RoomGenerateData data) {
+        public virtual void SetInfo(Dungeon dungeon, RoomGenerateData data, RoomType type) {
             Initialize();
 
             // #1. Room 설정.
@@ -182,7 +182,8 @@ namespace ZerolizeDungeon {
             }
 
             // #3. 타입 설정.
-            SetType(dungeon, data);
+            //SetType(dungeon, data);
+            Type = type;
             ExploreType = RoomExploreType.Hide;
 
             // #4. 통로 설정.
@@ -280,6 +281,8 @@ namespace ZerolizeDungeon {
                     _enemies.Remove(enemy);
                     CheckClear();
                 };
+                if (enemy is BoraSongi qjtjtqhRdma)
+                    InsideCollider.OnEnteredRoom += room => qjtjtqhRdma.WakeUp();
                 Destroy(spawners[i].gameObject);
             }
         }
@@ -288,21 +291,21 @@ namespace ZerolizeDungeon {
 
         #region Type
 
-        private void SetType(Dungeon dungeon, RoomGenerateData data) {
-            if (dungeon.StartRoom == null && data.DistanceFromStart == 0) {
-                Type = RoomType.Start;
-                return;
-            }
-            if (dungeon.BossRoom == null && data.DistanceFromStart == dungeon.FarthestDistance) {
-                Type = RoomType.Boss;
-                return;
-            }
-            if (dungeon.TreasureRoom == null && data.NeighbourCount == 1) {
-                Type = RoomType.Treasure;
-                return;
-            }
-            Type = RoomType.Normal;
-        }
+        //private void SetType(Dungeon dungeon, RoomGenerateData data) {
+        //    if (dungeon.StartRoom == null && data.DistanceFromStart == 0) {
+        //        Type = RoomType.Start;
+        //        return;
+        //    }
+        //    if (dungeon.BossRoom == null && data.DistanceFromStart == dungeon.FarthestDistance) {
+        //        Type = RoomType.Boss;
+        //        return;
+        //    }
+        //    if (dungeon.TreasureRoom == null && data.NeighbourCount == 1) {
+        //        Type = RoomType.Treasure;
+        //        return;
+        //    }
+        //    Type = RoomType.Normal;
+        //}
 
         #endregion
 
