@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Beatle : Enemy {
 
-    protected static readonly int AnimatorParameterHash_Fly = Animator.StringToHash("Fly");
-
     #region Initialize / Set
 
     public override void SetInfo(CreatureData data) {
@@ -15,7 +13,7 @@ public class Beatle : Enemy {
     protected override void SetStatus(bool isFullHp = true) {
         base.SetStatus(isFullHp);
     }
-    protected override void SetState() {
+    protected override void SetState(CreatureState defaultState = CreatureState.Idle) {
         base.SetState();
         State.AddOnEntered(CreatureState.Chase, OnEnteredChase);
         State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
@@ -28,19 +26,17 @@ public class Beatle : Enemy {
 
     #region State
 
-    private void OnEnteredChase() {
+    protected virtual void OnEnteredChase() {
         _animator.SetBool(AnimatorParameterHash_Fly, true);
     }
-    private void OnEnteredAttack() {
-        Velocity = Vector2.zero;
-    }
-    private void OnEnteredDead() {
+    protected override void OnEnteredDead() {
         _animator.SetBool(AnimatorParameterHash_Fly, false);
+        base.OnEnteredDead();
     }
-    private void OnExitedChase() {
+    protected virtual void OnExitedChase() {
         if (Target == null) _animator.SetBool(AnimatorParameterHash_Fly, false);
     }
-    private void OnExitedAttack() {
+    protected virtual void OnExitedAttack() {
         if (Target == null) _animator.SetBool(AnimatorParameterHash_Fly, false);
     }
 

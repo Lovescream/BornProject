@@ -6,17 +6,12 @@ public class UI_BossHpBar : UI_BarBase {
 
     #region Initialize / Set
 
-    public void SetInfo() {
-        // TODO:: 파라미터로 Boss를 받아온다.
-        // Boss boss = null;
-        
-        
-        //ShowTitleText = true;
+    public void SetInfo(Enemy enemy) {
+        ShowTitleText = true;
+        SetTitle($"{enemy.Data.Key}");
 
-        //SetTitle(boss.Name);
-
-        //boss.OnChangedHp += x => SetAmount(x, boss.HpMax);
-        //SetAmount(boss.Hp, boss.HpMax);
+        enemy.OnChangedHp += x => SetAmount(x, enemy.HpMax);
+        SetAmount(enemy.Hp, enemy.HpMax);
     }
 
     #endregion

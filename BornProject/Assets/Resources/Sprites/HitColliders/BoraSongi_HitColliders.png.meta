@@ -1,0 +1,1804 @@
+fileFormatVersion: 2
+guid: 739aac71ebba1334a81dd4332ce5e24d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_00
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 384
+        width: 18
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6647b9f5e854116489f535a8875646a1
+      internalID: -1429398496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_01
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 384
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fcbb00bb89975428b19a1464981520
+      internalID: -1117567055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_02
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 384
+        width: 15
+        height: 15
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.4666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4245e6459e18f5d419aa516c394506cf
+      internalID: 104999675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_03
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 385
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4615385, y: 0.42857146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529e9680823557e4ab4cd1da97052865
+      internalID: 1274192826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_04
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 386
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4615385, y: 0.35714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f012ae1e369a9944ea525e7de0f1fb49
+      internalID: 473151416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_05
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 387
+        width: 12
+        height: 13
+      alignment: 9
+      pivot: {x: 0.4166667, y: 0.30769232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bfde6c4d21f714d82580d81a7a23ed
+      internalID: 1053886647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_06
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 355
+        width: 12
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4166667, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a4c00e3485dde4db28e57171f2b23d
+      internalID: 1219350666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_07
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 356
+        width: 11
+        height: 15
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.20000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b2655a987f5614dbd093d8625edba8
+      internalID: -79301464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_08
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 357
+        width: 10
+        height: 15
+      alignment: 9
+      pivot: {x: 0.3, y: 0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2496ae920643147839fd6a42c217fc
+      internalID: -347529939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_09
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 357
+        width: 10
+        height: 16
+      alignment: 9
+      pivot: {x: 0.3, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c92d51a3b7b9a488cc93b5de1bc4c1
+      internalID: 1286186976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_10
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 358
+        width: 11
+        height: 16
+      alignment: 9
+      pivot: {x: 0.27272728, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3785666a3e22dc84a9a079dddd9453b2
+      internalID: 705420923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_11
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 359
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0.33333334, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c35b31c3db3faf44ae260678cb9ad64
+      internalID: 1954658506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 328
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.30769232, y: -0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20bb6d65476ab514b96267e1da4de82d
+      internalID: -273622908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_13
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 329
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.30769232, y: -0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31f08c449c2dcb4d81b13c6359cc5d8
+      internalID: -2129840120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 330
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.30769232, y: -0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e49ef0c6ae927545ab175c835d25ae8
+      internalID: 1247435161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_15
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 330
+        width: 14
+        height: 17
+      alignment: 9
+      pivot: {x: 0.2857143, y: -0.1764706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0368f5924281a0d4ebc133d2f477d98f
+      internalID: -1862664451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_16
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 331
+        width: 15
+        height: 17
+      alignment: 9
+      pivot: {x: 0.33333334, y: -0.23529412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15f25821c9eaf14ea1021684dee5177
+      internalID: -1258664091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_17
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 334
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.3125, y: -0.4666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081a1ca521c1de54ba3af93350816394
+      internalID: 1856274760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 303
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.3125, y: -0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1786b72d5160c954b975ff208ddd4ad0
+      internalID: 940917295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_19
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 305
+        width: 16
+        height: 13
+      alignment: 9
+      pivot: {x: 0.3125, y: -0.7692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b808620d8cef12c4a8fac4ce62579037
+      internalID: 257583611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_20
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 307
+        width: 17
+        height: 12
+      alignment: 9
+      pivot: {x: 0.29411766, y: -1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b71d9340454e5468a9ed4246b56856
+      internalID: 1879178276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_21
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 309
+        width: 16
+        height: 11
+      alignment: 9
+      pivot: {x: 0.25, y: -1.2727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3f6f72f81707e4b9ea4a5b8cb151b3
+      internalID: 2014069840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_22
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 309
+        width: 16
+        height: 11
+      alignment: 9
+      pivot: {x: 0.25, y: -1.2727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df46ad01850fab743899bacb0a2ab15a
+      internalID: -394654954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Base_PoisonSpore_Shot_23
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 309
+        width: 16
+        height: 11
+      alignment: 9
+      pivot: {x: 0.25, y: -1.2727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14b00e03f5d7c446be40e856502ef5e
+      internalID: -1043146035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Shot_00
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 264
+        width: 8
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda4dd9234d992e46b0bd84361b43169
+      internalID: -604331742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_00
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 263
+        width: 10
+        height: 10
+      alignment: 9
+      pivot: {x: 0.4, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0a2674d08c6e04b82e375b4e86eece
+      internalID: 13662658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_07
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 228
+        width: 15
+        height: 19
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0.21052632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a82d3b974ad3514ea5f1ab0de4dc737
+      internalID: -1244315524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_01
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 262
+        width: 11
+        height: 11
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.18181819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c00e72fb5bec5438e02b00956841f7
+      internalID: 1059927193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_08
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 228
+        width: 15
+        height: 20
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ced91522ab7bd46a3960c3f0461a69
+      internalID: 2051419586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_02
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 261
+        width: 10
+        height: 13
+      alignment: 9
+      pivot: {x: 0.2, y: 0.23076925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766233d9dd78f3c498cdf2294b61f4fc
+      internalID: -1760896945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_03
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 261
+        width: 10
+        height: 14
+      alignment: 9
+      pivot: {x: 0.2, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d52ea751798e84d9c6acd79a89321c
+      internalID: 128069755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_04
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 261
+        width: 11
+        height: 15
+      alignment: 9
+      pivot: {x: 0.18181819, y: 0.20000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cf6e034cb1af9439278e5791ed6663
+      internalID: 485866095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_00
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 73
+        width: 17
+        height: 11
+      alignment: 9
+      pivot: {x: 0.44117647, y: 0.18181819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d595cb32822564c9edb9bbc2edbabf
+      internalID: -1458416779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Shot_00
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 96
+        width: 15
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21edb95f2ff690438e4d495f3ea8a44
+      internalID: 1940291793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_01
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 72
+        width: 17
+        height: 12
+      alignment: 9
+      pivot: {x: 0.32352942, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e980b7f0a9101418cd36217de05ebe
+      internalID: 550048566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Shot_01
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 96
+        width: 15
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4f8d2bace23c44a9b33af9d04bec99
+      internalID: 1775006646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_02
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 71
+        width: 18
+        height: 15
+      alignment: 9
+      pivot: {x: 0.30555555, y: 0.26666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f366d1f677a7a4bbd012f164e7c9ab
+      internalID: -537628926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Shot_02
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 96
+        width: 15
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84bbece3abf599479967da5d69331a8
+      internalID: -801266970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_05
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 68
+        width: 24
+        height: 23
+      alignment: 9
+      pivot: {x: 0.35416666, y: 0.30434784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324abda769e21754eb55cefe88aa8dcc
+      internalID: -634302641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_03
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 69
+        width: 21
+        height: 19
+      alignment: 9
+      pivot: {x: 0.30952382, y: 0.31578946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8f7ebcc8a96f748a20c5f40080a481
+      internalID: 626547972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Shot_03
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 96
+        width: 15
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b79e511ebe9c934cb265440f46660e9
+      internalID: -1183737971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_06
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 35
+        width: 21
+        height: 25
+      alignment: 9
+      pivot: {x: 0.35714287, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48d79ec04e6f3d40b0bc5960f8e59c5
+      internalID: 1090536646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_07
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 34
+        width: 21
+        height: 26
+      alignment: 9
+      pivot: {x: 0.35714287, y: 0.34615386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cbd1a5a73aa3f4cb98239421947387
+      internalID: -1117799953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_08
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 33
+        width: 22
+        height: 28
+      alignment: 9
+      pivot: {x: 0.38636363, y: 0.35714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f48fc974230dc4b8a69c387f2ad190
+      internalID: -2066580766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Shot_04
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 96
+        width: 15
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6f2117f4baebe479dbc0a9d3f1eedb
+      internalID: 1596591820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_04
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 69
+        width: 22
+        height: 21
+      alignment: 9
+      pivot: {x: 0.29545453, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b0a83acef31a24888501ea5cfc94b7
+      internalID: -1871834531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_SporeShot_Shot_00
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 21
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdc087c0fa915141a9e5d9a239432a5
+      internalID: -715203256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_SporeShot_Shot_01
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 22
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b039c3c9f0aa3654d8b81ac64564e7bc
+      internalID: -1229712899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_SporeShot_Shot_02
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 22
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7c7b03ae5d2684598171a84970e8af
+      internalID: -1665913176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_SporeSpread_Shot_00
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 9
+        height: 7
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8735d4cc7e37ad42bf19e900a9ae9f4
+      internalID: -1231523327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_SporeSpread_Shot_01
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5
+        width: 12
+        height: 7
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef94427b665516438a1f0a97a3a662b
+      internalID: 687182918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_SporeSpread_Shot_02
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 6
+        width: 15
+        height: 5
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76d1246e78501e4898f38d7522ff640
+      internalID: 296345048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_SporeSpread_Shot_03
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 5
+        width: 12
+        height: 7
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9740acd6264b15a44b6ce71532cbba44
+      internalID: -937695808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_05
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 229
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.23076925, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeafc59ecee74fd40be1453c46c02c26
+      internalID: 1883976062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_06
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 228
+        width: 14
+        height: 18
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0.22222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fc03f19f1b65e4995887421f469aa4
+      internalID: -582980240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_09
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 227
+        width: 16
+        height: 22
+      alignment: 9
+      pivot: {x: 0.3125, y: 0.22727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa4484a6367a3f4d8105a7e6816ea96
+      internalID: 1431274908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_10
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 227
+        width: 18
+        height: 22
+      alignment: 9
+      pivot: {x: 0.2777778, y: 0.22727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61430bef40de2441ac9b1b64c770d9d
+      internalID: -1562165108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_11
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 195
+        width: 17
+        height: 23
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.21739131}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868ea0461aa3baa4187ba6ff92437b27
+      internalID: 486229997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 195
+        width: 19
+        height: 24
+      alignment: 9
+      pivot: {x: 0.31578946, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd74225ceefee14c91ef9aa029988cb
+      internalID: 1988283119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 194
+        width: 19
+        height: 25
+      alignment: 9
+      pivot: {x: 0.31578946, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244577e193cf10842a555360dca89c2c
+      internalID: 355924396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 194
+        width: 20
+        height: 26
+      alignment: 9
+      pivot: {x: 0.35, y: 0.23076925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28479cbfac77764c82996544cdb85f6
+      internalID: 1742234533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_15
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 194
+        width: 20
+        height: 27
+      alignment: 9
+      pivot: {x: 0.35, y: 0.22222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0f77e490fd5d143a671eff48dd53c2
+      internalID: 796215984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_16
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 193
+        width: 21
+        height: 27
+      alignment: 9
+      pivot: {x: 0.3809524, y: 0.25925925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2963b7138c2037542a6544b21a9cf1e3
+      internalID: -145900775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_17
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 161
+        width: 21
+        height: 29
+      alignment: 9
+      pivot: {x: 0.3809524, y: 0.2413793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e35664695319e746b704d535d7589d8
+      internalID: -1455180410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_18
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 161
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3809524, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690d8275e2f7d2f47aab505a7d4e9786
+      internalID: 1207158588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_19
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 161
+        width: 15
+        height: 28
+      alignment: 9
+      pivot: {x: 0.6, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e789e5e5fecae49a03134fb8cda7a2
+      internalID: -1791037247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_20
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 160
+        width: 15
+        height: 29
+      alignment: 9
+      pivot: {x: 0.6, y: 0.27586207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838022bcc475a3d4d855274671329b28
+      internalID: 1050219490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_21
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 160
+        width: 24
+        height: 29
+      alignment: 9
+      pivot: {x: 0.4166667, y: 0.27586207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40708ddaf42ff1b4b8975c73718f124e
+      internalID: 419550387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_22
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 171
+        width: 15
+        height: 19
+      alignment: 9
+      pivot: {x: 0.6666667, y: -0.15789473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67437a9d537164e4db3f843dbb070292
+      internalID: -1549356943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_23
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 139
+        width: 17
+        height: 19
+      alignment: 9
+      pivot: {x: 0.64705884, y: -0.15789473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9c72596d7048947afdcfbe3e5e53cc
+      internalID: -27094414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_24
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 149
+        width: 9
+        height: 9
+      alignment: 9
+      pivot: {x: 0.33333334, y: -1.4444444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37b2e79a6587614e8daac56df9a79a5
+      internalID: 951856451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushboom_Explode_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 156
+        width: 2
+        height: 2
+      alignment: 9
+      pivot: {x: -2, y: -10}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa9b212843ed1642bdef00946b480b6
+      internalID: 905584129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_09
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 32
+        width: 22
+        height: 29
+      alignment: 9
+      pivot: {x: 0.38636363, y: 0.37931034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef4475cce92027468067e20995e4e21
+      internalID: -30696176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_10
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 32
+        width: 23
+        height: 29
+      alignment: 9
+      pivot: {x: 0.41304347, y: 0.37931034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecef862e0c2f8b46b8304aa0a71fef3
+      internalID: -361513145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoraSongi_Normal_Mushmine_Explode_11
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 33
+        width: 23
+        height: 28
+      alignment: 9
+      pivot: {x: 0.41304347, y: 0.35714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0112cafbea2adc34fbfa0f4ad30c2883
+      internalID: 596389304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BoraSongi_Base_PoisonSpore_Shot_00: -1429398496
+      BoraSongi_Base_PoisonSpore_Shot_01: -1117567055
+      BoraSongi_Base_PoisonSpore_Shot_02: 104999675
+      BoraSongi_Base_PoisonSpore_Shot_03: 1274192826
+      BoraSongi_Base_PoisonSpore_Shot_04: 473151416
+      BoraSongi_Base_PoisonSpore_Shot_05: 1053886647
+      BoraSongi_Base_PoisonSpore_Shot_06: 1219350666
+      BoraSongi_Base_PoisonSpore_Shot_07: -79301464
+      BoraSongi_Base_PoisonSpore_Shot_08: -347529939
+      BoraSongi_Base_PoisonSpore_Shot_09: 1286186976
+      BoraSongi_Base_PoisonSpore_Shot_10: 705420923
+      BoraSongi_Base_PoisonSpore_Shot_11: 1954658506
+      BoraSongi_Base_PoisonSpore_Shot_12: -273622908
+      BoraSongi_Base_PoisonSpore_Shot_13: -2129840120
+      BoraSongi_Base_PoisonSpore_Shot_14: 1247435161
+      BoraSongi_Base_PoisonSpore_Shot_15: -1862664451
+      BoraSongi_Base_PoisonSpore_Shot_16: -1258664091
+      BoraSongi_Base_PoisonSpore_Shot_17: 1856274760
+      BoraSongi_Base_PoisonSpore_Shot_18: 940917295
+      BoraSongi_Base_PoisonSpore_Shot_19: 257583611
+      BoraSongi_Base_PoisonSpore_Shot_20: 1879178276
+      BoraSongi_Base_PoisonSpore_Shot_21: 2014069840
+      BoraSongi_Base_PoisonSpore_Shot_22: -394654954
+      BoraSongi_Base_PoisonSpore_Shot_23: -1043146035
+      BoraSongi_HitColliders_53: -873276946
+      BoraSongi_Normal_Mushboom_Explode_00: 13662658
+      BoraSongi_Normal_Mushboom_Explode_01: 1059927193
+      BoraSongi_Normal_Mushboom_Explode_02: -1760896945
+      BoraSongi_Normal_Mushboom_Explode_03: 128069755
+      BoraSongi_Normal_Mushboom_Explode_04: 485866095
+      BoraSongi_Normal_Mushboom_Explode_05: 1883976062
+      BoraSongi_Normal_Mushboom_Explode_06: -582980240
+      BoraSongi_Normal_Mushboom_Explode_07: -1244315524
+      BoraSongi_Normal_Mushboom_Explode_08: 2051419586
+      BoraSongi_Normal_Mushboom_Explode_09: 1431274908
+      BoraSongi_Normal_Mushboom_Explode_10: -1562165108
+      BoraSongi_Normal_Mushboom_Explode_11: 486229997
+      BoraSongi_Normal_Mushboom_Explode_12: 1988283119
+      BoraSongi_Normal_Mushboom_Explode_13: 355924396
+      BoraSongi_Normal_Mushboom_Explode_14: 1742234533
+      BoraSongi_Normal_Mushboom_Explode_15: 796215984
+      BoraSongi_Normal_Mushboom_Explode_16: -145900775
+      BoraSongi_Normal_Mushboom_Explode_17: -1455180410
+      BoraSongi_Normal_Mushboom_Explode_18: 1207158588
+      BoraSongi_Normal_Mushboom_Explode_19: -1791037247
+      BoraSongi_Normal_Mushboom_Explode_20: 1050219490
+      BoraSongi_Normal_Mushboom_Explode_21: 419550387
+      BoraSongi_Normal_Mushboom_Explode_22: -1549356943
+      BoraSongi_Normal_Mushboom_Explode_23: -27094414
+      BoraSongi_Normal_Mushboom_Explode_24: 951856451
+      BoraSongi_Normal_Mushboom_Explode_25: 905584129
+      BoraSongi_Normal_Mushboom_Shot_00: -604331742
+      BoraSongi_Normal_Mushmine_Explode_00: -1458416779
+      BoraSongi_Normal_Mushmine_Explode_01: 550048566
+      BoraSongi_Normal_Mushmine_Explode_02: -537628926
+      BoraSongi_Normal_Mushmine_Explode_03: 626547972
+      BoraSongi_Normal_Mushmine_Explode_04: -1871834531
+      BoraSongi_Normal_Mushmine_Explode_05: -634302641
+      BoraSongi_Normal_Mushmine_Explode_06: 1090536646
+      BoraSongi_Normal_Mushmine_Explode_07: -1117799953
+      BoraSongi_Normal_Mushmine_Explode_08: -2066580766
+      BoraSongi_Normal_Mushmine_Explode_09: -30696176
+      BoraSongi_Normal_Mushmine_Explode_10: -361513145
+      BoraSongi_Normal_Mushmine_Explode_11: 596389304
+      BoraSongi_Normal_Mushmine_Shot_00: 1940291793
+      BoraSongi_Normal_Mushmine_Shot_01: 1775006646
+      BoraSongi_Normal_Mushmine_Shot_02: -801266970
+      BoraSongi_Normal_Mushmine_Shot_03: -1183737971
+      BoraSongi_Normal_Mushmine_Shot_04: 1596591820
+      BoraSongi_Normal_SporeShot_Shot_00: -715203256
+      BoraSongi_Normal_SporeShot_Shot_01: -1229712899
+      BoraSongi_Normal_SporeShot_Shot_02: -1665913176
+      BoraSongi_Normal_SporeSpread_Shot_00: -1231523327
+      BoraSongi_Normal_SporeSpread_Shot_01: 687182918
+      BoraSongi_Normal_SporeSpread_Shot_02: 296345048
+      BoraSongi_Normal_SporeSpread_Shot_03: -937695808
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

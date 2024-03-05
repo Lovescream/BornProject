@@ -362,5 +362,18 @@
     "Skills": "RoadRollerShot|RollerRush|RollerShield|RoadRollerBeam",
     "DefaultSkills": null,
     "Key": "RoadRollerBoss"
+  },
+  {
+    "HpMax": 1200.0,
+    "HpRegen": 10.0,
+    "Damage": 100.0,
+    "Defense": 10.0,
+    "MoveSpeed": 3.5,
+    "AttackSpeed": 1.0,
+    "Range": 5.0,
+    "Sight": 20.0,
+    "Skills": "BoraSongi",
+    "DefaultSkills": "BoraSongi_Base_PoisonSpore",
+    "Key": "BoraSongi"
   }
 ]

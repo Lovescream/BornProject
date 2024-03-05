@@ -94,7 +94,7 @@ public class Player : Creature, ISkillMan, IAttackable {
             Range = Status[StatType.Range],
         };
     }
-    protected override void SetState() {
+    protected override void SetState(CreatureState defaultState = CreatureState.Idle) {
         base.SetState();
 
         this.Attacker = new(this);
@@ -111,7 +111,7 @@ public class Player : Creature, ISkillMan, IAttackable {
 
     #endregion
 
-    private void OnEnteredDead() {
+    protected override void OnEnteredDead() {
         Main.UI.OpenPopupUI<UI_Popup_GameOver>();
     }
 

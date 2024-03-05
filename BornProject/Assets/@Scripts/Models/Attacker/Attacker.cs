@@ -23,7 +23,6 @@ public class Attacker {
             }
         }
     }
-    public float AttackTime => 0.1f;
     public float CurrentAttackTime {
         get => _currentAttackTimer;
         set {
@@ -90,7 +89,6 @@ public class Attacker {
                 HitCollider hitCollider = GenerateHitCollider(generationInfo.SkillKey, generationInfo.HitColliderKey, hitColliderInfo, hitInfo);
 
                 hitCollider.SetTransform(offsetRadius, angle, generationInfo.Size, worldRotate);
-                //hitCollider.SetDirection(hitInfo.Owner.Indicator.ShotDirection);
                 hitCollider.SetDirection((hitCollider.transform.position - hitInfo.Owner.Indicator.Point.position).normalized);
             }
         }

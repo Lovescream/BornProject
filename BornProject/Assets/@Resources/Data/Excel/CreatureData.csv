@@ -27,3 +27,4 @@ Builder,150,0,0,5,5,1,10,10,Builder,Builder_Base_Attack
 RCCar,350,5,50,10,2,1,5,10,RCCar,RCCar_Base_Attack
 DroneRobot,300,5,40,10,2,1,5,10,DroneLaser|DroneSelfDestruct,
 RoadRollerBoss,3000,15,200,30,2,1,5,10,RoadRollerShot|RollerRush|RollerShield|RoadRollerBeam,
+BoraSongi,1200,10,100,10,3.5,1,5,20,BoraSongi,BoraSongi_Base_PoisonSpore

@@ -26,7 +26,7 @@ public class Main : MonoBehaviour {
 
     #endregion
 
-    public static bool IsInitialized => Instance != null;
+    public static bool IsInitialized => _instance != null;
 
     private PoolManager _pool = new();
     private DataManager _data = new();
