@@ -162,7 +162,7 @@ public class Creature : Entity {
         Main.Object.ShowHpBar(this, Hp, prevHp);
         Main.Object.ShowDamageText(this.transform.position, hitInfo.Damage);
 
-        CreatureState originState = State.Current == CreatureState.Hit ? State.NextState :State.Current; // 원래 상태 저장.
+        CreatureState originState = State.Current == CreatureState.Hit || State.Current == CreatureState.Dash ? State.NextState :State.Current; // 원래 상태 저장.
         State.Current = CreatureState.Hit;
         if (hitInfo.Knockback.time > 0) {
             KnockbackVelocity = (this.transform.position - attacker.CurrentPosition).normalized * hitInfo.Knockback.speed;
