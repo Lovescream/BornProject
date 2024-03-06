@@ -13,8 +13,11 @@ public class VictoryScene : BaseScene {
         SceneUI = Main.UI.OpenSceneUI<UI_Scene_Victory>();
 
         if (!Main.Audio.PlayBGM($"BGM_VictoryScene", "MainBGM"))
+
             Main.Audio.Stop(AudioType.BGM);
 
         return true;
+
+        
     }
 }

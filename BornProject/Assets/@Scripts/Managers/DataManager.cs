@@ -19,6 +19,5 @@ public class DataManager {
 
     private Dictionary<string, T> LoadJson<T>() where T : Data {
         return JsonConvert.DeserializeObject<List<T>>(Main.Resource.Get<TextAsset>($"{typeof(T).Name}").text).ToDictionary(x => x.Key);
-        //return JsonConvert.DeserializeObject<List<T>>(Main.Resource.LoadJsonData($"{typeof(T).Name}").text).ToDictionary(data => data.Key);
     }
 }
