@@ -13,6 +13,7 @@ public class BoraSongi : Enemy {
     #region MonoBehaviours
 
     protected virtual void OnDisable() {
+        if (!Main.IsInitialized) return;
         (Main.Scene.Current.SceneUI as UI_Scene_Game).SetBossHpBar(null);
     }
 

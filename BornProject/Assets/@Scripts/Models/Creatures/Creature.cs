@@ -134,8 +134,6 @@ public class Creature : Entity {
         State.AddOnEntered(CreatureState.Hit, OnEnteredHit);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
         State.AddOnExited(CreatureState.Hit, OnExitedHit);
-        State.AddOnEntered(CreatureState.Dash, OnEnteredDash);
-        State.AddOnExited(CreatureState.Dash, OnExitedDash);
 
     }
     #endregion
@@ -143,7 +141,6 @@ public class Creature : Entity {
     #region State
 
     protected virtual void OnEnteredHit() {
-
         _animator.SetBool(AnimatorParameterHash_Hit, true);
     }
     protected virtual void OnEnteredDead() {
@@ -153,21 +150,11 @@ public class Creature : Entity {
         _animator.SetBool(AnimatorParameterHash_Attack, false);
         _animator.SetBool(AnimatorParameterHash_Dead, true);
     }
-
-    private void OnEnteredDash() {
-        Debug.Log("나와");
-        _animator.SetBool(AnimatorParameterHash_Dash, true);
-    }
-
     protected virtual void OnExitedHit() {
 
         _animator.SetBool(AnimatorParameterHash_Hit, false);
         KnockbackVelocity = Vector2.zero;
     }
-    private void OnExitedDash() {
-        _animator.SetBool(AnimatorParameterHash_Dash, false);
-    }
-
     public virtual void OnHit(IHitCollider attacker) {
         HitInfo hitInfo = attacker.HitInfo;
         float prevHp = Hp;
