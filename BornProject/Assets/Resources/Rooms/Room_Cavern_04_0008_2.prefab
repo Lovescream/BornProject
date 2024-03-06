@@ -15419,6 +15419,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Wolf
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
@@ -15503,6 +15507,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
+      value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
       value: Wolf
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
@@ -15591,6 +15599,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Wolf
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (2)
@@ -15675,6 +15687,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
+      value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
       value: Wolf
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
@@ -15763,6 +15779,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Wolf
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (7)
@@ -15847,6 +15867,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
+      value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
       value: Wolf
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
@@ -15935,6 +15959,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Wolf
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (1)
@@ -16019,6 +16047,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
+      value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
       value: Wolf
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
@@ -16107,6 +16139,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Wolf
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (4)
@@ -16191,6 +16227,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
+      value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
       value: Wolf
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
