@@ -55,18 +55,18 @@ public class BoraSongi : Enemy {
         _animator.SetBool(AnimatorParameterHash_Sleep, true);
     }
     protected virtual void OnEnteredIdle() {
-        CanEnterHit = true;
+        CanEnterHit = false; // CanEnterHit = true; 보스 넉백 빼자고 해서
     }
     protected virtual void OnEnteredChase() {
         SkillList.Set("BoraSongi_Base_PoisonSpore");
         SkillList.Set(SkillType.Range);
-        CanEnterHit = true;
+        CanEnterHit = false; // CanEnterHit = true; 보스 넉백 빼자고 해서
     }
     protected override void OnEnteredAttack() {
         base.OnEnteredAttack();
         SkillList.Set("BoraSongi_Normal_Mushboom");
         SkillList.Set(SkillType.Range);
-        CanEnterHit = true;
+        CanEnterHit = false; // CanEnterHit = true; 보스 넉백 빼자고 해서
     }
     protected override void OnStayChase() {
         // #1. Target이 죽거나 유효하지 않으면 Target 정보 초기화.
@@ -107,7 +107,7 @@ public class BoraSongi : Enemy {
             Attack();
         }
         else if (!_basak) {
-            CanEnterHit = true;
+            CanEnterHit = false; // CanEnterHit = true; 보스 넉백 빼자고 해서
             _animator.SetBool(AnimatorParameterHash_AttackInit, false);
             Vector2 delta = Target.transform.position - this.transform.position;
             Vector2 direction = delta.normalized;
