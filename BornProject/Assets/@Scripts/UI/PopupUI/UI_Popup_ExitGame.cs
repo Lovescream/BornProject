@@ -31,7 +31,7 @@ public class UI_Popup_ExitGame : UI_Popup {
     #region OnButtons
 
     private void OnBtnConfirm() {
-        Application.Quit();
+        Main.ExitGame();
     }
     private void OnBtnCancel() {
         Close();

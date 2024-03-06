@@ -57,6 +57,16 @@ public class Main : MonoBehaviour {
         Object.Clear();
     }
 
+    public static void ExitGame() {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_WEBGL
+        Application.OpenURL("https://lovescream.itch.io/zerolize-alpha");
+#else
+        Application.Quit();
+#endif
+    }
+
     public void ManualInitialize() {
         _pool = new();
         _data = new();

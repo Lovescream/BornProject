@@ -39,15 +39,6 @@ public class UI_Scene_Victory : UI_Scene {
 
 
     private void OnBtnExit() {
-
-
-    #if     UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-
-    #else
-            Application.Quit();
-
-    #endif
-
+        Main.ExitGame();
     }
 }
