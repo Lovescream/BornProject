@@ -67,6 +67,7 @@ public class AudioManager {
         // #4. 클립 재생.
         source.clip = clip;
         source.Play();
+        source.loop = true;
         return true;
     }
 
@@ -87,6 +88,7 @@ public class AudioManager {
 
         // #4. 클립 재생.
         source.clip = clip;
+        source.loop = false;
         source.Play();
     }
 
