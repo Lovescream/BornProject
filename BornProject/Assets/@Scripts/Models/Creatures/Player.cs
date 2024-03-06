@@ -171,7 +171,7 @@ public class Player : Creature, ISkillMan, IAttackable {
     protected void OnDash()
     {
         if (this.IsDead) return;
-        if (State.Current == CreatureState.Hit && State.Current == CreatureState.Dash) return;
+        if (State.Current == CreatureState.Hit || State.Current == CreatureState.Dash) return;
         CreatureState prevState = State.Current;
         State.Current = CreatureState.Dash;
         State.SetStateAfterTime(prevState, 0.5f);
