@@ -16009,6 +16009,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (7)
@@ -16068,7 +16072,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16094,6 +16098,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -16154,7 +16162,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16180,6 +16188,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -16240,7 +16252,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16266,6 +16278,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -16326,7 +16342,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16353,6 +16369,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (2)
@@ -16363,11 +16383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6728240042777367651, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.649998
+      value: 21.13
       objectReference: {fileID: 0}
     - target: {fileID: 6728240042777367651, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.470001
+      value: 23.21
       objectReference: {fileID: 0}
     - target: {fileID: 6728240042777367651, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16412,7 +16432,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16438,6 +16458,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -16498,7 +16522,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16524,6 +16548,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -16584,7 +16612,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16610,6 +16638,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -16670,7 +16702,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16696,6 +16728,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -16756,7 +16792,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -16782,6 +16818,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -16842,7 +16882,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

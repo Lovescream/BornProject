@@ -16833,6 +16833,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Bat
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (13)
@@ -16919,6 +16923,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (9)
@@ -16978,7 +16986,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17004,6 +17012,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -17064,7 +17076,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17090,6 +17102,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Worm
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -17150,7 +17166,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: 312435368, guid: 9a002eea24336493c966854f86950940, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17176,6 +17192,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -17263,6 +17283,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Worm
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (7)
@@ -17322,7 +17346,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: 312435368, guid: 9a002eea24336493c966854f86950940, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17348,6 +17372,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Worm
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -17408,7 +17436,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: 312435368, guid: 9a002eea24336493c966854f86950940, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17434,6 +17462,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -17521,6 +17553,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (8)
@@ -17580,7 +17616,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17606,6 +17642,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -17666,7 +17706,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17692,6 +17732,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -17752,7 +17796,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17778,6 +17822,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -17865,6 +17913,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Bear
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (6)
@@ -17924,7 +17976,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -1250481095, guid: 6b1f05f4780a78a469e21412eb72303e, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17950,6 +18002,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -18037,6 +18093,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Worm
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (15)
@@ -18096,7 +18156,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: 312435368, guid: 9a002eea24336493c966854f86950940, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -18122,6 +18182,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Snake
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -18182,7 +18246,7 @@ PrefabInstance:
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -481703466, guid: 1cfd2f948e26b5e44b9f45bd77bf3682, type: 3}
+      objectReference: {fileID: -939120226, guid: 61d769f02e8fc3946a53fbbda93b30bd, type: 3}
     - target: {fileID: 7929473194623238535, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

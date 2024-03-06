@@ -12992,6 +12992,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (15)
@@ -13077,6 +13081,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -13164,6 +13172,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (4)
@@ -13249,6 +13261,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -13336,6 +13352,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (10)
@@ -13421,6 +13441,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -13508,6 +13532,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (19)
@@ -13593,6 +13621,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -13680,6 +13712,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (1)
@@ -13765,6 +13801,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -13852,6 +13892,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (2)
@@ -13937,6 +13981,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -14024,6 +14072,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (12)
@@ -14109,6 +14161,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -14196,6 +14252,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (9)
@@ -14281,6 +14341,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -14368,6 +14432,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (16)
@@ -14453,6 +14521,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
@@ -14540,6 +14612,10 @@ PrefabInstance:
       propertyPath: Key
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
+      objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (17)
@@ -14625,6 +14701,10 @@ PrefabInstance:
     - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: Key
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 872862431573059294, guid: f40af6959b0588f48943f6574f37d875, type: 3}
+      propertyPath: enemyKey
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 5963084261021076386, guid: f40af6959b0588f48943f6574f37d875, type: 3}
       propertyPath: m_Name
