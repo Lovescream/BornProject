@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HitCollider_Mushboom : HitCollider {
 
-    public readonly float qoekfdjswpdhk = 1.5f;
+    public readonly float qoekfdjswpdhk = 0.5f;
 
     public float Timer {
         get => _timer;
