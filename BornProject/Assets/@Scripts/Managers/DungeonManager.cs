@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class DungeonManager {
 
-    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 4); // TODO:: 방 개수 조절
+    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 10); // TODO:: 방 개수 조절
     public UI_Map MapUI { get; private set; }
 
     public Dungeon Current { get; private set; }
