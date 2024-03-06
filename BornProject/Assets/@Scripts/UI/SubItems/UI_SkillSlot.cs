@@ -18,14 +18,16 @@ public class UI_SkillSlot : UI_SlotBase {
         get => _available;
         set {
             _available = value;
-            SetSlotImage(Main.Resource.LoadSprite($"UI_SkillSlot_{(value ? "Available" : "Unavailable")}"));
+            //SetSlotImage(Main.Resource.LoadSprite($"UI_SkillSlot_{(value ? "Available" : "Unavailable")}"));
+            SetSlotImage(Main.Resource.Get<Sprite>($"UI_SkillSlot_{(value ? "Available" : "Unavailable")}"));
         }
     }
     public bool Activated {
         get => _activated;
         set {
             _activated = value;
-            SetSlotImage(Main.Resource.LoadSprite($"UI_SkillSlot_{(value ? "Selected" : "Available")}"));
+            //SetSlotImage(Main.Resource.LoadSprite($"UI_SkillSlot_{(value ? "Selected" : "Available")}"));
+            SetSlotImage(Main.Resource.Get<Sprite>($"UI_SkillSlot_{(value ? "Selected" : "Available")}"));
         }
     }
 
@@ -114,7 +116,8 @@ public class UI_SkillSlot : UI_SlotBase {
 
         this.Panel = panel;
         this.Skill = skill;
-        SetImage(Main.Resource.LoadSprite($"Icon_{Skill.Data.Key}"));
+        //SetImage(Main.Resource.LoadSprite($"Icon_{Skill.Data.Key}"));
+        SetImage(Main.Resource.Get<Sprite>($"Icon_{Skill.Data.Key}"));
         SetText(Skill.Data.Name);
 
         Available = true;
@@ -126,7 +129,8 @@ public class UI_SkillSlot : UI_SlotBase {
 
         this.Panel = panel;
         this.Skill = skill;
-        SetImage(Main.Resource.LoadSprite($"Icon_{Skill.Data.Key}"));
+        //SetImage(Main.Resource.LoadSprite($"Icon_{Skill.Data.Key}"));
+        SetImage(Main.Resource.Get<Sprite>($"Icon_{Skill.Data.Key}"));
         SetText(Skill.Data.Name);
 
         Available = true;

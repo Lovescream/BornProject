@@ -110,7 +110,8 @@ public class Creature : Entity {
 
         this.Data = data;
 
-        _animator.runtimeAnimatorController = Main.Resource.LoadAnimController($"{Data.Key}");
+        //_animator.runtimeAnimatorController = Main.Resource.LoadAnimController($"{Data.Key}");
+        _animator.runtimeAnimatorController = Main.Resource.Get<RuntimeAnimatorController>($"{Data.Key}");
         _animator.SetBool(AnimatorParameterHash_Dead, false);
 
         _collider.enabled = true;

@@ -59,8 +59,14 @@ namespace ZerolizeDungeon {
             }
         }
 
+        private List<Room> LoadRoom(RoomDirection direction) {
+            if ((int)direction == -1) direction = (RoomDirection)15;
+            return Main.Resource.GetAll<Room>().Where(r => r.Direction == direction).ToList();
+        }
+
         private Room GenerateRoom(int direction, RoomType type) {
-            List<Room> rooms = Main.Resource.LoadRoom((RoomDirection)direction);
+            //List<Room> rooms = Main.Resource.LoadRoom((RoomDirection)direction);
+            List<Room> rooms = LoadRoom((RoomDirection)direction);
 
             Room room;
             if (type == RoomType.Start) {

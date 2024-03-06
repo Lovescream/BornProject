@@ -115,7 +115,8 @@ public class HitCollider : Entity, IHitCollider {
         this.HitInfo = hitInfo;
 
         // #2. Animator 설정.
-        _animator.runtimeAnimatorController = Main.Resource.LoadAnimController($"{key}");
+        //_animator.runtimeAnimatorController = Main.Resource.LoadAnimController($"{key}");
+        _animator.runtimeAnimatorController = Main.Resource.Get<RuntimeAnimatorController>($"{key}");
         _animator.ResetTrigger(AnimatorParameterHash_Initialize);
         _animator.SetTrigger(AnimatorParameterHash_Initialize);
         _animator.SetBool(AnimatorParameterHash_Immediately, _animator.GetCurrentAnimatorClipInfo(0)[0].clip.empty);
