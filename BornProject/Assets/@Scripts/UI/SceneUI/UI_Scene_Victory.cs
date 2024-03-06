@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class UI_Scene_Victory : UI_Scene {
 
     #region Enums 
@@ -24,6 +25,8 @@ public class UI_Scene_Victory : UI_Scene {
 
     #endregion
 
+    #region Initialize / Set
+
     public override bool Initialize() {
 
         if (!base.Initialize()) return false;
@@ -37,8 +40,13 @@ public class UI_Scene_Victory : UI_Scene {
         return true;
     }
 
+    #endregion
+
+    #region OnButtons
 
     private void OnBtnExit() {
-        Main.ExitGame();
+        Main.Audio.PlayOnButton();
+        Main.UI.OpenPopupUI<UI_Popup_ExitGame>();
     }
+    #endregion
 }
