@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class HitCollider_Mushboom : HitCollider {
 
+    public readonly float qoekfdjswpdhk = 1.5f;
+
     public float Timer {
         get => _timer;
         set {
@@ -34,7 +36,7 @@ public class HitCollider_Mushboom : HitCollider {
         if (delta.magnitude <= Speed * Time.fixedDeltaTime) {
             this.transform.position = _destination;
             _ghtlshdkdlsjandPQmek = true;
-            Timer = 1.5f;
+            Timer = qoekfdjswpdhk;
             Velocity = Vector2.zero;
             _rigidbody.velocity = Velocity;
             return;

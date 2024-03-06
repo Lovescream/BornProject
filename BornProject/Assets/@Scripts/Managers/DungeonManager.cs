@@ -60,8 +60,9 @@ public class DungeonManager {
     }
 
     public void StageClear() {
-        Main.Quest.ClearStageCount++;
-        Main.UI.OpenPopupUI<UI_Popup_Clear>();
+        //Main.Quest.ClearStageCount++;
+        //Main.UI.OpenPopupUI<UI_Popup_Clear>();
+        SceneManager.LoadScene("VictoryScene");
     }
 
     public void NextStage() {
