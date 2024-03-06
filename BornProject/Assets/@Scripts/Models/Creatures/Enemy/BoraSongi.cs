@@ -41,10 +41,10 @@ public class BoraSongi : Enemy {
         State.Current = CreatureState.Sleep;
 
 
-        // ======= Test용 Hp ========
-        this.Status[StatType.HpMax].SetValue(200);
-        this.Hp = HpMax;
-        // ======= 나중에 수정 ========
+        //// ======= Test용 Hp ========
+        //this.Status[StatType.HpMax].SetValue(200);
+        //this.Hp = HpMax;
+        //// ======= 나중에 수정 ========
     }
 
     #endregion
