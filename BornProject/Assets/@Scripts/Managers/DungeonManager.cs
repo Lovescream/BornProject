@@ -56,6 +56,10 @@ public class DungeonManager {
         if (GameObject.FindObjectOfType<GameScene>().IsPlaying == false) return;
         if (Current.Rooms.Where(x => x.ExistEnemy).Count() > 0) return;
         if (GameObject.FindObjectOfType<EnemySpawner>() != null) return;
+        StageClear();
+    }
+
+    public void StageClear() {
         Main.Quest.ClearStageCount++;
         Main.UI.OpenPopupUI<UI_Popup_Clear>();
     }
