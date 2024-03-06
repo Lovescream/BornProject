@@ -162,7 +162,8 @@ public class UI_TreeLine : UI_Base {
                 12 => "LeftCornerFill",
                 _ => ""
             };
-            _fill.sprite = Main.Resource.LoadSprite($"UI_SkillTreeLines_{endKey}");
+            //_fill.sprite = Main.Resource.LoadSprite($"UI_SkillTreeLines_{endKey}");
+            _fill.sprite = Main.Resource.Get<Sprite>($"UI_SkillTreeLines_{endKey}");
         }
         _fill.color = ActivatedColor;
         _line.color = Type == TreeLineType.Point && !(Left == null && Right == null) ? DeactivatedColor : DefaultColor;
@@ -210,8 +211,10 @@ public class UI_TreeLine : UI_Base {
     }
 
     private void RefreshImage() {
-        _line.sprite = Main.Resource.LoadSprite(GetSpriteKey(true));
-        _fill.sprite = Main.Resource.LoadSprite(GetSpriteKey(false));
+        //_line.sprite = Main.Resource.LoadSprite(GetSpriteKey(true));
+        //_fill.sprite = Main.Resource.LoadSprite(GetSpriteKey(false));
+        _line.sprite = Main.Resource.Get<Sprite>(GetSpriteKey(true));
+        _fill.sprite = Main.Resource.Get<Sprite>(GetSpriteKey(false));
         SetBlock(Type == TreeLineType.Point);
         _line.color = Type == TreeLineType.Point && Left != null && Right != null ? DeactivatedColor : DefaultColor;
         _fill.color = DeactivatedColor;

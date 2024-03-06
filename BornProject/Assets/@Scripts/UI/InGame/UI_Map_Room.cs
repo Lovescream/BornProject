@@ -53,6 +53,7 @@ public class UI_Map_Room : UI_Base {
             return;
         }
         _image.enabled = true;
-        _image.sprite = Main.Resource.LoadSprite($"{_spriteKey}_{(int)type:00}");
+        //_image.sprite = Main.Resource.LoadSprite($"{_spriteKey}_{(int)type:00}");
+        _image.sprite = Main.Resource.Get<Sprite>($"{_spriteKey}_{(int)type:00}");
     }
 }

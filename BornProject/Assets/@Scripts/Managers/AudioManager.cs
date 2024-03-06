@@ -58,7 +58,8 @@ public class AudioManager {
         else source = GetAvailablePlayer(AudioType.BGM);
 
         // #3. 클립 로드.
-        AudioClip clip = Main.Resource.LoadAudioClip(key);
+        //AudioClip clip = Main.Resource.LoadAudioClip(key);
+        AudioClip clip = Main.Resource.Get<AudioClip>(key);
         if (clip == null) {
             Debug.LogError($"[AudioManager] PlaySFX({key}): Not found AudioClip.");
             return false;
@@ -80,7 +81,8 @@ public class AudioManager {
         AudioSource source = GetAvailablePlayer(AudioType.SFX);
 
         // #3. 클립 로드.
-        AudioClip clip = Main.Resource.LoadAudioClip(key);
+        //AudioClip clip = Main.Resource.LoadAudioClip(key);
+        AudioClip clip = Main.Resource.Get<AudioClip>(key);
         if (clip == null) {
             Debug.LogError($"[AudioManager] PlaySFX({key}): Not found AudioClip.");
             return;
@@ -102,9 +104,13 @@ public class AudioManager {
     // Ex) Laser 스킬을 하나의 효과음으로 돌려 쓸 수 있고, 특정 스킬은 특정 효과음을 사용하도록 할 수 있습니다.
     public void Play(Skill skill, string state = "") {
         if (string.IsNullOrEmpty(state)) state = "Shot";
-        if (Main.Resource.IsExistAudioClip($"SFX_Skill_{skill.Data.Name}_{state}"))
+        //if (Main.Resource.IsExistAudioClip($"SFX_Skill_{skill.Data.Name}_{state}"))
+        //    PlaySFX($"SFX_Skill_{skill.Data.Name}_{state}");
+        //else if (Main.Resource.IsExistAudioClip($"SFX_Skill_{skill.BaseKey}_{state}"))
+        //    PlaySFX($"SFX_Skill_{skill.BaseKey}_{state}");
+        if (Main.Resource.IsExist<AudioClip>($"SFX_Skill_{skill.Data.Name}_{state}"))
             PlaySFX($"SFX_Skill_{skill.Data.Name}_{state}");
-        else if (Main.Resource.IsExistAudioClip($"SFX_Skill_{skill.BaseKey}_{state}"))
+        else if (Main.Resource.IsExist<AudioClip>($"SFX_Skill_{skill.BaseKey}_{state}"))
             PlaySFX($"SFX_Skill_{skill.BaseKey}_{state}");
     }
     public void PlayOnButton() => PlaySFX("SFX_OnButton");

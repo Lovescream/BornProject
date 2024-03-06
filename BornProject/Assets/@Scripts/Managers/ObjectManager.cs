@@ -22,7 +22,8 @@ public class ObjectManager {
     }
     public Enemy SpawnEnemy(string key, Vector2 position) {
         if (string.IsNullOrEmpty(key)) return null;
-        GameObject obj = Main.Resource.IsExistPrefab(key) ? Main.Resource.Instantiate($"{key}", pooling: true) : Main.Resource.Instantiate("Enemy", pooling: true);
+        GameObject obj = Main.Resource.IsExist<GameObject>(key) ? Main.Resource.Instantiate($"{key}", pooling: true) : Main.Resource.Instantiate("Enemy", pooling: true);
+        //GameObject obj = Main.Resource.IsExistPrefab(key) ? Main.Resource.Instantiate($"{key}", pooling: true) : Main.Resource.Instantiate("Enemy", pooling: true);
         obj.transform.position = position;
         Enemy enemy = obj.GetComponent<Enemy>();
         Enemies.Add(enemy);
@@ -45,7 +46,8 @@ public class ObjectManager {
             Debug.LogError($"[ObjectManager] SpawnHitCollider({prefabKey}): Spawn Failed. the key is null or empty.");
             return null;
         }
-        GameObject obj = Main.Resource.Instantiate(Main.Resource.IsExistPrefab(prefabKey) ? prefabKey : "HitCollider_Base", pooling: true);
+        //GameObject obj = Main.Resource.Instantiate(Main.Resource.IsExistPrefab(prefabKey) ? prefabKey : "HitCollider_Base", pooling: true);
+        GameObject obj = Main.Resource.Instantiate(Main.Resource.IsExist<GameObject>(prefabKey) ? prefabKey : "HitCollider_Base", pooling: true);
         obj.transform.position = Vector2.zero;
 
         HitCollider hitCollider = obj.GetComponent<HitCollider>();
@@ -76,7 +78,8 @@ public class ObjectManager {
         string prefabName = null;
         while (type != null) {
             prefabName = type.Name;
-            if (Main.Resource.LoadPrefab(prefabName) != null) break;
+            //if (Main.Resource.LoadPrefab(prefabName) != null) break;
+            if (Main.Resource.IsExist<GameObject>(prefabName)) break;
             type = type.BaseType;
         }
         if (string.IsNullOrEmpty(prefabName)) prefabName = "Thing";
