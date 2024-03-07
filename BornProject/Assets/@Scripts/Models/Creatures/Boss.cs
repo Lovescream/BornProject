@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Boss : Enemy, IAttackable { // 아직 Enemy와 차이를 모르겠음. 일단 CSV에 Boss 추가.

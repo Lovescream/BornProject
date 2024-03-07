@@ -120,6 +120,7 @@ public class Player : Creature, ISkillMan, IAttackable {
         Velocity = (_inputDirection.sqrMagnitude < float.Epsilon ? LookDirection : _inputDirection) * Status[StatType.MoveSpeed].Value;
     }
     protected override void OnEnteredDead() {
+        Main.Game.Current.NewGame();
         Main.UI.OpenPopupUI<UI_Popup_GameOver>();
     }
     private void OnExitedDash() {

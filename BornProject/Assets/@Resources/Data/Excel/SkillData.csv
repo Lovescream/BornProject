@@ -1,85 +1,85 @@
 Key,Name,Type,Level,Description,HitColliderKey,RadiusOffset,RotationAngle,HitColliderCount,HitColliderAngle,HitColliderSize,Penetration,Speed,DirectionX,DirectionY,Duration,Range,ExtraShotCount,BerserkAttackCount,BerserkExtraShotCount,Damage,AttackTime,CriticalChance,CriticalBonus,AttackSpeed
-Laser_Base_Basic,BasicLaserBeam,Range,Base,ê¸°ë³¸ ë¹” ê³µê²©ì…ë‹ˆë‹¤.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Normal_DamageUp,PowerUp,Range,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,5,100,1
-Laser_Normal_RangeUp,SizeUp,Range,Normal,ë¹”ì˜ í¬ê¸°ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Laser,0,0,1,0,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Normal_SpeedUp,AttackSpeedUp,Range,Normal,ê³µê²©ì†ë„ê°€ ë¹¨ë¼ì§‘ë‹ˆë‹¤.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1.2
-Laser_Rare_DamageUp,Critical,Range,Rare,ì¹˜ëª…íƒ€ íš¨ìœ¨ì´ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,25,200,1
-Laser_Rare_RangeUp,MultipleShot,Range,Rare,ë¹”ì˜ ê°¯ìˆ˜ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Laser,0,0,3,90,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Rare_SpeedUp,ExtraShot,Range,Rare,ì¶”ê°€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,1,0,0,8,0.5,5,100,1.2
-Rapid_Base_Basic,BasicRapidFire,Range,Base,ê¸°ë³¸ ë¹ ë¥¸ ì‚¬ê²©ì…ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,5
-Rapid_Normal_DamageUp,PowerUp,Range,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,5
-Rapid_Normal_Penetrate,Penetrate,Range,Normal,ê´€í†µì‚¬ê²©ì„ í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,5
-Rapid_Normal_SpeedUp,AttackSpeedUp,Range,Normal,ë” ë¹ ë¥¸ ê³µê²©ì„ í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,6
-Rapid_Rare_DamageUp,RandomDamage,Range,Rare,ëœë¤ë°ë¯¸ì§€ê°€ ì¶”ê°€ ë©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,5
-Rapid_Rare_Penetrate,LastPang,Range,Rare,ê´€í†µëœ ë§ˆì§€ë§‰ ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,5
-Rapid_Rare_SpeedUp,Berserk,Range,Rare,në²ˆì§¸ë§ˆë‹¤ 3ë²ˆ ì¶”ê°€ ê³µê²©í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,3,3,3,0.5,5,100,7
-ShotGun_Base_Basic,BasicShotGun,Range,Base,ê¸°ë³¸ ì‚°íƒ„ ê³µê²©ì…ë‹ˆë‹¤.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Normal_DamageUp,PowerUp,Range,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
-ShotGun_Normal_Multiple,MultipleShot,Range,Normal,ì‚°íƒ„ì´ì•Œì˜ ê°¯ìˆ˜ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0.01,0,8,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Normal_SpeedUp,AttackSpeedUp,Range,Normal,ê³µê²©ì†ë„ê°€ ë¹¨ë¼ì§‘ë‹ˆë‹¤.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1.5
-ShotGun_Rare_DamageUp,OppositeCopy,Range,Rare,ê³µê²©ë°©í–¥ ë°˜ëŒ€í¸ì— ë˜‘ê°™ì€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
-ShotGun_Rare_Multiple,SizeUp,Range,Rare,íƒ„í™˜ì˜ í¬ê¸°ê°€ ì»¤ì§‘ë‹ˆë‹¤.,HitCollider_Base,0.01,0,8,40,2,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Rare_SpeedUp,ExtraShot,Range,Rare,ì¶”ê°€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,1,0,0,5,0.5,5,100,1.5
-Slash_Base_Basic,BasicSlash,Melee,Base,ê¸°ë³¸ ë² ê¸° ê³µê²©ì…ë‹ˆë‹¤.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,2
-Slash_Normal_DamageUp,PowerUp,Melee,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,2
-Slash_Normal_RapidUp,AttackSpeedUp,Melee,Normal,ê³µê²©ì†ë„ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,3
-Slash_Normal_RangeUp,AttackLengthUp,Melee,Normal,ê³µê²©ì‚¬ê±°ë¦¬ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,5,0,0,0,12,0.5,5,100,2
-Slash_Rare_DamageUp,Berserk,Melee,Rare,në²ˆì§¸ë§ˆë‹¤ 3ë²ˆ ì¶”ê°€ ê³µê²©í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,3,3,14,0.5,5,100,2
-Slash_Rare_RapidUp,ExtraAttack,Melee,Rare,ì¶”ê°€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,1,0,0,12,0.5,5,100,3
-Slash_Rare_RangeUp,AroundAttack,Melee,Rare,ì£¼ë³€ ì „ì²´ë¥¼ ê³µê²©í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,360,1,5,0,0,0,0.3,7,0,0,0,12,0.5,5,100,2
-Sting_Base_Basic,BasicSting,Melee,Base,ê¸°ë³¸ ì°Œë¥´ê¸° ê³µê²©ì…ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,5,100,3
-Sting_Normal_DamageUp,PowerUp,Melee,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,20,0.5,5,100,3
-Sting_Normal_CriticalUp,CriticalUp,Melee,Normal,ì¹˜ëª…íƒ€ìœ¨ì´ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,25,100,3
-Sting_Normal_RangeUp,RangeUp,Melee,Normal,ê³µê²© ì‚¬ê±°ë¦¬ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,18,0.5,5,100,3
-Sting_Rare_DamageUp,Dash,Melee,Rare,ê³µê²© ë°©í–¥ìœ¼ë¡œ ë¹ ë¥´ê²Œ 5ë§Œí¼ ì´ë™.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,20,0.5,5,100,3
-Sting_Rare_CriticalUp,Random CriticalDamage,Melee,Rare,ì¹˜ëª…íƒ€ë°ë¯¸ì§€ê°€ ëœë¤í•˜ê²Œ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,25,100,3
-Sting_Rare_RangeUp,Concentration,Melee,Rare,ì§‘ì¤‘í•˜ì—¬ í° ë°ë¯¸ì§€ë¡œ ê³µê²©í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,5,0,0,0,18,0.5,5,100,3
-Smash_Base_Basic,BasicSmash,Melee,Base,ê¸°ë³¸ ë‚´ë ¤ì¹˜ê¸° ê³µê²©ì…ë‹ˆë‹¤.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,3
-Smash_Normal_DamageUp,PowerUp,Melee,Normal,ë°ë¯¸ì§€ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,3
-Smash_Normal_RangeUp,RangeUp,Melee,Normal,ê³µê²©ì‚¬ê±°ë¦¬ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,5,0,0,0,12,0.5,5,100,3
-Smash_Normal_SpeedUp,AttackSpeedUp,Melee,Normal,ê³µê²©ì†ë„ê°€ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,4
-Smash_Rare_DamageUp,CriticalUp,Melee,Rare,ì¹˜ëª…íƒ€ìœ¨ì´ ì¦ê°€í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,3
-Smash_Rare_RangeUp,AttackAngleUp,Melee,Rare,ê³µê²© ë²”ìœ„ ê°ë„ ì¦ê°€,HitCollider_Base,0,0,1,120,1,5,0,0,0,0.3,7,0,0,0,12,0.5,5,100,3
-Smash_Rare_SpeedUp,ExtraShot,Melee,Rare,ì¶”ê°€ ê³µê²©ì„ í•©ë‹ˆë‹¤.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,1,0,0,12,0.5,5,100,4
-Snake_Base_Attack,Snake_Base_Attack,Melee,Base,(ë…ë°œì‚¬)ë¬¼ê¸°,HitCollider_Base,0,0,2,180,0.8,5,0,0,0,0.1,2,0,0,0,3,0.5,3,30,3
-Beatle_Base_Acid,Beatle_Base_Acid,Range,Base,ë… ë°œì‚¬,HitCollider_Base,0,0,1,180,1,0,10,0,0,1,5,0,0,0,7,0.5,5,30,0.8
-Wolf_Base_Attack,Wolf_Base_Attack,Melee,Base,ë¬¼ê¸°,HitCollider_Base,0,0,1,180,1,5,0,0,0,0.1,3,0,0,0,15,0.5,5,30,1.5
-Cat_Base_Attack,Cat_Base_Attack,Melee,Base,ëƒ¥ëƒ¥í€ì¹˜,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,1,0,0,10,0.5,5,30,2
-Bat_Base_Attack,Bat_Base_Attack,Melee,Base,ë¬¼ê³  í• í€´ê¸°(ì–´ì¨Œë“  ê·¼ì ‘ê³µê²©),HitCollider_Base,0,0,1,0,1,0,0,0,0,0.1,3,0,0,0,5,0.5,5,30,1
-Worm_Base_Attack,Worm_Base_Attack,Range,Base,ë… ë°œì‚¬,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,5,0,0,0,10,0.5,5,30,1
-Spider_Base_Attack,Spider_Base_Attack,Range,Base,ëŠë ¤ì§€ëŠ” ê±°ë¯¸ì¤„ ë°œì‚¬,HitCollider_Base,0,0,1,0,1.5,1,10,0,0,1.5,5,0,0,0,3,0.5,5,30,0.5
-Flytrap_Base_Attack,Flytrap_Base_Attack,Range,Base,ì”¨ì•— ë°œì‚¬,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,5,0,0,0,20,0.5,5,30,1
-Groot_Base_Attack,Groot_Base_Attack,Melee,Base,ë‚˜ë¬´ ì±„ì° ë‚´ë¦¬ì¹˜ê¸°,HitCollider_Base,0,0,1,0,1,3,10,0,0,0.5,4,0,0,0,30,0.5,5,30,1
-Bear_Base_Attack,Bear_Base_Attack,Melee,Base,ì•ë°œ íœ˜ë‘ë¥´ê¸°,HitCollider_Base,0,0,1,180,1.5,5,0,0,0,0.4,3,0,0,0,30,0.5,5,30,1
-MushroomBomb,MushroomBomb,Range,Base,ë²„ì„¯ í­íƒ„ ë˜ì§€ê¸°,HitCollider_Base,0,0,1,0,1,3,8,0,0,1,5,0,0,0,100,0.5,5,30,1
-SporeShot,SporeShot,Range,Base,í¬ì ì˜ê¸°,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,30,0.5,5,30,5
-SporeSpread,SporeSpread,Range,Base,í¬ì í¼íŠ¸ë¦¬ê¸°,HitCollider_Base,0,0,60,359,1,0,10,0,0,10,-1,0,0,0,20,0.5,5,30,3
-MushroomMine,MushroomMine,Melee,Base,ë²„ì„¯ ì§€ë¢° ì‹¬ê¸°,HitCollider_Base,0,0,1,0,1,3,0,0,0,5,10,0,0,0,100,0.5,5,30,1
-GermsShot,GermsShot,Range,Base,ë„íŠ¸ë€ì´ ìˆëŠ” ë³‘ê·  ì˜ê¸°,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,20,0.5,5,30,5
-FlySummons,FlySummons,Range,Base,íŒŒë¦¬ ì†Œí™˜,HitCollider_Base,0,0,3,120,1,0,8,0,0,-1,10,0,0,0,20,0.5,5,30,3
-FlyBomb,FlyBomb,Melee,Base,ì†Œí™˜í•œ íŒŒë¦¬ë“¤ì´ í„°ì§,HitCollider_Base,0,0,1,0,1.5,3,0,0,0,1,5,0,0,0,100,0.5,5,30,1
-FlySelfDestruct,FlySelfDestruct,Melee,Base,íŒŒë¦¬ë³´ìŠ¤ ìí­,HitCollider_Base,0,0,1,0,1.5,5,0,0,0,0.5,5,0,0,0,300,0.5,5,30,0.5
-PeaMan_Base_Attack,PeaMan_Base_Attack,Melee,Base,ì½ ë‚ ë¦¬ê¸°,HitCollider_Base,0,0,1,0,1,0,0,0,0,3,3,0,0,0,15,0.5,5,30,1
-BlueSkull_Base_Attack,BlueSkull_Base_Attack,Range,Base,ë¶ˆë©ì´ ë‚ ë¦¬ê¸°,HitCollider_Base,0,0,1,0,1,0,8,0,0,1,5,0,0,0,15,0.5,5,30,1
-Skull_Base_Attack,Skull_Base_Attack,Melee,Base,ë‹¿ì•˜ì„ ë•Œ ë°ë¯¸ì§€(ë³´ìŠ¤ ìŠ¤í‚¬ê³¼ ë™ì¼),HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,20,0.5,5,30,1
-RedSkull_Base_Attack,RedSkull_Base_Attack,Melee,Base,ëŒì§„,HitCollider_Base,0,0,1,0,1,-1,0,0,0,3,5,0,0,0,20,0.5,5,30,1
-RollingMan_Base_Attack,RollingMan_Base_Attack,Melee,Base,ëŒì§„,HitCollider_Base,0,0,1,0,1,-1,0,0,0,3,5,0,0,0,50,0.5,5,30,1
-EyeMan_Base_Attack,EyeMan_Base_Attack,Melee,Base,ë‚´ë¦¬ì¹˜ë©° ì¼ì§ì„ ìœ¼ë¡œ ì¶©ê²©íŒŒ ë°œì‚¬,HitCollider_Base,0,0,2,90,1,5,0,0,0,0.5,4,0,0,0,50,0.5,5,30,1
-JumpingDaddy,JumpingDaddy,Melee,Base,í”Œë ˆì´ì–´ë¥¼ í–¥í•´ ëª¸ ë‚´ë¦¬ì°ê¸°,HitCollider_Base,0,0,1,0,1.2,0,0,0,0,0.3,5,0,0,0,150,0.5,5,30,0.5
-DaddysCall,DaddysCall,Range,Base,ì•„ë“¤ ì†Œí™˜,HitCollider_Base,0,0,1,0,1,0,8,0,0,-1,10,0,0,0,0,0.5,5,30,6
-DaddyJap,DaddyJap,Melee,Base,ì½ ë‚ ë¦¬ê¸°,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,70,0.5,5,30,6
-SonLaser,SonLaser,Range,Base,ë ˆì´ì € ì˜ê¸°,HitCollider_Base,0,0,1,0,1,0,-1,0,0,0.8,5,0,0,0,10,0.5,5,30,1
-SwordsFemale_Base_Attack,SwordsFemale_Base_Attack,Melee,Base,ì¹¼ íœ˜ë‘ë¥´ê¸°,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,30,0.5,5,30,1.5
-Archaeologist_Base_Attack,Archaeologist_Base_Attack,Range,Base,ê¶Œì´ ì˜ê¸°,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,20,0.5,5,30,3
-Shooter_Base_Attack,Shooter_Base_Attack,Range,Base,ê¸°ê´€ì´ ì˜ê¸°,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,10,0.5,5,30,7
-Builder_Base_Attack,Builder_Base_Attack,Range,Base,ë„ë§ ê°€ì„œ ë™ë£Œ ë¶€ë¥´ê¸°,HitCollider_Base,0,0,1,0,1,0,10,0,0,0,5,0,0,0,0,0.5,5,30,0
-RCCar_Base_Attack,RCCar_Base_Attack,Range,Base,ë ˆì´ì € ì˜ê¸°,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,50,0.5,5,30,3
-DroneLaser,DroneLaser,Range,Base,ë ˆì´ì €ì´ ì˜ê¸°,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,45,0.5,5,30,1.5
-DroneSelfDestruct,DroneSelfDestruct,Melee,Base,ìí­,HitCollider_Base,0,0,1,0,1.5,3,0,0,0,0.5,5,0,0,0,100,0.5,5,30,0.7
-RoadRollerShot,RoadRollerShot,Range,Base,ì´ ë°œì‚¬,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,80,0.5,5,30,5
-RollerRush,RollerRush,Melee,Base,ëŒì§„,HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,100,0.5,5,30,1
-RollerShield,RollerShield,Melee,Base,ë‹¨ë‹¨í•´ì§€ê¸°,HitCollider_Base,0,0,1,0,1,0,0,0,0,-1,5,0,0,0,0,0.5,5,30,0.8
-RoadRollerBeam,RoadRollerBeam,Range,Base,ë¹”,HitCollider_Base,0,0,1,0,1,-1,-1,0,0,3,-1,0,0,0,200,0.5,5,30,0.8
-Boss,Boss,Melee,Base,ë³´ìŠ¤ë“¤ì˜ ê³µí†µ ìŠ¤í‚¬. ë¶€ë”ªí˜”ì„ ë•Œ ë°ë¯¸ì§€,HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,10,0.5,5,30,1
+Laser_Base_Basic,BasicLaserBeam,Range,Base,±âº» ºö °ø°İÀÔ´Ï´Ù.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Normal_DamageUp,PowerUp,Range,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,5,100,1
+Laser_Normal_RangeUp,SizeUp,Range,Normal,ºöÀÇ Å©±â°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Laser,0,0,1,0,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Normal_SpeedUp,AttackSpeedUp,Range,Normal,°ø°İ¼Óµµ°¡ »¡¶óÁı´Ï´Ù.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1.2
+Laser_Rare_DamageUp,Critical,Range,Rare,Ä¡¸íÅ¸ È¿À²ÀÌ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,25,200,1
+Laser_Rare_RangeUp,MultipleShot,Range,Rare,ºöÀÇ °¹¼ö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Laser,0,0,3,90,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Rare_SpeedUp,ExtraShot,Range,Rare,Ãß°¡ °ø°İÀ» ÇÕ´Ï´Ù.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,1,0,0,8,0.5,5,100,1.2
+Rapid_Base_Basic,BasicRapidFire,Range,Base,±âº» ºü¸¥ »ç°İÀÔ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,5
+Rapid_Normal_DamageUp,PowerUp,Range,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,5
+Rapid_Normal_Penetrate,Penetrate,Range,Normal,°üÅë»ç°İÀ» ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,5
+Rapid_Normal_SpeedUp,AttackSpeedUp,Range,Normal,´õ ºü¸¥ °ø°İÀ» ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,6
+Rapid_Rare_DamageUp,RandomDamage,Range,Rare,·£´ıµ¥¹ÌÁö°¡ Ãß°¡ µË´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,5
+Rapid_Rare_Penetrate,LastPang,Range,Rare,°üÅëµÈ ¸¶Áö¸· µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,5
+Rapid_Rare_SpeedUp,Berserk,Range,Rare,n¹øÂ°¸¶´Ù 3¹ø Ãß°¡ °ø°İÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,3,3,3,0.5,5,100,7
+ShotGun_Base_Basic,BasicShotGun,Range,Base,±âº» »êÅº °ø°İÀÔ´Ï´Ù.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Normal_DamageUp,PowerUp,Range,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
+ShotGun_Normal_Multiple,MultipleShot,Range,Normal,»êÅºÃÑ¾ËÀÇ °¹¼ö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0.01,0,8,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Normal_SpeedUp,AttackSpeedUp,Range,Normal,°ø°İ¼Óµµ°¡ »¡¶óÁı´Ï´Ù.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1.5
+ShotGun_Rare_DamageUp,OppositeCopy,Range,Rare,°ø°İ¹æÇâ ¹İ´ëÆí¿¡ ¶È°°Àº °ø°İÀ» ÇÕ´Ï´Ù.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
+ShotGun_Rare_Multiple,SizeUp,Range,Rare,ÅºÈ¯ÀÇ Å©±â°¡ Ä¿Áı´Ï´Ù.,HitCollider_Base,0.01,0,8,40,2,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Rare_SpeedUp,ExtraShot,Range,Rare,Ãß°¡ °ø°İÀ» ÇÕ´Ï´Ù.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,1,0,0,5,0.5,5,100,1.5
+Slash_Base_Basic,BasicSlash,Melee,Base,±âº» º£±â °ø°İÀÔ´Ï´Ù.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,2
+Slash_Normal_DamageUp,PowerUp,Melee,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,2
+Slash_Normal_RapidUp,AttackSpeedUp,Melee,Normal,°ø°İ¼Óµµ°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,3
+Slash_Normal_RangeUp,AttackLengthUp,Melee,Normal,°ø°İ»ç°Å¸®°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,5,0,0,0,12,0.5,5,100,2
+Slash_Rare_DamageUp,Berserk,Melee,Rare,n¹øÂ°¸¶´Ù 3¹ø Ãß°¡ °ø°İÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,3,3,14,0.5,5,100,2
+Slash_Rare_RapidUp,ExtraAttack,Melee,Rare,Ãß°¡ °ø°İÀ» ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,1,0,0,12,0.5,5,100,3
+Slash_Rare_RangeUp,AroundAttack,Melee,Rare,ÁÖº¯ ÀüÃ¼¸¦ °ø°İÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,360,1,5,0,0,0,0.3,7,0,0,0,12,0.5,5,100,2
+Sting_Base_Basic,BasicSting,Melee,Base,±âº» Âî¸£±â °ø°İÀÔ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,5,100,3
+Sting_Normal_DamageUp,PowerUp,Melee,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,20,0.5,5,100,3
+Sting_Normal_CriticalUp,CriticalUp,Melee,Normal,Ä¡¸íÅ¸À²ÀÌ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,25,100,3
+Sting_Normal_RangeUp,RangeUp,Melee,Normal,°ø°İ »ç°Å¸®°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,18,0.5,5,100,3
+Sting_Rare_DamageUp,Dash,Melee,Rare,°ø°İ ¹æÇâÀ¸·Î ºü¸£°Ô 5¸¸Å­ ÀÌµ¿.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,20,0.5,5,100,3
+Sting_Rare_CriticalUp,Random CriticalDamage,Melee,Rare,Ä¡¸íÅ¸µ¥¹ÌÁö°¡ ·£´ıÇÏ°Ô Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,25,100,3
+Sting_Rare_RangeUp,Concentration,Melee,Rare,ÁıÁßÇÏ¿© Å« µ¥¹ÌÁö·Î °ø°İÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,5,0,0,0,18,0.5,5,100,3
+Smash_Base_Basic,BasicSmash,Melee,Base,±âº» ³»·ÁÄ¡±â °ø°İÀÔ´Ï´Ù.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,3
+Smash_Normal_DamageUp,PowerUp,Melee,Normal,µ¥¹ÌÁö°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,3
+Smash_Normal_RangeUp,RangeUp,Melee,Normal,°ø°İ»ç°Å¸®°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,5,0,0,0,12,0.5,5,100,3
+Smash_Normal_SpeedUp,AttackSpeedUp,Melee,Normal,°ø°İ¼Óµµ°¡ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,4
+Smash_Rare_DamageUp,CriticalUp,Melee,Rare,Ä¡¸íÅ¸À²ÀÌ Áõ°¡ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,3
+Smash_Rare_RangeUp,AttackAngleUp,Melee,Rare,°ø°İ ¹üÀ§ °¢µµ Áõ°¡,HitCollider_Base,0,0,1,120,1,5,0,0,0,0.3,7,0,0,0,12,0.5,5,100,3
+Smash_Rare_SpeedUp,ExtraShot,Melee,Rare,Ãß°¡ °ø°İÀ» ÇÕ´Ï´Ù.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,1,0,0,12,0.5,5,100,4
+Snake_Base_Attack,Snake_Base_Attack,Melee,Base,(µ¶¹ß»ç)¹°±â,HitCollider_Base,0,0,2,180,0.8,5,0,0,0,0.1,2,0,0,0,3,0.5,3,30,3
+Beatle_Base_Acid,Beatle_Base_Acid,Range,Base,µ¶ ¹ß»ç,HitCollider_Base,0,0,1,180,1,0,10,0,0,1,5,0,0,0,7,0.5,5,30,0.8
+Wolf_Base_Attack,Wolf_Base_Attack,Melee,Base,¹°±â,HitCollider_Base,0,0,1,180,1,5,0,0,0,0.1,3,0,0,0,15,0.5,5,30,1.5
+Cat_Base_Attack,Cat_Base_Attack,Melee,Base,³É³ÉÆİÄ¡,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,1,0,0,10,0.5,5,30,2
+Bat_Base_Attack,Bat_Base_Attack,Melee,Base,¹°°í ÇÒÄû±â(¾îÂ·µç ±ÙÁ¢°ø°İ),HitCollider_Base,0,0,1,0,1,0,0,0,0,0.1,3,0,0,0,5,0.5,5,30,1
+Worm_Base_Attack,Worm_Base_Attack,Range,Base,µ¶ ¹ß»ç,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,5,0,0,0,10,0.5,5,30,1
+Spider_Base_Attack,Spider_Base_Attack,Range,Base,´À·ÁÁö´Â °Å¹ÌÁÙ ¹ß»ç,HitCollider_Base,0,0,1,0,1.5,1,10,0,0,1.5,5,0,0,0,3,0.5,5,30,0.5
+Flytrap_Base_Attack,Flytrap_Base_Attack,Range,Base,¾¾¾Ñ ¹ß»ç,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,5,0,0,0,20,0.5,5,30,1
+Groot_Base_Attack,Groot_Base_Attack,Melee,Base,³ª¹« Ã¤Âï ³»¸®Ä¡±â,HitCollider_Base,0,0,1,0,1,3,10,0,0,0.5,4,0,0,0,30,0.5,5,30,1
+Bear_Base_Attack,Bear_Base_Attack,Melee,Base,¾Õ¹ß ÈÖµÎ¸£±â,HitCollider_Base,0,0,1,180,1.5,5,0,0,0,0.4,3,0,0,0,30,0.5,5,30,1
+MushroomBomb,MushroomBomb,Range,Base,¹ö¼¸ ÆøÅº ´øÁö±â,HitCollider_Base,0,0,1,0,1,3,8,0,0,1,5,0,0,0,100,0.5,5,30,1
+SporeShot,SporeShot,Range,Base,Æ÷ÀÚ ½î±â,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,30,0.5,5,30,5
+SporeSpread,SporeSpread,Range,Base,Æ÷ÀÚ ÆÛÆ®¸®±â,HitCollider_Base,0,0,60,359,1,0,10,0,0,10,-1,0,0,0,20,0.5,5,30,3
+MushroomMine,MushroomMine,Melee,Base,¹ö¼¸ Áö·Ú ½É±â,HitCollider_Base,0,0,1,0,1,3,0,0,0,5,10,0,0,0,100,0.5,5,30,1
+GermsShot,GermsShot,Range,Base,µµÆ®µ©ÀÌ ÀÖ´Â º´±Õ ½î±â,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,20,0.5,5,30,5
+FlySummons,FlySummons,Range,Base,ÆÄ¸® ¼ÒÈ¯,HitCollider_Base,0,0,3,120,1,0,8,0,0,-1,10,0,0,0,20,0.5,5,30,3
+FlyBomb,FlyBomb,Melee,Base,¼ÒÈ¯ÇÑ ÆÄ¸®µéÀÌ ÅÍÁü,HitCollider_Base,0,0,1,0,1.5,3,0,0,0,1,5,0,0,0,100,0.5,5,30,1
+FlySelfDestruct,FlySelfDestruct,Melee,Base,ÆÄ¸®º¸½º ÀÚÆø,HitCollider_Base,0,0,1,0,1.5,5,0,0,0,0.5,5,0,0,0,300,0.5,5,30,0.5
+PeaMan_Base_Attack,PeaMan_Base_Attack,Melee,Base,Àì ³¯¸®±â,HitCollider_Base,0,0,1,0,1,0,0,0,0,3,3,0,0,0,15,0.5,5,30,1
+BlueSkull_Base_Attack,BlueSkull_Base_Attack,Range,Base,ºÒµ¢ÀÌ ³¯¸®±â,HitCollider_Base,0,0,1,0,1,0,8,0,0,1,5,0,0,0,15,0.5,5,30,1
+Skull_Base_Attack,Skull_Base_Attack,Melee,Base,´ê¾ÒÀ» ¶§ µ¥¹ÌÁö(º¸½º ½ºÅ³°ú µ¿ÀÏ),HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,20,0.5,5,30,1
+RedSkull_Base_Attack,RedSkull_Base_Attack,Melee,Base,µ¹Áø,HitCollider_Base,0,0,1,0,1,-1,0,0,0,3,5,0,0,0,20,0.5,5,30,1
+RollingMan_Base_Attack,RollingMan_Base_Attack,Melee,Base,µ¹Áø,HitCollider_Base,0,0,1,0,1,-1,0,0,0,3,5,0,0,0,50,0.5,5,30,1
+EyeMan_Base_Attack,EyeMan_Base_Attack,Melee,Base,³»¸®Ä¡¸ç ÀÏÁ÷¼±À¸·Î Ãæ°İÆÄ ¹ß»ç,HitCollider_Base,0,0,2,90,1,5,0,0,0,0.5,4,0,0,0,50,0.5,5,30,1
+JumpingDaddy,JumpingDaddy,Melee,Base,ÇÃ·¹ÀÌ¾î¸¦ ÇâÇØ ¸ö ³»¸®Âï±â,HitCollider_Base,0,0,1,0,1.2,0,0,0,0,0.3,5,0,0,0,150,0.5,5,30,0.5
+DaddysCall,DaddysCall,Range,Base,¾Æµé ¼ÒÈ¯,HitCollider_Base,0,0,1,0,1,0,8,0,0,-1,10,0,0,0,0,0.5,5,30,6
+DaddyJap,DaddyJap,Melee,Base,Àì ³¯¸®±â,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,70,0.5,5,30,6
+SonLaser,SonLaser,Range,Base,·¹ÀÌÀú ½î±â,HitCollider_Base,0,0,1,0,1,0,-1,0,0,0.8,5,0,0,0,10,0.5,5,30,1
+SwordsFemale_Base_Attack,SwordsFemale_Base_Attack,Melee,Base,Ä® ÈÖµÎ¸£±â,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,30,0.5,5,30,1.5
+Archaeologist_Base_Attack,Archaeologist_Base_Attack,Range,Base,±ÇÃÑ ½î±â,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,20,0.5,5,30,3
+Shooter_Base_Attack,Shooter_Base_Attack,Range,Base,±â°üÃÑ ½î±â,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,10,0.5,5,30,7
+Builder_Base_Attack,Builder_Base_Attack,Range,Base,µµ¸Á °¡¼­ µ¿·á ºÎ¸£±â,HitCollider_Base,0,0,1,0,1,0,10,0,0,0,5,0,0,0,0,0.5,5,30,0
+RCCar_Base_Attack,RCCar_Base_Attack,Range,Base,·¹ÀÌÀú ½î±â,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,50,0.5,5,30,3
+DroneLaser,DroneLaser,Range,Base,·¹ÀÌÀúÃÑ ½î±â,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,45,0.5,5,30,1.5
+DroneSelfDestruct,DroneSelfDestruct,Melee,Base,ÀÚÆø,HitCollider_Base,0,0,1,0,1.5,3,0,0,0,0.5,5,0,0,0,100,0.5,5,30,0.7
+RoadRollerShot,RoadRollerShot,Range,Base,ÃÑ ¹ß»ç,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,80,0.5,5,30,5
+RollerRush,RollerRush,Melee,Base,µ¹Áø,HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,100,0.5,5,30,1
+RollerShield,RollerShield,Melee,Base,´Ü´ÜÇØÁö±â,HitCollider_Base,0,0,1,0,1,0,0,0,0,-1,5,0,0,0,0,0.5,5,30,0.8
+RoadRollerBeam,RoadRollerBeam,Range,Base,ºö,HitCollider_Base,0,0,1,0,1,-1,-1,0,0,3,-1,0,0,0,200,0.5,5,30,0.8
+Boss,Boss,Melee,Base,º¸½ºµéÀÇ °øÅë ½ºÅ³. ºÎµúÇûÀ» ¶§ µ¥¹ÌÁö,HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,10,0.5,5,30,1
 BoraSongi_Base_PoisonSpore,BoraSongi_Base_PoisonSpore,Range,Base,bbq,HitCollider_PoisonSpore,0,0,1,0,1,-1,0,0,0,0,1,0,0,0,20,0,0,0,1
 BoraSongi_Normal_Mushboom,BoraSongi_Normal_Mushboom,Range,Normal,coffee,HitCollider_Mushboom,0,0,1,0,3,-1,10,0,0,8,10,0,0,0,80,0,0,0,2

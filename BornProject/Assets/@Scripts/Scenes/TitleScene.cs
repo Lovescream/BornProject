@@ -10,7 +10,7 @@ public class TitleScene : BaseScene {
 
         SceneUI = Main.UI.OpenSceneUI<UI_Scene_Title>();
 
-        if (!Main.Audio.PlayBGM($"BGM_TitleScene", "MainBGM"))
+        if (!Main.Audio.IsPlayingBGM() && !Main.Audio.PlayBGM($"BGM_TitleScene", "MainBGM"))
             Main.Audio.Stop(AudioType.BGM);
 
         return true;
