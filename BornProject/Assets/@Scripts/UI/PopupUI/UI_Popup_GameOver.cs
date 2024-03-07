@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class UI_Popup_GameOver : UI_Popup {
 
@@ -21,13 +20,13 @@ public class UI_Popup_GameOver : UI_Popup {
 
     #region Properties
 
-    public UI_PlayerInfo PlayerInfo {get;protected set;}
+    public UI_PlayerInfo PlayerInfo { get; protected set; }
 
     #endregion
 
     #region Initialize / Set
 
-public override bool Initialize() {
+    public override bool Initialize() {
         if (!base.Initialize()) return false;
 
         BindButton(typeof(Buttons));
@@ -40,25 +39,21 @@ public override bool Initialize() {
         return true;
     }
 
+    #endregion
 
+    #region OnButtons
     private void OnBtnRetry() {
-
         //AudioController.Instance.SFXPlay(SFX.Button);
-        //
-        Main.UI.Clear();
+        
         Main.Quest.ClearStageCount = 0;
-        Main.Skill.Clear();
-        SceneManager.LoadScene("GameScene");
+        Main.Scene.LoadScene("GameScene");
     }
 
     private void OnBtnExit() {
-
         //AudioController.Instance.SFXPlay(SFX.Button);
-        
-        Main.UI.Clear();
+
         Main.Quest.ClearStageCount = 0;
-        Main.Skill.Clear();
-        SceneManager.LoadScene("TitleScene");
+        Main.Scene.LoadScene("TitleScene");
     }
 
     #endregion

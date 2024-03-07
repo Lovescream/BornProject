@@ -7,12 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class DungeonManager {
 
-    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 10);
-    public int DungeonWidth { get => Generator.DungeonWidth; set => Generator.DungeonWidth = value; }
-    public int DungeonHeight { get => Generator.DungeonHeight; set => Generator.DungeonHeight = value; }
-    public int RoomWidth { get => Generator.RoomWidth; set => Generator.RoomWidth = value; }
-    public int RoomHeight { get => Generator.RoomHeight; set => Generator.RoomHeight = value; }
-    public int Count { get => Generator.Count; set => Generator.Count = value; }
+    public DungeonGenerator Generator { get; private set; } = new(20, 20, 30, 30, 10); // TODO:: 방 개수 조절
+    public UI_Map MapUI { get; private set; }
 
     public Dungeon Current { get; private set; }
 
@@ -36,6 +32,15 @@ public class DungeonManager {
             Current = new Dungeon(Generator.Result, DungeonRoot);
     }
 
+    public void ToggleMap() {
+        if (MapUI == null) {
+            MapUI = Main.Resource.Instantiate("UI_Map").GetComponent<UI_Map>();
+            MapUI.SetInfo();
+            return;
+        }
+        MapUI.gameObject.SetActive(!MapUI.gameObject.activeSelf);
+    }
+
     public void Destroy() {
         for (int i = DungeonRoot.childCount; i > 0; i--) {
             Main.Resource.Destroy(DungeonRoot.transform.GetChild(i).gameObject);
@@ -50,8 +55,14 @@ public class DungeonManager {
     public void CheckClear() {
         if (GameObject.FindObjectOfType<GameScene>().IsPlaying == false) return;
         if (Current.Rooms.Where(x => x.ExistEnemy).Count() > 0) return;
-        Main.Quest.ClearStageCount++;
-        Main.UI.OpenPopupUI<UI_Popup_Clear>();
+        if (GameObject.FindObjectOfType<EnemySpawner>() != null) return;
+        StageClear();
+    }
+
+    public void StageClear() {
+        //Main.Quest.ClearStageCount++;
+        //Main.UI.OpenPopupUI<UI_Popup_Clear>();
+        SceneManager.LoadScene("VictoryScene");
     }
 
     public void NextStage() {

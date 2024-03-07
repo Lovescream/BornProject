@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Groot
+  m_Controller: {fileID: 9100000, guid: b9e31fea2a8129a4fad97c96eb26de33, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 19601a4b5d37971489d5b603f1086fd4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 333fe45a1370c4f3f8d5fb64d56691d3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3fb8076d00f3eef41aa1d84b29f46c1e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f3ed7fda58d514dc6a3609d1fa36e49d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7ad0f4143a2ac264c98ffed5c9c2ffee, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 15b05f89949014a58bdb3df3b20d4ae9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4d6474cc09d2c974ca173c521f7e110a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d84ea50e31f414654b0c98a0832921ff, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 158f0ef45ed223d40bb53079f18cfaf9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1daabf5c0d50c4bbf93c7ba95dd3a9bc, type: 2}

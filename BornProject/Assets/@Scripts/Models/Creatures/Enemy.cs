@@ -1,14 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class Enemy : Creature, IAttackable {
+public class Enemy : Creature, ISkillMan, IAttackable {
 
     #region Properties
 
+    public Entity Entity => this;
     public Attacker Attacker { get; protected set; }
-    public EnemySkillData EnemySkill { get; protected set; }
+    public AttackIndicator Indicator { get; protected set; }
+    public SkillList SkillList { get; protected set; }
+    public SkillStatus DefaultStatus { get; protected set; }
+
+    public string SkillSetList => Data.Skills;
 
     public Creature Target {
         get => _target;
@@ -30,13 +36,14 @@ public class Enemy : Creature, IAttackable {
 
     #region Fields
 
+    protected static readonly int AnimatorParameterHash_Sleep = Animator.StringToHash("Sleep");
+    protected static readonly int AnimatorParameterHash_AttackInit = Animator.StringToHash("AttackInit");
+    protected static readonly int AnimatorParameterHash_Fly = Animator.StringToHash("Fly");
+    protected AnimationClip _animAttack;
+    protected AnimationClip _animAttackInit;
+
     private Creature _target;
     private Creature _lastAttacker;
-
-    // Debugging.
-    private Transform _doubleSight;
-    private Transform _sight;
-    private Transform _range;
 
     // Coroutines.
     private Coroutine _coDead;
@@ -61,18 +68,29 @@ public class Enemy : Creature, IAttackable {
     public override void SetInfo(CreatureData data) {
         base.SetInfo(data);
 
-        _doubleSight = this.transform.Find("[Debug] EnemySightSight");
-        _sight = this.transform.Find("[Debug] EnemySight");
-        _range = this.transform.Find("[Debug] EnemyRange");
+        Indicator = this.gameObject.FindChild<AttackIndicator>();
+        Indicator.SetInfo(this);
 
-        _doubleSight.transform.localScale = 2 * DetectingRange * Vector3.one;
-        _sight.transform.localScale = 2 * Sight * Vector3.one;
-        _range.transform.localScale = 2 * Range * Vector3.one;
+        SkillList = new(this, Data.DefaultSkills);
 
-        EnemySkill = Main.Data.EnemySkills[$"{Data.Key}_Attack"];
+        IEnumerable<AnimationClip> list = _animator.runtimeAnimatorController.animationClips;
+        _animAttack = list.FirstOrDefault(x => x.name.Split('_')[1].Equals("Attack"));
+        _animAttackInit = list.FirstOrDefault(x => x.name.Split('_')[1].Equals("AttackInit"));
+        
     }
-
-    protected override void SetState() {
+    protected override void SetStatus(bool isFullHp = true) {
+        base.SetStatus(isFullHp);
+        DefaultStatus = new() {
+            Damage = Status[StatType.Damage],
+            AttackSpeed = Status[StatType.AttackSpeed],
+            Range = Status[StatType.Range],
+        };
+        //// ======= Test용 Hp ========
+        //this.Status[StatType.HpMax].SetValue(20);
+        //this.Hp = HpMax;
+        //// ======= 나중에 수정 ========
+    }
+    protected override void SetState(CreatureState defaultState = CreatureState.Idle) {
         base.SetState();
         State.AddOnEntered(CreatureState.Attack, OnEnteredAttack);
         State.AddOnEntered(CreatureState.Dead, OnEnteredDead);
@@ -81,12 +99,14 @@ public class Enemy : Creature, IAttackable {
         State.AddOnStay(CreatureState.Attack, OnStayAttack);
 
         this.Attacker = new(this);
-        this.Attacker.OnStartAttack += () => {
-            _animator.SetBool(AnimatorParameterHash_Attack, true);
-        };
-        this.Attacker.OnEndAttack += () => {
-            _animator.SetBool(AnimatorParameterHash_Attack, false);
-        };
+        if (_animAttackInit == null || _animAttackInit.empty) {
+            this.Attacker.OnStartAttack += () => _animator.SetBool(AnimatorParameterHash_Attack, true);
+            this.Attacker.OnEndAttack += () => _animator.SetBool(AnimatorParameterHash_Attack, false);
+        }
+        else {
+            this.Attacker.OnStartAttack += () => _animator.SetBool(AnimatorParameterHash_AttackInit, true);
+            this.Attacker.OnEndAttack += () => _animator.SetBool(AnimatorParameterHash_AttackInit, false);
+        }
 
         OnDead = null;
     }
@@ -95,21 +115,22 @@ public class Enemy : Creature, IAttackable {
 
     #region State
 
-    private void OnEnteredAttack() {
+    protected virtual void OnEnteredAttack() {
         Velocity = Vector2.zero;
     }
-    private void OnEnteredDead() {
+    protected override void OnEnteredDead() {
+        base.OnEnteredDead();
+        Main.Audio.Play(this, CreatureState.Dead);
         OnDead?.Invoke();
         if (_coDead != null) StopCoroutine(_coDead);
         _coDead = StartCoroutine(CoDead());
     }
-
-    private void OnStayIdle() {
+    protected virtual void OnStayIdle() {
         Velocity = Vector2.zero;
         Target = FindTarget();
     }
 
-    private void OnStayChase() {
+    protected virtual void OnStayChase() {
         // #1. Target이 죽거나 유효하지 않으면 Target 정보 초기화.
         if (!Target.IsValid() || Target.IsDead) {
             Target = null;
@@ -135,9 +156,10 @@ public class Enemy : Creature, IAttackable {
         Vector2 direction = (Target.transform.position - this.transform.position).normalized;
         Velocity = direction * Status[StatType.MoveSpeed].Value;
         LookDirection = direction;
+        Indicator.IndicatorDirection = LookDirection;
     }
 
-    private void OnStayAttack() {
+    protected virtual void OnStayAttack() {
         // #1. Target이 죽거나 유효하지 않으면 Target 정보 초기화.
         if (!Target.IsValid() || Target.IsDead) {
             Target = null;
@@ -160,6 +182,7 @@ public class Enemy : Creature, IAttackable {
         Vector2 direction = (Target.transform.position - this.transform.position).normalized;
         Velocity = direction * Status[StatType.MoveSpeed].Value;
         LookDirection = direction;
+        Indicator.IndicatorDirection = LookDirection;
     }
 
     public override void OnHit(IHitCollider attacker) {
@@ -177,38 +200,42 @@ public class Enemy : Creature, IAttackable {
     }
 
     public HitColliderGenerationInfo GetHitColliderGenerationInfo() {
+        Skill skill = SkillList.Current;
         return new()
         {
             Owner = this,
-            HitColliderKey = EnemySkill.HitColliderKey,
-            RadiusOffset = EnemySkill.RadiusOffset,
-            RotationAngle = EnemySkill.RotationAngle < 0 ? LookAngle : EnemySkill.RotationAngle,
-            Count = EnemySkill.HitColliderCount,
-            SpreadAngle = EnemySkill.HitColliderAngle,
-            Size = EnemySkill.HitColliderSize,
-            AttackTime = EnemySkill.AttackTime,
+            SkillKey = skill.Data.Key,
+            HitColliderKey = skill.Data.HitColliderKey,
+            RadiusOffset = skill.Data.RadiusOffset,
+            RotationAngle = skill.Data.RotationAngle,
+            Count = skill.Data.HitColliderCount,
+            SpreadAngle = skill.Data.HitColliderAngle,
+            Size = skill.Data.HitColliderSize,
+            AttackTime = skill.Data.AttackTime == 0 ? _animAttack.length : skill.Data.AttackTime,
         };
     }
 
     public HitColliderInfo GetHitColliderInfo() {
+        Skill skill = SkillList.Current;
         return new()
         {
-            Penetration = EnemySkill.Penetration,
-            Speed = EnemySkill.Speed,
-            DirectionX = EnemySkill.DirectionX,
-            DirectionY = EnemySkill.DirectionY,
-            Duration = EnemySkill.Duration,
-            Range = EnemySkill.Range,
+            Penetration = skill.Data.Penetration,
+            Speed = skill.Data.Speed,
+            DirectionX = skill.Data.DirectionX,
+            DirectionY = skill.Data.DirectionY,
+            Duration = skill.Data.Duration,
+            Range = skill.Data.Range,
         };
     }
 
     public HitInfo GetHitInfo() {
+        Skill skill = SkillList.Current;
         return new()
         {
             Owner = this,
             Damage = this.Damage,
-            CriticalChance = EnemySkill.CriticalChance,
-            CriticalBonus = EnemySkill.CriticalBonus,
+            CriticalChance = skill.Data.CriticalChance,
+            CriticalBonus = skill.Data.CriticalBonus,
             Knockback = new()
             {
                 time = 0.1f,
@@ -219,7 +246,7 @@ public class Enemy : Creature, IAttackable {
     #endregion
 
     // 이 Creature의 시야 내의 적을 찾습니다.
-    private Creature FindTarget() {
+    protected virtual Creature FindTarget() {
         Collider2D[] hits = Physics2D.OverlapCircleAll(this.transform.position, Sight);
         foreach (Collider2D collider in hits) {
             Creature creature = collider.GetComponent<Creature>();

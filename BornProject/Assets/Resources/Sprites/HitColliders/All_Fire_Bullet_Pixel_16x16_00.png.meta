@@ -119,6 +119,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -207,15 +220,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rapid_Base_Basic
+      name: Rapid_Base_Basic_Shot_00
       rect:
         serializedVersion: 2
-        x: 96
-        y: 223
-        width: 16
-        height: 16
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 97
+        y: 227
+        width: 14
+        height: 7
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,15 +241,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Range_Rapid_01
+      name: Rapid_Base_Basic_Shot_01
       rect:
         serializedVersion: 2
-        x: 112
-        y: 223
-        width: 16
-        height: 16
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 113
+        y: 227
+        width: 14
+        height: 7
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,15 +262,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Range_Rapid_02
+      name: Rapid_Base_Basic_Shot_02
       rect:
         serializedVersion: 2
-        x: 128
-        y: 223
-        width: 16
-        height: 16
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 129
+        y: 227
+        width: 14
+        height: 7
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,15 +283,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Range_Rapid_03
+      name: Rapid_Base_Basic_Shot_03
       rect:
         serializedVersion: 2
-        x: 144
-        y: 223
-        width: 16
-        height: 16
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 145
+        y: 227
+        width: 14
+        height: 7
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,13 +304,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Laser_Base_Basic
+      name: Laser_Base_Basic_Shot_00
       rect:
         serializedVersion: 2
         x: 260
-        y: 113
+        y: 115
         width: 44
-        height: 16
+        height: 10
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 5, y: 0, z: 1, w: 0}
@@ -312,13 +325,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Range_Laser_01
+      name: Laser_Base_Basic_Shot_01
       rect:
         serializedVersion: 2
         x: 308
-        y: 113
+        y: 117
         width: 44
-        height: 16
+        height: 6
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 12, y: 0, z: 1, w: 0}
@@ -333,13 +346,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Range_Laser_02
+      name: Laser_Base_Basic_Shot_02
       rect:
         serializedVersion: 2
         x: 356
-        y: 113
+        y: 119
         width: 44
-        height: 16
+        height: 2
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 5, y: 0, z: 1, w: 0}
@@ -349,6 +362,90 @@ TextureImporter:
       bones: []
       spriteID: adaf3344cb2e3d6409ee53220b55ece2
       internalID: -819642385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologis_Base_Attack_00
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 390
+        width: 4
+        height: 3
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6786e4e6971d4e82a536c257a8ab64b
+      internalID: 962553501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologis_Base_Attack_01
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 390
+        width: 5
+        height: 3
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133a3f17d83874f88a5c971e1fb42cb2
+      internalID: -1444551735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologis_Base_Attack_02
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 390
+        width: 4
+        height: 3
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7851d34e2e4e42708b3012f1bf07932
+      internalID: 516674233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archaeologis_Base_Attack_03
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 390
+        width: 5
+        height: 3
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b331fed81f5944cb8306d4435d9bb98
+      internalID: -858501390
       vertices: []
       indices: 
       edges: []
@@ -364,16 +461,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Laser_Base_Basic: 1866396982
-      Range_Laser_01: -1615340676
-      Range_Laser_02: -819642385
-      Range_Rapid_01: 786162808
-      Range_Rapid_02: -1255428166
-      Range_Rapid_03: -1248614
+      Archaeologis_Base_Attack_00: 962553501
+      Archaeologis_Base_Attack_01: -1444551735
+      Archaeologis_Base_Attack_02: 516674233
+      Archaeologis_Base_Attack_03: -858501390
+      Laser_Base_Basic_Shot_00: 1866396982
+      Laser_Base_Basic_Shot_01: -1615340676
+      Laser_Base_Basic_Shot_02: -819642385
       Range_ShotGun_01: -972377418
       Range_ShotGun_02: -201748095
       Range_ShotGun_03: -732783995
-      Rapid_Base_Basic: -96556457
+      Rapid_Base_Basic_Shot_00: -96556457
+      Rapid_Base_Basic_Shot_01: 786162808
+      Rapid_Base_Basic_Shot_02: -1255428166
+      Rapid_Base_Basic_Shot_03: -1248614
       ShotGun_Base_Basic: 566079506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

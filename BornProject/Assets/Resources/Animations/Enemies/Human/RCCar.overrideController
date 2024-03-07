@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RCCar
+  m_Controller: {fileID: 9100000, guid: b9e31fea2a8129a4fad97c96eb26de33, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 12053e21f53683a4b804f16ac0b071ff, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 36f688b3193464cb8b31b2c4a3813daa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 158f0ef45ed223d40bb53079f18cfaf9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e45717818e8e24de0b361bcd3babba03, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4d6474cc09d2c974ca173c521f7e110a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b38442130765d41baa1bb81a28b682f5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7ad0f4143a2ac264c98ffed5c9c2ffee, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c2d223a3f157e482ca6eef85d4e5f76a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3fb8076d00f3eef41aa1d84b29f46c1e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e68beb4fee2df496f9f2d7ce77a55db0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0d4971bea7dc99742a03358716f21517, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a42852ff2a01d4878931ee3f49ee40a6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b33d1d5f5846b944c9ed393013d40a56, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 02c515b1c2d5849e6a112411d5aa574d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f0f2d068b34fe54448e9e24779511738, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 96bf538b213bd421a93bd33247275475, type: 2}

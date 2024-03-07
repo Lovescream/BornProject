@@ -15,12 +15,13 @@ public class BaseScene : MonoBehaviour {
 
     protected virtual bool Initialize() {
         if (_initialized) return false;
+
+        Main.Scene.Current = this;
+
         // 각종 초기화 함수.
         Main.Resource.Initialize();
         Main.Data.Initialize();
-        Main.Skill.Initialize();
-        // DataManager 초기화
-        // GameManager 초기화
+        Main.Audio.Initialize();
 
         if (FindObjectOfType<EventSystem>() == null) Main.Resource.Instantiate("@EventSystem").name = "@EventSystem";
 

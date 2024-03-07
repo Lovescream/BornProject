@@ -54,7 +54,6 @@ public class Status
             [StatType.Defense] = new(StatType.Defense, data.Defense),
             [StatType.MoveSpeed] = new(StatType.MoveSpeed, data.MoveSpeed),
             [StatType.AttackSpeed] = new(StatType.AttackSpeed, data.AttackSpeed),
-            [StatType.Cost] = new(StatType.Cost, data.Cost),
             [StatType.Sight] = new(StatType.Sight, data.Sight),
             [StatType.Range] = new(StatType.Range, data.Range),
         };

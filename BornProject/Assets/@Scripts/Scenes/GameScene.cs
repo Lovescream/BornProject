@@ -6,8 +6,6 @@ public class GameScene : BaseScene {
 
     public UI_Scene_Game UI => SceneUI as UI_Scene_Game;
 
-    public Player Player { get; private set; }
-
     public bool IsPlaying { get; protected set; }
 
     void Update() {
@@ -17,24 +15,26 @@ public class GameScene : BaseScene {
     protected override bool Initialize() {
         if (!base.Initialize()) return false;
 
-        Main.Pool.Clear();
-
         // #1. Map 생성.
         Main.Dungeon.Generate();
 
         // #2. Player 생성.
-        Player = Main.Object.SpawnPlayer("Player", Main.Dungeon.Current.StartRoom.CenterPosition);
-        Camera.main.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
+        Player player = Main.Object.SpawnPlayer("Player", Main.Dungeon.Current.StartRoom.CenterPosition);
+        Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+        Main.Game.Player = player;
 
         // #3. UI 생성.
-        Main.UI.Clear();
         SceneUI = Main.UI.OpenSceneUI<UI_Scene_Game>();
+        Main.Dungeon.ToggleMap();
 
         // #4. Skill 체크.
-        if (Main.Skill.BaseRange == null || Main.Skill.BaseMelee == null)
-        {
+        if (player.SkillList[SkillType.Range] == null || player.SkillList[SkillType.Melee] == null)
             Main.UI.OpenPopupUI<UI_Popup_Skill>();
+
+        // #5.
+        if (Main.Game.Current.FirstPlay) {
             Main.UI.OpenPopupUI<UI_Popup_Tutorial>();
+            Main.Game.Current.FirstPlay = false;
         }
 
         IsPlaying = true;

@@ -6,7 +6,7 @@ public class UI_Popup : UI_Base {
 
     #region Properties
 
-    public virtual bool IsPause => false;
+    public virtual bool IsPause => true;
 
     #endregion
 

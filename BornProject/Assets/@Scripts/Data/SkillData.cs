@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class SkillData : Data {
 
     // 기본 정보
@@ -11,7 +7,7 @@ public class SkillData : Data {
     public SkillLevel Level { get; set; }
 
     // HitCollider 생성 정보.
-    public string HitColliderKey => Key;
+    public string HitColliderKey { get; set; }
     public float RadiusOffset { get; set; }
     public float RotationAngle { get; set; }
     public int HitColliderCount { get; set; }

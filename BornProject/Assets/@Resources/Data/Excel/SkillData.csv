@@ -1,43 +1,85 @@
-Key,Name,Type,Level,Description,RadiusOffset,RotationAngle,HitColliderCount,HitColliderAngle,HitColliderSize,Penetration,Speed,DirectionX,DirectionY,Duration,Range,ExtraShotCount,BerserkAttackCount,BerserkExtraShotCount,Damage,AttackTime,CriticalChance,CriticalBonus,AttackSpeed
-Laser_Base_Basic,BasicLaserBeam,Range,Base,기본 빔 공격입니다.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Normal_DamageUp,PowerUp,Range,Normal,데미지가 증가합니다.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,5,100,1
-Laser_Normal_RangeUp,SizeUp,Range,Normal,빔의 크기가 증가합니다.,0,0,1,0,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Normal_SpeedUp,AttackSpeedUp,Range,Normal,공격속도가 빨라집니다.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1.2
-Laser_Rare_DamageUp,Critical,Range,Rare,치명타 효율이 증가합니다.,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,25,200,1
-Laser_Rare_RangeUp,MultipleShot,Range,Rare,빔의 갯수가 증가합니다. ,0,0,3,90,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
-Laser_Rare_SpeedUp,ExtraShot,Range,Rare,추가 공격을 합니다.,0,0,1,0,1,-1,-1,0,0,0.5,-1,1,0,0,8,0.5,5,100,1.2
-Rapid_Base_Basic,BasicRapidFire,Range,Base,기본 빠른 사격입니다.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,10
-Rapid_Normal_DamageUp,PowerUp,Range,Normal,데미지가 증가합니다.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,10
-Rapid_Normal_Penetrate,Penetrate,Range,Normal,관통사격을 합니다.,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,10
-Rapid_Normal_SpeedUp,AttackSpeedUp,Range,Normal,더 빠른 공격을 합니다.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,10
-Rapid_Rare_DamageUp,RandomDamage,Range,Rare,랜덤데미지가 추가 됩니다.,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,10
-Rapid_Rare_Penetrate,LastPang,Range,Rare,관통된 마지막 데미지가 증가합니다.,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,10
-Rapid_Rare_SpeedUp,Berserk,Range,Rare,n번째마다 3번 추가 공격합니다.,0,0,1,0,1,0,10,0,0,3,10,0,3,3,3,0.5,5,100,10
-ShotGun_Base_Basic,BasicShotGun,Range,Base,기본 산탄 공격입니다.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Normal_DamageUp,PowerUp,Range,Normal,데미지가 증가합니다.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
-ShotGun_Normal_Multiple,MultipleShot,Range,Normal,산탄총알의 갯수가 증가합니다.,0.01,0,8,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Normal_SpeedUp,AttackSpeedUp,Range,Normal,공격속도가 빨라집니다.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1.5
-ShotGun_Rare_DamageUp,OppositeCopy,Range,Rare,공격방향 반대편에 똑같은 공격을 합니다.,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
-ShotGun_Rare_Multiple,SizeUp,Range,Rare,탄환의 크기가 커집니다.,0.01,0,8,40,2,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
-ShotGun_Rare_SpeedUp,ExtraShot,Range,Rare,추가 공격을 합니다.,0.01,0,5,30,1,0,10,0,0,3,6,1,0,0,5,0.5,5,100,1.5
-Slash_Base_Basic,BasicSlash,Melee,Base,기본 베기 공격입니다.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,2
-Slash_Normal_DamageUp,PowerUp,Melee,Normal,데미지가 증가합니다.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,2
-Slash_Normal_RapidUp,AttackSpeedUp,Melee,Normal,공격속도가 증가합니다.,0,0,1,90,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,3
-Slash_Normal_RangeUp,AttackLengthUp,Melee,Normal,공격사거리가 증가합니다.,0,0,1,90,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,2
-Slash_Rare_DamageUp,Berserk,Melee,Rare,n번째마다 3번 추가 공격합니다.,0,0,1,90,1,5,0,0,0,0.4,4,0,3,3,14,0.5,5,100,2
-Slash_Rare_RapidUp,ExtraAttack,Melee,Rare,추가 공격을 합니다.,0,0,1,90,1,5,0,0,0,0.4,4,1,0,0,12,0.5,5,100,3
-Slash_Rare_RangeUp,AroundAttack,Melee,Rare,주변 전체를 공격합니다.,0,0,1,360,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,2
-Sting_Base_Basic,BasicSting,Melee,Base,기본 찌르기 공격입니다.,0,0,1,0,1,0,0,0,0,0.4,5,0,0,0,18,0.5,5,100,3
-Sting_Normal_DamageUp,PowerUp,Melee,Normal,데미지가 증가합니다.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,20,0.5,5,100,3
-Sting_Normal_CriticalUp,CriticalUp,Melee,Normal,치명타율이 증가합니다.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,25,100,3
-Sting_Normal_RangeUp,RangeUp,Melee,Normal,공격 사거리가 증가합니다.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,5,100,3
-Sting_Rare_DamageUp,Dash,Melee,Rare,공격 방향으로 빠르게 5만큼 이동.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,20,0.5,5,100,3
-Sting_Rare_CriticalUp,Random CriticalDamage,Melee,Rare,치명타데미지가 랜덤하게 증가합니다.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,25,100,3
-Sting_Rare_RangeUp,Concentration,Melee,Rare,집중하여 큰 데미지로 공격합니다.,0,0,1,0,1,0,0,0,0,1,5,0,0,0,18,0.5,5,100,3
-Smash_Base_Basic,BasicSmash,Melee,Base,기본 내려치기 공격입니다.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,3
-Smash_Normal_DamageUp,PowerUp,Melee,Normal,데미지가 증가합니다.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,3
-Smash_Normal_RangeUp,RangeUp,Melee,Normal,공격사거리가 증가합니다.,0,0,1,60,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,3
-Smash_Normal_SpeedUp,AttackSpeedUp,Melee,Normal,공격속도가 증가합니다.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,12,0.5,5,100,4
-Smash_Rare_DamageUp,CriticalUp,Melee,Rare,치명타율이 증가합니다.,0,0,1,60,1,5,0,0,0,0.4,4,0,0,0,14,0.5,5,100,3
-Smash_Rare_RangeUp,AttackAngleUp,Melee,Rare,공격 범위 각도 증가,0,0,1,120,1,5,0,0,0,0.4,5,0,0,0,12,0.5,5,100,3
-Smash_Rare_SpeedUp,ExtraShot,Melee,Rare,추가 공격을 합니다.,0,0,1,60,1,5,0,0,0,0.4,4,1,0,0,12,0.5,5,100,4
+Key,Name,Type,Level,Description,HitColliderKey,RadiusOffset,RotationAngle,HitColliderCount,HitColliderAngle,HitColliderSize,Penetration,Speed,DirectionX,DirectionY,Duration,Range,ExtraShotCount,BerserkAttackCount,BerserkExtraShotCount,Damage,AttackTime,CriticalChance,CriticalBonus,AttackSpeed
+Laser_Base_Basic,BasicLaserBeam,Range,Base,기본 빔 공격입니다.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Normal_DamageUp,PowerUp,Range,Normal,데미지가 증가합니다.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,5,100,1
+Laser_Normal_RangeUp,SizeUp,Range,Normal,빔의 크기가 증가합니다.,HitCollider_Laser,0,0,1,0,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Normal_SpeedUp,AttackSpeedUp,Range,Normal,공격속도가 빨라집니다.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1.2
+Laser_Rare_DamageUp,Critical,Range,Rare,치명타 효율이 증가합니다.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,0,0,0,10,0.5,25,200,1
+Laser_Rare_RangeUp,MultipleShot,Range,Rare,빔의 갯수가 증가합니다.,HitCollider_Laser,0,0,3,90,3,-1,-1,0,0,0.5,-1,0,0,0,8,0.5,5,100,1
+Laser_Rare_SpeedUp,ExtraShot,Range,Rare,추가 공격을 합니다.,HitCollider_Laser,0,0,1,0,1,-1,-1,0,0,0.5,-1,1,0,0,8,0.5,5,100,1.2
+Rapid_Base_Basic,BasicRapidFire,Range,Base,기본 빠른 사격입니다.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,5
+Rapid_Normal_DamageUp,PowerUp,Range,Normal,데미지가 증가합니다.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,5
+Rapid_Normal_Penetrate,Penetrate,Range,Normal,관통사격을 합니다.,HitCollider_Base,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,5
+Rapid_Normal_SpeedUp,AttackSpeedUp,Range,Normal,더 빠른 공격을 합니다.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,3,0.5,5,100,6
+Rapid_Rare_DamageUp,RandomDamage,Range,Rare,랜덤데미지가 추가 됩니다.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,0,0,4,0.5,5,100,5
+Rapid_Rare_Penetrate,LastPang,Range,Rare,관통된 마지막 데미지가 증가합니다.,HitCollider_Base,0,0,1,0,1,1,10,0,0,3,10,0,0,0,3,0.5,5,100,5
+Rapid_Rare_SpeedUp,Berserk,Range,Rare,n번째마다 3번 추가 공격합니다.,HitCollider_Base,0,0,1,0,1,0,10,0,0,3,10,0,3,3,3,0.5,5,100,7
+ShotGun_Base_Basic,BasicShotGun,Range,Base,기본 산탄 공격입니다.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Normal_DamageUp,PowerUp,Range,Normal,데미지가 증가합니다.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
+ShotGun_Normal_Multiple,MultipleShot,Range,Normal,산탄총알의 갯수가 증가합니다.,HitCollider_Base,0.01,0,8,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Normal_SpeedUp,AttackSpeedUp,Range,Normal,공격속도가 빨라집니다.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1.5
+ShotGun_Rare_DamageUp,OppositeCopy,Range,Rare,공격방향 반대편에 똑같은 공격을 합니다.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,0,0,0,7,0.5,5,100,1
+ShotGun_Rare_Multiple,SizeUp,Range,Rare,탄환의 크기가 커집니다.,HitCollider_Base,0.01,0,8,40,2,0,10,0,0,3,6,0,0,0,5,0.5,5,100,1
+ShotGun_Rare_SpeedUp,ExtraShot,Range,Rare,추가 공격을 합니다.,HitCollider_Base,0.01,0,5,30,1,0,10,0,0,3,6,1,0,0,5,0.5,5,100,1.5
+Slash_Base_Basic,BasicSlash,Melee,Base,기본 베기 공격입니다.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,2
+Slash_Normal_DamageUp,PowerUp,Melee,Normal,데미지가 증가합니다.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,2
+Slash_Normal_RapidUp,AttackSpeedUp,Melee,Normal,공격속도가 증가합니다.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,3
+Slash_Normal_RangeUp,AttackLengthUp,Melee,Normal,공격사거리가 증가합니다.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,5,0,0,0,12,0.5,5,100,2
+Slash_Rare_DamageUp,Berserk,Melee,Rare,n번째마다 3번 추가 공격합니다.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,0,3,3,14,0.5,5,100,2
+Slash_Rare_RapidUp,ExtraAttack,Melee,Rare,추가 공격을 합니다.,HitCollider_Base,0,0,1,90,1,5,0,0,0,0.3,3,1,0,0,12,0.5,5,100,3
+Slash_Rare_RangeUp,AroundAttack,Melee,Rare,주변 전체를 공격합니다.,HitCollider_Base,0,0,1,360,1,5,0,0,0,0.3,7,0,0,0,12,0.5,5,100,2
+Sting_Base_Basic,BasicSting,Melee,Base,기본 찌르기 공격입니다.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,5,100,3
+Sting_Normal_DamageUp,PowerUp,Melee,Normal,데미지가 증가합니다.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,20,0.5,5,100,3
+Sting_Normal_CriticalUp,CriticalUp,Melee,Normal,치명타율이 증가합니다.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,25,100,3
+Sting_Normal_RangeUp,RangeUp,Melee,Normal,공격 사거리가 증가합니다.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,18,0.5,5,100,3
+Sting_Rare_DamageUp,Dash,Melee,Rare,공격 방향으로 빠르게 5만큼 이동.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,20,0.5,5,100,3
+Sting_Rare_CriticalUp,Random CriticalDamage,Melee,Rare,치명타데미지가 랜덤하게 증가합니다.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,1,0,0,0,18,0.5,25,100,3
+Sting_Rare_RangeUp,Concentration,Melee,Rare,집중하여 큰 데미지로 공격합니다.,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,5,0,0,0,18,0.5,5,100,3
+Smash_Base_Basic,BasicSmash,Melee,Base,기본 내려치기 공격입니다.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,3
+Smash_Normal_DamageUp,PowerUp,Melee,Normal,데미지가 증가합니다.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,3
+Smash_Normal_RangeUp,RangeUp,Melee,Normal,공격사거리가 증가합니다.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,5,0,0,0,12,0.5,5,100,3
+Smash_Normal_SpeedUp,AttackSpeedUp,Melee,Normal,공격속도가 증가합니다.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,12,0.5,5,100,4
+Smash_Rare_DamageUp,CriticalUp,Melee,Rare,치명타율이 증가합니다.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,0,0,0,14,0.5,5,100,3
+Smash_Rare_RangeUp,AttackAngleUp,Melee,Rare,공격 범위 각도 증가,HitCollider_Base,0,0,1,120,1,5,0,0,0,0.3,7,0,0,0,12,0.5,5,100,3
+Smash_Rare_SpeedUp,ExtraShot,Melee,Rare,추가 공격을 합니다.,HitCollider_Base,0,0,1,60,1,5,0,0,0,0.3,3,1,0,0,12,0.5,5,100,4
+Snake_Base_Attack,Snake_Base_Attack,Melee,Base,(독발사)물기,HitCollider_Base,0,0,2,180,0.8,5,0,0,0,0.1,2,0,0,0,3,0.5,3,30,3
+Beatle_Base_Acid,Beatle_Base_Acid,Range,Base,독 발사,HitCollider_Base,0,0,1,180,1,0,10,0,0,1,5,0,0,0,7,0.5,5,30,0.8
+Wolf_Base_Attack,Wolf_Base_Attack,Melee,Base,물기,HitCollider_Base,0,0,1,180,1,5,0,0,0,0.1,3,0,0,0,15,0.5,5,30,1.5
+Cat_Base_Attack,Cat_Base_Attack,Melee,Base,냥냥펀치,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,1,0,0,10,0.5,5,30,2
+Bat_Base_Attack,Bat_Base_Attack,Melee,Base,물고 할퀴기(어쨌든 근접공격),HitCollider_Base,0,0,1,0,1,0,0,0,0,0.1,3,0,0,0,5,0.5,5,30,1
+Worm_Base_Attack,Worm_Base_Attack,Range,Base,독 발사,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,5,0,0,0,10,0.5,5,30,1
+Spider_Base_Attack,Spider_Base_Attack,Range,Base,느려지는 거미줄 발사,HitCollider_Base,0,0,1,0,1.5,1,10,0,0,1.5,5,0,0,0,3,0.5,5,30,0.5
+Flytrap_Base_Attack,Flytrap_Base_Attack,Range,Base,씨앗 발사,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,5,0,0,0,20,0.5,5,30,1
+Groot_Base_Attack,Groot_Base_Attack,Melee,Base,나무 채찍 내리치기,HitCollider_Base,0,0,1,0,1,3,10,0,0,0.5,4,0,0,0,30,0.5,5,30,1
+Bear_Base_Attack,Bear_Base_Attack,Melee,Base,앞발 휘두르기,HitCollider_Base,0,0,1,180,1.5,5,0,0,0,0.4,3,0,0,0,30,0.5,5,30,1
+MushroomBomb,MushroomBomb,Range,Base,버섯 폭탄 던지기,HitCollider_Base,0,0,1,0,1,3,8,0,0,1,5,0,0,0,100,0.5,5,30,1
+SporeShot,SporeShot,Range,Base,포자 쏘기,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,30,0.5,5,30,5
+SporeSpread,SporeSpread,Range,Base,포자 퍼트리기,HitCollider_Base,0,0,60,359,1,0,10,0,0,10,-1,0,0,0,20,0.5,5,30,3
+MushroomMine,MushroomMine,Melee,Base,버섯 지뢰 심기,HitCollider_Base,0,0,1,0,1,3,0,0,0,5,10,0,0,0,100,0.5,5,30,1
+GermsShot,GermsShot,Range,Base,도트뎀이 있는 병균 쏘기,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,20,0.5,5,30,5
+FlySummons,FlySummons,Range,Base,파리 소환,HitCollider_Base,0,0,3,120,1,0,8,0,0,-1,10,0,0,0,20,0.5,5,30,3
+FlyBomb,FlyBomb,Melee,Base,소환한 파리들이 터짐,HitCollider_Base,0,0,1,0,1.5,3,0,0,0,1,5,0,0,0,100,0.5,5,30,1
+FlySelfDestruct,FlySelfDestruct,Melee,Base,파리보스 자폭,HitCollider_Base,0,0,1,0,1.5,5,0,0,0,0.5,5,0,0,0,300,0.5,5,30,0.5
+PeaMan_Base_Attack,PeaMan_Base_Attack,Melee,Base,잽 날리기,HitCollider_Base,0,0,1,0,1,0,0,0,0,3,3,0,0,0,15,0.5,5,30,1
+BlueSkull_Base_Attack,BlueSkull_Base_Attack,Range,Base,불덩이 날리기,HitCollider_Base,0,0,1,0,1,0,8,0,0,1,5,0,0,0,15,0.5,5,30,1
+Skull_Base_Attack,Skull_Base_Attack,Melee,Base,닿았을 때 데미지(보스 스킬과 동일),HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,20,0.5,5,30,1
+RedSkull_Base_Attack,RedSkull_Base_Attack,Melee,Base,돌진,HitCollider_Base,0,0,1,0,1,-1,0,0,0,3,5,0,0,0,20,0.5,5,30,1
+RollingMan_Base_Attack,RollingMan_Base_Attack,Melee,Base,돌진,HitCollider_Base,0,0,1,0,1,-1,0,0,0,3,5,0,0,0,50,0.5,5,30,1
+EyeMan_Base_Attack,EyeMan_Base_Attack,Melee,Base,내리치며 일직선으로 충격파 발사,HitCollider_Base,0,0,2,90,1,5,0,0,0,0.5,4,0,0,0,50,0.5,5,30,1
+JumpingDaddy,JumpingDaddy,Melee,Base,플레이어를 향해 몸 내리찍기,HitCollider_Base,0,0,1,0,1.2,0,0,0,0,0.3,5,0,0,0,150,0.5,5,30,0.5
+DaddysCall,DaddysCall,Range,Base,아들 소환,HitCollider_Base,0,0,1,0,1,0,8,0,0,-1,10,0,0,0,0,0.5,5,30,6
+DaddyJap,DaddyJap,Melee,Base,잽 날리기,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,70,0.5,5,30,6
+SonLaser,SonLaser,Range,Base,레이저 쏘기,HitCollider_Base,0,0,1,0,1,0,-1,0,0,0.8,5,0,0,0,10,0.5,5,30,1
+SwordsFemale_Base_Attack,SwordsFemale_Base_Attack,Melee,Base,칼 휘두르기,HitCollider_Base,0,0,1,0,1,0,0,0,0,0.3,3,0,0,0,30,0.5,5,30,1.5
+Archaeologist_Base_Attack,Archaeologist_Base_Attack,Range,Base,권총 쏘기,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,20,0.5,5,30,3
+Shooter_Base_Attack,Shooter_Base_Attack,Range,Base,기관총 쏘기,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,10,0.5,5,30,7
+Builder_Base_Attack,Builder_Base_Attack,Range,Base,도망 가서 동료 부르기,HitCollider_Base,0,0,1,0,1,0,10,0,0,0,5,0,0,0,0,0.5,5,30,0
+RCCar_Base_Attack,RCCar_Base_Attack,Range,Base,레이저 쏘기,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,50,0.5,5,30,3
+DroneLaser,DroneLaser,Range,Base,레이저총 쏘기,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,45,0.5,5,30,1.5
+DroneSelfDestruct,DroneSelfDestruct,Melee,Base,자폭,HitCollider_Base,0,0,1,0,1.5,3,0,0,0,0.5,5,0,0,0,100,0.5,5,30,0.7
+RoadRollerShot,RoadRollerShot,Range,Base,총 발사,HitCollider_Base,0,0,1,0,1,0,10,0,0,1,10,0,0,0,80,0.5,5,30,5
+RollerRush,RollerRush,Melee,Base,돌진,HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,100,0.5,5,30,1
+RollerShield,RollerShield,Melee,Base,단단해지기,HitCollider_Base,0,0,1,0,1,0,0,0,0,-1,5,0,0,0,0,0.5,5,30,0.8
+RoadRollerBeam,RoadRollerBeam,Range,Base,빔,HitCollider_Base,0,0,1,0,1,-1,-1,0,0,3,-1,0,0,0,200,0.5,5,30,0.8
+Boss,Boss,Melee,Base,보스들의 공통 스킬. 부딪혔을 때 데미지,HitCollider_Base,0,0,1,0,1,-1,0,0,0,-1,5,0,0,0,10,0.5,5,30,1
+BoraSongi_Base_PoisonSpore,BoraSongi_Base_PoisonSpore,Range,Base,bbq,HitCollider_PoisonSpore,0,0,1,0,1,-1,0,0,0,0,1,0,0,0,20,0,0,0,1
+BoraSongi_Normal_Mushboom,BoraSongi_Normal_Mushboom,Range,Normal,coffee,HitCollider_Mushboom,0,0,1,0,3,-1,10,0,0,8,10,0,0,0,80,0,0,0,2

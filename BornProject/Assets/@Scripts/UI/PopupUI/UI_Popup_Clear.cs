@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
-
 public class UI_Popup_Clear : UI_Popup {
+
     #region Enums
 
     enum Buttons {
@@ -12,12 +7,6 @@ public class UI_Popup_Clear : UI_Popup {
         btnExit,
     }
 
-    #endregion
-
-    #region Properties
-
-    public override bool IsPause => true;
-    
     #endregion
 
     #region Initialize / Set
@@ -37,16 +26,13 @@ public class UI_Popup_Clear : UI_Popup {
 
     #region OnButtons
 
-    private void OnBtnNextStage(){
-
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+    private void OnBtnNextStage() {
+        Main.Audio.PlayOnButton();
         Main.Dungeon.NextStage();
-        
     }
-    
-    private void OnBtnExit()
-    {
-        AudioController.Instance.SFXPlay(SFX.OnClickButton);
+
+    private void OnBtnExit() {
+        Main.Audio.PlayOnButton();
         Main.UI.OpenPopupUI<UI_Popup_ExitGame>();
     }
 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RoadRollerBoss
+  m_Controller: {fileID: 9100000, guid: b9e31fea2a8129a4fad97c96eb26de33, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a60a0a9062ab1234985cd1cef3c579e8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b29fc1cc7a5a43afb88efeaec659af6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3a7981489836e6647a133955af31b83a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2316390809af140638a78a98f7603ae7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4004008f468b7354da64069f8ff002c4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d01a8b3ec311b45b2a10ed9d2e8606c5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3fb8076d00f3eef41aa1d84b29f46c1e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 31469824ac3fe4dfa9695f76519fe50d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7ad0f4143a2ac264c98ffed5c9c2ffee, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d2d9ec4565af74445904232d924aa39b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4d6474cc09d2c974ca173c521f7e110a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5deeac7395c9c4a94ae2efb4387306c3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 158f0ef45ed223d40bb53079f18cfaf9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4b43dd8e9232c444d9234da2b44a0b35, type: 2}

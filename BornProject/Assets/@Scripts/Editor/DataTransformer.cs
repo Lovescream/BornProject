@@ -22,7 +22,6 @@ public class DataTransformer : EditorWindow {
     public static void ParseExcel() {
         ParseData<CreatureData>();
         ParseData<SkillData>();
-        ParseData<EnemySkillData>();
     }
     [MenuItem("Tools/ParseSpriteToBase64")]
     public static void ParseSpriteToBase64() {
@@ -35,25 +34,6 @@ public class DataTransformer : EditorWindow {
             stringBuilder.AppendLine(Convert.ToBase64String(bytes));
         }
         File.WriteAllText($"{Application.dataPath}/{base64Path}/RuleIcon.minecraftvirusohmygod", stringBuilder.ToString());
-    }
-
-    [MenuItem("Tools/Rename")]
-    public static void Rename() {
-        //DirectoryInfo directoryInfo = new DirectoryInfo($"{Application.dataPath}/Resources/Sprites/Skills/Icons");
-        //foreach (FileInfo fileInfo in directoryInfo.GetFiles()) {
-        //    if (!fileInfo.Extension.Equals(".png")) continue;
-        //    string oldPath = fileInfo.FullName;
-        //    string newName = $"{Application.dataPath}/Resources/Sprites/Skills/Icons/Icon_{fileInfo.Name}";
-        //    File.Move(oldPath, newName);
-        //}
-
-        //DirectoryInfo directoryInfo = new DirectoryInfo($"{Application.dataPath}/Resources/Rooms/Rename");
-        //foreach (FileInfo fileInfo in directoryInfo.GetFiles()) {
-        //    if (!fileInfo.Extension.Equals(".prefab")) continue;
-        //    string oldPath = fileInfo.FullName;
-        //    string newName = $"{Application.dataPath}/Resources/Rooms/Rename/Room_Cavern_{fileInfo.Name.Split('_')[2]}_TwoBear.prefab";
-        //    File.Move(oldPath, newName);
-        //}
     }
 
     #region Parse Data
