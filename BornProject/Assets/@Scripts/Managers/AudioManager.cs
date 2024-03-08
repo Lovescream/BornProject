@@ -44,6 +44,14 @@ public class AudioManager {
 
     #region Play
 
+    public bool IsPlayingBGM() {
+        if (!_audioSources.TryGetValue(AudioType.BGM, out List<AudioSource> sources)) return false;
+        foreach (AudioSource source in sources) {
+            if (source.isPlaying) return true;
+        }
+        return false;
+    }
+
     // BGM을 재생합니다. audioSourceKey를 지정하면 해당 AudioSource가 재생하도록 합니다.
     public bool PlayBGM(string key, string audioSourceKey = "") {
         // #1. 음소거 설정 시 재생하지 않음.

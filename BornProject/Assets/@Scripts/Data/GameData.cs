@@ -49,4 +49,8 @@ public class GameData {
         }
     }
 
+    public void NewGame() {
+        _skills.Clear();
+    }
+
 }
